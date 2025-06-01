@@ -1,0 +1,150 @@
+body {
+    scroll-behavior: smooth;
+}
+
+/* Custom table styles for better readability and aesthetics */
+.custom-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.9em; /* Slightly smaller font for tables */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures border-radius is applied to table content */
+}
+
+.custom-table th,
+.custom-table td {
+    border: 1px solid #e2e8f0; /* Tailwind gray-300 */
+    padding: 12px 15px; /* More padding */
+    text-align: left;
+    line-height: 1.4;
+}
+
+.custom-table th {
+    background-color: #f1f5f9; /* Tailwind slate-100 */
+    color: #1e293b; /* Tailwind slate-800 */
+    font-weight: 600; /* Semibold */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.custom-table tbody tr:nth-child(even) {
+    background-color: #f8fafc; /* Tailwind slate-50 */
+}
+
+.custom-table tbody tr:hover {
+    background-color: #e2e8f0; /* Tailwind slate-200 */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.custom-table strong {
+    color: #00529B; /* brand-primary */
+}
+
+/* Custom scrollbar for tables that overflow */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f5f9; /* Tailwind slate-100 */
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #94a3b8; /* Tailwind slate-400 */
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #64748b; /* Tailwind slate-500 */
+}
+
+/* Style for inline code used for equations */
+code {
+    background-color: #e9ecef; /* neutral-medium */
+    color: #343A40; /* neutral-dark */
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 0.9em;
+    border-radius: 3px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+}
+
+.prose code::before,
+.prose code::after {
+    content: none; /* Remove backticks from prose plugin styling */
+}
+
+/* Styling for h2 to make them more distinct */
+.prose h2, .prose-lg h2 {
+    font-size: 1.875rem; /* Tailwind text-3xl */
+    line-height: 2.25rem; /* Tailwind leading-9 */
+    color: #00529B; /* brand-primary */
+    border-bottom: 2px solid #0077CC; /* brand-secondary */
+    padding-bottom: 0.5rem;
+    margin-top: 2em; /* More space before sections */
+    margin-bottom: 1em;
+}
+
+/* Styling for h3 */
+.prose h3, .prose-lg h3 {
+    font-size: 1.5rem; /* Tailwind text-2xl */
+    line-height: 2rem; /* Tailwind leading-8 */
+    color: #0077CC; /* brand-secondary */
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+}
+
+/* Styling for h4 */
+.prose h4, .prose-lg h4 {
+    font-size: 1.25rem; /* Tailwind text-xl */
+    line-height: 1.75rem; /* Tailwind leading-7 */
+    color: #343A40; /* neutral-dark */
+    font-weight: 600; /* semibold */
+    margin-top: 1.25em;
+    margin-bottom: 0.5em;
+}
+
+
+/* Improve list styling */
+.prose ul > li::before, .prose-lg ul > li::before {
+    background-color: #0077CC; /* brand-secondary */
+}
+.prose ol > li::before, .prose-lg ol > li::before {
+    color: #0077CC; /* brand-secondary */
+}
+
+/* Ensure prose styles don't override custom table styles too much */
+.prose table {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.prose th, .prose td {
+    padding: 0;
+    border: none;
+}
+.prose thead th {
+    background-color: transparent;
+    color: inherit;
+    font-weight: inherit;
+    text-transform: none;
+    letter-spacing: normal;
+}
+.prose tbody tr:nth-child(2n) {
+    background-color: transparent;
+}
+
+/* Sticky header offset for scroll targets */
+.scroll-mt-20 {
+    scroll-margin-top: 5rem; /* Adjust based on header height */
+}
+
+/* Section container styling */
+section > div {
+    transition: box-shadow 0.3s ease-in-out;
+}
+section > div:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.04); /* Slightly more pronounced shadow on hover */
+}
