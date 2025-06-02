@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CFD 이론: 참고 문헌 - 연구실 이름</title>
+    <title>CFD 이론: 참고 문헌 - 생물공학연구실</title>
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="../style.css">
@@ -30,96 +30,171 @@
 </head>
 <body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
 
-    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50 h-auto md:h-16">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-2 md:py-0">
-            <div class="flex justify-between w-full md:w-auto items-center">
-                <a href="../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-2">연구실 명칭 (CFD & Bioprocess)</a>
-                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-                    <i data-lucide="menu" class="w-7 h-7"></i>
-                </button>
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap md:flex-nowrap justify-between items-center py-3">
+                <div class="flex justify-between items-center w-full md:w-auto">
+                    <a href="../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-1">생물공학연구실(Bioprocess Engineering Laboratory)</a>
+                    <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none ml-3">
+                        <i data-lucide="menu" class="w-7 h-7"></i>
+                    </button>
+                </div>
+    
+                <nav class="hidden md:flex items-center space-x-1 main-nav md:ml-4">
+                    <div class="relative group">
+                        <button class="nav-item">연구실 소개 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <a href="../lab_introduction/overview.html" class="nav-dropdown-item">연구실 개요</a>
+                            <a href="../lab_introduction/research_areas.html" class="nav-dropdown-item">연구 분야</a>
+                            <a href="../lab_introduction/goals_vision.html" class="nav-dropdown-item">연구 목표 및 비전</a>
+                            <a href="../lab_introduction/professor.html" class="nav-dropdown-item">교수 소개</a>
+                            <a href="../lab_introduction/researchers.html" class="nav-dropdown-item">연구원 소개</a>
+                            <a href="../lab_introduction/projects.html" class="nav-dropdown-item">주요 연구 프로젝트</a>
+                            <a href="../lab_introduction/facilities.html" class="nav-dropdown-item">실험실 시설 및 장비</a>
+                            <a href="../lab_introduction/achievements.html" class="nav-dropdown-item">연구 성과</a>
+                            <a href="../lab_introduction/partners.html" class="nav-dropdown-item">협력기관 및 파트너</a>
+                            <a href="../lab_introduction/gallery.html" class="nav-dropdown-item">사진 갤러리</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-item">CFD 이론 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <a href="introduction.html" class="nav-dropdown-item">서론</a>
+                            <a href="preprocessing.html" class="nav-dropdown-item">Pre-processing</a>
+                            <a href="solving.html" class="nav-dropdown-item">Solving</a>
+                            <a href="postprocessing.html" class="nav-dropdown-item">Post-processing</a>
+                            <a href="core_theory.html" class="nav-dropdown-item">핵심이론</a>
+                            <a href="glossary.html" class="nav-dropdown-item">용어 설명</a>
+                            <a href="references.html" class="nav-dropdown-item">레퍼런스</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-item">Bioprocess CFD <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <a href="../bioprocess_cfd/introduction.html" class="nav-dropdown-item">서론</a>
+                            <a href="../bioprocess_cfd/theoretical_background.html" class="nav-dropdown-item">이론적 배경</a>
+                            <a href="../bioprocess_cfd/application_cases.html" class="nav-dropdown-item">Bioprocess CFD 적용 사례</a>
+                            <a href="../bioprocess_cfd/software_comparison.html" class="nav-dropdown-item">주요 CFD 소프트웨어 비교</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <span class="nav-dropdown-header">Ansys Fluent</span>
+                            <a href="../software_manuals/ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                            <a href="../software_manuals/ansys_fluent/installation.html" class="nav-dropdown-item">설치</a>
+                            <a href="../software_manuals/ansys_fluent/preprocessing.html" class="nav-dropdown-item">전처리</a>
+                            <a href="../software_manuals/ansys_fluent/solver.html" class="nav-dropdown-item">솔버</a>
+                            <a href="../software_manuals/ansys_fluent/postprocessing.html" class="nav-dropdown-item">후처리</a>
+                            <a href="../software_manuals/ansys_fluent/verification_validation.html" class="nav-dropdown-item">V & V</a>
+                            <a href="../software_manuals/ansys_fluent/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                            <a href="../software_manuals/ansys_fluent/resources.html" class="nav-dropdown-item">자료실</a>
+                            <span class="nav-dropdown-header">OpenFOAM</span>
+                            <a href="../software_manuals/openfoam/introduction.html" class="nav-dropdown-item">소개</a>
+                            <a href="../software_manuals/openfoam/installation.html" class="nav-dropdown-item">설치</a>
+                            <a href="../software_manuals/openfoam/preprocessing.html" class="nav-dropdown-item">전처리</a>
+                            <a href="../software_manuals/openfoam/solver.html" class="nav-dropdown-item">솔버</a>
+                            <a href="../software_manuals/openfoam/postprocessing.html" class="nav-dropdown-item">후처리</a>
+                            <a href="../software_manuals/openfoam/verification_validation.html" class="nav-dropdown-item">V & V</a>
+                            <a href="../software_manuals/openfoam/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                            <a href="../software_manuals/openfoam/resources.html" class="nav-dropdown-item">자료실</a>
+                            <span class="nav-dropdown-header">M-STAR CFD</span>
+                            <a href="../software_manuals/mstar_cfd/introduction.html" class="nav-dropdown-item">소개</a>
+                            <a href="../software_manuals/mstar_cfd/installation.html" class="nav-dropdown-item">설치</a>
+                            <a href="../software_manuals/mstar_cfd/preprocessing.html" class="nav-dropdown-item">전처리</a>
+                            <a href="../software_manuals/mstar_cfd/solver.html" class="nav-dropdown-item">솔버</a>
+                            <a href="../software_manuals/mstar_cfd/postprocessing.html" class="nav-dropdown-item">후처리</a>
+                            <a href="../software_manuals/mstar_cfd/verification_validation.html" class="nav-dropdown-item">V & V</a>
+                            <a href="../software_manuals/mstar_cfd/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                            <a href="../software_manuals/mstar_cfd/resources.html" class="nav-dropdown-item">자료실</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-item">자료실 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <a href="../data_room/papers.html" class="nav-dropdown-item">논문</a>
+                            <a href="../data_room/videos.html" class="nav-dropdown-item">영상</a>
+                            <a href="../data_room/simulation_results.html" class="nav-dropdown-item">시뮬레이션 결과</a>
+                        </div>
+                    </div>
+                </nav>
             </div>
-            <nav class="hidden md:flex items-center space-x-1 main-nav">
-                 <div class="relative group">
-                    <button class="nav-item">연구실 소개 <i data-lucide="chevron-down" class="icon-sm"></i></button>
-                    <div class="nav-dropdown">
-                        <a href="../lab_introduction/overview.html" class="nav-dropdown-item">연구실 개요</a>
-                        <a href="../lab_introduction/gallery.html" class="nav-dropdown-item">사진 갤러리</a>
+            
+            <div id="search-bar-wrapper" class="pb-3 pt-1 md:pt-2">
+                <div id="search-bar-container" class="w-full max-w-xl mx-auto">
+                     <div class="relative">
+                        <input type="search" id="searchInput" placeholder="검색어를 입력하세요…" class="w-full py-2 px-3 pl-10 rounded-md bg-brand-secondary text-white placeholder-neutral-light/70 focus:outline-none focus:ring-2 focus:ring-brand-accent text-sm transition-all duration-300 ease-in-out focus:bg-white focus:text-neutral-dark focus:placeholder-neutral-dark/50">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i data-lucide="search" class="w-5 h-5 text-neutral-light/70 search-icon-default"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="relative group">
-                    <button class="nav-item">CFD 이론 <i data-lucide="chevron-down" class="icon-sm"></i></button>
-                    <div class="nav-dropdown">
-                        <a href="introduction.html" class="nav-dropdown-item">서론</a>
-                        <a href="preprocessing.html" class="nav-dropdown-item">Pre-processing</a>
-                        <a href="solving.html" class="nav-dropdown-item">Solving</a>
-                        <a href="postprocessing.html" class="nav-dropdown-item">Post-processing</a>
-                        <a href="core_theory.html" class="nav-dropdown-item">핵심이론</a>
-                        <a href="glossary.html" class="nav-dropdown-item">용어 설명</a>
-                        <a href="references.html" class="nav-dropdown-item">레퍼런스</a>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <button class="nav-item">Bioprocess CFD <i data-lucide="chevron-down" class="icon-sm"></i></button>
-                    <div class="nav-dropdown">
-                        <a href="../bioprocess_cfd/introduction.html" class="nav-dropdown-item">서론</a>
-                        <a href="../bioprocess_cfd/software_comparison.html" class="nav-dropdown-item">주요 CFD 소프트웨어 비교</a>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
-                    <div class="nav-dropdown">
-                        <span class="nav-dropdown-header">Ansys Fluent</span>
-                        <a href="../software_manuals/ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
-                        <span class="nav-dropdown-header">OpenFOAM</span>
-                        <a href="../software_manuals/openfoam/introduction.html" class="nav-dropdown-item">소개</a>
-                        <a href="../software_manuals/mstar_cfd/introduction.html" class="nav-dropdown-item mt-2">M-STAR CFD (소개)</a>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <button class="nav-item">자료실 <i data-lucide="chevron-down" class="icon-sm"></i></button>
-                    <div class="nav-dropdown">
-                        <a href="../data_room/papers.html" class="nav-dropdown-item">논문</a>
-                        <a href="../data_room/videos.html" class="nav-dropdown-item">영상</a>
-                        <a href="../data_room/simulation_results.html" class="nav-dropdown-item">시뮬레이션 결과</a>
-                    </div>
-                </div>
-            </nav>
+            </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-6rem)] overflow-y-auto">
         </div>
     </header>
 
+    <div id="searchResultsContainer" class="hidden fixed left-0 right-0 z-40 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8" style="top: 4rem;">
+        <div id="searchResultsDisplay" class="bg-white text-neutral-dark shadow-xl rounded-b-lg max-h-[calc(100vh-12rem)] md:max-h-[calc(100vh-10rem)] overflow-y-auto">
+            <p id="searchResultsMessage" class="text-center text-gray-500 p-6 text-sm">검색어를 입력하여 페이지 내 콘텐츠를 찾아보세요.</p>
+        </div>
+    </div>
+
     <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
         <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
-            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">참고 문헌</h1>
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">참고 문헌 (References)</h1>
             <div class="prose prose-sm max-w-none prose-neutral lg:prose-base">
-                <p>본 웹페이지의 내용 구성 및 CFD 관련 주요 이론 정립을 위해 다음 자료들을 참조하였습니다. 각 자료는 해당 분야의 전문 지식을 담고 있으며, 더 심층적인 정보 확인을 위해 원본 자료를 참고하시기 바랍니다.</p>
+                <p>본 웹사이트의 CFD 이론 및 관련 내용 구성 시 다음의 주요 학술 서적, 논문, 기술 보고서, 웹 자료 등을 참조하였습니다. 각 자료는 해당 분야의 권위 있는 정보를 담고 있으며, 더 심층적인 학습과 이해를 위해 원본 자료를 참고하시기를 권장합니다. 본문에 사용된 인용 표기(예: [1], [Ansys])는 아래 목록과 연결됩니다.</p>
+                
+                <h2 class="text-xl font-medium text-brand-secondary mt-6 mb-3">주요 교재 및 단행본</h2>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li>Altair Blog. (연도 미상). <em>제 2편 - CFD의 지배방정식</em>. <a href="https://blog.altair.co.kr/70628/" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">URL</a></li>
-                    <li>Ansys. (연도 미상). <em>전산유체역학(CFD)이란?</em>. <a href="https://www.ansys.com/ko-kr/simulation-topics/what-is-computational-fluid-dynamics" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">URL</a></li>
-                    <li>BARAM Portal. (연도 미상). <em>경계조건(Boundary Conditions)</em>. <a href="https://baramcfd.org/intro-2/baramflow/boundary-2/" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">URL</a></li>
-                    <li>Batchelor, G. K. (다양한 판본). <em>An Introduction to Fluid Dynamics</em>. Cambridge University Press.</li>
-                    <li>CFD Online Community. (연도 미상). <em>Navier-Stokes equations</em>. <a href="https://cfd-online.com/Wiki/Navier-Stokes_equations" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">URL</a></li>
-                    <li>Ferziger, J. H., & Perić, M. (다양한 판본). <em>Computational Methods for Fluid Dynamics</em>. Springer.</li>
-                    <li>광운대학교, 국토교통부 R&D. (연도 미상). <em>BIM 설계환경 기반의 개방형 CFD 전처리 자동화 기술 개발 최종보고서</em>. CODIL. <a href="https://www.codil.or.kr/filebank/original/RK/OTKCRK210085/OTKCRK210085.pdf" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">URL</a></li>
-                    <li>Kundu, P. K., Cohen, I. M., & Dowling, D. R. (다양한 판본). <em>Fluid Mechanics</em>. Academic Press.</li>
-                    <li>Menter, F. R., Kuntz, M., & Langtry, R. (2021). <em>Best Practice: RANS Turbulence Modeling in Ansys CFD</em>. ANSYS Germany GmbH. <a href="https://www.ansys.com/content/dam/amp/2022/march/quick-request/Best%20Practice%20RANS%20Turbulence%20Modeling%20in%20Ansys%20CFD.pdf" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">URL</a></li>
-                    <li>Moukalled, F., Mangani, L., & Darwish, M. (2016). <em>The Finite Volume Method in Computational Fluid Dynamics: An Advanced Introduction with OpenFOAM® and Matlab</em>. Springer. <a href="https://gidropraktikum.narod.ru/Moukalled-et-al-FVM-OpenFOAM-Matlab.pdf" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">PDF URL</a></li>
-                    <li>NASA Glenn Research Center. (연도 미상). <em>Euler Equations</em>. <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/euler-equations-2/" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">URL</a></li>
-                    <li>NASA Glenn Research Center. (연도 미상). <em>Navier-Stokes Equations</em>. <a href="https://www.grc.nasa.gov/www/k-12/airplane/nseqs.html" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">URL</a></li>
-                    <li>Pope, S. B. (2000). <em>Turbulent Flows</em>. Cambridge University Press.</li>
-                    <li>Shojima, A., Itatani, K., Miyaji, K., Umezu, M., & Yambe, T. (2023). <em>Computational Fluid Dynamics Turbulence Model and Experimental Study for a Fontan Cavopulmonary Assist Device</em>. Bioengineering, 10(11), 1283. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10777498/" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">URL</a></li>
-                    <li>ScienceDirect. (연도 미상). <em>Overview: Finite Volume Method</em>. <a href="https://www.sciencedirect.com/topics/engineering/finite-volume-method" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">URL</a></li>
-                    <li>Versteeg, H. K., & Malalasekera, W. (다양한 판본). <em>An Introduction to Computational Fluid Dynamics: The Finite Volume Method</em>. Pearson.</li>
-                    <li>Wesseling, P. (2001). <em>Principles of Computational Fluid Dynamics</em>. Springer.</li>
-                    <li>Zhang, G., Tezdogan, T., & Yuan, Z. (2022). <em>A review on the turbulence modelling strategy for ship hydrodynamic simulations</em>. Ocean Engineering, 243, 110168. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0029801821014104" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">URL</a></li>
+                    <li><strong>[Batchelor]</strong> Batchelor, G. K. (2000). <em>An Introduction to Fluid Dynamics</em>. Cambridge University Press. (지배 방정식 유도, 유체 역학 기본 원리)</li>
+                    <li><strong>[Ferziger & Perić]</strong> Ferziger, J. H., & Perić, M. (2002). <em>Computational Methods for Fluid Dynamics</em> (3rd ed.). Springer. (CFD 수치 기법, 알고리즘 전반)</li>
+                    <li><strong>[Kundu et al.]</strong> Kundu, P. K., Cohen, I. M., & Dowling, D. R. (2015). <em>Fluid Mechanics</em> (6th ed.). Academic Press. (지배 방정식, 특히 에너지 방정식 유도)</li>
+                    <li><strong>[Landau & Lifshitz]</strong> Landau, L. D., & Lifshitz, E. M. (1987). <em>Fluid Mechanics</em> (Volume 6 of Course of Theoretical Physics, 2nd ed.). Butterworth-Heinemann. (나비에-스토크스 및 오일러 방정식, 에너지 방정식 유도에 대한 고전적 접근)</li>
+                    <li><strong>[Moukalled et al.]</strong> Moukalled, F., Mangani, L., & Darwish, M. (2016). <em>The Finite Volume Method in Computational Fluid Dynamics: An Advanced Introduction with OpenFOAM® and Matlab</em>. Springer. (유한 체적법 심층 소개, OpenFOAM 관련)</li>
+                    <li><strong>[Pope]</strong> Pope, S. B. (2000). <em>Turbulent Flows</em>. Cambridge University Press. (난류 이론 및 모델링 전반)</li>
+                    <li><strong>[Reddy]</strong> Reddy, J. N., & Gartling, D. K. (2010). <em>The Finite Element Method in Heat Transfer and Fluid Dynamics</em> (3rd ed.). CRC Press. (유한 요소법 및 유한 체적법 응용)</li>
+                    <li><strong>[Versteeg & Malalasekera]</strong> Versteeg, H. K., & Malalasekera, W. (2007). <em>An Introduction to Computational Fluid Dynamics: The Finite Volume Method</em> (2nd ed.). Pearson Education Limited. (CFD 입문, 유한 체적법 중심)</li>
+                    <li><strong>[Wesseling]</strong> Wesseling, P. (2001). <em>Principles of Computational Fluid Dynamics</em>. Springer. (CFD 원리 및 수치 기법)</li>
                 </ul>
+
+                <h2 class="text-xl font-medium text-brand-secondary mt-6 mb-3">기술 보고서, 가이드라인, 주요 논문</h2>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>[1] [CODIL]</strong> 광운대학교, 국토교통부 R&D. (날짜 미상). <em>BIM 설계환경 기반의 개방형 CFD 전처리 자동화 기술 개발 최종보고서</em>. CODIL. <a href="https://www.codil.or.kr/filebank/original/RK/OTKCRK210085/OTKCRK210085.pdf" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">PDF Link</a> (CFD 프로세스, 전처리, 격자, V&V 등 국내 자료)</li>
+                    <li><strong>[2] [Academia.edu]</strong> 저자 미상. (날짜 미상). <em>CFD 우수사례 지침을 적용한 관 다발 주위의 난류유동 수치해석</em>. Academia.edu. <a href="https://www.academia.edu/82767227/CFD_%EC%9A%B0%EC%88%98%EC%82%AC%EB%A1%80_%EC%A7%80%EC%B9%A8%EC%9D%84_%EC%A0%81%EC%9A%A9%ED%95%9C_%EA%B4%80_%EB%8B%A4%EB%B0%9C_%EC%A3%BC%EC%9C%84%EC%9D%98_%EB%82%9C%EB%A5%98%EC%9C%A0%EB%8F%99_%EC%88%98%EC%B9%98%ED%95%B4%EC%84%9D" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">Link</a> (CFD V&V, 난류 모델 관련 국내 적용 사례)</li>
+                     <li><strong>[4] [FunctionBay]</strong> FunctionBay. (날짜 미상). <em>솔버(Solver) 초보 탈출 1탄 – Maximum Time Step에 대해 알아보자</em>. <a href="https://support.functionbay.com/ko/technical-tip/single/106/%EC%86%94%EB%B2%84solver-%EC%B4%88%EB%B3%B4-%ED%83%88%EC%B6%9C-1%ED%83%84-maximum-time-step%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">Link</a> (솔버 설정, 시간 간격, 수렴 관련)</li>
+                    <li><strong>[9] [Menter et al.]</strong> Menter, F. R., Kuntz, M., & Langtry, R. (2003). <em>Ten Years of Industrial Experience with the SST Turbulence Model</em>. In K. Hanjalic, Y. Nagano, & M. J. Tummers (Eds.), <em>Turbulence, Heat and Mass Transfer 4</em>. Begell House Inc. (SST 난류 모델 관련. 원본 논문 확인 권장. Ansys 제공 Best Practice 가이드라인은: <a href="https://www.ansys.com/content/dam/amp/2022/march/quick-request/Best%20Practice%20RANS%20Turbulence%20Modeling%20in%20Ansys%20CFD.pdf" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">Ansys RANS Best Practice PDF</a>)</li>
+                    <li><strong>[AIAA G-077-1998]</strong> AIAA (1998). <em>Guide for the Verification and Validation of Computational Fluid Dynamics Simulations</em>. AIAA G-077-1998. (CFD V&V 표준 가이드라인)</li>
+                    <li><strong>[Celik et al., 2008]</strong> Celik, I. B., Ghia, U., Roache, P. J., Freitas, C. J., Coleman, H., & Raad, P. E. (2008). Procedure for estimation and reporting of uncertainty due to discretization in CFD applications. <em>Journal of Fluids Engineering</em>, 130(7). (GCI 방법론)</li>
+                    <li><strong>[Shojima et al., 2023]</strong> Shojima, A., Itatani, K., Miyaji, K., Umezu, M., & Yambe, T. (2023). Computational Fluid Dynamics Turbulence Model and Experimental Study for a Fontan Cavopulmonary Assist Device. <em>Bioengineering</em>, 10(11), 1283. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10777498/" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">PMC Link</a> (CFD 난류 모델 및 실험 검증 사례)</li>
+                    <li><strong>[Zhang et al., 2022]</strong> Zhang, G., Tezdogan, T., & Yuan, Z. (2022). A review on the turbulence modelling strategy for ship hydrodynamic simulations. <em>Ocean Engineering</em>, 243, 110168. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0029801821014104" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">ScienceDirect Link</a> (선박 유체역학에서의 난류 모델링 전략 리뷰)</li>
+                </ul>
+
+                <h2 class="text-xl font-medium text-brand-secondary mt-6 mb-3">웹사이트 및 온라인 자료</h2>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>[Altair Blog]</strong> Altair Blog Korea. (날짜 미상). <em>제 2편 - CFD의 지배방정식</em>. <a href="https://blog.altair.co.kr/70628/" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">Link</a> (지배 방정식 개요)</li>
+                    <li><strong>[Ansys]</strong> Ansys, Inc. (날짜 미상). <em>전산유체역학(CFD)이란?</em>. <a href="https://www.ansys.com/ko-kr/simulation-topics/what-is-computational-fluid-dynamics" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">Link</a> (CFD 개요 및 응용 분야)</li>
+                    <li><strong>[5] [BARAM Portal]</strong> BARAM Portal. (날짜 미상). <em>경계조건(Boundary Conditions)</em>. <a href="https://baramcfd.org/intro-2/baramflow/boundary-2/" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">Link</a> (경계 조건 설명)</li>
+                    <li><strong>[CFD Online-NS]</strong> CFD Online Community. (날짜 미상). <em>Navier-Stokes equations</em>. <a href="https://cfd-online.com/Wiki/Navier-Stokes_equations" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">Link</a> (나비에-스토크스 방정식 Wiki)</li>
+                    <li><strong>[CFD Online-FEM]</strong> CFD Online Community. (날짜 미상). <em>Finite Element Method</em>. <a href="https://www.cfd-online.com/Wiki/Finite_element_method" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">Link</a> (유한 요소법 Wiki)</li>
+                    <li><strong>[3] [MOASOFTWARE]</strong> 모아소프트. (날짜 미상). <em>CFD의 유동 해석 후처리 과정</em>. <a href="https://moasoftware.co.kr/ansys/cfd%EC%9D%98-%EC%9C%A0%EB%8F%99-%ED%95%B4%EC%84%9D-%ED%9B%84%EC%B2%98%EB%A6%AC-%EA%B3%BC%EC%A0%95/" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">Link</a> (후처리 과정 소개)</li>
+                    <li><strong>[NASA-NS]</strong> NASA Glenn Research Center. (날짜 미상). <em>Navier-Stokes Equations</em>. <a href="https://www.grc.nasa.gov/www/k-12/airplane/nseqs.html" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">Link</a> (나비에-스토크스 방정식 기초)</li>
+                    <li><strong>[8] [NASA-Euler]</strong> NASA Glenn Research Center. (날짜 미상). <em>Euler Equations</em>. <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/euler-equations-2/" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">Link</a> (오일러 방정식 기초)</li>
+                    <li><strong>[6] [GidroPraktikum - Moukalled et al. PDF]</strong> Moukalled, F., Mangani, L., & Darwish, M. (2016). <em>The Finite Volume Method in Computational Fluid Dynamics</em>. (PDF 링크는 Moukalled et al. 단행본과 동일) <a href="https://gidropraktikum.narod.ru/Moukalled-et-al-FVM-OpenFOAM-Matlab.pdf" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">PDF Link</a></li>
+                    <li><strong>[7] [ScienceDirect-FVM]</strong> ScienceDirect. (날짜 미상). <em>Overview: Finite Volume Method</em>. <a href="https://www.sciencedirect.com/topics/engineering/finite-volume-method" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">Link</a> (유한 체적법 개요)</li>
+                    <li><strong>[ScienceDirect-Euler]</strong> ScienceDirect. (참조 논문 예시) Various authors. (유사 주제 관련) <em>A second order accurate, genuinely multidimensional Euler solver</em>. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999108000168" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">Link</a> (오일러 방정식 관련 연구 예시)</li>
+                     <li><strong>[ScienceDirect-FDM]</strong> ScienceDirect. (날짜 미상). <em>Overview: Finite Difference Method</em>. <a href="https://www.sciencedirect.com/topics/physics-and-astronomy/finite-difference-method" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">Link</a> (유한 차분법 개요)</li>
+                    <li><strong>[ScienceDirect-Turbulence]</strong> ScienceDirect. (참조 논문 예시, Zhang et al., 2022와 동일) <em>A review on the turbulence modelling strategy for ship hydrodynamic simulations</em>. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0029801821014104" class="text-brand-secondary hover:underline" target="_blank" rel="noopener noreferrer">Link</a> (난류 모델링 전략 리뷰)</li>
+                </ul>
+                <p class="mt-4">이 목록은 주요 참고 자료들이며, 각 주제에 대한 더 많은 학술 자료와 최신 연구 동향은 관련 학회, 저널, 검색 엔진(Google Scholar, Scopus 등)을 통해 지속적으로 확인하는 것이 중요합니다.</p>
             </div>
         </div>
     </main>
 
     <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
-        <p>&copy; <span id="currentYear"></span> 연구실 명칭. 모든 권리 보유.</p>
+        <p>&copy; <span id="currentYear"></span> 생물공학연구실(Bioprocess Engineering Laboratory). 모든 권리 보유.</p>
         <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
     </footer>
     

@@ -218,21 +218,46 @@ main {
     background: #64748b; 
 }
 
-/* Style for inline code used for equations */
-code {
-    background-color: #e9ecef; 
-    color: #343A40; 
+/* Style for inline code used for equations and general code */
+.prose code, .prose-lg code, code {
+    background-color: #e9ecef; /* neutral-medium */
+    color: #343A40; /* neutral-dark */
     padding: 0.2em 0.4em;
-    margin: 0;
-    font-size: 0.9em;
+    margin: 0 0.1em;
+    font-size: 0.85em; /* Slightly smaller for better inline flow */
     border-radius: 3px;
     font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    word-wrap: break-word;
 }
 
+/* Remove default ::before and ::after for prose code */
 .prose code::before,
-.prose code::after {
+.prose code::after,
+.prose-lg code::before,
+.prose-lg code::after {
     content: none; 
 }
+
+/* Style for code blocks */
+.prose pre, .prose-lg pre, pre {
+    background-color: #2d3748; /* A darker gray, good for code blocks */
+    color: #e2e8f0; /* Light gray for text in dark blocks */
+    padding: 1em;
+    border-radius: 0.375rem; /* Tailwind: rounded-md */
+    overflow-x: auto;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 0.875em;
+}
+.prose pre code, .prose-lg pre code, pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    border-radius: 0;
+    font-family: inherit;
+}
+
 
 /* Theory Box for emphasized content like equations or key definitions */
 .theory-box {
@@ -260,33 +285,44 @@ code {
 
 /* Styling for h2 to make them more distinct */
 .prose h2, .prose-lg h2, h2.page-title { /* Added .page-title for general use */
-    font-size: 1.875rem; 
+    font-size: 1.75rem;  /* Adjusted from 1.875rem */
     line-height: 2.25rem; 
-    color: #00529B; 
-    border-bottom: 2px solid #0077CC; 
+    color: #00529B; /* brand-primary */
+    border-bottom: 2px solid #0077CC; /* brand-secondary */
     padding-bottom: 0.5rem;
     margin-top: 2em; 
     margin-bottom: 1em;
 }
+.prose h1 + h2, .prose-lg h1 + h2 { /* First h2 after h1 */
+    margin-top: 1.5em;
+}
+
 
 /* Styling for h3 */
 .prose h3, .prose-lg h3 {
-    font-size: 1.5rem; 
-    line-height: 2rem; 
-    color: #0077CC; 
-    margin-top: 1.5em;
+    font-size: 1.375rem; /* Adjusted from 1.5rem */
+    line-height: 1.875rem; 
+    color: #0077CC; /* brand-secondary */
+    margin-top: 1.75em;
     margin-bottom: 0.75em;
+}
+.prose h2 + h3, .prose-lg h2 + h3 { /* First h3 after h2 */
+    margin-top: 1em;
 }
 
 /* Styling for h4 */
 .prose h4, .prose-lg h4 {
-    font-size: 1.25rem; 
+    font-size: 1.125rem; /* text-lg, adjusted from 1.25rem */
     line-height: 1.75rem; 
-    color: #343A40; 
+    color: #343A40; /* neutral-dark */
     font-weight: 600; 
-    margin-top: 1.25em;
+    margin-top: 1.5em;
     margin-bottom: 0.5em;
 }
+.prose h3 + h4, .prose-lg h3 + h4 { /* First h4 after h3 */
+    margin-top: 1em;
+}
+
 
 /* Improve list styling */
 .prose ul > li::before, .prose-lg ul > li::before {
@@ -335,14 +371,15 @@ section > div:hover {
 }
 
 .search-highlight {
-    background-color: #FFC107; /* brand-accent */
-    font-weight: 600;
+    background-color: #FFDD57; /* Lighter yellow for better readability if text is dark */
     color: #343A40; /* neutral-dark, for better contrast on yellow */
     padding: 0.05em 0.1em;
     border-radius: 0.125rem;
+    font-weight: 600;
 }
 
 #searchResultsDisplay ul {
     list-style: none;
     padding: 0;
 }
+

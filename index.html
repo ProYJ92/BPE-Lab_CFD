@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>생물공학연구실(Bioprocess Engineering Laboratory) | 소개</title>
+    <title>CFD 과정 및 구성요소 | 생물공학연구실</title>
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
@@ -96,7 +96,22 @@
                             <a href="software_manuals/ansys_fluent/resources.html" class="nav-dropdown-item">자료실</a>
                             <span class="nav-dropdown-header">OpenFOAM</span>
                             <a href="software_manuals/openfoam/introduction.html" class="nav-dropdown-item">소개</a>
-                            <a href="software_manuals/mstar_cfd_introduction.html" class="nav-dropdown-item mt-2">M-STAR CFD (소개)</a>
+                            <a href="software_manuals/openfoam/installation.html" class="nav-dropdown-item">설치</a>
+                            <a href="software_manuals/openfoam/preprocessing.html" class="nav-dropdown-item">전처리</a>
+                            <a href="software_manuals/openfoam/solver.html" class="nav-dropdown-item">솔버</a>
+                            <a href="software_manuals/openfoam/postprocessing.html" class="nav-dropdown-item">후처리</a>
+                            <a href="software_manuals/openfoam/verification_validation.html" class="nav-dropdown-item">V & V</a>
+                            <a href="software_manuals/openfoam/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                            <a href="software_manuals/openfoam/resources.html" class="nav-dropdown-item">자료실</a>
+                            <span class="nav-dropdown-header">M-STAR CFD</span>
+                            <a href="software_manuals/mstar_cfd/introduction.html" class="nav-dropdown-item">소개</a>
+                            <a href="software_manuals/mstar_cfd/installation.html" class="nav-dropdown-item">설치</a>
+                            <a href="software_manuals/mstar_cfd/preprocessing.html" class="nav-dropdown-item">전처리</a>
+                            <a href="software_manuals/mstar_cfd/solver.html" class="nav-dropdown-item">솔버</a>
+                            <a href="software_manuals/mstar_cfd/postprocessing.html" class="nav-dropdown-item">후처리</a>
+                            <a href="software_manuals/mstar_cfd/verification_validation.html" class="nav-dropdown-item">V & V</a>
+                            <a href="software_manuals/mstar_cfd/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                            <a href="software_manuals/mstar_cfd/resources.html" class="nav-dropdown-item">자료실</a>
                         </div>
                     </div>
                     <div class="relative group">
@@ -133,166 +148,81 @@
 
     <main class="container mx-auto p-4 md:p-8 flex-grow w-full pt-8 md:pt-12">
         <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
-            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">연구실 소개</h1>
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">CFD의 과정과 구성요소</h1>
             <div class="prose max-w-none prose-neutral lg:prose-lg" id="searchable-content">
                 
-                <section class="mb-10">
-                    <h2 class="text-2xl font-medium text-brand-secondary mt-6 mb-4">1. 교수·연구실 개요</h2>
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full divide-y divide-gray-200 text-sm">
-                            <tbody class="bg-white divide-y divide-gray-200">
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-semibold text-gray-700 w-1/4">지도교수</td>
-                                    <td class="px-4 py-3 text-gray-800"><strong>홍종광 (Jong Kwang Hong) 조교수</strong></td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-semibold text-gray-700">소속</td>
-                                    <td class="px-4 py-3 text-gray-800">연세대학교 미래캠퍼스 <strong>생명과학기술학부 (Division of Biological Science & Technology)</strong></td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-semibold text-gray-700">연구실 위치</td>
-                                    <td class="px-4 py-3 text-gray-800">강원특별자치도 원주시 흥업면 연세대길 1, <strong>미래관 306호</strong></td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-semibold text-gray-700">연락처</td>
-                                    <td class="px-4 py-3 text-gray-800">☎ 033-760-2279 / ✉ <a href="mailto:jongkwang.hong@yonsei.ac.kr" class="text-brand-secondary hover:underline">jongkwang.hong@yonsei.ac.kr</a></td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-semibold text-gray-700">학력 · 경력</td>
-                                    <td class="px-4 py-3 text-gray-800">연세대 학사 → KAIST 생명화공 박사, LG Life Sciences 배양공정팀 근무, 싱가포르 A*STAR 박사후연구, <strong>2020년 3월</strong> 연세대 부임</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-semibold text-gray-700">특이사항</td>
-                                    <td class="px-4 py-3 text-gray-800">K-NIBRT(한국-NIBRT) 겸임교수로 바이오공정 인력양성 프로그램 참여</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
+                <p class="mb-6">전산 유체 역학(CFD, Computational Fluid Dynamics)은 컴퓨터를 사용하여 유체의 운동, 열 전달, 화학 반응 등 다양한 물리적 현상을 수치적으로 해석하고 예측하는 학문이자 강력한 엔지니어링 도구입니다. CFD는 항공우주, 자동차, 에너지, 화학공업, 바이오프로세스 등 광범위한 분야에서 제품 설계, 성능 최적화, 문제 해결에 핵심적인 역할을 수행합니다. [Ansys]</p>
+                <p>본 연구실에서는 특히 바이오리액터 설계 및 최적화, 약물 전달 시스템 개발 등 생물공학(Bioprocess Engineering) 분야의 난제 해결을 위해 CFD를 적극적으로 활용하고 있습니다. (<a href="bioprocess_cfd/introduction.html" class="text-brand-secondary hover:underline">Bioprocess CFD 소개 보기</a>)</p>
 
-                <section class="mb-10">
-                    <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">2. 연구 비전과 주요 주제</h2>
-                    <ol class="list-decimal pl-5 space-y-2">
-                        <li><strong>디지털 트윈 기반 바이오공정</strong> – CFD와 인공지능(AI)을 활용하여 배양 중 실시간 물리적 및 대사적 상태를 가상으로 복제하고 최적화된 제어 전략을 제시.</li>
-                        <li><strong>CHO 세포 배양 공정 최적화</strong> – 대사 및 유전체 모델과 실험 데이터를 결합하여 생산성과 품질을 동시에 향상시키는 데이터 기반의 배지 및 공정 설계.</li>
-                        <li><strong>시스템 대사공학 및 배지 개발</strong> – 체계적인 모델 가이드 프레임워크를 활용하여 배양 조건의 화학적, 영양학적 변수 탐색 과정을 자동화.</li>
-                        <li><strong>바이오리액터 CFD 기반 설계 및 최적화</strong> – 전산유체역학(CFD) 모델링을 통해 바이오리액터 내부 유체 흐름과 혼합 특성을 분석하고, 이를 바탕으로 배양 효율성과 품질 관리 전략을 최적화.</li>
-                    </ol>
-                </section>
-
-                <section class="mb-10">
-                    <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">CFD (전산유체역학) 기본 과정</h2>
-                    <p class="mb-4">전산유체역학(CFD)은 컴퓨터를 사용하여 유체 흐름 및 관련 현상을 시뮬레이션하고 분석하는 강력한 도구입니다. 저희 연구실에서는 바이오공정 최적화 및 설계를 위해 CFD를 적극 활용하고 있습니다. CFD의 일반적인 과정은 다음과 같으며, 상세한 내용은 <a href="cfd_theory/introduction.html" class="text-brand-secondary hover:underline font-semibold">CFD 이론</a> 섹션에서 확인하실 수 있습니다.</p>
+                <figure class="my-8 text-center">
+                    <img src="https://solidedge.siemens.com/wp-content/uploads/2020/10/Image-PL-CE-54543-917.009_GBL_OD_Computational-Fluid-Dynamics-CFD-860x484-1.jpg" alt="일반적인 CFD 해석 작업 흐름도" class="w-full md:w-5/6 lg:w-2/3 mx-auto rounded-lg shadow-md">
+                    <figcaption class="text-sm text-gray-600 mt-2 italic">일반적인 CFD 해석 작업 흐름도 (출처: Siemens Solid Edge [외부링크])</figcaption>
+                </figure>
                 
-                    <div class="space-y-6">
-                        <div>
-                            <h3 class="text-xl font-semibold text-brand-secondary mb-3">1. 전처리 (Pre-processing)</h3>
-                            <p class="text-gray-700 mb-3">해석을 위한 준비 단계로, 문제 정의, 형상 모델링, 격자 생성, 물리 모델 및 경계 조건 설정이 포함됩니다.</p>
-                            <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                <li><strong>형상 정의 (Geometry Definition):</strong> 분석 대상의 2D 또는 3D 형상을 생성하거나 기존 CAD 데이터를 불러옵니다.</li>
-                                <li><strong>격자 생성 (Mesh Generation):</strong> 계산 영역을 작은 제어 체적(셀 또는 요소)으로 분할합니다. 격자의 밀도와 품질은 해석 결과의 정확도와 계산 시간에 큰 영향을 미칩니다.</li>
-                                <li><strong>물리 모델 설정 (Physics Modeling):</strong> 유동의 특성(정상/비정상, 층류/난류), 열 전달, 상 변화, 화학 반응 등 해석에 고려할 물리 현상을 선택하고 관련된 수학적 모델(예: 난류 모델, 다상 유동 모델)을 설정합니다.</li>
-                                <li><strong>경계 조건 설정 (Boundary Conditions):</strong> 유입구, 유출구, 벽면, 대칭면 등 계산 영역의 경계에서 유동 변수(속도, 압력, 온도, 농도 등) 또는 플럭스 값을 지정합니다.</li>
-                            </ul>
-                        </div>
+                <h2 class="text-2xl font-medium text-brand-secondary mt-10 mb-6">CFD 해석의 주요 과정</h2>
+                <p class="mb-6">CFD 해석은 일반적으로 다음과 같은 세 가지 주요 단계로 구성됩니다. 각 단계는 상호 유기적으로 연결되어 있으며, 정확하고 신뢰성 있는 결과를 얻기 위해서는 각 단계에 대한 깊이 있는 이해와 세심한 주의가 필요합니다. [1, 2, 3]</p>
+
+                <div class="space-y-8">
+                    <section id="preprocessing" class="p-6 border border-neutral-medium rounded-lg shadow-sm hover:shadow-medium transition-shadow">
+                        <h3 class="text-xl font-semibold text-brand-secondary mb-3 mt-0 flex items-center">
+                            <i data-lucide="settings-2" class="w-6 h-6 mr-2 text-brand-accent"></i>
+                            1. 전처리 (Pre-processing)
+                        </h3>
+                        <p class="text-gray-700 mb-3">해석을 위한 준비 단계로, 실제 물리 문제를 컴퓨터가 이해하고 계산할 수 있는 형태로 변환하는 과정입니다. 이 단계의 품질이 전체 CFD 해석 결과의 정확도와 신뢰성에 결정적인 영향을 미칩니다. [1, 5]</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                            <li><strong>형상 정의 (Geometry Definition):</strong> 분석 대상 시스템의 2D 또는 3D 기하학적 형상을 생성하거나, 외부 CAD(Computer-Aided Design) 데이터를 불러와 정리합니다. 유동 해석에 불필요한 미세 형상은 단순화(de-featuring)하여 계산 효율을 높입니다. [1]</li>
+                            <li><strong>격자 생성 (Mesh Generation):</strong> 정의된 계산 영역(Domain)을 유한한 크기의 작은 제어 체적(셀 또는 요소)으로 분할합니다. 격자의 종류(정형/비정형), 밀도, 품질(왜곡도, 종횡비 등)은 해석 결과의 정확도와 계산 시간에 직접적인 영향을 미칩니다. [1, 6]</li>
+                            <li><strong>물리 모델 설정 (Physics Modeling):</strong> 해석하고자 하는 유동의 특성(예: 정상/비정상 상태, 층류/난류 유동), 열 전달 유무, 상 변화, 화학 반응 등을 고려하여 적절한 수학적 모델(예: 난류 모델, 다상 유동 모델, 에너지 방정식)을 선택하고 관련 파라미터를 설정합니다. [1, 4, 9]</li>
+                            <li><strong>경계 조건 설정 (Boundary Conditions):</strong> 계산 영역의 경계면(입구, 출구, 벽면, 대칭면 등)에서 유동 변수(속도, 압력, 온도, 농도 등)의 값이나 물리적 거동을 정의합니다. 이는 미분방정식의 해를 유일하게 결정하는 데 필수적입니다. [1, 5]</li>
+                            <li><strong>초기 조건 설정 (Initial Conditions):</strong> 비정상 상태 해석의 경우, 계산 시작 시점(t=0)에서의 유동장 전체 상태를 정의합니다. 정상 상태 해석에서도 수렴을 돕기 위해 적절한 초기값을 설정합니다. [1]</li>
+                        </ul>
+                        <a href="cfd_theory/preprocessing.html" class="text-brand-primary hover:underline font-semibold">전처리 상세 과정 보기 &raquo;</a>
+                    </section>
+            
+                    <section id="solving" class="p-6 border border-neutral-medium rounded-lg shadow-sm hover:shadow-medium transition-shadow">
+                        <h3 class="text-xl font-semibold text-brand-secondary mb-3 mt-0 flex items-center">
+                            <i data-lucide="cpu" class="w-6 h-6 mr-2 text-brand-accent"></i>
+                            2. 해석 (Solving)
+                        </h3>
+                        <p class="text-gray-700 mb-3">전처리 단계에서 설정된 모델과 조건에 따라, 유체의 거동을 기술하는 지배 방정식(질량, 운동량, 에너지 보존 방정식 등)을 수치적으로 풀어 각 격자점 또는 셀에서의 유동 변수(속도, 압력, 온도 등) 값을 계산하는 단계입니다. [1, 4]</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                            <li><strong>지배 방정식 (Governing Equations):</strong> 유체 유동을 지배하는 기본적인 물리 법칙(질량 보존, 운동량 보존 - 나비에-스토크스 방정식, 에너지 보존)을 수학적으로 표현한 편미분 방정식입니다. [NASA, CFD Online]</li>
+                            <li><strong>이산화 (Discretization):</strong> 연속적인 미분 형태의 지배 방정식을 컴퓨터가 처리할 수 있는 대수 방정식 형태로 변환하는 과정입니다. 주로 유한 체적법(FVM), 유한 요소법(FEM), 유한 차분법(FDM) 등이 사용되며, FVM이 CFD 분야에서 널리 쓰입니다. [1, 6, 7]</li>
+                            <li><strong>수치 해법 (Numerical Solution Algorithm):</strong> 이산화된 대수 방정식 시스템을 풀기 위한 알고리즘입니다. 비압축성 유동에서는 압력-속도 연계 알고리즘(SIMPLE, PISO 등)이 사용되며, 반복 계산을 통해 해를 구합니다. [1, 4]</li>
+                            <li><strong>수렴 판정 (Convergence Criteria):</strong> 반복 계산 과정에서 해가 더 이상 변하지 않고 안정된 상태에 도달했는지 (수렴했는지) 판단하는 기준입니다. 주로 각 방정식의 잔차(Residual)가 특정 값 이하로 감소하거나, 주요 물리량의 변화가 없을 때 수렴으로 간주합니다. [4]</li>
+                        </ul>
+                        <a href="cfd_theory/solving.html" class="text-brand-primary hover:underline font-semibold">해석 과정 상세 보기 &raquo;</a>
+                    </section>
+            
+                    <section id="postprocessing" class="p-6 border border-neutral-medium rounded-lg shadow-sm hover:shadow-medium transition-shadow">
+                        <h3 class="text-xl font-semibold text-brand-secondary mb-3 mt-0 flex items-center">
+                            <i data-lucide="bar-chart-2" class="w-6 h-6 mr-2 text-brand-accent"></i>
+                            3. 후처리 (Post-processing)
+                        </h3>
+                        <p class="text-gray-700 mb-3">솔버에서 계산된 방대한 양의 수치 데이터를 분석하고 시각화하여 유동 특성을 파악하고, 공학적 통찰력을 얻으며, 설계 검증 및 개선을 위한 결정을 내리는 최종 단계입니다. [1, 2, 3]</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                            <li><strong>결과 시각화 (Results Visualization):</strong> 속도 벡터장, 압력 등고선, 유선(streamlines), 온도 분포, 와류 구조 등을 2D 또는 3D 그래픽으로 표현하여 유동 현상을 직관적으로 이해합니다. 애니메이션을 통해 비정상 유동의 시간적 변화도 관찰할 수 있습니다. [1, 3]</li>
+                            <li><strong>정량적 데이터 추출 (Quantitative Data Extraction):</strong> 특정 지점, 선, 면, 또는 체적에서의 물리량 값(예: 특정 지점의 속도, 면을 통과하는 유량), 평균값, 최대/최소값, 힘(항력, 양력), 모멘트, 열 전달 계수 등 필요한 공학적 데이터를 추출합니다. [1, 2]</li>
+                            <li><strong>검증 및 타당성 조사 (Verification & Validation - V&V):</strong> 시뮬레이션 결과의 신뢰성을 확보하는 매우 중요한 과정입니다. <strong>검증(Verification)</strong>은 수치 해법이 수학적 모델을 올바르게 풀었는지(예: 격자 수렴성 테스트), <strong>확인(Validation)</strong>은 시뮬레이션 모델이 실제 물리 현상을 정확하게 예측하는지(예: 실험 데이터와의 비교)를 평가합니다. [1, 2, 4]</li>
+                        </ul>
+                        <a href="cfd_theory/postprocessing.html" class="text-brand-primary hover:underline font-semibold">후처리 상세 과정 보기 &raquo;</a>
+                    </section>
+                </div>
+
+                <section id="core-theory" class="mt-10">
+                     <h2 class="text-2xl font-medium text-brand-secondary mt-10 mb-6">CFD 핵심 이론 더 알아보기</h2>
+                     <p>CFD 해석의 근간을 이루는 지배 방정식, 이산화 기법, 난류 모델 등 핵심 이론에 대한 더 자세한 정보는 다음 페이지에서 확인하실 수 있습니다.</p>
+                     <ul class="list-disc pl-5 space-y-1 my-4">
+                        <li><a href="cfd_theory/core_theory.html" class="text-brand-secondary hover:underline">핵심 이론 (지배 방정식, 난류 모델 등)</a></li>
+                        <li><a href="cfd_theory/glossary.html" class="text-brand-secondary hover:underline">CFD 주요 용어 설명</a></li>
+                        <li><a href="cfd_theory/references.html" class="text-brand-secondary hover:underline">참고 문헌</a></li>
+                     </ul>
+                </section>
                 
-                        <div>
-                            <h3 class="text-xl font-semibold text-brand-secondary mb-3">2. 해석 (Solving)</h3>
-                            <p class="text-gray-700 mb-3">설정된 모델과 조건에 따라 지배 방정식(질량, 운동량, 에너지 보존 방정식 등)을 수치적으로 푸는 단계입니다.</p>
-                            <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                <li><strong>이산화 (Discretization):</strong> 미분 형태의 지배 방정식을 유한 체적법, 유한 요소법, 유한 차분법 등을 사용하여 대수 방정식으로 변환합니다.</li>
-                                <li><strong>수치 해법 (Numerical Solution):</strong> 변환된 대수 방정식들을 반복 계산을 통해 풀어 각 격자점에서 유동 변수 값을 구합니다.</li>
-                                <li><strong>수렴 판정 (Convergence Criteria):</strong> 계산 반복에 따른 해의 변화가 충분히 작아져 안정된 해에 도달했는지 (수렴했는지) 잔차(residual) 값 등을 통해 판단합니다.</li>
-                            </ul>
-                        </div>
-                
-                        <div>
-                            <h3 class="text-xl font-semibold text-brand-secondary mb-3">3. 후처리 (Post-processing)</h3>
-                            <p class="text-gray-700 mb-3">해석 결과를 분석하고 시각화하여 유동 특성을 파악하고 공학적 결정을 내리는 단계입니다.</p>
-                            <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                <li><strong>결과 시각화 (Results Visualization):</strong> 속도 벡터, 압력 컨투어, 유선(streamlines), 온도 분포 등을 그래픽으로 표시하여 유동 현상을 직관적으로 이해합니다.</li>
-                                <li><strong>정량적 데이터 추출 (Quantitative Data Extraction):</strong> 특정 지점/면/체적에서의 값, 평균값, 유량, 힘, 모멘트 등 필요한 공학적 데이터를 추출합니다.</li>
-                                <li><strong>검증 및 타당성 조사 (Verification & Validation - V&V):</strong> 해석 결과의 신뢰성을 확보하기 위해 격자 의존성 테스트, 실험 데이터 또는 이론/경험식과의 비교 등을 수행합니다.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="mb-10">
-                    <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">3. 최근 대표 연구성과 (2021–2025)</h2>
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full divide-y divide-gray-200 border border-gray-300 text-sm">
-                            <thead class="bg-gray-50">
-                                <tr>
-                                    <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">연도</th>
-                                    <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">논문 및 발표</th>
-                                    <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">주요 성과</th>
-                                </tr>
-                            </thead>
-                            <tbody class="bg-white divide-y divide-gray-200">
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 whitespace-nowrap font-medium text-gray-800">2025</td>
-                                    <td class="px-4 py-3 text-gray-800"><em>Shaking hydrodynamics of flask-based CHO cell cultures …</em> <strong>Biotechnology & Bioprocess Engineering</strong></td>
-                                    <td class="px-4 py-3 text-gray-800">20–260 rpm 범위의 EDR 및 전단응력 매핑을 통해 CFD 프로파일링 지표 개발로 스케일 다운 신뢰성 제고</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 whitespace-nowrap font-medium text-gray-800">2023</td>
-                                    <td class="px-4 py-3 text-gray-800"><em>Polyamine-supplemented media improves CHO-K1 growth & mAb quality</em> <strong>Applied Microbiology & Biotechnology</strong></td>
-                                    <td class="px-4 py-3 text-gray-800">다양한 폴리아민 조합 평가를 통해 세포 성장률과 항체 갈락토실화 품질을 15% 향상</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 whitespace-nowrap font-medium text-gray-800">2022</td>
-                                    <td class="px-4 py-3 text-gray-800"><em>Data-driven & model-guided systematic framework for media development</em> (BK21 성과)</td>
-                                    <td class="px-4 py-3 text-gray-800">메타볼릭 모델과 베이지안 최적화를 결합하여 40개 이상의 배지 조건을 자동 탐색, 생산성을 1.4배 증가</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 whitespace-nowrap font-medium text-gray-800">2021</td>
-                                    <td class="px-4 py-3 text-gray-800">분자과학기술 세미나 초청강연 “<strong>Model-guided Metabolic Characterization of CHO Cells</strong>”</td>
-                                    <td class="px-4 py-3 text-gray-800">대사흐름 분석을 기반으로 한 저온 배양과 고품질 항체 생산 전략 소개</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                <section class="mb-10">
-                    <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">4. 산학 및 국책 과제 참여</h2>
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full divide-y divide-gray-200 border border-gray-300 text-sm">
-                            <thead class="bg-gray-50">
-                                <tr>
-                                    <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">프로그램</th>
-                                    <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">역할 및 목표</th>
-                                </tr>
-                            </thead>
-                            <tbody class="bg-white divide-y divide-gray-200">
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-medium text-gray-800"><strong>BK21 Four 바이오공정 혁신인력양성단</strong></td>
-                                    <td class="px-4 py-3 text-gray-800">데이터 기반 바이오의약품 대량생산 공정 모듈 개발 및 전문 인력 양성</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-medium text-gray-800"><strong>K-NIBRT (Global NIBRT Korea)</strong></td>
-                                    <td class="px-4 py-3 text-gray-800">cGMP 수준의 단백질 제조 실습 제공 및 기업-학계 협력형 인력 양성 프로그램 운영</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                <section class="mb-10">
-                    <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">5. 연구 인력 및 교육</h2>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>(인원은 추후 업데이트 예정) – 세포 배양, 분석 화학, 계산 모델링의 세 팀 체제로 운영.</li>
-                        <li>주요 강의 과목: <strong>Biopharmaceutical Engineering, Metabolic Engineering, Digital Bioprocess Analytics</strong> 등 심화 전공과목 담당.</li>
-                    </ul>
-                </section>
-
-                <section class="mb-10">
-                    <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">6. 참여 및 문의 안내</h2>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li><strong>연구 인턴십 및 석·박사 지원</strong> – 이력서와 성적표, 관심 연구 주제를 이메일을 통해 연중 수시로 접수.</li>
-                        <li><strong>산학 프로젝트</strong> – 바이오공정 최적화 및 디지털 트윈 구축 관련 맞춤형 컨설팅 가능하며, 사전 비밀유지협약(NDA) 체결 후 진행.</li>
-                    </ul>
+                <section id="lab-introduction-link" class="mt-10 p-6 bg-brand-primary/10 rounded-lg">
+                    <h2 class="text-2xl font-medium text-brand-secondary mt-0 mb-4">본 연구실에 대해 더 알고 싶으신가요?</h2>
+                    <p>생물공학연구실(Bioprocess Engineering Laboratory)은 CFD 및 시스템 생물학을 융합하여 바이오공정 혁신을 목표로 연구를 수행하고 있습니다. 연구실의 비전, 연구 분야, 구성원, 주요 성과 등 자세한 정보는 아래 링크에서 확인하실 수 있습니다.</p>
+                    <p class="mt-4"><a href="lab_introduction/overview.html" class="inline-block bg-brand-primary text-white font-semibold py-2 px-4 rounded hover:bg-brand-secondary transition-colors">연구실 소개 바로가기 &raquo;</a></p>
                 </section>
 
             </div>
