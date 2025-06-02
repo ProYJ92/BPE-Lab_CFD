@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFD 이론: 용어 설명 - 연구실 이름</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50 h-auto md:h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-2 md:py-0">
+            <div class="flex justify-between w-full md:w-auto items-center">
+                <a href="../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-2">연구실 명칭 (CFD & Bioprocess)</a>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex items-center space-x-1 main-nav">
+                <div class="relative group">
+                    <button class="nav-item">연구실 소개 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../lab_introduction/overview.html" class="nav-dropdown-item">연구실 개요</a>
+                        <a href="../lab_introduction/gallery.html" class="nav-dropdown-item">사진 갤러리</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">CFD 이론 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="introduction.html" class="nav-dropdown-item">서론</a>
+                        <a href="preprocessing.html" class="nav-dropdown-item">Pre-processing</a>
+                        <a href="solving.html" class="nav-dropdown-item">Solving</a>
+                        <a href="postprocessing.html" class="nav-dropdown-item">Post-processing</a>
+                        <a href="core_theory.html" class="nav-dropdown-item">핵심이론</a>
+                        <a href="glossary.html" class="nav-dropdown-item">용어 설명</a>
+                        <a href="references.html" class="nav-dropdown-item">레퍼런스</a>
+                    </div>
+                </div>
+                 <div class="relative group">
+                    <button class="nav-item">Bioprocess CFD <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../bioprocess_cfd/introduction.html" class="nav-dropdown-item">서론</a>
+                        <a href="../bioprocess_cfd/software_comparison.html" class="nav-dropdown-item">주요 CFD 소프트웨어 비교</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-header">Ansys Fluent</span>
+                        <a href="../software_manuals/ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                        <span class="nav-dropdown-header">OpenFOAM</span>
+                        <a href="../software_manuals/openfoam/introduction.html" class="nav-dropdown-item">소개</a>
+                        <a href="../software_manuals/mstar_cfd/introduction.html" class="nav-dropdown-item mt-2">M-STAR CFD (소개)</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">자료실 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../data_room/papers.html" class="nav-dropdown-item">논문</a>
+                        <a href="../data_room/videos.html" class="nav-dropdown-item">영상</a>
+                        <a href="../data_room/simulation_results.html" class="nav-dropdown-item">시뮬레이션 결과</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">CFD 용어 설명 (Glossary)</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <p>CFD(전산 유체 역학) 분야에서 자주 사용되는 주요 전문 용어들을 알파벳 순서로 정리하여 설명합니다. 이 용어집은 CFD 학습 및 연구에 도움이 될 것입니다.</p>
+                
+                <!-- 용어 A -->
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">A</h2>
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold text-neutral-dark">Advection (이류)</h3>
+                    <p>유체의 평균 운동에 의해 스칼라 또는 벡터량이 수송되는 과정입니다. 확산(Diffusion)과 함께 물질, 운동량, 에너지 전달의 주요 메커니즘 중 하나입니다.</p>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold text-neutral-dark">Aspect Ratio (종횡비)</h3>
+                    <p>격자 셀 또는 기하학적 형상의 특정 방향 치수들 간의 비율입니다. 예를 들어, 2D 셀에서는 가장 긴 변과 가장 짧은 변의 비율, 3D 셀에서는 가장 긴 모서리와 가장 짧은 모서리의 비율로 정의될 수 있습니다. 격자 품질 평가의 중요한 지표 중 하나입니다.</p>
+                </div>
+
+                <!-- 용어 B -->
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">B</h2>
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold text-neutral-dark">Boundary Conditions (경계 조건)</h3>
+                    <p>계산 영역의 경계에서 유동 변수(속도, 압력, 온도 등)의 값을 지정하거나, 변수들 사이의 관계를 정의하는 조건입니다. 지배 방정식의 해를 유일하게 결정하는 데 필수적입니다. (예: Inlet, Outlet, Wall, Symmetry)</p>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold text-neutral-dark">Boundary Layer (경계층)</h3>
+                    <p>물체 표면 근처에서 점성의 영향이 지배적으로 나타나는 얇은 유체층입니다. 경계층 내에서는 유속이 표면에서의 0 (no-slip 조건)에서 주 유동(free stream) 속도까지 급격하게 변합니다. 경계층 해석은 항력 및 열전달 예측에 매우 중요합니다.</p>
+                </div>
+
+                <!-- 용어 C -->
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">C</h2>
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold text-neutral-dark">Cell (셀)</h3>
+                    <p>격자 생성 과정에서 계산 영역을 분할한 가장 작은 이산적인 체적 또는 면적 요소입니다. 지배 방정식이 각 셀에 대해 이산화되어 수치적으로 풀립니다. Control Volume(검사 체적)이라고도 불립니다.</p>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold text-neutral-dark">CFL Condition (Courant-Friedrichs-Lewy 조건)</h3>
+                    <p>외연적 시간 전진 기법에서 수치적 안정성을 확보하기 위한 필요조건입니다. 시간 간격(Δt) 동안 유동 정보가 공간 격자 한 셀(Δx)의 크기를 넘어 전파되지 않아야 함을 의미하며, CFL 수 (C = uΔt/Δx)로 표현됩니다.</p>
+                </div>
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold text-neutral-dark">Convergence (수렴)</h3>
+                    <p>반복적인 수치 계산 과정에서 해가 일정한 값으로 접근하여 더 이상 변하지 않거나 변화량이 매우 작아지는 상태를 의미합니다. 잔차(Residual)의 감소, 주요 물리량의 안정화 등을 통해 판단합니다.</p>
+                </div>
+                
+                <p class="mt-8">본 용어집은 지속적으로 업데이트될 예정입니다. 추가되기를 원하는 용어나 수정이 필요한 부분이 있다면 언제든지 알려주시기 바랍니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 연구실 명칭. 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../script.js"></script>
+</body>
+</html>

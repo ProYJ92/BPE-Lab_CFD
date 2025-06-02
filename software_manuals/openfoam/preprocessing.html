@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenFOAM 사용 설명서: 전처리 - 연구실 이름</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50 h-auto md:h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-2 md:py-0">
+            <div class="flex justify-between w-full md:w-auto items-center">
+                <a href="../../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-2">연구실 명칭 (CFD & Bioprocess)</a>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex items-center space-x-1 main-nav">
+                <div class="relative group">
+                    <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-header">Ansys Fluent</span>
+                        <a href="../ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                        <span class="nav-dropdown-header">OpenFOAM</span>
+                        <a href="introduction.html" class="nav-dropdown-item">소개</a>
+                        <a href="installation.html" class="nav-dropdown-item">설치</a>
+                        <a href="preprocessing.html" class="nav-dropdown-item">전처리</a>
+                        <a href="solver.html" class="nav-dropdown-item">솔버</a>
+                        <a href="postprocessing.html" class="nav-dropdown-item">후처리</a>
+                        <a href="verification_validation.html" class="nav-dropdown-item">V & V</a>
+                        <a href="troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                        <a href="resources.html" class="nav-dropdown-item">자료실</a>
+                        <span class="nav-dropdown-header">M-STAR CFD</span>
+                        <a href="../mstar_cfd/introduction.html" class="nav-dropdown-item">소개</a>
+                    </div>
+                </div>
+                <!-- Other main menus -->
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">OpenFOAM 사용 설명서: 전처리</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <p>OpenFOAM의 전처리 과정은 주로 격자 생성(Meshing)과 사례 설정(Case Setup)으로 구성됩니다. OpenFOAM은 텍스트 기반의 딕셔너리 파일들을 통해 모든 설정을 관리하므로, 파일 구조와 각 파일의 역할에 대한 이해가 중요합니다.</p>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">1. 격자 생성 (Meshing)</h2>
+                <p>OpenFOAM은 자체 격자 생성 유틸리티와 외부 격자 변환 도구를 제공합니다.</p>
+                <h3 class="text-xl font-semibold text-neutral-dark mt-4 mb-2">blockMesh</h3>
+                <p>단순한 형상(주로 직육면체 블록 조합)에 대한 정형(structured) 또는 블록-구조(block-structured) 격자를 생성하는 유틸리티입니다. <code>system/blockMeshDict</code> 파일에 형상 정보(정점, 모서리, 블록, 경계면)와 격자 밀도를 정의합니다.</p>
+                <pre><code class="language-bash">blockMesh</code></pre>
+                <p>단순하지만 강력하며, 기본적인 유동 문제나 복잡한 격자의 배경 격자 생성에 사용됩니다.</p>
+                 <div class="my-4 p-2 bg-neutral-light rounded text-center italic text-sm text-gray-600"> (이미지: blockMeshDict 파일 예시 또는 blockMesh로 생성된 단순 격자) </div>
+
+                <h3 class="text-xl font-semibold text-neutral-dark mt-4 mb-2">snappyHexMesh</h3>
+                <p>복잡한 형상(STL 또는 OBJ 파일 기반) 주위에 비정형 육면체 지배적 격자를 자동으로 생성하는 강력한 유틸리티입니다. 배경 격자(주로 blockMesh로 생성), 형상 표면, 그리고 다양한 격자 제어 파라미터(세분화 레벨, 경계층 설정 등)를 <code>system/snappyHexMeshDict</code> 파일에 정의합니다.</p>
+                <pre><code class="language-bash">snappyHexMesh -overwrite</code></pre>
+                <p>품질 좋은 격자를 얻기 위해서는 설정 파일에 대한 이해와 여러 번의 시도가 필요할 수 있습니다.</p>
+                 <div class="my-4 p-2 bg-neutral-light rounded text-center italic text-sm text-gray-600"> (이미지: snappyHexMeshDict 파일 일부 또는 snappyHexMesh로 생성된 복잡 형상 격자) </div>
+                
+                <h3 class="text-xl font-semibold text-neutral-dark mt-4 mb-2">외부 격자 생성 도구 활용</h3>
+                <p>Salome, Gmsh, Ansys Meshing, Pointwise 등 다양한 외부 GUI 기반 격자 생성 소프트웨어를 사용하여 격자를 생성한 후, OpenFOAM 형식으로 변환하여 사용할 수 있습니다. 각 소프트웨어에서 지원하는 내보내기 형식(예: CGNS, MED, UNV, MSH)에 따라 OpenFOAM 유틸리티(예: <code>fluentMeshToFoam</code>, <code>gmshToFoam</code>, <code>ideasUnvToFoam</code>)를 사용하여 변환합니다.</p>
+                <pre><code class="language-bash"># 예시: Fluent .msh 파일을 OpenFOAM 형식으로 변환
+fluentMeshToFoam meshfile.msh</code></pre>
+
+                <h3 class="text-xl font-semibold text-neutral-dark mt-4 mb-2">격자 품질 확인</h3>
+                <p>생성된 격자의 품질은 <code>checkMesh</code> 유틸리티를 사용하여 확인할 수 있습니다. 왜곡도(skewness), 종횡비(aspect ratio), 면적(face area), 최소/최대 각도, 음수 체적(negative volume) 등을 검사하여 보고합니다.</p>
+                <pre><code class="language-bash">checkMesh</code></pre>
+                <p>격자 품질이 나쁘면 해석 결과의 정확도가 낮아지거나 발산할 수 있으므로, <code>checkMesh</code> 결과를 바탕으로 격자를 수정해야 합니다.</p>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">2. 사례 설정 (Case Setup)</h2>
+                <p>OpenFOAM 사례는 일반적으로 특정 디렉토리 구조를 따릅니다. 주요 디렉토리는 다음과 같습니다:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong><code>0</code> (또는 초기 시간) 디렉토리:</strong> 초기 조건 및 경계 조건 파일을 포함합니다. 각 변수(예: <code>U</code> (속도), <code>p</code> (압력), <code>T</code> (온도), <code>k</code> (난류 운동 에너지))에 대한 파일이 위치합니다.</li>
+                    <li><strong><code>constant</code> 디렉토리:</strong> 시간에 따라 변하지 않는 파일들을 포함합니다.
+                        <ul class="list-circle pl-5 space-y-1 mt-1">
+                            <li><code>polyMesh</code>: 격자 정보 파일들이 위치하는 하위 디렉토리. (<code>points</code>, <code>faces</code>, <code>owner</code>, <code>neighbour</code>, <code>boundary</code> 등)</li>
+                            <li><code>transportProperties</code>: 유체의 물성치(점성, 밀도 등)를 정의하는 파일.</li>
+                            <li><code>turbulenceProperties</code>: 난류 모델 선택 및 관련 설정을 하는 파일.</li>
+                            <li>기타 물리 모델 관련 딕셔너리 파일 (예: <code>RASProperties</code>, <code>LESProperties</code>, <code>thermophysicalProperties</code>).</li>
+                        </ul>
+                    </li>
+                    <li><strong><code>system</code> 디렉토리:</strong> 해석 제어 및 솔버 설정을 위한 파일들을 포함합니다.
+                        <ul class="list-circle pl-5 space-y-1 mt-1">
+                            <li><code>controlDict</code>: 해석 시작/종료 시간, 시간 간격, 데이터 저장 빈도, 라이브러리 로드 등 전반적인 제어 설정을 담당합니다.</li>
+                            <li><code>fvSchemes</code>: 유한 체적법의 이산화 기법(차분 스킴)을 정의합니다 (예: 시간항, 구배항, 발산항, 라플라시안항).</li>
+                            <li><code>fvSolution</code>: 선형 대수 방정식 시스템의 솔버, 허용 오차, 감속 계수, 압력-속도 연계 알고리즘(PISO, SIMPLE 등) 등을 설정합니다.</li>
+                            <li>격자 생성 관련 딕셔너리 파일 (예: <code>blockMeshDict</code>, <code>snappyHexMeshDict</code>).</li>
+                        </ul>
+                    </li>
+                </ul>
+                 <div class="my-4 p-2 bg-neutral-light rounded text-center italic text-sm text-gray-600"> (이미지: OpenFOAM 사례 디렉토리 구조 예시) </div>
+                <p>각 딕셔너리 파일은 고유한 문법과 키워드를 가지므로, OpenFOAM 사용자 가이드나 튜토리얼을 참조하여 정확하게 작성해야 합니다. 기존 튜토리얼 사례를 복사하여 수정하는 방식으로 시작하는 것이 일반적입니다.</p>
+                 <div class="my-6 p-4 bg-neutral-medium rounded-md">
+                    <h4 class="text-lg font-semibold text-brand-secondary mt-0">OpenFOAM 튜토리얼 (Cavity 예제) 영상</h4>
+                    <p>OpenFOAM의 기본적인 Lid-driven Cavity 예제를 통해 전처리 과정을 설명하는 영상입니다.</p>
+                    <div class="aspect-w-16 aspect-h-9 mt-2">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_OPENFOAM_CAVITY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded shadow-md"></iframe>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-1">출처: YouTube (예시) - 실제 튜토리얼 영상 링크로 교체 필요</p>
+                </div>
+                <p>성공적인 OpenFOAM 해석을 위해서는 이러한 전처리 과정에 대한 충분한 이해와 신중한 설정이 필수적입니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 연구실 명칭. 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../../script.js"></script>
+</body>
+</html>

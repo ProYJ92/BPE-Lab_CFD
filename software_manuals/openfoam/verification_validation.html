@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenFOAM 사용 설명서: V&V - 연구실 이름</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50 h-auto md:h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-2 md:py-0">
+            <div class="flex justify-between w-full md:w-auto items-center">
+                <a href="../../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-2">연구실 명칭 (CFD & Bioprocess)</a>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex items-center space-x-1 main-nav">
+                 <div class="relative group">
+                    <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-header">Ansys Fluent</span>
+                        <a href="../ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                        <span class="nav-dropdown-header">OpenFOAM</span>
+                        <a href="introduction.html" class="nav-dropdown-item">소개</a>
+                        <a href="installation.html" class="nav-dropdown-item">설치</a>
+                        <a href="preprocessing.html" class="nav-dropdown-item">전처리</a>
+                        <a href="solver.html" class="nav-dropdown-item">솔버</a>
+                        <a href="postprocessing.html" class="nav-dropdown-item">후처리</a>
+                        <a href="verification_validation.html" class="nav-dropdown-item">V & V</a>
+                        <a href="troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                        <a href="resources.html" class="nav-dropdown-item">자료실</a>
+                        <span class="nav-dropdown-header">M-STAR CFD</span>
+                        <a href="../mstar_cfd/introduction.html" class="nav-dropdown-item">소개</a>
+                    </div>
+                </div>
+                <!-- Other main menus -->
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">OpenFOAM 사용 설명서: 검증 및 확인 (V&V)</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <p>OpenFOAM을 사용하여 얻은 CFD 시뮬레이션 결과의 신뢰성을 평가하고 엔지니어링 결정에 활용하기 위해서는 체계적인 검증(Verification) 및 확인(Validation), 즉 V&V 과정이 필수적입니다. OpenFOAM의 특성상 사용자가 직접 많은 부분을 설정하고 제어하므로, V&V의 중요성은 더욱 큽니다.</p>
+                <p>V&V의 일반적인 이론 및 절차에 대해서는 <a href="../../cfd_theory/postprocessing.html#v-v" class="text-brand-secondary hover:underline">CFD 이론: 후처리 - V&V 섹션</a> 또는 <a href="../ansys_fluent/verification_validation.html" class="text-brand-secondary hover:underline">Ansys Fluent: V&V 섹션</a>을 참고하십시오. 본 페이지에서는 OpenFOAM 환경에서의 V&V 수행 시 특별히 고려할 사항들을 중심으로 설명합니다.</p>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">1. 검증 (Verification) in OpenFOAM</h2>
+                <p>OpenFOAM 솔버가 수학적 모델을 정확하게 풀고 있는지 확인하는 과정입니다.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>
+                        <strong>격자 수렴성 테스트 (Grid Convergence Study):</strong>
+                        <p>OpenFOAM에서도 격자 품질과 밀도는 결과에 큰 영향을 미칩니다. <code>blockMesh</code>, <code>snappyHexMesh</code> 또는 외부 격자 생성 도구를 사용하여 최소 3가지 이상의 체계적으로 다른 밀도의 격자를 생성합니다. 각 격자에 대해 동일한 <code>system</code> 및 <code>constant</code> 디렉토리 설정을 사용하여 해석을 수행하고, 주요 물리량(예: <code>forces</code>, <code>probes</code> 함수 객체로 추출)을 비교하여 격자 독립성을 평가합니다. GCI (Grid Convergence Index) 분석을 수행할 수 있습니다.</p>
+                        <div class="my-4 p-2 bg-neutral-light rounded text-center italic text-sm text-gray-600"> (팁: 격자 크기 변경 시 <code>blockMeshDict</code>의 블록별 셀 수, <code>snappyHexMeshDict</code>의 세분화 레벨 등을 조절) </div>
+                    </li>
+                    <li>
+                        <strong>시간 간격 수렴성 테스트 (Time Step Convergence Study):</strong>
+                        <p>비정상 상태 솔버(<code>pisoFoam</code>, <code>pimpleFoam</code> 등) 사용 시, <code>controlDict</code>의 <code>deltaT</code> 값을 변경해가며 해석을 수행하고 결과의 시간 간격 의존성을 평가합니다. 특히 <code>pimpleFoam</code>의 경우 CFL 수 기반의 자동 시간 간격 조절(<code>adjustTimeStep</code>) 기능 사용 시 최대 CFL 수(<code>maxCo</code>) 값에 따른 민감도 분석도 고려할 수 있습니다.</p>
+                    </li>
+                    <li>
+                        <strong>이산화 스킴(Discretization Scheme) 민감도 분석:</strong>
+                        <p><code>fvSchemes</code> 파일에서 대류항(<code>divSchemes</code>) 등의 이산화 스킴을 변경(예: <code>upwind</code> vs. <code>linearUpwind</code> vs. <code>limitedLinear</code>)하면서 결과의 변화를 관찰합니다. 고차 정확도 스킴 사용 시 안정성 문제 발생 가능성도 염두에 둡니다.</p>
+                    </li>
+                    <li>
+                        <strong>솔버 및 알고리즘 설정 민감도 분석:</strong>
+                        <p><code>fvSolution</code> 파일에서 선형 솔버의 허용 오차(<code>tolerance</code>), 압력-속도 연계 알고리즘(PISO, SIMPLE)의 설정값, 감속 계수(<code>relaxationFactors</code>) 등을 변경하며 결과의 민감도를 확인할 수 있습니다. (특히 사용자 정의 솔버 개발 시 중요)</p>
+                    </li>
+                    <li>
+                        <strong>튜토리얼 및 벤치마크 사례 활용:</strong>
+                        <p>OpenFOAM과 함께 제공되는 튜토리얼 사례(예: <code>cavity</code>, <code>damBreak</code>)를 직접 실행해보고, 이미 검증된 결과와 비교하여 자신의 설정 및 환경이 올바른지 간접적으로 확인할 수 있습니다.</p>
+                    </li>
+                </ul>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">2. 확인 (Validation) in OpenFOAM</h2>
+                <p>OpenFOAM 시뮬레이션 결과가 실제 물리 현상을 정확하게 예측하는지 평가하는 과정입니다.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>
+                        <strong>실험 데이터와의 정량적 비교:</strong>
+                        <p>가장 중요한 확인 절차입니다. 신뢰할 수 있는 실험 데이터와 OpenFOAM 결과를 비교합니다.</p>
+                        <ol class="list-decimal pl-5 space-y-1 mt-1">
+                            <li>실험에서 사용된 형상과 동일한 격자를 OpenFOAM에서 생성합니다.</li>
+                            <li>실험 조건(유입 속도, 온도, 물성치 등)을 <code>0</code> 디렉토리의 경계 조건 파일 및 <code>constant</code> 디렉토리의 물성 파일에 정확하게 반영합니다.</li>
+                            <li><code>controlDict</code>의 <code>functions</code> 항목에 <code>probes</code>, <code>sets</code>, <code>surfaces</code> 등을 정의하여 실험 데이터와 동일한 위치/영역에서 데이터를 추출합니다.</li>
+                            <li>추출된 데이터를 Python(Matplotlib, Pandas), Gnuplot 등을 사용하여 실험 데이터와 함께 그래프로 비교하고 오차를 분석합니다.</li>
+                            <li>필요시 <code>turbulenceProperties</code>의 난류 모델, <code>fvSchemes</code>의 이산화 기법 등을 조정하여 모델을 개선합니다.</li>
+                        </ol>
+                         <div class="my-4 p-2 bg-neutral-light rounded text-center italic text-sm text-gray-600"> (예시: Python 스크립트를 사용하여 OpenFOAM 결과와 실험 데이터를 플롯팅하는 코드 일부 또는 비교 그래프) </div>
+                    </li>
+                    <li>
+                        <strong>이론해/분석해와의 비교:</strong>
+                        <p>단순화된 문제에 대해 OpenFOAM으로 해석하고, 그 결과를 이론해와 비교합니다. (예: Hagen-Poiseuille 유동)</p>
+                    </li>
+                    <li>
+                        <strong>다른 CFD 코드 결과와의 비교 (Cross-Code Validation):</strong>
+                        <p>동일한 문제에 대해 신뢰성 있는 상용 CFD 소프트웨어(예: Ansys Fluent)로 해석한 결과와 OpenFOAM 결과를 비교할 수 있습니다. 이 경우, 두 코드 간의 물리 모델, 수치 기법, 격자 등의 차이점을 명확히 인지하고 비교해야 합니다.</p>
+                    </li>
+                </ul>
+                 <div class="my-6 p-4 bg-neutral-medium rounded-md">
+                    <h4 class="text-lg font-semibold text-brand-secondary mt-0">OpenFOAM V&V 관련 커뮤니티 자료</h4>
+                    <p>CFD Online 등 OpenFOAM 커뮤니티에는 V&V 관련 토론 및 벤치마크 사례 공유가 활발합니다.</p>
+                    <a href="https://www.cfd-online.com/Forums/openfoam-validation-verification/" target="_blank" rel="noopener noreferrer" class="text-brand-secondary hover:underline">CFD Online - OpenFOAM V&V 포럼 &raquo;</a>
+                </div>
+                <p>OpenFOAM은 사용자에게 많은 자유도를 제공하는 만큼, 결과의 신뢰성 확보를 위한 V&V 과정에 더욱 세심한 주의를 기울여야 합니다. 체계적인 V&V를 통해 OpenFOAM의 강력한 기능을 최대한 활용하시기 바랍니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 연구실 명칭. 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../../script.js"></script>
+</body>
+</html>

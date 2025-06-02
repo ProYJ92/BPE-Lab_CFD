@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연구 분야 - 연구실 이름</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50 h-auto md:h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-2 md:py-0">
+            <div class="flex justify-between w-full md:w-auto items-center">
+                <a href="../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-2">연구실 명칭 (CFD & Bioprocess)</a>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex items-center space-x-1 main-nav">
+                <div class="relative group">
+                    <button class="nav-item">연구실 소개 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="overview.html" class="nav-dropdown-item">연구실 개요</a>
+                        <a href="research_areas.html" class="nav-dropdown-item">연구 분야</a>
+                        <a href="goals_vision.html" class="nav-dropdown-item">연구 목표 및 비전</a>
+                        <a href="professor.html" class="nav-dropdown-item">교수 소개</a>
+                        <a href="researchers.html" class="nav-dropdown-item">연구원 소개</a>
+                        <a href="projects.html" class="nav-dropdown-item">주요 연구 프로젝트</a>
+                        <a href="facilities.html" class="nav-dropdown-item">실험실 시설 및 장비</a>
+                        <a href="achievements.html" class="nav-dropdown-item">연구 성과</a>
+                        <a href="partners.html" class="nav-dropdown-item">협력기관 및 파트너</a>
+                        <a href="gallery.html" class="nav-dropdown-item">사진 갤러리</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">CFD 이론 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../cfd_theory/introduction.html" class="nav-dropdown-item">서론</a>
+                        <a href="../cfd_theory/preprocessing.html" class="nav-dropdown-item">Pre-processing</a>
+                        <a href="../cfd_theory/solving.html" class="nav-dropdown-item">Solving</a>
+                        <a href="../cfd_theory/postprocessing.html" class="nav-dropdown-item">Post-processing</a>
+                        <a href="../cfd_theory/core_theory.html" class="nav-dropdown-item">핵심이론</a>
+                        <a href="../cfd_theory/glossary.html" class="nav-dropdown-item">용어 설명</a>
+                        <a href="../cfd_theory/references.html" class="nav-dropdown-item">레퍼런스</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">Bioprocess CFD <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../bioprocess_cfd/introduction.html" class="nav-dropdown-item">서론</a>
+                        <a href="../bioprocess_cfd/theoretical_background.html" class="nav-dropdown-item">이론적 배경</a>
+                        <a href="../bioprocess_cfd/application_cases.html" class="nav-dropdown-item">Bioprocess CFD 적용 사례</a>
+                        <a href="../bioprocess_cfd/software_comparison.html" class="nav-dropdown-item">주요 CFD 소프트웨어 비교</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-header">Ansys Fluent</span>
+                        <a href="../software_manuals/ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                        <a href="../software_manuals/ansys_fluent/installation.html" class="nav-dropdown-item">설치</a>
+                        <a href="../software_manuals/mstar_cfd/introduction.html" class="nav-dropdown-item mt-2">M-STAR CFD (소개)</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">자료실 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../data_room/papers.html" class="nav-dropdown-item">논문</a>
+                        <a href="../data_room/videos.html" class="nav-dropdown-item">영상</a>
+                        <a href="../data_room/simulation_results.html" class="nav-dropdown-item">시뮬레이션 결과</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">연구 분야</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <p>본 연구실은 다음과 같은 주요 연구 분야에 집중하고 있습니다.</p>
+                <!-- Placeholder for detailed content -->
+                <div class="my-6 p-4 bg-neutral-medium rounded-md">
+                    <h2 class="text-xl font-semibold text-brand-secondary mt-0">1. 첨단 CFD 모델링 및 시뮬레이션</h2>
+                    <p>난류 모델링, 다상 유동 해석, 열전달 및 화학 반응 유동 등 복잡한 물리 현상을 정확하게 예측하기 위한 CFD 기법 연구를 수행합니다.</p>
+                    <!-- Image related to CFD modeling -->
+                </div>
+                <div class="my-6 p-4 bg-neutral-medium rounded-md">
+                    <h2 class="text-xl font-semibold text-brand-secondary mt-0">2. 바이오프로세스 최적화</h2>
+                    <p>바이오리액터 내 유동 특성 분석, 물질 전달 효율 향상, 스케일업 문제 해결 등 바이오 의약품 및 화학제품 생산 공정의 효율성과 안정성을 높이기 위한 연구를 진행합니다.</p>
+                    <!-- Image related to Bioprocess -->
+                </div>
+                <div class="my-6 p-4 bg-neutral-medium rounded-md">
+                    <h2 class="text-xl font-semibold text-brand-secondary mt-0">3. 재생 에너지 시스템</h2>
+                    <p>풍력 터빈, 조류 에너지 변환 장치 등 재생 에너지 시스템의 공기역학적/유체역학적 성능 개선을 위한 CFD 해석 및 설계를 수행합니다.</p>
+                    <!-- Image related to Renewable Energy -->
+                </div>
+                <p>세부 연구 내용 및 프로젝트는 지속적으로 업데이트될 예정입니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 연구실 명칭. 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../script.js"></script>
+</body>
+</html>

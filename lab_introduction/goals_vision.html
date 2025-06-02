@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연구 목표 및 비전 - 연구실 이름</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50 h-auto md:h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-2 md:py-0">
+            <div class="flex justify-between w-full md:w-auto items-center">
+                <a href="../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-2">연구실 명칭 (CFD & Bioprocess)</a>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex items-center space-x-1 main-nav">
+                <div class="relative group">
+                    <button class="nav-item">연구실 소개 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="overview.html" class="nav-dropdown-item">연구실 개요</a>
+                        <a href="research_areas.html" class="nav-dropdown-item">연구 분야</a>
+                        <a href="goals_vision.html" class="nav-dropdown-item">연구 목표 및 비전</a>
+                        <a href="professor.html" class="nav-dropdown-item">교수 소개</a>
+                         <a href="partners.html" class="nav-dropdown-item">협력기관 및 파트너</a>
+                        <a href="gallery.html" class="nav-dropdown-item">사진 갤러리</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">CFD 이론 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../cfd_theory/introduction.html" class="nav-dropdown-item">서론</a>
+                        <a href="../cfd_theory/core_theory.html" class="nav-dropdown-item">핵심이론</a>
+                        <a href="../cfd_theory/glossary.html" class="nav-dropdown-item">용어 설명</a>
+                        <a href="../cfd_theory/references.html" class="nav-dropdown-item">레퍼런스</a>
+                    </div>
+                </div>
+                 <div class="relative group">
+                    <button class="nav-item">Bioprocess CFD <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../bioprocess_cfd/introduction.html" class="nav-dropdown-item">서론</a>
+                        <a href="../bioprocess_cfd/software_comparison.html" class="nav-dropdown-item">주요 CFD 소프트웨어 비교</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-header">Ansys Fluent</span>
+                        <a href="../software_manuals/ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                         <a href="../software_manuals/mstar_cfd/introduction.html" class="nav-dropdown-item mt-2">M-STAR CFD (소개)</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">자료실 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../data_room/papers.html" class="nav-dropdown-item">논문</a>
+                        <a href="../data_room/videos.html" class="nav-dropdown-item">영상</a>
+                        <a href="../data_room/simulation_results.html" class="nav-dropdown-item">시뮬레이션 결과</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">연구 목표 및 비전</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <h2 class="text-2xl font-medium text-brand-secondary mt-0 mb-4">연구 목표</h2>
+                <p>본 연구실의 주요 목표는 다음과 같습니다:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>혁신적 기술 개발:</strong> CFD 및 바이오프로세스 분야에서 세계적 수준의 핵심 기술을 개발하고, 산업 현장의 난제 해결에 기여합니다.</li>
+                    <li><strong>학문적 기여:</strong> 독창적이고 영향력 있는 연구 성과를 창출하여 관련 학문 분야의 발전을 선도합니다.</li>
+                    <li><strong>인재 양성:</strong> 창의적 문제 해결 능력과 국제적 경쟁력을 갖춘 차세대 연구자를 육성합니다.</li>
+                    <li><strong>산학 협력 강화:</strong> 산업계와의 긴밀한 협력을 통해 연구 성과의 실용화를 촉진하고, 국가 산업 발전에 이바지합니다.</li>
+                </ul>
+                <!-- Image related to research goals -->
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">비전</h2>
+                <p>저희 연구실은 <strong>"CFD와 바이오프로세스 융합 연구를 통한 지속 가능한 미래 가치 창출"</strong>을 비전으로 삼고 있습니다.</p>
+                <p>이를 위해, 기초 과학 원리에 대한 깊이 있는 이해를 바탕으로 첨단 시뮬레이션 기술과 실험적 검증을 결합하여, 에너지, 환경, 보건 등 인류 사회의 중요 문제 해결에 기여하는 혁신적인 연구를 수행하고자 합니다. 미래 사회의 기술적 요구에 부응하고, 사회적 책임을 다하는 글로벌 리딩 연구 그룹으로 성장하는 것을 목표로 합니다.</p>
+                <!-- Image related to vision -->
+                 <div class="my-8 text-center">
+                     <div class="w-full md:w-2/3 lg:w-1/2 h-64 bg-neutral-medium mx-auto rounded-lg shadow-md flex items-center justify-center">
+                        <p class="text-neutral-dark">연구실 비전 관련 이미지</p>
+                     </div>
+                     <figcaption class="text-sm text-gray-600 mt-2 italic">연구실의 장기적인 비전을 상징하는 이미지입니다.</figcaption>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 연구실 명칭. 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../script.js"></script>
+</body>
+</html>

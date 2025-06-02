@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFD 이론: 핵심 이론 - 연구실 이름</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50 h-auto md:h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-2 md:py-0">
+            <div class="flex justify-between w-full md:w-auto items-center">
+                <a href="../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-2">연구실 명칭 (CFD & Bioprocess)</a>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex items-center space-x-1 main-nav">
+                 <div class="relative group">
+                    <button class="nav-item">연구실 소개 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../lab_introduction/overview.html" class="nav-dropdown-item">연구실 개요</a>
+                        <a href="../lab_introduction/gallery.html" class="nav-dropdown-item">사진 갤러리</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">CFD 이론 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="introduction.html" class="nav-dropdown-item">서론</a>
+                        <a href="preprocessing.html" class="nav-dropdown-item">Pre-processing</a>
+                        <a href="solving.html" class="nav-dropdown-item">Solving</a>
+                        <a href="postprocessing.html" class="nav-dropdown-item">Post-processing</a>
+                        <a href="core_theory.html" class="nav-dropdown-item">핵심이론</a>
+                        <a href="glossary.html" class="nav-dropdown-item">용어 설명</a>
+                        <a href="references.html" class="nav-dropdown-item">레퍼런스</a>
+                    </div>
+                </div>
+                 <div class="relative group">
+                    <button class="nav-item">Bioprocess CFD <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../bioprocess_cfd/introduction.html" class="nav-dropdown-item">서론</a>
+                        <a href="../bioprocess_cfd/software_comparison.html" class="nav-dropdown-item">주요 CFD 소프트웨어 비교</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-header">Ansys Fluent</span>
+                        <a href="../software_manuals/ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                        <span class="nav-dropdown-header">OpenFOAM</span>
+                        <a href="../software_manuals/openfoam/introduction.html" class="nav-dropdown-item">소개</a>
+                        <a href="../software_manuals/mstar_cfd/introduction.html" class="nav-dropdown-item mt-2">M-STAR CFD (소개)</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">자료실 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../data_room/papers.html" class="nav-dropdown-item">논문</a>
+                        <a href="../data_room/videos.html" class="nav-dropdown-item">영상</a>
+                        <a href="../data_room/simulation_results.html" class="nav-dropdown-item">시뮬레이션 결과</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">핵심 이론</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <p>CFD 해석의 근간은 유체의 물리적 거동을 기술하는 지배 방정식, 이 연속적인 방정식을 컴퓨터 계산이 가능한 이산적인 형태로 변환하는 이산화 기법, 그리고 복잡한 유체 현상, 특히 난류를 효과적으로 모사하기 위한 모델에 있습니다.</p>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">3.1 지배 방정식 (Governing Equations)</h2>
+                <p>CFD 해석의 출발점은 유체의 질량, 운동량, 에너지 보존 법칙을 나타내는 비선형 편미분 방정식입니다.</p>
+                
+                <div class="theory-box">
+                    <h5 class="text-xl font-semibold text-brand-secondary mt-0 mb-3">연속 방정식 (Continuity Equation)</h5>
+                    <p>질량 보존 법칙을 나타냅니다. 특정 체적 내 유체의 질량 변화율은 그 체적 경계를 통해 유입/유출되는 질량 유량의 순 변화와 같다는 원리입니다.</p>
+                    <p>일반 형태: <code>&part;&rho;/&part;t + &nabla; &middot; (&rho;<b>u</b>) = 0</code></p>
+                    <p>비압축성 유동(&rho; = 일정)의 경우: <code>&nabla; &middot; <b>u</b> = 0</code></p>
+                </div>
+                
+                <div class="theory-box">
+                    <h5 class="text-xl font-semibold text-brand-secondary mt-0 mb-3">운동량 방정식 (Momentum Equation) / 나비에-스토크스 방정식 (Navier-Stokes Equations)</h5>
+                    <p>뉴턴의 제2법칙(<b>F</b> = m<b>a</b>)을 유체 요소에 적용한 것입니다. 점성 유체에 대한 운동량 방정식이 나비에-스토크스 방정식입니다.</p>
+                    <p>나비에-스토크스 방정식 (비압축성 뉴턴 유체): <br><code>&rho;(&part;<b>u</b>/&part;t + (<b>u</b> &middot; &nabla;)<b>u</b>) = -&nabla;p + &micro;&nabla;&sup2;<b>u</b> + &rho;<b>f</b><sub>b</sub></code></p>
+                    <p>오일러 방정식 (비점성 유체): <br><code>&rho;(&part;<b>u</b>/&part;t + (<b>u</b> &middot; &nabla;)<b>u</b>) = -&nabla;p + &rho;<b>f</b><sub>b</sub></code></p>
+                </div>
+
+                <div class="theory-box">
+                    <h5 class="text-xl font-semibold text-brand-secondary mt-0 mb-3">에너지 방정식 (Energy Equation)</h5>
+                    <p>열역학 제1법칙을 유체 요소에 적용한 것입니다. 유동장의 온도 분포 및 열전달 해석에 필수적입니다.</p>
+                    <p>일반 형태 (전체 엔탈피 h<sub>total</sub>): <br><code>&part;(&rho;h<sub>tot</sub>)/&part;t + &nabla; &middot; (&rho;<b>u</b>h<sub>tot</sub>) = &part;p/&part;t + &nabla; &middot; (&lambda;&nabla;T) + &tau;:&nabla;<b>u</b> + S<sub>E</sub></code></p>
+                </div>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">3.2 이산화 기법 (Discretization Methods)</h2>
+                <p>지배 방정식의 연속적인 형태를 컴퓨터 계산이 가능한 대수 방정식 시스템으로 변환하는 과정입니다. 'CFD 프로세스 개요'의 '솔버' 섹션에서 주요 기법(FVM, FEM, FDM)에 대한 자세한 설명을 참고하십시오. (또는 <a href="solving.html#numerical-methods" class="text-brand-secondary hover:underline">여기</a>를 클릭)</p>
+                
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">이산화 기법 비교 (요약)</h4>
+                <div class="overflow-x-auto custom-scrollbar">
+                    <table class="custom-table w-full my-4">
+                        <thead>
+                            <tr>
+                                <th>특징</th>
+                                <th>유한 체적법 (FVM)</th>
+                                <th>유한 요소법 (FEM)</th>
+                                <th>유한 차분법 (FDM)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>기본 원리</strong></td>
+                                <td>제어 체적 적분, 플럭스 균형</td>
+                                <td>요소 내 보간 함수 근사, 약한 형태</td>
+                                <td>격자점 차분 근사</td>
+                            </tr>
+                            <tr>
+                                <td><strong>격자 종류</strong></td>
+                                <td>비구조적/구조적 모두 유연</td>
+                                <td>비구조적/구조적 모두 유연</td>
+                                <td>주로 구조적 (정규) 격자</td>
+                            </tr>
+                            <tr>
+                                <td><strong>보존성</strong></td>
+                                <td>엄격하게 보장됨</td>
+                                <td>별도 처리가 필요할 수 있음</td>
+                                <td>보장되지 않음</td>
+                            </tr>
+                            <tr>
+                                <td><strong>복잡 형상</strong></td>
+                                <td>처리 용이</td>
+                                <td>처리 용이</td>
+                                <td>처리 곤란</td>
+                            </tr>
+                            <tr>
+                                <td><strong>구현 난이도</strong></td>
+                                <td>중간 ~ 복잡</td>
+                                <td>복잡</td>
+                                <td>단순</td>
+                            </tr>
+                            <tr>
+                                <td><strong>주요 적용 분야</strong></td>
+                                <td>대부분의 CFD 해석</td>
+                                <td>구조 해석, 다분야 연성, 일부 CFD</td>
+                                <td>단순 유동, 이론 연구</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CFD에서의 위상</strong></td>
+                                <td>가장 널리 사용되는 표준 기법</td>
+                                <td>점차 확장 적용 추세</td>
+                                <td>제한적 사용</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">3.3 난류 모델 (Turbulence Modeling)</h2>
+                <p>실제 공학 유동의 대부분은 불규칙하고 복잡한 난류입니다. 난류 모델은 이러한 난류의 영향을 효율적으로 모사하기 위해 사용됩니다.</p>
+                
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">RANS (Reynolds-Averaged Navier-Stokes) 모델</h4>
+                <p>시간 평균된 나비에-스토크스 방정식을 푸는 방법입니다. 레이놀즈 응력을 모델링하여 방정식을 닫습니다. 계산 비용이 낮아 산업적으로 가장 널리 사용됩니다.</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>k-&epsilon; 모델 (Standard, RNG, Realizable):</strong> 난류 운동 에너지(k)와 난류 에너지 소산율(&epsilon;)에 대한 두 개의 추가 수송 방정식을 사용합니다. 범용성이 높지만 복잡 유동 예측에 한계가 있습니다.</li>
+                    <li><strong>k-&omega; 모델 (Standard, SST):</strong> 난류 운동 에너지(k)와 비타율(&omega;)에 대한 두 개의 수송 방정식을 사용합니다. SST k-&omega; 모델은 벽면 근처 및 유동 박리 예측에 우수합니다.</li>
+                    <li><strong>Spalart-Allmaras 모델 (SA):</strong> 단일 방정식 모델로, 주로 항공우주 분야 외부 유동에 사용됩니다.</li>
+                </ul>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">LES (Large Eddy Simulation)</h4>
+                <p>큰 규모의 와류는 직접 계산하고, 격자 해상도보다 작은 규모의 와류(SGS)는 모델링하는 방식입니다. RANS보다 정확하지만 계산 비용이 높습니다. 시간적/공간적으로 변동하는 난류 구조 포착에 적합합니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">DNS (Direct Numerical Simulation)</h4>
+                <p>나비에-스토크스 방정식을 모델링 없이 모든 시간 및 공간 스케일에 대해 직접 수치 해석합니다. 가장 정확하지만, 현실적인 공학 문제에는 계산 비용이 매우 높아 주로 기초 연구나 모델 검증에 사용됩니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">난류 모델 선택 기준 및 한계</h4>
+                <div class="overflow-x-auto custom-scrollbar">
+                    <table class="custom-table w-full my-4">
+                        <thead>
+                            <tr>
+                                <th>모델</th>
+                                <th>계산 비용</th>
+                                <th>정확도 (복잡 유동)</th>
+                                <th>주요 장점</th>
+                                <th>주요 단점</th>
+                                <th>대표 적용 분야</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>RANS (k-&epsilon;)</strong></td>
+                                <td>낮음</td>
+                                <td>보통</td>
+                                <td>범용성, 계산 효율, 안정성</td>
+                                <td>박리, 역압력 구배, 회전 유동 예측 부정확</td>
+                                <td>일반 산업 유동, 내부 유동</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RANS (k-&omega; SST)</strong></td>
+                                <td>낮음</td>
+                                <td>우수</td>
+                                <td>벽면 근처, 박리 예측 우수</td>
+                                <td>일부 유동에서 과예측 가능</td>
+                                <td>복잡 벽면 유동, 박리/재부착</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RANS (SA)</strong></td>
+                                <td>낮음</td>
+                                <td>보통</td>
+                                <td>낮은 계산 비용, 특정 외부 유동 효율적</td>
+                                <td>복잡 난류 구조 예측 한계</td>
+                                <td>항공우주 외부 유동</td>
+                            </tr>
+                            <tr>
+                                <td><strong>LES</strong></td>
+                                <td>높음</td>
+                                <td>매우 좋음</td>
+                                <td>비정상/복잡 난류 구조 포착</td>
+                                <td>높은 계산 비용, 벽면 근처 격자 요구 과다</td>
+                                <td>제트, 와류 방출, 공력 소음</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DNS</strong></td>
+                                <td>매우 높음</td>
+                                <td>최고</td>
+                                <td>난류의 모든 스케일 직접 해석</td>
+                                <td>현재 공학 규모 적용 불가</td>
+                                <td>난류 기초 연구, 모델 검증</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-4">어떤 난류 모델도 모든 유동에 대해 완벽한 예측 성능을 보장하지 않으므로, 해석 결과의 신뢰성 확보를 위해서는 항상 실험 데이터나 검증된 참고 문헌 결과와의 비교 및 검증 과정이 필수적입니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 연구실 명칭. 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../script.js"></script>
+</body>
+</html>

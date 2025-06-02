@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교수 소개 - 연구실 이름</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50 h-auto md:h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-2 md:py-0">
+            <div class="flex justify-between w-full md:w-auto items-center">
+                <a href="../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-2">연구실 명칭 (CFD & Bioprocess)</a>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex items-center space-x-1 main-nav">
+                 <div class="relative group">
+                    <button class="nav-item">연구실 소개 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="overview.html" class="nav-dropdown-item">연구실 개요</a>
+                        <a href="research_areas.html" class="nav-dropdown-item">연구 분야</a>
+                        <a href="goals_vision.html" class="nav-dropdown-item">연구 목표 및 비전</a>
+                        <a href="professor.html" class="nav-dropdown-item">교수 소개</a>
+                        <a href="researchers.html" class="nav-dropdown-item">연구원 소개</a>
+                        <a href="gallery.html" class="nav-dropdown-item">사진 갤러리</a>
+                    </div>
+                </div>
+                 <div class="relative group">
+                    <button class="nav-item">CFD 이론 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../cfd_theory/introduction.html" class="nav-dropdown-item">서론</a>
+                         <a href="../cfd_theory/references.html" class="nav-dropdown-item">레퍼런스</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">Bioprocess CFD <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../bioprocess_cfd/introduction.html" class="nav-dropdown-item">서론</a>
+                         <a href="../bioprocess_cfd/software_comparison.html" class="nav-dropdown-item">주요 CFD 소프트웨어 비교</a>
+                    </div>
+                </div>
+                 <div class="relative group">
+                    <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-header">Ansys Fluent</span>
+                        <a href="../software_manuals/ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                        <span class="nav-dropdown-header">OpenFOAM</span>
+                        <a href="../software_manuals/openfoam/introduction.html" class="nav-dropdown-item">소개</a>
+                        <a href="../software_manuals/mstar_cfd/introduction.html" class="nav-dropdown-item mt-2">M-STAR CFD (소개)</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">자료실 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../data_room/papers.html" class="nav-dropdown-item">논문</a>
+                        <a href="../data_room/videos.html" class="nav-dropdown-item">영상</a>
+                        <a href="../data_room/simulation_results.html" class="nav-dropdown-item">시뮬레이션 결과</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">교수 소개</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <div class="flex flex-col md:flex-row items-center md:items-start">
+                    <div class="md:w-1/3 mb-6 md:mb-0 md:mr-8 text-center">
+                        <!-- Placeholder for professor's photo -->
+                        <div class="w-48 h-48 bg-neutral-medium mx-auto rounded-full shadow-md flex items-center justify-center">
+                           <i data-lucide="user-circle-2" class="w-24 h-24 text-neutral-dark"></i>
+                        </div>
+                        <h2 class="text-2xl font-semibold text-brand-secondary mt-4 mb-1">홍길동 교수</h2>
+                        <p class="text-neutral-dark">공학박사, 연구실 책임교수</p>
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-semibold text-brand-secondary mt-0 mb-3">약력</h3>
+                        <ul class="list-disc pl-5 space-y-1 mb-6">
+                            <li>[대학교] [학과] 졸업 (학사)</li>
+                            <li>[대학원] [전공] 졸업 (석사)</li>
+                            <li>[대학원] [전공] 졸업 (박사)</li>
+                            <li>[경력] 연구원/교수</li>
+                            <li>현) [대학교] [학과] 교수</li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-brand-secondary mb-3">주요 연구 관심 분야</h3>
+                        <p>교수님의 주요 연구 관심 분야는 전산 유체 역학(CFD)의 이론적 발전과 산업적 응용, 특히 바이오프로세스, 환경 유동, 에너지 시스템에서의 CFD 활용에 초점을 맞추고 있습니다. 세부적으로는 다음과 같습니다:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>고성능 CFD 알고리즘 개발</li>
+                            <li>생물 반응기 및 분리 공정 최적화</li>
+                            <li>다상 유동 및 계면 현상 모델링</li>
+                            <li>머신러닝 기반 유동 예측 및 제어</li>
+                        </ul>
+                         <h3 class="text-xl font-semibold text-brand-secondary mt-6 mb-3">연락처</h3>
+                        <p>이메일: professor.email@example.com</p>
+                        <p>연구실 전화: 02-XXX-XXXX</p>
+                        <p>연구실 위치: [대학교] [건물명] XXX호</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 연구실 명칭. 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../script.js"></script>
+</body>
+</html>

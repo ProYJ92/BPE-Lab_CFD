@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFD 이론: Solving - 연구실 이름</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50 h-auto md:h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-2 md:py-0">
+            <div class="flex justify-between w-full md:w-auto items-center">
+                <a href="../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-2">연구실 명칭 (CFD & Bioprocess)</a>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex items-center space-x-1 main-nav">
+                <div class="relative group">
+                    <button class="nav-item">연구실 소개 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../lab_introduction/overview.html" class="nav-dropdown-item">연구실 개요</a>
+                        <a href="../lab_introduction/gallery.html" class="nav-dropdown-item">사진 갤러리</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">CFD 이론 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="introduction.html" class="nav-dropdown-item">서론</a>
+                        <a href="preprocessing.html" class="nav-dropdown-item">Pre-processing</a>
+                        <a href="solving.html" class="nav-dropdown-item">Solving</a>
+                        <a href="postprocessing.html" class="nav-dropdown-item">Post-processing</a>
+                        <a href="core_theory.html" class="nav-dropdown-item">핵심이론</a>
+                        <a href="glossary.html" class="nav-dropdown-item">용어 설명</a>
+                        <a href="references.html" class="nav-dropdown-item">레퍼런스</a>
+                    </div>
+                </div>
+                 <div class="relative group">
+                    <button class="nav-item">Bioprocess CFD <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../bioprocess_cfd/introduction.html" class="nav-dropdown-item">서론</a>
+                        <a href="../bioprocess_cfd/software_comparison.html" class="nav-dropdown-item">주요 CFD 소프트웨어 비교</a>
+                    </div>
+                </div>
+                 <div class="relative group">
+                    <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-header">Ansys Fluent</span>
+                        <a href="../software_manuals/ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                        <span class="nav-dropdown-header">OpenFOAM</span>
+                        <a href="../software_manuals/openfoam/introduction.html" class="nav-dropdown-item">소개</a>
+                        <a href="../software_manuals/mstar_cfd/introduction.html" class="nav-dropdown-item mt-2">M-STAR CFD (소개)</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">자료실 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../data_room/papers.html" class="nav-dropdown-item">논문</a>
+                        <a href="../data_room/videos.html" class="nav-dropdown-item">영상</a>
+                        <a href="../data_room/simulation_results.html" class="nav-dropdown-item">시뮬레이션 결과</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">CFD 프로세스: 솔버 (Solver)</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <p>솔버 단계는 전처리에서 설정된 정보를 바탕으로 유체의 지배 방정식을 수치적으로 계산하여 유동장 내 물리량(속도, 압력, 온도 등)의 분포를 계산하는 핵심 단계입니다. 이 단계에서는 선택된 수치 해석 기법과 알고리즘을 사용하여 반복 계산을 통해 수렴 해를 찾습니다.</p>
+
+                <h3 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">주요 수치 해석 기법</h3>
+                <p>지배 방정식의 연속적인 편미분 방정식을 컴퓨터가 계산할 수 있는 대수 방정식 형태로 변환하는 이산화 과정에는 다양한 수치 해석 기법이 사용됩니다. 각 기법은 고유한 특성과 장단점을 가지며, 문제의 종류와 요구되는 정확도에 따라 선택됩니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">유한 체적법 (Finite Volume Method, FVM)</h4>
+                <p><strong>기본 원리:</strong> 계산 영역을 작은 제어 체적(셀)들로 나누고, 각 제어 체적에 대해 지배 방정식을 적분 형태로 변환합니다. 셀 경계면을 통과하는 물리량의 플럭스(flux) 균형을 기반으로 대수 방정식을 구성합니다.</p>
+                <p><strong>장점:</strong></p>
+                <ul class="list-disc pl-5 space-y-1 my-2">
+                    <li>물리량 보존(질량, 운동량, 에너지)이 각 셀 수준에서 엄격하게 만족되어 전체 계산 영역에서도 보존성이 뛰어납니다. 이는 CFD 해석에서 매우 중요한 특성입니다.</li>
+                    <li>비정형 격자(삼각형, 사면체, 다면체 등)에 유연하게 적용 가능하여 복잡한 형상 처리에 매우 효과적입니다.</li>
+                </ul>
+                <p><strong>단점:</strong> 고차 정확도의 이산화 기법을 구현하기 위한 수식 유도 및 프로그래밍이 복잡할 수 있습니다.</p>
+                <p><strong>주요 적용 분야:</strong> 그 견고함과 유연성으로 인해 대부분의 상용 및 오픈소스 CFD 소프트웨어(예: ANSYS Fluent, OpenFOAM)에서 표준적인 이산화 기법으로 채택되어 광범위한 유체 유동 문제 해결에 사용됩니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">유한 요소법 (Finite Element Method, FEM)</h4>
+                <p><strong>기본 원리:</strong> 계산 영역을 작은 요소(element)들로 분할하고, 각 요소 내에서 해(미지수)를 정의된 보간 함수(형상 함수)들의 선형 조합으로 근사합니다. 지배 방정식을 가중 잔차법(weighted residual method)에 기반한 약한 형태(weak form)로 변환한 후, 요소별로 적분하고 이를 조립하여 전체 시스템에 대한 대수 방정식을 구성합니다.</p>
+                <p><strong>장점:</strong></p>
+                <ul class="list-disc pl-5 space-y-1 my-2">
+                    <li>매우 복잡한 형상 및 다양한 종류의 경계 조건 처리에 탁월한 유연성을 제공합니다.</li>
+                    <li>구조 해석 분야에서 발전된 기법으로, 유체-구조 연성(FSI), 열-유체 연성 등 다분야 물리 문제 해석에 강점을 가집니다.</li>
+                    <li>수학적으로 견고한 이론적 기반을 가지고 있습니다.</li>
+                </ul>
+                <p><strong>단점:</strong> FVM과 달리 물리량 보존성이 자동적으로 보장되지 않을 수 있으며, 이를 위해 특별한 처리가 필요할 수 있습니다. 대규모 연립방정식 풀이에 많은 계산 자원이 필요할 수 있습니다.</p>
+                <p><strong>주요 적용 분야:</strong> 구조 해석, 음향학, 전자기학뿐만 아니라 특정 CFD 문제(예: 점성 유동, 자유 표면 유동, 비뉴턴 유체 유동)에도 효과적으로 사용됩니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">유한 차분법 (Finite Difference Method, FDM)</h4>
+                <p><strong>기본 원리:</strong> 계산 영역을 규칙적인 격자점들의 배열로 나누고, 각 격자점에서 지배 방정식의 미분항을 해당 격자점과 주변 격자점에서의 함수 값 차이를 이용한 대수적인 차분 근사(Taylor 급수 전개 기반)로 대체합니다.</p>
+                <p><strong>장점:</strong></p>
+                <ul class="list-disc pl-5 space-y-1 my-2">
+                    <li>개념이 직관적이고 단순하여 이해하고 구현하기가 비교적 쉽습니다.</li>
+                    <li>정형 격자(structured grid)에 적용할 때 계산 효율성이 우수합니다.</li>
+                </ul>
+                <p><strong>단점:</strong></p>
+                <ul class="list-disc pl-5 space-y-1 my-2">
+                    <li>복잡한 형상이나 불규칙한 경계를 가진 문제에 적용하기가 매우 어렵습니다. 좌표 변환 기법 등을 사용해야 하지만 한계가 있습니다.</li>
+                    <li>일반적으로 정형 격자에 제한적으로 사용되며, 물리량 보존성이 FVM만큼 강하게 보장되지 않습니다.</li>
+                </ul>
+                <p><strong>주요 적용 분야:</strong> 단순한 형상의 문제, 기초적인 열전달 및 파동 전파 문제, 기상 예측 모델의 일부, CFD 입문 교육 등에서 사용됩니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">수치 해석 기법 비교 및 적합성</h4>
+                <p>각 수치 해석 기법은 고유한 장단점을 가지므로, 특정 CFD 문제에 가장 적합한 기법을 선택하는 것이 중요합니다. 다음 표는 주요 특징을 요약한 것입니다.</p>
+                <div class="overflow-x-auto custom-scrollbar my-6">
+                    <table class="custom-table w-full">
+                        <thead>
+                            <tr>
+                                <th>특징</th>
+                                <th>유한 체적법 (FVM)</th>
+                                <th>유한 요소법 (FEM)</th>
+                                <th>유한 차분법 (FDM)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>기본 원리</strong></td>
+                                <td>제어 체적 적분, 플럭스 균형</td>
+                                <td>요소 내 보간 함수 근사, 약한 형태</td>
+                                <td>격자점 미분항 차분 근사</td>
+                            </tr>
+                            <tr>
+                                <td><strong>격자 유연성</strong></td>
+                                <td>매우 높음 (정형/비정형)</td>
+                                <td>매우 높음 (정형/비정형)</td>
+                                <td>낮음 (주로 정형)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>보존성</strong></td>
+                                <td>엄격하게 보장</td>
+                                <td>별도 처리 필요 가능</td>
+                                <td>보장 어려움</td>
+                            </tr>
+                            <tr>
+                                <td><strong>복잡 형상 처리</strong></td>
+                                <td>우수</td>
+                                <td>우수</td>
+                                <td>어려움</td>
+                            </tr>
+                            <tr>
+                                <td><strong>구현 난이도</strong></td>
+                                <td>중간 ~ 복잡</td>
+                                <td>복잡</td>
+                                <td>단순</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CFD 주요 활용도</strong></td>
+                                <td>매우 높음 (산업 표준)</td>
+                                <td>중간 (특정 문제, 다분야 연성)</td>
+                                <td>낮음 (제한적)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>일반적으로 CFD 분야에서는 물리량 보존의 중요성 및 복잡 형상 처리 능력 때문에 유한 체적법(FVM)이 가장 널리 사용됩니다. 유한 요소법(FEM)은 특정 고급 문제나 다분야 연계 해석에서 강점을 보이며, 유한 차분법(FDM)은 그 단순성으로 인해 특수 분야나 교육용으로 활용됩니다.</p>
+
+                <h3 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">주요 알고리즘 (압력-속도 연계)</h3>
+                <p>비압축성 유동 해석에서 나비에-스토크스 방정식을 풀 때, 압력은 운동량 방정식에 직접 나타나지만 연속 방정식에는 나타나지 않아 압력과 속도를 연계(coupling)하여 푸는 특별한 알고리즘이 필요합니다. 대표적인 알고리즘은 다음과 같습니다.</p>
+                
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">SIMPLE (Semi-Implicit Method for Pressure Linked Equations) 알고리즘</h4>
+                <p><strong>작동 원리:</strong> SIMPLE 알고리즘은 추측-보정(predictor-corrector) 접근 방식을 사용하는 반복적 기법입니다. 운동량 방정식으로부터 속도장을 예측하고, 이 예측된 속도장이 연속방정식을 만족하도록 압력 보정 방정식을 유도하여 압력과 속도를 보정합니다.</p>
+                <p><strong>단계별 설명:</strong></p>
+                <ol class="list-decimal pl-5 space-y-1 my-2">
+                    <li>초기 압력장(p*)을 추측합니다 (또는 이전 반복 단계의 값 사용).</li>
+                    <li>추측된 압력장을 사용하여 이산화된 운동량 방정식을 풀어 예측된 속도장(u*, v*, w*)을 구합니다.</li>
+                    <li>예측된 속도장을 이용하여 질량 플럭스를 계산하고, 이를 통해 압력 보정 방정식(pressure correction equation)을 구성하여 압력 보정값(p')을 구합니다. 이 방정식은 연속방정식을 만족시키도록 유도됩니다.</li>
+                    <li>계산된 압력 보정값(p')을 이용하여 압력장(p = p* + α<sub>p</sub>p', α<sub>p</sub>는 압력의 감속 계수)과 속도장(u, v, w)을 보정합니다.</li>
+                    <li>다른 스칼라 변수(온도, 난류 변수 등)의 방정식을 풉니다.</li>
+                    <li>수렴 조건을 확인하고, 만족하지 않으면 새로운 압력 및 속도 값으로 단계 2부터 반복합니다.</li>
+                </ol>
+                <p><strong>장단점:</strong></p>
+                <ul class="list-disc pl-5 space-y-1 my-2">
+                    <li><strong>장점:</strong> 개념이 비교적 명확하고 구현이 용이하며, 광범위한 문제에 적용되어 안정성이 검증되었습니다.</li>
+                    <li><strong>단점:</strong> 수렴 속도가 느릴 수 있으며, 문제에 따라 적절한 감속 계수(under-relaxation factor) 설정이 필요합니다. 압력 보정 방정식 유도 시 일부 항을 단순화하여 정확도에 영향을 줄 수 있습니다.</li>
+                </ul>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">PISO (Pressure-Implicit with Splitting of Operators) 알고리즘</h4>
+                <p><strong>작동 원리:</strong> PISO 알고리즘은 SIMPLE 알고리즘의 변형으로, 각 반복 단계 내에서 추가적인 압력 보정 단계를 수행하여 압력-속도 연계를 더욱 강하게 만듭니다. 연산자 분할(operator splitting) 개념을 기반으로 합니다.</p>
+                <p><strong>SIMPLE과의 비교:</strong></p>
+                <ul class="list-disc pl-5 space-y-1 my-2">
+                    <li>PISO는 일반적으로 반복 단계 당 계산 비용이 SIMPLE보다 크지만, 전체 수렴에 필요한 반복 횟수가 적거나 더 큰 시간 간격(time step)을 사용할 수 있게 해줍니다.</li>
+                    <li>특히 비정상(transient) 유동 문제에서 시간 정확도 측면에서 SIMPLE보다 유리한 경우가 많습니다.</li>
+                </ul>
+                <p><strong>장단점:</strong></p>
+                <ul class="list-disc pl-5 space-y-1 my-2">
+                    <li><strong>장점:</strong> 비정상 문제에 대한 정확도 및 안정성이 향상될 수 있으며, 큰 시간 스텝 사용이 가능하여 전체 계산 시간을 줄일 수 있습니다. 수렴성이 빠를 수 있습니다.</li>
+                    <li><strong>단점:</strong> SIMPLE에 비해 알고리즘이 다소 복잡하고, 각 반복 단계의 계산량이 많습니다. 감속 계수가 필요 없는 경우가 많습니다.</li>
+                </ul>
+                <p><strong>비정상 상태 문제에 대한 유용성:</strong> PISO는 시간 항을 더 정확하게 처리하려는 시도로, 시간 전진 과정에서 압력-속도 연계를 더 엄밀하게 만족시키려는 목적이 강하여 비정상 문제에 적합합니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">기타 압력-속도 연계 알고리즘</h4>
+                <p><strong>SIMPLER (SIMPLE Revised) 알고리즘:</strong> SIMPLER는 압력 방정식을 직접 풀고, 속도 보정에는 압력 보정 방정식을 사용하지 않는 차이가 있습니다. SIMPLE보다 수렴성이 개선될 수 있으나, 압력 방정식을 직접 푸는 과정의 계산 부담이 있습니다.</p>
+                <p><strong>SIMPLEC (SIMPLE Consistent) 알고리즘:</strong> SIMPLE 알고리즘에서 압력 보정 방정식 유도 시 무시되는 항(속도 보정 항)을 일관성 있게 고려하여 수렴성을 향상시키려는 시도입니다. 일반적으로 SIMPLE보다 더 큰 감속 계수를 사용할 수 있어 수렴이 빠를 수 있습니다.</p>
+
+                <h3 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">수치적 안정성 및 수렴 조건</h3>
+                <p>CFD 해석에서 수치 해법은 안정적으로 수렴하여 물리적으로 타당한 해를 제공해야 합니다. 이를 위해 몇 가지 중요한 조건과 지표가 고려됩니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">CFL (Courant-Friedrichs-Lewy) 조건</h4>
+                <p><strong>정의:</strong> CFL 조건은 외연적(explicit) 시간 전진 기법을 사용하는 수치 해석에서 안정성을 확보하기 위한 필요조건입니다. 시간 간격(Δt) 동안 유동 정보(파동)가 공간 격자 한 셀(Δx)의 크기를 넘어 전파되지 않아야 함을 의미합니다. 일반적으로 1차원 문제에서 CFL 수 C = uΔt/Δx ≤ C<sub>max</sub> 로 표현되며, 여기서 u는 유속, C<sub>max</sub>는 기법에 따라 다르지만 보통 1 이하의 값을 가집니다.</p>
+                <p><strong>물리적 의미:</strong> 수치적 계산 영역(numerical domain of dependence)이 물리적 현상의 전파 영역(physical domain of dependence)을 포함해야 한다는 원리입니다. 즉, 정보가 너무 빨리 전파되어 수치 해법이 이를 따라가지 못하면 해가 불안정해지거나 발산합니다.</p>
+                <p><strong>안정적인 해석을 위한 중요성:</strong> 이 조건을 만족하지 않으면 수치 해가 급격히 발산하여 의미 없는 결과를 초래할 수 있습니다. 특히 외연적 시간 적분법(explicit time integration)에서 매우 중요합니다. 내재적 시간 적분법(implicit time integration)은 이론적으로 CFL 조건에 덜 민감하여 더 큰 시간 간격을 사용할 수 있지만, 시간 정확도(temporal accuracy)를 위해서는 여전히 적절한 시간 간격 선택이 필요합니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">잔차 (Residuals)</h4>
+                <p><strong>정의:</strong> 잔차는 이산화된 지배 방정식(연속, 운동량, 에너지 방정식 등)이 각 셀 또는 격자점에서 현재 계산된 변수 값들에 의해 얼마나 잘 만족되는지를 나타내는 척도입니다. 이상적인 해라면 모든 방정식의 잔차는 0이 되어야 하지만, 수치 해석에서는 0에 가까운 작은 값을 목표로 합니다.</p>
+                <p><strong>수렴 판정 기준으로의 활용:</strong> 반복 계산을 통해 모든 지배 방정식의 정규화된 잔차(normalized residual)가 미리 설정한 기준값(예: 10<sup>-3</sup> ~ 10<sup>-6</sup>, 문제에 따라 다름) 이하로 감소하면 해가 수렴했다고 판단합니다. 또한, 주요 관심 물리량(예: 항력, 양력, 특정 지점 온도)의 변화가 더 이상 없을 때도 수렴 기준으로 사용됩니다.</p>
+                <p><strong>잔차 그래프 해석 방법:</strong></p>
+                <ul class="list-disc pl-5 space-y-1 my-2">
+                    <li><strong>정상적 수렴:</strong> 잔차 값이 반복 계산에 따라 꾸준히 감소하여 특정 수준 이하로 안정화됩니다.</li>
+                    <li><strong>진동 또는 정체:</strong> 잔차가 특정 수준에서 더 이상 감소하지 않고 진동하거나 정체될 수 있습니다. 이는 물리적 비정상성, 격자 품질 문제, 부적절한 경계 조건 또는 수치 설정 때문일 수 있습니다.</li>
+                    <li><strong>발산:</strong> 잔차 값이 급격히 증가하는 경우, 수치적으로 불안정하여 해가 발산하고 있음을 의미합니다. 시간 간격, 감속 계수, 격자 품질 등을 점검해야 합니다.</li>
+                </ul>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">수렴 가속 기법</h4>
+                <p>복잡한 CFD 시뮬레이션은 수렴에 많은 반복 계산이 필요할 수 있습니다. 수렴을 가속하기 위한 다양한 기법이 사용됩니다.</p>
+                <p><strong>다중격자법 (Multigrid Method):</strong> 이 기법은 서로 다른 격자 수준(조밀한 격자와 성긴 격자)을 활용하여 해의 다양한 주파수 성분의 오차를 효과적으로 제거함으로써 수렴을 크게 가속화합니다. 성긴 격자에서는 장파장 오차를 빠르게 제거하고, 조밀한 격자에서는 단파장 오차를 처리합니다. 이는 선형 및 비선형 방정식 시스템 모두에 적용될 수 있습니다.</p>
+                <p>기타 기법으로는 대수적 다중격자법(Algebraic Multigrid, AMG), 적절한 감속 계수(under-relaxation factors) 사용, 완전 다중격자법(Full Multigrid, FMG) 초기화 등이 있습니다.</p>
+
+                <h3 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">병렬 컴퓨팅 및 고성능 컴퓨팅 (HPC)</h3>
+                <p>현대의 CFD 시뮬레이션은 높은 정확도와 상세한 물리 현상 예측을 위해 방대한 계산 자원을 요구하며, 병렬 컴퓨팅 및 HPC는 이러한 요구를 충족시키는 데 필수적입니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">CFD 시뮬레이션에서 병렬 컴퓨팅의 필요성</h4>
+                <p>대규모 격자(수백만에서 수십억 개의 셀), 복잡한 물리 모델(예: 난류 직접 수치 모사(DNS) 또는 큰 에디 모사(LES), 연소, 다상 유동), 장시간의 비정상 상태 해석 등은 단일 프로세서로는 현실적으로 감당하기 어려운 막대한 계산량과 메모리를 필요로 합니다. 병렬 컴퓨팅은 이러한 계산 작업을 여러 프로세서(코어)에 분담시켜 동시에 처리함으로써 전체 해석 시간을 획기적으로 단축하고, 과거에는 불가능했던 규모의 문제를 해결할 수 있게 합니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">도메인 분할 (Domain Decomposition) 기법</h4>
+                <p><strong>원리:</strong> 병렬 CFD의 핵심은 계산 도메인 분할입니다. 전체 계산 영역(domain)을 여러 개의 작은 하위 도메인(sub-domain)으로 분할하고, 각 하위 도메인을 개별 프로세서에 할당하여 계산을 수행합니다.</p>
+                <p><strong>종류:</strong></p>
+                <ul class="list-disc pl-5 space-y-1 my-2">
+                    <li><strong>기하학적 분할 (Geometric Decomposition):</strong> 계산 도메인을 공간적으로 균등하게 또는 작업 부하를 고려하여 분할합니다. METIS, Scotch와 같은 라이브러리가 이러한 분할에 사용될 수 있습니다.</li>
+                    <li><strong>블록 기반 분할 (Block-based Decomposition):</strong> 구조적 격자에서 자연스럽게 형성되는 블록 단위로 분할하거나, 사용자가 정의한 블록을 기준으로 분할합니다.</li>
+                    <li><strong>그래프 분할 (Graph Partitioning):</strong> 격자 셀 간의 연결 관계를 그래프로 표현하고, 통신 비용을 최소화하도록 그래프를 분할합니다.</li>
+                </ul>
+                <p>각 프로세서는 할당된 하위 도메인에서 내부 계산을 수행하며, 하위 도메인 간의 경계면에서는 MPI(Message Passing Interface)와 같은 통신 프로토콜을 사용하여 필요한 데이터(경계값 등)를 교환합니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">HPC 활용의 이점</h4>
+                <ul class="list-disc pl-5 space-y-1 my-2">
+                    <li><strong>계산 시간 대폭 단축:</strong> 복잡하고 큰 규모의 시뮬레이션을 수일 또는 수주에서 수 시간 또는 수일 내로 완료할 수 있게 하여 제품 개발 주기 단축 및 신속한 의사 결정에 기여합니다.</li>
+                    <li><strong>대규모, 고정밀도 시뮬레이션 가능:</strong> 더 많은 격자점을 사용하여 미세한 유동 구조나 복잡한 경계층 현상을 더 정확하게 포착할 수 있습니다. 이는 설계 최적화 및 성능 예측의 신뢰도를 높입니다.</li>
+                    <li><strong>더욱 복잡한 물리 현상 해석:</strong> RANS 모델보다 더 정교한 난류 모델(LES 등)이나 화학 반응, 다상 유동 등 복잡한 물리 현상을 포함하는 시뮬레이션이 가능해집니다.</li>
+                    <li><strong>설계 탐색 공간 확장:</strong> 빠른 계산 속도를 바탕으로 더 많은 설계 변수와 작동 조건을 탐색하여 최적의 설계를 도출할 수 있습니다.</li>
+                </ul>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">클라우드 컴퓨팅 활용</h4>
+                <p>클라우드 컴퓨팅 플랫폼(Amazon AWS, Microsoft Azure, Google Cloud Platform 등)은 CFD 사용자에게 유연하고 확장 가능한 HPC 자원을 제공합니다. 사용자는 필요에 따라 온디맨드(on-demand) 방식으로 대규모 컴퓨팅 클러스터를 활용할 수 있어, 초기 하드웨어 투자 비용 없이 고성능 컴퓨팅 환경에 접근할 수 있습니다. 많은 상용 CFD 소프트웨어들이 클라우드 환경을 지원하며, 라이선스 모델도 클라우드 사용에 맞춰 유연하게 제공되기도 합니다. 이는 중소기업이나 연구기관에서 고가의 HPC 인프라를 직접 구축하고 유지하는 부담을 줄여줍니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 연구실 명칭. 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenFOAM 사용 설명서: 자료실 - 연구실 이름</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50 h-auto md:h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-2 md:py-0">
+            <div class="flex justify-between w-full md:w-auto items-center">
+                <a href="../../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-2">연구실 명칭 (CFD & Bioprocess)</a>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex items-center space-x-1 main-nav">
+                 <div class="relative group">
+                    <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-header">Ansys Fluent</span>
+                        <a href="../ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                        <span class="nav-dropdown-header">OpenFOAM</span>
+                        <a href="introduction.html" class="nav-dropdown-item">소개</a>
+                        <a href="installation.html" class="nav-dropdown-item">설치</a>
+                        <a href="preprocessing.html" class="nav-dropdown-item">전처리</a>
+                        <a href="solver.html" class="nav-dropdown-item">솔버</a>
+                        <a href="postprocessing.html" class="nav-dropdown-item">후처리</a>
+                        <a href="verification_validation.html" class="nav-dropdown-item">V & V</a>
+                        <a href="troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                        <a href="resources.html" class="nav-dropdown-item">자료실</a>
+                        <span class="nav-dropdown-header">M-STAR CFD</span>
+                        <a href="../mstar_cfd/introduction.html" class="nav-dropdown-item">소개</a>
+                    </div>
+                </div>
+                <!-- Other main menus -->
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">OpenFOAM 사용 설명서: 자료실</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <p>OpenFOAM은 오픈소스 소프트웨어의 특성상 방대한 양의 공식 문서, 사용자 커뮤니티 자료, 온라인 튜토리얼 등이 존재합니다. 이러한 자료들을 효과적으로 활용하는 것이 OpenFOAM 학습 및 문제 해결에 매우 중요합니다.</p>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">1. 공식 OpenFOAM 웹사이트 및 문서</h2>
+                <p>OpenFOAM은 크게 두 개의 주요 배포처(OpenFOAM Foundation, ESI Group)가 있으며, 각 웹사이트에서 유용한 정보를 얻을 수 있습니다.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>
+                        <strong>OpenFOAM Foundation (openfoam.org):</strong>
+                        <p>OpenFOAM의 원 개발자들이 주축이 되어 운영하는 곳입니다. 소프트웨어 다운로드, 사용자 가이드, 프로그래머 가이드, 튜토리얼 가이드, 릴리즈 노트 등을 제공합니다.</p>
+                        <a href="https://openfoam.org/" target="_blank" rel="noopener noreferrer" class="text-brand-secondary hover:underline">OpenFOAM.org 바로가기 &raquo;</a>
+                    </li>
+                    <li>
+                        <strong>ESI Group - OpenFOAM (openfoam.com):</strong>
+                        <p>ESI Group에서 배포하는 OpenFOAM 버전(구 OpenCFD Ltd.) 관련 정보를 제공합니다. 다운로드, 문서, 교육 과정, 유료 기술 지원 서비스 등을 안내합니다.</p>
+                        <a href="https://www.openfoam.com/" target="_blank" rel="noopener noreferrer" class="text-brand-secondary hover:underline">OpenFOAM.com 바로가기 &raquo;</a>
+                    </li>
+                    <li>
+                        <strong>OpenFOAM 사용자 가이드 (User Guide):</strong>
+                        <p>OpenFOAM의 기본 개념, 사례 설정 방법, 주요 유틸리티 사용법, 물리 모델 등에 대한 포괄적인 정보를 담고 있습니다. 각 버전별로 제공되므로, 사용 중인 버전에 맞는 가이드를 참조해야 합니다.</p>
+                    </li>
+                     <li>
+                        <strong>OpenFOAM 튜토리얼 가이드 (Tutorial Guide):</strong>
+                        <p>다양한 물리 현상에 대한 예제(튜토리얼) 사례의 설정 방법과 실행 과정을 설명합니다. OpenFOAM을 처음 접하는 사용자에게 매우 유용한 학습 자료입니다.</p>
+                    </li>
+                </ul>
+                <div class="my-4 p-2 bg-neutral-light rounded text-center italic text-sm text-gray-600"> (이미지: openfoam.org 또는 openfoam.com 웹사이트 메인 화면) </div>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">2. 사용자 커뮤니티 및 Wiki</h2>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>
+                        <strong>CFD Online - OpenFOAM Forums:</strong>
+                        <p>전 세계 OpenFOAM 사용자들이 모여 질문과 답변, 팁 공유, 토론을 하는 가장 활발한 온라인 커뮤니티입니다. 문제 해결에 큰 도움을 받을 수 있습니다.</p>
+                        <a href="https://www.cfd-online.com/Forums/openfoam/" target="_blank" rel="noopener noreferrer" class="text-brand-secondary hover:underline">CFD Online OpenFOAM 포럼 바로가기 &raquo;</a>
+                    </li>
+                    <li>
+                        <strong>OpenFOAM Wiki (openfoamwiki.net):</strong>
+                        <p>사용자들이 직접 참여하여 만들어가는 Wiki 형식의 정보 저장소입니다. 다양한 튜토리얼, 팁, 사용자 정의 솔버/유틸리티 정보 등을 찾을 수 있습니다.</p>
+                        <a href="https://openfoamwiki.net/" target="_blank" rel="noopener noreferrer" class="text-brand-secondary hover:underline">OpenFOAM Wiki 바로가기 &raquo;</a>
+                    </li>
+                    <li>
+                        <strong>Stack Exchange (엔지니어링, 물리 등):</strong>
+                        <p>OpenFOAM 관련 질문이 올라오기도 하며, 일반적인 CFD 문제 해결 팁을 얻을 수도 있습니다.</p>
+                    </li>
+                </ul>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">3. 온라인 강좌 및 튜토리얼 영상</h2>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>
+                        <strong>YouTube 채널:</strong>
+                        <p>많은 숙련된 OpenFOAM 사용자들이 자신의 채널을 통해 튜토리얼 영상, 특정 문제 해결 과정, 팁 등을 공유하고 있습니다. (예: Jozsef Nagy, Tobias Holzmann (Holzmann CFD) 등)</p>
+                         <div class="my-4 p-2 bg-neutral-light rounded text-center italic text-sm text-gray-600"> (팁: YouTube에서 "OpenFOAM tutorial", "OpenFOAM basics" 등으로 검색) </div>
+                    </li>
+                    <li>
+                        <strong>온라인 학습 플랫폼 (Coursera, Udemy, edX 등):</strong>
+                        <p>OpenFOAM 또는 일반적인 CFD 관련 유료/무료 강좌가 개설되어 있을 수 있습니다.</p>
+                    </li>
+                </ul>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">4. 학술 자료 및 서적</h2>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>OpenFOAM을 활용한 연구 논문(Google Scholar, ResearchGate 등에서 검색)을 통해 특정 문제 해결 방법론이나 아이디어를 얻을 수 있습니다.</li>
+                    <li>OpenFOAM 관련 전문 서적(예: "The Finite Volume Method in Computational Fluid Dynamics: An Advanced Introduction with OpenFOAM® and Matlab" by Moukalled, Mangani, and Darwish)도 심도 있는 학습에 도움이 됩니다.</li>
+                </ul>
+                <p>OpenFOAM은 지속적으로 발전하고 있으며, 새로운 기능과 정보가 꾸준히 업데이트됩니다. 위에 언급된 자료들을 적극적으로 탐색하고 활용하여 OpenFOAM 사용 능력을 키워나가시길 바랍니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 연구실 명칭. 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../../script.js"></script>
+</body>
+</html>

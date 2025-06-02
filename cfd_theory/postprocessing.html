@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFD 이론: Post-processing - 연구실 이름</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50 h-auto md:h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-2 md:py-0">
+            <div class="flex justify-between w-full md:w-auto items-center">
+                <a href="../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-2">연구실 명칭 (CFD & Bioprocess)</a>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex items-center space-x-1 main-nav">
+                <div class="relative group">
+                    <button class="nav-item">연구실 소개 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../lab_introduction/overview.html" class="nav-dropdown-item">연구실 개요</a>
+                        <a href="../lab_introduction/gallery.html" class="nav-dropdown-item">사진 갤러리</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">CFD 이론 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="introduction.html" class="nav-dropdown-item">서론</a>
+                        <a href="preprocessing.html" class="nav-dropdown-item">Pre-processing</a>
+                        <a href="solving.html" class="nav-dropdown-item">Solving</a>
+                        <a href="postprocessing.html" class="nav-dropdown-item">Post-processing</a>
+                        <a href="core_theory.html" class="nav-dropdown-item">핵심이론</a>
+                        <a href="glossary.html" class="nav-dropdown-item">용어 설명</a>
+                        <a href="references.html" class="nav-dropdown-item">레퍼런스</a>
+                    </div>
+                </div>
+                 <div class="relative group">
+                    <button class="nav-item">Bioprocess CFD <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../bioprocess_cfd/introduction.html" class="nav-dropdown-item">서론</a>
+                        <a href="../bioprocess_cfd/software_comparison.html" class="nav-dropdown-item">주요 CFD 소프트웨어 비교</a>
+                    </div>
+                </div>
+                 <div class="relative group">
+                    <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-header">Ansys Fluent</span>
+                        <a href="../software_manuals/ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                        <span class="nav-dropdown-header">OpenFOAM</span>
+                        <a href="../software_manuals/openfoam/introduction.html" class="nav-dropdown-item">소개</a>
+                        <a href="../software_manuals/mstar_cfd/introduction.html" class="nav-dropdown-item mt-2">M-STAR CFD (소개)</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">자료실 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../data_room/papers.html" class="nav-dropdown-item">논문</a>
+                        <a href="../data_room/videos.html" class="nav-dropdown-item">영상</a>
+                        <a href="../data_room/simulation_results.html" class="nav-dropdown-item">시뮬레이션 결과</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">CFD 프로세스: 후처리 (Post-processing)</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <p>후처리 단계는 솔버에서 얻은 방대한 양의 수치 데이터를 분석하고 시각화하여 물리적 현상을 이해하고, 설계 개선 및 의사 결정에 필요한 통찰력을 얻는 매우 중요한 과정입니다. 효과적인 후처리는 CFD 시뮬레이션의 가치를 극대화합니다.</p>
+                
+                <h3 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">시각화 기법 (Visualization Techniques)</h3>
+                <p>계산된 유동장 내의 다양한 물리량(속도, 압력, 온도, 난류 변수 등)의 공간적 분포와 시간적 변화를 직관적으로 파악하기 위해 다양한 시각화 기법이 사용됩니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">등고선도 (Contour Plots)</h4>
+                <p><strong>원리:</strong> 특정 스칼라 물리량(예: 압력, 온도, 속도 크기)의 값이 동일한 지점들을 연결한 선(2D) 또는 색상으로 구분된 영역(2D/3D 표면)으로 표현하여 해당 물리량의 분포를 시각화합니다.</p>
+                <p><strong>주요 파라미터:</strong> 시각화할 변수 선택, 등고선 레벨의 수 또는 간격, 색상 맵(color map) 종류 및 범위 설정 등이 중요합니다.</p>
+                <p><strong>적용 분야:</strong> 물체 표면에서의 압력 분포 확인, 유동장 내 특정 단면에서의 온도 또는 속도 분포 분석, 충격파 위치 파악 등에 널리 사용됩니다.</p>
+                <div class="my-4 p-2 bg-neutral-light rounded text-center italic text-sm text-gray-600"> 예시 이미지: 자동차 표면의 압력 분포 등고선도 (추후 실제 이미지 삽입 예정) </div>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">벡터 플롯 (Vector Plots)</h4>
+                <p><strong>유동 방향과 크기 표현 방식:</strong> 계산 영역 내 각 지점 또는 특정 평면/선 상에서 속도와 같은 벡터 물리량을 화살표로 표시합니다. 화살표의 방향은 벡터의 방향을, 화살표의 길이나 색상은 벡터의 크기를 나타냅니다.</p>
+                <p><strong>적용 분야:</strong> 유동의 전체적인 흐름 패턴 파악, 와류(vortex) 중심 및 재순환 영역 식별, 유동 박리 지점 확인 등에 유용합니다.</p>
+                 <div class="my-4 p-2 bg-neutral-light rounded text-center italic text-sm text-gray-600"> 예시 이미지: 실린더 후류 영역의 속도 벡터 플롯 (추후 실제 이미지 삽입 예정) </div>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">유선도/유맥선도/유적선도 (Streamlines/Streaklines/Pathlines)</h4>
+                <p><strong>정의:</strong></p>
+                <ul class="list-disc pl-5 space-y-1 my-2">
+                    <li><strong>유선 (Streamline):</strong> 특정 순간에 유동장 내 모든 지점에서 속도 벡터에 접하는 가상의 선입니다. 정상 상태(steady-state) 유동에서는 유체 입자의 실제 경로와 일치합니다.</li>
+                    <li><strong>유맥선 (Streakline):</strong> 특정 지점을 연속적으로 통과한 모든 유체 입자들이 어떤 특정 순간에 이루고 있는 선입니다. 실험에서 염료를 주입했을 때 관찰되는 선과 유사합니다.</li>
+                    <li><strong>유적선 (Pathline):</strong> 단일 유체 입자가 시간의 경과에 따라 이동한 실제 경로를 추적한 선입니다.</li>
+                </ul>
+                <p><strong>차이점:</strong> 정상 유동에서는 유선, 유맥선, 유적선이 모두 일치합니다. 그러나 비정상 유동(unsteady-state flow)에서는 이 세 가지가 서로 다른 형태를 나타낼 수 있어 유동의 시간적 변화 특성을 이해하는 데 도움이 됩니다.</p>
+                <p><strong>유동 패턴 분석에서의 활용:</strong> 유체의 전체적인 흐름 경로, 와류 구조의 형태, 혼합 특성, 특정 영역으로의 유입/유출 경로 등을 파악하는 데 효과적입니다.</p>
+                 <div class="my-4 p-2 bg-neutral-light rounded text-center italic text-sm text-gray-600"> 예시 이미지: 에어포일 주변의 유선도 (추후 실제 이미지 삽입 예정) </div>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">단면도 (Cross-sectional Plots) 및 표면 플롯 (Surface Plots)</h4>
+                <p>3차원 유동장의 특정 2D 평면(단면)을 절단하여 해당 면에서의 물리량 분포(등고선, 벡터 등)를 표시하거나, 해석 대상 물체의 표면 또는 특정 등가면(iso-surface)에서의 물리량 분포를 시각화합니다.</p>
+                <p>예시로는 파이프 내부의 특정 단면에서의 속도 프로파일, 항공기 날개 표면의 압력 분포, 특정 온도 값에 해당하는 등온면(isothermal surface) 등이 있습니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">애니메이션 및 시간 변화 시각화</h4>
+                <p>비정상 상태 시뮬레이션 결과를 시간에 따라 연속적으로 보여줌으로써 유동 현상의 동적인 변화 과정을 효과적으로 표현합니다. 와류의 생성, 발달 및 소멸 과정, 충격파의 이동, 물질의 확산 과정 등을 시간에 따른 애니메이션으로 만들어 분석합니다.</p>
+
+                <h3 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">정량적 데이터 추출 및 분석 (Quantitative Data Extraction and Analysis)</h3>
+                <p>시각화 외에도, CFD 결과로부터 구체적인 수치 데이터를 추출하고 분석하여 설계 목표 달성 여부를 평가하거나 성능을 정량적으로 비교하는 것이 중요합니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">주요 물리량 추출</h4>
+                <p>설계에 중요한 다양한 물리량을 계산하고 추출합니다.</p>
+                <ul class="list-disc pl-5 space-y-1 my-2">
+                    <li><strong>힘 (Forces):</strong> 물체 표면에 작용하는 압력과 전단 응력을 적분하여 항력(Drag), 양력(Lift) 등을 계산합니다.</li>
+                    <li><strong>모멘트 (Moments):</strong> 특정 축을 기준으로 물체에 작용하는 회전력(토크)을 계산합니다.</li>
+                    <li><strong>질량 유량 (Mass Flow Rate):</strong> 특정 단면을 통과하는 단위 시간당 유체의 질량을 계산합니다.</li>
+                    <li><strong>열 전달률 (Heat Transfer Rate):</strong> 특정 표면을 통해 전달되는 열에너지의 양을 계산합니다.</li>
+                    <li><strong>평균/최대/최소값:</strong> 특정 영역 또는 전체 유동장에서 관심 있는 물리량(온도, 압력, 속도 등)의 평균값, 최댓값, 최솟값을 추출합니다.</li>
+                </ul>
+                <p><strong>분석 방법:</strong> 추출된 정량적 데이터는 설계 목표치와 비교하거나, 다른 설계안과의 성능 비교, 기존 데이터와의 비교 검증 등에 활용됩니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">관심 영역 (Region of Interest, ROI)에서의 데이터 집계 및 통계 분석</h4>
+                <p>전체 유동장이 아닌 특정 부품 주변, 특정 유동 현상이 발생하는 국소 영역(예: 박리 영역, 고온 영역) 등 관심 영역을 설정하고, 해당 영역 내에서의 물리량 평균, 표준편차, 면적/체적 적분값 등의 통계적 데이터를 집계하여 심층 분석합니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">실험 데이터 또는 이론값과의 비교 분석</h4>
+                <p>CFD 시뮬레이션 결과의 신뢰성을 확보하고 모델의 정확성을 평가하기 위해, 가용한 실험 데이터 또는 검증된 이론값과 정량적으로 비교 분석합니다. 그래프, 표 등을 사용하여 비교하며, 오차의 원인을 분석하여 모델 개선 방향을 설정하는 데 활용됩니다.</p>
+
+                <h3 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">결과 검증(Verification) 및 확인(Validation) - V&V</h3>
+                <p>CFD 시뮬레이션 결과의 신뢰성과 정확성을 보증하기 위한 체계적인 절차입니다. V&V는 CFD 결과를 엔지니어링 의사 결정에 활용하기 위한 필수 과정입니다.</p>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">검증 (Verification): "코드가 의도한 수학적 방정식을 올바르게 풀고 있는가?"</h4>
+                <p>소프트웨어 개발자 또는 사용자가 수치 알고리즘과 코드 구현의 정확성을 평가하는 과정입니다. 주로 다음 오류들을 평가합니다.</p>
+                <ul class="list-disc pl-5 space-y-1 my-2">
+                    <li><strong>이산화 오류 (Discretization Error):</strong> 연속적인 지배 방정식을 이산적인 대수 방정식으로 변환하는 과정에서 발생하는 오류로, 격자 크기, 격자 품질, 이산화 기법의 차수(order of accuracy)와 관련됩니다.</li>
+                    <li><strong>반복 수렴 오류 (Iterative Convergence Error):</strong> 반복 해법을 사용하여 대수 방정식을 풀 때, 잔차(residual)를 충분히 작은 값으로 줄이지 못하여 발생하는 오류입니다.</li>
+                    <li><strong>라운드오프 오류 (Round-off Error):</strong> 컴퓨터의 유한한 정밀도로 인해 계산 과정에서 발생하는 수치적 반올림 오류입니다. 일반적으로 다른 오류들에 비해 영향이 작습니다.</li>
+                </ul>
+                <p><strong>격자 수렴성 테스트 (Grid Convergence Study / Grid Independence Test):</strong></p>
+                <ul class="list-disc pl-5 space-y-1 my-2">
+                    <li><strong>중요성:</strong> 이산화 오류를 평가하고, 사용된 격자가 충분히 조밀하여 결과가 격자 크기에 더 이상 민감하게 변하지 않음을 확인하는 핵심적인 검증 절차입니다.</li>
+                    <li><strong>방법론:</strong> 일반적으로 최소 3가지 이상의 체계적으로 변화하는 격자 밀도(예: Coarse, Medium, Fine, 여기서 각 격자 단계별 셀 수가 일정 비율로 증가/감소)에서 시뮬레이션을 수행합니다. 계산된 주요 물리량(예: 항력 계수, 최대 속도)을 비교하여 격자 밀도에 따른 결과 변화 양상을 분석합니다. Richardson Extrapolation과 같은 기법을 사용하여 점근적인 수렴해를 추정하고 이산화 오차를 정량화하기도 합니다.</li>
+                </ul>
+
+                <h4 class="text-xl font-semibold text-neutral-dark mt-6 mb-3">확인 (Validation): "올바른 수학적 방정식을 풀고 있는가? / 시뮬레이션 결과가 실제 물리 현상을 정확하게 예측하는가?"</h4>
+                <p>시뮬레이션 모델이 실제 물리 현상을 얼마나 정확하게 모사하는지 평가하는 과정입니다.</p>
+                <p><strong>실험 결과와의 정량적 비교:</strong> 신뢰할 수 있는 고품질의 실험 데이터와 CFD 시뮬레이션 결과를 직접적이고 정량적으로 비교합니다. 비교 대상은 관심 있는 물리량이며, 오차의 크기와 경향성을 분석하여 모델의 예측 정확도를 판단합니다. 실험 조건과 시뮬레이션 설정(경계 조건, 물성치 등)의 일치 여부가 매우 중요합니다.</p>
+                <p><strong>불확실성 정량화 (Uncertainty Quantification, UQ) 개념 소개:</strong> 시뮬레이션 결과에 영향을 미치는 다양한 불확실성 요인(입력 파라미터의 불확실성, 모델 자체의 부정확성, 수치 해법의 근사성 등)을 고려하여, 최종 결과의 신뢰 구간을 정량적으로 제시하려는 접근 방식입니다. 이는 결정론적인 단일 값 예측을 넘어, 결과의 확률적 분포를 제공함으로써 보다 신뢰성 있는 의사 결정을 지원합니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 연구실 명칭. 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansys Fluent 사용 설명서: V&V - 연구실 이름</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50 h-auto md:h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-2 md:py-0">
+            <div class="flex justify-between w-full md:w-auto items-center">
+                <a href="../../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-2">연구실 명칭 (CFD & Bioprocess)</a>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex items-center space-x-1 main-nav">
+                 <div class="relative group">
+                    <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-header">Ansys Fluent</span>
+                        <a href="introduction.html" class="nav-dropdown-item">소개</a>
+                        <a href="installation.html" class="nav-dropdown-item">설치</a>
+                        <a href="preprocessing.html" class="nav-dropdown-item">전처리</a>
+                        <a href="solver.html" class="nav-dropdown-item">솔버</a>
+                        <a href="postprocessing.html" class="nav-dropdown-item">후처리</a>
+                        <a href="verification_validation.html" class="nav-dropdown-item">V & V</a>
+                        <a href="troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                        <a href="resources.html" class="nav-dropdown-item">자료실</a>
+                        <span class="nav-dropdown-header">OpenFOAM</span>
+                        <a href="../openfoam/introduction.html" class="nav-dropdown-item">소개</a>
+                        <span class="nav-dropdown-header">M-STAR CFD</span>
+                        <a href="../mstar_cfd/introduction.html" class="nav-dropdown-item">소개</a>
+                    </div>
+                </div>
+                <!-- Other main menus -->
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">Ansys Fluent 사용 설명서: 검증 및 확인 (V&V)</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <p>CFD 시뮬레이션 결과의 신뢰성과 정확성을 확보하기 위해서는 체계적인 검증(Verification) 및 확인(Validation) 과정, 즉 V&V가 필수적입니다. V&V는 Ansys Fluent를 포함한 모든 CFD 해석에서 중요한 단계이며, 엔지니어링 의사 결정에 시뮬레이션 결과를 활용하기 위한 전제 조건입니다.</p>
+                <p>상세한 이론적 배경은 <a href="../../cfd_theory/postprocessing.html#v-v" class="text-brand-secondary hover:underline">CFD 이론: 후처리 - V&V 섹션</a>을 참고하십시오.</p>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">1. 검증 (Verification)</h2>
+                <p><strong>"코드가 의도한 수학적 방정식을 올바르게 풀고 있는가?"</strong> 에 대한 질문에 답하는 과정입니다. 즉, 수치 알고리즘과 코드 구현의 정확성을 평가합니다. Fluent 사용자 관점에서의 주요 검증 활동은 다음과 같습니다.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>
+                        <strong>격자 수렴성 테스트 (Grid Convergence Study / Grid Independence Test):</strong>
+                        <p>이산화 오류(Discretization Error)를 평가하고, 사용된 격자가 결과에 미치는 영향을 확인하는 가장 중요한 검증 절차입니다.</p>
+                        <ol class="list-decimal pl-5 space-y-1 mt-1">
+                            <li>최소 3가지 이상의 체계적으로 다른 밀도(예: Coarse, Medium, Fine)의 격자를 준비합니다. 각 격자 단계별 셀 수의 비율을 일정하게 유지하는 것이 좋습니다 (예: 선형 치수 기준 1.5~2배).</li>
+                            <li>각 격자에서 동일한 물리 모델 및 경계 조건으로 Fluent 해석을 수행합니다.</li>
+                            <li>주요 관심 물리량(예: 항력 계수, 특정 지점의 압력, 최대 속도)을 각 격자 결과에서 추출합니다.</li>
+                            <li>격자 밀도 변화에 따른 관심 물리량의 변화를 그래프로 나타내거나, Richardson Extrapolation과 같은 기법을 사용하여 격자 수렴 지수(Grid Convergence Index, GCI)를 계산하여 이산화 오차를 정량화합니다.</li>
+                            <li>결과가 격자 밀도에 더 이상 민감하게 변하지 않는 "격자 독립적인(grid-independent)" 해를 얻었는지 판단합니다.</li>
+                        </ol>
+                        <div class="my-4 p-2 bg-neutral-light rounded text-center italic text-sm text-gray-600"> (이미지: 격자 밀도에 따른 결과 변화 그래프 또는 GCI 계산 예시) </div>
+                    </li>
+                    <li>
+                        <strong>시간 간격 수렴성 테스트 (Time Step Convergence Study):</strong>
+                        <p>비정상 상태(Transient) 해석의 경우, 시간 간격(Time Step Size)이 결과에 미치는 영향을 평가합니다. 격자 수렴성 테스트와 유사하게 여러 다른 시간 간격을 사용하여 결과를 비교합니다.</p>
+                    </li>
+                    <li>
+                        <strong>반복 수렴 오류 확인:</strong>
+                        <p>솔버 설정에서 잔차(Residuals)가 충분히 낮은 수준(예: 10<sup>-5</sup> 이하)으로 감소했는지, 그리고 모니터링하는 주요 물리량이 안정화되었는지 확인하여 반복 수렴 오류가 무시할 만큼 작은지 평가합니다.</p>
+                    </li>
+                    <li>
+                        <strong>코드 간 비교 (Code-to-Code Comparison):</strong>
+                        <p>가능하다면, 동일한 문제에 대해 다른 신뢰할 수 있는 CFD 코드(예: OpenFOAM) 또는 이론해/수치해 벤치마크 데이터와 결과를 비교합니다.</p>
+                    </li>
+                </ul>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">2. 확인 (Validation)</h2>
+                <p><strong>"올바른 수학적 방정식을 풀고 있는가?"</strong> 또는 <strong>"시뮬레이션 결과가 실제 물리 현상을 정확하게 예측하는가?"</strong> 에 대한 질문에 답하는 과정입니다. 즉, 시뮬레이션 모델이 실제 물리 현상을 얼마나 정확하게 모사하는지 평가합니다.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>
+                        <strong>실험 데이터와의 정량적 비교:</strong>
+                        <p>가장 직접적이고 중요한 확인 방법입니다. 신뢰할 수 있는 고품질의 실험 데이터(예: 풍동 실험 결과, PIV 측정 데이터, 학술 논문에 발표된 실험값)와 Fluent 시뮬레이션 결과를 정량적으로 비교합니다.</p>
+                        <ol class="list-decimal pl-5 space-y-1 mt-1">
+                            <li>실험 조건(형상, 유입 속도, 온도, 물성치 등)과 Fluent 시뮬레이션의 경계 조건 및 설정을 최대한 일치시킵니다.</li>
+                            <li>실험에서 측정한 위치와 동일한 위치에서 시뮬레이션 데이터를 추출합니다.</li>
+                            <li>결과를 그래프나 표로 비교하고, 오차(Error)와 불확실성(Uncertainty)을 분석합니다.</li>
+                            <li>오차가 크다면 모델링 가정(예: 난류 모델, 경계 조건 단순화)의 타당성을 재검토하고 모델을 개선합니다.</li>
+                        </ol>
+                        <div class="my-4 p-2 bg-neutral-light rounded text-center italic text-sm text-gray-600"> (이미지: 실험 데이터와 CFD 결과 비교 그래프) </div>
+                    </li>
+                    <li>
+                        <strong>이론해 또는 분석해와의 비교:</strong>
+                        <p>단순화된 문제에 대해 이론해 또는 분석해가 존재하는 경우, 이를 Fluent 결과와 비교하여 모델의 기본적인 정확성을 평가할 수 있습니다. (예: 완전 발달된 파이프 유동, 평판 위 경계층 유동)</p>
+                    </li>
+                    <li>
+                        <strong>벤치마크 문제 활용:</strong>
+                        <p>학계에서 널리 사용되는 표준 벤치마크 문제(예: Lid-driven cavity, Backward-facing step)에 대한 시뮬레이션을 수행하고, 발표된 다른 연구 결과들과 비교합니다.</p>
+                    </li>
+                </ul>
+                 <div class="my-6 p-4 bg-neutral-medium rounded-md">
+                    <h4 class="text-lg font-semibold text-brand-secondary mt-0">CFD V&V 가이드라인 영상</h4>
+                    <p>CFD 해석의 검증 및 확인 절차에 대한 일반적인 가이드라인을 설명하는 영상입니다.</p>
+                    <div class="aspect-w-16 aspect-h-9 mt-2">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_CFD_V_AND_V" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded shadow-md"></iframe>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-1">출처: 관련 학회 또는 전문가 채널 (예시) - 실제 영상 링크로 교체 필요</p>
+                </div>
+                <p>엄격한 V&V 과정은 CFD 시뮬레이션 결과의 신뢰도를 높이고, 이를 바탕으로 한 엔지니어링 결정의 타당성을 확보하는 데 매우 중요합니다. Ansys Fluent 사용자도 이러한 절차를 이해하고 적용하려는 노력이 필요합니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 연구실 명칭. 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../../script.js"></script>
+</body>
+</html>

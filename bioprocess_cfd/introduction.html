@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bioprocess CFD: 서론 - 연구실 이름</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50 h-auto md:h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-2 md:py-0">
+            <div class="flex justify-between w-full md:w-auto items-center">
+                <a href="../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-2">연구실 명칭 (CFD & Bioprocess)</a>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex items-center space-x-1 main-nav">
+                <div class="relative group">
+                    <button class="nav-item">연구실 소개 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../lab_introduction/overview.html" class="nav-dropdown-item">연구실 개요</a>
+                        <a href="../lab_introduction/gallery.html" class="nav-dropdown-item">사진 갤러리</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">CFD 이론 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../cfd_theory/introduction.html" class="nav-dropdown-item">서론</a>
+                        <a href="../cfd_theory/references.html" class="nav-dropdown-item">레퍼런스</a>
+                    </div>
+                </div>
+                 <div class="relative group">
+                    <button class="nav-item">Bioprocess CFD <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="introduction.html" class="nav-dropdown-item">서론</a>
+                        <a href="theoretical_background.html" class="nav-dropdown-item">이론적 배경</a>
+                        <a href="application_cases.html" class="nav-dropdown-item">Bioprocess CFD 적용 사례</a>
+                        <a href="software_comparison.html" class="nav-dropdown-item">주요 CFD 소프트웨어 비교</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-header">Ansys Fluent</span>
+                        <a href="../software_manuals/ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                        <span class="nav-dropdown-header">OpenFOAM</span>
+                        <a href="../software_manuals/openfoam/introduction.html" class="nav-dropdown-item">소개</a>
+                        <a href="../software_manuals/mstar_cfd/introduction.html" class="nav-dropdown-item mt-2">M-STAR CFD (소개)</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">자료실 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../data_room/papers.html" class="nav-dropdown-item">논문</a>
+                        <a href="../data_room/videos.html" class="nav-dropdown-item">영상</a>
+                        <a href="../data_room/simulation_results.html" class="nav-dropdown-item">시뮬레이션 결과</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">Bioprocess에서의 CFD 활용: 서론</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <p>바이오프로세스(Bioprocess)는 생물학적 시스템(미생물, 세포, 효소 등)을 이용하여 의약품, 식품, 화학물질 등을 생산하는 공정입니다. 이러한 공정의 효율성과 안정성은 반응기 내 유동 특성, 혼합 효율, 물질 전달(산소, 영양분 등), 열 전달 등과 밀접하게 관련됩니다.</p>
+                <p>전산 유체 역학(CFD)은 바이오프로세스에서 이러한 복잡한 물리 현상을 상세하게 분석하고 예측하는 데 매우 강력한 도구로 활용될 수 있습니다. CFD를 통해 실험만으로는 파악하기 어려운 반응기 내부의 상세한 유동 구조, 전단 응력 분포, 물질 농도 분포 등을 시각화하고 정량적으로 평가할 수 있습니다.</p>
+                
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">Bioprocess에서 CFD의 주요 역할</h2>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>바이오리액터 설계 및 최적화:</strong> 임펠러 형상, 배플(baffle) 배치, 가스 주입 방식 등 반응기 설계를 최적화하여 혼합 효율을 높이고 사각지대(dead zone)를 최소화합니다.</li>
+                    <li><strong>스케일업(Scale-up) 문제 해결:</strong> 실험실 규모에서 상업 생산 규모로 확장할 때 발생하는 유동 및 물질 전달 특성 변화를 예측하고, 스케일업 기준을 정립하는 데 기여합니다.</li>
+                    <li><strong>공정 이해도 증진:</strong> 세포 성장, 대사산물 생성 등에 영향을 미치는 미세 환경(microenvironment)을 분석하여 공정 이해도를 높이고 생산성을 향상시킵니다.</li>
+                    <li><strong>문제 해결 및 공정 개선:</strong> 세포 손상, 거품 생성, 오염 등 공정상 문제를 진단하고 해결 방안을 모색하는 데 활용됩니다.</li>
+                </ul>
+
+                <div class="my-8 text-center">
+                     <div class="w-full md:w-2/3 lg:w-1/2 h-64 bg-neutral-medium mx-auto rounded-lg shadow-md flex items-center justify-center">
+                        <p class="text-neutral-dark">바이오리액터 CFD 시뮬레이션 이미지</p>
+                     </div>
+                     <figcaption class="text-sm text-gray-600 mt-2 italic">바이오리액터 내부 유동 해석 예시 (출처: 관련 논문 또는 소프트웨어사)</figcaption>
+                </div>
+
+                <p>본 섹션에서는 바이오프로세스 분야에서 CFD가 어떻게 활용되는지에 대한 이론적 배경, 구체적인 적용 사례, 그리고 관련 소프트웨어 정보 등을 제공할 예정입니다.</p>
+                 <div class="my-6 p-4 bg-neutral-medium rounded-md">
+                    <h4 class="text-lg font-semibold text-brand-secondary mt-0">관련 학습 동영상</h4>
+                    <p>바이오프로세스에서 CFD 활용에 대한 소개 영상입니다.</p>
+                    <div class="aspect-w-16 aspect-h-9 mt-2">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_PLACEHOLDER" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded shadow-md"></iframe>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-1">출처: YouTube 채널명 (예시) - 실제 영상 링크로 교체 필요</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 연구실 명칭. 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../script.js"></script>
+</body>
+</html>

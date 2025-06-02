@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFD 이론: Pre-processing - 연구실 이름</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50 h-auto md:h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-2 md:py-0">
+            <div class="flex justify-between w-full md:w-auto items-center">
+                <a href="../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-2">연구실 명칭 (CFD & Bioprocess)</a>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex items-center space-x-1 main-nav">
+                <div class="relative group">
+                    <button class="nav-item">연구실 소개 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../lab_introduction/overview.html" class="nav-dropdown-item">연구실 개요</a>
+                        <a href="../lab_introduction/gallery.html" class="nav-dropdown-item">사진 갤러리</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">CFD 이론 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="introduction.html" class="nav-dropdown-item">서론</a>
+                        <a href="preprocessing.html" class="nav-dropdown-item">Pre-processing</a>
+                        <a href="solving.html" class="nav-dropdown-item">Solving</a>
+                        <a href="postprocessing.html" class="nav-dropdown-item">Post-processing</a>
+                        <a href="core_theory.html" class="nav-dropdown-item">핵심이론</a>
+                        <a href="glossary.html" class="nav-dropdown-item">용어 설명</a>
+                        <a href="references.html" class="nav-dropdown-item">레퍼런스</a>
+                    </div>
+                </div>
+                 <div class="relative group">
+                    <button class="nav-item">Bioprocess CFD <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../bioprocess_cfd/introduction.html" class="nav-dropdown-item">서론</a>
+                        <a href="../bioprocess_cfd/software_comparison.html" class="nav-dropdown-item">주요 CFD 소프트웨어 비교</a>
+                    </div>
+                </div>
+                 <div class="relative group">
+                    <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-header">Ansys Fluent</span>
+                        <a href="../software_manuals/ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                        <span class="nav-dropdown-header">OpenFOAM</span>
+                        <a href="../software_manuals/openfoam/introduction.html" class="nav-dropdown-item">소개</a>
+                        <a href="../software_manuals/mstar_cfd/introduction.html" class="nav-dropdown-item mt-2">M-STAR CFD (소개)</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">자료실 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../data_room/papers.html" class="nav-dropdown-item">논문</a>
+                        <a href="../data_room/videos.html" class="nav-dropdown-item">영상</a>
+                        <a href="../data_room/simulation_results.html" class="nav-dropdown-item">시뮬레이션 결과</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">CFD 프로세스: 전처리 (Pre-processing)</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <p class="mb-4">CFD 시뮬레이션은 체계적인 흐름에 따라 진행되며, 크게 전처리(Pre-processing), 솔버(Solver), 후처리(Post-processing)의 세 단계로 나뉩니다. 이 중 전처리 단계는 실제 물리 문제를 컴퓨터가 이해할 수 있는 CFD 모델로 변환하는 과정입니다.</p>
+                <figure class="my-8 text-center">
+                    <img src="https://solidedge.siemens.com/wp-content/uploads/2020/10/Image-PL-CE-54543-917.009_GBL_OD_Computational-Fluid-Dynamics-CFD-860x484-1.jpg" alt="일반적인 CFD 해석 작업 흐름도" class="w-full md:w-5/6 lg:w-2/3 mx-auto rounded-lg shadow-md">
+                    <figcaption class="text-sm text-gray-600 mt-2 italic">일반적인 CFD 해석 작업 흐름도 (출처: Siemens Solid Edge)</figcaption>
+                </figure>
+                <p>전처리 단계는 전체 해석 시간의 상당 부분을 차지하며, 결과의 정확도를 좌우하는 매우 중요한 과정입니다. 주요 구성 요소는 다음과 같습니다.</p>
+                
+                <h3 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">기하학적 모델링 (Geometry Modeling)</h3>
+                <p>해석하고자 하는 유체 영역 또는 유체와 상호작용하는 고체 영역의 3차원 형상을 정의하는 단계입니다. 일반적으로 CAD(Computer-Aided Design) 소프트웨어로 생성된 모델을 불러오거나, CFD 소프트웨어 내의 모델링 도구를 사용하여 직접 생성합니다.</p>
+                <p><strong>중요성:</strong> 정확한 형상 정보는 물리 현상을 정확하게 모사하는 첫걸음입니다. 그러나 너무 상세한 형상은 격자 생성의 복잡성을 증가시키고 계산 비용을 불필요하게 높일 수 있습니다.</p>
+                <p><strong>CAD 데이터 활용 및 단순화:</strong> 실제 제품의 CAD 데이터는 제조를 위한 상세 정보를 포함하고 있어 CFD 해석에는 불필요한 경우가 많습니다. 작은 구멍, 모서리의 필렛(fillet)이나 라운드(round), 로고 등 유동에 큰 영향을 미치지 않는 미세 형상들은 해석 전에 단순화(de-featuring)하는 과정이 중요합니다. 이를 통해 격자 품질을 향상시키고 계산 효율을 높일 수 있습니다. 형상 단순화는 수동으로 진행하거나, 자동화된 도구를 활용할 수 있습니다.</p>
+                <figure class="my-6 text-center">
+                    <img src="https://rescale.com/wp-content/uploads/3D-model-of-drag-type-water-turbine-fitted-inside-1024x683.jpg" alt="복잡한 형상의 3D CAD 모델 예시" class="w-full md:w-2/3 lg:w-1/2 mx-auto rounded-lg shadow-md">
+                    <figcaption class="text-sm text-gray-600 mt-2 italic">복잡한 형상의 3D CAD 모델 예시: 터빈 해석 (출처: Rescale)</figcaption>
+                </figure>
+
+                <h3 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">격자 생성 (Mesh Generation / Grid Generation)</h3>
+                <p>연속적인 해석 영역(기하학 모델)을 유한하고 이산적인 작은 체적 요소(셀, cell 또는 요소, element)들의 집합으로 분할하는 과정입니다. 이 셀들의 집합을 격자 또는 메쉬라고 부릅니다. 지배 방정식은 이 격자 셀 위에서 이산화되어 수치적으로 풀리게 됩니다.</p>
+                <figure class="my-6 text-center">
+                    <img src="https://static.wixstatic.com/media/a27d24_44c1783e9f2b46bf8732e6d549365a6f~mv2.jpg/v1/fill/w_1000,h_334,al_c,q_80,usm_0.66_1.00_0.01/a27d24_44c1783e9f2b46bf8732e6d549365a6f~mv2.jpg" alt="다양한 CFD 격자 유형" class="w-full md:w-5/6 mx-auto rounded-lg shadow-md">
+                    <figcaption class="text-sm text-gray-600 mt-2 italic">다양한 CFD 격자 유형: (좌측부터) 정형 격자, 비정형 육면체, 비정형 사면체, 다면체 격자 (출처: SimScale/Wix)</figcaption>
+                </figure>
+                <p><strong>주요 격자 유형 및 특징:</strong></p>
+                <ul class="list-disc pl-5 space-y-2 my-4">
+                    <li><strong>정형 격자 (Structured Mesh):</strong> 격자점들이 규칙적인 배열(i, j, k 인덱싱)을 가지며, 각 셀은 논리적으로 사각형(2D) 또는 육면체(3D) 형태입니다. 인접 셀 정보가 명확하여 데이터 구조가 단순하고 계산 효율성이 높습니다. 그러나 복잡한 형상에 적용하기 어렵다는 단점이 있습니다.</li>
+                    <li><strong>비정형 격자 (Unstructured Mesh):</strong> 격자점들의 배열이 불규칙하여 복잡한 형상에 대한 적용성이 매우 뛰어납니다. 주로 삼각형/사각형(2D) 또는 사면체/육면체/프리즘/피라미드/다면체(3D) 셀들을 사용합니다. 데이터 구조가 상대적으로 복잡하고, 정형 격자보다 더 많은 계산 자원이 필요할 수 있습니다.
+                        <ul class="list-circle pl-5 space-y-1 mt-2">
+                            <li><strong>사면체 격자 (Tetrahedral Mesh):</strong> 3차원에서 가장 단순한 요소로, 자동 격자 생성이 용이하여 매우 복잡한 형상에도 유연하게 적용 가능합니다. 다만, 특정 유동에서는 다른 요소 타입에 비해 수치적 확산이 클 수 있습니다.</li>
+                            <li><strong>육면체 격자 (Hexahedral Mesh):</strong> 일반적으로 사면체 격자보다 요소당 절점 수가 많아 더 높은 정확도를 제공하며, 유동 방향에 정렬될 경우 우수한 해를 얻을 수 있습니다. 그러나 복잡한 형상에 순수 육면체 격자를 자동 생성하는 것은 매우 어렵습니다.</li>
+                            <li><strong>프리즘 격자 (Prismatic/Wedge Mesh):</strong> 주로 벽면 근처 경계층(Boundary Layer) 유동을 정밀하게 해석하기 위해 사용됩니다. 벽면에 수직 방향으로 얇고 조밀한 격자층을 형성하여 벽면 전단 응력 등을 정확히 예측하는 데 유리합니다.</li>
+                            <li><strong>다면체 격자 (Polyhedral Mesh):</strong> 하나의 셀이 다수의 면으로 구성된 형태로, 인접 셀과의 연결성이 높아 수치적 확산을 줄이고 해의 정확도 및 수렴성을 향상시킬 수 있습니다. 최근 많은 CFD 소프트웨어에서 지원하며, 사면체 격자에서 변환하여 생성하기도 합니다.</li>
+                        </ul>
+                    </li>
+                    <li><strong>혼합 격자 (Hybrid Mesh):</strong> 해석 영역의 특성에 따라 정형 격자와 비정형 격자, 또는 서로 다른 종류의 비정형 격자 요소들을 함께 사용하는 방식입니다. 예를 들어, 유동 영역의 대부분은 사면체 격자로, 벽면 근처는 프리즘 격자로 구성하여 효율성과 정확도를 동시에 높일 수 있습니다.</li>
+                </ul>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                    <figure class="text-center">
+                        <img src="https://static.wixstatic.com/media/a27d24_c6fe6fa7c6084836a5224872decd5045~mv2.jpg/v1/fill/w_799,h_507,al_c,q_85,enc_avif,quality_auto/a27d24_c6fe6fa7c6084836a5224872decd5045~mv2.jpg" alt="육면체 지배적 비정형 격자 예시" class="w-full mx-auto rounded-lg shadow-md">
+                        <figcaption class="text-sm text-gray-600 mt-2 italic">육면체 지배적 비정형 격자 (출처: SimScale/Wix)</figcaption>
+                    </figure>
+                    <figure class="text-center">
+                         <img src="https://i.ytimg.com/vi/32cRwxAh2ys/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDkQd1pPn7RV62jnsZQAPN7LekFuQ" alt="파이프 내부 O-Grid 격자 예시" class="w-full mx-auto rounded-lg shadow-md">
+                        <figcaption class="text-sm text-gray-600 mt-2 italic">파이프 내부 유동 해석을 위한 O-Grid 구조 격자 (출처: LearnCAx)</figcaption>
+                    </figure>
+                </div>
+
+                <h3 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">격자 품질 (Mesh Quality)</h3>
+                <p>생성된 격자의 품질은 CFD 해석 결과의 정확도, 수렴성, 그리고 계산 안정성에 직접적인 영향을 미칩니다. 품질이 낮은 격자는 물리적으로 타당하지 않은 해를 생성하거나 해석 과정이 발산(divergence)되는 원인이 될 수 있습니다. 따라서 격자 생성 후에는 반드시 다양한 품질 지표를 확인하고, 필요시 격자를 수정하거나 재구성해야 합니다.</p>
+                <p><strong>주요 격자 품질 지표:</strong></p>
+                <ul class="list-disc pl-5 space-y-2 my-4">
+                    <li><strong>종횡비 (Aspect Ratio):</strong> 셀의 가장 긴 치수와 가장 짧은 치수의 비율입니다. 이상적으로는 1에 가까워야 하며, 특히 등방성 유동(isotropic flow)에서는 더욱 중요합니다. 특정 방향으로 매우 길쭉한 셀(높은 종횡비)은 해당 방향으로의 해상도를 낮춰 오차를 유발할 수 있습니다. 다만, 경계층 격자처럼 특정 방향으로 유동 변화가 급격한 경우 의도적으로 높은 종횡비의 격자를 사용하기도 합니다.</li>
+                    <li><strong>왜곡도 (Skewness / Warpage):</strong> 셀이 이상적인 형태(예: 정육면체, 정사면체)에서 얼마나 벗어났는지, 즉 얼마나 찌그러졌는지를 나타내는 지표입니다. 높은 왜곡도는 이산화 과정에서 큰 오차를 유발하고 수치적 불안정성을 증가시켜 수렴을 방해합니다. 일반적으로 최대 왜곡도 값을 일정 수준 이하로 유지해야 합니다.</li>
+                    <li><strong>직교성 (Orthogonality):</strong> 셀 면의 법선 벡터와 셀 중심에서 면 중심을 연결하는 벡터 사이의 각도, 또는 인접한 셀 중심을 연결하는 벡터와 공유 면 사이의 각도 등을 기준으로 평가합니다. 직교성이 낮으면(각도 차이가 크면) 확산 항(diffusion term) 계산의 정확도가 저하될 수 있습니다.</li>
+                    <li><strong>셀 크기 변화율 (Cell Size Variation / Growth Rate):</strong> 인접한 셀 간의 크기 변화 비율입니다. 이 비율이 너무 크면(예: 작은 셀 옆에 갑자기 매우 큰 셀이 위치) 절단 오차(truncation error)가 증가하여 해의 정확도가 낮아질 수 있습니다. 부드러운 크기 변화가 권장됩니다.</li>
+                </ul>
+                <p><strong>격자 품질의 중요성 및 영향:</strong> 특히 경계층, 유동 박리, 충격파, 와류 등 주요 유동 현상이 발생하는 영역에서는 고품질 격자 확보가 필수적입니다. 또한, 격자 독립성 테스트(grid independence test)를 통해 격자 밀도가 해석 결과에 미치는 영향을 평가하고, 충분히 조밀한 격자를 사용하고 있는지 확인하는 과정도 매우 중요합니다.</p>
+                <figure class="my-6 text-center">
+                    <img src="https://www.mr-cfd.com/wp-content/uploads/2022/05/1-5.jpg" alt="경계층 해석을 위한 프리즘 격자 및 Y+ 개념도" class="w-full md:w-2/3 lg:w-1/2 mx-auto rounded-lg shadow-md">
+                    <figcaption class="text-sm text-gray-600 mt-2 italic">경계층 해석을 위한 벽면 근처 프리즘 격자 및 Y+ 개념도 (격자 품질의 중요성) (출처: MR CFD)</figcaption>
+                </figure>
+
+                <h3 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">경계 조건 및 초기 조건 설정 (Boundary & Initial Conditions)</h3>
+                <p>계산 영역의 외부 경계면(입구, 출구, 벽면 등)에서의 유동 특성(속도, 압력, 온도 등)을 정의하는 것을 경계 조건 설정이라고 합니다. 이는 지배 방정식의 해를 유일하게 결정하는 데 필수적입니다. 물리적으로 타당하고 문제의 특성을 잘 반영하는 경계 조건을 설정해야 합니다.</p>
+                <p><strong>주요 경계 조건 유형 및 물리적 의미:</strong></p>
+                <ul class="list-disc pl-5 space-y-2 my-4">
+                    <li><strong>입구 (Inlet):</strong> 유체가 해석 영역으로 들어오는 경계입니다.
+                        <ul class="list-circle pl-5 space-y-1 mt-2">
+                            <li><strong>속도 입구 (Velocity Inlet):</strong> 유입 속도 벡터와 필요한 경우 다른 스칼라 값(온도, 난류 변수 등)을 직접 지정합니다. 주로 비압축성 유동이나 압축성 유동의 아음속 유입 조건에 사용됩니다.</li>
+                            <li><strong>압력 입구 (Pressure Inlet):</strong> 총 압력(Total Pressure)과 정압(Static Pressure, 주로 초음속 유동) 및 기타 스칼라 값을 지정합니다. 유입 속도는 계산 결과로 얻어집니다.</li>
+                            <li><strong>질량 유량 입구 (Mass Flow Inlet):</strong> 단위 시간당 유입되는 질량 유량을 지정합니다. 주로 압축성 유동이나 정확한 유량 제어가 필요할 때 사용됩니다.</li>
+                        </ul>
+                    </li>
+                    <li><strong>출구 (Outlet):</strong> 유체가 해석 영역에서 빠져나가는 경계입니다.
+                        <ul class="list-circle pl-5 space-y-1 mt-2">
+                            <li><strong>압력 출구 (Pressure Outlet):</strong> 주로 정압을 지정하며, 유동이 완전히 발달된(fully developed) 상태로 가정합니다. 역류가 발생할 경우 주의해야 합니다.</li>
+                            <li><strong>유출 (Outflow):</strong> 경계면에서 유동 변수의 구배가 0이라고 가정하여, 내부 유동에 의해 자연스럽게 빠져나가도록 설정합니다. 모든 유동이 빠져나가는 단일 출구에 주로 사용하며, 압력 등을 미리 알 수 없을 때 유용합니다.</li>
+                        </ul>
+                    </li>
+                    <li><strong>벽 (Wall):</strong> 고체 표면 경계입니다. 점성 유동의 경우 일반적으로 No-slip 조건(벽면에서 유체 속도가 0)을 사용합니다. 벽면 온도, 열속(heat flux), 거칠기 등도 설정할 수 있습니다. 대칭면이 아닌 이상 유체는 벽을 통과할 수 없습니다.</li>
+                    <li><strong>대칭 (Symmetry):</strong> 유동이 특정 면에 대해 대칭일 경우 사용합니다. 해당 면을 가로지르는 유속 성분과 스칼라 값의 법선 방향 구배가 0으로 설정됩니다. 계산 영역을 줄여 효율성을 높일 수 있습니다.</li>
+                    <li><strong>주기 (Periodic / Cyclic Symmetry):</strong> 형상과 유동이 특정 방향으로 반복될 때 사용합니다. 한쪽 경계면에서 나가는 유동이 다른 쪽 경계면으로 동일하게 들어오는 조건을 설정합니다. (예: 터보기계의 반복되는 블레이드 통로)</li>
+                </ul>
+                <p><strong>초기 조건 (Initial Conditions):</strong> 비정상(transient) 해석의 경우 계산 시작 시점(t=0)의 유동장 전체의 초기 상태(속도, 압력, 온도 등)를 정의합니다. 정상(steady-state) 해석에서도 초기 조건은 수렴 속도나 최종 해에 영향을 줄 수 있으므로, 예상되는 해와 가깝거나 물리적으로 타당한 값을 설정하는 것이 좋습니다.</p>
+                <figure class="my-6 text-center">
+                    <img src="https://flow3d.co.kr/wp-content/uploads/Figure-6.-Two-dimensional-flow-velocity-distribution-at-the-approach-channel-Flow-velocity-distribution-at-depth-EL.-68.12-m..png" alt="수로 유입부 속도 분포 예시" class="w-full md:w-1/2 lg:w-1/3 mx-auto rounded-lg shadow-md">
+                    <figcaption class="text-sm text-gray-600 mt-2 italic">수로 유입부에서의 속도 분포 설정 예시 (경계 조건의 영향) (출처: FLOW-3D Korea)</figcaption>
+                </figure>
+
+                <h3 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">물리 모델 및 물성 설정 (Physical Models & Material Properties)</h3>
+                <p>시뮬레이션하고자 하는 실제 유체 현상(예: 난류, 열전달, 다상 유동, 화학 반응 등)을 적절히 모사하기 위한 물리 모델을 선택하고 관련 파라미터를 설정합니다. 또한, 해석에 사용될 유체 및 고체의 물리적 특성(밀도, 점성 계수, 열전도율, 비열 등)을 정확하게 정의해야 합니다. 이러한 물성치는 온도나 압력에 따라 변할 수 있으므로, 필요한 경우 함수 형태로 입력합니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 연구실 명칭. 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../script.js"></script>
+</body>
+</html>
