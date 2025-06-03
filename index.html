@@ -3,237 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CFD 과정 및 구성요소 | 생물공학연구실</title>
+    <title>생물공학연구실 - Bioprocess Engineering Laboratory</title>
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-primary': '#00529B', 
-                        'brand-secondary': '#0077CC',
-                        'brand-accent': '#FFC107', 
-                        'neutral-light': '#F8F9FA',
-                        'neutral-medium': '#E9ECEF',
-                        'neutral-dark': '#343A40',
-                    },
-                    fontFamily: {
-                        sans: ['Noto Sans KR', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        'subtle': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
-                        'medium': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-                        'xl': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+<body class="font-pretendard bg-white text-gray-800 scroll-smooth">
 
-    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap md:flex-nowrap justify-between items-center py-3">
-                <div class="flex justify-between items-center w-full md:w-auto">
-                    <a href="index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-1">생물공학연구실(Bioprocess Engineering Laboratory)</a>
-                    <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none ml-3">
-                        <i data-lucide="menu" class="w-7 h-7"></i>
-                    </button>
-                </div>
-    
-                <nav class="hidden md:flex items-center space-x-1 main-nav md:ml-4">
-                    <div class="relative group">
-                        <button class="nav-item">연구실 소개 <i data-lucide="chevron-down" class="icon-sm"></i></button>
-                        <div class="nav-dropdown">
-                            <a href="lab_introduction/overview.html" class="nav-dropdown-item">연구실 개요</a>
-                            <a href="lab_introduction/research_areas.html" class="nav-dropdown-item">연구 분야</a>
-                            <a href="lab_introduction/goals_vision.html" class="nav-dropdown-item">연구 목표 및 비전</a>
-                            <a href="lab_introduction/professor.html" class="nav-dropdown-item">교수 소개</a>
-                            <a href="lab_introduction/researchers.html" class="nav-dropdown-item">연구원 소개</a>
-                            <a href="lab_introduction/projects.html" class="nav-dropdown-item">주요 연구 프로젝트</a>
-                            <a href="lab_introduction/facilities.html" class="nav-dropdown-item">실험실 시설 및 장비</a>
-                            <a href="lab_introduction/achievements.html" class="nav-dropdown-item">연구 성과</a>
-                            <a href="lab_introduction/partners.html" class="nav-dropdown-item">협력기관 및 파트너</a>
-                            <a href="lab_introduction/gallery.html" class="nav-dropdown-item">사진 갤러리</a>
-                        </div>
-                    </div>
-                    <div class="relative group">
-                        <button class="nav-item">CFD 이론 <i data-lucide="chevron-down" class="icon-sm"></i></button>
-                        <div class="nav-dropdown">
-                            <a href="cfd_theory/introduction.html" class="nav-dropdown-item">서론</a>
-                            <a href="cfd_theory/preprocessing.html" class="nav-dropdown-item">Pre-processing</a>
-                            <a href="cfd_theory/solving.html" class="nav-dropdown-item">Solving</a>
-                            <a href="cfd_theory/postprocessing.html" class="nav-dropdown-item">Post-processing</a>
-                            <a href="cfd_theory/core_theory.html" class="nav-dropdown-item">핵심이론</a>
-                            <a href="cfd_theory/glossary.html" class="nav-dropdown-item">용어 설명</a>
-                            <a href="cfd_theory/references.html" class="nav-dropdown-item">레퍼런스</a>
-                        </div>
-                    </div>
-                    <div class="relative group">
-                        <button class="nav-item">Bioprocess CFD <i data-lucide="chevron-down" class="icon-sm"></i></button>
-                        <div class="nav-dropdown">
-                            <a href="bioprocess_cfd/introduction.html" class="nav-dropdown-item">서론</a>
-                            <a href="bioprocess_cfd/theoretical_background.html" class="nav-dropdown-item">이론적 배경</a>
-                            <a href="bioprocess_cfd/application_cases.html" class="nav-dropdown-item">Bioprocess CFD 적용 사례</a>
-                            <a href="bioprocess_cfd/software_comparison.html" class="nav-dropdown-item">주요 CFD 소프트웨어 비교</a>
-                        </div>
-                    </div>
-                    <div class="relative group">
-                        <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
-                        <div class="nav-dropdown">
-                            <span class="nav-dropdown-header">Ansys Fluent</span>
-                            <a href="software_manuals/ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
-                            <a href="software_manuals/ansys_fluent/installation.html" class="nav-dropdown-item">설치</a>
-                            <a href="software_manuals/ansys_fluent/preprocessing.html" class="nav-dropdown-item">전처리</a>
-                            <a href="software_manuals/ansys_fluent/solver.html" class="nav-dropdown-item">솔버</a>
-                            <a href="software_manuals/ansys_fluent/postprocessing.html" class="nav-dropdown-item">후처리</a>
-                            <a href="software_manuals/ansys_fluent/verification_validation.html" class="nav-dropdown-item">V & V</a>
-                            <a href="software_manuals/ansys_fluent/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
-                            <a href="software_manuals/ansys_fluent/resources.html" class="nav-dropdown-item">자료실</a>
-                            <span class="nav-dropdown-header">OpenFOAM</span>
-                            <a href="software_manuals/openfoam/introduction.html" class="nav-dropdown-item">소개</a>
-                            <a href="software_manuals/openfoam/installation.html" class="nav-dropdown-item">설치</a>
-                            <a href="software_manuals/openfoam/preprocessing.html" class="nav-dropdown-item">전처리</a>
-                            <a href="software_manuals/openfoam/solver.html" class="nav-dropdown-item">솔버</a>
-                            <a href="software_manuals/openfoam/postprocessing.html" class="nav-dropdown-item">후처리</a>
-                            <a href="software_manuals/openfoam/verification_validation.html" class="nav-dropdown-item">V & V</a>
-                            <a href="software_manuals/openfoam/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
-                            <a href="software_manuals/openfoam/resources.html" class="nav-dropdown-item">자료실</a>
-                            <span class="nav-dropdown-header">M-STAR CFD</span>
-                            <a href="software_manuals/mstar_cfd/introduction.html" class="nav-dropdown-item">소개</a>
-                            <a href="software_manuals/mstar_cfd/installation.html" class="nav-dropdown-item">설치</a>
-                            <a href="software_manuals/mstar_cfd/preprocessing.html" class="nav-dropdown-item">전처리</a>
-                            <a href="software_manuals/mstar_cfd/solver.html" class="nav-dropdown-item">솔버</a>
-                            <a href="software_manuals/mstar_cfd/postprocessing.html" class="nav-dropdown-item">후처리</a>
-                            <a href="software_manuals/mstar_cfd/verification_validation.html" class="nav-dropdown-item">V & V</a>
-                            <a href="software_manuals/mstar_cfd/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
-                            <a href="software_manuals/mstar_cfd/resources.html" class="nav-dropdown-item">자료실</a>
-                        </div>
-                    </div>
-                    <div class="relative group">
-                        <button class="nav-item">자료실 <i data-lucide="chevron-down" class="icon-sm"></i></button>
-                        <div class="nav-dropdown">
-                            <a href="data_room/papers.html" class="nav-dropdown-item">논문</a>
-                            <a href="data_room/videos.html" class="nav-dropdown-item">영상</a>
-                            <a href="data_room/simulation_results.html" class="nav-dropdown-item">시뮬레이션 결과</a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            
-            <div id="search-bar-wrapper" class="pb-3 pt-1 md:pt-2">
-                <div id="search-bar-container" class="w-full max-w-xl mx-auto">
-                     <div class="relative">
-                        <input type="search" id="searchInput" placeholder="검색어를 입력하세요…" class="w-full py-2 px-3 pl-10 rounded-md bg-brand-secondary text-white placeholder-neutral-light/70 focus:outline-none focus:ring-2 focus:ring-brand-accent text-sm transition-all duration-300 ease-in-out focus:bg-white focus:text-neutral-dark focus:placeholder-neutral-dark/50">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <i data-lucide="search" class="w-5 h-5 text-neutral-light/70 search-icon-default"></i>
-                        </div>
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-slate-800 mb-2 sm:mb-0">
+                    <a href="index.html" class="block no-underline hover:no-underline">
+                        <span class="block text-2xl lg:text-3xl font-bold text-slate-800">생물공학연구실</span>
+                        <span class="block text-sm lg:text-base font-normal text-gray-500 mt-1">Bioprocess Engineering Laboratory</span>
+                    </a>
+                </h1>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
                     </div>
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-6rem)] overflow-y-auto">
-        </div>
-    </header>
-
-    <div id="searchResultsContainer" class="hidden fixed left-0 right-0 z-40 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8" style="top: 4rem;">
-        <div id="searchResultsDisplay" class="bg-white text-neutral-dark shadow-xl rounded-b-lg max-h-[calc(100vh-12rem)] md:max-h-[calc(100vh-10rem)] overflow-y-auto">
-            <p id="searchResultsMessage" class="text-center text-gray-500 p-6 text-sm">검색어를 입력하여 페이지 내 콘텐츠를 찾아보세요.</p>
-        </div>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
     </div>
 
-    <main class="container mx-auto p-4 md:p-8 flex-grow w-full pt-8 md:pt-12">
-        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
-            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">CFD의 과정과 구성요소</h1>
-            <div class="prose max-w-none prose-neutral lg:prose-lg" id="searchable-content">
-                
-                <p class="mb-6">전산 유체 역학(CFD, Computational Fluid Dynamics)은 컴퓨터를 사용하여 유체의 운동, 열 전달, 화학 반응 등 다양한 물리적 현상을 수치적으로 해석하고 예측하는 학문이자 강력한 엔지니어링 도구입니다. CFD는 항공우주, 자동차, 에너지, 화학공업, 바이오프로세스 등 광범위한 분야에서 제품 설계, 성능 최적화, 문제 해결에 핵심적인 역할을 수행합니다. [Ansys]</p>
-                <p>본 연구실에서는 특히 바이오리액터 설계 및 최적화, 약물 전달 시스템 개발 등 생물공학(Bioprocess Engineering) 분야의 난제 해결을 위해 CFD를 적극적으로 활용하고 있습니다. (<a href="bioprocess_cfd/introduction.html" class="text-brand-secondary hover:underline">Bioprocess CFD 소개 보기</a>)</p>
+    <main>
+        <section class="hero-section relative flex items-center justify-center text-white overflow-hidden min-h-[calc(100vh-120px)] sm:min-h-[calc(100vh-100px)]">
+            <div class="absolute inset-0 z-0 hero-bg-gradient"></div>
+            <div class="absolute inset-0 z-0 hero-bg-pattern opacity-10"></div>
 
-                <figure class="my-8 text-center">
-                    <img src="https://solidedge.siemens.com/wp-content/uploads/2020/10/Image-PL-CE-54543-917.009_GBL_OD_Computational-Fluid-Dynamics-CFD-860x484-1.jpg" alt="일반적인 CFD 해석 작업 흐름도" class="w-full md:w-5/6 lg:w-2/3 mx-auto rounded-lg shadow-md">
-                    <figcaption class="text-sm text-gray-600 mt-2 italic">일반적인 CFD 해석 작업 흐름도 (출처: Siemens Solid Edge [외부링크])</figcaption>
-                </figure>
-                
-                <h2 class="text-2xl font-medium text-brand-secondary mt-10 mb-6">CFD 해석의 주요 과정</h2>
-                <p class="mb-6">CFD 해석은 일반적으로 다음과 같은 세 가지 주요 단계로 구성됩니다. 각 단계는 상호 유기적으로 연결되어 있으며, 정확하고 신뢰성 있는 결과를 얻기 위해서는 각 단계에 대한 깊이 있는 이해와 세심한 주의가 필요합니다. [1, 2, 3]</p>
-
-                <div class="space-y-8">
-                    <section id="preprocessing" class="p-6 border border-neutral-medium rounded-lg shadow-sm hover:shadow-medium transition-shadow">
-                        <h3 class="text-xl font-semibold text-brand-secondary mb-3 mt-0 flex items-center">
-                            <i data-lucide="settings-2" class="w-6 h-6 mr-2 text-brand-accent"></i>
-                            1. 전처리 (Pre-processing)
-                        </h3>
-                        <p class="text-gray-700 mb-3">해석을 위한 준비 단계로, 실제 물리 문제를 컴퓨터가 이해하고 계산할 수 있는 형태로 변환하는 과정입니다. 이 단계의 품질이 전체 CFD 해석 결과의 정확도와 신뢰성에 결정적인 영향을 미칩니다. [1, 5]</p>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-                            <li><strong>형상 정의 (Geometry Definition):</strong> 분석 대상 시스템의 2D 또는 3D 기하학적 형상을 생성하거나, 외부 CAD(Computer-Aided Design) 데이터를 불러와 정리합니다. 유동 해석에 불필요한 미세 형상은 단순화(de-featuring)하여 계산 효율을 높입니다. [1]</li>
-                            <li><strong>격자 생성 (Mesh Generation):</strong> 정의된 계산 영역(Domain)을 유한한 크기의 작은 제어 체적(셀 또는 요소)으로 분할합니다. 격자의 종류(정형/비정형), 밀도, 품질(왜곡도, 종횡비 등)은 해석 결과의 정확도와 계산 시간에 직접적인 영향을 미칩니다. [1, 6]</li>
-                            <li><strong>물리 모델 설정 (Physics Modeling):</strong> 해석하고자 하는 유동의 특성(예: 정상/비정상 상태, 층류/난류 유동), 열 전달 유무, 상 변화, 화학 반응 등을 고려하여 적절한 수학적 모델(예: 난류 모델, 다상 유동 모델, 에너지 방정식)을 선택하고 관련 파라미터를 설정합니다. [1, 4, 9]</li>
-                            <li><strong>경계 조건 설정 (Boundary Conditions):</strong> 계산 영역의 경계면(입구, 출구, 벽면, 대칭면 등)에서 유동 변수(속도, 압력, 온도, 농도 등)의 값이나 물리적 거동을 정의합니다. 이는 미분방정식의 해를 유일하게 결정하는 데 필수적입니다. [1, 5]</li>
-                            <li><strong>초기 조건 설정 (Initial Conditions):</strong> 비정상 상태 해석의 경우, 계산 시작 시점(t=0)에서의 유동장 전체 상태를 정의합니다. 정상 상태 해석에서도 수렴을 돕기 위해 적절한 초기값을 설정합니다. [1]</li>
-                        </ul>
-                        <a href="cfd_theory/preprocessing.html" class="text-brand-primary hover:underline font-semibold">전처리 상세 과정 보기 &raquo;</a>
-                    </section>
-            
-                    <section id="solving" class="p-6 border border-neutral-medium rounded-lg shadow-sm hover:shadow-medium transition-shadow">
-                        <h3 class="text-xl font-semibold text-brand-secondary mb-3 mt-0 flex items-center">
-                            <i data-lucide="cpu" class="w-6 h-6 mr-2 text-brand-accent"></i>
-                            2. 해석 (Solving)
-                        </h3>
-                        <p class="text-gray-700 mb-3">전처리 단계에서 설정된 모델과 조건에 따라, 유체의 거동을 기술하는 지배 방정식(질량, 운동량, 에너지 보존 방정식 등)을 수치적으로 풀어 각 격자점 또는 셀에서의 유동 변수(속도, 압력, 온도 등) 값을 계산하는 단계입니다. [1, 4]</p>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-                            <li><strong>지배 방정식 (Governing Equations):</strong> 유체 유동을 지배하는 기본적인 물리 법칙(질량 보존, 운동량 보존 - 나비에-스토크스 방정식, 에너지 보존)을 수학적으로 표현한 편미분 방정식입니다. [NASA, CFD Online]</li>
-                            <li><strong>이산화 (Discretization):</strong> 연속적인 미분 형태의 지배 방정식을 컴퓨터가 처리할 수 있는 대수 방정식 형태로 변환하는 과정입니다. 주로 유한 체적법(FVM), 유한 요소법(FEM), 유한 차분법(FDM) 등이 사용되며, FVM이 CFD 분야에서 널리 쓰입니다. [1, 6, 7]</li>
-                            <li><strong>수치 해법 (Numerical Solution Algorithm):</strong> 이산화된 대수 방정식 시스템을 풀기 위한 알고리즘입니다. 비압축성 유동에서는 압력-속도 연계 알고리즘(SIMPLE, PISO 등)이 사용되며, 반복 계산을 통해 해를 구합니다. [1, 4]</li>
-                            <li><strong>수렴 판정 (Convergence Criteria):</strong> 반복 계산 과정에서 해가 더 이상 변하지 않고 안정된 상태에 도달했는지 (수렴했는지) 판단하는 기준입니다. 주로 각 방정식의 잔차(Residual)가 특정 값 이하로 감소하거나, 주요 물리량의 변화가 없을 때 수렴으로 간주합니다. [4]</li>
-                        </ul>
-                        <a href="cfd_theory/solving.html" class="text-brand-primary hover:underline font-semibold">해석 과정 상세 보기 &raquo;</a>
-                    </section>
-            
-                    <section id="postprocessing" class="p-6 border border-neutral-medium rounded-lg shadow-sm hover:shadow-medium transition-shadow">
-                        <h3 class="text-xl font-semibold text-brand-secondary mb-3 mt-0 flex items-center">
-                            <i data-lucide="bar-chart-2" class="w-6 h-6 mr-2 text-brand-accent"></i>
-                            3. 후처리 (Post-processing)
-                        </h3>
-                        <p class="text-gray-700 mb-3">솔버에서 계산된 방대한 양의 수치 데이터를 분석하고 시각화하여 유동 특성을 파악하고, 공학적 통찰력을 얻으며, 설계 검증 및 개선을 위한 결정을 내리는 최종 단계입니다. [1, 2, 3]</p>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-                            <li><strong>결과 시각화 (Results Visualization):</strong> 속도 벡터장, 압력 등고선, 유선(streamlines), 온도 분포, 와류 구조 등을 2D 또는 3D 그래픽으로 표현하여 유동 현상을 직관적으로 이해합니다. 애니메이션을 통해 비정상 유동의 시간적 변화도 관찰할 수 있습니다. [1, 3]</li>
-                            <li><strong>정량적 데이터 추출 (Quantitative Data Extraction):</strong> 특정 지점, 선, 면, 또는 체적에서의 물리량 값(예: 특정 지점의 속도, 면을 통과하는 유량), 평균값, 최대/최소값, 힘(항력, 양력), 모멘트, 열 전달 계수 등 필요한 공학적 데이터를 추출합니다. [1, 2]</li>
-                            <li><strong>검증 및 타당성 조사 (Verification & Validation - V&V):</strong> 시뮬레이션 결과의 신뢰성을 확보하는 매우 중요한 과정입니다. <strong>검증(Verification)</strong>은 수치 해법이 수학적 모델을 올바르게 풀었는지(예: 격자 수렴성 테스트), <strong>확인(Validation)</strong>은 시뮬레이션 모델이 실제 물리 현상을 정확하게 예측하는지(예: 실험 데이터와의 비교)를 평가합니다. [1, 2, 4]</li>
-                        </ul>
-                        <a href="cfd_theory/postprocessing.html" class="text-brand-primary hover:underline font-semibold">후처리 상세 과정 보기 &raquo;</a>
-                    </section>
-                </div>
-
-                <section id="core-theory" class="mt-10">
-                     <h2 class="text-2xl font-medium text-brand-secondary mt-10 mb-6">CFD 핵심 이론 더 알아보기</h2>
-                     <p>CFD 해석의 근간을 이루는 지배 방정식, 이산화 기법, 난류 모델 등 핵심 이론에 대한 더 자세한 정보는 다음 페이지에서 확인하실 수 있습니다.</p>
-                     <ul class="list-disc pl-5 space-y-1 my-4">
-                        <li><a href="cfd_theory/core_theory.html" class="text-brand-secondary hover:underline">핵심 이론 (지배 방정식, 난류 모델 등)</a></li>
-                        <li><a href="cfd_theory/glossary.html" class="text-brand-secondary hover:underline">CFD 주요 용어 설명</a></li>
-                        <li><a href="cfd_theory/references.html" class="text-brand-secondary hover:underline">참고 문헌</a></li>
-                     </ul>
-                </section>
-                
-                <section id="lab-introduction-link" class="mt-10 p-6 bg-brand-primary/10 rounded-lg">
-                    <h2 class="text-2xl font-medium text-brand-secondary mt-0 mb-4">본 연구실에 대해 더 알고 싶으신가요?</h2>
-                    <p>생물공학연구실(Bioprocess Engineering Laboratory)은 CFD 및 시스템 생물학을 융합하여 바이오공정 혁신을 목표로 연구를 수행하고 있습니다. 연구실의 비전, 연구 분야, 구성원, 주요 성과 등 자세한 정보는 아래 링크에서 확인하실 수 있습니다.</p>
-                    <p class="mt-4"><a href="lab_introduction/overview.html" class="inline-block bg-brand-primary text-white font-semibold py-2 px-4 rounded hover:bg-brand-secondary transition-colors">연구실 소개 바로가기 &raquo;</a></p>
-                </section>
-
+            <div class="relative z-10 container mx-auto px-6 text-center py-12">
+                <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight shadow-text">
+                    차세대 바이오공정 혁신을 위한 융합 연구 선도
+                </h2>
+                <p class="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto font-light shadow-text-sm">
+                    데이터 과학과 공학적 모델링, 시스템 생물학의 통합으로 지속 가능한 바이오공정 솔루션을 선도합니다.
+                </p>
+                <a href="about_lab.html" class="bg-white hover:bg-gray-100 text-[#0072CE] font-semibold py-3 px-10 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    연구실 소개 보기
+                </a>
             </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-800">주요 연구 분야</h3>
+                <div class="max-w-4xl mx-auto">
+                    <ul class="space-y-6 text-lg text-gray-700">
+                        <li class="flex items-start p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <i data-lucide="cpu" class="text-blue-600 h-8 w-8 mr-4 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-slate-700 mb-1">디지털 트윈 기반 바이오공정 시뮬레이션</h4>
+                                <p class="text-gray-600 text-base">AI를 활용한 실시간 공정 모니터링 및 최적 제어 전략 개발.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <i data-lucide="test-tube-2" class="text-green-600 h-8 w-8 mr-4 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-slate-700 mb-1">CHO 세포 배양 공정 최적화</h4>
+                                <p class="text-gray-600 text-base">데이터 기반 모델을 통한 항체 생산성 및 품질 향상 연구.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <i data-lucide="dna" class="text-purple-600 h-8 w-8 mr-4 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-slate-700 mb-1">시스템 대사공학 및 배지 개발</h4>
+                                <p class="text-gray-600 text-base">모델 가이드 프레임워크를 통한 배양 조건 자동 탐색 및 최적화.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <i data-lucide="flask-conical" class="text-red-600 h-8 w-8 mr-4 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-slate-700 mb-1">바이오리액터 설계 최적화</h4>
+                                <p class="text-gray-600 text-base">공학적 해석 기반 바이오리액터 설계 및 운전 효율성 극대화.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-800">연구실 소식 및 공지</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h4 class="text-xl font-semibold mb-3 text-slate-700 flex items-center">
+                            <i data-lucide="megaphone" class="text-indigo-600 h-6 w-6 mr-2"></i>
+                            공지사항
+                        </h4>
+                        <h5 class="text-lg font-medium text-slate-800 mb-2">학부 연구생 모집 (2025년 후기)</h5>
+                        <p class="text-gray-600 text-sm mb-4">
+                            바이오공정 및 첨단 모델링 연구에 관심 있는 학부생 여러분의 많은 지원 바랍니다. (마감: ~8/15)
+                        </p>
+                        <a href="news_announcements.html#announcements" class="text-[#0072CE] hover:text-[#004A99] font-medium text-sm hover:underline">자세히 보기...</a>
+                    </div>
+                    <div class="p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h4 class="text-xl font-semibold mb-3 text-slate-700 flex items-center">
+                            <i data-lucide="newspaper" class="text-teal-600 h-6 w-6 mr-2"></i>
+                            연구실 소식
+                        </h4>
+                        <h5 class="text-lg font-medium text-slate-800 mb-2">2025년도 춘계학술대회 논문 발표</h5>
+                        <p class="text-gray-600 text-sm mb-4">
+                            본 연구실 소속 김연구 학생이 2025년도 한국생물공학회 춘계학술대회에서 우수논문발표상을 수상했습니다.
+                        </p>
+                        <a href="news_announcements.html#lab-news" class="text-[#0072CE] hover:text-[#004A99] font-medium text-sm hover:underline">자세히 보기...</a>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="news_announcements.html" class="bg-[#0072CE] hover:bg-[#004A99] text-white font-semibold py-3 px-8 rounded-lg text-base transition duration-300 ease-in-out transform hover:scale-105 shadow-md hover:shadow-lg">
+                        모든 소식 보기
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <div id="searchResultsContainer" class="container mx-auto px-6 my-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
         </div>
     </main>
 
-    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
-        <p>&copy; <span id="currentYear"></span> 생물공학연구실(Bioprocess Engineering Laboratory). 모든 권리 보유.</p>
-        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
     </footer>
-    
-    <script type="module" src="script.js"></script>
+
+    <script src="script.js" type="module"></script>
 </body>
 </html>

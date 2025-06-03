@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansys Fluent 자료실 - 소프트웨어 | 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 mt-5 py-12">
+        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+            <div class="mb-8">
+                <a href="ansys_fluent_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; Ansys Fluent 메인으로 돌아가기</a>
+            </div>
+            
+            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">8. 자료실 (학습 자료 및 커뮤니티 리소스)</h2>
+            <p>ANSYS Fluent 사용자를 위한 다양한 공식 및 커뮤니티 기반 학습 자료와 리소스가 마련되어 있어, 사용자는 기본 사용법부터 고급 기술, 문제 해결, V&V 절차에 이르기까지 포괄적인 정보를 얻고 지속적으로 학습할 수 있습니다. 특히 최신 버전 (2024 R2, 2025 R1 등)의 새로운 기능과 개선 사항에 대한 정보는 Ansys 공식 블로그를 통해 상세히 제공됩니다.</p>
+
+            <figure class="embedded-image-figure">
+                <img src="https://i.ytimg.com/vi/C_wy8L3rPX4/maxresdefault.jpg" alt="Ansys Fluent 학습 자료 예시" class="max-w-xl">
+                <figcaption>Ansys Fluent 관련 온라인 튜토리얼 및 학습 자료 예시 (출처: YouTube @Ansys)</figcaption>
+            </figure>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">공식 학습 자료</h3>
+            <ul class="list-disc pl-5 space-y-2">
+                <li><strong>ANSYS Customer Portal</strong>: 라이선스 사용자는 공식 문서(User's Guides, Theory Guides, Tutorial Guides, Validation Manuals 등), 최신 소프트웨어 버전, 기술 지원 정보에 접근할 수 있습니다.</li>
+                <li><strong>ANSYS Learning Hub</strong>: Ansys 제품 전반에 걸친 구독 기반의 광범위한 학습 플랫폼으로, 단계별 동영상 강좌, 튜토리얼, 워크숍 자료, 베스트 프랙티스 가이드, CAD 모델 등을 제공합니다.</li>
+                <li><strong>ANSYS Innovation Courses</strong>: 주로 무료로 제공되는 Ansys 공식 온라인 강좌로, Fluent의 기본 사용법부터 특정 물리 모델(예: 난류, 다상유동), 문제 해결 방법, V&V 절차까지 다양한 주제를 다룹니다.</li>
+                <li><strong>ANSYS How To Videos (YouTube 채널)</strong>: Ansys 공식 YouTube 채널 (<a href="https://www.youtube.com/@Ansys" target="_blank" rel="noopener noreferrer">youtube.com/@Ansys</a>)로, 소프트웨어 설치, 메싱, 솔버 설정, 후처리 등 특정 작업에 대한 짧고 유용한 튜토리얼 영상들을 제공합니다.</li>
+                <li><strong>Ansys 공식 블로그 - 최신 업데이트 정보</strong>: Fluent의 최신 버전(예: 2024 R2, 2025 R1)에 대한 상세한 기능 소개, 개선 사항, 적용 사례 등을 확인할 수 있습니다.
+                    <ul class="list-disc pl-4 mt-1">
+                        <li><a href="https://www.ansys.com/blog/whats-new-ansys-fluent-software-2024-r2" target="_blank" rel="noopener noreferrer" title="What’s New in Ansys Fluent Software: 2024 R2">What’s New in Ansys Fluent Software: 2024 R2</a></li>
+                        <li><a href="https://www.ansys.com/blog/whats-new-ansys-fluent-2025-r1" target="_blank" rel="noopener noreferrer" title="What’s New in Ansys Fluent 2025 R1?">What’s New in Ansys Fluent 2025 R1?</a></li>
+                    </ul>
+                </li>
+                <li><strong>공식 문서 및 사용자 가이드</strong>: ANSYS Fluent User's Guide, Theory Guide, Meshing User's Guide, Postprocessing User's Guide 등 제품의 상세 기능, 이론적 배경, 사용법을 다루는 핵심 참고 자료입니다. Ansys 고객 포털 또는 Learning Hub에서 접근 가능합니다.</li>
+                <li><strong>기술 논문 및 백서 (White Papers)</strong>: GEKO 난류 모델, 멀티페이즈 유동, GPU 솔버 등 특정 기술에 대한 상세한 분석 자료 및 V&V 사례, 산업 적용 사례를 포함합니다. Ansys 웹사이트에서 검색 가능하며, 특히 Bioprocess, 전기화학, 항공우주 등 최신 기술 적용 분야에 대한 자료가 유용합니다.</li>
+                <li><strong>학생용 무료 소프트웨어 (Ansys Student)</strong>: 학생들을 위한 무료 Ansys Student 버전이 제공되어 학습 및 개인 프로젝트에 활용할 수 있습니다 (<a href="https://www.ansys.com/academic/students/ansys-student" target="_blank" rel="noopener noreferrer">ansys.com/academic/students</a>).</li>
+            </ul>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">커뮤니티 및 기타 리소스</h3>
+            <ul class="list-disc pl-5 space-y-2">
+                <li><strong>ANSYS Learning Forum</strong>: Ansys Innovation Space 내 공식 커뮤니티 포럼으로, 제품 사용, 기술 문제, 학습 내용 등에 대해 Ansys 전문가 및 동료 사용자들과 소통하고 질문하며 답변을 얻을 수 있습니다.</li>
+                <li><strong>CFD Online 포럼 (ANSYS Fluent 섹션)</strong>: 독립적인 CFD 전문 포럼으로, ANSYS Fluent 전용 하위 포럼 (<a href="https://www.cfd-online.com/Forums/fluent/" target="_blank" rel="noopener noreferrer">cfd-online.com/Forums/fluent/</a>)이 매우 활발하게 운영됩니다. 사용자들이 경험을 공유하고 문제 해결에 대한 심도 깊은 논의를 나눕니다.</li>
+                <li><strong>튜토리얼 및 트레이닝 과정</strong>: Ansys 본사 및 공인 파트너사(Channel Partners)에서 제공하는 유료 또는 무료 교육 과정 및 워크숍이 정기적으로 개최됩니다.</li>
+                <li><strong>학술 교재 및 서적</strong>: ANSYS Fluent 사용법 및 CFD 이론과 적용에 대한 다양한 전문 교재들이 출판되어 있습니다. (예: "An Introduction to ANSYS Fluent" 시리즈 - SDC Publications)</li>
+                <li><strong>학술 연구 동향</strong>: 바이오프로세스 분야에서는 CFD와 머신러닝/베이지안 최적화를 결합한 연구(예: 세포 기반 식품 공정 스케일업, 임펠러 최적화)가 활발히 진행되고 있으며, 관련 학술 논문을 통해 최신 적용 사례를 접할 수 있습니다.</li>
+            </ul>
+            
+            <hr class="my-8 border-gray-300">
+            <h3 class="text-xl mt-6 mb-3">주요 참고문헌 링크 (본 웹사이트 내 자료 기반 일부 포함)</h3>
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+                <li><a href="https://www.ansys.com/products/fluids/ansys-fluent" target="_blank" rel="noopener noreferrer">ANSYS Fluent | Fluid Simulation Software</a></li>
+                <li><a href="https://www.ansys.com/blog/ansys-2019-r2-release" target="_blank" rel="noopener noreferrer">Streamline Pre-Processing, Meshing and Materials Selection... - Ansys Blog (구버전 정보)</a></li>
+                <li><a href="https://www.nrc.gov/docs/ml1110/ml111010456.pdf" target="_blank" rel="noopener noreferrer">Software Validation Test Plan and Report for ANSYS-FLUENT Version 12.1 - NRC.gov (구버전 V&V)</a></li>
+                <li><a href="https://innovationspace.ansys.com/courses/courses/turbulent-pipe-flow-rans/lessons/verification-validation-lesson-7-4/topic/verification-in-fluent/" target="_blank" rel="noopener noreferrer">Verification in Fluent | ANSYS Innovation Courses</a></li>
+                <li><a href="https://innovationspace.ansys.com/courses/courses/post-processing-in-ansys-fluent/lessons/tutorial-post-processing-in-ansys-fluent-lesson-4/" target="_blank" rel="noopener noreferrer">Tutorial - Post Processing in Ansys Fluent - Ansys Innovation Space</a></li>
+                <li><a href="https://www.mr-cfd.com/troubleshooting-common-errors-in-ansys-fluent/" target="_blank" rel="noopener noreferrer">Troubleshooting Common Errors in ANSYS Fluent - MR CFD</a></li>
+                <li><a href="https://innovationspace.ansys.com/product/topics-in-troubleshooting-ansys-fluent-common-errors/" target="_blank" rel="noopener noreferrer">Troubleshooting Tips for Ansys Fluent | Ansys Courses</a></li>
+                <li><a href="https://www.afs.enea.it/project/neptunius/docs/fluent/html/ug/node775.htm" target="_blank" rel="noopener noreferrer">ANSYS FLUENT 12.0 User's Guide - 26. Using the Solver - AFS ENEA (구버전 정보)</a></li>
+                <li><a href="https://innovationspace.ansys.com/courses/courses/physics-setup-in-ansys-fluent/lessons/how-to-setup-solver-in-ansys-fluent-lesson-2/?template=academic" target="_blank" rel="noopener noreferrer">How to Setup Solver in Ansys Fluent - Ansys Innovation Space</a></li>
+                <li><a href="https://www.sdcpublications.com/Textbooks/Introduction-ANSYS-Fluent-2020/ISBN/978-1-63057-396-6/" target="_blank" rel="noopener noreferrer">An Introduction to ANSYS Fluent 2020 - SDC Publications (구버전 교재)</a></li>
+                <li><a href="https://innovationspace.ansys.com/forum/" target="_blank" rel="noopener noreferrer">Ansys Learning Forum</a></li>
+                <li><a href="https://www.cfd-online.com/Forums/fluent/254852-looking-self-teach-myself-ansys-fluent.html" target="_blank" rel="noopener noreferrer">Looking to self teach myself ANSYS Fluent. - CFD Online Forums</a></li>
+            </ul>
+
+        </article>
+        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

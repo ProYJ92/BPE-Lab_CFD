@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 상세 - 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth flex flex-col min-h-screen">
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-slate-800 mb-2 sm:mb-0">
+                    <a href="index.html" class="block no-underline hover:no-underline">
+                        <span class="block text-2xl lg:text-3xl font-bold text-slate-800">생물공학연구실</span>
+                        <span class="block text-sm lg:text-base font-normal text-gray-500 mt-1">Bioprocess Engineering Laboratory</span>
+                    </a>
+                </h1>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+            <article class="prose lg:prose-xl max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+                <header class="mb-10 border-b pb-4">
+                    <h1 id="announcementTitle" class="text-3xl md:text-4xl font-extrabold text-slate-800">공지사항 제목</h1>
+                    <p id="announcementDate" class="text-gray-500 mt-2">공지 날짜: YYYY-MM-DD</p>
+                </header>
+                
+                <div id="announcementContent">
+                    <p>본 공지사항은 일반적인 내용을 담고 있는 예시 페이지입니다. 실제 공지 내용은 동적으로 업데이트될 수 있습니다.</p>
+                    <p>예를 들어, 연구실 서버 점검 안내와 같은 공지사항이 여기에 표시될 수 있습니다.</p>
+                    <h2 class="text-xl font-semibold mt-6">예시: 연구실 서버 점검 안내</h2>
+                    <p><strong>점검 일시:</strong> 2025년 9월 5일 (금) 18:00 ~ 20:00</p>
+                    <p><strong>점검 내용:</strong> 연구실 데이터 서버 정기 점검 및 보안 업데이트</p>
+                    <p><strong>영향:</strong> 점검 시간 동안 서버 접속 및 관련 서비스 이용이 일시적으로 중단될 수 있습니다.</p>
+                    <p>연구원 여러분의 양해 부탁드립니다.</p>
+                </div>
+
+                <div class="mt-12 pt-8 border-t border-gray-200">
+                    <a href="news_announcements.html" class="inline-flex items-center text-[#0072CE] hover:text-[#004A99] hover:underline font-medium">
+                        <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
+                        목록으로 돌아가기
+                    </a>
+                </div>
+            </article>
+        </div>
+        
+        <div id="searchResultsContainer" class="container mx-auto px-6 my-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { menuStructure, generateNavigation, generateBreadcrumbs, adjustBodyPadding, loadSearchIndex, performSiteSearch, displaySuggestions } from './script.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const title = urlParams.get('title') || "연구실 서버 점검 안내 (9/5)";
+            const date = urlParams.get('date') || "2025-09-01";
+            
+            const announcementTitleEl = document.getElementById('announcementTitle');
+            const announcementDateEl = document.getElementById('announcementDate');
+            const announcementContentEl = document.getElementById('announcementContent');
+
+            if (announcementTitleEl) announcementTitleEl.textContent = title;
+            if (announcementDateEl) announcementDateEl.textContent = `공지 날짜: ${date}`;
+
+            if (title === "연구실 서버 점검 안내 (9/5)") {
+                 if (announcementContentEl) {
+                    announcementContentEl.innerHTML = `
+                        <p>연구실 서버의 안정적인 운영과 보안 강화를 위해 아래와 같이 정기 점검을 실시합니다.</p>
+                        <h2 class="text-xl font-semibold mt-6">점검 안내</h2>
+                        <ul class="list-disc pl-5">
+                            <li><strong>점검 일시:</strong> 2025년 9월 5일 (금) 18:00 ~ 20:00 (2시간)</li>
+                            <li><strong>점검 대상:</strong> 연구실 내부 데이터 서버 및 네트워크 장비</li>
+                            <li><strong>점검 내용:</strong> 시스템 업데이트, 보안 패치 적용, 데이터 백업 확인</li>
+                        </ul>
+                        <h2 class="text-xl font-semibold mt-6">영향 범위</h2>
+                        <p>점검 시간 동안 다음 서비스 이용이 일시 중단될 수 있습니다:</p>
+                        <ul class="list-disc pl-5">
+                            <li>연구자료 공유 폴더 접근</li>
+                            <li>연구실 내부 웹서비스</li>
+                            <li>일부 실험 장비 데이터 로깅 시스템</li>
+                        </ul>
+                        <p>연구 활동에 불편을 드려 죄송하며, 너른 양해 부탁드립니다. 점검은 최대한 신속하게 완료하도록 하겠습니다.</p>
+                        <h2 class="text-xl font-semibold mt-6">문의</h2>
+                        <p>IT 지원팀 (내선 5678, it-support@example.lab)</p>
+                    `;
+                }
+            } else {
+                 if (announcementContentEl) {
+                    announcementContentEl.innerHTML = `<p>이 공지사항의 상세 내용은 준비 중입니다. 제목: ${title}</p>`;
+                 }
+            }
+        });
+    </script>
+    <script src="script.js" type="module"></script>
+</body>
+</html>

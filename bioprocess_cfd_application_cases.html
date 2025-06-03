@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bioprocess CFD - 적용 사례 | 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-pretendard bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-slate-800 mb-2 sm:mb-0">
+                    <a href="index.html" class="block no-underline hover:no-underline">
+                        <span class="block text-2xl lg:text-3xl font-bold text-slate-800">생물공학연구실</span>
+                        <span class="block text-sm lg:text-base font-normal text-gray-500 mt-1">Bioprocess Engineering Laboratory</span>
+                    </a>
+                </h1>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+            <a href="bioprocess_cfd.html" class="inline-flex items-center text-sm text-[#0072CE] hover:text-[#004A99] hover:underline mb-8 font-medium">
+                <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i>
+                Bioprocess CFD 홈으로 돌아가기
+            </a>
+            <article class="prose prose-lg max-w-none xl:prose-xl prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+                <h2 id="application-cases-main">3. Bioprocess CFD 적용 사례 (Bioprocess CFD Applications / Case Studies)</h2>
+                <p>Bioprocess CFD는 바이오공정의 다양한 단계와 시스템에 걸쳐 폭넓게 적용되어 공정 이해, 설계 최적화 및 성능 개선에 기여하고 있습니다.</p>
+
+                <h3 id="main-application-areas">주요 적용 분야 및 사례</h3>
+                <ul>
+                    <li><strong>생물반응기 설계 및 최적화</strong>:
+                        <ul>
+                            <li>교반 탱크 반응기(STR), 플러그 흐름 반응기(PFR), 에어리프트 반응기, 유동층 반응기, 파동형 반응기 등 다양한 반응기 유형의 내부 유동 패턴, 혼합 시간, 전단 응력 분포, 산소 전달 계수(kLa) 등을 예측합니다<sup>2-3</sup>. 이를 통해 최적의 임펠러 형상, 배치, 통기 방식 등을 결정할 수 있습니다<sup>1-3</sup>.</li>
+                            <li><strong>사례</strong>: 4.1 m³ 산업 규모 교반 반응기의 CFD 모델링을 통해 동력 소모량, 액상 높이, 혼합 시간 등을 실험 데이터와 비교 검증하고, kLa 분포 분석을 통해 교반 속도를 최적화한 사례가 있습니다<sup>1</sup>.</li>
+                        </ul>
+                    </li>
+                    <li><strong>스케일업 및 스케일다운</strong>:
+                        <ul>
+                            <li>대규모 반응기에서 발생하는 혼합 및 전달 불균일성을 예측하고, 이를 기반으로 실험실 규모에서 실제 공정 조건을 모사하는 스케일다운 시스템을 합리적으로 설계하는 데 활용됩니다<sup>1-2</sup>.</li>
+                            <li><strong>사례</strong>: 20 L 실험실 규모 STR과 4000 L 산업 규모 STR을 연결한 플러그 흐름 스케일다운 장치 설계 연구에서 CFD가 활용되었습니다<sup>2</sup>. CFD를 통해 규모 간 혼합 시간 차이를 계산하고, PFR 내 유동 거동 및 체류 시간 분포를 상세히 분석하여 스태틱 믹서의 영향 등을 평가했습니다<sup>2</sup>.</li>
+                        </ul>
+                    </li>
+                    <li><strong>혼합 및 물질 전달 분석</strong>:
+                        <ul>
+                            <li>고점도 유체, 비뉴턴 유체(예: 혐기성 소화조 기판), 고형물 현탁액 등 복잡한 유체의 혼합 효율성, 데드 존 형성, 미세 혼합 특성 등을 분석합니다<sup>1-2</sup>.</li>
+                            <li>액체-기체, 액체-고체 간의 물질 전달 속도 및 분포를 예측하여 산소 전달 효율성 등을 평가합니다<sup>1</sup>.</li>
+                        </ul>
+                    </li>
+                    <li><strong>세포 배양 및 발효 공정</strong>:
+                        <ul>
+                            <li>대규모 발효조 및 세포 배양 반응기 내에서 세포가 경험하는 국부적인 기질, 용존 산소, pH, 전단 응력 등의 환경 불균일성을 정량적으로 평가합니다<sup>1-2</sup>.</li>
+                            <li>세포 반응 동역학 모델과 결합하여 특정 환경 조건이 세포 성장률, 생존율, 대사 경로, 생산물 품질(예: 단백질 당화 패턴)에 미치는 영향을 예측하고 최적화합니다<sup>1-2</sup>.</li>
+                            <li><strong>사례</strong>: 고세포밀도 대장균 배양에서 산소 제한 및 기질 불균일성이 Fab 단백질 생산에 미치는 영향을 CFD 기반 스케일다운 모델을 통해 분석했습니다<sup>2</sup>. CHO cell, Hybridoma cell 등 다양한 세포주 연구에도 활용됩니다<sup>2</sup>.</li>
+                        </ul>
+                    </li>
+                    <li><strong>분리 및 정제 공정</strong>:
+                        <ul>
+                            <li>크로마토그래피 컬럼, 필터 등 분리 장치 내부의 유동 및 물질 전달을 시뮬레이션하여 효율성을 개선하고 스케일업을 지원합니다.</li>
+                        </ul>
+                    </li>
+                    <li><strong>바이오필름 및 고정화 세포 시스템</strong>:
+                        <ul>
+                            <li>고정화된 생물막 또는 입자 내부 및 주변의 유동 및 물질 전달 제한을 평가하고 반응기 성능을 예측합니다.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Bioprocess CFD는 이론적 모델링 결과를 실제 공정 데이터와 비교 검증하며 그 신뢰성을 높여가고 있으나, 대규모 반응기 내 실시간 시공간적 변이 측정의 어려움으로 인해 여전히 도전 과제가 존재합니다<sup>2</sup>. 그럼에도 불구하고 CFD는 바이오프로세스 개발 및 생산성 향상에 없어서는 안 될 핵심 도구로 자리매김했습니다.</p>
+
+                <h2 id="references">참고문헌 (References)</h2>
+                <ol class="list-decimal pl-5">
+                    <li>Industrial Case-Study-Based Computational Fluid Dynamic (CFD) Modeling of Stirred and Aerated Bioreactors - <a href="https://pubs.acs.org/doi/10.1021/acsomega.2c01886" target="_blank" rel="noopener noreferrer">https://pubs.acs.org/doi/10.1021/acsomega.2c01886</a></li>
+                    <li>Computational fluid dynamics simulation improves the design and characterization of a plug-flow-type scale-down reactor for microbial cultivation processes - <a href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/biot.202200152" target="_blank" rel="noopener noreferrer">https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/biot.202200152</a></li>
+                    <li>Computational fluid dynamics (CFD) modeling applied to biological wastewater treatment systems: An overview of strategies for the kinetics integration - <a href="https://www.sciencedirect.com/science/article/abs/pii/S1385894723019113" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/abs/pii/S1385894723019113</a></li>
+                    <li>Integration Approaches to Model Bioreactor Hydrodynamics and Cellular Kinetics for Advancing Bioprocess Optimisation - <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11200465/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC11200465/</a></li>
+                    <li>Galeazzo et al., 2024, "Performance Comparison of CFD Microbenchmarks on Diverse HPC Architectures" - <a href="https://doi.org/10.3390/computers13050115" target="_blank" rel="noopener noreferrer">https://doi.org/10.3390/computers13050115</a></li>
+                    <li>CFD Software Comparison | Resolved Analytics - <a href="https://www.resolvedanalytics.com/theflux/comparing-cfd-software" target="_blank" rel="noopener noreferrer">https://www.resolvedanalytics.com/theflux/comparing-cfd-software</a> (Note: This reference provides general CFD software comparison; specific Bioprocess relevance inferred)</li>
+                    <li>Bioprocess Engineering: Basic Concepts (Shuler & Kargi, 2001) - <a href="https://www.eng.uc.edu/~beaucag/Classes/ChEThermoBeaucage/Books/Michael%20L.%20Shuler,%20Fikret%20Kargi%20-%20Bioprocess%20Engineering_%20Basic%20Concepts-Prentice%20Hall%20(2001).pdf" target="_blank" rel="noopener noreferrer">https://www.eng.uc.edu/...Bioprocess%20Engineering...pdf</a></li>
+                    <li>Bioprocess Engineering Principles (Doran, 2013) - <a href="https://dl.icdst.org/pdfs/files4/b22084befc3006eb180f258c54e240ba.pdf" target="_blank" rel="noopener noreferrer">https://dl.icdst.org/pdfs/files4/b22084befc3006eb180f258c54e240ba.pdf</a></li>
+                    <li>Computational fluid dynamics modeling of cell cultures in bioreactors and its potential for cultivated meat production—A mini-review (Cantarero Rivera & Chen, 2022) - <a href="https://doi.org/10.1016/j.fufo.2022.100195" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.fufo.2022.100195</a></li>
+                </ol>
+            </article>
+        </div>
+         <div id="searchResultsContainer" class="container mx-auto px-6 my-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
