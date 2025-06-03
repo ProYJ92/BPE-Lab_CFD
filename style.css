@@ -784,6 +784,7 @@ td {
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
 }
 .header-container nav {
   flex-grow: 1;
@@ -792,7 +793,10 @@ td {
   #fixed-top-nav-container .search-container {
     margin-left: auto;
   }
-  #fixed-top-nav-container .helper-btn {
-    margin-left: 15px;
+  #header-helper-btn {
+    position: absolute;
+    right: 10px;
+    top: -40px;
+    margin-left: 0;
   }
 }
