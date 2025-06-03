@@ -484,10 +484,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             
             a.addEventListener('click', (event) => {
-                if (item.path === '#' || (window.innerWidth <= 768 && item.children && item.children.length > 0)) {
+                const isMobile = window.innerWidth <= 768;
+                const hasChildren = item.children && item.children.length > 0;
+                const dropdownOpen = ulDropdown.style.display === 'block';
+
+                if (item.path === '#' || (isMobile && hasChildren && !dropdownOpen)) {
                     event.preventDefault();
-                    const currentlyOpen = ulDropdown.style.display === 'block';
-                    if (level === 0 && window.innerWidth <= 768) {
+                    if (level === 0 && isMobile) {
                         const allTopLevelLis = li.parentElement.querySelectorAll(':scope > li.menu-item-has-children');
                         allTopLevelLis.forEach(topLi => {
                             if (topLi !== li) {
@@ -500,8 +503,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             }
                         });
                     }
-                    ulDropdown.style.display = currentlyOpen ? 'none' : 'block';
-                    a.setAttribute('aria-expanded', currentlyOpen ? 'false' : 'true');
+                    ulDropdown.style.display = dropdownOpen ? 'none' : 'block';
+                    a.setAttribute('aria-expanded', dropdownOpen ? 'false' : 'true');
                 }
             });
         }
