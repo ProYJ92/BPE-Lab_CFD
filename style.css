@@ -6,6 +6,7 @@ body {
     letter-spacing: -0.01em; 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding-top: 150px; /* Ensure content appears below fixed top menu */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -417,6 +418,9 @@ footer {
 
 
 @media (max-width: 768px) {
+    body {
+        padding-top: 120px; /* Adjust for fixed menu height on small screens */
+    }
     #mainNav {
         display: none;
     }
