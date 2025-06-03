@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { name_ko: '사진 갤러리', name_en: 'Photo Gallery', path: 'photo_gallery.html' }
         ] },
         {
-            id: 'bp_eng', name_ko: '세포배양공정', name_en: 'Bioprocess Engineering', path: '#',
+            id: 'bp_eng', name_ko: '세포배양공정', name_en: 'Bioprocess Engineering', path: 'bp_eng_main.html',
             children: [
                 { name_ko: '세포배양공정이란?', name_en: 'Introduction', path: 'bp_eng_intro_main.html', children: [
                     { name_ko: '개념 및 범위', name_en: 'Concept & Scope', path: 'bp_eng_intro_concept_scope.html' },
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         {
-            id: 'proc_opt', name_ko: '세포 배양 공정 최적화', name_en: 'Process Optimization', path: '#',
+            id: 'proc_opt', name_ko: '세포 배양 공정 최적화', name_en: 'Process Optimization', path: 'proc_opt_main.html',
             children: [
                 { name_ko: '연구 개요', name_en: 'Overview', path: 'proc_opt_overview_main.html', children: [
                     { name_ko: '연구 목적 및 필요성', name_en: 'Purpose & Necessity', path: 'proc_opt_overview_purpose_necessity.html' },
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         {
-            id: 'meta_eng', name_ko: '시스템 대사공학 및 배지 최적화', name_en: 'Metabolic Engineering & Media Optimization', path: '#',
+            id: 'meta_eng', name_ko: '시스템 대사공학 및 배지 최적화', name_en: 'Metabolic Engineering & Media Optimization', path: 'meta_eng_main.html',
             children: [
                 { name_ko: '연구 개요', name_en: 'Overview', path: 'meta_eng_overview_main.html', children: [
                     { name_ko: '연구 배경 및 목적', name_en: 'Background & Objectives', path: 'meta_eng_overview_background_objectives.html' },
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         {
-            id: 'cfd', name_ko: '전산유체역학', name_en: 'Computational Fluid Dynamics', path: '#',
+            id: 'cfd', name_ko: '전산유체역학', name_en: 'Computational Fluid Dynamics', path: 'cfd_main.html',
             children: [
                 { name_ko: 'CFD 이론', name_en: 'CFD Theory', path: 'cfd_theory.html', children: [
                     { name_ko: 'CFD 소개', name_en: 'CFD Introduction', path: 'cfd_introduction.html' },
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         {
-            id: 'digital_twin', name_ko: '디지털 트윈 기반 바이오공정', name_en: 'Digital Twin Bioprocess', path: '#',
+            id: 'digital_twin', name_ko: '디지털 트윈 기반 바이오공정', name_en: 'Digital Twin Bioprocess', path: 'digital_twin_main.html',
             children: [
                 { name_ko: '연구 개요', name_en: 'Overview', path: 'digital_twin_overview_main.html', children: [
                     { name_ko: '디지털 트윈 개념과 필요성', name_en: 'Concept & Necessity', path: 'digital_twin_overview_concept_necessity.html' },
