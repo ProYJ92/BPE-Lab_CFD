@@ -841,12 +841,13 @@ if (sessionStorage.getItem("helperClosed")) {
     helperMenu.style.display = "none";
 }
 
-const searchContainerElem = document.querySelector('.search-container');
-if (searchContainerElem) {
-    const headerHelperBtn = document.createElement('div');
-    headerHelperBtn.id = 'header-helper-btn';
-    headerHelperBtn.innerHTML = '🐹 <span>뭐든 물어봐!</span>';
-    searchContainerElem.appendChild(headerHelperBtn);
+const headerHelperBtn = document.getElementById('header-helper-btn');
+if (headerHelperBtn) {
+    const attentionKey = 'helperAttentionPlayed_' + window.location.pathname;
+    if (!sessionStorage.getItem(attentionKey)) {
+        headerHelperBtn.classList.add('attention-animation');
+        sessionStorage.setItem(attentionKey, 'true');
+    }
 
     headerHelperBtn.addEventListener('click', () => {
         helperBtn.style.display = 'flex';
