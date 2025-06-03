@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenFOAM 사용 설명서: 문제 해결 - 연구실 이름</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50 h-auto md:h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-2 md:py-0">
+            <div class="flex justify-between w-full md:w-auto items-center">
+                <a href="../../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-2">연구실 명칭 (CFD & Bioprocess)</a>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex items-center space-x-1 main-nav">
+                <div class="relative group">
+                    <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-header">Ansys Fluent</span>
+                        <a href="../ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                        <span class="nav-dropdown-header">OpenFOAM</span>
+                        <a href="introduction.html" class="nav-dropdown-item">소개</a>
+                        <a href="installation.html" class="nav-dropdown-item">설치</a>
+                        <a href="preprocessing.html" class="nav-dropdown-item">전처리</a>
+                        <a href="solver.html" class="nav-dropdown-item">솔버</a>
+                        <a href="postprocessing.html" class="nav-dropdown-item">후처리</a>
+                        <a href="verification_validation.html" class="nav-dropdown-item">V & V</a>
+                        <a href="troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                        <a href="resources.html" class="nav-dropdown-item">자료실</a>
+                        <span class="nav-dropdown-header">M-STAR CFD</span>
+                        <a href="../mstar_cfd/introduction.html" class="nav-dropdown-item">소개</a>
+                    </div>
+                </div>
+                <!-- Other main menus -->
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">OpenFOAM 사용 설명서: 문제 해결 (Troubleshooting)</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <p>OpenFOAM은 강력하고 유연한 도구이지만, 텍스트 기반 설정과 다양한 옵션으로 인해 사용 중 여러 문제에 직면할 수 있습니다. 이 섹션에서는 OpenFOAM 사용 시 자주 발생하는 문제 유형과 기본적인 해결 접근법을 안내합니다. 문제 해결에는 체계적인 접근과 OpenFOAM 파일 구조 및 로그 분석 능력이 중요합니다.</p>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">1. 격자 생성 (Meshing) 관련 문제</h2>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>
+                        <strong><code>checkMesh</code> 오류:</strong>
+                        <ul class="list-circle pl-5 space-y-1 mt-1">
+                            <li><strong>Negative Volume / Skewness / Aspect Ratio 등:</strong> 격자 품질이 매우 나쁜 경우. <code>blockMeshDict</code> 또는 <code>snappyHexMeshDict</code> 설정을 수정하거나, 외부 격자 생성기에서 격자를 개선해야 합니다. <code>snappyHexMesh</code>의 경우 세분화 레벨, 레이어 추가 설정, 형상 표면 품질 등을 점검합니다.</li>
+                            <li><strong>Failed Mesh Checks (여러 항목):</strong> 심각한 격자 오류. 격자 생성 과정을 처음부터 다시 검토해야 할 수 있습니다.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong><code>snappyHexMesh</code> 실행 중 멈춤 또는 이상 종료:</strong>
+                        <ul class="list-circle pl-5 space-y-1 mt-1">
+                            <li><strong>메모리 부족:</strong> 특히 고해상도 격자 생성 시. 시스템 사양을 확인하고, 필요시 배경 격자 크기를 키우거나 세분화 레벨을 낮춥니다.</li>
+                            <li><strong>STL 파일 오류:</strong> 형상 표면(STL)에 구멍, 중첩된 면, 비다양체(non-manifold) 모서리 등이 있는지 확인하고 수정합니다.</li>
+                            <li><code>snappyHexMeshDict</code> 설정 오류: 필수 키워드 누락, 값 범위 오류 등.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">2. 솔버 실행 중 수렴 문제 또는 발산</h2>
+                <p>터미널에 출력되는 잔차(Residuals)가 감소하지 않거나 급격히 증가(발산)하는 경우입니다.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>
+                        <strong>원인 진단 및 해결 방안 (Ansys Fluent 문제 해결 섹션과 유사하나 OpenFOAM 파일 관점에서):</strong>
+                        <ul class="list-circle pl-5 space-y-1 mt-1">
+                            <li><strong><code>controlDict</code> 설정:</strong>
+                                <ul class="list-disc pl-8 space-y-1 mt-1">
+                                    <li><code>deltaT</code> (시간 간격): 너무 큰 경우 발산. CFL 수를 고려하여 줄입니다. (CFL 수 계산은 <code>postProcess -func CourantNo</code> 또는 ParaView에서 가능)</li>
+                                    <li><code>maxCo</code> (최대 Courant 수, <code>pimpleFoam</code> 등에서 자동 시간 간격 조절 시): 너무 큰 경우 불안정. 줄여봅니다.</li>
+                                </ul>
+                            </li>
+                            <li><strong><code>fvSchemes</code> 설정:</strong>
+                                <ul class="list-disc pl-8 space-y-1 mt-1">
+                                    <li><code>divSchemes</code> (대류항): 초기에는 안정적인 <code>Gauss upwind</code>를 사용하고, 유동장이 안정화되면 <code>Gauss linearUpwind</code>, <code>Gauss limitedLinear</code> 등으로 변경하여 정확도를 높입니다. 고차 스킴은 발산 가능성을 높일 수 있습니다.</li>
+                                </ul>
+                            </li>
+                            <li><strong><code>fvSolution</code> 설정:</strong>
+                                <ul class="list-disc pl-8 space-y-1 mt-1">
+                                    <li><code>relaxationFactors</code> (SIMPLE 계열 솔버): 값이 너무 큰 경우 발산. 값을 낮춰봅니다 (예: <code>p 0.3; U 0.7;</code> -> <code>p 0.2; U 0.5;</code>).</li>
+                                    <li>선형 솔버의 <code>tolerance</code> 및 <code>relTol</code>: 너무 큰 경우 부정확한 해로 이어질 수 있음. 너무 작은 경우 불필요한 계산 시간 소요.</li>
+                                    <li>압력-속도 연계 알고리즘(PISO, SIMPLE)의 반복 횟수(<code>nCorrectors</code>, <code>nNonOrthogonalCorrectors</code>) 등.</li>
+                                </ul>
+                            </li>
+                            <li><strong><code>0</code> 디렉토리 (경계 조건):</strong>
+                                <ul class="list-disc pl-8 space-y-1 mt-1">
+                                    <li>경계 조건 유형(<code>type</code>) 및 값(<code>value</code>)이 물리적으로 타당한지, 단위는 올바른지 확인합니다. (예: 입구 속도가 너무 높거나, 출구 압력이 부적절)</li>
+                                    <li><code>fixedValue</code>, <code>zeroGradient</code>, <code>calculated</code> 등 각 경계 조건의 의미를 정확히 이해하고 사용합니다.</li>
+                                    <li>초기 조건(<code>internalField</code>)이 너무 비현실적인 경우 수렴이 어려울 수 있습니다.</li>
+                                </ul>
+                            </li>
+                            <li><strong><code>constant</code> 디렉토리 (물성치, 난류 모델):</strong>
+                                <ul class="list-disc pl-8 space-y-1 mt-1">
+                                    <li><code>transportProperties</code>의 점성(<code>nu</code> 또는 <code>mu</code>), 밀도(<code>rho</code>) 값 확인.</li>
+                                    <li><code>turbulenceProperties</code>의 난류 모델 선택(<code>RASModel</code>, <code>LESModel</code>) 및 관련 계수 값 확인.</li>
+                                </ul>
+                            </li>
+                            <li><strong>격자 품질:</strong> <code>checkMesh</code>를 통해 격자 품질을 다시 확인합니다. 특히 벽면 근처 격자(y+)가 난류 모델 요구사항에 맞는지 확인합니다.</li>
+                        </ul>
+                    </li>
+                    <li><strong>로그 파일 분석:</strong> 솔버 실행 시 터미널에 출력되는 로그 또는 <code>log.&lt;solverName&gt;</code> 파일(리다이렉션 사용 시)을 자세히 보면, 어느 변수에서 문제가 시작되는지, 어떤 오류 메시지가 출력되는지 단서를 얻을 수 있습니다. (예: "bounding k", "bounding epsilon" -> 난류 변수 발산 가능성)</li>
+                </ul>
+                <div class="my-4 p-2 bg-neutral-light rounded text-center italic text-sm text-gray-600"> (이미지: OpenFOAM 터미널 로그에서 발산 관련 메시지 예시) </div>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">3. 물리적으로 타당하지 않은 결과</h2>
+                <p>해석은 수렴했으나 결과가 예상과 다르거나 물리 법칙에 위배되는 경우입니다.</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>경계 조건, 물성치, 난류 모델 설정 오류:</strong> 위의 수렴 문제 원인과 유사하게 모든 설정을 다시 한번 꼼꼼히 확인합니다.</li>
+                    <li><strong>격자 해상도 부족:</strong> 주요 유동 현상을 포착하기에 격자가 충분히 조밀한지 확인합니다 (격자 수렴성 테스트 필요).</li>
+                    <li><strong>후처리 과정에서의 오해 또는 오류:</strong> ParaView 등에서 변수 선택, 스케일링, 단위 변환 등이 올바르게 되었는지 확인합니다.</li>
+                </ul>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">4. 기타 일반적인 문제</h2>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>환경 변수 설정 오류:</strong> OpenFOAM 명령어가 인식되지 않는 경우. <code>~/.bashrc</code> (또는 해당 쉘 설정 파일)에 OpenFOAM 환경 설정 스크립트(<code>etc/bashrc</code>)가 올바르게 추가되었는지 확인하고 <code>source ~/.bashrc</code>를 실행합니다.</li>
+                    <li><strong>권한 문제:</strong> 디렉토리나 파일에 대한 읽기/쓰기 권한이 없는 경우. <code>chmod</code>, <code>chown</code> 명령어로 권한을 조정합니다.</li>
+                    <li><strong>라이브러리 의존성 문제 (소스 컴파일 시):</strong> 필요한 시스템 라이브러리(MPI, Boost, CGAL 등)가 설치되어 있는지 확인합니다.</li>
+                </ul>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">문제 해결을 위한 일반적인 팁</h2>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>튜토리얼 사례부터 시작:</strong> 복잡한 문제를 풀기 전에 OpenFOAM과 함께 제공되는 튜토리얼 사례를 실행하고 수정해보면서 각 딕셔너리 파일의 역할과 파라미터의 의미를 익힙니다.</li>
+                    <li><strong>단순화 및 단계적 접근:</strong> 문제가 발생하면 설정을 최대한 단순화하고, 조금씩 변경해가며 문제의 원인을 찾아냅니다.</li>
+                    <li><strong>OpenFOAM Wiki 및 포럼 적극 활용:</strong> <a href="https://openfoamwiki.net" target="_blank" rel="noopener noreferrer" class="text-brand-secondary hover:underline">OpenFOAM Wiki</a>, <a href="https://www.cfd-online.com/Forums/openfoam/" target="_blank" rel="noopener noreferrer" class="text-brand-secondary hover:underline">CFD Online OpenFOAM 포럼</a> 등에서 유사한 문제나 오류 메시지를 검색하거나 질문합니다.</li>
+                    <li><strong>버전 호환성 확인:</strong> 사용하는 OpenFOAM 버전과 튜토리얼/참고 자료의 버전이 다를 경우, 딕셔너리 파일 문법이나 솔버 이름이 다를 수 있습니다.</li>
+                </ul>
+                <p>OpenFOAM 문제 해결은 경험과 커뮤니티의 도움을 통해 점차 익숙해질 수 있습니다. 포기하지 않고 꾸준히 시도하는 것이 중요합니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 연구실 명칭. 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../../script.js"></script>
+</body>
+</html>

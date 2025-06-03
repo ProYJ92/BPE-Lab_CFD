@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFD 이론: 서론 - 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <
+script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap md:flex-nowrap justify-between items-center py-3">
+                <div class="flex justify-between items-center w-full md:w-auto">
+                    <a href="../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-1">생물공학연구실(Bioprocess Engineering Laboratory)</a>
+                    <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none ml-3">
+                        <i data-lucide="menu" class="w-7 h-7"></i>
+                    </button>
+                </div>
+    
+                <nav class="hidden md:flex items-center space-x-1 main-nav md:ml-4">
+                    <div class="relative group">
+                        <button class="nav-item">연구실 소개 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <a href="../lab_introduction/overview.html" class="nav-dropdown-item">연구실 개요</a>
+                            <a href="../lab_introduction/research_areas.html" class="nav-dropdown-item">연구 분야</a>
+                            <a href="../lab_introduction/goals_vision.html" class="nav-dropdown-item">연구 목표 및 비전</a>
+                            <a href="../lab_introduction/professor.html" class="nav-dropdown-item">교수 소개</a>
+                            <a href="../lab_introduction/researchers.html" class="nav-dropdown-item">연구원 소개</a>
+                            <a href="../lab_introduction/projects.html" class="nav-dropdown-item">주요 연구 프로젝트</a>
+                            <a href="../lab_introduction/facilities.html" class="nav-dropdown-item">실험실 시설 및 장비</a>
+                            <a href="../lab_introduction/achievements.html" class="nav-dropdown-item">연구 성과</a>
+                            <a href="../lab_introduction/partners.html" class="nav-dropdown-item">협력기관 및 파트너</a>
+                            <a href="../lab_introduction/gallery.html" class="nav-dropdown-item">사진 갤러리</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-item">CFD 이론 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <a href="introduction.html" class="nav-dropdown-item">서론</a>
+                            <a href="preprocessing.html" class="nav-dropdown-item">Pre-processing</a>
+                            <a href="solving.html" class="nav-dropdown-item">Solving</a>
+                            <a href="postprocessing.html" class="nav-dropdown-item">Post-processing</a>
+                            <a href="core_theory.html" class="nav-dropdown-item">핵심이론</a>
+                            <a href="glossary.html" class="nav-dropdown-item">용어 설명</a>
+                            <a href="references.html" class="nav-dropdown-item">레퍼런스</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-item">Bioprocess CFD <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <a href="../bioprocess_cfd/introduction.html" class="nav-dropdown-item">서론</a>
+                            <a href="../bioprocess_cfd/theoretical_background.html" class="nav-dropdown-item">이론적 배경</a>
+                            <a href="../bioprocess_cfd/application_cases.html" class="nav-dropdown-item">Bioprocess CFD 적용 사례</a>
+                            <a href="../bioprocess_cfd/software_comparison.html" class="nav-dropdown-item">주요 CFD 소프트웨어 비교</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <span class="nav-dropdown-header">Ansys Fluent</span>
+                            <a href="../software_manuals/ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                            <a href="../software_manuals/ansys_fluent/installation.html" class="nav-dropdown-item">설치</a>
+                            <a href="../software_manuals/ansys_fluent/preprocessing.html" class="nav-dropdown-item">전처리</a>
+                            <a href="../software_manuals/ansys_fluent/solver.html" class="nav-dropdown-item">솔버</a>
+                            <a href="../software_manuals/ansys_fluent/postprocessing.html" class="nav-dropdown-item">후처리</a>
+                            <a href="../software_manuals/ansys_fluent/verification_validation.html" class="nav-dropdown-item">V & V</a>
+                            <a href="../software_manuals/ansys_fluent/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                            <a href="../software_manuals/ansys_fluent/resources.html" class="nav-dropdown-item">자료실</a>
+                            <span class="nav-dropdown-header">OpenFOAM</span>
+                            <a href="../software_manuals/openfoam/introduction.html" class="nav-dropdown-item">소개</a>
+                            <a href="../software_manuals/openfoam/installation.html" class="nav-dropdown-item">설치</a>
+                            <a href="../software_manuals/openfoam/preprocessing.html" class="nav-dropdown-item">전처리</a>
+                            <a href="../software_manuals/openfoam/solver.html" class="nav-dropdown-item">솔버</a>
+                            <a href="../software_manuals/openfoam/postprocessing.html" class="nav-dropdown-item">후처리</a>
+                            <a href="../software_manuals/openfoam/verification_validation.html" class="nav-dropdown-item">V & V</a>
+                            <a href="../software_manuals/openfoam/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                            <a href="../software_manuals/openfoam/resources.html" class="nav-dropdown-item">자료실</a>
+                            <span class="nav-dropdown-header">M-STAR CFD</span>
+                            <a href="../software_manuals/mstar_cfd/introduction.html" class="nav-dropdown-item">소개</a>
+                            <a href="../software_manuals/mstar_cfd/installation.html" class="nav-dropdown-item">설치</a>
+                            <a href="../software_manuals/mstar_cfd/preprocessing.html" class="nav-dropdown-item">전처리</a>
+                            <a href="../software_manuals/mstar_cfd/solver.html" class="nav-dropdown-item">솔버</a>
+                            <a href="../software_manuals/mstar_cfd/postprocessing.html" class="nav-dropdown-item">후처리</a>
+                            <a href="../software_manuals/mstar_cfd/verification_validation.html" class="nav-dropdown-item">V & V</a>
+                            <a href="../software_manuals/mstar_cfd/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                            <a href="../software_manuals/mstar_cfd/resources.html" class="nav-dropdown-item">자료실</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-item">자료실 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <a href="../data_room/papers.html" class="nav-dropdown-item">논문</a>
+                            <a href="../data_room/videos.html" class="nav-dropdown-item">영상</a>
+                            <a href="../data_room/simulation_results.html" class="nav-dropdown-item">시뮬레이션 결과</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            
+            <div id="search-bar-wrapper" class="pb-3 pt-1 md:pt-2">
+                <div id="search-bar-container" class="w-full max-w-xl mx-auto">
+                     <div class="relative">
+                        <input type="search" id="searchInput" placeholder="검색어를 입력하세요…" class="w-full py-2 px-3 pl-10 rounded-md bg-brand-secondary text-white placeholder-neutral-light/70 focus:outline-none focus:ring-2 focus:ring-brand-accent text-sm transition-all duration-300 ease-in-out focus:bg-white focus:text-neutral-dark focus:placeholder-neutral-dark/50">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i data-lucide="search" class="w-5 h-5 text-neutral-light/70 search-icon-default"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-6rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <div id="searchResultsContainer" class="hidden fixed left-0 right-0 z-40 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8" style="top: 4rem;">
+        <div id="searchResultsDisplay" class="bg-white text-neutral-dark shadow-xl rounded-b-lg max-h-[calc(100vh-12rem)] md:max-h-[calc(100vh-10rem)] overflow-y-auto">
+            <p id="searchResultsMessage" class="text-center text-gray-500 p-6 text-sm">검색어를 입력하여 페이지 내 콘텐츠를 찾아보세요.</p>
+        </div>
+    </div>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">CFD 소개: 전산 유체 역학이란?</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <p>전산 유체 역학(CFD, Computational Fluid Dynamics)은 유체(액체 및 기체)의 운동, 열 전달, 화학 반응 및 이와 관련된 다양한 물리적 현상을 컴퓨터를 사용하여 수치적으로 시뮬레이션하고 분석하는 학문 분야이자 강력한 엔지니어링 도구입니다. [Ansys] 이는 유체 거동을 지배하는 기본적인 물리 법칙, 즉 질량 보존, 운동량 보존(나비에-스토크스 방정식), 에너지 보존 방정식을 이산화(Discretization)하여 대수 방정식으로 변환하고, 이를 수치적으로 풀어 해를 얻는 과정을 포함합니다. [1, Versteeg & Malalasekera]</p>
+                
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">CFD의 중요성 및 장점</h2>
+                <p>CFD는 현대 공학 설계 및 분석에서 빼놓을 수 없는 핵심 기술로 자리 잡았습니다. 그 중요성과 장점은 다음과 같습니다:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>설계 최적화 및 성능 예측:</strong> 실제 물리적 프로토타입 제작 없이 가상 환경에서 다양한 설계안의 성능을 예측하고 비교 분석하여 최적의 설계를 도출할 수 있습니다. 이를 통해 제품 개발 시간과 비용을 획기적으로 절감할 수 있습니다. [1, Ansys]</li>
+                    <li><strong>상세한 유동 정보 획득:</strong> 실험만으로는 관찰하거나 측정하기 어려운 유동장 내부의 상세한 정보(속도, 압력, 온도, 난류 강도 등)를 정량적으로 파악하고 시각화할 수 있습니다. 이를 통해 복잡한 유동 현상에 대한 깊이 있는 이해가 가능합니다. [3]</li>
+                    <li><strong>극한 조건 시뮬레이션:</strong> 실제 실험이 어렵거나 위험한 극한 조건(고온, 고압, 독성 물질 등)에서의 유동 현상을 안전하게 시뮬레이션할 수 있습니다.</li>
+                    <li><strong>다양한 시나리오 분석:</strong> 다양한 작동 조건이나 환경 변화에 따른 시스템의 거동 변화를 빠르고 효율적으로 분석하여 문제점을 사전에 예측하고 개선 방안을 모색할 수 있습니다.</li>
+                    <li><strong>환경 영향 평가:</strong> 오염물질 확산, 소음 발생 등 환경 문제를 예측하고 저감 대책을 수립하는 데 활용될 수 있습니다.</li>
+                </ul>
+
+                <figure class="my-8 text-center">
+                    <img src="https://www.ansys.com/content/dam/amp/2021/july/what-is-cfd-simulation-1200x675.jpg" alt="CFD 시뮬레이션 예시 이미지" class="w-full md:w-5/6 lg:w-2/3 mx-auto rounded-lg shadow-md">
+                    <figcaption class="text-sm text-gray-600 mt-2 italic">다양한 분야의 CFD 시뮬레이션 예시 (출처: Ansys, Inc. [외부링크])</figcaption>
+                </figure>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">CFD 응용 분야</h2>
+                <p>CFD는 그 강력한 분석 능력과 예측 정확도를 바탕으로 매우 광범위한 산업 및 연구 분야에서 활용되고 있습니다. 주요 응용 분야는 다음과 같습니다:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>항공우주:</strong> 항공기 날개 및 동체 설계(양력/항력 예측), 로켓 및 제트 엔진 연소 해석, 위성 열 제어, 재진입체 공력 가열 분석</li>
+                    <li><strong>자동차:</strong> 차량 외부 공기역학 성능 개선(연비 향상, 주행 안정성), 엔진 내부 연소 및 냉각 시스템 최적화, HVAC 시스템 설계, 소음 저감</li>
+                    <li><strong>에너지 및 발전:</strong> 풍력 터빈 블레이드 설계, 수력/화력 발전소 효율 향상, 원자력 발전소 안전 해석, 연료전지 및 배터리 열 관리, 파이프라인 유동 해석</li>
+                    <li><strong>건축 및 환경:</strong> 건물 환기 및 공조(HVAC) 시스템 설계, 실내 공기질 평가, 도시 바람 환경 분석, 화재 및 연기 확산 시뮬레이션, 대기오염 및 수질오염 확산 예측</li>
+                    <li><strong>화학공업 및 공정:</strong> 반응기 설계 및 최적화, 혼합 및 분리 공정 효율 향상, 촉매 반응기 해석, 안전 장치 설계</li>
+                    <li><strong>바이오프로세스 및 의료:</strong> 바이오리액터 설계 및 스케일업, 약물 전달 시스템(DDS) 개발, 혈류 분석, 인공장기 및 의료기기 설계, 호흡기 유동 해석 (<a href="../bioprocess_cfd/introduction.html" class="text-brand-secondary hover:underline">Bioprocess CFD 상세</a>)</li>
+                    <li><strong>선박해양:</strong> 선체 저항 및 추진 성능 예측, 프로펠러 설계, 파랑 중 선박 운동 해석, 해양 구조물 유체력 평가</li>
+                    <li><strong>전자제품:</strong> 전자 기기 냉각 시스템 설계, 반도체 제조 공정 유동 해석</li>
+                    <li><strong>스포츠 과학:</strong> 운동 장비(골프공, 자전거 등) 공기역학 성능 개선, 선수 자세 최적화</li>
+                </ul>
+                
+                <div class="my-8 p-6 bg-neutral-medium rounded-md theory-box">
+                    <h4 class="text-lg font-semibold text-brand-secondary mt-0">CFD 학습 동영상 예시</h4>
+                    <p>CFD의 기본 개념과 중요성에 대한 간략한 소개 영상입니다. (본 영상은 예시이며, 실제 교육 자료는 <a href="../data_room/videos.html" class="text-brand-primary hover:underline">자료실</a>에서 확인하실 수 있습니다.)</p>
+                    <div class="aspect-w-16 aspect-h-9 mt-4">
+                        <iframe src="https://www.youtube.com/embed/QUtqPzRBa4k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded shadow-md w-full h-full"></iframe>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-2 italic">출처: YouTube - Ansys "What is CFD?" (외부링크)</p>
+                </div>
+
+                <p>이처럼 CFD는 다양한 공학적 문제 해결에 필수적인 도구로 자리매김하고 있으며, 컴퓨터 기술의 발전과 함께 그 적용 범위와 정확도는 더욱 확대될 것으로 기대됩니다. 본 웹사이트에서는 CFD의 기본 과정, 핵심 이론, 그리고 본 연구실의 주요 응용 분야인 바이오프로세스 CFD에 대한 상세한 정보를 제공합니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 생물공학연구실(Bioprocess Engineering Laboratory). 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../script.js"></script>
+</body>
+</html>

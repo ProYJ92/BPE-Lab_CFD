@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansys Fluent 사용 설명서: 소개 - 연구실 이름</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50 h-auto md:h-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center py-2 md:py-0">
+            <div class="flex justify-between w-full md:w-auto items-center">
+                <a href="../../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-2">연구실 명칭 (CFD & Bioprocess)</a>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <nav class="hidden md:flex items-center space-x-1 main-nav">
+                <div class="relative group">
+                    <button class="nav-item">연구실 소개 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../../lab_introduction/overview.html" class="nav-dropdown-item">연구실 개요</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">CFD 이론 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../../cfd_theory/introduction.html" class="nav-dropdown-item">서론</a>
+                    </div>
+                </div>
+                 <div class="relative group">
+                    <button class="nav-item">Bioprocess CFD <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../../bioprocess_cfd/introduction.html" class="nav-dropdown-item">서론</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <span class="nav-dropdown-header">Ansys Fluent</span>
+                        <a href="introduction.html" class="nav-dropdown-item">소개</a>
+                        <a href="installation.html" class="nav-dropdown-item">설치</a>
+                        <a href="preprocessing.html" class="nav-dropdown-item">전처리</a>
+                        <a href="solver.html" class="nav-dropdown-item">솔버</a>
+                        <a href="postprocessing.html" class="nav-dropdown-item">후처리</a>
+                        <a href="verification_validation.html" class="nav-dropdown-item">V & V</a>
+                        <a href="troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                        <a href="resources.html" class="nav-dropdown-item">자료실</a>
+                        <span class="nav-dropdown-header">OpenFOAM</span>
+                        <a href="../openfoam/introduction.html" class="nav-dropdown-item">소개</a>
+                        <span class="nav-dropdown-header">M-STAR CFD</span>
+                        <a href="../mstar_cfd/introduction.html" class="nav-dropdown-item">소개</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="nav-item">자료실 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                    <div class="nav-dropdown">
+                        <a href="../../data_room/papers.html" class="nav-dropdown-item">논문</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">Ansys Fluent 사용 설명서: 소개</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <p>Ansys Fluent는 산업계 및 학계에서 가장 널리 사용되는 상용 전산 유체 역학(CFD) 소프트웨어 중 하나입니다. 광범위한 물리 모델, 강력한 전후처리 기능, 사용자 친화적인 인터페이스를 제공하여 다양한 유동 해석 문제에 적용 가능합니다.</p>
+                
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">Ansys Fluent의 주요 특징</h2>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>포괄적인 물리 모델:</strong> 난류, 열전달, 다상 유동, 화학 반응, 연소, 유체-구조 연성(FSI) 등 다양한 물리 현상을 모사할 수 있는 모델을 제공합니다.</li>
+                    <li><strong>강력한 격자 생성 도구:</strong> Ansys Meshing, Fluent Meshing 등 다양한 격자 생성 도구를 통해 복잡한 형상에 대한 고품질 격자 생성을 지원합니다.</li>
+                    <li><strong>사용자 친화적 인터페이스:</strong> Ansys Workbench 환경과의 통합을 통해 직관적인 작업 흐름을 제공하며, Fluent 단독 실행 환경도 지원합니다.</li>
+                    <li><strong>고성능 컴퓨팅(HPC) 지원:</strong> 대규모 병렬 계산을 효율적으로 지원하여 복잡하고 큰 규모의 문제 해결 시간을 단축합니다.</li>
+                    <li><strong>사용자 정의 기능:</strong> 사용자 정의 함수(User Defined Functions, UDFs)를 C언어로 작성하여 표준 모델에서 제공하지 않는 물성, 경계 조건, 소스 항 등을 정의할 수 있습니다.</li>
+                    <li><strong>우수한 기술 지원 및 교육 자료:</strong> Ansys의 공식 기술 지원 및 광범위한 교육 자료, 사용자 커뮤니티를 통해 문제 해결 및 학습에 도움을 받을 수 있습니다.</li>
+                </ul>
+
+                <div class="my-8 text-center">
+                     <div class="w-full md:w-2/3 lg:w-1/2 h-64 bg-neutral-medium mx-auto rounded-lg shadow-md flex items-center justify-center">
+                        <p class="text-neutral-dark">Ansys Fluent 로고 또는 인터페이스 스크린샷</p>
+                     </div>
+                     <figcaption class="text-sm text-gray-600 mt-2 italic">Ansys Fluent (출처: Ansys, Inc.)</figcaption>
+                </div>
+
+                <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">Bioprocess 분야에서의 활용</h2>
+                <p>Ansys Fluent는 바이오리액터 설계 및 최적화, 약물 전달 시스템 개발, 의료 기기 내 유동 분석 등 바이오프로세스 및 생체 유동 관련 연구에도 활발하게 사용됩니다. 특히 다음과 같은 기능들이 유용하게 활용됩니다:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Eulerian 다상 유동 모델을 이용한 교반형 탱크 바이오리액터 내 기포-액체 유동 해석</li>
+                    <li>Discrete Phase Model (DPM)을 이용한 세포 또는 입자 추적</li>
+                    <li>Species Transport 모델을 이용한 영양분 및 대사산물 농도 분포 예측</li>
+                    <li>UDF를 이용한 세포 성장 동역학 모델, 비뉴턴 유체 물성 정의</li>
+                </ul>
+                <p>본 사용 설명서 시리즈에서는 Ansys Fluent의 설치부터 전처리, 솔버 설정, 후처리, 그리고 문제 해결 팁까지 단계별로 안내하여 사용자들이 CFD 해석 능력을 향상시키는 데 도움을 드리고자 합니다.</p>
+                 <div class="my-6 p-4 bg-neutral-medium rounded-md">
+                    <h4 class="text-lg font-semibold text-brand-secondary mt-0">Ansys Fluent 소개 영상</h4>
+                    <p>Ansys Fluent의 주요 기능 및 활용 분야에 대한 소개 영상입니다.</p>
+                    <div class="aspect-w-16 aspect-h-9 mt-2">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_FLUENT_INTRO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded shadow-md"></iframe>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-1">출처: Ansys YouTube 채널 (예시) - 실제 영상 링크로 교체 필요</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 연구실 명칭. 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연구 목표 및 비전 - 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap md:flex-nowrap justify-between items-center py-3">
+                <div class="flex justify-between items-center w-full md:w-auto">
+                    <a href="../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-1">생물공학연구실(Bioprocess Engineering Laboratory)</a>
+                    <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none ml-3">
+                        <i data-lucide="menu" class="w-7 h-7"></i>
+                    </button>
+                </div>
+    
+                <nav class="hidden md:flex items-center space-x-1 main-nav md:ml-4">
+                    <div class="relative group">
+                        <button class="nav-item">연구실 소개 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <a href="overview.html" class="nav-dropdown-item">연구실 개요</a>
+                            <a href="research_areas.html" class="nav-dropdown-item">연구 분야</a>
+                            <a href="goals_vision.html" class="nav-dropdown-item">연구 목표 및 비전</a>
+                            <a href="professor.html" class="nav-dropdown-item">교수 소개</a>
+                            <a href="researchers.html" class="nav-dropdown-item">연구원 소개</a>
+                            <a href="projects.html" class="nav-dropdown-item">주요 연구 프로젝트</a>
+                            <a href="facilities.html" class="nav-dropdown-item">실험실 시설 및 장비</a>
+                            <a href="achievements.html" class="nav-dropdown-item">연구 성과</a>
+                            <a href="partners.html" class="nav-dropdown-item">협력기관 및 파트너</a>
+                            <a href="gallery.html" class="nav-dropdown-item">사진 갤러리</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-item">CFD 이론 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <a href="../cfd_theory/introduction.html" class="nav-dropdown-item">서론</a>
+                            <a href="../cfd_theory/preprocessing.html" class="nav-dropdown-item">Pre-processing</a>
+                            <a href="../cfd_theory/solving.html" class="nav-dropdown-item">Solving</a>
+                            <a href="../cfd_theory/postprocessing.html" class="nav-dropdown-item">Post-processing</a>
+                            <a href="../cfd_theory/core_theory.html" class="nav-dropdown-item">핵심이론</a>
+                            <a href="../cfd_theory/glossary.html" class="nav-dropdown-item">용어 설명</a>
+                            <a href="../cfd_theory/references.html" class="nav-dropdown-item">레퍼런스</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-item">Bioprocess CFD <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <a href="../bioprocess_cfd/introduction.html" class="nav-dropdown-item">서론</a>
+                            <a href="../bioprocess_cfd/theoretical_background.html" class="nav-dropdown-item">이론적 배경</a>
+                            <a href="../bioprocess_cfd/application_cases.html" class="nav-dropdown-item">Bioprocess CFD 적용 사례</a>
+                            <a href="../bioprocess_cfd/software_comparison.html" class="nav-dropdown-item">주요 CFD 소프트웨어 비교</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <span class="nav-dropdown-header">Ansys Fluent</span>
+                            <a href="../software_manuals/ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                            <a href="../software_manuals/ansys_fluent/installation.html" class="nav-dropdown-item">설치</a>
+                            <a href="../software_manuals/ansys_fluent/preprocessing.html" class="nav-dropdown-item">전처리</a>
+                            <a href="../software_manuals/ansys_fluent/solver.html" class="nav-dropdown-item">솔버</a>
+                            <a href="../software_manuals/ansys_fluent/postprocessing.html" class="nav-dropdown-item">후처리</a>
+                            <a href="../software_manuals/ansys_fluent/verification_validation.html" class="nav-dropdown-item">V & V</a>
+                            <a href="../software_manuals/ansys_fluent/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                            <a href="../software_manuals/ansys_fluent/resources.html" class="nav-dropdown-item">자료실</a>
+                            <span class="nav-dropdown-header">OpenFOAM</span>
+                            <a href="../software_manuals/openfoam/introduction.html" class="nav-dropdown-item">소개</a>
+                            <a href="../software_manuals/openfoam/installation.html" class="nav-dropdown-item">설치</a>
+                            <a href="../software_manuals/openfoam/preprocessing.html" class="nav-dropdown-item">전처리</a>
+                            <a href="../software_manuals/openfoam/solver.html" class="nav-dropdown-item">솔버</a>
+                            <a href="../software_manuals/openfoam/postprocessing.html" class="nav-dropdown-item">후처리</a>
+                            <a href="../software_manuals/openfoam/verification_validation.html" class="nav-dropdown-item">V & V</a>
+                            <a href="../software_manuals/openfoam/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                            <a href="../software_manuals/openfoam/resources.html" class="nav-dropdown-item">자료실</a>
+                            <span class="nav-dropdown-header">M-STAR CFD</span>
+                            <a href="../software_manuals/mstar_cfd/introduction.html" class="nav-dropdown-item">소개</a>
+                            <a href="../software_manuals/mstar_cfd/installation.html" class="nav-dropdown-item">설치</a>
+                            <a href="../software_manuals/mstar_cfd/preprocessing.html" class="nav-dropdown-item">전처리</a>
+                            <a href="../software_manuals/mstar_cfd/solver.html" class="nav-dropdown-item">솔버</a>
+                            <a href="../software_manuals/mstar_cfd/postprocessing.html" class="nav-dropdown-item">후처리</a>
+                            <a href="../software_manuals/mstar_cfd/verification_validation.html" class="nav-dropdown-item">V & V</a>
+                            <a href="../software_manuals/mstar_cfd/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                            <a href="../software_manuals/mstar_cfd/resources.html" class="nav-dropdown-item">자료실</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-item">자료실 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <a href="../data_room/papers.html" class="nav-dropdown-item">논문</a>
+                            <a href="../data_room/videos.html" class="nav-dropdown-item">영상</a>
+                            <a href="../data_room/simulation_results.html" class="nav-dropdown-item">시뮬레이션 결과</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            
+            <div id="search-bar-wrapper" class="pb-3 pt-1 md:pt-2">
+                <div id="search-bar-container" class="w-full max-w-xl mx-auto">
+                     <div class="relative">
+                        <input type="search" id="searchInput" placeholder="검색어를 입력하세요…" class="w-full py-2 px-3 pl-10 rounded-md bg-brand-secondary text-white placeholder-neutral-light/70 focus:outline-none focus:ring-2 focus:ring-brand-accent text-sm transition-all duration-300 ease-in-out focus:bg-white focus:text-neutral-dark focus:placeholder-neutral-dark/50">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i data-lucide="search" class="w-5 h-5 text-neutral-light/70 search-icon-default"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-6rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <div id="searchResultsContainer" class="hidden fixed left-0 right-0 z-40 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8" style="top: 4rem;">
+        <div id="searchResultsDisplay" class="bg-white text-neutral-dark shadow-xl rounded-b-lg max-h-[calc(100vh-12rem)] md:max-h-[calc(100vh-10rem)] overflow-y-auto">
+            <p id="searchResultsMessage" class="text-center text-gray-500 p-6 text-sm">검색어를 입력하여 페이지 내 콘텐츠를 찾아보세요.</p>
+        </div>
+    </div>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">연구 목표 및 비전</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <section class="mb-10">
+                    <h2 class="text-2xl font-medium text-brand-secondary mt-0 mb-4">연구 목표</h2>
+                    <p>본 생물공학연구실은 전산유체역학(CFD) 및 시스템 생물학 도구를 첨단 바이오프로세스 기술과 융합하여 다음과 같은 구체적인 연구 목표를 추구합니다:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>바이오 의약품 생산 공정 혁신:</strong> CFD 시뮬레이션을 통해 바이오리액터 내 유동, 혼합, 물질 전달 현상을 정밀하게 분석하고, 이를 세포 대사 모델과 통합하여 항체 의약품, 세포 치료제 등의 생산 효율성과 품질을 극대화하는 혁신적인 공정 개발을 목표로 합니다.</li>
+                        <li><strong>디지털 트윈 기술 선도:</strong> 실제 바이오공정을 실시간으로 모사하고 예측하는 디지털 트윈 플랫폼을 구축하여, 공정 개발 기간 단축, 스케일업 용이성 확보, 지능형 공정 제어를 실현합니다.</li>
+                        <li><strong>지속 가능한 바이오 기술 개발:</strong> 친환경적이고 경제적인 바이오연료, 바이오플라스틱 등 차세대 바이오 소재 생산 공정 개발에 기여하여 지속 가능한 사회 발전에 이바지합니다.</li>
+                        <li><strong>학문적 기여 및 인재 양성:</strong> 독창적이고 영향력 있는 연구 성과를 국제 학술지에 발표하고, 관련 분야의 차세대 연구자를 육성하여 국내외 생물공학 및 CFD 분야 발전에 기여합니다.</li>
+                        <li><strong>산학연 협력 강화:</strong> 산업계 및 연구기관과의 긴밀한 협력을 통해 개발된 기술의 실용화를 촉진하고, 국가 바이오 산업 경쟁력 강화에 기여합니다.</li>
+                    </ul>
+                    <div class="my-8 text-center">
+                        <div class="inline-block w-full md:w-3/4 lg:w-2/3 h-72 bg-neutral-medium rounded-lg shadow-md flex items-center justify-center">
+                           <p class="text-neutral-dark">연구 목표 관련 개념도 또는 이미지</p>
+                        </div>
+                        <figcaption class="text-sm text-gray-600 mt-2 italic">혁신적인 바이오공정 기술 개발을 위한 연구 목표 (자료 준비 중)</figcaption>
+                   </div>
+                </section>
+
+                <section class="mb-10">
+                    <h2 class="text-2xl font-medium text-brand-secondary mt-8 mb-4">연구 비전</h2>
+                    <blockquote class="border-l-4 border-brand-primary pl-4 italic text-neutral-dark bg-neutral-light p-4 rounded-md">
+                        <p class="mb-0">"데이터 기반 모델링과 시뮬레이션 기술을 통해 바이오공학의 새로운 지평을 열고, 인류 보건 증진과 지속 가능한 미래 사회 구축에 기여하는 세계적 수준의 연구 그룹으로 성장한다."</p>
+                    </blockquote>
+                    <p class="mt-4">저희 연구실은 기초 과학 원리에 대한 깊이 있는 이해를 바탕으로, 첨단 전산 해석 기술(CFD, AI, 시스템 모델링)과 정밀 실험 검증을 유기적으로 결합하여 바이오 분야의 난제를 해결하고자 합니다. 창의적이고 도전적인 연구를 통해 미래 사회의 기술적 요구에 부응하고, 사회적 책임을 다하는 연구 공동체를 지향합니다.</p>
+                    <div class="my-8 text-center">
+                         <div class="w-full md:w-3/4 lg:w-2/3 h-72 bg-neutral-medium rounded-lg shadow-md flex items-center justify-center">
+                            <p class="text-neutral-dark">연구실 비전을 상징하는 이미지</p>
+                         </div>
+                         <figcaption class="text-sm text-gray-600 mt-2 italic">미래 지향적인 연구 비전을 나타내는 상징적 이미지 (자료 준비 중)</figcaption>
+                    </div>
+                     <p class="mt-4">본 내용은 연구실의 실제 정보를 바탕으로 더욱 상세하게 채워질 예정입니다.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 생물공학연구실(Bioprocess Engineering Laboratory). 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주요 연구 프로젝트 - 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00529B', 
+                        'brand-secondary': '#0077CC',
+                        'brand-accent': '#FFC107', 
+                        'neutral-light': '#F8F9FA',
+                        'neutral-medium': '#E9ECEF',
+                        'neutral-dark': '#343A40',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-light text-neutral-dark font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-brand-primary text-white shadow-medium sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap md:flex-nowrap justify-between items-center py-3">
+                <div class="flex justify-between items-center w-full md:w-auto">
+                    <a href="../index.html" class="text-xl sm:text-2xl font-bold hover:text-brand-accent transition-colors duration-300 py-1">생물공학연구실(Bioprocess Engineering Laboratory)</a>
+                    <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none ml-3">
+                        <i data-lucide="menu" class="w-7 h-7"></i>
+                    </button>
+                </div>
+    
+                <nav class="hidden md:flex items-center space-x-1 main-nav md:ml-4">
+                    <div class="relative group">
+                        <button class="nav-item">연구실 소개 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <a href="overview.html" class="nav-dropdown-item">연구실 개요</a>
+                            <a href="research_areas.html" class="nav-dropdown-item">연구 분야</a>
+                            <a href="goals_vision.html" class="nav-dropdown-item">연구 목표 및 비전</a>
+                            <a href="professor.html" class="nav-dropdown-item">교수 소개</a>
+                            <a href="researchers.html" class="nav-dropdown-item">연구원 소개</a>
+                            <a href="projects.html" class="nav-dropdown-item">주요 연구 프로젝트</a>
+                            <a href="facilities.html" class="nav-dropdown-item">실험실 시설 및 장비</a>
+                            <a href="achievements.html" class="nav-dropdown-item">연구 성과</a>
+                            <a href="partners.html" class="nav-dropdown-item">협력기관 및 파트너</a>
+                            <a href="gallery.html" class="nav-dropdown-item">사진 갤러리</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-item">CFD 이론 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <a href="../cfd_theory/introduction.html" class="nav-dropdown-item">서론</a>
+                            <a href="../cfd_theory/preprocessing.html" class="nav-dropdown-item">Pre-processing</a>
+                            <a href="../cfd_theory/solving.html" class="nav-dropdown-item">Solving</a>
+                            <a href="../cfd_theory/postprocessing.html" class="nav-dropdown-item">Post-processing</a>
+                            <a href="../cfd_theory/core_theory.html" class="nav-dropdown-item">핵심이론</a>
+                            <a href="../cfd_theory/glossary.html" class="nav-dropdown-item">용어 설명</a>
+                            <a href="../cfd_theory/references.html" class="nav-dropdown-item">레퍼런스</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-item">Bioprocess CFD <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <a href="../bioprocess_cfd/introduction.html" class="nav-dropdown-item">서론</a>
+                            <a href="../bioprocess_cfd/theoretical_background.html" class="nav-dropdown-item">이론적 배경</a>
+                            <a href="../bioprocess_cfd/application_cases.html" class="nav-dropdown-item">Bioprocess CFD 적용 사례</a>
+                            <a href="../bioprocess_cfd/software_comparison.html" class="nav-dropdown-item">주요 CFD 소프트웨어 비교</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-item">사용 설명서 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <span class="nav-dropdown-header">Ansys Fluent</span>
+                            <a href="../software_manuals/ansys_fluent/introduction.html" class="nav-dropdown-item">소개</a>
+                            <a href="../software_manuals/ansys_fluent/installation.html" class="nav-dropdown-item">설치</a>
+                            <a href="../software_manuals/ansys_fluent/preprocessing.html" class="nav-dropdown-item">전처리</a>
+                            <a href="../software_manuals/ansys_fluent/solver.html" class="nav-dropdown-item">솔버</a>
+                            <a href="../software_manuals/ansys_fluent/postprocessing.html" class="nav-dropdown-item">후처리</a>
+                            <a href="../software_manuals/ansys_fluent/verification_validation.html" class="nav-dropdown-item">V & V</a>
+                            <a href="../software_manuals/ansys_fluent/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                            <a href="../software_manuals/ansys_fluent/resources.html" class="nav-dropdown-item">자료실</a>
+                            <span class="nav-dropdown-header">OpenFOAM</span>
+                            <a href="../software_manuals/openfoam/introduction.html" class="nav-dropdown-item">소개</a>
+                            <a href="../software_manuals/openfoam/installation.html" class="nav-dropdown-item">설치</a>
+                            <a href="../software_manuals/openfoam/preprocessing.html" class="nav-dropdown-item">전처리</a>
+                            <a href="../software_manuals/openfoam/solver.html" class="nav-dropdown-item">솔버</a>
+                            <a href="../software_manuals/openfoam/postprocessing.html" class="nav-dropdown-item">후처리</a>
+                            <a href="../software_manuals/openfoam/verification_validation.html" class="nav-dropdown-item">V & V</a>
+                            <a href="../software_manuals/openfoam/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                            <a href="../software_manuals/openfoam/resources.html" class="nav-dropdown-item">자료실</a>
+                            <span class="nav-dropdown-header">M-STAR CFD</span>
+                            <a href="../software_manuals/mstar_cfd/introduction.html" class="nav-dropdown-item">소개</a>
+                            <a href="../software_manuals/mstar_cfd/installation.html" class="nav-dropdown-item">설치</a>
+                            <a href="../software_manuals/mstar_cfd/preprocessing.html" class="nav-dropdown-item">전처리</a>
+                            <a href="../software_manuals/mstar_cfd/solver.html" class="nav-dropdown-item">솔버</a>
+                            <a href="../software_manuals/mstar_cfd/postprocessing.html" class="nav-dropdown-item">후처리</a>
+                            <a href="../software_manuals/mstar_cfd/verification_validation.html" class="nav-dropdown-item">V & V</a>
+                            <a href="../software_manuals/mstar_cfd/troubleshooting.html" class="nav-dropdown-item">문제 해결</a>
+                            <a href="../software_manuals/mstar_cfd/resources.html" class="nav-dropdown-item">자료실</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-item">자료실 <i data-lucide="chevron-down" class="icon-sm"></i></button>
+                        <div class="nav-dropdown">
+                            <a href="../data_room/papers.html" class="nav-dropdown-item">논문</a>
+                            <a href="../data_room/videos.html" class="nav-dropdown-item">영상</a>
+                            <a href="../data_room/simulation_results.html" class="nav-dropdown-item">시뮬레이션 결과</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            
+            <div id="search-bar-wrapper" class="pb-3 pt-1 md:pt-2">
+                <div id="search-bar-container" class="w-full max-w-xl mx-auto">
+                     <div class="relative">
+                        <input type="search" id="searchInput" placeholder="검색어를 입력하세요…" class="w-full py-2 px-3 pl-10 rounded-md bg-brand-secondary text-white placeholder-neutral-light/70 focus:outline-none focus:ring-2 focus:ring-brand-accent text-sm transition-all duration-300 ease-in-out focus:bg-white focus:text-neutral-dark focus:placeholder-neutral-dark/50">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i data-lucide="search" class="w-5 h-5 text-neutral-light/70 search-icon-default"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-brand-primary shadow-lg max-h-[calc(100vh-6rem)] overflow-y-auto">
+        </div>
+    </header>
+
+    <div id="searchResultsContainer" class="hidden fixed left-0 right-0 z-40 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8" style="top: 4rem;">
+        <div id="searchResultsDisplay" class="bg-white text-neutral-dark shadow-xl rounded-b-lg max-h-[calc(100vh-12rem)] md:max-h-[calc(100vh-10rem)] overflow-y-auto">
+            <p id="searchResultsMessage" class="text-center text-gray-500 p-6 text-sm">검색어를 입력하여 페이지 내 콘텐츠를 찾아보세요.</p>
+        </div>
+    </div>
+
+    <main class="container mx-auto p-4 md:p-8 flex-grow w-full">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-subtle">
+            <h1 class="text-3xl font-semibold text-brand-primary mb-6 border-b pb-3">주요 연구 프로젝트</h1>
+            <div class="prose max-w-none prose-neutral lg:prose-lg">
+                <p>본 연구실에서는 정부 지원 과제 및 산업체 협력 과제를 포함하여 바이오공정 및 CFD 분야의 다양한 연구 프로젝트를 수행하고 있습니다. 상세한 내용은 현재 준비 중이며, 주요 프로젝트의 예시적인 구조는 다음과 같습니다.</p>
+                <p class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 my-4 rounded-md">
+                    <i data-lucide="info" class="inline-block w-5 h-5 mr-2 align-middle"></i>
+                    <strong>안내:</strong> 아래 프로젝트 내용은 예시이며, 연구실의 실제 정보를 바탕으로 업데이트될 예정입니다.
+                </p>
+                
+                <div class="my-8 p-6 border border-neutral-medium rounded-lg shadow-sm hover:shadow-medium transition-shadow">
+                    <h2 class="text-xl font-semibold text-brand-secondary mt-0 mb-2">프로젝트 예시 1: 디지털 트윈 기반 CHO 세포 배양 공정 최적화 및 스케일업 연구</h2>
+                    <p class="text-sm text-gray-600"><strong>연구 기간:</strong> YYYY.MM.DD ~ YYYY.MM.DD (진행 중)</p>
+                    <p class="text-sm text-gray-600"><strong>지원 기관:</strong> (예시) 한국연구재단</p>
+                    <p class="mt-2">본 프로젝트는 CHO 세포 기반 항체 의약품 생산 공정의 효율성과 재현성을 향상시키기 위해 디지털 트윈 기술을 개발하고 적용하는 것을 목표로 합니다. CFD를 이용한 반응기 내 환경 분석, 세포 대사 모델링, 실시간 데이터 통합을 통해 공정 이해도를 높이고 최적 운전 조건을 도출합니다.</p>
+                    <h4 class="text-lg font-medium text-neutral-dark mt-3 mb-1">주요 연구 내용:</h4>
+                    <ul class="list-disc pl-5 space-y-1 mt-2">
+                        <li>다양한 규모의 바이오리액터에 대한 CFD 모델 개발 및 검증</li>
+                        <li>CHO 세포 대사 네트워크 모델 구축 및 플럭스 분석</li>
+                        <li>실험 데이터와 시뮬레이션 결과를 결합한 디지털 트윈 플랫폼 프로토타입 개발</li>
+                        <li>스케일업 과정에서의 주요 공정 변수 예측 및 제어 전략 연구</li>
+                    </ul>
+                    <div class="my-4 text-center">
+                        <div class="inline-block w-full md:w-3/4 lg:w-2/3 h-64 bg-neutral-medium rounded-lg shadow-md flex items-center justify-center">
+                           <p class="text-neutral-dark">프로젝트 1 관련 이미지 (예: 디지털 트윈 개념도)</p>
+                        </div>
+                        <figcaption class="text-sm text-gray-600 mt-2 italic">디지털 트윈 기반 바이오공정 연구 흐름도 (자료 준비 중)</figcaption>
+                   </div>
+                </div>
+
+                <div class="my-8 p-6 border border-neutral-medium rounded-lg shadow-sm hover:shadow-medium transition-shadow">
+                    <h2 class="text-xl font-semibold text-brand-secondary mt-0 mb-2">프로젝트 예시 2: AI 및 CFD를 활용한 맞춤형 배지 개발 자동화 플랫폼 구축</h2>
+                    <p class="text-sm text-gray-600"><strong>연구 기간:</strong> YYYY.MM.DD ~ YYYY.MM.DD (종료)</p>
+                    <p class="text-sm text-gray-600"><strong>지원 기관:</strong> (예시) 산업통상자원부, (주)ABC바이오 (산업체 공동연구)</p>
+                    <p class="mt-2">본 프로젝트는 세포 배양 배지 개발 과정의 시간과 비용을 단축하기 위해 인공지능(AI)과 CFD 기술을 접목한 자동화 플랫폼을 구축하는 것을 목표로 하였습니다. 배지 성분 최적화, 배양 환경 균일성 확보 등을 통해 세포 성장 및 생산물 수율을 향상시키는 데 기여했습니다.</p>
+                     <h4 class="text-lg font-medium text-neutral-dark mt-3 mb-1">주요 연구 성과:</h4>
+                    <ul class="list-disc pl-5 space-y-1 mt-2">
+                        <li>베이지안 최적화 기반의 지능형 배지 성분 탐색 알고리즘 개발</li>
+                        <li>소규모 배양 장치 내 유동 환경 CFD 분석 및 균일도 개선 방안 제시</li>
+                        <li>개발된 플랫폼을 이용한 특정 세포주 맞춤형 배지 개발 성공 (기존 대비 생산성 X% 향상)</li>
+                    </ul>
+                     <div class="my-4 text-center">
+                        <div class="inline-block w-full md:w-3/4 lg:w-2/3 h-64 bg-neutral-medium rounded-lg shadow-md flex items-center justify-center">
+                           <p class="text-neutral-dark">프로젝트 2 관련 이미지 (예: 배지 최적화 플랫폼)</p>
+                        </div>
+                        <figcaption class="text-sm text-gray-600 mt-2 italic">AI 기반 배지 개발 플랫폼 개념도 (자료 준비 중)</figcaption>
+                   </div>
+                </div>
+                <p>더 많은 프로젝트 정보 및 과거 프로젝트 목록은 지속적으로 업데이트될 예정입니다. 문의사항은 <a href="mailto:jongkwang.hong@yonsei.ac.kr" class="text-brand-secondary hover:underline">연구실 이메일</a>로 연락주시기 바랍니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-dark text-neutral-light text-center p-6 mt-auto">
+        <p>&copy; <span id="currentYear"></span> 생물공학연구실(Bioprocess Engineering Laboratory). 모든 권리 보유.</p>
+        <p class="text-sm text-neutral-medium mt-1">본 페이지는 교육 및 연구 목적으로 제작되었습니다.</p>
+    </footer>
+    
+    <script type="module" src="../script.js"></script>
+</body>
+</html>
