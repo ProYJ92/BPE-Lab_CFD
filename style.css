@@ -763,3 +763,20 @@ td {
   }
 }
 
+/* ===== Header layout updates ===== */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-container nav {
+  flex-grow: 1;
+}
+@media (min-width: 1024px) {
+  #fixed-top-nav-container .search-container {
+    margin-left: auto;
+  }
+  #fixed-top-nav-container .helper-btn {
+    margin-left: 15px;
+  }
+}
