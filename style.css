@@ -789,10 +789,21 @@ td {
   flex-grow: 1;
 }
 @media (min-width: 1024px) {
+  #fixed-top-nav-container .header-container {
+    height: 60px;
+    align-items: center;
+  }
+  #fixed-top-nav-container nav {
+    height: 100%;
+  }
   #fixed-top-nav-container .search-container {
     margin-left: auto;
+    display: flex;
+    align-items: center;
   }
   #fixed-top-nav-container .helper-btn {
-    margin-left: 15px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
   }
 }
