@@ -710,6 +710,7 @@ footer {
   user-select: none;
 }
 
+
 .hamster-icon {
   font-size: 2em;
 }
@@ -828,6 +829,9 @@ td {
   position: relative;
 }
 @media (min-width: 1024px) {
+  #fixed-top-nav-container .header-container {
+    justify-content: flex-start;
+  }
   #fixed-top-nav-container .search-container {
     margin-left: auto;
   }
@@ -836,5 +840,8 @@ td {
     right: auto;
     top: auto;
     margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    line-height: 1;
+    height: 2rem;
   }
 }
