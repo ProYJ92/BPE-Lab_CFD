@@ -43,6 +43,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function showPasswordModal(event) {
+        event.preventDefault();
+        const overlay = document.createElement('div');
+        overlay.id = 'passwordOverlay';
+        overlay.innerHTML = `
+            <div class="gear"></div>
+            <div class="password-container">
+                <p>자료실 비밀번호를 입력하세요 <span>(대소문자 구분)</span></p>
+                <input type="password" id="passwordInput" class="password-input" />
+                <div class="password-buttons mt-2">
+                    <button id="passwordSubmit" class="mr-2 bg-blue-600 text-white px-3 py-1 rounded">확인</button>
+                    <button id="passwordCancel" class="bg-gray-300 text-gray-800 px-3 py-1 rounded">취소</button>
+                </div>
+            </div>`;
+        document.body.appendChild(overlay);
+        document.getElementById('passwordSubmit').addEventListener('click', checkPassword);
+        document.getElementById('passwordCancel').addEventListener('click', closeOverlay);
+        document.getElementById('passwordInput').focus();
+    }
+
+    function checkPassword() {
+        const input = document.getElementById('passwordInput').value;
+        const correctPassword = 'bioprocess2025';
+        if (input === correctPassword) {
+            sessionStorage.setItem('labResourcesAccess', 'true');
+            window.location.href = 'lab_resources.html';
+        } else {
+            alert('비밀번호가 틀렸습니다. 대소문자를 정확히 입력해주세요.');
+        }
+    }
+
+    function closeOverlay() {
+        const overlay = document.getElementById('passwordOverlay');
+        if (overlay) overlay.remove();
+        window.history.back();
+    }
+
     const menuStructure = [
         { id: 'about_lab', name_ko: '연구실 소개', name_en: 'About Lab', path: 'about_lab.html' },
         {
@@ -469,6 +506,11 @@ document.addEventListener('DOMContentLoaded', () => {
     generateNavigation();
     generateBreadcrumbs();
     if (lucide) lucide.createIcons();
+
+    const resourcesMenuLink = document.querySelector('li[data-menu="resources"] > a');
+    if (resourcesMenuLink) {
+        resourcesMenuLink.addEventListener('click', showPasswordModal);
+    }
 
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
