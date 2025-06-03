@@ -160,8 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name_ko: 'CFD 이론', name_en: 'CFD Theory', path: 'cfd_theory.html', children: [
                     { name_ko: 'CFD 소개', name_en: 'CFD Introduction', path: 'cfd_introduction.html' },
                     { name_ko: '핵심 이론', name_en: 'Core Principles', path: 'cfd_core_theory.html' },
-                    { name_ko: '격자 볼츠만 방법 (LBM)', name_en: 'LBM', path: 'cfd_lbm_model.html' },
-                    { name_ko: '비정상 RANS (URANS) 모델', name_en: 'URANS Model', path: 'cfd_urans_model.html' },
                     { name_ko: '전처리 과정', name_en: 'Pre‑processing', path: 'cfd_preprocessing.html' },
                     { name_ko: '해석 과정', name_en: 'Simulation Process', path: 'cfd_solving.html' },
                     { 
