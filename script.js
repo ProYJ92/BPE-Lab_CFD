@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     { name_ko: '용어집', name_en: 'Glossary', path: 'cfd_terminology.html' },
                     { name_ko: '참고문헌', name_en: 'References', path: 'cfd_references.html' }
                 ]},
-                { name_ko: 'Bioprocess CFD Simulation', name_en: 'Bioprocess CFD Simulation', path: 'bioprocess_cfd.html', children: [
+                { name_ko: 'Bioprocess CFD Simulation', path: 'bioprocess_cfd.html', children: [
                     { name_ko: '소개', name_en: 'Introduction', path: 'bioprocess_cfd_introduction.html' },
                     { name_ko: '이론적 배경', name_en: 'Theoretical Background', path: 'bioprocess_cfd_theoretical_background.html' },
                     { name_ko: '적용 사례', name_en: 'Case Studies', path: 'bioprocess_cfd_application_cases.html' },
