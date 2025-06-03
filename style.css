@@ -709,6 +709,28 @@ h1.main-title {
   }
 }
 
+/* ================= Table styling for better readability ================ */
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  white-space: normal;
+  word-wrap: break-word;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  th,
+  td {
+    padding: 0.25rem;
+    font-size: 0.9em;
+  }
+}
+
 /* Typography for software item descriptions */
 .software-description {
   font-size: 1.1rem;
