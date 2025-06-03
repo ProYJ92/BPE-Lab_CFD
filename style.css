@@ -157,7 +157,12 @@ a:hover {
 
 
 #breadcrumbNav {
-    border-bottom-color: rgba(229, 231, 235, 0.7); 
+    border-bottom-color: rgba(229, 231, 235, 0.7);
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+#breadcrumbNav.collapsed {
+    max-height: 0;
 }
 #breadcrumbNav ol {
     list-style: none;

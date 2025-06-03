@@ -531,6 +531,39 @@ document.addEventListener('DOMContentLoaded', () => {
     generateBreadcrumbs();
     if (lucide) lucide.createIcons();
 
+    const breadcrumbNav = document.getElementById('breadcrumbNav');
+    const mainContent = document.querySelector('main');
+
+    if (breadcrumbNav && mainContent) {
+        const sentinel = document.createElement('div');
+        sentinel.setAttribute('aria-hidden', 'true');
+        sentinel.style.height = '1px';
+        mainContent.parentNode.insertBefore(sentinel, mainContent);
+
+        function updateBreadcrumbHeight() {
+            const h = breadcrumbNav.scrollHeight;
+            breadcrumbNav.style.maxHeight = h + 'px';
+        }
+
+        updateBreadcrumbHeight();
+        window.addEventListener('resize', () => {
+            updateBreadcrumbHeight();
+            adjustBodyPadding();
+        });
+
+        breadcrumbNav.setAttribute('aria-expanded', 'true');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const show = entry.isIntersecting;
+                breadcrumbNav.classList.toggle('collapsed', !show);
+                breadcrumbNav.setAttribute('aria-expanded', show ? 'true' : 'false');
+                adjustBodyPadding();
+            });
+        });
+        observer.observe(sentinel);
+    }
+
     const resourcesMenuLink = document.querySelector('li[data-menu="resources"] > a');
     if (resourcesMenuLink) {
         resourcesMenuLink.addEventListener('click', showPasswordModal);
