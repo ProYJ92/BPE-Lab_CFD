@@ -16,13 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (headerFlex) {
             const menuToggle = document.createElement('button');
             menuToggle.className = 'menu-toggle sm:hidden p-2 text-gray-700';
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-controls', 'mainNav');
             menuToggle.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
             headerFlex.appendChild(menuToggle);
             menuToggle.addEventListener('click', () => {
-                mainNav.classList.toggle('active');
-                menuToggle.innerHTML = mainNav.classList.contains('active')
+                const expanded = mainNav.classList.toggle('active');
+                menuToggle.innerHTML = expanded
                     ? '<i data-lucide="x" class="w-6 h-6"></i>'
                     : '<i data-lucide="menu" class="w-6 h-6"></i>';
+                menuToggle.setAttribute('aria-expanded', expanded);
                 if (lucide) lucide.createIcons();
             });
             if (lucide) lucide.createIcons();
@@ -442,7 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const GNB_DELAY = 0; 
 
             li.addEventListener('mouseenter', () => {
-                if (window.innerWidth > 768) { 
+                if (window.innerWidth > 768) {
                     if (level === 0) {
                         const allTopLevelLis = li.parentElement.querySelectorAll(':scope > li.menu-item-has-children');
                         allTopLevelLis.forEach(topLi => {
@@ -451,6 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 const otherLink = topLi.querySelector('a');
                                 if (otherDropdown) {
                                     otherDropdown.style.display = 'none';
+                                    otherDropdown.classList.remove('open');
                                     if (otherLink) otherLink.setAttribute('aria-expanded', 'false');
                                 }
                             }
@@ -461,11 +465,13 @@ document.addEventListener('DOMContentLoaded', () => {
                             if (sibDrop !== ulDropdown) {
                                 sibDrop.style.display = 'none';
                                 const parentLink = sibDrop.parentElement.querySelector('a');
+                                sibDrop.classList.remove('open');
                                 if (parentLink) parentLink.setAttribute('aria-expanded', 'false');
                             }
                         });
                     }
                     ulDropdown.style.display = 'block';
+                    ulDropdown.classList.add('open');
                     a.setAttribute('aria-expanded', 'true');
                 }
             });
@@ -475,6 +481,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     setTimeout(() => {
                         if (!li.matches(':hover')) {
                             ulDropdown.style.display = 'none';
+                            ulDropdown.classList.remove('open');
                             a.setAttribute('aria-expanded', 'false');
                         }
                     }, GNB_DELAY);
@@ -484,7 +491,7 @@ document.addEventListener('DOMContentLoaded', () => {
             a.addEventListener('click', (event) => {
                 if (item.path === '#' || (window.innerWidth <= 768 && item.children && item.children.length > 0)) {
                     event.preventDefault();
-                    const currentlyOpen = ulDropdown.style.display === 'block';
+                    const currentlyOpen = ulDropdown.classList.contains('open');
                     if (level === 0 && window.innerWidth <= 768) {
                         const allTopLevelLis = li.parentElement.querySelectorAll(':scope > li.menu-item-has-children');
                         allTopLevelLis.forEach(topLi => {
@@ -492,13 +499,13 @@ document.addEventListener('DOMContentLoaded', () => {
                                 const otherDropdown = topLi.querySelector('.dropdown-menu');
                                 const otherLink = topLi.querySelector('a');
                                 if (otherDropdown) {
-                                    otherDropdown.style.display = 'none';
+                                    otherDropdown.classList.remove('open');
                                     if (otherLink) otherLink.setAttribute('aria-expanded', 'false');
                                 }
                             }
                         });
                     }
-                    ulDropdown.style.display = currentlyOpen ? 'none' : 'block';
+                    ulDropdown.classList.toggle('open', !currentlyOpen);
                     a.setAttribute('aria-expanded', currentlyOpen ? 'false' : 'true');
                 }
             });
