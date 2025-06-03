@@ -383,10 +383,21 @@ footer {
     align-items: center;
 }
 
-#hamsterAnimation {
-    font-size: 64px;
+.password-buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+#loadingSpinner {
+    width: 64px;
+    height: 64px;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
     margin-bottom: 20px;
-    animation: hamsterRun 0.8s linear infinite;
+    animation: spin 1s linear infinite;
 }
 
 #passwordOverlay .password-container p {
@@ -406,14 +417,16 @@ footer {
     border: none;
 }
 
-@keyframes hamsterRun {
-    0% { transform: translateX(40px); }
-    100% { transform: translateX(-40px); }
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 @media (max-width: 768px) {
-    #hamsterAnimation {
-        font-size: 60px;
+    #loadingSpinner {
+        width: 50px;
+        height: 50px;
+        border-width: 6px;
     }
     #passwordOverlay .password-input,
     #passwordOverlay button {
