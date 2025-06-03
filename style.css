@@ -687,11 +687,19 @@ h1.main-title {
   font-size: 0.875rem;
 }
 .software-index-btn {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
   font-size: 1.125rem;
   text-align: center;
+}
+
+/* Increase readability of software description text */
+.software-description {
+  font-size: 1.2rem;
 }
 @media (max-width: 768px) {
   h1.main-title {
@@ -702,6 +710,9 @@ h1.main-title {
     font-size: 0.75rem;
   }
   .software-index-btn {
+    font-size: 1rem;
+  }
+  .software-description {
     font-size: 1rem;
   }
 }
