@@ -638,34 +638,30 @@ footer {
 .helper-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 5px 10px;
+  gap: 4px;
+  padding: 4px 8px;
   background-color: #FFCA6C;
-  border-radius: 15px;
+  border-radius: 12px;
   color: #3A3A3A;
   font-weight: bold;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
   user-select: none;
 }
+
 .hamster-icon {
-  font-size: 1.5em;
+  font-size: 2em;
 }
-@media (min-width: 1024px) {
-  .hamster-icon {
-    font-size: 4.5em;
-  }
-  .helper-text {
-    font-size: 1em;
-  }
+
+.helper-text {
+  font-size: 0.9em;
 }
+
 @media (max-width: 768px) {
   .hamster-icon {
-    font-size: 2.25em;
+    font-size: 1.5em;
   }
   .helper-text {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
 }
 @keyframes attention {
