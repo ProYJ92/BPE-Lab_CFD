@@ -1,5 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     const fixedNavContainer = document.getElementById('fixed-top-nav-container');
+    const mainNav = document.getElementById('mainNav');
+
+    if (fixedNavContainer && mainNav) {
+        const headerFlex = fixedNavContainer.querySelector('.flex-col');
+        if (headerFlex) {
+            const menuToggle = document.createElement('button');
+            menuToggle.className = 'menu-toggle sm:hidden p-2 text-gray-700';
+            menuToggle.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+            headerFlex.appendChild(menuToggle);
+            menuToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+                menuToggle.innerHTML = mainNav.classList.contains('active')
+                    ? '<i data-lucide="x" class="w-6 h-6"></i>'
+                    : '<i data-lucide="menu" class="w-6 h-6"></i>';
+                if (lucide) lucide.createIcons();
+            });
+            if (lucide) lucide.createIcons();
+        }
+    }
     
     function adjustBodyPadding() {
         if (fixedNavContainer) {
