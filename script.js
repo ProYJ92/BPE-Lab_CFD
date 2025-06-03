@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const overlay = document.createElement('div');
         overlay.id = 'passwordOverlay';
         overlay.innerHTML = `
-            <div class="gear"></div>
+            <div class="spinner"></div>
             <div class="password-container">
                 <p>비밀번호를 입력하세요 <span>(대소문자 구분)</span></p>
                 <input type="password" id="passwordInput" class="password-input" />
