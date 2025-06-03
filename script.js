@@ -868,11 +868,11 @@ const onDrag = (x, y) => {
     helperMenu.style.left = (x - offsetX) + "px";
 };
 
-helperBtn.addEventListener("mousedown", e => startDrag(e.clientX, e.clientY));
-document.addEventListener("mousemove", e => onDrag(e.clientX, e.clientY));
-document.addEventListener("mouseup", () => { dragging = false; });
-
-helperBtn.addEventListener("touchstart", e => { const t = e.touches[0]; startDrag(t.clientX, t.clientY); }, { passive: true });
-document.addEventListener("touchmove", e => { if (!dragging) return; e.preventDefault(); const t = e.touches[0]; onDrag(t.clientX, t.clientY); }, { passive: false });
-document.addEventListener("touchend", () => { dragging = false; });
+helperBtn.addEventListener("pointerdown", e => startDrag(e.clientX, e.clientY));
+document.addEventListener("pointermove", e => {
+    if (!dragging) return;
+    e.preventDefault();
+    onDrag(e.clientX, e.clientY);
+});
+document.addEventListener("pointerup", () => { dragging = false; });
 });

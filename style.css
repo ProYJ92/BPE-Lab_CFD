@@ -528,10 +528,14 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  cursor: grab;
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   user-select: none;
+  touch-action: none;
+}
+#helper-btn:active {
+  cursor: grabbing;
 }
 #helper-menu {
   position: fixed;
