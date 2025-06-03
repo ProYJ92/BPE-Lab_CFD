@@ -849,7 +849,7 @@ helperTriggerBtn.addEventListener('click', () => {
 
 if (sessionStorage.getItem("helperClosed")) {
     helperBtn.style.display = "none";
-    helperMenu.style.display = "none";
+    helperMenu.classList.add("hidden");
 }
 
 helperBtn.addEventListener("click", () => {
@@ -859,7 +859,7 @@ helperBtn.addEventListener("click", () => {
 helperMenu.addEventListener("click", (e) => {
     if (e.target.id === "close-helper") {
         helperBtn.style.display = "none";
-        helperMenu.style.display = "none";
+        helperMenu.classList.add("hidden");
         sessionStorage.setItem("helperClosed", "true");
     }
 });
@@ -890,5 +890,7 @@ document.addEventListener("pointermove", e => {
     e.preventDefault();
     onDrag(e.clientX, e.clientY);
 });
-document.addEventListener("pointerup", () => { dragging = false; });
+const stopDrag = () => { dragging = false; };
+document.addEventListener("pointerup", stopDrag);
+document.addEventListener("pointercancel", stopDrag);
 });
