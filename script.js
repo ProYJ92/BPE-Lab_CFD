@@ -489,7 +489,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             
             a.addEventListener('click', (event) => {
-                if (item.path === '#' || (window.innerWidth <= 768 && item.children && item.children.length > 0)) {
+                if (item.path === '#' || (window.innerWidth <= 768 && level === 0 && item.children && item.children.length > 0)) {
                     event.preventDefault();
                     const currentlyOpen = ulDropdown.classList.contains('open');
                     if (level === 0 && window.innerWidth <= 768) {

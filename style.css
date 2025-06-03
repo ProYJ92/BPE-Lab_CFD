@@ -515,6 +515,11 @@ footer {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out;
+        display: none;
+        pointer-events: none;
+    }
+    #mainNav .dropdown-menu .menu-item-has-children > a .lucide-chevron-right {
+        display: none;
     }
     #mainNav .dropdown-menu .dropdown-menu li a {
         padding-left: 3.5rem;
