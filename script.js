@@ -578,7 +578,6 @@ document.addEventListener('DOMContentLoaded', () => {
     generateBreadcrumbs();
     if (lucide) lucide.createIcons();
 
-    const breadcrumbNav = document.getElementById('breadcrumbNav');
     const mainContent = document.querySelector('main');
 
     if (breadcrumbNav && mainContent) {
