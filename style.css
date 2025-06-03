@@ -450,6 +450,12 @@ footer {
 }
 
 @media (min-width: 1024px) {
+    #fixed-top-nav-container .search-container {
+        margin-left: auto;
+    }
+    #header-helper-btn {
+        margin-left: 15px;
+    }
     #mainNav li.menu-item-has-children:hover > .dropdown-menu {
         display: block;
     }
