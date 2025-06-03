@@ -574,6 +574,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchResultsList = document.getElementById('searchResultsList');
     const searchResultsContainer = document.getElementById('searchResultsContainer');
     const suggestionsDropdown = document.getElementById('suggestionsDropdown');
+    const searchContainer = document.querySelector('.search-container');
     
     let siteSearchIndex = null;
     let blurTimeout;
@@ -807,4 +808,87 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.warn("Search UI elements not fully found on this page. Site-wide search functionality may be impaired.");
     }
+// Helper Q&A button
+const helperBtn = document.createElement("div");
+helperBtn.id = "helper-btn";
+helperBtn.setAttribute("aria-label", "도우미 열기");
+helperBtn.textContent = "\uD83D\uDCAC";
+
+const helperMenu = document.createElement("div");
+helperMenu.id = "helper-menu";
+helperMenu.classList.add("hidden");
+helperMenu.innerHTML = `
+    <button id="close-helper" aria-label="도우미 종료">✖</button>
+    <ul>
+        <li><a href="about_lab.html" aria-label="연구실 소개">🔬 우리 연구실이 어떤 연구를 하는지 궁금하신가요?</a></li>
+        <li><a href="bp_eng_main.html" aria-label="세포배양공정 소개">🧫 세포배양공정이 뭔지 쉽고 빠르게 알려드릴까요?</a></li>
+        <li><a href="proc_opt_main.html" aria-label="공정 최적화">🚀 세포배양 효율을 높이는 최적의 방법이 궁금하세요?</a></li>
+        <li><a href="meta_eng_main.html" aria-label="시스템 대사공학">🧬 시스템 대사공학과 배지 최적화의 중요성, 알고 싶으세요?</a></li>
+        <li><a href="cfd_main.html" aria-label="CFD 소개">💻 CFD(전산유체역학)를 쉽게 이해하고 싶으신가요?</a></li>
+        <li><a href="digital_twin_main.html" aria-label="디지털 트윈">🌐 디지털 트윈을 이용한 바이오공정, 어떻게 구현할 수 있을까요?</a></li>
+        <li><a href="lab_resources.html" aria-label="연구실 자료">📚 유용한 자료가 필요하세요? 여기서 바로 찾아보세요!</a></li>
+    </ul>`;
+
+document.body.appendChild(helperBtn);
+document.body.appendChild(helperMenu);
+
+const helperTriggerBtn = document.createElement('button');
+helperTriggerBtn.id = 'helper-trigger';
+helperTriggerBtn.className = 'ml-2';
+helperTriggerBtn.setAttribute('aria-label', '도우미 열기');
+helperTriggerBtn.innerHTML = '🐹 <span>뭐든 물어봐!</span>';
+if (searchContainer && suggestionsDropdown) {
+    searchContainer.insertBefore(helperTriggerBtn, suggestionsDropdown);
+}
+
+helperTriggerBtn.addEventListener('click', () => {
+    helperBtn.style.display = 'flex';
+    helperMenu.classList.remove('hidden');
+    sessionStorage.removeItem('helperClosed');
+});
+
+if (sessionStorage.getItem("helperClosed")) {
+    helperBtn.style.display = "none";
+    helperMenu.style.display = "none";
+}
+
+helperBtn.addEventListener("click", () => {
+    helperMenu.classList.toggle("hidden");
+});
+
+helperMenu.addEventListener("click", (e) => {
+    if (e.target.id === "close-helper") {
+        helperBtn.style.display = "none";
+        helperMenu.style.display = "none";
+        sessionStorage.setItem("helperClosed", "true");
+    }
+});
+
+let dragging = false, offsetX = 0, offsetY = 0;
+
+const startDrag = (x, y) => {
+    dragging = true;
+    offsetX = x - helperBtn.offsetLeft;
+    offsetY = y - helperBtn.offsetTop;
+};
+
+const onDrag = (x, y) => {
+    if (!dragging) return;
+    helperBtn.style.left = (x - offsetX) + "px";
+    helperBtn.style.top = (y - offsetY) + "px";
+    helperBtn.style.bottom = "auto";
+    helperBtn.style.right = "auto";
+    helperMenu.style.bottom = "auto";
+    helperMenu.style.right = "auto";
+    helperMenu.style.top = (y - offsetY - helperMenu.offsetHeight - 10) + "px";
+    helperMenu.style.left = (x - offsetX) + "px";
+};
+
+helperBtn.addEventListener("pointerdown", e => startDrag(e.clientX, e.clientY));
+document.addEventListener("pointermove", e => {
+    if (!dragging) return;
+    e.preventDefault();
+    onDrag(e.clientX, e.clientY);
+});
+document.addEventListener("pointerup", () => { dragging = false; });
 });
