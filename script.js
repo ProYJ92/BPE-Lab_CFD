@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fixedNavContainer = document.getElementById('fixed-top-nav-container');
     const mainNav = document.getElementById('mainNav');
     const breadcrumbNav = document.getElementById('breadcrumbNav');
+    let langSelect;
 
     if (mainNav) {
         mainNav.setAttribute('role', 'navigation');
@@ -70,6 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 menuToggle.setAttribute('aria-expanded', expanded);
                 if (lucide) lucide.createIcons();
             });
+
+            langSelect = document.createElement('select');
+            langSelect.id = 'languageSwitcher';
+            langSelect.className = 'ml-2 p-1 border rounded text-sm';
+            langSelect.setAttribute('aria-label', 'Language selector');
+            langSelect.setAttribute('role', 'combobox');
+            langSelect.innerHTML = '<option value="default">기본</option><option value="en">English</option>';
+            headerFlex.appendChild(langSelect);
+            langSelect.addEventListener('change', () => {
+                loadLanguage(langSelect.value);
+            });
+
             if (lucide) lucide.createIcons();
         }
     }
@@ -119,6 +132,56 @@ document.addEventListener('DOMContentLoaded', () => {
             window.history.back();
         } else {
             window.location.href = 'index.html';
+        }
+    }
+
+    const defaultTexts = {};
+
+    function applyTexts(texts) {
+        Object.keys(texts).forEach(key => {
+            if (key === 'title') {
+                document.title = texts[key];
+            } else {
+                const element = document.getElementById(key);
+                if (element) element.textContent = texts[key];
+            }
+        });
+    }
+
+    async function loadLanguage(lang) {
+        if (lang === 'default') {
+            applyTexts(defaultTexts);
+            localStorage.setItem('selectedLanguage', 'default');
+            if (langSelect) langSelect.value = 'default';
+            return;
+        }
+        const body = document.body;
+        body.classList.add('loading');
+        try {
+            const response = await fetch(`${lang}.json`);
+            if (!response.ok) throw new Error('File not found');
+            const texts = await response.json();
+            Object.keys(texts).forEach(key => {
+                if (!(key in defaultTexts)) {
+                    if (key === 'title') {
+                        defaultTexts[key] = document.title;
+                    } else {
+                        const el = document.getElementById(key);
+                        if (el) defaultTexts[key] = el.textContent || '';
+                    }
+                }
+            });
+            applyTexts(texts);
+            localStorage.setItem('selectedLanguage', lang);
+            if (langSelect) langSelect.value = lang;
+        } catch (error) {
+            console.warn(`${lang}.json not found, maintaining default language.`);
+            alert(`선택한 언어 파일을 찾을 수 없습니다. 기존 언어로 유지됩니다.`);
+            applyTexts(defaultTexts);
+            localStorage.setItem('selectedLanguage', 'default');
+            if (langSelect) langSelect.value = 'default';
+        } finally {
+            body.classList.remove('loading');
         }
     }
 
@@ -946,5 +1009,9 @@ if (!helperBtn.dataset.helperBound) {
     document.addEventListener("touchend", () => { dragging = false; });
 
     helperBtn.dataset.helperBound = 'true';
+
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'default';
+    if (langSelect) langSelect.value = savedLanguage;
+    loadLanguage(savedLanguage);
 }
 });
