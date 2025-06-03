@@ -259,7 +259,9 @@ a:hover {
 }
 
 .intro-button {
-    margin-top: 20px;
+    display: block;
+    margin: 20px auto 0 auto;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -267,10 +269,14 @@ a:hover {
     padding: 0.4rem 0.75rem;
   }
   .hero-title,
-  .hero-subtitle,
+  .hero-subtitle {
+    padding: 5px;
+    text-align: center;
+  }
   .intro-button {
     padding: 5px;
     text-align: center;
+    margin-top: 15px;
   }
 }
 
