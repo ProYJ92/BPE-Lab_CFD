@@ -838,8 +838,14 @@ const searchContainerElem = document.querySelector('.search-container');
 if (searchContainerElem) {
     const headerHelperBtn = document.createElement('div');
     headerHelperBtn.id = 'header-helper-btn';
-    headerHelperBtn.innerHTML = '🐹 <span>뭐든 물어봐!</span>';
+    headerHelperBtn.innerHTML = '<span class="hamster" aria-hidden="true">🐹</span> <span class="text">뭐든 물어봐!</span>';
     searchContainerElem.appendChild(headerHelperBtn);
+
+    // draw attention on each page load
+    headerHelperBtn.classList.add('attention');
+    headerHelperBtn.addEventListener('animationend', () => {
+        headerHelperBtn.classList.remove('attention');
+    }, { once: true });
 
     headerHelperBtn.addEventListener('click', () => {
         helperBtn.style.display = 'flex';
