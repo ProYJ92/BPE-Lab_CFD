@@ -1,0 +1,23 @@
+name: Update search index
+
+on:
+  push:
+    paths:
+      - '**.html'
+      - 'script.js'
+      - 'generate_search_index.js'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      - run: node generate_search_index.js
+      - uses: EndBug/add-and-commit@v9
+        with:
+          author_name: GitHub Actions
+          author_email: actions@users.noreply.github.com
+          message: 'Update search index'
