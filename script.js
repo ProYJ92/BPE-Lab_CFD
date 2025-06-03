@@ -2,19 +2,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const fixedNavContainer = document.getElementById('fixed-top-nav-container');
     const mainNav = document.getElementById('mainNav');
 
-    const currentPage = window.location.pathname.split('/').pop();
-    if (currentPage === 'lab_resources.html' || currentPage === 'resources.html') {
+    function checkDataRoomPassword(event) {
+        event.preventDefault();
         const correctPassword = 'bioprocess2025';
         const accessGranted = sessionStorage.getItem('labResourcesAccess') === 'true';
-        if (!accessGranted) {
-            const inputPassword = prompt('자료실은 비밀번호가 필요합니다. 비밀번호를 입력해주세요.');
-            if (inputPassword === correctPassword) {
-                sessionStorage.setItem('labResourcesAccess', 'true');
-            } else {
-                alert('잘못된 패스워드입니다. 대소문자를 정확히 입력해주세요.');
-                window.location.href = 'index.html';
-                return;
-            }
+        const targetUrl = event.currentTarget.href;
+        if (accessGranted) {
+            window.location.href = targetUrl;
+            return;
+        }
+        const inputPassword = prompt('자료실 비밀번호를 입력하세요:');
+        if (inputPassword === correctPassword) {
+            sessionStorage.setItem('labResourcesAccess', 'true');
+            window.location.href = targetUrl;
+        } else {
+            alert('비밀번호가 잘못되었습니다. 대소문자를 정확히 입력하세요.');
         }
     }
 
@@ -367,6 +369,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         li.appendChild(a);
+        if (item.id === 'resources') {
+            a.addEventListener('click', checkDataRoomPassword);
+        }
 
         if (item.children && item.children.length > 0) {
             li.classList.add('menu-item-has-children');
