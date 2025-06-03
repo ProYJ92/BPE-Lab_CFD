@@ -680,7 +680,8 @@ h1.main-title {
   white-space: nowrap;
 }
 .software-comparison-table {
-  width: 95%;
+  width: 100%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   font-size: 0.875rem;
@@ -702,6 +703,28 @@ h1.main-title {
   }
   .software-index-btn {
     font-size: 1rem;
+  }
+}
+
+/* ================= Table styling for better readability ================ */
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  white-space: normal;
+  word-wrap: break-word;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  th,
+  td {
+    padding: 0.25rem;
+    font-size: 0.9em;
   }
 }
 
