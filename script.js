@@ -906,7 +906,8 @@ if (headerHelperBtn && !headerHelperBtn.dataset.helperBound) {
 
 if (!helperBtn.dataset.helperBound) {
     helperBtn.addEventListener("click", () => {
-        helperMenu.classList.toggle("hidden");
+        const nowHidden = helperMenu.classList.toggle("hidden");
+        helperMenu.style.display = nowHidden ? 'none' : 'block';
     });
 
     helperMenu.addEventListener("click", (e) => {
