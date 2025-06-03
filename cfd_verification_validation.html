@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification & Validation (V&V) - 전산유체역학</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-pretendard bg-gray-50 text-gray-800 scroll-smooth">
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-slate-800 mb-2 sm:mb-0">
+                    <a href="index.html" class="block no-underline hover:no-underline">
+                        <span class="block text-2xl lg:text-3xl font-bold text-slate-800">생물공학연구실</span>
+                        <span class="block text-sm lg:text-base font-normal text-gray-500 mt-1">Bioprocess Engineering Laboratory</span>
+                    </a>
+                </h1>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <article class="prose prose-lg max-w-none bg-white p-6 md:p-10 rounded-xl shadow-xl">
+            <h1>전산유체역학(CFD) 검증 및 검인 (Verification & Validation, V&V)</h1>
+            
+            <p><strong>CFD 이론의 필수 요소: V&V</strong></p>
+            <p>전산유체역학(CFD) 시뮬레이션은 실제 물리 현상을 수치적으로 예측하는 강력한 도구이지만, 그 결과의 신뢰성은 반드시 <strong>검증(Verification)</strong>과 <strong>검인(Validation)</strong> 과정을 통해 확보되어야 합니다 [1, 2]. V&V는 CFD 해석의 정확성과 신뢰성을 평가하는 주요 수단이며, 공학 및 과학 분야에서 CFD 결과를 의사결정에 활용하기 위한 필수적인 기초 작업입니다 [1, 6, 7].</p>
+            <p>CFD 해석 과정은 일반적으로 <strong>전처리(Pre-Processing)</strong>, <strong>풀이(Solving)</strong>, <strong>후처리(Post-Processing)</strong>, 그리고 결과의 신뢰성을 평가하는 <strong>검증 및 검인(Verification & Validation, V&V)</strong> 단계로 구성됩니다. 본 문서는 이 중 V&V 단계에 대한 학술적 내용을 상세히 다루며, CFD 결과의 신뢰성을 어떻게 확보하는지에 초점을 맞춥니다.</p>
+            
+            <h2>V&V 기본 용어 및 개념 정의</h2>
+            <p>V&V 분야에서 사용되는 핵심 용어는 명확히 구분되어야 합니다 [1, 2].</p>
+            <ul>
+                <li><strong>검증 (Verification)</strong>: 수치 모델 및 코드가 개발자의 개념적 모델(수학 방정식)과 해를 정확히 나타내는지를 확인하는 과정입니다 [1, 2, 7]. 본질적으로 <strong>"방정식을 올바르게 푸는 것(solving the equations right)"</strong>에 해당하며 [7], 주로 수학 및 컴퓨터 과학적 문제입니다 [6]. 코드 구현의 정확성(버그 없음)과 설정된 계산의 수치적 정확성(수렴성, 오차)을 평가합니다 [2].</li>
+                <li><strong>검인 (Validation)</strong>: CFD 모델이 의도된 사용 관점에서 실제 물리 시스템이나 현상과 어느 정도까지 일치하는지 평가하는 과정입니다 [1, 2, 6]. 본질적으로 <strong>"올바른 방정식을 푸는 것(solving the right equations)"</strong>에 해당하며, 주로 물리적 문제입니다 [6]. 실험 데이터 또는 신뢰할 수 있는 측정 데이터와의 비교를 통해 모델의 물리적 정확성을 평가합니다 [1].</li>
+                <li><strong>오류 (Error)</strong>: '알려진 결함'으로, 이산화 오차, 반복 수렴 부족, 프로그래밍 오류 등 원인을 파악하고 정량화할 수 있는 차이를 의미합니다 [2, 7].</li>
+                <li><strong>불확실성 (Uncertainty)</strong>: '불완전한 정보 또는 지식 결여'에 기인한 잠재적 결함입니다 [2, 7]. 경계 조건, 물성치, 실험 측정값 등에 내재된 알 수 없는 변동성 또는 측정 오차를 의미합니다 [1].</li>
+            </ul>
+
+            <h2>검증 (Verification)</h2>
+            <p>검증은 코드 자체의 정확성과 특정 계산의 수치적 정확성을 확인하는 과정입니다 [1, 2].</p>
+            
+            <h3>1. 코드 검증 (Code Verification)</h3>
+            <p>코드 검증은 CFD 소프트웨어(솔버)가 구현된 수학적 모델(미분 방정식 등)을 정확하게 풀어내는지를 확인하는 과정입니다 [1, 2]. 주로 소프트웨어 개발 단계에서 이루어지지만, 새로운 기능 추가나 버전 업데이트 시에도 중요합니다.</p>
+            <ul>
+                <li><strong>목표</strong>: 코드 내 프로그래밍 오류(버그) 및 수학적 모델 구현 오류를 식별하고 제거합니다 [2].</li>
+                <li><strong>방법</strong>:
+                    <ul>
+                        <li><strong>해석적 해(Analytical Solutions)와의 비교</strong>: 단순 형상 및 조건 하에서 CFD 결과가 해석적으로 알려진 해와 일치하는지 확인합니다 [1, 2].</li>
+                        <li><strong>제작 해(Method of Manufactured Solutions, MMS)</strong>: 복잡한 방정식에 대해 임의의 해를 가정한 후, 해당 해를 만족하는 원천항을 방정식에 추가하여, CFD 코드가 이 원천항을 포함하는 방정식을 풀 때 가정한 해를 얼마나 정확히 복원하는지 평가합니다 [2, 5]. 코드 자체의 수치 알고리즘 및 프로그래밍 오류 점검에 강력합니다 [5].</li>
+                        <li><strong>소프트웨어 품질 공학(Software Quality Engineering, SQE)</strong>: 정적/동적 분석, 단위 테스트, 회귀 테스트(Regression Test), 커버리지 테스트 등 소프트웨어 엔지니어링 기법을 적용하여 코드의 견고성과 정확성을 확보합니다 [1].</li>
+                        <li><strong>일관성 확인</strong>: 계산 결과가 기본적인 물리 법칙(예: 질량, 운동량, 에너지 보존)을 만족하는지 확인합니다 [2].</li>
+                        <li><strong>다른 코드와의 비교</strong>: 다른 검증된 CFD 코드(특히 다른 수치 방법을 사용하는 경우)와 동일 문제에 대한 결과를 비교하는 것도 코드 검증의 한 방법이 될 수 있습니다 [2].</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>2. 계산 검증 (Calculation Verification) / 해석 검증 (Solution Verification)</h3>
+            <p>계산 검증은 특정 문제에 대해 수행된 개별 CFD 시뮬레이션 결과에 내재된 수치적 오차(주로 이산화 오차)를 평가하고 정량화하는 과정입니다 [1, 2].</p>
+            <ul>
+                <li><strong>목표</strong>: 특정 계산 해의 정확도를 결정하고, 결과값에 포함된 오차 범위를 추정합니다 [2].</li>
+                <li><strong>오류 원천</strong>: 불충분한 공간(격자) 이산화, 불충분한 시간 이산화, 반복 계산의 불충분한 수렴, 컴퓨터 부동소수점 오차 등이 있습니다 [1, 2].</li>
+                <li><strong>방법</strong>:
+                    <ul>
+                        <li><strong>수렴성 연구 (Convergence Study)</strong>: 공간 해상도(격자 크기) 또는 시간 해상도(시간 간격)를 체계적으로 변경하면서 시뮬레이션 결과를 비교하여, 해가 수렴하는 경향과 오차 감소율을 평가합니다 [2, 4]. 최소 3가지 이상의 서로 다른 해상도(조밀, 중간, 성긴 격자/시간 간격)에서 계산하는 것이 일반적입니다 [2, 6].</li>
+                        <li><strong>Richardson Extrapolation</strong>: 동일 계열의 해상도에서 얻은 결과를 사용하여, 해상도가 무한히 작아질 때(이상적인 해)의 값을 추정하고, 계산 결과의 오차와 수렴 차수(Order of Convergence)를 정량화합니다 [2, 4, 6, 7].</li>
+                        <li><strong>격자 수렴 지수 (Grid Convergence Index, GCI)</strong>: Richardson Extrapolation을 기반으로 격자(또는 시간) 세분화에 따른 계산 결과의 불확실성을 정량적으로 나타내는 지표입니다 [2, 4, 6, 7]. 계산 검증 결과 보고의 표준으로 널리 사용됩니다 [6].</li>
+                        <li><strong>A priori vs. A posteriori 오차 추정</strong>:
+                            <ul>
+                                <li><em>A priori</em> (사전 추정): 사용된 수치 방법의 이론적 특성(수렴 차수 등)에 기반한 오차 추정입니다 [4].</li>
+                                <li><em>A posteriori</em> (사후 추정): 실제 계산 결과(예: 인접한 셀 간의 변수 차이)를 기반으로 경험적으로 오차를 추정합니다 [4]. 격자 독립성 검증, RMS 오차 계측 등이 포함됩니다 [4].</li>
+                            </ul>
+                        </li>
+                        <li><strong>반복 수렴 확인</strong>: 정상(steady) 해석의 경우, 계산 과정 중 잔차(residual) 등의 수렴 지표가 설정된 수렴 기준(예: $10^{-6}$ 또는 $10^{-8}$) 이하로 충분히 감소하여 해가 안정적인 상태에 도달했는지 확인합니다 [1, 2]. 비정상(unsteady) 해석의 경우, 시간 단계별로 수렴 기준을 만족하는지 확인합니다.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>검인 (Validation)</h2>
+            <p>검인은 검증된 CFD 모델이 실제 물리 현상을 얼마나 정확하게 모사하는지를 평가하는 과정입니다 [1, 6, 7]. 이는 CFD 결과의 물리적 신뢰성을 확립하는 데 핵심적입니다.</p>
+            
+            <h3>1. 정의 및 실험 데이터와의 비교</h3>
+            <ul>
+                <li><strong>목표</strong>: CFD 모델(지배 방정식, 물리 모델, 경계 조건 등)이 실제 물리 시스템을 의도된 정확도로 예측하는지 판단합니다 [1, 6].</li>
+                <li><strong>방법</strong>: CFD 시뮬레이션 결과를 실제 실험 데이터, 현장 측정 데이터, 또는 고도로 신뢰할 수 있는 벤치마크 데이터와 비교합니다 [1, 6, 7]. 단순한 시각적 일치(visual agreement)를 넘어선 정량적인 비교가 필수적입니다 [1, 6].</li>
+            </ul>
+
+            <h3>2. 검인 실험 설계 지침</h3>
+            <p>모델 검인을 목적으로 설계된 실험은 전통적인 현상 연구 실험과 다릅니다 [1, 6]. 검인 실험은 CFD 코드를 '고객'으로 여기는 관점에서 설계되어야 하며, CFD 개발자, 실험자, 데이터 분석가 간의 긴밀한 협력이 필수적입니다 [1, 6].</p>
+            <ul>
+                <li><strong>주요 요구사항</strong>:
+                    <ul>
+                        <li>실험 조건(입력, 경계 조건) 및 물성치에 대한 상세하고 정확한 계측 및 보고 [1, 6].</li>
+                        <li>실험 측정값에 내재된 오차 및 불확실성 정량화 [1, 6, 7].</li>
+                        <li>반복 실험을 통한 데이터의 통계적 특성 파악 [6].</li>
+                        <li>검인 목적에 맞는 계층적 접근(Validation Hierarchy) 설계 [1, 6].</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>3. 검인 측정 지표 (Validation Metrics) 및 정량적 비교</h3>
+            <p>CFD 결과와 실험 데이터 간의 일치 정도를 정량적으로 표현하기 위한 지표가 필요합니다 [1, 6].</p>
+            <ul>
+                <li><strong>정량적 지표</strong>:
+                    <ul>
+                        <li>오차의 평균, 제곱평균제곱근(RMSE) [4].</li>
+                        <li>실험 데이터 불확실성 범위 내에서의 일치 여부 [6].</li>
+                        <li>불확실성 정량화(UQ)를 포함한 고급 통계적 방법 [2, 6].</li>
+                    </ul>
+                </li>
+                <li><strong>불확실성 포함 비교</strong>: 검인 과정에서는 CFD 결과의 계산 오차 및 모델링 불확실성과 실험 데이터의 측정 불확실성을 모두 고려하여 비교해야 합니다 [1, 6, 7]. ASME VV20 및 ITTC 가이드라인에서는 이러한 불확실성을 통합적으로 고려하는 절차를 제시합니다 [6].</li>
+            </ul>
+
+            <h3>4. 계층적 검인 (Validation Hierarchy)</h3>
+            <p>복잡한 시스템 전체에 대한 직접적인 검인은 어렵고 비용이 많이 들 수 있습니다 [1, 6]. 따라서 시스템을 점진적으로 단순화된 단계로 분해하여 검인을 수행하는 계층적 접근법(Building-block approach)이 권장됩니다 [1, 6, 7].</p>
+            <ul>
+                <li><strong>단계</strong>: 기초 단위 문제(Unit problem) → 벤치마크 케이스(Benchmark case) → 서브시스템(Subsystem) → 전체 시스템(Complete system) [1].</li>
+                <li><strong>목적</strong>: 각 단계별로 특정 물리 현상 또는 특정 구성요소의 예측 정확도를 집중적으로 검인함으로써, 전체 시스템 모델에 대한 신뢰도를 체계적으로 구축합니다 [1].</li>
+            </ul>
+
+            <h2>불확실성 정량화 (Uncertainty Quantification, UQ)</h2>
+            <p>불확실성 정량화는 V&V, 특히 검인 과정에서 매우 중요한 요소입니다 [1, 6, 7]. CFD 결과와 실험 데이터를 비교할 때, 양쪽에 내재된 불확실성을 명확히 이해하고 정량화해야 정확한 평가가 가능합니다 [1, 6].</p>
+            <ul>
+                <li><strong>불확실성의 유형</strong>:
+                    <ul>
+                        <li><strong>Aleatory (내재적/비가역적)</strong>: 물리 시스템 자체에 내재된 무작위적 변동성 (예: 난류 유동의 순간적인 변동) [1].</li>
+                        <li><strong>Epistemic (지식 부족/가역적)</strong>: 시스템, 모델, 입력 변수 등에 대한 지식 부족으로 발생하는 불확실성 (예: 부정확한 경계 조건, 불완전한 물성치 데이터) [1].</li>
+                    </ul>
+                </li>
+                <li><strong>불확실성의 원천</strong>: 실험 측정 불확실성, 입력 매개변수 불확실성, 물리 모델 불확실성, 계산 오차(검증 과정에서 정량화된 부분) 등이 있습니다 [1, 2, 6].</li>
+                <li><strong>UQ 방법론</strong>:
+                    <ul>
+                        <li>입력 불확실성을 다루기 위한 비결정론적 시뮬레이션 [1].</li>
+                        <li>확률적 샘플링 기법 (Monte Carlo, Latin Hypercube) [1].</li>
+                        <li>민감도 분석 [2].</li>
+                        <li>베이지안 추론 등 통계적 방법 [2, 6].</li>
+                    </ul>
+                </li>
+                <li><strong>V&V에서의 UQ 역할</strong>: 불확실성 정보를 기반으로 CFD 예측의 신뢰 구간을 설정하고, 실험 데이터와의 비교 시 이 불확실성 구간을 고려하여 모델의 타당성을 평가합니다 [1, 6].</li>
+            </ul>
+
+            <h2>표준 및 모범 사례</h2>
+            <p>CFD V&V에 대한 학술계 및 산업계의 노력은 다양한 표준과 가이드라인의 개발로 이어졌습니다 [1, 2, 6, 7].</p>
+            <ul>
+                <li><strong>주요 표준/가이드라인</strong>:
+                    <ul>
+                        <li><strong>AIAA Guide for the Verification and Validation of Computational Fluid Dynamics Simulations (AIAA-G-077-1998)</strong>: CFD V&V의 정의, 절차, 방법론에 대한 초기 가이드라인으로 널리 인용됩니다 [1, 2, 6].</li>
+                        <li><strong>ASME Standard for Verification and Validation in Computational Fluid Dynamics and Heat Transfer (ASME VV20-2009)</strong>: CFD 및 열전달 시뮬레이션의 V&V에 대한 보다 상세하고 정량적인 절차를 제시합니다 [2, 6, 7]. 특히 격자/시간 수렴성 평가 및 불확실성 정량화에 대한 구체적인 방법을 포함합니다 [6, 7].</li>
+                        <li><strong>ITTC Recommended Procedures and Guidelines - Uncertainty Analysis in CFD Verification and Validation (2008)</strong>: 해양/선박 분야의 V&V에 특화된 가이드라인으로, UQ 및 V&V 절차에 대한 상세한 내용을 제공합니다 [6, 7].</li>
+                    </ul>
+                </li>
+                <li><strong>모범 사례</strong>:
+                    <ul>
+                        <li>V&V는 일회성 활동이 아닌 코드 개발 및 사용 과정 전반에 걸친 지속적인 활동으로 수행되어야 합니다 [7].</li>
+                        <li>투명하고 명확한 V&V 절차 및 결과 보고 (GCI, 불확실성 범위 명시 등) [6, 7].</li>
+                        <li>V&V 결과 및 데이터베이스 구축 및 공유 (가능한 경우) [8].</li>
+                        <li>상업용/오픈소스 코드 사용 시에도 엄격한 내부 V&V 절차 수립 및 적용 [8].</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>규제 기관 가이드라인 (FDA/EMA)</h3>
+            <p>제공된 정보에 따르면, FDA와 EMA는 주로 의약품 제조 공정 전반의 검증(Validation)에 대한 가이드라인을 제시하고 있습니다 [9]. 이는 제조 시스템, 장비, 프로세스가 일관되게 요구되는 품질 기준을 충족함을 문서화하는 데 중점을 둡니다 [9].</p>
+            <p>CFD 자체에 대한 FDA/EMA의 특정 검증/검인 가이드라인은 제공된 정보에서 확인되지 않았습니다. 그러나 의약품 개발이나 제조 공정에서 CFD 시뮬레이션을 활용하는 경우, FDA/EMA가 요구하는 전반적인 <strong>공정 검증(Process Validation)</strong> 또는 <strong>컴퓨터 시스템 검증(Computer System Validation)</strong>의 원칙을 CFD 시뮬레이션 결과의 신뢰성 확보에 적용해야 할 수 있습니다 [9]. 이는 CFD 모델의 V&V 결과를 포함하여 시뮬레이션이 특정 목적에 사용하기에 적합함을 문서화하고 정당화하는 방식으로 이루어질 것입니다 [9].</p>
+
+            <h2>도전 과제 및 최신 연구 동향</h2>
+            <p>CFD V&V는 여전히 발전하는 분야이며, 특히 복잡한 문제에 대한 엄밀한 V&V 수행에는 여러 도전 과제가 존재합니다 [1, 6, 8].</p>
+            <ul>
+                <li><strong>복잡성</strong>: 고난이도 혼합 격자, 복합 물리 현상(다상 유동, 화학 반응 등), 강한 비선형성 및 복잡한 난류 문제에서의 오차 및 불확실성 정량화가 어렵습니다 [1, 2, 8].</li>
+                <li><strong>모델 불확실성</strong>: 물리 모델(예: 난류 모델, 연소 모델) 자체의 부정확성으로 인한 불확실성을 정량화하는 것이 어렵습니다 [2, 8].</li>
+                <li><strong>실험 데이터의 한계</strong>: 검인 목적에 부합하는 고품질의 실험 데이터 확보가 어렵거나 비용이 많이 들 수 있으며, 실험 자체의 불확실성도 존재합니다 [1, 6, 8].</li>
+                <li><strong>자동화 및 효율성</strong>: 복잡한 문제에 대한 V&V를 자동화하고 효율화하는 기술 개발이 필요합니다 [1].</li>
+            </ul>
+            <p><strong>최신 연구 동향</strong>은 이러한 도전 과제를 극복하기 위한 노력을 포함합니다 [2, 4].</p>
+            <ul>
+                <li><strong>고도화된 UQ 기법</strong>: 모델 불확실성, 실험-수치 간 상관 오차 등을 다루기 위한 통계적 방법론 (Bayesian 추론, Monte Carlo 샘플링 개선 등) 연구 [2, 6].</li>
+                <li><strong>머신 러닝(ML)의 활용</strong>: V&V 과정의 일부(예: 불확실성 전파, 모델 개선)에 ML 기법을 통합하여 효율성과 정확도를 높이는 연구 [4].</li>
+                <li><strong>V&V 데이터베이스 및 플랫폼 구축</strong>: V&V 활동을 체계적으로 관리하고 결과를 공유하기 위한 표준화된 데이터베이스 및 플랫폼 개발 노력 [8].</li>
+                <li><strong>특정 응용 분야 표준 고도화</strong>: 항공우주, 원자력, 의학 등 특정 분야에서 요구되는 V&V 엄정성 수준에 맞춰 기존 표준 절차를 구체화하고 적용 사례를 축적하는 연구 [2].</li>
+            </ul>
+
+            <h2>결론</h2>
+            <p>전산유체역학(CFD) 시뮬레이션 결과의 신뢰성은 엄격한 검증 및 검인(V&V) 과정을 통해서만 확보될 수 있습니다. 검증은 코드가 방정식을 올바르게 푸는지를, 검인은 코드가 실제 물리 현상을 올바르게 예측하는지를 평가합니다. Richardson Extrapolation, GCI, 실험 데이터 비교, 불확실성 정량화 등 다양한 학술적 방법론과 ASME, AIAA 등의 표준이 V&V 수행의 기반을 제공합니다. 복잡한 문제와 모델 불확실성은 여전히 도전 과제이지만, UQ 및 ML 등 최신 연구를 통해 CFD V&V의 신뢰성은 지속적으로 향상되고 있습니다. CFD 결과 사용자는 이러한 V&V 개념과 절차를 이해하고 적용하여 해석 결과의 타당성을 판단하고 신뢰도를 확보해야 합니다.</p>
+            
+            <hr class="my-8 border-gray-300">
+            
+            <h3>참고 문헌 (References)</h3>
+            <ol class="list-decimal list-inside text-sm space-y-1">
+                <li>Verification and validation in computational fluid dynamics - <a href="https://www.sciencedirect.com/science/article/abs/pii/S0376042102000052" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">https://www.sciencedirect.com/science/article/abs/pii/S0376042102000052</a></li>
+                <li>Verification and Validation in Computational Fluid Dynamics (Sandia National Laboratories, Oberkampf & Trucano, 2002; AIAA/AIAA-G-077-1998 등 포함) - <a href="https://www.osti.gov/servlets/purl/793406" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">https://www.osti.gov/servlets/purl/793406</a></li>
+                <li>AIAA Guide for Verification and Validation of CFD Simulations, AIAA-G-077-1998</li>
+                <li>Comprehensive Approach to Verification and Validation of CFD Simulations (NASA, ASME J. Fluids Eng. 2001, Stern F. et al.) - <a href="https://ntrs.nasa.gov/api/citations/20120013081/downloads/20120013081.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">https://ntrs.nasa.gov/api/citations/20120013081/downloads/20120013081.pdf</a></li>
+                <li>Salari, K. & Knupp, P. Code Verification by the Method of Manufactured Solutions, Sandia, SAND2000-1444</li>
+                <li>ASME. Standard for Verification and Validation in Computational Fluid Dynamics and Heat Transfer. (2009)</li>
+                <li>Overview of CFD Verification & Validation - <a href="https://www.grc.nasa.gov/www/wind/valid/tutorial/overview.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">https://www.grc.nasa.gov/www/wind/valid/tutorial/overview.html</a></li>
+                <li>V&V best practices in CFD published in international journals (Ref: SAND2002-0529, RTO-MP-AVT-147-21 등) - <a href="https://www.osti.gov/servlets/purl/793406" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">https://www.osti.gov/servlets/purl/793406</a>, <a href="https://www.sto.nato.int/publications/STO%20Meeting%20Proceedings/RTO-MP-AVT-147/MP-AVT-147-21.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">https://www.sto.nato.int/publications/STO%20Meeting%20Proceedings/RTO-MP-AVT-147/MP-AVT-147-21.pdf</a></li>
+                <li>FDA vs EMA: What You Must Know About Pharma Validation - <a href="https://pharmuni.com/2025/03/31/fda-vs-ema-what-you-must-know-about-pharma-validation/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">https://pharmuni.com/2025/03/31/fda-vs-ema-what-you-must-know-about-pharma-validation/</a></li>
+            </ol>
+        </article>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>

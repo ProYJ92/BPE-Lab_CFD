@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFD 후처리 - 후처리 도구 개요 - 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-pretendard bg-gray-50 text-gray-800 scroll-smooth">
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
+        <div class="bg-white p-6 md:p-10 rounded-xl shadow-xl">
+            <header class="mb-8 border-b pb-4">
+                <h1 class="text-3xl md:text-4xl font-bold text-slate-800">CFD 후처리 - 후처리 도구 개요 (Overview of Post-processing Tools)</h1>
+            </header>
+            <article class="prose prose-lg max-w-none">
+                <p>CFD 시뮬레이션 결과를 효과적으로 분석하고 시각화하기 위해 다양한 상용 및 오픈소스 소프트웨어 도구와 라이브러리가 사용됩니다. 각 도구는 고유한 장점과 특징을 가지고 있으며, 사용자의 요구사항, 예산, 사용 편의성, 특정 기능 지원 여부 등을 고려하여 선택됩니다.</p>
+                
+                <h2 class="mt-8">상용 소프트웨어 (Commercial Software)</h2>
+                <p>상용 CFD 후처리 도구는 일반적으로 강력한 그래픽 사용자 인터페이스(GUI), 다양한 시각화 옵션, 정교한 정량적 분석 기능, 자동화된 보고서 생성 기능, 그리고 전문적인 기술 지원을 제공합니다. 산업 현장에서 널리 사용됩니다 [2].</p>
+                <ul>
+                    <li><strong>Ansys CFD-Post</strong>: Ansys Fluent, CFX 등 Ansys 솔버의 결과를 처리하기 위한 전용 후처리 도구입니다 [6]. 다양한 시각화 기법, 파생 변수 계산, 차트 생성, 애니메이션 제작, 보고서 생성 기능을 제공하며, CCL(CFX Command Language) 및 Python 스크립팅을 지원합니다.</li>
+                    <li><strong>Tecplot (Tecplot 360, Tecplot Focus)</strong>: CFD 및 엔지니어링 데이터 시각화 및 분석을 위한 전문 소프트웨어입니다 [2]. XY, 2D, 3D 플롯팅 기능이 뛰어나며, 대용량 데이터 처리, Python 스크립팅(PyTecplot), 다양한 데이터 형식 가져오기/내보내기 기능을 지원합니다.</li>
+                    <li><strong>Siemens Simcenter STAR-CCM+ (Post-processing Environment)</strong>: STAR-CCM+는 통합된 환경 내에서 전처리, 해석, 후처리 기능을 모두 제공합니다. 강력한 시각화 도구와 사용자 정의 가능한 분석 기능을 갖추고 있습니다.</li>
+                    <li><strong>EnSight</strong>: 대규모 CFD 데이터셋 시각화에 특화된 고성능 후처리 소프트웨어입니다. 복잡한 형상 및 비정상 유동 데이터를 효과적으로 처리할 수 있습니다.</li>
+                    <li><strong>FieldView</strong>: CFD 후처리를 위한 또 다른 전문 소프트웨어로, 특히 항공우주 및 자동차 산업에서 많이 사용됩니다. 사용 편의성과 고품질 시각화 기능이 장점입니다.</li>
+                    <li><strong>Altair HyperWorks (HyperView, HyperGraph)</strong>: Altair의 시뮬레이션 플랫폼 내에서 CFD 결과(AcuSolve, nanoFluidX 등)를 포함한 다양한 CAE 결과를 후처리하는 데 사용됩니다. HyperView는 3D 시각화, HyperGraph는 2D/3D 플로팅 및 데이터 분석에 활용됩니다.</li>
+                    <li><strong>Autodesk CFD (Results Environment)</strong>: Autodesk CFD 솔루션에 내장된 후처리 환경으로, 설계 중심의 사용 편의성과 보고서 생성 기능을 제공합니다.</li>
+                    <li><strong>FlowVision</strong>: 동적 메시 및 이동 경계 문제 처리에 강점을 가진 CFD 소프트웨어로, 자체 후처리 기능을 포함합니다.</li>
+                </ul>
+
+                <h2 class="mt-8">오픈소스 소프트웨어 및 라이브러리 (Open-Source Software & Libraries)</h2>
+                <p>오픈소스 도구는 비용 효율적이며, 높은 유연성과 사용자 정의 기능을 제공하여 학술 연구 및 특정 목적의 후처리 작업에 널리 활용됩니다 [2].</p>
+                <ul>
+                    <li><strong>ParaView</strong>: VTK(Visualization Toolkit)를 기반으로 개발된 강력하고 널리 사용되는 오픈소스 데이터 분석 및 시각화 애플리케이션입니다 [2]. 다양한 필터, 병렬 처리 기능, Python 스크립팅을 지원하여 복잡한 후처리 작업을 수행할 수 있습니다. OpenFOAM 사용자들에게 특히 인기가 많습니다.</li>
+                    <li><strong>VisIt</strong>: ParaView와 유사하게 대규모 과학 데이터 시각화 및 분석을 위한 오픈소스 도구입니다. 다양한 데이터 형식과 시각화 기법을 지원하며, 병렬 처리에 강점을 가집니다.</li>
+                    <li><strong>OpenFOAM (Post-processing utilities)</strong>: OpenFOAM 자체적으로 제공하는 `postProcess` 유틸리티, `foamToVTK` 변환 도구 등을 통해 기본적인 후처리 및 ParaView/VisIt 등 외부 도구와의 연동이 가능합니다.</li>
+                    <li><strong>VTK (Visualization Toolkit)</strong>: 과학 데이터 시각화를 위한 강력한 오픈소스 C++ 클래스 라이브러리입니다 [3, 8]. ParaView, VisIt 등 많은 시각화 도구의 핵심 엔진으로 사용되며, 사용자가 직접 C++ 또는 Python을 사용하여 맞춤형 시각화 애플리케이션을 개발할 수 있는 기반을 제공합니다.</li>
+                    <li><strong>Python (with libraries like Matplotlib, NumPy, SciPy, Pandas)</strong>: Python은 CFD 후처리에서 스크립팅, 데이터 분석, 플로팅 등에 광범위하게 사용됩니다 [2, 8]. Matplotlib은 2D/3D 플롯, NumPy/SciPy는 수치 계산 및 과학적 분석, Pandas는 데이터 조작 및 분석에 유용한 라이브러리입니다. 많은 상용 도구도 Python 인터페이스를 제공합니다.</li>
+                    <li><strong>Gnuplot</strong>: 명령줄 기반의 그래프 생성 프로그램으로, 간단한 XY 플롯이나 2D/3D 플롯을 빠르게 생성하는 데 유용합니다.</li>
+                    <li><strong>CAFPlot</strong>: 특정 연구 그룹이나 목적을 위해 자체적으로 개발된 후처리 도구의 예시도 존재합니다 [4].</li>
+                </ul>
+                <p>적절한 후처리 도구의 선택은 분석의 깊이, 데이터의 크기, 필요한 시각화 수준, 그리고 사용자의 숙련도에 따라 달라질 수 있습니다.</p>
+
+                <hr class="my-8 border-gray-300">
+                <p class="text-sm text-gray-600">CFD 후처리 도구에 대한 더 자세한 학술적 내용 및 참고 자료는 <a href="cfd_references.html#cfd-postprocessing-refs" class="text-[#0072CE] hover:text-[#004A99] font-medium">CFD 레퍼런스 페이지</a>를 참조하십시오.</p>
+            </article>
+        </div>
+        <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>

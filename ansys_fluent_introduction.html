@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansys Fluent 소개 - 소프트웨어 | 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 mt-5 py-12">
+        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+            <div class="mb-8">
+                <a href="ansys_fluent_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; Ansys Fluent 메인으로 돌아가기</a>
+            </div>
+            
+            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">1. 소개</h2>
+            <p>ANSYS Fluent는 전산 유체 역학(CFD) 분야에서 광범위하게 활용되는 산업 표준 소프트웨어입니다. 복잡한 유체 유동, 열 전달, 화학 반응, 다상 유동 등의 다양한 물리 현상을 높은 정확도로 모델링하고 시뮬레이션할 수 있도록 설계되었습니다. 직관적인 사용자 인터페이스와 강력한 솔버 기능을 통해 대규모의 복잡한 해석 문제도 효율적으로 처리 가능하며, 상용 CFD 소프트웨어 최초로 그래픽 사용자 인터페이스를 도입하는 등 혁신을 선도해왔습니다.</p>
+            
+            <figure class="embedded-image-figure">
+                <img src="https://www.afs.enea.it/project/neptunius/docs/fluent/html/wbtg/img61.gif" alt="ANSYS Fluent GUI 예시" class="max-w-xl">
+                <figcaption>ANSYS Fluent 그래픽 사용자 인터페이스(GUI) 예시 (출처: afs.enea.it)</figcaption>
+            </figure>
+
+            <hr class="my-6">
+            <p>ANSYS Fluent는 Navier-Stokes 방정식을 유한체적법(Finite Volume Method, FVM)으로 이산화하여 계산합니다. 압력 기반 및 밀도 기반 솔버를 모두 제공하며, 저속의 비압축성 유동부터 초음속 압축성 유동까지 폭넓은 영역을 지원합니다. GEKO 터뷸런스 모델, 다양한 다상 유동 모델, 연소 모델 등 선도적인 물리 모델들을 포함하고 있어 다양한 산업 및 연구 분야의 요구사항을 충족시킵니다. 최신 버전(예: 2025 R1, 2024 R2)에서는 고성능 컴퓨팅(HPC) 환경에서 CPU 및 GPU 병렬 처리 성능이 크게 향상되었으며, NVIDIA GPU 외 AMD Instinct MI200/MI300 시리즈 GPU 지원이 추가되어 하드웨어 호환성이 확대되었습니다. Fluent GPU 솔버는 연소(FGM 모델), 음향(하이브리드 FW-H 모델), 표면간 복사, 입자(DPM), 자유표면(VOF) 모델링 등 다양한 물리 현상으로 적용 범위가 넓어졌습니다.</p>
+            <p>특히 Bioprocess 및 전기화학 분야의 혁신을 위해 배터리 열악영향 예측 모델, 침지 냉각 시뮬레이션 모델, PEM 연료전지 콜드 스타트 모델 등이 도입되었습니다. 또한, Fluent Web 인터페이스를 통해 웹 브라우저에서 메싱, 해석 설정, 실행, 후처리가 가능한 원스톱 워크플로우를 제공하여 사용자 경험(UX)을 개선하고 협업을 용이하게 합니다.</p>
+            <p>OpenFOAM과 같은 오픈소스 소프트웨어와 비교 시, Fluent는 통합된 GUI와 전문적인 기술 지원, 산업 표준으로 검증된 솔루션을 제공하는 반면, OpenFOAM은 높은 유연성과 코드 사용자 정의 기능을 강점으로 가집니다. Ansys Fluent는 전기차 배터리 안전성 평가, PEM 연료전지, 항공기 외부 유동 및 결빙 시뮬레이션, 가스터빈 연소 해석 등 다양한 첨단 산업 분야에서 활발히 적용되고 있습니다.</p>
+
+            <figure class="embedded-image-figure">
+                <img src="https://i.ytimg.com/vi/Z-t7aDmkdvo/maxresdefault.jpg" alt="Fluent 시뮬레이션 예시" class="max-w-xl">
+                <figcaption>ANSYS Fluent를 이용한 유동 시뮬레이션 결과 예시 (출처: YouTube @Ansys)</figcaption>
+            </figure>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">주요 특징 및 기능 (최신 업데이트 포함)</h3>
+            <ul class="list-disc pl-5 space-y-1">
+                <li>광범위한 물리 모델 (난류, 열전달, 다상유동, 화학반응, 연소, 음향, 입자 모델 등)</li>
+                <li>강력한 메싱 기술 (Watertight Geometry, Fault-Tolerant Meshing, 대규모 모델 메싱 성능 향상)</li>
+                <li>고성능 컴퓨팅(HPC) 지원 및 GPU 가속 (NVIDIA 및 AMD GPU 지원, 다양한 물리 모델로 GPU 솔버 확장)</li>
+                <li>사용자 친화적인 인터페이스 및 워크플로우 (Fluent Web UI를 통한 원스톱 작업 환경)</li>
+                <li>ANSYS Workbench 플랫폼과의 통합으로 다중 물리 해석 지원</li>
+                <li>Bioprocess 및 전기화학 특화 모델 (배터리 열 모델, 연료전지 모델 등)</li>
+                <li>항공우주 및 고속 유동 해석 기능 강화 (압축성 유동 안정성 향상, 빙착 모델 등)</li>
+            </ul>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">더 읽을거리</h3>
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+                <li><a href="https://www.ansys.com/products/fluids/ansys-fluent" target="_blank" rel="noopener noreferrer">ANSYS Fluent 공식 제품 페이지</a></li>
+                <li><a href="https://www.ansys.com/blog/whats-new-ansys-fluent-software-2024-r2" target="_blank" rel="noopener noreferrer" title="What’s New in Ansys Fluent Software: 2024 R2">ANSYS Fluent 2024 R2 주요 업데이트 (Ansys Blog)</a></li>
+                <li><a href="https://www.ansys.com/blog/whats-new-ansys-fluent-2025-r1" target="_blank" rel="noopener noreferrer" title="What’s New in Ansys Fluent 2025 R1?">ANSYS Fluent 2025 R1 주요 업데이트 (Ansys Blog)</a></li>
+                <li><a href="https://www.youtube.com/playlist?list=PLkOEeS9g22W_I7A0E6h8lqNBOuZBaHkG_" target="_blank" rel="noopener noreferrer">Ansys How To Videos (YouTube 재생목록)</a> - Fluent 관련 튜토리얼 포함</li>
+            </ul>
+
+        </article>
+        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

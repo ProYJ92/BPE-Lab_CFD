@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>협력기관 및 파트너 - 연구실 소개 - 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth flex flex-col min-h-screen">
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-slate-800 mb-2 sm:mb-0">
+                    <a href="index.html" class="block no-underline hover:no-underline">
+                        <span class="block text-2xl lg:text-3xl font-bold text-slate-800">생물공학연구실</span>
+                        <span class="block text-sm lg:text-base font-normal text-gray-500 mt-1">Bioprocess Engineering Laboratory</span>
+                    </a>
+                </h1>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+            <article class="prose lg:prose-xl max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+                <header class="mb-10 border-b pb-4">
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800">협력기관 및 파트너</h1>
+                </header>
+                
+                <p>본 연구실은 국내외 유수 대학, 연구기관, 산업체와 긴밀한 협력 관계를 구축하여 혁신적인 연구를 수행하고, 그 성과를 확산시키고자 노력하고 있습니다. 공동 연구, 기술 이전, 인력 교류 등 다양한 형태의 파트너십을 통해 시너지를 창출하고 있습니다. 주요 협력 프로그램 및 기관은 다음과 같습니다:</p>
+                
+                <div class="space-y-8 mt-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-700 mb-2 flex items-center">
+                            <i data-lucide="award" class="w-6 h-6 mr-3 text-[#0072CE]"></i>
+                            BK21 Four 바이오공정 혁신인력양성단 (연세대학교)
+                        </h3>
+                        <p>본 연구실은 4단계 BK21 사업의 '바이오공정 혁신인력양성단'에 참여하여, 데이터 기반 바이오의약품 대량생산 공정 연구 및 차세대 전문 인력 양성에 힘쓰고 있습니다. 교육연구단 내 타 연구실들과의 공동 연구 및 학술 교류를 통해 융합 연구를 촉진하고 있습니다.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-700 mb-2 flex items-center">
+                            <i data-lucide="building" class="w-6 h-6 mr-3 text-[#0072CE]"></i>
+                            K-NIBRT (Global NIBRT Korea)
+                        </h3>
+                        <p>아일랜드 국립 바이오공정 연구 교육기관(NIBRT)의 교육 시스템을 국내에 도입한 K-NIBRT 프로그램에 겸임교수로서 참여하고 있습니다. 이를 통해 cGMP 수준의 바이오의약품 제조 실습 교육을 제공하고, 기업-학계 간 협력형 인력 양성 프로그램 운영에 기여하고 있습니다. K-NIBRT와의 협력을 통해 산업 현장의 요구를 반영한 실질적인 연구 및 교육을 진행합니다.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-700 mb-2 flex items-center">
+                            <i data-lucide="flask-conical" class="w-6 h-6 mr-3 text-[#0072CE]"></i>
+                            국내외 연구기관 및 산업체
+                        </h3>
+                        <p>본 연구실은 다수의 국내 주요 제약회사, 바이오벤처 기업, 그리고 정부출연연구기관과 특정 기술 개발 및 공동 연구를 진행하고 있습니다. 또한, 싱가포르 A*STAR BTI (Bioprocessing Technology Institute) 등 해외 유수 연구기관과도 지속적인 연구 교류 및 협력 관계를 유지하고 있습니다.</p>
+                        <p class="italic text-gray-500">(개별 기업 및 기관명은 정보보호 협약에 따라 명시하지 않을 수 있습니다.)</p>
+                    </div>
+                </div>
+                <p class="mt-8 text-gray-600">저희 연구실은 열린 마음으로 새로운 협력 기회를 모색하고 있으며, 공동 연구 및 기술 개발에 관심 있는 기관 및 기업의 연락을 언제나 환영합니다.</p>
+
+
+                <div class="mt-12 pt-8 border-t border-gray-200">
+                    <a href="about_lab.html" class="inline-flex items-center text-[#0072CE] hover:text-[#004A99] hover:underline font-medium">
+                        <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
+                        연구실 소개 메인으로 돌아가기
+                    </a>
+                </div>
+            </article>
+        </div>
+        
+        <div id="searchResultsContainer" class="container mx-auto px-6 my-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>

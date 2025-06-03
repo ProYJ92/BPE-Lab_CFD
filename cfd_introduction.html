@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFD 서론 - 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-pretendard bg-gray-50 text-gray-800 scroll-smooth">
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
+        <div class="bg-white p-6 md:p-10 rounded-xl shadow-xl">
+            <header class="mb-8 border-b pb-4">
+                <h1 class="text-3xl md:text-4xl font-bold text-slate-800">CFD 서론</h1>
+            </header>
+            <article class="prose prose-lg max-w-none">
+                <h2>CFD의 정의 및 기본 개념</h2>
+                <p>CFD는 유체 역학의 기본 법칙(주로 Navier-Stokes 방정식)을 나타내는 편미분 방정식을 컴퓨터를 사용하여 수치적으로 해를 구함으로써 유체 흐름의 물리적 현상을 시뮬레이션하는 공학 분야입니다. 복잡한 유동 문제를 해석하고 설계 단계에서 성능을 예측하는 데 사용됩니다.</p>
+
+                <h2>역사적 배경</h2>
+                <p>Lewis Fry Richardson의 1920년대 수치 예보 시도가 초기 개념의 시초가 되었으며, 디지털 컴퓨터가 등장한 1950-60년대부터 Navier-Stokes 방정식의 실제 공학 문제 적용 가능성이 열렸습니다. 1970년대에는 Boeing, NASA 등에서 실용적인 CFD 소프트웨어를 개발하며 산업 현장 적용이 본격화되었습니다. Navier와 Stokes가 각각 1822년과 1845년에 점성 효과를 포함한 운동 방정식을 독립적으로 도출하며 이론적 토대가 마련되었습니다.</p>
+
+                <h2>중요성 및 가치</h2>
+                <p>CFD는 시간과 비용이 많이 소요되는 물리적 실험(예: 풍동 실험)을 대체하거나 보완하여 설계 주기 단축 및 비용 절감에 기여합니다. 또한, 실험으로 측정하기 어려운 영역의 상세한 유동 정보를 제공하여 현상 이해도를 높이고 설계 최적화 기회를 제공합니다.</p>
+
+                <h2>주요 적용 분야</h2>
+                <p>CFD는 현대 엔지니어링의 필수 도구로서 다음과 같은 광범위한 분야에 적용됩니다:</p>
+                <ul>
+                    <li><strong>항공우주</strong>: 항공기 및 로켓 외부 유동, 엔진 내부 유동 해석</li>
+                    <li><strong>자동차</strong>: 공력 성능 개선, 열 관리, HVAC 시스템 분석</li>
+                    <li><strong>에너지</strong>: 풍력 터빈 공력, 수력 터빈 설계, 발전소 열 유동 해석</li>
+                    <li><strong>건축 및 도시 환경</strong>: 건물 주변 보행자 풍 환경 분석, 자연 환기 설계, 실내 공기질 예측</li>
+                    <li><strong>화학 및 공정 산업</strong>: 반응기 설계, 혼합 공정 분석</li>
+                    <li><strong>의공학</strong>: 혈류 해석, 약물 전달 시뮬레이션</li>
+                </ul>
+            </article>
+        </div>
+        <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
