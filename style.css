@@ -709,3 +709,20 @@ h1.main-title {
   }
 }
 
+/* Typography for software item descriptions */
+.software-description {
+  font-size: 1.1rem;
+}
+
+@media (min-width: 1024px) {
+  .software-description {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .software-description {
+    font-size: 1rem;
+  }
+}
+
