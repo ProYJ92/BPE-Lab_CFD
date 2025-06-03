@@ -2,6 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const fixedNavContainer = document.getElementById('fixed-top-nav-container');
     const mainNav = document.getElementById('mainNav');
 
+    if (mainNav) {
+        mainNav.setAttribute('role', 'navigation');
+        if (!mainNav.getAttribute('aria-label')) {
+            mainNav.setAttribute('aria-label', '주요 메뉴');
+        }
+    }
+
     const currentPage = window.location.pathname.split('/').pop();
     if (currentPage === 'lab_resources.html' || currentPage === 'resources.html') {
         const accessGranted = sessionStorage.getItem('labResourcesAccess') === 'true';
