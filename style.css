@@ -826,9 +826,9 @@ td {
     margin-left: auto;
   }
   #header-helper-btn {
-    position: absolute;
-    right: 10px;
-    top: -40px;
-    margin-left: 0;
+    position: relative;
+    right: auto;
+    top: auto;
+    margin-left: 0.5rem;
   }
 }
