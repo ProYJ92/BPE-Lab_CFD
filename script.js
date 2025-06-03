@@ -834,6 +834,21 @@ if (sessionStorage.getItem("helperClosed")) {
     helperMenu.style.display = "none";
 }
 
+const searchContainerElem = document.querySelector('.search-container');
+if (searchContainerElem) {
+    const headerHelperBtn = document.createElement('div');
+    headerHelperBtn.id = 'header-helper-btn';
+    headerHelperBtn.innerHTML = '🐹 <span>뭐든 물어봐!</span>';
+    searchContainerElem.appendChild(headerHelperBtn);
+
+    headerHelperBtn.addEventListener('click', () => {
+        helperBtn.style.display = 'flex';
+        helperMenu.classList.remove('hidden');
+        helperMenu.style.display = 'block';
+        sessionStorage.removeItem('helperClosed');
+    });
+}
+
 helperBtn.addEventListener("click", () => {
     helperMenu.classList.toggle("hidden");
 });
