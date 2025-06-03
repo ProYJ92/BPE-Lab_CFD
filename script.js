@@ -1014,5 +1014,19 @@ if (!helperBtn.dataset.helperBound) {
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'default';
     if (langSelect) langSelect.value = savedLanguage;
     loadLanguage(savedLanguage);
+
+    const backToTop = document.createElement('button');
+    backToTop.id = 'back-to-top';
+    backToTop.setAttribute('aria-label', '맨 위로 가기');
+    backToTop.textContent = '↑ Top';
+    document.body.appendChild(backToTop);
+
+    window.addEventListener('scroll', () => {
+        backToTop.style.display = window.scrollY > 200 ? 'block' : 'none';
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 }
 });
