@@ -141,6 +141,10 @@ document.addEventListener('DOMContentLoaded', () => {
         Object.keys(texts).forEach(key => {
             if (key === 'title') {
                 document.title = texts[key];
+            } else if (key.endsWith('_placeholder')) {
+                const id = key.replace('_placeholder', '');
+                const element = document.getElementById(id);
+                if (element) element.placeholder = texts[key];
             } else {
                 const element = document.getElementById(key);
                 if (element) element.textContent = texts[key];
@@ -165,6 +169,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!(key in defaultTexts)) {
                     if (key === 'title') {
                         defaultTexts[key] = document.title;
+                    } else if (key.endsWith('_placeholder')) {
+                        const id = key.replace('_placeholder', '');
+                        const el = document.getElementById(id);
+                        if (el) defaultTexts[key] = el.placeholder || '';
                     } else {
                         const el = document.getElementById(key);
                         if (el) defaultTexts[key] = el.textContent || '';
