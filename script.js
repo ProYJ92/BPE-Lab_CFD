@@ -2,6 +2,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const fixedNavContainer = document.getElementById('fixed-top-nav-container');
     const mainNav = document.getElementById('mainNav');
 
+    const currentPage = window.location.pathname.split('/').pop();
+    if (currentPage === 'lab_resources.html' || currentPage === 'resources.html') {
+        const correctPassword = 'bioprocess2025';
+        const accessGranted = sessionStorage.getItem('labResourcesAccess') === 'true';
+        if (!accessGranted) {
+            const inputPassword = prompt('자료실은 비밀번호가 필요합니다. 비밀번호를 입력해주세요.');
+            if (inputPassword === correctPassword) {
+                sessionStorage.setItem('labResourcesAccess', 'true');
+            } else {
+                alert('잘못된 패스워드입니다. 대소문자를 정확히 입력해주세요.');
+                window.location.href = 'index.html';
+                return;
+            }
+        }
+    }
+
     if (fixedNavContainer && mainNav) {
         const headerFlex = fixedNavContainer.querySelector('.flex-col');
         if (headerFlex) {
