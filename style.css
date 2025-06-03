@@ -242,15 +242,33 @@ a:hover {
 /* Highlight style for hero section text */
 .hero-highlight {
     color: #ffffff;
-    background-color: rgba(0, 114, 206, 0.7);
     padding: 0.5rem 1rem;
     display: inline-block;
     border-radius: 0.375rem;
 }
 
+/* Custom hero text styles */
+.hero-title {
+    color: #ffffff;
+}
+
+.hero-subtitle {
+    color: #ffffff;
+}
+
+.intro-button {
+    margin-top: 20px;
+}
+
 @media (max-width: 768px) {
   .hero-highlight {
     padding: 0.4rem 0.75rem;
+  }
+  .hero-title,
+  .hero-subtitle,
+  .intro-button {
+    padding: 5px;
+    text-align: center;
   }
 }
 
