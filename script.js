@@ -78,7 +78,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const menuStructure = [
-        { id: 'about_lab', name_ko: '연구실 소개', name_en: 'About Lab', path: 'about_lab.html' },
+        { id: 'about_lab', name_ko: '연구실 소개', name_en: 'About Lab', path: 'about_lab.html', children: [
+            { name_ko: '연구실 개요', name_en: 'Overview', path: 'lab_overview.html' },
+            { name_ko: '연구 분야', name_en: 'Research Areas', path: 'research_areas.html' },
+            { name_ko: '연구 목표 및 비전', name_en: 'Goals & Vision', path: 'research_goals_vision.html' },
+            { name_ko: '교수 소개', name_en: 'Professor', path: 'professor_introduction.html' },
+            { name_ko: '연구원 소개', name_en: 'Members', path: 'researchers_introduction.html' },
+            { name_ko: '주요 연구 프로젝트', name_en: 'Major Projects', path: 'major_research_projects.html' },
+            { name_ko: '연구실 소식 및 공지사항', name_en: 'News & Announcements', path: 'news_announcements.html' },
+            { name_ko: '실험실 시설 및 장비', name_en: 'Facilities & Equipment', path: 'lab_facilities_equipment.html' },
+            { name_ko: '연구 성과', name_en: 'Achievements', path: 'research_achievements.html' },
+            { name_ko: '협력기관 및 파트너', name_en: 'Partners', path: 'collaborations_partners.html' },
+            { name_ko: '사진 갤러리', name_en: 'Photo Gallery', path: 'photo_gallery.html' }
+        ] },
         {
             id: 'bp_eng', name_ko: '세포배양공정', name_en: 'Bioprocess Engineering', path: '#',
             children: [
@@ -404,6 +416,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (item.children && item.children.length > 0) {
             li.classList.add('menu-item-has-children');
+            li.setAttribute('aria-haspopup', 'true');
+            a.setAttribute('aria-expanded', 'false');
             const arrowIconContainer = document.createElement('span');
             arrowIconContainer.className = 'ml-1 inline-block align-middle';
             if (level === 0) { 
@@ -436,26 +450,34 @@ document.addEventListener('DOMContentLoaded', () => {
                         allTopLevelLis.forEach(topLi => {
                             if (topLi !== li) {
                                 const otherDropdown = topLi.querySelector('.dropdown-menu');
+                                const otherLink = topLi.querySelector('a');
                                 if (otherDropdown) {
                                     otherDropdown.style.display = 'none';
+                                    if (otherLink) otherLink.setAttribute('aria-expanded', 'false');
                                 }
                             }
                         });
                     } else {
                         const siblingDropdowns = li.parentElement.querySelectorAll(':scope > li > .dropdown-menu');
                         siblingDropdowns.forEach(sibDrop => {
-                            if (sibDrop !== ulDropdown) sibDrop.style.display = 'none';
+                            if (sibDrop !== ulDropdown) {
+                                sibDrop.style.display = 'none';
+                                const parentLink = sibDrop.parentElement.querySelector('a');
+                                if (parentLink) parentLink.setAttribute('aria-expanded', 'false');
+                            }
                         });
                     }
                     ulDropdown.style.display = 'block';
+                    a.setAttribute('aria-expanded', 'true');
                 }
             });
 
             li.addEventListener('mouseleave', () => {
                 if (window.innerWidth > 768) {
                     setTimeout(() => {
-                        if (!li.matches(':hover')) { 
+                        if (!li.matches(':hover')) {
                             ulDropdown.style.display = 'none';
+                            a.setAttribute('aria-expanded', 'false');
                         }
                     }, GNB_DELAY);
                 }
@@ -470,11 +492,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         allTopLevelLis.forEach(topLi => {
                             if (topLi !== li) {
                                 const otherDropdown = topLi.querySelector('.dropdown-menu');
-                                if (otherDropdown) otherDropdown.style.display = 'none';
+                                const otherLink = topLi.querySelector('a');
+                                if (otherDropdown) {
+                                    otherDropdown.style.display = 'none';
+                                    if (otherLink) otherLink.setAttribute('aria-expanded', 'false');
+                                }
                             }
                         });
                     }
                     ulDropdown.style.display = currentlyOpen ? 'none' : 'block';
+                    a.setAttribute('aria-expanded', currentlyOpen ? 'false' : 'true');
                 }
             });
         }
