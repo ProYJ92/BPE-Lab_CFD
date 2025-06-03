@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.id = 'passwordOverlay';
         overlay.innerHTML = `
             <div id="overlayContent">
-                <div id="hamsterAnimation">🐹</div>
+                <div id="loadingSpinner" class="spinner"></div>
                 <p style="color:#fff; font-size:16px;">비밀번호를 입력하세요 <span>(대소문자 구분)</span></p>
                 <input type="password" id="passwordInput" class="password-input" placeholder="비밀번호 입력" />
                 <div class="password-buttons mt-2">
