@@ -671,3 +671,36 @@ footer {
   animation: attention 1s ease-in-out;
 }
 
+/* ===== Custom styles for responsive updates ===== */
+h1.main-title {
+  font-size: 3rem;
+}
+.subtitle {
+  white-space: nowrap;
+}
+.software-comparison-table {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.875rem;
+}
+.software-index-btn {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.125rem;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  h1.main-title {
+    font-size: 2.25rem;
+  }
+  .software-comparison-table {
+    width: 100%;
+    font-size: 0.75rem;
+  }
+  .software-index-btn {
+    font-size: 1rem;
+  }
+}
+
