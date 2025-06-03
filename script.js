@@ -1,12 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
     const fixedNavContainer = document.getElementById('fixed-top-nav-container');
     const mainNav = document.getElementById('mainNav');
+    const breadcrumbNav = document.getElementById('breadcrumbNav');
 
     if (mainNav) {
         mainNav.setAttribute('role', 'navigation');
         if (!mainNav.getAttribute('aria-label')) {
             mainNav.setAttribute('aria-label', '주요 메뉴');
         }
+    }
+
+    if (fixedNavContainer && mainNav && breadcrumbNav) {
+        const firstContainer = fixedNavContainer.querySelector('div.container');
+        const headerFlex = firstContainer?.querySelector('.header-container') || firstContainer?.querySelector('.flex-col');
+
+        function placeNavForDesktop() {
+            if (firstContainer && firstContainer.contains(mainNav)) {
+                fixedNavContainer.insertBefore(mainNav, breadcrumbNav);
+            }
+        }
+
+        function placeNavForMobile() {
+            if (firstContainer && !firstContainer.contains(mainNav)) {
+                const referenceNode = headerFlex?.children[1] || headerFlex?.lastChild || firstContainer.firstChild;
+                if (headerFlex) {
+                    headerFlex.insertBefore(mainNav, referenceNode);
+                } else {
+                    firstContainer.insertBefore(mainNav, referenceNode);
+                }
+            }
+        }
+
+        function updateNavPlacement() {
+            if (window.innerWidth >= 1024) {
+                placeNavForDesktop();
+            } else {
+                placeNavForMobile();
+            }
+            adjustBodyPadding();
+        }
+
+        updateNavPlacement();
+        window.addEventListener('resize', updateNavPlacement);
     }
 
     const currentPage = window.location.pathname.split('/').pop();

@@ -59,6 +59,8 @@ a:hover {
 
 
 #mainNav {
+  width: 100%;
+  margin: 0;
 }
 
 #mainNav ul {
@@ -818,9 +820,6 @@ td {
   align-items: center;
   gap: 10px;
   position: relative;
-}
-.header-container nav {
-  flex-grow: 1;
 }
 @media (min-width: 1024px) {
   #fixed-top-nav-container .search-container {
