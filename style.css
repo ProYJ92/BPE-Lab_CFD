@@ -562,6 +562,18 @@ footer {
 #helper-menu.hidden {
   display: none;
 }
+#header-helper-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background-color: #FFCA6C;
+  border-radius: 15px;
+  color: #3A3A3A;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
 #helper-menu ul {
   padding: 0;
   margin: 0;
