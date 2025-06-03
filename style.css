@@ -702,6 +702,11 @@ h1.main-title {
   text-align: center;
 }
 
+/* Larger text for the "자세히 알아보기" span inside software buttons */
+.learn-more-text {
+  font-size: 1.2em;
+}
+
 /* Increase readability of software description text */
 .software-description {
   font-size: 1.2rem;
@@ -719,6 +724,9 @@ h1.main-title {
   }
   .software-description {
     font-size: 1rem;
+  }
+  .learn-more-text {
+    font-size: 1.1em;
   }
 }
 
