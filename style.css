@@ -713,17 +713,28 @@ table {
   border-collapse: collapse;
 }
 
-th,
+th {
+  white-space: normal;
+  word-wrap: break-word;
+  padding: 0.75rem 1rem;
+  font-size: 1.2em;
+}
+
 td {
   white-space: normal;
   word-wrap: break-word;
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1em;
 }
 
 @media (max-width: 768px) {
-  th,
+  th {
+    padding: 0.5rem 0.75rem;
+    font-size: 1em;
+  }
+
   td {
-    padding: 0.25rem;
+    padding: 0.25rem 0.5rem;
     font-size: 0.9em;
   }
 }
