@@ -1,466 +1,2652 @@
 [
     {
-        "url": "index.html",
-        "title": "생물공학연구실 - Bioprocess Engineering Laboratory",
-        "breadcrumb": ["홈"],
-        "keywords": ["생물공학연구실", "Bioprocess Engineering Laboratory", "Yonsei", "연세대학교", "홍종광", "디지털 트윈", "CHO 세포", "시스템 대사공학", "CFD", "바이오프로세스", "메인", "홈"],
-        "content_snippet": "차세대 바이오공정 혁신을 위한 융합 연구 선도. 데이터 과학과 공학적 모델링, 시스템 생물학의 통합으로 지속 가능한 바이오공정 솔루션을 선도합니다.",
-        "full_text": "생물공학연구실 홈페이지. 주요 연구 분야: 디지털 트윈 기반 바이오공정 시뮬레이션, CHO 세포 배양 공정 최적화, 시스템 대사공학 및 배지 개발, 바이오리액터 설계 최적화. 연구실 소식 및 공지사항."
-    },
-    {
         "url": "about_lab.html",
         "title": "연구실 소개 - 생물공학연구실",
-        "breadcrumb": ["홈", "연구실 소개"],
-        "keywords": ["연구실 소개", "About Lab", "개요", "미션", "비전"],
-        "content_snippet": "생물공학연구실 (Bioprocess Engineering Laboratory) 소개 페이지입니다. 연구실의 미션, 비전, 주요 활동 등을 안내합니다.",
-    "full_text": "생물공학연구실 소개. 연구 목표, 주요 연구 분야, 교수진, 연구팀 구성, 협력 네트워크, 연락처 등 연구실에 대한 전반적인 정보를 제공합니다. (본 페이지는 현재 준비 중입니다.)"
+        "breadcrumb": [
+            "홈",
+            "연구실 소개"
+        ],
+        "keywords": [
+            "연구실",
+            "소개",
+            "생물공학연구실"
+        ],
+        "content_snippet": "Bioprocess Engineering Laboratory",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 연구실 소개 Bioprocess Engineering Laboratory 생물공학연구실(Bioprocess Engineering Laboratory)에 오신 것을 환영합니다. 저희 연구실은 데이터 과학, 공학적 모델링, 시스템 생물학의 융합을 통해 바이오공정 분야의 혁신을 선도하고 있습니다. 아래 각 항목을 클릭하여 연구실의 다양한 측면에 대해 자세히 알아보실 수 있습니다. 연구실 개요 연구실의 전반적인 소개, 미션, 그리고 핵심 가치를 안내합니다. 연구 분야 디지털 트윈, CHO 세포 배양, 시스템 대사공학, CFD 시뮬레이션 등 주요 연구 영역을 소개합니다. 연구 목표 및 비전 연구실의 단기 및 장기적인 목표와 미래 지향적인 비전을 공유합니다. 교수 소개 연구실을 이끄는 지도교수님의 전문 분야, 학력, 경력 등을 안내합니다. 연구원 소개 연구에 참여하는 박사후연구원, 석·박사 과정 학생 및 연구팀 구성을 소개합니다. 주요 연구 프로젝트 현재 진행 중이거나 대표적인 국책 과제 및 산학 협력 프로젝트들을 소개합니다. 연구실 소식 및 공지사항 연구실의 최신 소식, 학술 활동, 모집 공고 등 주요 공지사항을 안내합니다. 실험실 시설 및 장비 연구 수행에 활용되는 주요 실험 시설과 첨단 장비들을 안내합니다. 연구 성과 주요 논문, 특허, 학회 발표 등 연구실의 대표적인 학문적 성과를 소개합니다. 협력기관 및 파트너 공동 연구 및 기술 개발을 함께하는 국내외 대학, 연구기관, 산업체 파트너를 안내합니다. 사진 갤러리 연구실 활동, 행사, 멤버들의 다양한 모습을 담은 사진들을 제공합니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술"
+    },
+    {
+        "url": "announcement_detail_1.html",
+        "title": "학부 연구생 모집 (2025년 후기) - 공지사항 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "학부 연구생 모집 (2025년 후기)"
+        ],
+        "keywords": [
+            "학부",
+            "연구생",
+            "모집",
+            "2025년",
+            "후기",
+            "공지사항",
+            "생물공학연구실"
+        ],
+        "content_snippet": "공지 날짜: 2025년 6월 1일 | 마감: 2025년 8월 15일",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 학부 연구생 모집 (2025년 후기) 공지 날짜: 2025년 6월 1일 | 마감: 2025년 8월 15일 생물공학연구실에서 2025년도 후기 학부 연구생을 모집합니다. 저희 연구실은 디지털 트윈, CHO 세포 배양, 시스템 대사공학, CFD 시뮬레이션 등 첨단 바이오공학 연구를 수행하고 있습니다. 열정과 성실함을 갖춘 학부생 여러분의 많은 지원 바랍니다. 모집 분야 세포 배양 및 실험 데이터 분석 및 모델링 CFD 시뮬레이션 보조 지원 자격 생명공학, 화학공학, 컴퓨터공학 등 관련 학과 2학년 이상 재학생 연구에 대한 열의와 성실성을 갖춘 자 기본적인 실험 또는 프로그래밍 경험자 우대 지원 방법 아래 서류를 구비하여 이메일( jongkwang.hong@yonsei.ac.kr )로 제출해 주시기 바랍니다. 이력서 (자유 양식, 연락처 포함) 성적증명서 자기소개서 (연구 관심 분야 및 포부 포함) 제출 마감: 2025년 8월 15일 (금) 문의 홍종광 교수 (jongkwang.hong@yonsei.ac.kr, 033-760-2279) 목록으로 돌아가기 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "announcement_detail_2.html",
+        "title": "2025년도 하반기 연구실 안전 교육 안내 - 공지사항 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "2025년도 하반기 연구실 안전 교육 안내"
+        ],
+        "keywords": [
+            "2025년도",
+            "하반기",
+            "연구실",
+            "안전",
+            "교육",
+            "안내",
+            "공지사항",
+            "생물공학연구실"
+        ],
+        "content_snippet": "공지 날짜: 2025년 8월 20일",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 2025년도 하반기 연구실 안전 교육 안내 공지 날짜: 2025년 8월 20일 연구실 구성원 여러분의 안전한 연구 환경 조성을 위해 2025년도 하반기 연구실 안전 교육을 아래와 같이 실시합니다. 모든 연구실 구성원은 의무적으로 참여해 주시기 바랍니다. 교육 개요 교육명: 2025년 하반기 연구실 정기 안전 교육 일시: 2025년 9월 10일 (수) 14:00 ~ 16:00 (2시간) 장소: 미래관 301호 세미나실 대상: 생물공학연구실 소속 모든 교수, 연구원, 대학원생, 학부 연구생 주요 교육 내용 연구실 안전 수칙 및 비상 대응 요령 화학물질 안전 관리 및 MSDS 이해 생물학적 안전(LMO) 및 폐기물 처리 규정 실험 장비 안전 사용법 및 사고 예방 최근 연구실 안전사고 사례 분석 및 교훈 참석 안내 부득이한 사정으로 참석이 어려운 경우, 사전에 담당자에게 통보하여 주시기 바랍니다. (미 이수 시 추가 보충 교육 필요) 안전하고 건강한 연구 환경을 위해 적극적인 참여 부탁드립니다. 문의 연구실 안전 담당: 김안전 연구원 (내선 1234, anjeon.kim@example.com) 목록으로 돌아가기 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "announcement_detail_generic.html",
+        "title": "공지사항 상세 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "공지사항 상세"
+        ],
+        "keywords": [
+            "공지사항",
+            "상세",
+            "생물공학연구실"
+        ],
+        "content_snippet": "공지 날짜: YYYY-MM-DD",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 공지사항 제목 공지 날짜: YYYY-MM-DD 본 공지사항은 일반적인 내용을 담고 있는 예시 페이지입니다. 실제 공지 내용은 동적으로 업데이트될 수 있습니다. 예를 들어, 연구실 서버 점검 안내와 같은 공지사항이 여기에 표시될 수 있습니다. 예시: 연구실 서버 점검 안내 점검 일시: 2025년 9월 5일 (금) 18:00 ~ 20:00 점검 내용: 연구실 데이터 서버 정기 점검 및 보안 업데이트 영향: 점검 시간 동안 서버 접속 및 관련 서비스 이용이 일시적으로 중단될 수 있습니다. 연구원 여러분의 양해 부탁드립니다. 목록으로 돌아가기 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다. import { menuStructure, generateNavigation, generateBreadcrumbs, adjustBodyPadding, loadSearchIndex, performSiteSearch, displaySuggestions } from './script.js'; document.addEventListener('DOMContentLoaded', () => { const urlParams = new URLSearchParams(window.location.search); const title = urlParams.get('title') || \"연구실 서버 점검 안내 (9/5)\"; const date = urlParams.get('date') || \"2025-09-01\"; const announcementTitleEl = document.getElementById('ann"
+    },
+    {
+        "url": "ansys_fluent_installation.html",
+        "title": "Ansys Fluent 설치 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "Ansys Fluent",
+            "설치"
+        ],
+        "keywords": [
+            "Ansys",
+            "Fluent",
+            "설치",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "ANSYS Fluent의 공식 설치 절차는 다음과 같습니다. 설치 전 시스템 요구사항을 확인하고, Ansys Customer Portal을 통해 라이선스 및 설치 파일을 확보해야 합니다.",
+        "full_text": "생물공학연구실 검색 &laquo; Ansys Fluent 메인으로 돌아가기 2. 설치 가이드 ANSYS Fluent의 공식 설치 절차는 다음과 같습니다. 설치 전 시스템 요구사항을 확인하고, Ansys Customer Portal을 통해 라이선스 및 설치 파일을 확보해야 합니다. 소프트웨어 다운로드 : Ansys Customer Portal ( download.ansys.com 또는 Customer Portal 로그인 후)에서 최신 버전의 Ansys Fluids 패키지를 다운로드합니다. 학생 버전은 Ansys Student Community ( ansys.com/academic/students )에서 받을 수 있습니다. 설치 런처 실행 : 다운로드한 설치 프로그램(ISO 파일 또는 압축 해제된 폴더 내의 `setup.exe` 또는 `install`)을 실행하고 'Install Ansys Products'를 선택합니다. 라이선스 동의 및 설치 경로 지정 : 라이선스 약관에 동의하고 설치 경로를 지정합니다. 기본 경로 사용을 권장합니다. 제품 선택 및 라이선스 정보 입력 : 설치 마법사의 안내에 따라 설치할 제품 목록에서 Ansys Fluent (또는 Fluid Dynamics 패키지)와 필요한 경우 Geometry Interface (SpaceClaim, DesignModeler 등)를 선택합니다. 이어서 라이선스 서버의 Hostname 정보 또는 로컬 라이선스 파일 정보를 입력합니다. 설치 진행 및 완료 : 설치 옵션 검토 후 설치를 진행합니다. 설치 시간은 시스템 사양 및 선택한 구성 요소에 따라 달라질 수 있습니다. 완료 후 시스템을 재시작해야 할 수 있습니다. 프로그램 실행 및 환경 설정 : 설치 완료 후 시작 메뉴 또는 바탕화면 아이콘을 통해 Fluent를 실행합니다. 처음 실행 시 필요한 환경 설정을 완료할 수 있습니다. ANSYS Fluent는 Windows 및 Linux 운영체제를 지원하며, 64비트 아키텍처에서 병렬 처리가 가능합니다. 설치 및 "
+    },
+    {
+        "url": "ansys_fluent_introduction.html",
+        "title": "Ansys Fluent 소개 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "Ansys Fluent",
+            "소개"
+        ],
+        "keywords": [
+            "Ansys",
+            "Fluent",
+            "소개",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "ANSYS Fluent는 전산 유체 역학(CFD) 분야에서 광범위하게 활용되는 산업 표준 소프트웨어입니다. 복잡한 유체 유동, 열 전달, 화학 반응, 다상 유동 등의 다양한 물리 현상을 높은 정확도로 모델링하고 시뮬레이션할 수 있도록 설계되었습니다. 직관적인 사용자 인",
+        "full_text": "생물공학연구실 검색 &laquo; Ansys Fluent 메인으로 돌아가기 1. 소개 ANSYS Fluent는 전산 유체 역학(CFD) 분야에서 광범위하게 활용되는 산업 표준 소프트웨어입니다. 복잡한 유체 유동, 열 전달, 화학 반응, 다상 유동 등의 다양한 물리 현상을 높은 정확도로 모델링하고 시뮬레이션할 수 있도록 설계되었습니다. 직관적인 사용자 인터페이스와 강력한 솔버 기능을 통해 대규모의 복잡한 해석 문제도 효율적으로 처리 가능하며, 상용 CFD 소프트웨어 최초로 그래픽 사용자 인터페이스를 도입하는 등 혁신을 선도해왔습니다. ANSYS Fluent 그래픽 사용자 인터페이스(GUI) 예시 (출처: afs.enea.it) ANSYS Fluent는 Navier-Stokes 방정식을 유한체적법(Finite Volume Method, FVM)으로 이산화하여 계산합니다. 압력 기반 및 밀도 기반 솔버를 모두 제공하며, 저속의 비압축성 유동부터 초음속 압축성 유동까지 폭넓은 영역을 지원합니다. GEKO 터뷸런스 모델, 다양한 다상 유동 모델, 연소 모델 등 선도적인 물리 모델들을 포함하고 있어 다양한 산업 및 연구 분야의 요구사항을 충족시킵니다. 최신 버전(예: 2025 R1, 2024 R2)에서는 고성능 컴퓨팅(HPC) 환경에서 CPU 및 GPU 병렬 처리 성능이 크게 향상되었으며, NVIDIA GPU 외 AMD Instinct MI200/MI300 시리즈 GPU 지원이 추가되어 하드웨어 호환성이 확대되었습니다. Fluent GPU 솔버는 연소(FGM 모델), 음향(하이브리드 FW-H 모델), 표면간 복사, 입자(DPM), 자유표면(VOF) 모델링 등 다양한 물리 현상으로 적용 범위가 넓어졌습니다. 특히 Bioprocess 및 전기화학 분야의 혁신을 위해 배터리 열악영향 예측 모델, 침지 냉각 시뮬레이션 모델, PEM 연료전지 콜드 스타트 모델 등이 도입되었습니다. 또한, Fluent Web 인터페이스를 통해 웹 브라우저에서 메싱, 해석 설정, 실행, 후처리가 가"
+    },
+    {
+        "url": "ansys_fluent_main.html",
+        "title": "Ansys Fluent - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "Ansys Fluent"
+        ],
+        "keywords": [
+            "Ansys",
+            "Fluent",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "ANSYS Fluent 관련 상세 정보입니다. 아래 목록에서 원하는 주제를 선택하세요.",
+        "full_text": "생물공학연구실 검색 &laquo; 소프트웨어 목록으로 돌아가기 Ansys Fluent ANSYS Fluent 관련 상세 정보입니다. 아래 목록에서 원하는 주제를 선택하세요. 1. 소개 (Introduction) 2. 설치 (Installation) 3. 전처리 (Pre-processing) 4. 솔버 (Solver) 5. 후처리 (Post-processing) 6. Verification & Validation 7. 문제 해결 (Troubleshooting) 8. 자료실 (Resources) 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "ansys_fluent_postprocessing.html",
+        "title": "Ansys Fluent 후처리 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "Ansys Fluent",
+            "후처리"
+        ],
+        "keywords": [
+            "Ansys",
+            "Fluent",
+            "후처리",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "CFD 해석 완료 후, ANSYS Fluent는 내장된 강력한 후처리 도구를 제공하며, 필요에 따라 ANSYS CFD-Post 또는 타사 후처리 소프트웨어와 연동하여 결과를 분석하고 시각화합니다. 후처리는 방대한 시뮬레이션 데이터로부터 공학적 통찰력을 얻는 핵심 과정입",
+        "full_text": "생물공학연구실 검색 &laquo; Ansys Fluent 메인으로 돌아가기 5. 후처리 기술 CFD 해석 완료 후, ANSYS Fluent는 내장된 강력한 후처리 도구를 제공하며, 필요에 따라 ANSYS CFD-Post 또는 타사 후처리 소프트웨어와 연동하여 결과를 분석하고 시각화합니다. 후처리는 방대한 시뮬레이션 데이터로부터 공학적 통찰력을 얻는 핵심 과정입니다. Ansys Fluent의 후처리 기능을 이용한 유동장 시각화 예시 (출처: afs.enea.it) Fluent 내장 후처리 : Fluent 인터페이스 내 'Results' 탭 또는 독립 실행형 Fluent Results 모듈을 통해 직접 후처리를 수행합니다. 정성적 분석 (시각화) : 유동장(속도, 압력), 온도장, 농도 분포 등을 컨투어(Contour), 벡터(Vector), 스트림라인(Streamline), 유선(Pathline), 등가면(Iso-surface) 등의 형태로 시각화합니다. 특정 평면(Plane), 선(Line), 점(Point) 등의 표면을 생성하여 해당 위치에서의 결과를 표시할 수 있습니다. 여러 시각적 요소를 결합하여 복잡한 유동 현상을 나타내는 장면(Scene)을 구성하고 애니메이션으로 저장할 수 있습니다. 정량적 분석 : 특정 지점, 선, 면, 체적에서의 속도, 압력, 온도, 난류 에너지, 벽면 전단 응력 등 수치적 데이터를 추출합니다. 표면 적분(Surface Integral), 체적 적분(Volume Integral), 플럭스 계산(Flux Reports), XY 플롯 생성(XY Plot) 등이 가능하여 공학적 성능 지표를 계산합니다. 데이터 내보내기 및 외부 도구 연동 : 솔루션 데이터를 Ensight, FieldView, Tecplot, ASCII, CGNS 등 다양한 표준 파일 형식으로 내보내어 ANSYS CFD-Post 또는 타사 후처리 소프트웨어(예: ParaView, VisIt)에서 심층 분석을 수행할 수 있습니다. OPC UA 미들웨어를 통한 산업 자동화 "
+    },
+    {
+        "url": "ansys_fluent_preprocessing.html",
+        "title": "Ansys Fluent 전처리 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "Ansys Fluent",
+            "전처리"
+        ],
+        "keywords": [
+            "Ansys",
+            "Fluent",
+            "전처리",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "ANSYS Fluent의 전처리 단계는 형상 준비와 메쉬 생성이 핵심입니다. 사용자는 ANSYS Workbench 환경 내의 Design Modeler 또는 SpaceClaim을 활용하여 CAD 형상을 정리하고, ANSYS Meshing 모듈을 사용하여 해석에 필요한 ",
+        "full_text": "생물공학연구실 검색 &laquo; Ansys Fluent 메인으로 돌아가기 3. 전처리 방법 (메싱 및 모델 준비) ANSYS Fluent의 전처리 단계는 형상 준비와 메쉬 생성이 핵심입니다. 사용자는 ANSYS Workbench 환경 내의 Design Modeler 또는 SpaceClaim을 활용하여 CAD 형상을 정리하고, ANSYS Meshing 모듈을 사용하여 해석에 필요한 메쉬를 생성합니다. Fluent 자체에서도 메싱 기능을 제공하며, 특히 두 가지 주요 워크플로우를 지원합니다. ANSYS Fluent Meshing 작업 예시 (출처: YouTube @LearnCAx) Watertight Geometry Workflow : 오류 없이 깨끗하게 정리된 CAD 형상에 대해 효율적이고 자동화된 단계별 메싱 프로세스를 제공합니다. 이 워크플로우는 형상이 완벽하게 닫혀 있고, 누락된 면이나 틈이 없는 경우에 적합합니다. Fault-Tolerant Meshing Workflow (FTM) : CAD 결함(틈, 누락된 면, 중첩된 면 등)이 포함된 복잡하거나 불완전한 형상에 적합합니다. 메쉬 랩핑(Mesh Wrapping) 기술을 사용하여 결함을 자동으로 감싸거나 수정하여 견고한 표면 메쉬를 생성하고, 이를 기반으로 체적 메쉬를 생성함으로써 전처리 시간을 단축합니다. 메쉬 품질 확보를 위해 표면 및 체적 메쉬에 대해 'Improve Mesh' 작업을 적용하여 왜곡도(Skewness), 종횡비(Aspect Ratio) 등 품질 지표를 정량적으로 개선할 수 있습니다. 필요에 따라 특정 영역의 메쉬를 세분화(Local Mesh Refinement)하여 해당 영역의 해상도를 높여 중요한 물리 현상을 더 정확하게 포착할 수 있습니다. 최신 버전(2025 R1 등)에서는 복잡한 대규모 모델의 전처리 속도가 대폭 향상되었으며, GUI 기반 작업 자동화 및 품질 개선 기능이 강화되었습니다. ANSYS Workbench 내 Fluent 메싱 환경 구성 예시 (출처: afs.en"
+    },
+    {
+        "url": "ansys_fluent_resources.html",
+        "title": "Ansys Fluent 자료실 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "Ansys Fluent",
+            "자료"
+        ],
+        "keywords": [
+            "Ansys",
+            "Fluent",
+            "자료실",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "ANSYS Fluent 사용자를 위한 다양한 공식 및 커뮤니티 기반 학습 자료와 리소스가 마련되어 있어, 사용자는 기본 사용법부터 고급 기술, 문제 해결, V&V 절차에 이르기까지 포괄적인 정보를 얻고 지속적으로 학습할 수 있습니다. 특히 최신 버전 (2024 R2, ",
+        "full_text": "생물공학연구실 검색 &laquo; Ansys Fluent 메인으로 돌아가기 8. 자료실 (학습 자료 및 커뮤니티 리소스) ANSYS Fluent 사용자를 위한 다양한 공식 및 커뮤니티 기반 학습 자료와 리소스가 마련되어 있어, 사용자는 기본 사용법부터 고급 기술, 문제 해결, V&V 절차에 이르기까지 포괄적인 정보를 얻고 지속적으로 학습할 수 있습니다. 특히 최신 버전 (2024 R2, 2025 R1 등)의 새로운 기능과 개선 사항에 대한 정보는 Ansys 공식 블로그를 통해 상세히 제공됩니다. Ansys Fluent 관련 온라인 튜토리얼 및 학습 자료 예시 (출처: YouTube @Ansys) 공식 학습 자료 ANSYS Customer Portal : 라이선스 사용자는 공식 문서(User's Guides, Theory Guides, Tutorial Guides, Validation Manuals 등), 최신 소프트웨어 버전, 기술 지원 정보에 접근할 수 있습니다. ANSYS Learning Hub : Ansys 제품 전반에 걸친 구독 기반의 광범위한 학습 플랫폼으로, 단계별 동영상 강좌, 튜토리얼, 워크숍 자료, 베스트 프랙티스 가이드, CAD 모델 등을 제공합니다. ANSYS Innovation Courses : 주로 무료로 제공되는 Ansys 공식 온라인 강좌로, Fluent의 기본 사용법부터 특정 물리 모델(예: 난류, 다상유동), 문제 해결 방법, V&V 절차까지 다양한 주제를 다룹니다. ANSYS How To Videos (YouTube 채널) : Ansys 공식 YouTube 채널 ( youtube.com/@Ansys )로, 소프트웨어 설치, 메싱, 솔버 설정, 후처리 등 특정 작업에 대한 짧고 유용한 튜토리얼 영상들을 제공합니다. Ansys 공식 블로그 - 최신 업데이트 정보 : Fluent의 최신 버전(예: 2024 R2, 2025 R1)에 대한 상세한 기능 소개, 개선 사항, 적용 사례 등을 확인할 수 있습니다. What’s New in An"
+    },
+    {
+        "url": "ansys_fluent_solver.html",
+        "title": "Ansys Fluent 솔버 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "Ansys Fluent",
+            "해석 설정"
+        ],
+        "keywords": [
+            "Ansys",
+            "Fluent",
+            "솔버",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "ANSYS Fluent는 단일 창 인터페이스 내에서 솔버 설정 및 실행을 관리합니다. 솔버 사용법은 다음과 같은 주요 단계를 포함하며, 사용자는 해석하고자 하는 문제의 물리적 특성에 맞춰 다양한 옵션을 조정합니다.",
+        "full_text": "생물공학연구실 검색 &laquo; Ansys Fluent 메인으로 돌아가기 4. 솔버 설정 및 사용법 ANSYS Fluent는 단일 창 인터페이스 내에서 솔버 설정 및 실행을 관리합니다. 솔버 사용법은 다음과 같은 주요 단계를 포함하며, 사용자는 해석하고자 하는 문제의 물리적 특성에 맞춰 다양한 옵션을 조정합니다. ANSYS Fluent 솔버 설정 인터페이스 예시 (출처: louhu.com) 지오메트리 및 메쉬 불러오기 : 전처리 단계에서 생성된 메쉬 파일을 Fluent로 불러옵니다 (`.msh`, `.cas` 등). 메쉬 품질을 확인하고 필요한 경우 스케일링 또는 단위를 조정합니다. 물성 및 경계 조건 입력 : 해석 대상 유체의 물성치(밀도, 점성 등)를 정의하고, 문제의 경계 조건(벽면, 입구, 출구, 대칭면 등)에서 속도, 압력, 온도 등의 값을 설정합니다. 물리 모델 선택 : 문제의 특성에 따라 적절한 물리 모델을 선택합니다. 예를 들어, 난류 유동인 경우 k-epsilon, k-omega, SST, GEKO 등의 난류 모델 중 하나를 선택하고, 다상 유동인 경우 VOF, Mixture, Eulerian 모델 등을 선택합니다. 열 전달, 화학 반응, 복사 모델 등도 필요에 따라 활성화합니다. 솔버 설정 : 솔버 타입 선택 : 압력 기반(Pressure-Based) 또는 밀도 기반(Density-Based) 솔버를 선택합니다. 일반적으로 저속 비압축성 유동에는 압력 기반, 고속 압축성 유동에는 밀도 기반 솔버가 사용됩니다. 시간 설정 : 정상 상태(Steady) 또는 비정상 상태(Transient) 해석을 선택합니다. 비정상 상태 해석 시 시간 간격(Time Step Size), 총 해석 시간(Number of Time Steps 또는 End Time) 등을 설정합니다. 다단계 시간 간격(Multistage Time Stepping) 등의 고급 옵션을 활용하여 계산 효율과 안정성을 높일 수 있습니다. 수치 스킴 및 알고리즘 : 공간 이산화 방식(Spati"
+    },
+    {
+        "url": "ansys_fluent_troubleshooting.html",
+        "title": "Ansys Fluent 문제 해결 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "Ansys Fluent",
+            "문제 해결"
+        ],
+        "keywords": [
+            "Ansys",
+            "Fluent",
+            "문제",
+            "해결",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "ANSYS Fluent 사용 중 발생할 수 있는 일반적인 문제(수렴 실패, 발산, 비물리적 결과 등)에 대한 해결 방안은 다음과 같습니다. 문제 해결은 체계적인 접근이 중요하며, 로그 메시지, 잔차 플롯, 물리적 현상에 대한 이해를 바탕으로 원인을 진단해야 합니다.",
+        "full_text": "생물공학연구실 검색 &laquo; Ansys Fluent 메인으로 돌아가기 7. 일반적인 문제 해결 방안 ANSYS Fluent 사용 중 발생할 수 있는 일반적인 문제(수렴 실패, 발산, 비물리적 결과 등)에 대한 해결 방안은 다음과 같습니다. 문제 해결은 체계적인 접근이 중요하며, 로그 메시지, 잔차 플롯, 물리적 현상에 대한 이해를 바탕으로 원인을 진단해야 합니다. Ansys Fluent 작업 환경에서 문제 진단 및 설정 변경 (출처: afs.enea.it) 수렴 실패 및 발산 (Convergence Failure & Divergence) : 메쉬 품질 확인 및 개선 : 메쉬가 너무 거칠거나(coarse), 왜곡(skewness)이 심하거나, 종횡비(aspect ratio)가 매우 높은 셀이 있는지 확인합니다. Mesh Quality 도구를 사용하여 품질을 점검하고, 필요한 경우 메쉬를 개선하거나 재생성합니다. 전처리 단계의 'Improve Mesh' 기능 또는 국소적 메쉬 세분화(local refinement)를 활용합니다. 특히 경계층(boundary layer)이나 유동 변화가 급격한 영역의 메쉬 품질이 중요합니다. 경계 조건 확인 : 모든 경계 조건이 물리적으로 타당하고 문제 정의에 부합하는지 다시 검토합니다. 입출구 조건, 벽면 조건 등이 올바르게 설정되었는지, 값의 범위가 적절한지 확인합니다. 물리 모델 적합성 검토 : 해석하려는 물리 현상에 적합한 모델(난류 모델, 다상 모델, 연소 모델 등)을 선택했는지 확인합니다. 예를 들어, 매우 복잡한 난류 유동에 단순한 난류 모델을 사용하면 수렴이 어렵거나 부정확한 결과를 초래할 수 있습니다. 솔버 설정 조정 : 언더릴렉세이션 팩터 (Under-Relaxation Factors) : 각 변수의 URF 값을 낮추면(예: 압력, 운동량 기본값 0.3, 0.7에서 더 작게) 수치적 안정성을 높일 수 있지만 수렴 속도는 느려집니다. 발산 시 URF를 줄여보는 것이 일반적인 접근입니다. 시간 간격 (Time S"
+    },
+    {
+        "url": "ansys_fluent_validation.html",
+        "title": "Ansys Fluent V&V - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "Ansys Fluent",
+            "검증/확인"
+        ],
+        "keywords": [
+            "Ansys",
+            "Fluent",
+            "VV",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "ANSYS Fluent는 해석 결과의 신뢰성을 확보하기 위해 체계적인 검증(Verification) 및 타당성 평가(Validation, V&V) 절차를 지원하고, 관련 자료를 제공합니다. V&V는 CFD 시뮬레이션의 정확성과 예측 능력을 평가하는 데 필수적인 과정입니",
+        "full_text": "생물공학연구실 검색 &laquo; Ansys Fluent 메인으로 돌아가기 6. Verification & Validation (검증 및 타당성 평가) ANSYS Fluent는 해석 결과의 신뢰성을 확보하기 위해 체계적인 검증(Verification) 및 타당성 평가(Validation, V&V) 절차를 지원하고, 관련 자료를 제공합니다. V&V는 CFD 시뮬레이션의 정확성과 예측 능력을 평가하는 데 필수적인 과정입니다. Ansys는 다양한 산업 표준 테스트 케이스 및 학술적 벤치마크 문제에 대해 정기적으로 V&V를 수행하고 그 결과를 공식 문서, 기술 백서, 사용자 매뉴얼 등을 통해 공개합니다. 특히 최신 버전(예: 2024 R2, 2025 R1)에서는 새롭게 추가되거나 개선된 기능(예: GPU 솔버 확장, 배터리 모델, 연소 모델, 고속 유동 해석 정확도, 빙착 모델 등)에 대한 V&V 사례가 지속적으로 업데이트되고 있습니다. CFD 시뮬레이션 결과와 실험 데이터 비교를 통한 검증 과정 예시 (출처: flow3d.co.kr) 검증 (Verification) : \"Are we solving the equations right?\" 즉, 수학적 모델(지배방정식 및 이산화된 방정식)이 코드 내에서 정확하게 구현되고 풀렸는지, 수치 해법 자체의 오류가 없는지 확인하는 과정입니다. 주요 방법은 다음과 같습니다: 격자 독립성(Grid Independence 또는 Grid Convergence) 시험 : 다양한 크기 또는 밀도의 메쉬를 사용하여 해석 결과를 비교하고, 메쉬 해상도가 결과에 미치는 영향이 일정 수준 이하로 줄어들어 수렴하는 격자 조건을 결정합니다. 이를 통해 이산화 오류(discretization error)를 평가하고 수치 정확도를 확보합니다. 최신 버전에서는 대규모 모델의 메싱 성능이 향상되어 이러한 검증 과정이 더 효율적으로 수행될 수 있습니다. 수렴(Convergence) 확인 : 해석 과정 중 각 방정식의 잔차(Residual)가 충분히 작은 값("
+    },
+    {
+        "url": "bioprocess_cfd.html",
+        "title": "Bioprocess CFD Simulation - 전산유체역학 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "Bioprocess CFD Simulation"
+        ],
+        "keywords": [
+            "Bioprocess",
+            "CFD",
+            "Simulation",
+            "전산유체역학",
+            "생물공학연구실"
+        ],
+        "content_snippet": "바이오프로세스 공학에서 전산 유체 역학(CFD)의 역할과 응용을 탐구합니다. 각 주제를 클릭하여 서론, 이론적 배경, 적용 사례 및 주요 소프트웨어에 대한 심층적인 내용을 확인하세요.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 Bioprocess CFD Simulation 바이오프로세스 공학에서 전산 유체 역학(CFD)의 역할과 응용을 탐구합니다. 각 주제를 클릭하여 서론, 이론적 배경, 적용 사례 및 주요 소프트웨어에 대한 심층적인 내용을 확인하세요. Bioprocess CFD 서론 바이오프로세스 엔지니어링에서 CFD의 중요성, 기본 개념 및 연구 동향을 소개합니다. 이론적 배경 Bioprocess CFD의 핵심 방정식, 난류 모델, 다상 유동 모델 및 세포 반응 동역학 통합 방법을 설명합니다. 적용 사례 생물반응기 설계, 스케일업/다운, 혼합 분석 등 Bioprocess CFD의 다양한 실제 적용 사례를 살펴봅니다. 주요 CFD 소프트웨어 비교 Bioprocess CFD 연구 및 산업 현장에서 사용되는 주요 상용 및 오픈소스 소프트웨어를 비교 분석합니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bioprocess_cfd_application_cases.html",
+        "title": "Bioprocess CFD - 적용 사례 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "Bioprocess CFD Simulation",
+            "적용 사례"
+        ],
+        "keywords": [
+            "Bioprocess",
+            "CFD",
+            "적용",
+            "사례",
+            "생물공학연구실"
+        ],
+        "content_snippet": "Bioprocess CFD는 바이오공정의 다양한 단계와 시스템에 걸쳐 폭넓게 적용되어 공정 이해, 설계 최적화 및 성능 개선에 기여하고 있습니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 Bioprocess CFD 홈으로 돌아가기 3. Bioprocess CFD 적용 사례 (Bioprocess CFD Applications / Case Studies) Bioprocess CFD는 바이오공정의 다양한 단계와 시스템에 걸쳐 폭넓게 적용되어 공정 이해, 설계 최적화 및 성능 개선에 기여하고 있습니다. 주요 적용 분야 및 사례 생물반응기 설계 및 최적화 : 교반 탱크 반응기(STR), 플러그 흐름 반응기(PFR), 에어리프트 반응기, 유동층 반응기, 파동형 반응기 등 다양한 반응기 유형의 내부 유동 패턴, 혼합 시간, 전단 응력 분포, 산소 전달 계수(kLa) 등을 예측합니다 2-3 . 이를 통해 최적의 임펠러 형상, 배치, 통기 방식 등을 결정할 수 있습니다 1-3 . 사례 : 4.1 m³ 산업 규모 교반 반응기의 CFD 모델링을 통해 동력 소모량, 액상 높이, 혼합 시간 등을 실험 데이터와 비교 검증하고, kLa 분포 분석을 통해 교반 속도를 최적화한 사례가 있습니다 1 . 스케일업 및 스케일다운 : 대규모 반응기에서 발생하는 혼합 및 전달 불균일성을 예측하고, 이를 기반으로 실험실 규모에서 실제 공정 조건을 모사하는 스케일다운 시스템을 합리적으로 설계하는 데 활용됩니다 1-2 . 사례 : 20 L 실험실 규모 STR과 4000 L 산업 규모 STR을 연결한 플러그 흐름 스케일다운 장치 설계 연구에서 CFD가 활용되었습니다 2 . CFD를 통해 규모 간 혼합 시간 차이를 계산하고, PFR 내 유동 거동 및 체류 시간 분포를 상세히 분석하여 스태틱 믹서의 영향 등을 평가했습니다 2 . 혼합 및 물질 전달 분석 : 고점도 유체, 비뉴턴 유체(예: 혐기성 소화조 기판), 고형물 현탁액 등 복잡한 유체의 혼합 효율성, 데드 존 형성, 미세 혼합 특성 등을 분석합니다 1-2 . 액체-기체, 액체-고체 간의 물질 전달 속도 및 분포를 예측하여 산소 전달 효율성 등을 평가합니다 1"
+    },
+    {
+        "url": "bioprocess_cfd_introduction.html",
+        "title": "Bioprocess CFD - 서론 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "CFD 소개"
+        ],
+        "keywords": [
+            "Bioprocess",
+            "CFD",
+            "서론",
+            "생물공학연구실"
+        ],
+        "content_snippet": "바이오프로세스 엔지니어링에서 생물반응기 설계 및 운전은 생산 효율성, 제품 품질, 경제성에 지대한 영향을 미칩니다. 특히 산업 규모의 대형 생물반응기는 규모 확장(scale-up)에 따라 혼합 불균일(gradient) 문제가 심화되어 기질, 용존 산소(DO), pH 등",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 Bioprocess CFD 홈으로 돌아가기 1. 서론 (Introduction) 바이오프로세스 엔지니어링에서 생물반응기 설계 및 운전은 생산 효율성, 제품 품질, 경제성에 지대한 영향을 미칩니다. 특히 산업 규모의 대형 생물반응기는 규모 확장(scale-up)에 따라 혼합 불균일(gradient) 문제가 심화되어 기질, 용존 산소(DO), pH 등의 국부 농도 편차가 발생하며 1-2 , 이는 세포의 생리적 활성과 대사 경로에 부정적인 영향을 미쳐 생산성 저하로 이어집니다 1-3 . 전통적인 실험적 접근 방식이나 단순 모델은 이러한 복잡한 시공간적 불균일성을 충분히 포착하지 못하는 한계를 가집니다 1-2 . 전산 유체 역학(Computational Fluid Dynamics, CFD) 은 생물반응기 내 유체의 유동, 혼합, 열 및 물질 전달, 전단 응력 분포 등을 상세하게 시뮬레이션할 수 있는 강력한 도구로 부상했습니다 1-5 . CFD는 복잡한 시스템의 유체 역학적 거동을 물리적으로 예측하여, 반응기 설계 개선, 최적 운전 조건 탐색, 그리고 효과적인 스케일업/스케일다운 전략 수립에 필수적인 정보를 제공합니다 1-3 . 최근에는 유체 역학 모델링에 세포 반응 동역학(Cellular Reaction Kinetics, CRK) 모델을 통합하여 세포가 실제 반응기 환경에서 경험하는 동적인 조건을 보다 정확하게 예측하고 분석하는 연구가 활발히 진행되고 있습니다 1-2 . 이러한 CFD-CRK 통합 접근 방식은 \"Industry 4.0\" 시대의 지능형 바이오 제조 및 디지털 트윈 구축을 위한 핵심 기술로 주목받고 있습니다 1-4 . 하지만 유체 역학(초 단위)과 생물학적 처리 과정(일 단위)의 현저히 다른 시간 스케일과 높은 계산 비용은 통합 모델링의 주요 도전 과제입니다 1-2 . 바이오프로세스 CFD는 단순히 유동을 예측하는 것을 넘어, 생물학적 현상과 공학적 원리를 통합적으로 이해하고"
+    },
+    {
+        "url": "bioprocess_cfd_software_comparison.html",
+        "title": "Bioprocess CFD - 소프트웨어 비교 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "Bioprocess CFD Simulation",
+            "소프트웨어 비교"
+        ],
+        "keywords": [
+            "Bioprocess",
+            "CFD",
+            "소프트웨어",
+            "비교",
+            "생물공학연구실"
+        ],
+        "content_snippet": "Bioprocess CFD 분야에서 활용되는 주요 소프트웨어는 사용 편의성, 기능, 성능, 비용, 지원 환경 등에 따라 다양합니다. 크게 상용 소프트웨어와 오픈소스 소프트웨어로 나눌 수 있습니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 Bioprocess CFD 홈으로 돌아가기 4. 주요 CFD 소프트웨어 비교 (Main CFD Software Comparison) Bioprocess CFD 분야에서 활용되는 주요 소프트웨어는 사용 편의성, 기능, 성능, 비용, 지원 환경 등에 따라 다양합니다. 크게 상용 소프트웨어와 오픈소스 소프트웨어로 나눌 수 있습니다. 주요 Bioprocess CFD 소프트웨어 분류 소프트웨어 주요 특징 및 Bioprocess 관련 강점 고려 사항 상용 ANSYS Fluent - 시장 점유율 1위, 광범위한 산업 분야에서 검증된 신뢰성 - 강력한 난류, 다상 유동(VOF, Euler-Euler, Euler-Lagrange), 반응 유동 모델링 기능 - 사용자 친화적 GUI, 풍부한 기술 지원 및 교육 자료 제공 - Bioprocess 분야 연구 및 산업 적용 사례 다수 1-2-6 높은 라이선스 비용, 복잡한 모델 구현 시 커스터마이징 제약 COMSOL Multiphysics - 다중 물리 현상(유동, 열 전달, 화학 반응, 전기화학, 구조 등) 연동 모델링에 강점 - 복잡한 생물학적 반응 및 세포 모델 통합에 유리 - GUI 기반 모델 설정 편리 ANSYS Fluent 대비 유체 역학 전문 기능은 일부 제한적일 수 있음, 높은 라이선스 비용 2-6 Simcenter STAR-CCM+ - Siemens PLM Software의 통합 CFD 솔루션 - 산업용 대규모 모델링에 적합, 강력한 전처리 및 후처리 기능 - 다양한 물리 모델 및 커스터마이징 옵션 제공 ANSYS Fluent와 유사한 특징 및 고려 사항, 높은 라이선스 비용 ANSYS CFX - ANSYS의 또 다른 범용 CFD 솔루션 - 회전 기계(펌프, 터빈 등) 유동 해석에 강점 - Fluent와 유사한 기능 제공 (일부 모델링 접근 방식 다름) 2-6 Fluent와 유사한 특징 및 고려 사항, Bioprocess 분야에서는 Flu"
+    },
+    {
+        "url": "bioprocess_cfd_theoretical_background.html",
+        "title": "Bioprocess CFD - 이론적 배경 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "Bioprocess CFD Simulation",
+            "이론적 배경"
+        ],
+        "keywords": [
+            "Bioprocess",
+            "CFD",
+            "이론적",
+            "배경",
+            "생물공학연구실"
+        ],
+        "content_snippet": "Bioprocess CFD는 유체의 질량, 운동량, 에너지 보존 방정식을 수치적으로 풀어 반응기 내 유체 흐름 및 관련 전달 현상을 모델링합니다 1 . 핵심은 비선형 편미분 방정식인 Navier-Stokes 방정식 의 해를 구하는 것입니다 1 . 실제 바이오프로세스에서",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 Bioprocess CFD 홈으로 돌아가기 2. 이론적 배경 (Theoretical Background) Bioprocess CFD는 유체의 질량, 운동량, 에너지 보존 방정식을 수치적으로 풀어 반응기 내 유체 흐름 및 관련 전달 현상을 모델링합니다 1 . 핵심은 비선형 편미분 방정식인 Navier-Stokes 방정식 의 해를 구하는 것입니다 1 . 실제 바이오프로세스에서는 난류, 다상 유동, 화학 반응, 생물학적 활성 등 다양한 물리화학 및 생물학적 현상이 복합적으로 발생하므로, 이러한 현상을 효과적으로 모델링하기 위한 추가적인 이론적 및 수치적 기법들이 필요합니다. 주요 모델링 기법 및 방정식 1. 기본 방정식: 질량 보존 방정식 (연속 방정식) 운동량 보존 방정식 (Navier-Stokes 방정식): 유체의 점성 및 압력에 의한 힘과 외부 힘(예: 중력, 교반력) 하에서의 유체 운동량을 기술합니다. 에너지 보존 방정식: 열 전달 및 온도 변화를 기술합니다. 성분 전달 방정식: 특정 화학종(기질, 산물, 용존 가스 등)의 농도 변화를 확산 및 대류 효과를 포함하여 기술합니다. 2. 난류 모델: 바이오리액터 내부는 대부분 난류 유동이므로, 난류의 불규칙하고 복잡한 특성을 모델링해야 합니다 1 . Reynolds 평균 Navier-Stokes (RANS) 방정식 : 순간적인 유동 변수를 시간 평균값과 변동 성분으로 나누어 평균 유동을 모델링합니다. 추가적인 모델(난류 모델)을 통해 난류 응력 항을 계산합니다 1 . k-ε 모델 : 가장 널리 사용되는 모델로, 난류 운동 에너지(k)와 소산율(ε)에 대한 수송 방정식을 풉니다. realizable k-ε 모델 등 개선된 버전이 사용됩니다 1 . k-ω 모델 : 벽 근처 유동 해석에 강점을 가집니다. k-ω SST(Shear Stress Transport) 모델은 k-ε 모델의 강점(자유 유동)과 k-ω 모델의 강점(벽 근처)을 결합하"
+    },
+    {
+        "url": "bp_eng_animal_cell_cho.html",
+        "title": "CHO 세포 배양 - 동물세포배양 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "동물세포배양",
+            "CHO 세포 배양"
+        ],
+        "keywords": [
+            "CHO",
+            "세포",
+            "배양",
+            "동물세포배양",
+            "생물공학연구실"
+        ],
+        "content_snippet": "바이오의약품 생산의 핵심 세포주인 CHO (Chinese Hamster Ovary) 세포 배양 기술 및 최적화 연구를 다룹니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 CHO 세포 배양 (CHO Cell Culture) 바이오의약품 생산의 핵심 세포주인 CHO (Chinese Hamster Ovary) 세포 배양 기술 및 최적화 연구를 다룹니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_animal_cell_hek293.html",
+        "title": "HEK293 세포 배양 - 동물세포배양 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "동물세포배양",
+            "HEK293 세포 배양"
+        ],
+        "keywords": [
+            "HEK293",
+            "세포",
+            "배양",
+            "동물세포배양",
+            "생물공학연구실"
+        ],
+        "content_snippet": "단백질 발현 및 바이러스 벡터 생산 등에 사용되는 HEK293 세포 배양 기술을 소개합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 HEK293 세포 배양 (HEK293 Cell Culture) 단백질 발현 및 바이러스 벡터 생산 등에 사용되는 HEK293 세포 배양 기술을 소개합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_animal_cell_main.html",
+        "title": "동물세포배양 - 세포배양공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "동물세포배양"
+        ],
+        "keywords": [
+            "동물세포배양",
+            "세포배양공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "항체 및 재조합 단백질 생산에 널리 사용되는 동물세포배양 기술을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 동물세포배양 (Animal Cell Culture) 항체 및 재조합 단백질 생산에 널리 사용되는 동물세포배양 기술을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다. CHO 세포 배양 (CHO Cell Culture) HEK293 세포 배양 (HEK293 Cell Culture) 기타 세포주 배양 (Other Animal Cell Lines) 콘텐츠 준비 중 동물세포배양에 대한 상세 내용이 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_animal_cell_other.html",
+        "title": "기타 세포주 배양 - 동물세포배양 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "동물세포배양",
+            "기타 세포주 배양"
+        ],
+        "keywords": [
+            "기타",
+            "세포주",
+            "배양",
+            "동물세포배양",
+            "생물공학연구실"
+        ],
+        "content_snippet": "CHO, HEK293 외 다양한 특수 목적의 동물 세포주 배양 기술 및 응용 사례를 다룹니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 기타 세포주 배양 (Other Animal Cell Lines) CHO, HEK293 외 다양한 특수 목적의 동물 세포주 배양 기술 및 응용 사례를 다룹니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_downstream_formulation_fill_finish.html",
+        "title": "최종 제형 및 충전 - 다운스트림 공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "다운스트림 공정",
+            "최종 제형 및 충전"
+        ],
+        "keywords": [
+            "최종",
+            "제형",
+            "및",
+            "충전",
+            "다운스트림",
+            "공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "정제된 바이오의약품을 안정적인 형태로 만들고 최종 용기에 충전하는 완제의약품 제조 단계를 다룹니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 최종 제형 및 충전 (Formulation & Fill‑Finish) 정제된 바이오의약품을 안정적인 형태로 만들고 최종 용기에 충전하는 완제의약품 제조 단계를 다룹니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_downstream_harvest_clarification.html",
+        "title": "수확 및 정화 - 다운스트림 공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "다운스트림 공정",
+            "수확 및 정화"
+        ],
+        "keywords": [
+            "수확",
+            "및",
+            "정화",
+            "다운스트림",
+            "공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "배양액으로부터 세포 및 세포 파편을 제거하여 초기 정제물을 얻는 수확 및 정화 단계를 설명합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 수확 및 정화 (Harvest & Clarification) 배양액으로부터 세포 및 세포 파편을 제거하여 초기 정제물을 얻는 수확 및 정화 단계를 설명합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_downstream_intermediate_purification.html",
+        "title": "중간 정제 - 다운스트림 공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "다운스트림 공정",
+            "중간 정제"
+        ],
+        "keywords": [
+            "중간",
+            "정제",
+            "다운스트림",
+            "공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "캡처 정제 후 남아있는 불순물을 추가적으로 제거하여 단백질 순도를 높이는 단계입니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 중간 정제 (Intermediate Purification) 캡처 정제 후 남아있는 불순물을 추가적으로 제거하여 단백질 순도를 높이는 단계입니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_downstream_main.html",
+        "title": "다운스트림 공정 - 세포배양공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "다운스트림 공정"
+        ],
+        "keywords": [
+            "다운스트림",
+            "공정",
+            "세포배양공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "배양액으로부터 목표 바이오의약품을 분리하고 정제하는 다운스트림 공정의 주요 단계 및 기술을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 다운스트림 공정 (Downstream Processing) 배양액으로부터 목표 바이오의약품을 분리하고 정제하는 다운스트림 공정의 주요 단계 및 기술을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다. 수확 및 정화 (Harvest & Clarification) 캡처 정제 (Primary Capture) 중간 정제 (Intermediate Purification) 고도 정제 (폴리싱) (Polishing Purification) 바이러스 제거 및 불활화 (Viral Clearance) 최종 제형 및 충전 (Formulation & Fill‑Finish) 콘텐츠 준비 중 다운스트림 공정에 대한 상세 내용이 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_downstream_polishing_purification.html",
+        "title": "고도 정제 (폴리싱) - 다운스트림 공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "다운스트림 공정",
+            "고도 정제 (폴리싱)"
+        ],
+        "keywords": [
+            "고도",
+            "정제",
+            "폴리싱",
+            "다운스트림",
+            "공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "최종 제품의 순도 및 안전성 기준을 만족시키기 위한 마지막 정제 단계입니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 고도 정제 (폴리싱) (Polishing Purification) 최종 제품의 순도 및 안전성 기준을 만족시키기 위한 마지막 정제 단계입니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_downstream_primary_capture.html",
+        "title": "캡처 정제 - 다운스트림 공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "다운스트림 공정",
+            "캡처 정제"
+        ],
+        "keywords": [
+            "캡처",
+            "정제",
+            "다운스트림",
+            "공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "목표 단백질을 선택적으로 포획하여 농축하고 주요 불순물을 제거하는 1차 정제 단계입니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 캡처 정제 (Primary Capture) 목표 단백질을 선택적으로 포획하여 농축하고 주요 불순물을 제거하는 1차 정제 단계입니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_downstream_viral_clearance.html",
+        "title": "바이러스 제거 및 불활화 - 다운스트림 공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "다운스트림 공정",
+            "바이러스 제거 및 불활화"
+        ],
+        "keywords": [
+            "바이러스",
+            "제거",
+            "및",
+            "불활화",
+            "다운스트림",
+            "공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "바이오의약품의 안전성을 확보하기 위한 바이러스 제거 및 불활화 공정을 설명합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 바이러스 제거 및 불활화 (Viral Clearance) 바이오의약품의 안전성을 확보하기 위한 바이러스 제거 및 불활화 공정을 설명합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_intro_biopharma_overview.html",
+        "title": "바이오의약품 제조 공정 개요 - 세포배양공정이란? | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "세포배양공정이란?",
+            "바이오의약품 제조 공정 개요"
+        ],
+        "keywords": [
+            "바이오의약품",
+            "제조",
+            "공정",
+            "개요",
+            "세포배양공정이란",
+            "생물공학연구실"
+        ],
+        "content_snippet": "바이오의약품 제조의 전체적인 공정 흐름과 각 단계별 특징을 개괄적으로 설명합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 바이오의약품 제조 공정 개요 (Biopharmaceutical Manufacturing Overview) 바이오의약품 제조의 전체적인 공정 흐름과 각 단계별 특징을 개괄적으로 설명합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_intro_concept_scope.html",
+        "title": "개념 및 범위 - 세포배양공정이란? | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "세포배양공정이란?",
+            "개념 및 범위"
+        ],
+        "keywords": [
+            "개념",
+            "및",
+            "범위",
+            "세포배양공정이란",
+            "생물공학연구실"
+        ],
+        "content_snippet": "세포배양공정의 핵심 개념과 그 연구 및 적용 범위를 상세히 설명합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 개념 및 범위 (Concept & Scope) 세포배양공정의 핵심 개념과 그 연구 및 적용 범위를 상세히 설명합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_intro_main.html",
+        "title": "세포배양공정이란? - 세포배양공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "세포배양공정이란?"
+        ],
+        "keywords": [
+            "세포배양공정이란",
+            "세포배양공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "이 페이지는 세포배양공정의 기본적인 소개를 다룹니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 세포배양공정이란? (Introduction) 이 페이지는 세포배양공정의 기본적인 소개를 다룹니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다. 개념 및 범위 (Concept & Scope) 바이오의약품 제조 공정 개요 (Biopharmaceutical Manufacturing Overview) 콘텐츠 준비 중 세포배양공정에 대한 소개 내용이 곧 업데이트될 예정입니다. 감사합니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     },
     {
         "url": "bp_eng_main.html",
         "title": "세포배양공정 - 생물공학연구실",
-        "breadcrumb": ["홈", "세포배양공정"],
-        "keywords": ["세포배양공정", "Bioprocess Engineering", "개요"],
-        "content_snippet": "세포배양공정 전반을 소개하고 하위 연구 주제로 이동할 수 있습니다.",
-        "full_text": "세포배양공정 메인 페이지. 업스트림과 다운스트림 등 세부 항목 안내."
-    },
-    {
-        "url": "bp_eng_intro_main.html",
-        "title": "세포배양공정이란? - 세포배양공정",
-        "breadcrumb": ["홈", "세포배양공정", "세포배양공정이란?"],
-        "keywords": ["세포배양공정", "Introduction", "Bioprocess Engineering"],
-        "content_snippet": "세포배양공정의 기본 개념, 범위, 그리고 바이오의약품 제조 공정에서의 중요성을 소개합니다.",
-        "full_text": "세포배양공정 소개. 개념 및 범위, 바이오의약품 제조 공정 개요. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "bp_eng_intro_concept_scope.html",
-        "title": "개념 및 범위 - 세포배양공정이란?",
-        "breadcrumb": ["홈", "세포배양공정", "세포배양공정이란?", "개념 및 범위"],
-        "keywords": ["세포배양공정", "개념", "범위", "Concept", "Scope"],
-        "content_snippet": "세포배양공정의 핵심 개념과 연구 및 적용 범위를 설명합니다.",
-        "full_text": "세포배양공정의 개념 및 범위 상세 설명. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "bp_eng_intro_biopharma_overview.html",
-        "title": "바이오의약품 제조 공정 개요 - 세포배양공정이란?",
-        "breadcrumb": ["홈", "세포배양공정", "세포배양공정이란?", "바이오의약품 제조 공정 개요"],
-        "keywords": ["바이오의약품", "제조 공정", "Biopharmaceutical Manufacturing"],
-        "content_snippet": "바이오의약품 제조의 전체적인 공정 흐름과 각 단계별 특징을 개괄적으로 설명합니다.",
-        "full_text": "바이오의약품 제조 공정 개요. 업스트림부터 다운스트림까지의 주요 단계 포함. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "bp_eng_upstream_main.html",
-        "title": "업스트림 공정 - 세포배양공정",
-        "breadcrumb": ["홈", "세포배양공정", "업스트림 공정"],
-        "keywords": ["업스트림 공정", "Upstream Processing", "세포주 개발", "배지 최적화", "바이오리액터"],
-        "content_snippet": "세포배양공정의 업스트림 단계 주요 기술 및 연구 분야를 다룹니다.",
-        "full_text": "업스트림 공정 상세. 세포주 개발, 세포배양 배지 최적화, 배양 조건 설계, 바이오리액터 운전, 스케일업/다운. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "bp_eng_upstream_cell_line_dev.html",
-        "title": "세포주 개발 - 업스트림 공정",
-        "breadcrumb": ["홈", "세포배양공정", "업스트림 공정", "세포주 개발"],
-        "keywords": ["세포주 개발", "Cell Line Development", "유전자 재조합"],
-        "content_snippet": "고생산성 및 고품질의 바이오의약품 생산을 위한 세포주 개발 전략 및 기술을 소개합니다.",
-        "full_text": "세포주 개발 기술 및 방법론. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "bp_eng_upstream_media_opt.html",
-        "title": "세포배양 배지 최적화 - 업스트림 공정",
-        "breadcrumb": ["홈", "세포배양공정", "업스트림 공정", "세포배양 배지 최적화"],
-        "keywords": ["세포배양 배지", "배지 최적화", "Media Optimization"],
-        "content_snippet": "세포 성장 및 단백질 생산성 향상을 위한 세포배양 배지 조성 최적화 연구를 다룹니다.",
-        "full_text": "세포배양 배지 최적화 전략 및 사례. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "bp_eng_upstream_culture_condition.html",
-        "title": "배양 조건 설계 및 최적화 - 업스트림 공정",
-        "breadcrumb": ["홈", "세포배양공정", "업스트림 공정", "배양 조건 설계 및 최적화"],
-        "keywords": ["배양 조건", "설계", "최적화", "Culture Condition"],
-        "content_snippet": "최적의 세포 배양 환경 구축을 위한 온도, pH, 용존산소 등 주요 배양 조건 설계 및 최적화 방법을 설명합니다.",
-        "full_text": "배양 조건 설계 및 최적화 기법. (본 페이지는 현재 준비 중입니다.)"
+        "breadcrumb": [
+            "홈",
+            "세포배양공정"
+        ],
+        "keywords": [
+            "세포배양공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "Bioprocess Engineering",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 세포배양공정 (Bioprocess Engineering) Bioprocess Engineering 세포배양공정은 바이오의약품 생산을 위한 핵심 기반 기술로, 업스트림부터 다운스트림까지 여러 단계의 공정을 포함합니다. 아래 항목을 통해 각 세부 분야의 내용을 살펴보세요. 세포배양공정이란? 세포배양공정의 기본 개념과 역할을 소개합니다. 업스트림 공정 세포주 개발과 배양 조건 최적화 등 초기 공정을 다룹니다. 동물세포배양 CHO, HEK293 등 주요 세포주의 배양 기술을 살펴봅니다. 다운스트림 공정 정제 및 회수 등 생산 후반 공정을 소개합니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     },
     {
         "url": "bp_eng_upstream_bioreactor_strategy.html",
-        "title": "바이오리액터 운전 전략 - 업스트림 공정",
-        "breadcrumb": ["홈", "세포배양공정", "업스트림 공정", "바이오리액터 운전 전략"],
-        "keywords": ["바이오리액터", "운전 전략", "Bioreactor Operation"],
+        "title": "바이오리액터 운전 전략 - 업스트림 공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "업스트림 공정",
+            "바이오리액터 운전 전략"
+        ],
+        "keywords": [
+            "바이오리액터",
+            "운전",
+            "전략",
+            "업스트림",
+            "공정",
+            "생물공학연구실"
+        ],
         "content_snippet": "바이오리액터의 효율적인 운전을 위한 다양한 전략(예: 유가식 배양, 연속 배양)을 소개합니다.",
-        "full_text": "바이오리액터 운전 전략 및 제어. (본 페이지는 현재 준비 중입니다.)"
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 바이오리액터 운전 전략 (Bioreactor Operation Strategy) 바이오리액터의 효율적인 운전을 위한 다양한 전략(예: 유가식 배양, 연속 배양)을 소개합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_upstream_cell_line_dev.html",
+        "title": "세포주 개발 - 업스트림 공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "업스트림 공정",
+            "세포주 개발"
+        ],
+        "keywords": [
+            "세포주",
+            "개발",
+            "업스트림",
+            "공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "고생산성 및 고품질의 바이오의약품 생산을 위한 세포주 개발 전략 및 기술을 소개합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 세포주 개발 (Cell Line Development) 고생산성 및 고품질의 바이오의약품 생산을 위한 세포주 개발 전략 및 기술을 소개합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_upstream_culture_condition.html",
+        "title": "배양 조건 설계 및 최적화 - 업스트림 공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "업스트림 공정",
+            "배양 조건 설계 및 최적화"
+        ],
+        "keywords": [
+            "배양",
+            "조건",
+            "설계",
+            "및",
+            "최적화",
+            "업스트림",
+            "공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "최적의 세포 배양 환경 구축을 위한 온도, pH, 용존산소 등 주요 배양 조건 설계 및 최적화 방법을 설명합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 배양 조건 설계 및 최적화 (Culture Condition Design & Optimization) 최적의 세포 배양 환경 구축을 위한 온도, pH, 용존산소 등 주요 배양 조건 설계 및 최적화 방법을 설명합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_upstream_main.html",
+        "title": "업스트림 공정 - 세포배양공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "업스트림 공정"
+        ],
+        "keywords": [
+            "업스트림",
+            "공정",
+            "세포배양공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "세포배양공정의 업스트림 단계와 관련된 주요 기술 및 연구 분야를 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 업스트림 공정 (Upstream Processing) 세포배양공정의 업스트림 단계와 관련된 주요 기술 및 연구 분야를 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다. 세포주 개발 (Cell Line Development) 세포배양 배지 최적화 (Cell Culture Media Optimization) 배양 조건 설계 및 최적화 (Culture Condition Design & Optimization) 바이오리액터 운전 전략 (Bioreactor Operation Strategy) 공정 스케일업·다운 (Process Scale‑up & Scale‑down) 콘텐츠 준비 중 업스트림 공정에 대한 상세 내용이 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "bp_eng_upstream_media_opt.html",
+        "title": "세포배양 배지 최적화 - 업스트림 공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "업스트림 공정",
+            "세포배양 배지 최적화"
+        ],
+        "keywords": [
+            "세포배양",
+            "배지",
+            "최적화",
+            "업스트림",
+            "공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "세포 성장 및 단백질 생산성 향상을 위한 세포배양 배지 조성 최적화 연구를 다룹니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 세포배양 배지 최적화 (Cell Culture Media Optimization) 세포 성장 및 단백질 생산성 향상을 위한 세포배양 배지 조성 최적화 연구를 다룹니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     },
     {
         "url": "bp_eng_upstream_scaleup_down.html",
-        "title": "공정 스케일업·다운 - 업스트림 공정",
-        "breadcrumb": ["홈", "세포배양공정", "업스트림 공정", "공정 스케일업·다운"],
-        "keywords": ["스케일업", "스케일다운", "Scale-up", "Scale-down"],
+        "title": "공정 스케일업·다운 - 업스트림 공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포배양공정",
+            "업스트림 공정",
+            "공정 스케일업·다운"
+        ],
+        "keywords": [
+            "공정",
+            "스케일업다운",
+            "업스트림",
+            "공정",
+            "생물공학연구실"
+        ],
         "content_snippet": "실험실 규모에서 상업 생산 규모로, 또는 그 반대로 공정 규모를 변경하는 스케일업 및 스케일다운 전략과 고려사항을 다룹니다.",
-        "full_text": "공정 스케일업 및 스케일다운 방법론. (본 페이지는 현재 준비 중입니다.)"
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 공정 스케일업·다운 (Process Scale‑up & Scale‑down) 실험실 규모에서 상업 생산 규모로, 또는 그 반대로 공정 규모를 변경하는 스케일업 및 스케일다운 전략과 고려사항을 다룹니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     },
     {
-        "url": "bp_eng_animal_cell_main.html",
-        "title": "동물세포배양 - 세포배양공정",
-        "breadcrumb": ["홈", "세포배양공정", "동물세포배양"],
-        "keywords": ["동물세포배양", "Animal Cell Culture", "CHO", "HEK293"],
-        "content_snippet": "항체 및 재조합 단백질 생산에 널리 사용되는 동물세포배양 기술을 소개합니다.",
-        "full_text": "동물세포배양 기술 개요. CHO 세포, HEK293 세포 및 기타 동물 세포주 배양. (본 페이지는 현재 준비 중입니다.)"
+        "url": "cfd_core_theory.html",
+        "title": "CFD 핵심 이론 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "핵심 이론"
+        ],
+        "keywords": [
+            "CFD",
+            "핵심",
+            "이론",
+            "생물공학연구실"
+        ],
+        "content_snippet": "CFD 해석은 유체 유동을 지배하는 기본 물리 법칙, 특히 보존 방정식을 기반으로 합니다. 난류 유동의 처리를 위한 난류 모델링 또한 핵심적인 부분이며, 최근에는 전통적인 Navier-Stokes 방정식 기반 모델 외에도 격자 볼츠만 방법(LBM)과 같은 다양한 접근법",
+        "full_text": "생물공학연구실 검색 CFD 핵심 이론 CFD 해석은 유체 유동을 지배하는 기본 물리 법칙, 특히 보존 방정식을 기반으로 합니다. 난류 유동의 처리를 위한 난류 모델링 또한 핵심적인 부분이며, 최근에는 전통적인 Navier-Stokes 방정식 기반 모델 외에도 격자 볼츠만 방법(LBM)과 같은 다양한 접근법이 활용되고 있습니다. 해석 수행(Solving) 단계에서 사용되는 다양한 수치 해석 기법, 난류 모델, 다상 유동 모델 등에 대한 상세한 비교 및 설명은 CFD Solving 페이지 에서 확인할 수 있습니다. 지배 방정식 (Governing Equations) 유체 유동은 연속체 역학에 의해 지배되며, 다음과 같은 보존 법칙을 따릅니다. 연속 방정식 (Continuity Equation) - 질량 보존 특정 체적 요소 내에서 질량의 변화율은 그 체적 경계를 통과하는 질량 유량의 순 흐름과 같다는 원리입니다. ∂ρ/∂t + ∇ ⋅ (ρu) = 0 ( ρ : 밀도, u : 속도 벡터, t : 시간, ∇ : 나블라 연산자) 비압축성 유동( ρ = const. )의 경우 ∇ ⋅ u = 0 으로 단순화됩니다. 운동량 방정식 (Momentum Equation) - Navier-Stokes 방정식 뉴턴의 제2법칙(F=ma)을 유체 요소에 적용한 것으로, 유체 요소에 작용하는 힘(압력 구배력, 점성력, 체적력 등)과 그로 인한 운동량 변화율의 균형을 나타냅니다. ρ Du/Dt = -∇p + μ∇²u + f ( p : 압력, μ : 동점성 계수, ∇² : 라플라시안 연산자, f : 체적력 벡터) 여기서 Du/Dt = ∂u/∂t + (u ⋅ ∇)u 는 물질 도함수(Material derivative)로, 시간 변화율과 이류(Convection) 항을 포함합니다. Navier-Stokes 방정식은 비선형적이며, 해석적 해는 매우 제한적인 경우에만 존재합니다. 3차원 Navier-Stokes 방정식의 매끄러운 해의 존재성과 유일성은 아직 수학적으로 증명되지 않은 난제입니다. 에너"
     },
     {
-        "url": "bp_eng_animal_cell_cho.html",
-        "title": "CHO 세포 배양 - 동물세포배양",
-        "breadcrumb": ["홈", "세포배양공정", "동물세포배양", "CHO 세포 배양"],
-        "keywords": ["CHO 세포", "Chinese Hamster Ovary", "항체 생산"],
-        "content_snippet": "바이오의약품 생산의 핵심 세포주인 CHO (Chinese Hamster Ovary) 세포 배양 기술 및 최적화 연구를 다룹니다.",
-        "full_text": "CHO 세포 배양 기술 상세. (본 페이지는 현재 준비 중입니다.)"
+        "url": "cfd_introduction.html",
+        "title": "CFD 서론 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "CFD 소개"
+        ],
+        "keywords": [
+            "CFD",
+            "서론",
+            "생물공학연구실"
+        ],
+        "content_snippet": "CFD는 유체 역학의 기본 법칙(주로 Navier-Stokes 방정식)을 나타내는 편미분 방정식을 컴퓨터를 사용하여 수치적으로 해를 구함으로써 유체 흐름의 물리적 현상을 시뮬레이션하는 공학 분야입니다. 복잡한 유동 문제를 해석하고 설계 단계에서 성능을 예측하는 데 사용",
+        "full_text": "생물공학연구실 검색 CFD 서론 CFD의 정의 및 기본 개념 CFD는 유체 역학의 기본 법칙(주로 Navier-Stokes 방정식)을 나타내는 편미분 방정식을 컴퓨터를 사용하여 수치적으로 해를 구함으로써 유체 흐름의 물리적 현상을 시뮬레이션하는 공학 분야입니다. 복잡한 유동 문제를 해석하고 설계 단계에서 성능을 예측하는 데 사용됩니다. 역사적 배경 Lewis Fry Richardson의 1920년대 수치 예보 시도가 초기 개념의 시초가 되었으며, 디지털 컴퓨터가 등장한 1950-60년대부터 Navier-Stokes 방정식의 실제 공학 문제 적용 가능성이 열렸습니다. 1970년대에는 Boeing, NASA 등에서 실용적인 CFD 소프트웨어를 개발하며 산업 현장 적용이 본격화되었습니다. Navier와 Stokes가 각각 1822년과 1845년에 점성 효과를 포함한 운동 방정식을 독립적으로 도출하며 이론적 토대가 마련되었습니다. 중요성 및 가치 CFD는 시간과 비용이 많이 소요되는 물리적 실험(예: 풍동 실험)을 대체하거나 보완하여 설계 주기 단축 및 비용 절감에 기여합니다. 또한, 실험으로 측정하기 어려운 영역의 상세한 유동 정보를 제공하여 현상 이해도를 높이고 설계 최적화 기회를 제공합니다. 주요 적용 분야 CFD는 현대 엔지니어링의 필수 도구로서 다음과 같은 광범위한 분야에 적용됩니다: 항공우주 : 항공기 및 로켓 외부 유동, 엔진 내부 유동 해석 자동차 : 공력 성능 개선, 열 관리, HVAC 시스템 분석 에너지 : 풍력 터빈 공력, 수력 터빈 설계, 발전소 열 유동 해석 건축 및 도시 환경 : 건물 주변 보행자 풍 환경 분석, 자연 환기 설계, 실내 공기질 예측 화학 및 공정 산업 : 반응기 설계, 혼합 공정 분석 의공학 : 혈류 해석, 약물 전달 시뮬레이션 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-"
     },
     {
-        "url": "bp_eng_animal_cell_hek293.html",
-        "title": "HEK293 세포 배양 - 동물세포배양",
-        "breadcrumb": ["홈", "세포배양공정", "동물세포배양", "HEK293 세포 배양"],
-        "keywords": ["HEK293 세포", "Human Embryonic Kidney 293", "단백질 발현"],
-        "content_snippet": "단백질 발현 및 바이러스 벡터 생산 등에 사용되는 HEK293 세포 배양 기술을 소개합니다.",
-        "full_text": "HEK293 세포 배양 기술 상세. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "bp_eng_animal_cell_other.html",
-        "title": "기타 세포주 배양 - 동물세포배양",
-        "breadcrumb": ["홈", "세포배양공정", "동물세포배양", "기타 세포주 배양"],
-        "keywords": ["기타 동물 세포주", "Other Animal Cell Lines", "특수 세포"],
-        "content_snippet": "CHO, HEK293 외 다양한 특수 목적의 동물 세포주 배양 기술 및 응용 사례를 다룹니다.",
-        "full_text": "기타 동물 세포주 배양 기술. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "bp_eng_downstream_main.html",
-        "title": "다운스트림 공정 - 세포배양공정",
-        "breadcrumb": ["홈", "세포배양공정", "다운스트림 공정"],
-        "keywords": ["다운스트림 공정", "Downstream Processing", "정제", "분리"],
-        "content_snippet": "배양액으로부터 목표 바이오의약품을 분리하고 정제하는 다운스트림 공정의 주요 단계 및 기술을 소개합니다.",
-        "full_text": "다운스트림 공정 기술 개요. 수확 및 정화, 캡처 정제, 중간 정제, 고도 정제, 바이러스 제거, 최종 제형 및 충전. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "bp_eng_downstream_harvest_clarification.html",
-        "title": "수확 및 정화 - 다운스트림 공정",
-        "breadcrumb": ["홈", "세포배양공정", "다운스트림 공정", "수확 및 정화"],
-        "keywords": ["수확", "정화", "Harvest", "Clarification", "세포분리"],
-        "content_snippet": "배양액으로부터 세포 및 세포 파편을 제거하여 초기 정제물을 얻는 수확 및 정화 단계를 설명합니다.",
-        "full_text": "수확 및 정화 기술. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "bp_eng_downstream_primary_capture.html",
-        "title": "캡처 정제 - 다운스트림 공정",
-        "breadcrumb": ["홈", "세포배양공정", "다운스트림 공정", "캡처 정제"],
-        "keywords": ["캡처 정제", "Primary Capture", "Protein A"],
-        "content_snippet": "목표 단백질을 선택적으로 포획하여 농축하고 주요 불순물을 제거하는 1차 정제 단계입니다.",
-        "full_text": "캡처 정제 기술 및 크로마토그래피. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "bp_eng_downstream_intermediate_purification.html",
-        "title": "중간 정제 - 다운스트림 공정",
-        "breadcrumb": ["홈", "세포배양공정", "다운스트림 공정", "중간 정제"],
-        "keywords": ["중간 정제", "Intermediate Purification", "이온교환크로마토그래피"],
-        "content_snippet": "캡처 정제 후 남아있는 불순물을 추가적으로 제거하여 단백질 순도를 높이는 단계입니다.",
-        "full_text": "중간 정제 기술 및 전략. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "bp_eng_downstream_polishing_purification.html",
-        "title": "고도 정제 (폴리싱) - 다운스트림 공정",
-        "breadcrumb": ["홈", "세포배양공정", "다운스트림 공정", "고도 정제 (폴리싱)"],
-        "keywords": ["고도 정제", "폴리싱", "Polishing Purification", "겔여과크로마토그래피"],
-        "content_snippet": "최종 제품의 순도 및 안전성 기준을 만족시키기 위한 마지막 정제 단계입니다.",
-        "full_text": "고도 정제 (폴리싱) 기술. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "bp_eng_downstream_viral_clearance.html",
-        "title": "바이러스 제거 및 불활화 - 다운스트림 공정",
-        "breadcrumb": ["홈", "세포배양공정", "다운스트림 공정", "바이러스 제거 및 불활화"],
-        "keywords": ["바이러스 제거", "불활화", "Viral Clearance", "안전성"],
-        "content_snippet": "바이오의약품의 안전성을 확보하기 위한 바이러스 제거 및 불활화 공정을 설명합니다.",
-        "full_text": "바이러스 제거 및 불활화 전략. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "bp_eng_downstream_formulation_fill_finish.html",
-        "title": "최종 제형 및 충전 - 다운스트림 공정",
-        "breadcrumb": ["홈", "세포배양공정", "다운스트림 공정", "최종 제형 및 충전"],
-        "keywords": ["제형", "충전", "Formulation", "Fill-Finish", "완제의약품"],
-        "content_snippet": "정제된 바이오의약품을 안정적인 형태로 만들고 최종 용기에 충전하는 완제의약품 제조 단계를 다룹니다.",
-        "full_text": "최종 제형 및 충전 공정. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "proc_opt_main.html",
-        "title": "세포 배양 공정 최적화 - 생물공학연구실",
-        "breadcrumb": ["홈", "세포 배양 공정 최적화"],
-        "keywords": ["공정 최적화", "Process Optimization", "개요"],
-        "content_snippet": "세포 배양 공정 최적화 연구 전반을 소개하는 메인 페이지입니다.",
-        "full_text": "세포 배양 공정 최적화 메인 페이지. 공정 설계, 분석 및 최신 동향으로 이동할 수 있습니다."
-    },
-    {
-        "url": "proc_opt_overview_main.html",
-        "title": "연구 개요 - 세포 배양 공정 최적화",
-        "breadcrumb": ["홈", "세포 배양 공정 최적화", "연구 개요"],
-        "keywords": ["공정 최적화", "연구 개요", "Process Optimization Overview"],
-        "content_snippet": "세포 배양 공정 최적화 연구의 목적, 필요성 및 주요 접근 전략을 소개합니다.",
-        "full_text": "세포 배양 공정 최적화 연구 개요. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "proc_opt_overview_purpose_necessity.html",
-        "title": "연구 목적 및 필요성 - 공정 최적화 연구 개요",
-        "breadcrumb": ["홈", "세포 배양 공정 최적화", "연구 개요", "연구 목적 및 필요성"],
-        "keywords": ["연구 목적", "필요성", "Purpose", "Necessity"],
-        "content_snippet": "세포 배양 공정 최적화 연구가 왜 중요하며, 이를 통해 달성하고자 하는 목표는 무엇인지 설명합니다.",
-        "full_text": "세포 배양 공정 최적화 연구의 목적과 필요성. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "proc_opt_overview_approach_strategy.html",
-        "title": "접근 전략 - 공정 최적화 연구 개요",
-        "breadcrumb": ["홈", "세포 배양 공정 최적화", "연구 개요", "접근 전략"],
-        "keywords": ["접근 전략", "Approach", "Strategy", "방법론"],
-        "content_snippet": "세포 배양 공정 최적화를 위해 본 연구실에서 사용하는 주요 접근 방법 및 연구 전략을 소개합니다.",
-        "full_text": "세포 배양 공정 최적화를 위한 접근 전략 및 방법론. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "proc_opt_dev_analytics_main.html",
-        "title": "배양 공정 설계 및 분석 - 세포 배양 공정 최적화",
-        "breadcrumb": ["홈", "세포 배양 공정 최적화", "배양 공정 설계 및 분석"],
-        "keywords": ["공정 설계", "공정 분석", "Process Development", "Analytics"],
-        "content_snippet": "효율적인 세포 배양 공정 개발을 위한 설계 방법론과 데이터 기반 공정 분석 기술을 다룹니다.",
-        "full_text": "배양 공정 설계 및 분석 기술. 공정 조건 최적화, 데이터 기반 공정 분석. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "proc_opt_dev_analytics_param_opt.html",
-        "title": "공정 조건 최적화 - 배양 공정 설계 및 분석",
-        "breadcrumb": ["홈", "세포 배양 공정 최적화", "배양 공정 설계 및 분석", "공정 조건 최적화"],
-        "keywords": ["공정 조건 최적화", "Parameter Optimization", "DoE"],
-        "content_snippet": "실험계획법(DoE) 등 통계적 방법을 활용한 공정 변수 최적화 전략을 소개합니다.",
-        "full_text": "공정 조건 최적화 방법론. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "proc_opt_dev_analytics_data_driven.html",
-        "title": "데이터 기반 공정 분석 - 배양 공정 설계 및 분석",
-        "breadcrumb": ["홈", "세포 배양 공정 최적화", "배양 공정 설계 및 분석", "데이터 기반 공정 분석"],
-        "keywords": ["데이터 기반 분석", "Data-driven Analytics", "PAT", "QbD"],
-        "content_snippet": "공정분석기술(PAT), 품질기반설계(QbD) 등 데이터 중심의 공정 이해 및 개선 방법을 다룹니다.",
-        "full_text": "데이터 기반 공정 분석 기술. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "proc_opt_trends_main.html",
-        "title": "최신 연구 동향 - 세포 배양 공정 최적화",
-        "breadcrumb": ["홈", "세포 배양 공정 최적화", "최신 연구 동향"],
-        "keywords": ["최신 연구 동향", "Latest Research Trends", "논문", "특허"],
-        "content_snippet": "세포 배양 공정 최적화 분야의 최신 연구 성과, 산업 및 학술 동향을 소개합니다.",
-        "full_text": "세포 배양 공정 최적화 최신 연구 동향. 주요 연구 성과, 산업 및 학술 동향. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "proc_opt_trends_publications_patents.html",
-        "title": "주요 연구 성과 - 공정 최적화 최신 연구 동향",
-        "breadcrumb": ["홈", "세포 배양 공정 최적화", "최신 연구 동향", "주요 연구 성과"],
-        "keywords": ["연구 성과", "논문", "특허", "Publications", "Patents"],
-        "content_snippet": "본 연구실 및 관련 분야의 주요 논문, 특허 등 연구 성과를 공유합니다.",
-        "full_text": "세포 배양 공정 최적화 관련 주요 연구 성과. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "proc_opt_trends_industry_academic.html",
-        "title": "최근 산업 및 학술 동향 - 공정 최적화 최신 연구 동향",
-        "breadcrumb": ["홈", "세포 배양 공정 최적화", "최신 연구 동향", "최근 산업 및 학술 동향"],
-        "keywords": ["산업 동향", "학술 동향", "Industry Trends", "Academic Trends"],
-        "content_snippet": "세포 배양 공정 최적화 기술의 산업계 적용 현황과 학계의 최신 연구 방향을 조망합니다.",
-        "full_text": "세포 배양 공정 최적화 분야 산업 및 학술 동향. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "meta_eng_main.html",
-        "title": "시스템 대사공학 및 배지 최적화 - 생물공학연구실",
-        "breadcrumb": ["홈", "시스템 대사공학 및 배지 최적화"],
-        "keywords": ["대사공학", "배지 최적화", "Metabolic Engineering"],
-        "content_snippet": "시스템 대사공학과 배지 최적화 연구의 전반을 소개합니다.",
-        "full_text": "시스템 대사공학 및 배지 최적화 메인 페이지. 세부 연구 항목으로 이동할 수 있습니다."
-    },
-    {
-        "url": "meta_eng_overview_main.html",
-        "title": "연구 개요 - 시스템 대사공학 및 배지 최적화",
-        "breadcrumb": ["홈", "시스템 대사공학 및 배지 최적화", "연구 개요"],
-        "keywords": ["시스템 대사공학", "배지 최적화", "연구 개요", "Metabolic Engineering", "Media Optimization"],
-        "content_snippet": "시스템 대사공학 및 배지 최적화 연구의 배경, 목적, 기술적 접근 방법을 소개합니다.",
-        "full_text": "시스템 대사공학 및 배지 최적화 연구 개요. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "meta_eng_overview_background_objectives.html",
-        "title": "연구 배경 및 목적 - 대사공학 연구 개요",
-        "breadcrumb": ["홈", "시스템 대사공학 및 배지 최적화", "연구 개요", "연구 배경 및 목적"],
-        "keywords": ["연구 배경", "연구 목적", "Background", "Objectives"],
-        "content_snippet": "시스템 대사공학 및 배지 최적화 연구의 이론적 배경과 주요 연구 목표를 설명합니다.",
-        "full_text": "시스템 대사공학 및 배지 최적화 연구의 배경과 목적. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "meta_eng_overview_technical_approach.html",
-        "title": "기술적 접근 방법 - 대사공학 연구 개요",
-        "breadcrumb": ["홈", "시스템 대사공학 및 배지 최적화", "연구 개요", "기술적 접근 방법"],
-        "keywords": ["기술적 접근", "Technical Approach", "방법론"],
-        "content_snippet": "시스템 대사공학 및 배지 최적화 연구 수행을 위한 핵심 기술 및 방법론을 소개합니다.",
-        "full_text": "시스템 대사공학 및 배지 최적화를 위한 기술적 접근 방법. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "meta_eng_model_media_design_main.html",
-        "title": "모델 기반 배지 설계 - 시스템 대사공학 및 배지 최적화",
-        "breadcrumb": ["홈", "시스템 대사공학 및 배지 최적화", "모델 기반 배지 설계"],
-        "keywords": ["모델 기반 배지 설계", "Model-guided Media Design", "자동화 시스템"],
-        "content_snippet": "컴퓨터 모델링과 자동화 시스템을 활용한 효율적인 세포 배양 배지 설계 및 개발 방법을 다룹니다.",
-        "full_text": "모델 기반 배지 설계. 대사 모델 기반 최적화, 자동화된 배지 개발 시스템. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "meta_eng_model_media_design_metabolic_model_opt.html",
-        "title": "대사 모델 기반 배지 최적화 - 모델 기반 배지 설계",
-        "breadcrumb": ["홈", "시스템 대사공학 및 배지 최적화", "모델 기반 배지 설계", "대사 모델 기반 배지 최적화"],
-        "keywords": ["대사 모델", "배지 최적화", "Metabolic Model-driven Optimization"],
-        "content_snippet": "세포의 대사 네트워크 모델을 이용하여 배지 조성을 최적화하는 전략을 소개합니다.",
-        "full_text": "대사 모델 기반 배지 최적화 방법론. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "meta_eng_model_media_design_automated_dev.html",
-        "title": "배지 개발 자동화 시스템 - 모델 기반 배지 설계",
-        "breadcrumb": ["홈", "시스템 대사공학 및 배지 최적화", "모델 기반 배지 설계", "배지 개발 자동화 시스템"],
-        "keywords": ["배지 개발 자동화", "Automated Media Development", "로봇 시스템"],
-        "content_snippet": "로봇 및 자동화 장비를 활용하여 배지 개발 과정을 가속화하고 효율성을 높이는 시스템을 설명합니다.",
-        "full_text": "배지 개발 자동화 시스템 구축 및 활용. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "meta_eng_trends_main.html",
-        "title": "최신 연구 동향 - 시스템 대사공학 및 배지 최적화",
-        "breadcrumb": ["홈", "시스템 대사공학 및 배지 최적화", "최신 연구 동향"],
-        "keywords": ["최신 연구 동향", "Latest Research Trends", "논문", "산업 적용"],
-        "content_snippet": "시스템 대사공학 및 배지 최적화 분야의 최신 연구 성과와 산업계 적용 사례를 소개합니다.",
-        "full_text": "시스템 대사공학 및 배지 최적화 최신 연구 동향. 주요 연구 성과, 산업계 적용 사례. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "meta_eng_trends_publications_patents.html",
-        "title": "주요 연구 성과 - 대사공학 최신 연구 동향",
-        "breadcrumb": ["홈", "시스템 대사공학 및 배지 최적화", "최신 연구 동향", "주요 연구 성과"],
-        "keywords": ["연구 성과", "논문", "특허", "Publications", "Patents"],
-        "content_snippet": "시스템 대사공학 및 배지 최적화 관련 주요 논문, 특허 등 연구 업적을 공유합니다.",
-        "full_text": "시스템 대사공학 및 배지 최적화 관련 주요 연구 성과. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "meta_eng_trends_industrial_app.html",
-        "title": "산업계 적용 사례 - 대사공학 최신 연구 동향",
-        "breadcrumb": ["홈", "시스템 대사공학 및 배지 최적화", "최신 연구 동향", "산업계 적용 사례"],
-        "keywords": ["산업계 적용", "Industrial Application", "사례 연구"],
-        "content_snippet": "시스템 대사공학 및 배지 최적화 기술이 실제 산업 현장에서 어떻게 활용되고 있는지 사례를 통해 보여줍니다.",
-        "full_text": "시스템 대사공학 및 배지 최적화 기술의 산업계 적용 사례. (본 페이지는 현재 준비 중입니다.)"
+        "url": "cfd_lbm_model.html",
+        "title": "격자 볼츠만 방법 (LBM) - CFD 이론 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "격자 볼츠만 방법 (LBM)"
+        ],
+        "keywords": [
+            "격자",
+            "볼츠만",
+            "방법",
+            "LBM",
+            "CFD",
+            "이론",
+            "생물공학연구실"
+        ],
+        "content_snippet": "LBM은 유체 유동을 시뮬레이션하는 메조스코픽 방법으로, 거시적인 Navier-Stokes 방정식을 직접 푸는 대신, 격자 상에서 정의된 입자 분포 함수의 시간적 진화를 추적합니다. [1]",
+        "full_text": "생물공학연구실 검색 격자 볼츠만 방법 (Lattice Boltzmann Method, LBM) LBM은 유체 유동을 시뮬레이션하는 메조스코픽 방법으로, 거시적인 Navier-Stokes 방정식을 직접 푸는 대신, 격자 상에서 정의된 입자 분포 함수의 시간적 진화를 추적합니다. [1] 상세 이론, 수학적 배경, 주요 가정 LBM은 확률론적 볼츠만 방정식에서 유래하며, 입자들의 충돌 및 이동 과정을 이산화하여 모델링합니다. [1] 이 방법은 유체의 미시적인 입자 상호작용이 거시적인 유체 거동으로 나타난다는 운동론적 가설에 기반합니다. [2] 수학적 배경 핵심은 이산 볼츠만 방정식입니다. 가장 기본적인 형태는 BGK(Bhatnagar-Gross-Krook) 단일 이완 시간 모델을 사용하며 다음과 같습니다: [3] fᵢ(x + cᵢΔt, t + Δt) - fᵢ(x, t) = -(1/τ)[fᵢ(x, t) - fᵢᵉ۹(x, t)] 여기서: fᵢ(x, t) 는 위치 x 와 시간 t 에서 i 번째 격자 속도 방향 cᵢ 를 가진 입자의 분포 함수입니다. [1] Δt 는 시간 단계 크기이며, 격자 간격 Δx 와 이산 속도 벡터 cᵢ 는 cᵢ = (Δx / Δt)eᵢ 관계를 갖습니다 ( eᵢ 는 단위 속도 벡터). [2] τ 는 충돌 이완 시간으로, 유체의 점성과 관련됩니다. [1] fᵢᵉ۹(x, t) 는 평형 상태에서의 입자 분포 함수로, 일반적으로 맥스웰-볼츠만 분포를 저마하수 조건에서 테일러 전개하여 얻습니다. [3] 거시적 변수(밀도 ρ , 속도 u )는 분포 함수의 모멘트로 산출됩니다: [1] ρ = Σᵢ fᵢ ρu = Σᵢ fᵢcᵢ 주요 가정 격자화된 공간, 시간, 속도: 연속적인 공간, 시간, 속도 공간을 이산적인 격자점으로 근사합니다. [1] 저마하수 및 약한 압축성: 기본적인 LBM 모델은 저마하수 비압축성 또는 약압축성 유동에 대해 NS 방정식을 정확히 복구하도록 설계됩니다. 고마하수/초음속 유동에는 추가 모델링이나 변형이 필요합니다. [4] 충돌 및 이동 프로"
     },
     {
         "url": "cfd_main.html",
         "title": "전산유체역학 - 생물공학연구실",
-        "breadcrumb": ["홈", "전산유체역학"],
-        "keywords": ["CFD", "Computational Fluid Dynamics", "개요"],
-        "content_snippet": "전산유체역학 전반과 관련 연구 주제로 이동할 수 있는 메인 페이지입니다.",
-        "full_text": "전산유체역학 메인 페이지. CFD 이론, Bioprocess CFD, 소프트웨어 소개로 이어집니다."
+        "breadcrumb": [
+            "홈",
+            "전산유체역학"
+        ],
+        "keywords": [
+            "전산유체역학",
+            "생물공학연구실"
+        ],
+        "content_snippet": "Computational Fluid Dynamics",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 전산유체역학 (Computational Fluid Dynamics) Computational Fluid Dynamics 전산유체역학(CFD)은 유체 거동을 정량적으로 예측하기 위한 강력한 도구입니다. 아래 항목에서 CFD 이론과 활용 사례를 살펴보세요. CFD 이론 CFD의 기본 이론과 해석 절차를 소개합니다. Bioprocess CFD Simulation 바이오공정 분야에서의 CFD 적용 사례를 살펴봅니다. 소프트웨어 주요 CFD 소프트웨어와 사용 방법을 안내합니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "cfd_post_animation.html",
+        "title": "CFD 후처리 - 애니메이션 생성 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "후처리 과정",
+            "애니메이션 생성"
+        ],
+        "keywords": [
+            "CFD",
+            "후처리",
+            "애니메이션",
+            "생성",
+            "생물공학연구실"
+        ],
+        "content_snippet": "비정상(transient 또는 unsteady) CFD 시뮬레이션 결과는 시간에 따라 유동장이 변화하므로, 이러한 동적인 특성을 효과적으로 파악하고 전달하기 위해 애니메이션 생성이 필수적입니다 [2, 6]. 애니메이션은 복잡한 시간 의존적 유동 현상을 직관적으로 이해하",
+        "full_text": "생물공학연구실 검색 CFD 후처리 - 애니메이션 생성 (Animation Generation) 비정상(transient 또는 unsteady) CFD 시뮬레이션 결과는 시간에 따라 유동장이 변화하므로, 이러한 동적인 특성을 효과적으로 파악하고 전달하기 위해 애니메이션 생성이 필수적입니다 [2, 6]. 애니메이션은 복잡한 시간 의존적 유동 현상을 직관적으로 이해하고, 주요 유동 구조의 발달 및 거동을 시각적으로 추적하는 데 매우 유용합니다. 애니메이션 생성의 목적 유동장의 시간적 발달 과정 시각화 (예: 와류 생성 및 소멸, 충격파 이동) 물리량(압력, 온도, 농도 등)의 시간에 따른 변화 추이 관찰 경계 조건 변화 또는 공정 변화에 따른 유동 거동의 동적 응답 확인 주기적인 유동 현상(예: 와류 방출, 맥동 유동)의 특성 파악 복잡한 3차원 유동 구조의 시간적 변화를 효과적으로 전달 애니메이션 생성 과정 일반적으로 다음과 같은 과정을 통해 애니메이션을 생성합니다: 시간 단계별 데이터 로딩 : 비정상 시뮬레이션 중 저장된 각 시간 단계(timestep)별 결과 데이터 파일(예: Ansys Fluent의 .cas/.dat 파일 시퀀스, Ansys CFD-Post의 .cdat 파일, ParaView가 읽을 수 있는 시계열 데이터 형식)을 후처리 도구로 불러옵니다 [6]. 시각화 객체 설정 : 첫 번째 또는 특정 시간 단계에서 원하는 시각화 객체(예: 컨투어, 벡터, 유선, 등표면, 입자 궤적)를 설정합니다. 색상 맵, 범위, 카메라 뷰 등도 함께 정의합니다. 애니메이션 설정 : 타임스텝 범위 지정 : 애니메이션을 생성할 시작 및 종료 시간 단계, 그리고 프레임 간 간격을 설정합니다. 키프레임 애니메이션 (Keyframe Animation) : 특정 시간 단계에서 카메라 위치, 객체 속성(투명도, 색상 등) 등을 변경하는 키프레임을 설정하여 더욱 동적인 애니메이션을 만들 수 있습니다. 저장 옵션 : 프레임 속도(FPS), 해상도, 비디오 파일 형식(AVI, MP4 등"
+    },
+    {
+        "url": "cfd_post_best_practices.html",
+        "title": "CFD 후처리 - 최적 사례 및 팁 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "후처리 과정",
+            "최적 사례 및 팁"
+        ],
+        "keywords": [
+            "CFD",
+            "후처리",
+            "최적",
+            "사례",
+            "및",
+            "팁",
+            "생물공학연구실"
+        ],
+        "content_snippet": "효율적이고 정확하며 신뢰할 수 있는 CFD 후처리를 위해 다음과 같은 최적 사례 및 팁이 권장됩니다. 이는 시각화의 명료성, 분석의 정확성, 그리고 결과의 신뢰성 확보에 중점을 둡니다.",
+        "full_text": "생물공학연구실 검색 CFD 후처리 - 최적 사례 및 팁 (Best Practices & Tips) 효율적이고 정확하며 신뢰할 수 있는 CFD 후처리를 위해 다음과 같은 최적 사례 및 팁이 권장됩니다. 이는 시각화의 명료성, 분석의 정확성, 그리고 결과의 신뢰성 확보에 중점을 둡니다. 일반적인 후처리 팁 목표 명확화 : 후처리를 시작하기 전에 무엇을 확인하고 어떤 정보를 얻고 싶은지 명확히 정의합니다. 이는 불필요한 작업을 줄이고 분석의 초점을 유지하는 데 도움이 됩니다. '상태(State)' 파일 또는 세션 파일 적극 활용 : 자주 사용하는 시각화 설정(컨투어, 유선, 슬라이스, 필터, 카메라 뷰 등) 및 분석 설정을 상태 파일(예: Ansys CFD-Post의 .cst, ParaView의 .pvsm)로 저장하여 재사용함으로써 후처리 파이프라인을 자동화하고 일관성을 유지합니다 [6]. 이는 특히 여러 케이스를 비교하거나 설계 탐색 과정에서 유용합니다. 표면 그룹화 및 영역 추출 : 다수의 형상이 있는 복잡한 모델에서 유사한 기하학적 요소(예: 특정 부품의 모든 벽면)를 그룹화하면 표시 설정(색상, 투명도 등) 관리가 효율적입니다. 또한, 분석에 집중할 특정 영역(Region of Interest, ROI)만 추출하여 시각화하거나 데이터를 처리하면 데이터 처리 부담을 줄이고 관심 현상을 명확하게 볼 수 있습니다. 유선(Streamlines)의 신중한 사용 : 유선은 유동 패턴 파악에 매우 유용하지만, 과도하거나 부적절한 시드 포인트 설정은 오해를 유발하거나 그림을 혼란스럽게 만들 수 있습니다. 시드 포인트의 위치와 개수를 신중하게 선택하고, 유선의 색상 및 두께를 조절하여 가독성을 높입니다. 필요한 데이터만 저장 및 로드 : 시뮬레이션 설정 시 솔버가 출력 파일에 저장할 변수를 최소화하거나, 후처리 시 분석에 필요한 변수와 시간 단계만 선택적으로 로드하여 데이터 양을 관리합니다. 이는 디스크 공간을 절약하고 후처리 속도를 향상시킵니다. 카메라, 뷰, 조명 설정 "
+    },
+    {
+        "url": "cfd_post_data_handling.html",
+        "title": "CFD 후처리 - 데이터 처리 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "후처리 과정",
+            "데이터 처리"
+        ],
+        "keywords": [
+            "CFD",
+            "후처리",
+            "데이터",
+            "처리",
+            "생물공학연구실"
+        ],
+        "content_snippet": "CFD 시뮬레이션은 방대한 양의 데이터를 생성하므로, 효과적인 데이터 관리, 저장, 접근 및 처리를 위한 표준화된 형식과 도구가 필요합니다. 후처리 소프트웨어는 다양한 솔버 및 파일 형식의 결과 데이터를 읽어들일 수 있어야 합니다 [6].",
+        "full_text": "생물공학연구실 검색 CFD 후처리 - 데이터 처리 (Data Handling) CFD 시뮬레이션은 방대한 양의 데이터를 생성하므로, 효과적인 데이터 관리, 저장, 접근 및 처리를 위한 표준화된 형식과 도구가 필요합니다. 후처리 소프트웨어는 다양한 솔버 및 파일 형식의 결과 데이터를 읽어들일 수 있어야 합니다 [6]. 데이터 형식 및 출력 CFD 결과 데이터를 저장하는 다양한 표준 및 독자 형식이 사용됩니다. 표준 형식 : CGNS (CFD General Notation System) : CFD 데이터를 저장하기 위한 이식성이 높은 표준 형식입니다 [6]. 격자, 유동 솔루션, 경계 조건 등 모든 관련 정보를 포함할 수 있도록 설계되었습니다. VTK (Visualization Toolkit) : 시각화 및 데이터 처리를 위한 오픈소스 라이브러리이자 데이터 형식을 지원합니다 [3, 8]. ParaView와 같은 많은 후처리 도구가 VTK를 기반으로 합니다 [2]. HDF5 (Hierarchical Data Format 5) : 대용량의 과학 데이터를 저장하고 관리하는 데 널리 사용되는 파일 형식으로, 일부 CFD 도구에서 지원합니다. 솔버별 독자 형식 : Ansys Fluent: .cas/.dat, .flprj, .res, .cdat 등 [6] Ansys CFX: .res, .def 등 [6] OpenFOAM: 자체 디렉토리 및 파일 구조 기타: Tecplot (.plt), EnSight (.case, .geo), FieldView 등 다양한 소프트웨어별 형식이 존재합니다 [2]. 시뮬레이션 결과는 분석 목적에 따라 수치 표 (매개변수 값), 그래프 (시간 또는 공간에 따른 변화), 이미지 (2D/3D 시각화) 등 다양한 형태로 출력됩니다 [5]. 처리 도구 및 자동화 (Automation & Workflow) 데이터 처리는 후처리 소프트웨어의 GUI 환경에서 수행되기도 하지만, 반복적인 작업이나 대규모 데이터 처리를 위해 스크립팅 및 자동화 도구가 필수적입니다 "
+    },
+    {
+        "url": "cfd_post_derived_data.html",
+        "title": "CFD 후처리 - 파생 데이터 계산 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "후처리 과정",
+            "파생 데이터 계산"
+        ],
+        "keywords": [
+            "CFD",
+            "후처리",
+            "파생",
+            "데이터",
+            "계산",
+            "생물공학연구실"
+        ],
+        "content_snippet": "CFD 솔버는 주로 속도, 압력, 온도, 난류 에너지와 같은 기본 물리량을 계산합니다. 그러나 실제 엔지니어링 분석 및 의사결정에는 이러한 기본량으로부터 추가적으로 계산되는 다양한 파생 데이터가 필요합니다. 후처리 단계에서는 이러한 파생 데이터를 계산하여 시뮬레이션 결",
+        "full_text": "생물공학연구실 검색 CFD 후처리 - 파생 데이터 계산 (Derived Data Calculation) CFD 솔버는 주로 속도, 압력, 온도, 난류 에너지와 같은 기본 물리량을 계산합니다. 그러나 실제 엔지니어링 분석 및 의사결정에는 이러한 기본량으로부터 추가적으로 계산되는 다양한 파생 데이터가 필요합니다. 후처리 단계에서는 이러한 파생 데이터를 계산하여 시뮬레이션 결과의 의미를 더욱 풍부하게 하고 공학적 통찰력을 제공합니다 [6]. 파생 데이터의 종류 일반적인 파생량 : 전단 응력(Wall Shear Stress), 와도(Vorticity), 변형률(Strain Rate), 난류 강도(Turbulence Intensity), 압력 손실(Pressure Drop), 열유속(Heat Flux), 열전달 계수(Heat Transfer Coefficient) 등이 포함됩니다. 무차원수 (Dimensionless Numbers) : 레이놀즈 수(Reynolds Number), 누셀트 수(Nusselt Number), 프란틀 수(Prandtl Number), 마하 수(Mach Number) 등 유동 특성을 나타내는 중요한 무차원수들을 계산합니다. 엔지니어링 관련 성능 계수 : 공력 계수: 항력 계수(Drag Coefficient, C D ), 양력 계수(Lift Coefficient, C L ), 모멘트 계수(Moment Coefficient, C M ) 터보기계 성능: 효율(Efficiency - 펌프, 터빈, 압축기 등 다양한 기계 유형별 공식 적용), 수두(Head), 토크 계수, 추력 계수 등 내부 유동: 마찰 계수(Friction Factor), 압력 계수(Pressure Coefficient, C p ) 전체량 (Total Quantities) : 전체 압력(Total Pressure), 전체 온도(Total Temperature), 비운동 에너지(Specific Kinetic Energy) 등은 종종 솔버에 의해 자동으로 계산되거나 후처리 단계에서 쉽게 "
+    },
+    {
+        "url": "cfd_post_design_uq.html",
+        "title": "CFD 후처리 - 설계 및 불확실성 정량화 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "후처리 과정",
+            "설계 및 불확실성 정량화"
+        ],
+        "keywords": [
+            "CFD",
+            "후처리",
+            "설계",
+            "및",
+            "불확실성",
+            "정량화",
+            "생물공학연구실"
+        ],
+        "content_snippet": "CFD 후처리 결과는 엔지니어링 설계의 성능 평가 및 개선, 그리고 시뮬레이션 결과의 불확실성을 이해하는 데 중요한 입력 데이터로 활용됩니다. 후처리 단계는 설계 공간 탐색, 최적화, 그리고 불확실성 분석에 필요한 정량적인 성능 지표를 제공함으로써 이들 고급 분석 기법",
+        "full_text": "생물공학연구실 검색 CFD 후처리 - 설계 최적화 및 불확실성 정량화 연계 CFD 후처리 결과는 엔지니어링 설계의 성능 평가 및 개선, 그리고 시뮬레이션 결과의 불확실성을 이해하는 데 중요한 입력 데이터로 활용됩니다. 후처리 단계는 설계 공간 탐색, 최적화, 그리고 불확실성 분석에 필요한 정량적인 성능 지표를 제공함으로써 이들 고급 분석 기법들과 밀접하게 연계됩니다. 설계 최적화 (Design Optimization) CFD 후처리를 통해 얻은 정량적 데이터(예: 항력, 양력, 압력 강하, 열전달 계수 등)는 다양한 설계 최적화 기법의 목적 함수(objective function) 또는 제약 조건(constraint)으로 사용됩니다. DOE (실험 계획법 - Design of Experiments) DOE는 다양한 설계 변수 조합에 따른 시스템 성능 변화를 효율적으로 파악하기 위한 통계적 방법론입니다. CFD 시뮬레이션 및 후처리 결과는 DOE 연구에서 각 설계 포인트(design point)에서의 성능 응답 값으로 사용됩니다. RSM (반응 표면법 - Response Surface Methodology) RSM은 DOE 결과를 바탕으로 설계 변수와 성능 응답 간의 근사적인 수학적 모델(반응 표면)을 구축하는 기법입니다. 이 반응 표면을 통해 전체 설계 공간에서의 성능 추이를 예측하고 최적 설계점을 효율적으로 탐색할 수 있습니다. CFD 후처리에서 얻은 정량적 데이터가 반응 표면 모델의 구축 및 검증에 사용됩니다. MOGA (다목적 유전 알고리즘 - Multi-Objective Genetic Algorithm) MOGA와 같은 최적화 알고리즘은 여러 상충되는 설계 목표(예: 항력 최소화와 양력 최대화)를 동시에 만족하는 최적의 설계 해(Pareto front)를 찾습니다. 각 설계 후보군에 대한 성능 평가는 CFD 시뮬레이션 및 후처리 결과에 의존하며, 여기서 추출된 성능 지표(목적 함수 값)가 최적화 과정의 입력으로 사용됩니다. Adjoint (수반법) 수반"
+    },
+    {
+        "url": "cfd_post_quantitative_extraction.html",
+        "title": "CFD 후처리 - 정량적 데이터 추출 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "후처리 과정",
+            "정량적 데이터 추출"
+        ],
+        "keywords": [
+            "CFD",
+            "후처리",
+            "정량적",
+            "데이터",
+            "추출",
+            "생물공학연구실"
+        ],
+        "content_snippet": "정량적 데이터 추출은 CFD 시뮬레이션 결과에서 수치적인 정보를 특정 위치나 영역에서 얻어내는 과정입니다 [6]. 이는 시각적 분석을 보완하며, 실험 결과와의 비교 검증(Validation), 설계 요구사항 만족 여부 확인, 그리고 더 깊이 있는 공학적 분석에 필수적입",
+        "full_text": "생물공학연구실 검색 CFD 후처리 - 정량적 데이터 추출 (Quantitative Data Extraction) 정량적 데이터 추출은 CFD 시뮬레이션 결과에서 수치적인 정보를 특정 위치나 영역에서 얻어내는 과정입니다 [6]. 이는 시각적 분석을 보완하며, 실험 결과와의 비교 검증(Validation), 설계 요구사항 만족 여부 확인, 그리고 더 깊이 있는 공학적 분석에 필수적입니다. 추출 대상 및 방법 후처리 소프트웨어는 다양한 기하학적 객체로부터 데이터를 추출하는 기능을 제공합니다 [6]: 특정 지점 (Point) 추출 : 계산 도메인 내의 특정 XYZ 좌표에서 물리량(압력, 속도, 온도 등) 값을 직접 탐색합니다. 프로브(Probe) 기능을 사용하여 특정 좌표나 노드에서 시간 경과에 따른 데이터를 추출하여 시계열 플롯(Time Series Plot)으로 만들 수 있습니다. 이는 비정상(transient) 해석 결과 분석에 유용합니다 [2, 6]. 선 (Line/Polyline) 추출 : 사용자가 정의한 직선, 곡선 또는 다각형 선(Polyline)을 따라 물리량 분포 데이터를 추출합니다. 추출된 데이터는 주로 XY 플롯 형태로 시각화되어, 특정 경로를 따른 물리량의 변화 양상을 파악하는 데 사용됩니다. (예: 파이프 중심선을 따른 압력 강하, 날개 표면을 따른 압력 분포) 면 (Plane/Surface/Slice) 추출 : 특정 평면(Plane) 또는 곡면(Surface)으로 계산 도메인을 잘라낸 단면(Slice)에서 물리량 분포를 추출합니다. 단면 전체 또는 특정 영역에서 데이터를 추출하거나, 면적 적분(Area Integral) 또는 면적 가중 평균(Area-Weighted Average) 값을 계산할 수 있습니다 (예: 특정 단면에서의 평균 속도, 유량). 등표면(Isosurface)과 같이 특정 물리량 값을 기준으로 생성된 표면에서도 데이터 추출이 가능합니다. 체적 (Volume) 추출 : 계산 도메인 내의 특정 체적 영역(Volume Region"
+    },
+    {
+        "url": "cfd_post_report_generation.html",
+        "title": "CFD 후처리 - 보고서 생성 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "후처리 과정",
+            "보고서 생성"
+        ],
+        "keywords": [
+            "CFD",
+            "후처리",
+            "보고서",
+            "생성",
+            "생물공학연구실"
+        ],
+        "content_snippet": "CFD 시뮬레이션의 최종 결과와 분석 내용을 체계적으로 정리하여 공유하기 위한 보고서 생성은 후처리 단계의 중요한 산출물입니다. 많은 상용 CFD 후처리 소프트웨어는 이러한 보고서 생성 과정을 자동화하거나 반자동화하는 기능을 제공하여 사용자의 편의성을 높이고, 일관성 ",
+        "full_text": "생물공학연구실 검색 CFD 후처리 - 보고서 생성 (Report Generation) CFD 시뮬레이션의 최종 결과와 분석 내용을 체계적으로 정리하여 공유하기 위한 보고서 생성은 후처리 단계의 중요한 산출물입니다. 많은 상용 CFD 후처리 소프트웨어는 이러한 보고서 생성 과정을 자동화하거나 반자동화하는 기능을 제공하여 사용자의 편의성을 높이고, 일관성 있는 결과 전달을 가능하게 합니다 [6]. 자동화된 보고서 생성 기능 Ansys CFD-Post [6], Autodesk CFD, TCFD (Turbo CFD)와 같은 소프트웨어들은 보고서 생성기(Report Generator) 기능을 통해 시뮬레이션 개요, 주요 설정, 결과 이미지(시각화 자료), 정량적 데이터(표, 그래프) 등을 포함하는 표준화된 보고서를 자동으로 생성할 수 있습니다. 사용자는 보고서 템플릿을 선택하거나 사용자 정의 템플릿을 만들어 특정 프로젝트 요구사항에 맞는 보고서 양식을 구성할 수 있습니다. 생성된 보고서는 주로 HTML, PDF, Microsoft Word 등 다양한 형식으로 내보낼 수 있습니다. 보고서에 포함되는 일반적인 내용 자동 생성 보고서 또는 수동으로 작성되는 CFD 보고서에는 일반적으로 다음과 같은 내용이 포함됩니다 [6]: 표지 정보 : 프로젝트명, 보고서 제목, 작성자, 작성일 등 시뮬레이션 개요 : 해석 목적, 대상 모델 설명, 주요 가정 등 전처리 정보 : 사용된 형상, 메시 정보 (격자 수, 유형, 품질 지표 요약) 물리 모델 및 경계 조건 : 사용된 지배 방정식, 난류 모델, 다상 유동 모델, 화학 반응 모델, 열전달 모델 등의 설정값과 각 경계면에 적용된 조건 상세 솔버 설정 및 수렴 이력 : 사용된 수치 해석 기법, 이산화 차수, 솔버 파라미터, 수렴 기준, 잔차(residual) 그래프 또는 수렴 과정 모니터링 결과 정성적 결과 (시각화 자료) : 주요 물리량(속도, 압력, 온도, 난류 특성치 등)의 컨투어 플롯 유선, 벡터 플롯, 입자 궤적 등을 통한 유동 "
+    },
+    {
+        "url": "cfd_post_statistical_analysis.html",
+        "title": "CFD 후처리 - 통계 분석 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "후처리 과정",
+            "통계 분석"
+        ],
+        "keywords": [
+            "CFD",
+            "후처리",
+            "통계",
+            "분석",
+            "생물공학연구실"
+        ],
+        "content_snippet": "통계 분석은 CFD 시뮬레이션 결과를 정량적으로 요약하고, 유동 특성의 통계적 속성(예: 평균, 변동성)을 파악하는 데 사용됩니다. 이는 특히 비정상(unsteady) 유동이나 난류 유동 해석에서 중요한 역할을 합니다.",
+        "full_text": "생물공학연구실 검색 CFD 후처리 - 통계 분석 (Statistical Analysis) 통계 분석은 CFD 시뮬레이션 결과를 정량적으로 요약하고, 유동 특성의 통계적 속성(예: 평균, 변동성)을 파악하는 데 사용됩니다. 이는 특히 비정상(unsteady) 유동이나 난류 유동 해석에서 중요한 역할을 합니다. 기본 통계량 Mean / RMS (평균 / RMS) 시간 평균(Mean)은 비정상 유동 해석 결과의 시간에 따른 평균적인 유동 패턴을 파악하는 데 사용됩니다. RMS(Root Mean Square)는 유동 변동성(fluctuation)의 크기를 나타내며, 난류 강도 등 유동의 비정상적인 특성을 정량화하는 데 중요합니다. 특정 영역(슬라이스, 표면 등)에서 물리량의 평균값을 계산하는 것은 일반적인 정량적 데이터 추출 작업에 포함됩니다 [6]. 주파수 영역 분석 FFT / PSD (고속 푸리에 변환 / 전력 스펙트럼 밀도) FFT(Fast Fourier Transform)는 시간에 따라 변화하는 유동 변수(예: 특정 위치에서의 속도, 압력 등)를 주파수 영역으로 변환하여 유동의 지배적인 주파수 성분을 파악하는 데 사용됩니다. PSD(Power Spectral Density)는 각 주파수 성분이 가지는 에너지의 분포를 나타내며, 특히 난류 유동의 스케일 분석, 유동 기인 소음(flow-induced noise) 예측, 또는 구조물의 유체력 진동 문제(예: 플러터)와 관련된 유동 특성 분석에 활용됩니다. Ansys CFD-Post와 같은 도구는 시간 이력 데이터로부터 FFT를 수행하는 기능을 제공할 수 있습니다 [6, 9]. 푸리에 분석은 비정상 해석 결과로부터 시스템의 동적 응답 특성을 분석하는 고급 기법 중 하나입니다 [9]. Indicial 함수 (Indicial Functions) 비정상 해석 결과의 시간 이력 데이터(예: 공기력 계수)로부터 시스템의 동적 응답 특성을 나타내는 Indicial 함수를 도출하는 기법도 특정 응용 분야(예: 항공우주공학의 공탄"
+    },
+    {
+        "url": "cfd_post_tools_overview.html",
+        "title": "CFD 후처리 - 후처리 도구 개요 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "후처리 과정",
+            "후처리 도구 개요"
+        ],
+        "keywords": [
+            "CFD",
+            "후처리",
+            "후처리",
+            "도구",
+            "개요",
+            "생물공학연구실"
+        ],
+        "content_snippet": "CFD 시뮬레이션 결과를 효과적으로 분석하고 시각화하기 위해 다양한 상용 및 오픈소스 소프트웨어 도구와 라이브러리가 사용됩니다. 각 도구는 고유한 장점과 특징을 가지고 있으며, 사용자의 요구사항, 예산, 사용 편의성, 특정 기능 지원 여부 등을 고려하여 선택됩니다.",
+        "full_text": "생물공학연구실 검색 CFD 후처리 - 후처리 도구 개요 (Overview of Post-processing Tools) CFD 시뮬레이션 결과를 효과적으로 분석하고 시각화하기 위해 다양한 상용 및 오픈소스 소프트웨어 도구와 라이브러리가 사용됩니다. 각 도구는 고유한 장점과 특징을 가지고 있으며, 사용자의 요구사항, 예산, 사용 편의성, 특정 기능 지원 여부 등을 고려하여 선택됩니다. 상용 소프트웨어 (Commercial Software) 상용 CFD 후처리 도구는 일반적으로 강력한 그래픽 사용자 인터페이스(GUI), 다양한 시각화 옵션, 정교한 정량적 분석 기능, 자동화된 보고서 생성 기능, 그리고 전문적인 기술 지원을 제공합니다. 산업 현장에서 널리 사용됩니다 [2]. Ansys CFD-Post : Ansys Fluent, CFX 등 Ansys 솔버의 결과를 처리하기 위한 전용 후처리 도구입니다 [6]. 다양한 시각화 기법, 파생 변수 계산, 차트 생성, 애니메이션 제작, 보고서 생성 기능을 제공하며, CCL(CFX Command Language) 및 Python 스크립팅을 지원합니다. Tecplot (Tecplot 360, Tecplot Focus) : CFD 및 엔지니어링 데이터 시각화 및 분석을 위한 전문 소프트웨어입니다 [2]. XY, 2D, 3D 플롯팅 기능이 뛰어나며, 대용량 데이터 처리, Python 스크립팅(PyTecplot), 다양한 데이터 형식 가져오기/내보내기 기능을 지원합니다. Siemens Simcenter STAR-CCM+ (Post-processing Environment) : STAR-CCM+는 통합된 환경 내에서 전처리, 해석, 후처리 기능을 모두 제공합니다. 강력한 시각화 도구와 사용자 정의 가능한 분석 기능을 갖추고 있습니다. EnSight : 대규모 CFD 데이터셋 시각화에 특화된 고성능 후처리 소프트웨어입니다. 복잡한 형상 및 비정상 유동 데이터를 효과적으로 처리할 수 있습니다. FieldView : CFD 후처리를 위한"
+    },
+    {
+        "url": "cfd_post_visualisation.html",
+        "title": "CFD 후처리 - 시각화 (Visualisation) - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "후처리 과정",
+            "시각화"
+        ],
+        "keywords": [
+            "CFD",
+            "후처리",
+            "시각화",
+            "Visualisation",
+            "생물공학연구실"
+        ],
+        "content_snippet": "유동 가시화는 복잡한 유체 현상을 시각적으로 표현하여 이해를 돕는 과정입니다 [5]. CFD 후처리의 가장 기본적이고 직관적인 단계로, 수치 데이터를 그래픽 형태로 변환하여 유동장 내의 물리량 분포 및 패턴을 시각적으로 이해할 수 있도록 합니다. 다양한 시각화 기법이 ",
+        "full_text": "생물공학연구실 검색 CFD 후처리 - 시각화 (Visualisation) 유동 가시화는 복잡한 유체 현상을 시각적으로 표현하여 이해를 돕는 과정입니다 [5]. CFD 후처리의 가장 기본적이고 직관적인 단계로, 수치 데이터를 그래픽 형태로 변환하여 유동장 내의 물리량 분포 및 패턴을 시각적으로 이해할 수 있도록 합니다. 다양한 시각화 기법이 사용되며, 목적에 따라 적절한 방법을 선택하는 것이 중요합니다. 주요 시각화 기법 Ansys CFD-Post와 같은 소프트웨어는 Point, Line, Plane, Volume 등 다양한 형상 객체를 생성하고, 이 객체 위 또는 내부에서 다음의 가시화 기법들을 적용할 수 있도록 지원합니다 [6]. 기법 (Method) 설명 (Description) 활용 (Application) 예시 소프트웨어 기능 [6] 벡터 (Vector) 유동장의 속도 또는 다른 벡터량의 방향과 크기를 화살표로 표시 유동 방향, 재순환 영역, 정체점 파악 Vector 컨투어 (Contour) 스칼라량(압력, 온도, 속도 크기 등)이 동일한 값을 갖는 지점을 연결한 선 또는 등치면 물리량의 분포 패턴, 기울기 파악 Contour 유선 (Streamline) 순간적인 속도 벡터에 접하도록 그린 선. 정상 상태 유동 경로를 보여줌. 유체의 이동 경로, 분리 및 부착 지점 파악 Streamline 입자 궤적 (Particle Track) 가상의 입자가 유동장을 따라 이동한 경로. 비정상 상태 유동 경로를 보여줌. 시간 의존적 유동 경로, 확산 특성 파악 Particle Track 등표면 (Isosurface) 3차원 공간에서 스칼라량이 특정 값을 갖는 표면 특정 조건(예: 임계 온도, 특정 농도) 만족 영역 식별 Isosurface 체적 렌더링 (Volume Rendering) 3차원 체적 데이터 내부의 분포를 투명도, 색상 등을 활용하여 시각화 3차원 유동 구조, 밀도 분포 등 체적 데이터 전체 파악 Volume Rendering 고급 시각화 기법 3D 및 "
+    },
+    {
+        "url": "cfd_postprocessing.html",
+        "title": "CFD 후처리 과정 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "후처리 과정"
+        ],
+        "keywords": [
+            "CFD",
+            "후처리",
+            "과정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "전산유체역학(CFD) 시뮬레이션의 후처리(Post-processing) 단계는 계산 결과를 해석하고, 유효성 및 신뢰성을 평가하며, 물리적 의미를 추출하는 과정입니다 [1, 3, 4]. 유체(액체 또는 기체)가 모델 내 물체를 통과하거나 그 주변으로 이동하는 움직임, ",
+        "full_text": "생물공학연구실 검색 CFD 후처리 과정 (Post-processing) 전산유체역학(CFD) 시뮬레이션의 후처리(Post-processing) 단계는 계산 결과를 해석하고, 유효성 및 신뢰성을 평가하며, 물리적 의미를 추출하는 과정입니다 [1, 3, 4]. 유체(액체 또는 기체)가 모델 내 물체를 통과하거나 그 주변으로 이동하는 움직임, 그리고 관련된 물리량(압력, 속도, 온도 등)의 분포를 정량적 및 정성적으로 분석합니다. 정성적 분석 : 유동 패턴, 와류 구조, 온도 분포 등을 시각화하여 직관적으로 이해합니다. 정량적 분석 : 특정 위치에서의 값, 면적/체적 평균값, 힘, 토크, 유량 등 수치적 데이터를 계산하여 물리량을 정량화합니다. 후처리는 단순히 그림을 그리는 것을 넘어, 시뮬레이션 데이터로부터 가치 있는 공학적 통찰력을 추출하고 엔지니어 및 연구자가 정보에 입각한 의사결정을 내릴 수 있도록 지원하는 핵심 단계입니다 [5]. 신뢰할 수 있는 후처리 없이는 아무리 정확한 시뮬레이션 결과라도 그 의미를 제대로 파악하고 활용하기 어렵습니다. 후처리 주요 내용 본 섹션에서는 CFD 후처리의 다양한 측면을 다루며, 각 하위 페이지에서 상세 내용을 확인할 수 있습니다. 각 주제는 학술적 깊이를 더하고 최신 연구 동향을 반영하여 구성되었습니다. 시각화 (Visualisation) : 등고선, 등표면, 유선 등 다양한 시각화 기법과 도구, 최적화 팁, 그리고 몰입형 시각화와 같은 고급 기법을 설명합니다. 통계 분석 (Statistical Analysis) : 평균/RMS, FFT/PSD, POD, DMD 및 시간 이력 데이터 분석, 푸리에 분석 등 결과 데이터의 통계적 속성을 파악하는 방법을 다룹니다. 데이터 처리 (Data Handling) : CFD 결과 데이터 형식(CGNS, VTK 등), 처리 도구, 스크립팅을 통한 자동화, 대용량/비정상 데이터 처리 방법을 소개합니다. 설계 및 불확실성 정량화 (Design & UQ) : 후처리 결과를 활용한 DOE, RS"
+    },
+    {
+        "url": "cfd_preprocessing.html",
+        "title": "CFD Pre-processing - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "전처리 과정"
+        ],
+        "keywords": [
+            "CFD",
+            "Preprocessing",
+            "생물공학연구실"
+        ],
+        "content_snippet": "CFD(전산유체역학) 시뮬레이션의 전처리 단계는 해석 대상의 형상 준비부터 계산 영역 정의, 격자 생성, 물리 모델 및 경계 조건 설정, 초기 데이터 입력까지 해석에 필요한 모든 초기 설정을 완료하는 과정입니다. 이 단계는 복잡한 현실 문제를 CFD 솔버가 이해하고 계",
+        "full_text": "생물공학연구실 검색 CFD Pre-processing (전처리) CFD(전산유체역학) 시뮬레이션의 전처리 단계는 해석 대상의 형상 준비부터 계산 영역 정의, 격자 생성, 물리 모델 및 경계 조건 설정, 초기 데이터 입력까지 해석에 필요한 모든 초기 설정을 완료하는 과정입니다. 이 단계는 복잡한 현실 문제를 CFD 솔버가 이해하고 계산할 수 있는 형태의 수치 모델로 변환하는 과정으로, 해석 결과의 정확성, 안정성 및 계산 효율성에 결정적인 영향을 미치므로 매우 중요합니다 22, 24 . 신뢰할 수 있는 CFD 결과를 얻기 위해서는 각 전처리 요소를 정확하고 체계적으로 설정하는 것이 필수적입니다 22, 24 . 1-1. Reference & Geometry (참조 및 형상 정의) 해석을 위한 기초 형상을 준비하고 정비하는 단계입니다. 이 단계의 정확성은 후속 해석 결과의 신뢰도에 직접적인 영향을 미칩니다. 지오메트리 생성 및 CAD 인터페이스 호환성 (Geometry Creation & CAD Interface Compatibility) 개념 : CFD 분석을 위한 지오메트리는 일반적으로 3차원 CAD(Computer-Aided Design) 모델을 기반으로 합니다. 건축, 기계, 항공우주 등 다양한 분야에서 사용되는 AutoCAD, SolidWorks, CATIA, Revit, Rhino와 같은 외부 모델링 소프트웨어에서 생성된 지오메트리 데이터를 IGES (.igs), STEP (.stp), SAT (.sat), Parasolid (.x_t) 등의 표준 파일 형식을 통해 CFD 소프트웨어로 불러옵니다 24 . 중요성 : 이 과정에서 파일 형식의 호환성, 데이터 변환 시의 정보 손실 가능성 등이 문제가 될 수 있습니다. 따라서 CFD 소프트웨어는 다양한 CAD 파일 형식을 지원해야 하며, 필요한 경우 데이터 변환 도구나 CAD 모델 복구 및 단순화 기능을 갖춘 플러그인 또는 전용 전처리 도구(예: ANSYS SpaceClaim, SimLab)가 중요하게 사용됩니"
+    },
+    {
+        "url": "cfd_references.html",
+        "title": "CFD 레퍼런스 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "참고문헌"
+        ],
+        "keywords": [
+            "CFD",
+            "레퍼런스",
+            "생물공학연구실"
+        ],
+        "content_snippet": "CFD 이론 및 응용을 학습하고 연구하는 데 유용한 학술 및 기술 자료 목록입니다.",
+        "full_text": "생물공학연구실 \\ 검색 \\ \\ \\ \\ \\ \\ \\ \\ CFD 레퍼런스 \\ CFD 이론 및 응용을 학습하고 연구하는 데 유용한 학술 및 기술 자료 목록입니다. 주요 교재 (Textbooks) Versteeg & Malalasekera, \"An Introduction to Computational Fluid Dynamics: The Finite Volume Method\" Anderson, J.D., \"Computational Fluid Dynamics: The Basics with Applications\" Patankar, S.V., \"Numerical Heat Transfer and Fluid Flow\" Ferziger & Peric, \"Computational Methods for Fluid Dynamics\" 주요 논문 및 리뷰 (Key Papers & Reviews) Launder & Spalding (1974) \"The Numerical Computation of Turbulent Flows\" (RANS 모델 관련 초기 연구) Pope, S.B., \"Turbulent Flows\" (난류 이론 및 모델링 심화 교재/참고 문헌) \"A narrative review to credible computational fluid dynamics models of naturally ventilated built environments\" (자연 환기 분야 CFD V&V 관련 상세 리뷰) \"Applications and prospects of CFD for wind engineering fields\" (풍력 공학 분야 CFD 적용 사례 및 전망) 권위 있는 기관 및 온라인 자료 (Authoritative Institutions & Online Resources) NASA CFD Resources : NASA Glenn Research Center 등에서 제공하는 교육 자료 및 기술 정보. (예: Navier-Stokes Equations 개요) AIAA (American In"
+    },
+    {
+        "url": "cfd_solving.html",
+        "title": "CFD Solving - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "해석 과정"
+        ],
+        "keywords": [
+            "CFD",
+            "Solving",
+            "생물공학연구실"
+        ],
+        "content_snippet": "전산유체역학(CFD)의 \"해석 수행(Solving)\" 단계는 전처리(Pre-processing) 과정에서 준비된 기하 형상, 격자, 물리 모델 설정 및 경계 조건 등을 바탕으로, 실제 유체 유동 현상을 지배하는 편미분 방정식(PDE) 시스템을 수치적으로 근사하여 해를 ",
+        "full_text": ""
+    },
+    {
+        "url": "cfd_terminology.html",
+        "title": "CFD 용어 설명 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "용어집"
+        ],
+        "keywords": [
+            "CFD",
+            "용어",
+            "설명",
+            "생물공학연구실"
+        ],
+        "content_snippet": "CFD 분야에서 사용되는 주요 용어와 개념, 관련 공식의 간략한 설명입니다.",
+        "full_text": "생물공학연구실 검색 CFD 용어 설명 CFD 분야에서 사용되는 주요 용어와 개념, 관련 공식의 간략한 설명입니다. 해석 영역 (Domain) : CFD 시뮬레이션을 수행하는 물리적 공간 영역. 격자/메쉬 (Mesh/Grid) : 해석 영역을 작은 이산적 요소(Cell/Node)로 분할한 구조. 셀/노드 (Cell/Node) : 격자를 구성하는 기본 요소(Cell) 또는 격자점(Node). 지배 방정식 (Governing Equations) : 유체 유동을 지배하는 물리 법칙을 나타내는 방정식 (연속, 운동량, 에너지). Navier-Stokes 방정식 : 점성 유동에 대한 운동량 보존 방정식. 경계 조건 (Boundary Condition, BC) : 해석 영역 경계에서 유동 변수에 부과하는 수학적/물리적 조건 (속도 입구, 압력 출구, 벽 등). 초기 조건 (Initial Condition) : 시간 종속(비정상) 해석의 시작 시점 또는 시간 독립(정상) 해석의 초기 추정값으로 변수 분포를 정의. 이산화 (Discretization) : 연속적인 미분 방정식을 컴퓨터로 풀 수 있는 대수 방정식 시스템으로 변환하는 과정. 유한 차분법 (FDM) : 미분항을 차분으로 근사하여 이산화. 유한 체적법 (FVM) : 제어체에 대해 보존 법칙을 적분하여 이산화. 상용 코드에서 널리 사용됨. 유한 요소법 (FEM) : 해석 영역을 요소로 분할하고 요소 내에서 해를 근사. 수치 해법 (Numerical Solver) : 이산화된 대수 방정식 시스템을 푸는 알고리즘. 반복(Iterative) 또는 직접(Direct) 해법 사용. SIMPLE / PISO : 비압축성 유동의 압력-속도 연동 문제를 해결하는 대표적인 반복 알고리즘 명칭. 수렴 (Convergence) : 반복 해법에서 해가 더 이상 변하지 않고 안정된 상태에 도달하는 것. 잔차 (Residual) : 반복 해법에서 방정식의 좌변과 우변의 차이. 수렴 판단의 주요 지표. 난류 모델 (Turbulence Model"
     },
     {
         "url": "cfd_theory.html",
-        "title": "CFD 이론 - 전산유체역학",
-        "breadcrumb": ["홈", "전산유체역학", "CFD 이론"],
-        "keywords": ["CFD 이론", "전산유체역학", "지배방정식", "난류모델링", "수치해석"],
-        "content_snippet": "전산 유체 역학(CFD)은 수치 해석 및 데이터 구조를 사용하여 유체 흐름과 관련된 문제를 분석하고 해결하는 유체 역학의 한 분야입니다. 이 섹션에서는 CFD의 주요 이론적 측면을 다루는 다양한 주제들을 탐구합니다.",
-        "full_text": "CFD 이론 메인 페이지. 세부 주제: CFD 소개, 핵심 이론, 전처리 과정, 해석 과정, 후처리 과정, 용어집, 참고문헌."
+        "title": "CFD 이론 - 전산유체역학 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론"
+        ],
+        "keywords": [
+            "CFD",
+            "이론",
+            "전산유체역학",
+            "생물공학연구실"
+        ],
+        "content_snippet": "전산 유체 역학(CFD)은 수치 해석 및 데이터 구조를 사용하여 유체 흐름과 관련된 문제를 분석하고 해결하는 유체 역학의 한 분야입니다. 이 섹션에서는 CFD의 주요 이론적 측면을 다루는 다양한 주제들을 탐구합니다. 아래 목록에서 관심 있는 주제를 선택하여 자세한 내용",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 CFD 이론 전산 유체 역학(CFD)은 수치 해석 및 데이터 구조를 사용하여 유체 흐름과 관련된 문제를 분석하고 해결하는 유체 역학의 한 분야입니다. 이 섹션에서는 CFD의 주요 이론적 측면을 다루는 다양한 주제들을 탐구합니다. 아래 목록에서 관심 있는 주제를 선택하여 자세한 내용을 확인하십시오. 세부 주제 CFD 소개 (CFD Introduction) 핵심 이론 (Core Principles) 격자 볼츠만 방법 (LBM) 비정상 RANS (URANS) 모델 전처리 과정 (Pre‑processing) 해석 과정 (Simulation Process) 후처리 과정 (Post‑processing) 용어집 (Glossary) 참고문헌 (References) 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     },
     {
-        "url": "bioprocess_cfd.html",
-        "title": "Bioprocess CFD Simulation - 전산유체역학",
-        "breadcrumb": ["홈", "전산유체역학", "Bioprocess CFD Simulation"],
-        "keywords": ["Bioprocess CFD", "바이오프로세스", "전산유체역학", "생물반응기", "세포배양"],
-        "content_snippet": "바이오프로세스 공학에서 전산 유체 역학(CFD)의 역할과 응용을 탐구합니다. 서론, 이론적 배경, 적용 사례 및 주요 소프트웨어에 대한 심층적인 내용을 확인하세요.",
-        "full_text": "Bioprocess CFD Simulation 연구 메인 페이지. 세부 주제: 소개, 이론적 배경, 적용 사례, 소프트웨어 비교."
+        "url": "cfd_urans_model.html",
+        "title": "비정상 RANS (URANS) 모델 - CFD 이론 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "비정상 RANS (URANS) 모델"
+        ],
+        "keywords": [
+            "비정상",
+            "RANS",
+            "URANS",
+            "모델",
+            "CFD",
+            "이론",
+            "생물공학연구실"
+        ],
+        "content_snippet": "URANS는 Navier-Stokes 방정식을 시간 평균하여 얻어진 RANS 방정식에 비정상(Unsteady) 항을 유지함으로써, 시간에 따라 변화하는 평균 유동장을 해석하는 방법입니다. [6]",
+        "full_text": "생물공학연구실 검색 비정상 Reynolds-Averaged Navier-Stokes (URANS) 모델 URANS는 Navier-Stokes 방정식을 시간 평균하여 얻어진 RANS 방정식에 비정상(Unsteady) 항을 유지함으로써, 시간에 따라 변화하는 평균 유동장을 해석하는 방법입니다. [6] 상세 이론, 기존 RANS와의 차이점, 시간 전개 방식 상세 이론 URANS는 유동 변수( ϕ )를 평균값( ϕ̄ )과 변동 성분( ϕ' )으로 분해( ϕ = ϕ̄ + ϕ' )하고, 이를 Navier-Stokes 방정식에 대입한 후 시간 평균을 취하는 RANS 기법에 기반합니다. [6] RANS 방정식에는 난류 변동으로 인해 발생하는 Reynolds 응력 항( uᵢ'uⱼ' 의 평균)이 추가되며, 이 항을 모델링하기 위해 추가적인 난류 모델(예: k-ε, k-ω, SST 등)이 필요합니다. [2] URANS는 이러한 RANS 방정식의 비정상 형태를 풀어서, 시간에 따른 평균 유동의 변화를 포착합니다. [6] 기존 RANS와의 차이점 시간 의존성: 가장 큰 차이는 시간 항( ∂/∂t )을 유지한다는 것입니다. 기존 RANS는 정상 상태(Steady-State)를 가정하고 시간 평균 방정식을 풀어 최종적인 평균 유동장을 구합니다. [6] URANS는 시간에 따라 변화하는 평균 유동의 스냅샷을 시간 단계별로 계산합니다. [6] 물리 현상 포착: URANS는 시간에 따라 진화하는 대규모 난류 구조 및 비정상 현상(예: 와류 방출, 주기적 박리)을 RANS보다 더 잘 포착할 수 있습니다. [6] 그러나 RANS와 마찬가지로 작은 스케일의 난류 변동은 여전히 난류 모델에 의해 모델링됩니다. [2] 시간 전개 방식 URANS 시뮬레이션은 초기 유동장부터 시작하여, 시간 단계를 반복하며 유동 변수를 업데이트합니다. 각 시간 단계에서 평균 운동량 방정식 및 난류 모델 방정식을 풀어 다음 시간 단계에서의 평균 속도, 압력, 난류 변수 등을 계산합니다. [6] 시간 단계 크기( Δt )와"
     },
     {
-        "url": "software_index.html",
-        "title": "소프트웨어 - 전산유체역학",
-        "breadcrumb": ["홈", "전산유체역학", "소프트웨어"],
-        "keywords": ["소프트웨어", "CFD", "ANSYS Fluent", "OpenFOAM", "M-STAR CFD"],
-        "content_snippet": "본 연구실에서 활용하거나 교육 자료를 제공하는 주요 전산 유체 역학(CFD) 및 관련 소프트웨어 목록입니다.",
-        "full_text": "CFD 소프트웨어 메인 페이지. M-STAR CFD, Ansys Fluent, OpenFOAM 등 주요 소프트웨어 소개 및 상세 정보 링크 제공."
+        "url": "cfd_verification_validation.html",
+        "title": "Verification & Validation (V&V) - 전산유체역학",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "검증 및 확인 (V&V)"
+        ],
+        "keywords": [
+            "Verification",
+            "Validation",
+            "VV",
+            "전산유체역학"
+        ],
+        "content_snippet": "CFD 이론의 필수 요소: V&V",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 전산유체역학(CFD) 검증 및 검인 (Verification & Validation, V&V) CFD 이론의 필수 요소: V&V 전산유체역학(CFD) 시뮬레이션은 실제 물리 현상을 수치적으로 예측하는 강력한 도구이지만, 그 결과의 신뢰성은 반드시 검증(Verification) 과 검인(Validation) 과정을 통해 확보되어야 합니다 [1, 2]. V&V는 CFD 해석의 정확성과 신뢰성을 평가하는 주요 수단이며, 공학 및 과학 분야에서 CFD 결과를 의사결정에 활용하기 위한 필수적인 기초 작업입니다 [1, 6, 7]. CFD 해석 과정은 일반적으로 전처리(Pre-Processing) , 풀이(Solving) , 후처리(Post-Processing) , 그리고 결과의 신뢰성을 평가하는 검증 및 검인(Verification & Validation, V&V) 단계로 구성됩니다. 본 문서는 이 중 V&V 단계에 대한 학술적 내용을 상세히 다루며, CFD 결과의 신뢰성을 어떻게 확보하는지에 초점을 맞춥니다. V&V 기본 용어 및 개념 정의 V&V 분야에서 사용되는 핵심 용어는 명확히 구분되어야 합니다 [1, 2]. 검증 (Verification) : 수치 모델 및 코드가 개발자의 개념적 모델(수학 방정식)과 해를 정확히 나타내는지를 확인하는 과정입니다 [1, 2, 7]. 본질적으로 \"방정식을 올바르게 푸는 것(solving the equations right)\" 에 해당하며 [7], 주로 수학 및 컴퓨터 과학적 문제입니다 [6]. 코드 구현의 정확성(버그 없음)과 설정된 계산의 수치적 정확성(수렴성, 오차)을 평가합니다 [2]. 검인 (Validation) : CFD 모델이 의도된 사용 관점에서 실제 물리 시스템이나 현상과 어느 정도까지 일치하는지 평가하는 과정입니다 [1, 2, 6]. 본질적으로 \"올바른 방정식을 푸는 것(solving the right equations)\" 에 해당하며"
+    },
+    {
+        "url": "collaborations_partners.html",
+        "title": "협력기관 및 파트너 - 연구실 소개 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "연구실 소개",
+            "협력기관 및 파트너"
+        ],
+        "keywords": [
+            "협력기관",
+            "및",
+            "파트너",
+            "연구실",
+            "소개",
+            "생물공학연구실"
+        ],
+        "content_snippet": "본 연구실은 국내외 유수 대학, 연구기관, 산업체와 긴밀한 협력 관계를 구축하여 혁신적인 연구를 수행하고, 그 성과를 확산시키고자 노력하고 있습니다. 공동 연구, 기술 이전, 인력 교류 등 다양한 형태의 파트너십을 통해 시너지를 창출하고 있습니다. 주요 협력 프로그램 ",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 협력기관 및 파트너 본 연구실은 국내외 유수 대학, 연구기관, 산업체와 긴밀한 협력 관계를 구축하여 혁신적인 연구를 수행하고, 그 성과를 확산시키고자 노력하고 있습니다. 공동 연구, 기술 이전, 인력 교류 등 다양한 형태의 파트너십을 통해 시너지를 창출하고 있습니다. 주요 협력 프로그램 및 기관은 다음과 같습니다: BK21 Four 바이오공정 혁신인력양성단 (연세대학교) 본 연구실은 4단계 BK21 사업의 '바이오공정 혁신인력양성단'에 참여하여, 데이터 기반 바이오의약품 대량생산 공정 연구 및 차세대 전문 인력 양성에 힘쓰고 있습니다. 교육연구단 내 타 연구실들과의 공동 연구 및 학술 교류를 통해 융합 연구를 촉진하고 있습니다. K-NIBRT (Global NIBRT Korea) 아일랜드 국립 바이오공정 연구 교육기관(NIBRT)의 교육 시스템을 국내에 도입한 K-NIBRT 프로그램에 겸임교수로서 참여하고 있습니다. 이를 통해 cGMP 수준의 바이오의약품 제조 실습 교육을 제공하고, 기업-학계 간 협력형 인력 양성 프로그램 운영에 기여하고 있습니다. K-NIBRT와의 협력을 통해 산업 현장의 요구를 반영한 실질적인 연구 및 교육을 진행합니다. 국내외 연구기관 및 산업체 본 연구실은 다수의 국내 주요 제약회사, 바이오벤처 기업, 그리고 정부출연연구기관과 특정 기술 개발 및 공동 연구를 진행하고 있습니다. 또한, 싱가포르 A*STAR BTI (Bioprocessing Technology Institute) 등 해외 유수 연구기관과도 지속적인 연구 교류 및 협력 관계를 유지하고 있습니다. (개별 기업 및 기관명은 정보보호 협약에 따라 명시하지 않을 수 있습니다.) 저희 연구실은 열린 마음으로 새로운 협력 기회를 모색하고 있으며, 공동 연구 및 기술 개발에 관심 있는 기관 및 기업의 연락을 언제나 환영합니다. 연구실 소개 메인으로 돌아가기 검색 결과 © 2025 생물공학연구실 (Biopr"
     },
     {
         "url": "digital_twin_main.html",
         "title": "디지털 트윈 기반 바이오공정 - 생물공학연구실",
-        "breadcrumb": ["홈", "디지털 트윈 기반 바이오공정"],
-        "keywords": ["디지털 트윈", "Digital Twin", "개요"],
-        "content_snippet": "디지털 트윈 기반 바이오공정 연구 전반을 소개합니다.",
-        "full_text": "디지털 트윈 기반 바이오공정 메인 페이지. 연구 개요, 실시간 모니터링, 최신 동향으로 이동할 수 있습니다."
-    },
-    {
-        "url": "digital_twin_overview_main.html",
-        "title": "연구 개요 - 디지털 트윈 기반 바이오공정",
-        "breadcrumb": ["홈", "디지털 트윈 기반 바이오공정", "연구 개요"],
-        "keywords": ["디지털 트윈", "연구 개요", "Digital Twin Bioprocess Overview"],
-        "content_snippet": "디지털 트윈 기반 바이오공정 연구의 개념, 필요성, 목표 및 전략을 소개합니다.",
-        "full_text": "디지털 트윈 기반 바이오공정 연구 개요. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "digital_twin_overview_concept_necessity.html",
-        "title": "디지털 트윈 개념과 필요성 - 디지털 트윈 연구 개요",
-        "breadcrumb": ["홈", "디지털 트윈 기반 바이오공정", "연구 개요", "디지털 트윈 개념과 필요성"],
-        "keywords": ["디지털 트윈 개념", "필요성", "Concept", "Necessity"],
-        "content_snippet": "바이오공정에서 디지털 트윈 기술의 핵심 개념과 도입 필요성을 설명합니다.",
-        "full_text": "디지털 트윈의 개념 정의 및 바이오공정 분야에서의 중요성. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "digital_twin_overview_objectives_strategy.html",
-        "title": "연구 목표 및 전략 - 디지털 트윈 연구 개요",
-        "breadcrumb": ["홈", "디지털 트윈 기반 바이오공정", "연구 개요", "연구 목표 및 전략"],
-        "keywords": ["연구 목표", "전략", "Objectives", "Strategy"],
-        "content_snippet": "디지털 트윈 기반 바이오공정 연구를 통해 달성하고자 하는 구체적인 목표와 이를 위한 연구 전략을 소개합니다.",
-        "full_text": "디지털 트윈 기반 바이오공정 연구의 목표 및 추진 전략. (본 페이지는 현재 준비 중입니다.)"
-    },
-    {
-        "url": "digital_twin_monitoring_ai_main.html",
-        "title": "실시간 모니터링 · AI 공정 제어 - 디지털 트윈 기반 바이오공정",
-        "breadcrumb": ["홈", "디지털 트윈 기반 바이오공정", "실시간 모니터링 · AI 공정 제어"],
-        "keywords": ["실시간 모니터링", "AI 공정 제어", "Real-time Monitoring", "AI Control"],
-        "content_snippet": "디지털 트윈을 활용한 실시간 공정 데이터 통합 분석 및 인공지능 기반 최적 공정 제어 기술을 다룹니다.",
-        "full_text": "실시간 모니터링 및 AI 기반 공정 제어. 공정 데이터 통합 분석, 인공지능 기반 최적 공정 제어. (본 페이지는 현재 준비 중입니다.)"
+        "breadcrumb": [
+            "홈",
+            "디지털 트윈 기반 바이오공정"
+        ],
+        "keywords": [
+            "디지털",
+            "트윈",
+            "기반",
+            "바이오공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "Digital Twin Bioprocess",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 디지털 트윈 기반 바이오공정 (Digital Twin Bioprocess) Digital Twin Bioprocess 디지털 트윈 기반 바이오공정은 실시간 모니터링과 모델링을 활용해 공정 최적화를 추구하는 연구 분야입니다. 하위 항목에서 세부 내용을 확인하세요. 연구 개요 디지털 트윈 연구의 개념과 필요성을 소개합니다. 실시간 모니터링 · AI 공정 제어 데이터 분석과 AI 기반 공정 제어 기술을 다룹니다. 최신 연구 동향 디지털 트윈 기술의 최근 연구 성과와 산업 적용 사례를 소개합니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     },
     {
         "url": "digital_twin_monitoring_ai_data_analytics.html",
-        "title": "공정 데이터 통합 분석 - 실시간 모니터링 · AI 공정 제어",
-        "breadcrumb": ["홈", "디지털 트윈 기반 바이오공정", "실시간 모니터링 · AI 공정 제어", "공정 데이터 통합 분석"],
-        "keywords": ["공정 데이터 분석", "Integrated Data Analytics", "센서 데이터"],
+        "title": "공정 데이터 통합 분석 - 실시간 모니터링 · AI 공정 제어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "디지털 트윈 기반 바이오공정",
+            "실시간 모니터링 · AI 공정 제어",
+            "공정 데이터 통합 분석"
+        ],
+        "keywords": [
+            "공정",
+            "데이터",
+            "통합",
+            "분석",
+            "실시간",
+            "모니터링",
+            "AI",
+            "공정",
+            "제어",
+            "생물공학연구실"
+        ],
         "content_snippet": "다양한 센서로부터 수집된 공정 데이터를 통합하고 분석하여 공정 상태를 정확히 파악하는 방법을 설명합니다.",
-        "full_text": "공정 데이터 통합 분석 기술 및 플랫폼. (본 페이지는 현재 준비 중입니다.)"
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 공정 데이터 통합 분석 (Integrated Process Data Analytics) 다양한 센서로부터 수집된 공정 데이터를 통합하고 분석하여 공정 상태를 정확히 파악하는 방법을 설명합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "digital_twin_monitoring_ai_main.html",
+        "title": "실시간 모니터링 · AI 공정 제어 - 디지털 트윈 기반 바이오공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "디지털 트윈 기반 바이오공정",
+            "실시간 모니터링 · AI 공정 제어"
+        ],
+        "keywords": [
+            "실시간",
+            "모니터링",
+            "AI",
+            "공정",
+            "제어",
+            "디지털",
+            "트윈",
+            "기반",
+            "바이오공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "디지털 트윈을 활용한 실시간 공정 데이터 통합 분석 및 인공지능 기반 최적 공정 제어 기술을 다룹니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 실시간 모니터링 · AI 공정 제어 (Real‑time Monitoring & AI Control) 디지털 트윈을 활용한 실시간 공정 데이터 통합 분석 및 인공지능 기반 최적 공정 제어 기술을 다룹니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다. 공정 데이터 통합 분석 (Integrated Process Data Analytics) 인공지능 기반 최적 공정 제어 (AI‑driven Optimal Process Control) 콘텐츠 준비 중 실시간 모니터링 및 AI 공정 제어에 대한 상세 내용이 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     },
     {
         "url": "digital_twin_monitoring_ai_optimal_control.html",
-        "title": "인공지능 기반 최적 공정 제어 - 실시간 모니터링 · AI 공정 제어",
-        "breadcrumb": ["홈", "디지털 트윈 기반 바이오공정", "실시간 모니터링 · AI 공정 제어", "인공지능 기반 최적 공정 제어"],
-        "keywords": ["인공지능", "AI", "최적 공정 제어", "Optimal Process Control"],
+        "title": "인공지능 기반 최적 공정 제어 - 실시간 모니터링 · AI 공정 제어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "디지털 트윈 기반 바이오공정",
+            "실시간 모니터링 · AI 공정 제어",
+            "인공지능 기반 최적 공정 제어"
+        ],
+        "keywords": [
+            "인공지능",
+            "기반",
+            "최적",
+            "공정",
+            "제어",
+            "실시간",
+            "모니터링",
+            "AI",
+            "공정",
+            "제어",
+            "생물공학연구실"
+        ],
         "content_snippet": "인공지능(AI) 및 머신러닝 알고리즘을 적용하여 바이오공정을 실시간으로 최적 제어하는 기술을 소개합니다.",
-        "full_text": "AI 기반 최적 공정 제어 시스템. (본 페이지는 현재 준비 중입니다.)"
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 인공지능 기반 최적 공정 제어 (AI‑driven Optimal Process Control) 인공지능(AI) 및 머신러닝 알고리즘을 적용하여 바이오공정을 실시간으로 최적 제어하는 기술을 소개합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     },
     {
-        "url": "digital_twin_trends_main.html",
-        "title": "최신 연구 동향 - 디지털 트윈 기반 바이오공정",
-        "breadcrumb": ["홈", "디지털 트윈 기반 바이오공정", "최신 연구 동향"],
-        "keywords": ["최신 연구 동향", "Latest Research Trends", "논문", "산업 적용"],
-        "content_snippet": "디지털 트윈 기반 바이오공정 분야의 최신 연구 성과와 산업 적용 현황을 소개합니다.",
-        "full_text": "디지털 트윈 기반 바이오공정 최신 연구 동향. 주요 연구 성과, 최신 산업 적용 현황. (본 페이지는 현재 준비 중입니다.)"
+        "url": "digital_twin_overview_concept_necessity.html",
+        "title": "디지털 트윈 개념과 필요성 - 디지털 트윈 연구 개요 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "디지털 트윈 기반 바이오공정",
+            "연구 개요",
+            "디지털 트윈 개념과 필요성"
+        ],
+        "keywords": [
+            "디지털",
+            "트윈",
+            "개념과",
+            "필요성",
+            "디지털",
+            "트윈",
+            "연구",
+            "개요",
+            "생물공학연구실"
+        ],
+        "content_snippet": "바이오공정에서 디지털 트윈 기술의 핵심 개념과 도입 필요성을 설명합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 디지털 트윈 개념과 필요성 (Concept & Necessity) 바이오공정에서 디지털 트윈 기술의 핵심 개념과 도입 필요성을 설명합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     },
     {
-        "url": "digital_twin_trends_publications_patents.html",
-        "title": "주요 연구 성과 - 디지털 트윈 최신 연구 동향",
-        "breadcrumb": ["홈", "디지털 트윈 기반 바이오공정", "최신 연구 동향", "주요 연구 성과"],
-        "keywords": ["연구 성과", "논문", "특허", "Publications", "Patents"],
-        "content_snippet": "디지털 트윈 기반 바이오공정 관련 주요 논문, 특허 등 연구 업적을 공유합니다.",
-        "full_text": "디지털 트윈 기반 바이오공정 관련 주요 연구 성과. (본 페이지는 현재 준비 중입니다.)"
+        "url": "digital_twin_overview_main.html",
+        "title": "연구 개요 - 디지털 트윈 기반 바이오공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "디지털 트윈 기반 바이오공정",
+            "연구 개요"
+        ],
+        "keywords": [
+            "연구",
+            "개요",
+            "디지털",
+            "트윈",
+            "기반",
+            "바이오공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "디지털 트윈 기반 바이오공정 연구의 개념, 필요성, 목표 및 전략을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 연구 개요 (Overview) 디지털 트윈 기반 바이오공정 연구의 개념, 필요성, 목표 및 전략을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다. 디지털 트윈 개념과 필요성 (Concept & Necessity) 연구 목표 및 전략 (Objectives & Strategy) 콘텐츠 준비 중 디지털 트윈 연구 개요에 대한 상세 내용이 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "digital_twin_overview_objectives_strategy.html",
+        "title": "연구 목표 및 전략 - 디지털 트윈 연구 개요 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "디지털 트윈 기반 바이오공정",
+            "연구 개요",
+            "연구 목표 및 전략"
+        ],
+        "keywords": [
+            "연구",
+            "목표",
+            "및",
+            "전략",
+            "디지털",
+            "트윈",
+            "연구",
+            "개요",
+            "생물공학연구실"
+        ],
+        "content_snippet": "디지털 트윈 기반 바이오공정 연구를 통해 달성하고자 하는 구체적인 목표와 이를 위한 연구 전략을 소개합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 연구 목표 및 전략 (Objectives & Strategy) 디지털 트윈 기반 바이오공정 연구를 통해 달성하고자 하는 구체적인 목표와 이를 위한 연구 전략을 소개합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     },
     {
         "url": "digital_twin_trends_industrial_app.html",
-        "title": "최신 산업 적용 현황 - 디지털 트윈 최신 연구 동향",
-        "breadcrumb": ["홈", "디지털 트윈 기반 바이오공정", "최신 연구 동향", "최신 산업 적용 현황"],
-        "keywords": ["산업 적용", "Industrial Applications", "사례 연구"],
+        "title": "최신 산업 적용 현황 - 디지털 트윈 최신 연구 동향 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "디지털 트윈 기반 바이오공정",
+            "최신 연구 동향",
+            "최신 산업 적용 현황"
+        ],
+        "keywords": [
+            "최신",
+            "산업",
+            "적용",
+            "현황",
+            "디지털",
+            "트윈",
+            "최신",
+            "연구",
+            "동향",
+            "생물공학연구실"
+        ],
         "content_snippet": "디지털 트윈 기술이 바이오 제약 및 관련 산업에서 어떻게 활용되고 있는지 최신 동향 및 사례를 소개합니다.",
-        "full_text": "디지털 트윈 기술의 최신 산업 적용 현황. (본 페이지는 현재 준비 중입니다.)"
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 최신 산업 적용 현황 (Recent Industrial Applications) 디지털 트윈 기술이 바이오 제약 및 관련 산업에서 어떻게 활용되고 있는지 최신 동향 및 사례를 소개합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "digital_twin_trends_main.html",
+        "title": "최신 연구 동향 - 디지털 트윈 기반 바이오공정 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "디지털 트윈 기반 바이오공정",
+            "최신 연구 동향"
+        ],
+        "keywords": [
+            "최신",
+            "연구",
+            "동향",
+            "디지털",
+            "트윈",
+            "기반",
+            "바이오공정",
+            "생물공학연구실"
+        ],
+        "content_snippet": "디지털 트윈 기반 바이오공정 분야의 최신 연구 성과와 산업 적용 현황을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 최신 연구 동향 (Latest Research Trends) 디지털 트윈 기반 바이오공정 분야의 최신 연구 성과와 산업 적용 현황을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다. 주요 연구 성과 (Publications & Patents) 최신 산업 적용 현황 (Recent Industrial Applications) 콘텐츠 준비 중 최신 연구 동향에 대한 상세 내용이 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "digital_twin_trends_publications_patents.html",
+        "title": "주요 연구 성과 - 디지털 트윈 최신 연구 동향 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "디지털 트윈 기반 바이오공정",
+            "최신 연구 동향",
+            "주요 연구 성과"
+        ],
+        "keywords": [
+            "주요",
+            "연구",
+            "성과",
+            "디지털",
+            "트윈",
+            "최신",
+            "연구",
+            "동향",
+            "생물공학연구실"
+        ],
+        "content_snippet": "디지털 트윈 기반 바이오공정 관련 주요 논문, 특허 등 연구 업적을 공유합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 주요 연구 성과 (Publications & Patents) 디지털 트윈 기반 바이오공정 관련 주요 논문, 특허 등 연구 업적을 공유합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "dt_bio_bioinformatics.html",
+        "title": "생물정보학 - 디지털 트윈 및 바이오인포매틱스 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "생물정보학"
+        ],
+        "keywords": [
+            "생물정보학",
+            "디지털",
+            "트윈",
+            "및",
+            "바이오인포매틱스",
+            "생물공학연구실"
+        ],
+        "content_snippet": "이 페이지는 생물정보학 도구 및 분석 파이프라인을 활용한 연구 내용을 소개합니다.",
+        "full_text": "생물공학연구실 검색 생물정보학 이 페이지는 생물정보학 도구 및 분석 파이프라인을 활용한 연구 내용을 소개합니다. 현재 페이지의 콘텐츠는 준비 중입니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "dt_bio_data_science.html",
+        "title": "데이터 과학 - 디지털 트윈 및 바이오인포매틱스 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "데이터 과학"
+        ],
+        "keywords": [
+            "데이터",
+            "과학",
+            "디지털",
+            "트윈",
+            "및",
+            "바이오인포매틱스",
+            "생물공학연구실"
+        ],
+        "content_snippet": "이 페이지는 바이오프로세스 데이터 분석 및 머신러닝/AI 기반 모델링 연구를 다룹니다.",
+        "full_text": "생물공학연구실 검색 데이터 과학 이 페이지는 바이오프로세스 데이터 분석 및 머신러닝/AI 기반 모델링 연구를 다룹니다. 현재 페이지의 콘텐츠는 준비 중입니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "dt_bio_digital_twin.html",
+        "title": "디지털 트윈 - 디지털 트윈 및 바이오인포매틱스 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "디지털 트윈"
+        ],
+        "keywords": [
+            "디지털",
+            "트윈",
+            "디지털",
+            "트윈",
+            "및",
+            "바이오인포매틱스",
+            "생물공학연구실"
+        ],
+        "content_snippet": "이 페이지는 바이오프로세스를 위한 디지털 트윈 기술의 개발 및 응용 연구를 소개합니다.",
+        "full_text": "생물공학연구실 검색 디지털 트윈 이 페이지는 바이오프로세스를 위한 디지털 트윈 기술의 개발 및 응용 연구를 소개합니다. 현재 페이지의 콘텐츠는 준비 중입니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "index.html",
+        "title": "생물공학연구실 - Bioprocess Engineering Laboratory",
+        "breadcrumb": [
+            "홈"
+        ],
+        "keywords": [
+            "생물공학연구실",
+            "Bioprocess",
+            "Engineering",
+            "Laboratory"
+        ],
+        "content_snippet": "데이터 과학과 공학적 모델링, 시스템 생물학의 통합으로 지속 가능한 바이오공정 솔루션을 선도합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 차세대 바이오공정 혁신을 위한 융합 연구 선도 데이터 과학과 공학적 모델링, 시스템 생물학의 통합으로 지속 가능한 바이오공정 솔루션을 선도합니다. 연구실 소개 보기 주요 연구 분야 디지털 트윈 기반 바이오공정 시뮬레이션 AI를 활용한 실시간 공정 모니터링 및 최적 제어 전략 개발. CHO 세포 배양 공정 최적화 데이터 기반 모델을 통한 항체 생산성 및 품질 향상 연구. 시스템 대사공학 및 배지 개발 모델 가이드 프레임워크를 통한 배양 조건 자동 탐색 및 최적화. 바이오리액터 설계 최적화 공학적 해석 기반 바이오리액터 설계 및 운전 효율성 극대화. 연구실 소식 및 공지 공지사항 학부 연구생 모집 (2025년 후기) 바이오공정 및 첨단 모델링 연구에 관심 있는 학부생 여러분의 많은 지원 바랍니다. (마감: ~8/15) 자세히 보기... 연구실 소식 2025년도 춘계학술대회 논문 발표 본 연구실 소속 김연구 학생이 2025년도 한국생물공학회 춘계학술대회에서 우수논문발표상을 수상했습니다. 자세히 보기... 모든 소식 보기 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "introduction.html",
+        "title": "연구실 소개 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "연구실 소개"
+        ],
+        "keywords": [
+            "연구실",
+            "소개",
+            "생물공학연구실"
+        ],
+        "content_snippet": "Bioprocess Engineering Laboratory",
+        "full_text": "생물공학연구실 검색 연구실 소개 Bioprocess Engineering Laboratory 본 연구실에 대한 다양한 정보를 아래 항목별로 확인하실 수 있습니다. 각 항목을 클릭하여 상세 내용을 살펴보세요. 연구실 개요 연구실의 전반적인 소개, 미션, 그리고 핵심 가치를 안내합니다. 연구 분야 디지털 트윈, 시스템 생물학, CFD 시뮬레이션 등 주요 연구 영역을 소개합니다. 연구 목표 및 비전 연구실의 장기적인 목표와 미래 지향적인 비전을 공유합니다. 교수 소개 연구실을 이끄는 지도교수님의 전문 분야와 경력을 안내합니다. 연구원 소개 연구에 참여하는 박사후연구원, 박사 및 석사 과정 학생들을 소개합니다. 주요 연구 프로젝트 현재 진행 중이거나 대표적인 연구 프로젝트들을 소개합니다. 연구실 소식 및 공지사항 연구실의 최신 소식, 공지사항, 이벤트 등을 안내합니다. 실험실 시설 및 장비 연구 수행에 활용되는 주요 실험 시설과 첨단 장비들을 안내합니다. 연구 성과 주요 논문, 특허, 기술 이전 등 연구실의 대표적인 성과를 소개합니다. 협력기관 및 파트너 공동 연구 및 기술 개발을 함께하는 국내외 협력 기관들을 안내합니다. 사진 갤러리 연구실 활동, 행사, 멤버들의 다양한 모습을 담은 사진들을 제공합니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "lab_facilities_equipment.html",
+        "title": "실험실 시설 및 장비 - 연구실 소개 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "연구실 소개",
+            "실험실 시설 및 장비"
+        ],
+        "keywords": [
+            "실험실",
+            "시설",
+            "및",
+            "장비",
+            "연구실",
+            "소개",
+            "생물공학연구실"
+        ],
+        "content_snippet": "저희 연구실은 최첨단 바이오공정 연구 수행을 위한 다양한 핵심 시설과 정밀 장비를 갖추고 있습니다. 이를 통해 세포 배양, 공정 개발, 데이터 분석, 모델링 등 광범위한 연구 활동을 지원합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 실험실 시설 및 장비 저희 연구실은 최첨단 바이오공정 연구 수행을 위한 다양한 핵심 시설과 정밀 장비를 갖추고 있습니다. 이를 통해 세포 배양, 공정 개발, 데이터 분석, 모델링 등 광범위한 연구 활동을 지원합니다. 세포 배양 시설 다양한 규모의 바이오리액터 (교반 탱크형, 파동형, 일회용 등) CO2 인큐베이터, 쉐이킹 인큐베이터 생물안전작업대 (BSC), 클린벤치 세포 계수기 (Automated Cell Counter) 및 현미경 시스템 분석 장비 고성능 액체 크로마토그래피 (HPLC) 시스템 가스 크로마토그래피-질량 분석기 (GC-MS) 유세포 분석기 (Flow Cytometer) 다기능 마이크로플레이트 리더 (흡광, 형광, 발광 측정) 단백질 및 핵산 정량 분석 장비 (NanoDrop, Qubit) 실시간 PCR (RT-PCR) 시스템 계산 및 데이터 분석 인프라 고성능 워크스테이션 (CFD 시뮬레이션, AI 모델링용) 데이터 분석 및 시각화 소프트웨어 (MATLAB, Python, R 등) 연구 데이터 관리 시스템 및 서버 접근 기타 지원 장비 초고속 원심분리기, 저온 냉장/냉동고 멸균기 (Autoclave), 초순수 제조 장치 정밀 저울, pH 미터, 교반기 등 기본 실험 장비 실제 장비 사진 및 상세 스펙은 준비 중이며, 곧 업데이트될 예정입니다. 연구실 소개 메인으로 돌아가기 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "lab_news_detail_1.html",
+        "title": "2025년도 춘계학술대회 논문 발표 - 연구실 소식 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "2025년도 춘계학술대회 논문 발표"
+        ],
+        "keywords": [
+            "2025년도",
+            "춘계학술대회",
+            "논문",
+            "발표",
+            "연구실",
+            "소식",
+            "생물공학연구실"
+        ],
+        "content_snippet": "게시 날짜: 2025년 4월 15일",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 2025년도 춘계학술대회 우수논문발표상 수상 (김연구 학생) 게시 날짜: 2025년 4월 15일 본 연구실 소속 김연구 학생(석사과정)이 2025년 4월 10일부터 12일까지 제주국제컨벤션센터에서 개최된 2025년도 한국생물공학회 춘계학술발표대회 및 국제심포지엄 에서 우수논문발표상을 수상하였습니다. 학회 발표 또는 시상식 관련 이미지 (준비 중) 김연구 학생의 학회 발표 모습 (예시) 발표 내용 김연구 학생은 \" CFD 모델링을 활용한 교반형 바이오리액터 내 CHO 세포의 유체역학적 스트레스 최소화 전략 \"이라는 주제로 구두 발표를 진행했습니다. 본 연구는 전산유체역학(CFD) 시뮬레이션을 통해 다양한 임펠러 디자인과 교반 조건에서 CHO 세포가 경험하는 전단응력을 정량적으로 분석하고, 이를 최소화하여 세포 성장 및 항체 생산성을 향상시킬 수 있는 최적 운전 조건을 도출하는 내용을 담고 있습니다. 심사위원들은 연구의 창의성과 산업적 응용 가능성을 높이 평가하여 본 상을 수여하였습니다. 수상 소감 (김연구 학생) \"지도해주신 홍종광 교수님과 연구실 동료들에게 감사드립니다. 이번 수상을 계기로 더욱 정진하여 바이오공정 분야 발전에 기여할 수 있는 연구자가 되도록 노력하겠습니다.\" 연구실 모든 구성원들이 김연구 학생의 수상을 진심으로 축하하며, 앞으로도 훌륭한 연구 성과를 이어가기를 응원합니다. 목록으로 돌아가기 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "lab_news_detail_2.html",
+        "title": "학부 연구생 이지혜, 국제 학회 발표 - 연구실 소식 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "학부 연구생 이지혜, 국제 학회 발표"
+        ],
+        "keywords": [
+            "학부",
+            "연구생",
+            "이지혜",
+            "국제",
+            "학회",
+            "발표",
+            "연구실",
+            "소식",
+            "생물공학연구실"
+        ],
+        "content_snippet": "게시 날짜: 2025년 7월 22일",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 학부 연구생 이지혜, 국제 학회 (ISBioTech 2025) 발표 게시 날짜: 2025년 7월 22일 본 연구실 학부 연구생 이지혜 학생(생명과학기술학부 4학년)이 2025년 7월 15일부터 18일까지 미국 보스턴에서 개최된 International Society for BioProcess Technology (ISBioTech) 2025 연례 학술대회 에서 포스터 발표를 성공적으로 마쳤습니다. 이지혜 학생 포스터 발표 이미지 (준비 중) ISBioTech 2025 학회 포스터 세션 중 이지혜 학생 (예시) 발표 주제 및 내용 이지혜 학생은 \" Development of a simplified scale-down model for predicting nutrient limitations in large-scale CHO cell cultures using CFD-derived parameters \"라는 주제로 포스터를 발표하였습니다. 본 연구는 대규모 CHO 세포 배양에서 발생할 수 있는 영양분 제한 현상을 예측하기 위해, 전산유체역학(CFD)으로 도출된 주요 파라미터(예: 혼합 시간, 국소 농도 구배)를 활용한 간소화된 스케일다운 모델 개발에 관한 것입니다. 이 모델은 초기 공정 개발 단계에서 잠재적인 스케일업 문제를 신속하게 파악하는 데 기여할 수 있습니다. 발표는 학부생임에도 불구하고 깊이 있는 연구 내용과 명확한 전달력으로 많은 참석자들의 관심과 질문을 받았습니다. 학회 참가 의의 이지혜 학생은 이번 학회 참가를 통해 최신 바이오공정 기술 동향을 파악하고, 전 세계 연구자들과 교류하며 국제적인 감각을 넓히는 소중한 경험을 하였습니다. 학부 과정 중 국제 학회 발표는 매우 이례적인 성과로, 학생의 연구 열정과 잠재력을 보여주는 사례입니다. 연구실은 이지혜 학생의 성공적인 국제 학회 발표를 축하하며, 앞으로도 학부생들의 연구 참여를 적극 지원하여 미래 바이오공학 인재 양성에 "
+    },
+    {
+        "url": "lab_news_detail_generic.html",
+        "title": "연구실 소식 상세 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "연구실 소식 상세"
+        ],
+        "keywords": [
+            "연구실",
+            "소식",
+            "상세",
+            "생물공학연구실"
+        ],
+        "content_snippet": "게시 날짜: YYYY-MM-DD",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 연구실 소식 제목 게시 날짜: YYYY-MM-DD 본 연구실 소식은 일반적인 내용을 담고 있는 예시 페이지입니다. 실제 소식 내용은 동적으로 업데이트될 수 있습니다. 예를 들어, 교수님의 수상 소식이나 새로운 연구 프로젝트 시작과 같은 내용이 여기에 표시될 수 있습니다. 예시: 홍종광 교수님, XXX 학회 우수 연구자상 수상 생물공학연구실의 홍종광 교수님께서 2025년 10월 5일 개최된 XXX 학회 연례 총회에서 바이오공정 분야의 혁신적인 연구 성과를 인정받아 '우수 연구자상'을 수상하셨습니다. 홍 교수님은 지난 수년간 디지털 트윈 기반 바이오공정 최적화 및 CHO 세포 배양 기술 개발에 매진하여 다수의 SCI급 논문을 발표하고 특허를 출원하는 등 탁월한 연구 업적을 쌓아오셨습니다. 특히, 최근 발표된 'AI 기반 실시간 바이오리액터 제어 시스템' 연구는 산업계로부터 큰 주목을 받았습니다. 이번 수상은 홍 교수님의 끊임없는 연구 열정과 연구실 구성원들의 노력이 함께 이루어낸 결과입니다. 연구실一同 진심으로 축하드립니다! 교수님 수상 관련 이미지 (준비 중) XXX 학회 우수 연구자상 시상식 (예시) 목록으로 돌아가기 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다. import { menuStructure, generateNavigation, generateBreadcrumbs, adjustBodyPadding, loadSearchIndex, performSiteSearch, displaySuggestions } from './script.js'; document.add"
+    },
+    {
+        "url": "lab_overview.html",
+        "title": "연구실 개요 - 연구실 소개 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "연구실 소개",
+            "연구실 개요"
+        ],
+        "keywords": [
+            "연구실",
+            "개요",
+            "연구실",
+            "소개",
+            "생물공학연구실"
+        ],
+        "content_snippet": "생물공학연구실 (Bioprocess Engineering Laboratory)은 연세대학교 미래캠퍼스 생명과학기술학부에 소속되어 있으며, 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호에 위치하고 있습니다. 본 연구실은 최첨단 전산유체역학(CFD) 기술과 시",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 연구실 개요 연구실 소개 생물공학연구실 (Bioprocess Engineering Laboratory)은 연세대학교 미래캠퍼스 생명과학기술학부에 소속되어 있으며, 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호에 위치하고 있습니다. 본 연구실은 최첨단 전산유체역학(CFD) 기술과 시스템 생물학적 접근법을 융합하여 바이오공정을 심층적으로 이해하고 효율성을 극대화하는 연구를 수행합니다. 특히, 디지털 트윈 기술을 활용하여 실제 공정을 가상 환경에서 모사하고 예측하며, 이를 통해 공정 개발 및 최적화를 목표로 합니다. 저희 연구실은 K-NIBRT(Global NIBRT Korea) 겸임교수 연구실로서 바이오공정 인력양성 프로그램에도 적극 참여하며, 산업계와의 긴밀한 연계를 통해 실질적인 문제 해결에 기여하고자 합니다. 미션 및 핵심 가치 미션: 데이터 기반의 정밀 바이오공학 연구를 통해 바이오 의약품 및 소재 개발의 혁신을 선도하고, 인류 보건 증진과 지속 가능한 사회 발전에 기여한다. 핵심 가치: 혁신 (Innovation): 창의적이고 도전적인 연구를 통해 기존의 한계를 극복하고 새로운 기술을 개발합니다. 융합 (Convergence): 다양한 학문 분야의 지식과 기술을 융합하여 시너지를 창출하고 복잡한 문제를 해결합니다. 탁월성 (Excellence): 모든 연구 활동에서 최고 수준의 전문성과 윤리성을 추구합니다. 협력 (Collaboration): 국내외 연구기관 및 산업계와의 긴밀한 협력을 통해 지식을 공유하고 공동의 목표를 달성합니다. 인재 양성 (Nurturing Talent): 차세대 연구자들을 양성하여 미래 생명공학 분야의 발전에 기여합니다. 기본 정보 연구실명 (Korean) 생물공학연구실 연구실명 (English) Bioprocess Engineering Laboratory 지도교수 홍종광 (Jong Kwang Hong), 조교수 소속 연세대학교 미래캠퍼스"
     },
     {
         "url": "lab_resources.html",
         "title": "자료실 - 생물공학연구실",
-        "breadcrumb": ["홈", "자료실"],
-        "keywords": ["자료실", "Resources", "논문", "발표자료", "링크"],
-        "content_snippet": "연구 논문, 학술 발표 자료, 유용한 외부 링크 등 연구 및 학습에 도움이 되는 자료들을 제공합니다.",
-        "full_text": "생물공학연구실 자료실. 연구 관련 자료, 출판물, 유용한 링크 등을 제공할 예정입니다. (본 페이지는 현재 준비 중입니다.)"
+        "breadcrumb": [
+            "홈",
+            "자료실"
+        ],
+        "keywords": [
+            "자료실",
+            "생물공학연구실"
+        ],
+        "content_snippet": "생물공학연구실의 자료실입니다. 이 공간에서는 연구 논문, 학술 발표 자료, 교육 자료, 유용한 외부 링크 등 다양한 연구 및 학습 관련 리소스를 제공할 예정입니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 자료실 생물공학연구실의 자료실입니다. 이 공간에서는 연구 논문, 학술 발표 자료, 교육 자료, 유용한 외부 링크 등 다양한 연구 및 학습 관련 리소스를 제공할 예정입니다. 현재 자료 준비 중에 있으며, 곧 다양한 콘텐츠로 업데이트될 예정입니다. 연구 및 학습에 도움이 되는 유익한 정보를 제공하기 위해 노력하겠습니다. 콘텐츠 준비 중 자료실 페이지는 현재 준비 중에 있습니다. 유용한 자료들을 곧 만나보실 수 있도록 최선을 다하겠습니다. 방문해주셔서 감사합니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "major_research_projects.html",
+        "title": "주요 연구 프로젝트 - 연구실 소개 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "연구실 소개",
+            "주요 연구 프로젝트"
+        ],
+        "keywords": [
+            "주요",
+            "연구",
+            "프로젝트",
+            "연구실",
+            "소개",
+            "생물공학연구실"
+        ],
+        "content_snippet": "본 연구실은 바이오공정 분야의 혁신을 선도하기 위해 다양한 국책 과제 및 산학 협력 프로젝트에 적극적으로 참여하고 있습니다. 현재 수행 중이거나 최근 완료된 주요 프로젝트는 다음과 같습니다:",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 주요 연구 프로젝트 본 연구실은 바이오공정 분야의 혁신을 선도하기 위해 다양한 국책 과제 및 산학 협력 프로젝트에 적극적으로 참여하고 있습니다. 현재 수행 중이거나 최근 완료된 주요 프로젝트는 다음과 같습니다: BK21 Four 바이오공정 혁신인력양성단 (참여교수) 과제 기간: 2020년 ~ 현재 지원 기관: 교육부, 한국연구재단 역할 및 목표: 본 교육연구단 사업의 참여교수로서, 데이터 기반 바이오의약품 대량생산 공정 모듈 개발 연구를 수행하고 있습니다. 또한, 관련 분야의 전문 지식과 실무 능력을 갖춘 석·박사급 고급 인력을 양성하는 데 기여하고 있습니다. 주요 연구 내용: 바이오공정 데이터 통합 분석 및 인공지능(AI) 기반 모델링 디지털 트윈 기술을 활용한 세포 배양 공정 실시간 모니터링 및 최적화 스마트 바이오공장 구현을 위한 요소 기술 개발 (예: 모델 기반 배지 설계 자동화) 고품질 항체 의약품 생산을 위한 CHO 세포 배양 공정 개선 연구 K-NIBRT (Global NIBRT Korea) 프로그램 참여 (겸임교수) 활동 기간: 2021년 ~ 현재 협력 기관: K-NIBRT 사업단 (연세대학교 국제캠퍼스) 역할 및 목표: K-NIBRT 사업의 겸임교수로서, 국내 바이오산업 인력 양성을 위한 교육 프로그램에 참여하고 있습니다. 특히, cGMP (Current Good Manufacturing Practice) 수준의 단백질 의약품 제조 공정 전반에 대한 이론 교육 및 실습 훈련을 제공하여, 기업과 학계 간의 협력을 강화하고 산업 현장의 요구에 부응하는 전문 인력을 배출하는 것을 목표로 합니다. 주요 활동: 바이오의약품 업스트림/다운스트림 공정 교육 과정 개발 및 강의 실습 중심의 현장 맞춤형 인력 양성 프로그램 운영 바이오공정 관련 기술 자문 및 산업체 재직자 교육 기타 산학 협력 및 정부 R&D 과제 본 연구실은 위 주요 프로젝트 외에도 다수의 국내 제약/바이오 기업"
+    },
+    {
+        "url": "meta_eng_main.html",
+        "title": "시스템 대사공학 및 배지 최적화 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "시스템 대사공학 및 배지 최적화"
+        ],
+        "keywords": [
+            "시스템",
+            "대사공학",
+            "및",
+            "배지",
+            "최적화",
+            "생물공학연구실"
+        ],
+        "content_snippet": "Metabolic Engineering & Media Optimization",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 시스템 대사공학 및 배지 최적화 (Metabolic Engineering & Media Optimization) Metabolic Engineering & Media Optimization 대사공학과 배지 최적화 연구는 고효율 세포배양을 달성하기 위한 핵심 전략입니다. 아래 항목에서 세부 연구 내용을 확인해 보세요. 연구 개요 연구 배경과 기술적 접근 방법을 소개합니다. 모델 기반 배지 설계 대사 모델 기반의 배지 최적화와 자동화 시스템을 다룹니다. 최신 연구 동향 관련 기술의 연구 성과와 산업 적용 사례를 살펴봅니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "meta_eng_model_media_design_automated_dev.html",
+        "title": "배지 개발 자동화 시스템 - 모델 기반 배지 설계 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "시스템 대사공학 및 배지 최적화",
+            "모델 기반 배지 설계",
+            "배지 개발 자동화 시스템"
+        ],
+        "keywords": [
+            "배지",
+            "개발",
+            "자동화",
+            "시스템",
+            "모델",
+            "기반",
+            "배지",
+            "설계",
+            "생물공학연구실"
+        ],
+        "content_snippet": "로봇 및 자동화 장비를 활용하여 배지 개발 과정을 가속화하고 효율성을 높이는 시스템을 설명합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 배지 개발 자동화 시스템 (Automated Media Development System) 로봇 및 자동화 장비를 활용하여 배지 개발 과정을 가속화하고 효율성을 높이는 시스템을 설명합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "meta_eng_model_media_design_main.html",
+        "title": "모델 기반 배지 설계 - 시스템 대사공학 및 배지 최적화 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "시스템 대사공학 및 배지 최적화",
+            "모델 기반 배지 설계"
+        ],
+        "keywords": [
+            "모델",
+            "기반",
+            "배지",
+            "설계",
+            "시스템",
+            "대사공학",
+            "및",
+            "배지",
+            "최적화",
+            "생물공학연구실"
+        ],
+        "content_snippet": "컴퓨터 모델링과 자동화 시스템을 활용한 효율적인 세포 배양 배지 설계 및 개발 방법을 다룹니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 모델 기반 배지 설계 (Model‑guided Media Design) 컴퓨터 모델링과 자동화 시스템을 활용한 효율적인 세포 배양 배지 설계 및 개발 방법을 다룹니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다. 대사 모델 기반 배지 최적화 (Metabolic Model‑driven Media Optimization) 배지 개발 자동화 시스템 (Automated Media Development System) 콘텐츠 준비 중 모델 기반 배지 설계에 대한 상세 내용이 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "meta_eng_model_media_design_metabolic_model_opt.html",
+        "title": "대사 모델 기반 배지 최적화 - 모델 기반 배지 설계 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "시스템 대사공학 및 배지 최적화",
+            "모델 기반 배지 설계",
+            "대사 모델 기반 배지 최적화"
+        ],
+        "keywords": [
+            "대사",
+            "모델",
+            "기반",
+            "배지",
+            "최적화",
+            "모델",
+            "기반",
+            "배지",
+            "설계",
+            "생물공학연구실"
+        ],
+        "content_snippet": "세포의 대사 네트워크 모델을 이용하여 배지 조성을 최적화하는 전략을 소개합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 대사 모델 기반 배지 최적화 (Metabolic Model‑driven Media Optimization) 세포의 대사 네트워크 모델을 이용하여 배지 조성을 최적화하는 전략을 소개합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "meta_eng_overview_background_objectives.html",
+        "title": "연구 배경 및 목적 - 시스템 대사공학 및 배지 최적화 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "시스템 대사공학 및 배지 최적화",
+            "연구 개요",
+            "연구 배경 및 목적"
+        ],
+        "keywords": [
+            "연구",
+            "배경",
+            "및",
+            "목적",
+            "시스템",
+            "대사공학",
+            "및",
+            "배지",
+            "최적화",
+            "생물공학연구실"
+        ],
+        "content_snippet": "본 연구실은 시스템 대사공학 및 배지 최적화 연구를 통해 바이오 의약품 및 유용물질 생산의 효율성과 경제성을 극대화하는 것을 목표로 합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 시스템 대사공학 연구 개요로 돌아가기 연구 배경 및 목적 본 연구실은 시스템 대사공학 및 배지 최적화 연구를 통해 바이오 의약품 및 유용물질 생산의 효율성과 경제성을 극대화하는 것을 목표로 합니다. 연구 배경 미생물 및 동물 세포는 다양한 바이오 의약품(항체, 백신, 세포치료제 등)과 화학물질, 바이오연료 등을 생산하는 핵심적인 역할을 합니다. 그러나 이러한 세포 공장의 생산성은 세포 내 복잡한 대사 네트워크와 외부 배양 환경 요인에 의해 크게 좌우됩니다. 기존의 시행착오적 방식의 공정 개발은 시간과 비용이 많이 소요되며, 최적의 생산 조건을 찾는 데 한계가 있습니다. 시스템 생물학(Systems Biology)과 대사공학(Metabolic Engineering)의 발전은 이러한 문제를 해결할 수 있는 새로운 가능성을 제시합니다. 세포 내 대사 경로 전체를 시스템 수준에서 이해하고, 수학적 모델링과 유전체/단백체/대사체 등 오믹스(Omics) 데이터를 통합 분석함으로써, 목표 물질 생산에 핵심적인 대사 경로를 규명하고 최적화할 수 있습니다. 또한, 세포 배양 배지는 세포 성장과 생산물 합성에 필수적인 영양분과 성장인자를 제공하므로, 배지 성분 및 농도를 정밀하게 최적화하는 것은 생산성 향상에 매우 중요합니다. 연구 목적 본 연구실의 시스템 대사공학 및 배지 최적화 연구는 다음과 같은 구체적인 목적을 가집니다: 세포 대사 네트워크 이해 증진: 다양한 세포주(CHO 세포, 미생물 등)의 대사 네트워크를 정량적으로 분석하고, 모델 기반 시뮬레이션을 통해 세포의 대사 상태 변화를 예측합니다. 모델 기반 대사공학 전략 개발: 유전자 편집 기술과 시스템 모델링을 결합하여 목표 물질 생산성을 극대화하는 세포주 개량 전략을 개발하고 검증합니다. 고효율 맞춤형 배지 개발: 데이터 기반 접근법과 모델 가이드 프레임워크를 활용하여 특정 세포주 및 생산 공정에 최적화된 맞춤형 배지를 체계적으로 개발합니"
+    },
+    {
+        "url": "meta_eng_overview_main.html",
+        "title": "연구 개요 - 시스템 대사공학 및 배지 최적화 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "시스템 대사공학 및 배지 최적화",
+            "연구 개요"
+        ],
+        "keywords": [
+            "연구",
+            "개요",
+            "시스템",
+            "대사공학",
+            "및",
+            "배지",
+            "최적화",
+            "생물공학연구실"
+        ],
+        "content_snippet": "시스템 대사공학 및 배지 최적화 연구의 배경, 목적, 기술적 접근 방법을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 연구 개요 (Overview) 시스템 대사공학 및 배지 최적화 연구의 배경, 목적, 기술적 접근 방법을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다. 연구 배경 및 목적 (Background & Objectives) 기술적 접근 방법 (Technical Approach) 콘텐츠 준비 중 시스템 대사공학 및 배지 최적화 연구 개요에 대한 상세 내용이 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "meta_eng_overview_technical_approach.html",
+        "title": "기술적 접근 방법 - 대사공학 연구 개요 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "시스템 대사공학 및 배지 최적화",
+            "연구 개요",
+            "기술적 접근 방법"
+        ],
+        "keywords": [
+            "기술적",
+            "접근",
+            "방법",
+            "대사공학",
+            "연구",
+            "개요",
+            "생물공학연구실"
+        ],
+        "content_snippet": "시스템 대사공학 및 배지 최적화 연구 수행을 위한 핵심 기술 및 방법론을 소개합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 기술적 접근 방법 (Technical Approach) 시스템 대사공학 및 배지 최적화 연구 수행을 위한 핵심 기술 및 방법론을 소개합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "meta_eng_trends_industrial_app.html",
+        "title": "산업계 적용 사례 - 대사공학 최신 연구 동향 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "시스템 대사공학 및 배지 최적화",
+            "최신 연구 동향",
+            "산업계 적용 사례"
+        ],
+        "keywords": [
+            "산업계",
+            "적용",
+            "사례",
+            "대사공학",
+            "최신",
+            "연구",
+            "동향",
+            "생물공학연구실"
+        ],
+        "content_snippet": "시스템 대사공학 및 배지 최적화 기술이 실제 산업 현장에서 어떻게 활용되고 있는지 사례를 통해 보여줍니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 산업계 적용 사례 (Industrial Application Cases) 시스템 대사공학 및 배지 최적화 기술이 실제 산업 현장에서 어떻게 활용되고 있는지 사례를 통해 보여줍니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "meta_eng_trends_publications_patents.html",
+        "title": "주요 연구 성과 - 대사공학 최신 연구 동향 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "시스템 대사공학 및 배지 최적화",
+            "최신 연구 동향",
+            "주요 연구 성과"
+        ],
+        "keywords": [
+            "주요",
+            "연구",
+            "성과",
+            "대사공학",
+            "최신",
+            "연구",
+            "동향",
+            "생물공학연구실"
+        ],
+        "content_snippet": "시스템 대사공학 및 배지 최적화 관련 주요 논문, 특허 등 연구 업적을 공유합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 주요 연구 성과 (Publications & Patents) 시스템 대사공학 및 배지 최적화 관련 주요 논문, 특허 등 연구 업적을 공유합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "meta_med_cho_media_dev.html",
+        "title": "CHO 세포 배지 개발 - 대사공학 및 배지 개발 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "CHO 세포 배지 개발"
+        ],
+        "keywords": [
+            "CHO",
+            "세포",
+            "배지",
+            "개발",
+            "대사공학",
+            "및",
+            "배지",
+            "개발",
+            "생물공학연구실"
+        ],
+        "content_snippet": "이 페이지는 CHO 세포 맞춤형 화학조성배지(Chemically Defined Media) 개발 및 최적화 연구를 다룹니다.",
+        "full_text": "생물공학연구실 검색 CHO 세포 배지 개발 이 페이지는 CHO 세포 맞춤형 화학조성배지(Chemically Defined Media) 개발 및 최적화 연구를 다룹니다. 현재 페이지의 콘텐츠는 준비 중입니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "meta_med_microbial_media_dev.html",
+        "title": "미생물 배지 개발 - 대사공학 및 배지 개발 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "미생물 배지 개발"
+        ],
+        "keywords": [
+            "미생물",
+            "배지",
+            "개발",
+            "대사공학",
+            "및",
+            "배지",
+            "개발",
+            "생물공학연구실"
+        ],
+        "content_snippet": "이 페이지는 산업용 미생물의 고효율 배양을 위한 배지 개발 및 공정 연구를 소개합니다.",
+        "full_text": "생물공학연구실 검색 미생물 배지 개발 이 페이지는 산업용 미생물의 고효율 배양을 위한 배지 개발 및 공정 연구를 소개합니다. 현재 페이지의 콘텐츠는 준비 중입니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "meta_med_systems_metabolic_eng.html",
+        "title": "시스템 대사공학 - 대사공학 및 배지 개발 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "시스템 대사공학"
+        ],
+        "keywords": [
+            "시스템",
+            "대사공학",
+            "대사공학",
+            "및",
+            "배지",
+            "개발",
+            "생물공학연구실"
+        ],
+        "content_snippet": "이 페이지는 시스템 대사공학을 통한 미생물 및 동물세포의 대사경로 최적화 연구를 소개합니다.",
+        "full_text": "생물공학연구실 검색 시스템 대사공학 이 페이지는 시스템 대사공학을 통한 미생물 및 동물세포의 대사경로 최적화 연구를 소개합니다. 현재 페이지의 콘텐츠는 준비 중입니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "mstar_cfd_installation.html",
+        "title": "M-STAR CFD 설치 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "M‑STAR CFD",
+            "설치"
+        ],
+        "keywords": [
+            "MSTAR",
+            "CFD",
+            "설치",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "M-STAR CFD는 주로 Linux(RHEL/CentOS, Ubuntu) 및 Windows 운영체제를 지원하며, GPU 가속을 위해 호환되는 NVIDIA 그래픽 카드 및 드라이버가 필요합니다. 설치 과정은 공식 문서 및 라이선스 계약에 따라 진행됩니다.",
+        "full_text": "생물공학연구실 검색 &laquo; M-STAR CFD 메인으로 돌아가기 2. 설치 M-STAR CFD는 주로 Linux(RHEL/CentOS, Ubuntu) 및 Windows 운영체제를 지원하며, GPU 가속을 위해 호환되는 NVIDIA 그래픽 카드 및 드라이버가 필요합니다. 설치 과정은 공식 문서 및 라이선스 계약에 따라 진행됩니다. 일반적인 설치 단계 시스템 요구사항 확인 : M-STAR CFD 공식 문서에서 최신 시스템 요구사항(운영체제 버전, NVIDIA 드라이버 버전, CUDA Toolkit 버전, 하드웨어 사양 등)을 확인합니다. 라이선스 확보 : M-STAR CFD는 상용 소프트웨어이므로, 개발사 또는 공식 리셀러를 통해 유효한 라이선스를 구매하거나 평가판 라이선스를 요청해야 합니다. 라이선스 매니저(예: RLM - Reprise License Manager) 설정이 필요할 수 있습니다. 소프트웨어 다운로드 : 라이선스 구매 후 제공되는 링크 또는 고객 포털을 통해 M-STAR CFD 설치 패키지(주로 .tar.gz 또는 .zip 형식)를 다운로드합니다. 설치 패키지 압축 해제 : 다운로드한 파일을 적절한 위치에 압축 해제합니다. (예: /opt/mstar/ 또는 사용자 홈 디렉토리) 환경 설정 : M-STAR CFD 실행에 필요한 환경 변수(예: MSTAR_ROOT , PATH , LD_LIBRARY_PATH )를 설정합니다. 이는 .bashrc , .cshrc 또는 모듈 파일(modulefile)을 통해 시스템 전체 또는 사용자별로 설정할 수 있습니다. 공식 문서에 제공된 스크립트 또는 지침을 따릅니다. 라이선스 서버 설정 (필요시) : 플로팅 라이선스(floating license)를 사용하는 경우, 라이선스 서버 주소 및 포트 정보를 M-STAR CFD 환경 설정 또는 라이선스 파일에 지정해야 합니다. NVIDIA 드라이버 및 CUDA Toolkit 설치 확인 : GPU 가속 기능을 사용하기 위해 시스템에 호환되는 최신 NVIDIA 드라이버"
+    },
+    {
+        "url": "mstar_cfd_introduction.html",
+        "title": "M-STAR CFD 소개 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "CFD 소개"
+        ],
+        "keywords": [
+            "MSTAR",
+            "CFD",
+            "소개",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "M-STAR CFD 는 M-Star Simulations LLC에서 개발되어 현재 CoVar Applied Technologies의 사업부인 M-Star CFD에서 관리하는 상용 전산 유체 역학(CFD) 소프트웨어입니다. 특히 Lattice Boltzmann Metho",
+        "full_text": "생물공학연구실 검색 &laquo; M-STAR CFD 메인으로 돌아가기 1. 소개 M-STAR CFD 는 M-Star Simulations LLC에서 개발되어 현재 CoVar Applied Technologies의 사업부인 M-Star CFD에서 관리하는 상용 전산 유체 역학(CFD) 소프트웨어입니다. 특히 Lattice Boltzmann Method (LBM) 기반의 Large Eddy Simulation (LES)과 Lagrangian 입자 추적 기법(CFD-DEM 결합 가능)에 특화되어 있으며, GPU(Graphics Processing Unit) 가속을 적극적으로 활용하여 기존 CPU 기반 솔버에 비해 매우 빠른 계산 속도를 제공합니다. 2024년에는 과학 R&D 통합 플랫폼인 Dotmatics에 인수되어 데이터 인포매틱스 기반 생태계로의 발전을 모색하고 있습니다. M-STAR CFD는 과학자 및 엔지니어가 복잡한 다물리 현상, 특히 대규모 혼합 시스템, 다상 유동, 입자-유체 상호작용 등을 빠르고 정밀하게 시뮬레이션할 수 있도록 지원합니다. 주요 특징으로는 메쉬 설계 과정이 거의 불필요하거나 대폭 간소화된 워크플로우, 직관적인 GUI, 실시간 후처리 및 포토리얼리스틱 렌더링 기능 등이 있으며, 이를 통해 사용자는 수 시간 내에 소프트웨어 사용법을 익히고 복잡한 문제를 해결할 수 있습니다. 다수의 peer-reviewed 연구를 통해 실험 데이터와 매우 높은 정밀도로 일치하는 결과를 제공하는 것으로 검증되었습니다. M-STAR CFD 로고 (출처: mstarcfd.com) M-STAR CFD를 이용한 다양한 시뮬레이션 예시 (출처: mstarcfd.com) 핵심 특징 및 기술 (최신 동향 포함) : GPU 기반 병렬 연산 : NVIDIA GPU의 대규모 병렬 처리 능력을 활용하여 기존 CPU 솔버 대비 수십에서 수백 배 빠른 계산 속도 달성. Lattice Boltzmann Method (LBM) : 복잡한 경계 조건 처리, 다상 유동, 미세 유체역학 "
+    },
+    {
+        "url": "mstar_cfd_main.html",
+        "title": "M-STAR CFD - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학"
+        ],
+        "keywords": [
+            "MSTAR",
+            "CFD",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "M-STAR CFD 관련 상세 정보입니다. 아래 목록에서 원하는 주제를 선택하세요.",
+        "full_text": "생물공학연구실 검색 &laquo; 소프트웨어 목록으로 돌아가기 M-STAR CFD M-STAR CFD 관련 상세 정보입니다. 아래 목록에서 원하는 주제를 선택하세요. 1. 소개 (Introduction) 2. 설치 (Installation) 3. 전처리 (Pre-processing) 4. 솔버 (Solver) 5. 후처리 (Post-processing) 6. Verification & Validation 7. 문제 해결 (Troubleshooting) 8. 자료실 (Resources) 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "mstar_cfd_postprocessing.html",
+        "title": "M-STAR CFD 후처리 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "후처리 과정"
+        ],
+        "keywords": [
+            "MSTAR",
+            "CFD",
+            "후처리",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "M-STAR CFD 시뮬레이션 완료 후, 계산된 방대한 양의 데이터를 분석하고 시각화하기 위해 M-STAR Post 도구 및 외부 연동 기능을 사용합니다. 후처리는 시뮬레이션 결과로부터 공학적 의미를 도출하고, 설계를 개선하며, 물리 현상에 대한 이해를 심화하는 중요한",
+        "full_text": "생물공학연구실 검색 &laquo; M-STAR CFD 메인으로 돌아가기 5. 후처리 (Post-processing) M-STAR CFD 시뮬레이션 완료 후, 계산된 방대한 양의 데이터를 분석하고 시각화하기 위해 M-STAR Post 도구 및 외부 연동 기능을 사용합니다. 후처리는 시뮬레이션 결과로부터 공학적 의미를 도출하고, 설계를 개선하며, 물리 현상에 대한 이해를 심화하는 중요한 과정입니다. M-STAR Post를 이용한 시뮬레이션 결과 시각화 및 분석 (출처: think-fluid-dynamix.com) 주요 후처리 기능 및 도구: M-STAR Post GUI : M-STAR CFD에 내장된 그래픽 사용자 인터페이스 기반 후처리 도구입니다. 주로 ParaView 기술을 기반으로 하며, 다음과 같은 기능을 제공합니다: 3D 시각화 : 컨투어 플롯, 벡터 플롯, 스트림라인, 글리프, 아이소 서피스(등가면), 볼륨 렌더링 등 다양한 시각화 기법을 지원합니다. 애니메이션 생성 : 시간에 따른 유동 변화를 동영상으로 제작하여 비정상 상태 현상을 효과적으로 분석할 수 있습니다. 사용자 정의 통계 분석 : 특정 영역 또는 전체 도메인에 대한 평균값, RMS 값, 최소/최대값 등 통계량 계산이 가능합니다. 데이터 추출 및 플롯 : 특정 지점, 선, 면에서 시간에 따른 데이터 변화를 추출하여 XY 플롯으로 나타낼 수 있습니다. 결과 필터링 및 조작 : 슬라이스, 클립, 임계값 설정 등 다양한 필터를 적용하여 관심 영역의 데이터를 집중적으로 분석합니다. 계산기 기능 (Calculator) : 기존 필드 변수들을 조합하여 새로운 파생 변수를 생성하고 시각화할 수 있습니다. 특화된 분석 기능 : M-STAR CFD의 강점 분야에 맞춰 다음과 같은 특화된 후처리 분석이 가능합니다: 에너지 소산률(ε), 전단률(shear rate), 난류 운동 에너지(k) 등의 분포 맵. 교반 탱크 시스템의 혼합 시간(mixing time), 동력 수(power number), 유량 수(flow"
+    },
+    {
+        "url": "mstar_cfd_preprocessing.html",
+        "title": "M-STAR CFD 전처리 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "CFD 이론",
+            "전처리 과정"
+        ],
+        "keywords": [
+            "MSTAR",
+            "CFD",
+            "전처리",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "M-STAR CFD의 전처리 과정은 기존 유한 체적법(Finite Volume Method, FVM) 기반 CFD 소프트웨어와 비교하여 중요한 차이점을 가집니다. LBM(Lattice Boltzmann Method)과 IBM(Immersed Boundary Method",
+        "full_text": "생물공학연구실 검색 &laquo; M-STAR CFD 메인으로 돌아가기 3. 전처리 (Pre-processing) M-STAR CFD의 전처리 과정은 기존 유한 체적법(Finite Volume Method, FVM) 기반 CFD 소프트웨어와 비교하여 중요한 차이점을 가집니다. LBM(Lattice Boltzmann Method)과 IBM(Immersed Boundary Method)의 특성을 활용하여, 복잡한 체적 격자 생성(volume meshing) 단계가 거의 필요 없거나 대폭 간소화 됩니다. 이는 전처리 작업에 소요되는 시간과 노력을 크게 줄이는 M-STAR CFD의 주요 장점 중 하나입니다. M-STAR Pre GUI에서 형상을 정의하고 설정하는 과정 (출처: mstarcfd.com) 주요 전처리 방식 및 특징: CAD 형상 직접 활용 : 표준 3D CAD 파일 형식(예: STL, STEP, IGES, Parasolid 등)을 직접 불러와 사용할 수 있습니다. M-STAR CFD는 어느 정도의 CAD 품질 문제(예: 작은 틈, 비다양체 형상)에 대해 비교적 관대한 편이며, 복잡한 형상 정리 작업 없이도 시뮬레이션을 진행할 수 있는 경우가 많습니다. 내장 형상 생성 도구 : M-STAR Pre GUI 내에는 기본적인 형상(실린더, 박스 등) 생성 기능 및 표준 교반 탱크, 임펠러, 배플, 배관 등의 파라메트릭 형상 카탈로그가 포함되어 있어, 사용자가 직접 동적으로 형상을 생성하고 조합할 수 있습니다. Immersed Boundary Method (IBM) : 복잡하거나 움직이는 고체 경계를 격자 내에 효과적으로 임베딩하여 처리합니다. 이로 인해 경계면에 정확히 일치하는 체적 격자를 생성할 필요 없이, 단순한 직교 격자(Cartesian grid) 기반으로 시뮬레이션이 가능합니다. M-STAR Pre GUI : 전처리 작업은 주로 M-STAR Pre 그래픽 사용자 인터페이스를 통해 이루어집니다. 사용자는 모델 트리(model tree)를 구성하여 시뮬레이"
+    },
+    {
+        "url": "mstar_cfd_resources.html",
+        "title": "M-STAR CFD 자료실 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "M‑STAR CFD",
+            "자료"
+        ],
+        "keywords": [
+            "MSTAR",
+            "CFD",
+            "자료실",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "M-STAR CFD 학습 및 활용을 위한 신뢰성 높은 자료는 주로 개발사인 M-Star CFD (CoVar Applied Technologies의 사업부, 2024년 Dotmatics에 인수)에서 제공하는 공식 채널을 통해 얻을 수 있습니다. 다른 대형 상용 CFD 소",
+        "full_text": "생물공학연구실 검색 &laquo; M-STAR CFD 메인으로 돌아가기 8. 자료실 (Resources) M-STAR CFD 학습 및 활용을 위한 신뢰성 높은 자료는 주로 개발사인 M-Star CFD (CoVar Applied Technologies의 사업부, 2024년 Dotmatics에 인수)에서 제공하는 공식 채널을 통해 얻을 수 있습니다. 다른 대형 상용 CFD 소프트웨어나 오픈 소스 소프트웨어만큼 방대한 공개 커뮤니티 리소스는 제한적일 수 있으나, 공식 자료는 매우 상세하고 전문적이며, 특히 Peer-Reviewed Validation 논문들이 소프트웨어의 신뢰성을 뒷받침합니다. M-STAR CFD의 교반 탱크 시뮬레이션 데모 및 학습 자료 예시 (출처: M-Star CFD YouTube) 공식 자료원 (Official Resources) M-Star CFD 공식 문서 (M-STAR Documentation) : https://docs.mstarcfd.com 가장 포괄적이고 신뢰할 수 있는 정보 출처입니다. 설치 가이드, M-Star Pre (전처리기), M-Star Solve (솔버), M-Star Post (후처리기) 사용법 상세 안내. LBM 이론적 배경, 물리 모델 설명, 경계 조건 정의, Python API 사용법 등 기술적 내용 포함. 검증 및 타당성 평가 (Validation / Literature) 사례 및 참고 문헌 목록 ( Peer Reviewed Validation 페이지 참조). 문제 해결을 위한 Knowledge Base (KB) 및 How-To 가이드. 튜토리얼 및 예제 파일 설명. M-Star CFD 공식 웹사이트 : https://mstarcfd.com/ Resources 섹션 ( mstarcfd.com/resources/ ): 학술 논문 (Academic Papers / Peer Reviewed Validation): M-STAR CFD를 사용한 연구 결과 발표 논문 목록. 기술 문서 (White Papers, Techn"
+    },
+    {
+        "url": "mstar_cfd_solver.html",
+        "title": "M-STAR CFD 솔버 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "M‑STAR CFD",
+            "해석 설정"
+        ],
+        "keywords": [
+            "MSTAR",
+            "CFD",
+            "솔버",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "M-STAR Solve는 M-STAR CFD 소프트웨어 스위트의 핵심 계산 엔진으로, M-STAR Pre에서 설정된 입력 파일(`.msb` - M-Star Binary)을 기반으로 복잡한 유동 및 다물리 현상을 시뮬레이션합니다. 이 솔버는 특히 GPU의 병렬 처리 능력",
+        "full_text": "생물공학연구실 검색 &laquo; M-STAR CFD 메인으로 돌아가기 4. 솔버 (Solver) M-STAR Solve는 M-STAR CFD 소프트웨어 스위트의 핵심 계산 엔진으로, M-STAR Pre에서 설정된 입력 파일(`.msb` - M-Star Binary)을 기반으로 복잡한 유동 및 다물리 현상을 시뮬레이션합니다. 이 솔버는 특히 GPU의 병렬 처리 능력을 최대한 활용하도록 설계되어, 대규모 및 비정상 상태 문제에 대해 빠른 계산 속도를 제공합니다. M-STAR CFD 솔버를 통해 얻어진 교반 탱크 내 유동 시뮬레이션 결과 (출처: mstarcfd.com) 핵심 기술 및 기능: Lattice Boltzmann Method (LBM) 기반 LES : 격자 볼츠만 방법을 주된 수치 기법으로 사용하며, 이를 통해 Large Eddy Simulation (LES)을 수행하여 난류 유동을 높은 정확도로 해석합니다. 일반적인 LBM 모델(예: D3Q19, D3Q27)과 충돌 연산자(예: BGK, MRT)를 사용합니다. GPU 최적화 : NVIDIA CUDA 기술을 활용하여 다중 GPU 환경에서 뛰어난 병렬 처리 성능과 확장성을 보입니다. 이를 통해 기존 CPU 기반 솔버 대비 계산 시간을 크게 단축합니다. Immersed Boundary Method (IBM) : 복잡한 고정 또는 이동 경계를 효율적으로 처리하여, 경계면에 정확히 일치하는 체적 격자 생성의 필요성을 줄입니다. 다양한 물리 모델 지원 : 단상 및 다상 유동 (예: 기체-액체, 액체-액체, 자유 표면 모델) Lagrangian 입자/기포/액적 추적 (단방향 또는 양방향 연동, CFD-DEM 결합 가능) Newtonian 및 Non-Newtonian (비뉴턴) 유체 모델 (예: Power Law, Carreau-Yasuda) 열 전달 (Conduction, Convection, Radiation은 제한적일 수 있음 - 주로 유체 열 전달) 수동 스칼라(Passive Scalar) 및 반응 스칼라(R"
+    },
+    {
+        "url": "mstar_cfd_troubleshooting.html",
+        "title": "M-STAR CFD 문제 해결 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "M‑STAR CFD",
+            "문제 해결"
+        ],
+        "keywords": [
+            "MSTAR",
+            "CFD",
+            "문제",
+            "해결",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "M-STAR CFD 사용 중 발생할 수 있는 일반적인 문제와 그 해결 방안은 주로 공식 문서 내 Knowledge Base (KB) 및 How-To 가이드를 통해 제공됩니다. 문제 해결은 체계적인 접근과 로그 파일 분석이 중요합니다.",
+        "full_text": "생물공학연구실 검색 &laquo; M-STAR CFD 메인으로 돌아가기 7. 문제 해결 (Troubleshooting) M-STAR CFD 사용 중 발생할 수 있는 일반적인 문제와 그 해결 방안은 주로 공식 문서 내 Knowledge Base (KB) 및 How-To 가이드를 통해 제공됩니다. 문제 해결은 체계적인 접근과 로그 파일 분석이 중요합니다. M-STAR Pre GUI에서 설정을 검토하고 문제를 진단하는 과정 (출처: mstarcfd.com) 주요 문제 유형 및 일반적인 해결 접근법: M-Star Pre/Post GUI 시작 오류 (특히 3D 렌더링 문제) : 증상 : GUI가 시작되지 않거나, 3D 뷰포트가 제대로 표시되지 않는 경우. 원인 : 호환되지 않거나 오래된 GPU 드라이버, OpenGL 지원 부족, 원격 데스크톱 환경에서의 3D 가속 문제 등. 확인 및 해결 : 최신 NVIDIA 드라이버 설치 확인. GPU가 OpenGL 3.2+ (Windows) 또는 3.3+ (Linux)를 지원하는지 확인. Windows의 경우, GPU가 WDDM 모드로 실행 중인지 확인. 원격 데스크톱(RDP 등) 사용 시, 3D 가속(하드웨어 렌더링) 지원 여부 및 설정 점검 (NICE DCV와 같은 전문 원격 시각화 도구 권장). 디버그 로그 파일 생성 (예: MStarPost -l , paraview -l 명령어 활용)하여 오류 메시지 확인. 시뮬레이션 발산 또는 불안정 (Divergence or Instability) : 증상 : 솔버 실행 중 비정상적인 값(NaN, Infinity) 발생, 물리적으로 타당하지 않은 결과, 갑작스러운 계산 중단. 원인 : 부적절한 격자 해상도 (너무 거칠거나 특정 영역에서 불충분), 너무 큰 시간 간격(time step), 잘못된 경계 조건 설정, 물리 모델 파라미터 오류, 수치적 불안정성. 해결 : 격자 해상도(Lattice Resolution)를 높여봅니다. (계산 시간 증가 유의) 시간 간격을 줄여봅니다 (Courant"
+    },
+    {
+        "url": "mstar_cfd_validation.html",
+        "title": "M-STAR CFD V&V - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "M‑STAR CFD",
+            "검증/확인"
+        ],
+        "keywords": [
+            "MSTAR",
+            "CFD",
+            "VV",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "M-STAR CFD는 상용 소프트웨어로서 그 예측 정확성과 신뢰성을 입증하기 위해 다양한 학술 문헌 및 실제 산업 적용 사례와의 비교를 통한 검증(Verification) 및 타당성 평가(Validation, V&V) 자료를 제공합니다. V&V는 M-STAR CFD의 ",
+        "full_text": "생물공학연구실 검색 &laquo; M-STAR CFD 메인으로 돌아가기 6. Verification & Validation (검증 및 타당성 평가) M-STAR CFD는 상용 소프트웨어로서 그 예측 정확성과 신뢰성을 입증하기 위해 다양한 학술 문헌 및 실제 산업 적용 사례와의 비교를 통한 검증(Verification) 및 타당성 평가(Validation, V&V) 자료를 제공합니다. V&V는 M-STAR CFD의 Lattice Boltzmann Method (LBM) 기반 솔버, 특히 Large Eddy Simulation (LES) 모델 및 물리 모델이 실제 현상을 얼마나 잘 모사하는지 평가하는 데 중요합니다. 다수의 국제 학술지 및 컨퍼런스 발표 자료에서 M-STAR CFD 시뮬레이션 결과와 실험 데이터 간의 매우 높은 수준의 일치도가 보고되고 있으며, 이는 소프트웨어의 정확성과 신뢰성을 뒷받침합니다. M-STAR CFD를 이용한 시뮬레이션 결과와 실험 데이터 비교를 통한 검증 사례 (출처: mstarcfd.com) 검증 및 타당성 평가 자료 접근: M-STAR CFD 공식 문서 : Validation / Literature 섹션 에서 다양한 검증 사례 및 관련 참고 문헌 목록을 제공합니다. 이 자료들은 M-STAR CFD의 특정 기능이나 모델이 잘 알려진 벤치마크 문제 또는 실험 결과와 비교하여 얼마나 정확한지 보여줍니다. M-STAR CFD 공식 웹사이트 - Peer Reviewed Validation : Peer Reviewed Validation 섹션 및 Resources 페이지에서 M-STAR CFD를 사용하여 수행되고 동료 검토를 거친 학술 논문, 기술 문서, 산업 사례 연구 목록을 제공합니다. 이를 통해 실제 문제 해결에 대한 소프트웨어의 적용성과 신뢰도를 확인할 수 있습니다. 주요 검증 및 타당성 평가 사례 분야: 교반 탱크 및 바이오리액터 : 다양한 크기(실험실 규모부터 10,000L 이상의 생산 규모까지)의 교반 탱크에서 혼합 시간, 동력"
+    },
+    {
+        "url": "news_announcements.html",
+        "title": "연구실 소식 및 공지사항 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "연구실 소개",
+            "연구실 소식 및 공지사항"
+        ],
+        "keywords": [
+            "연구실",
+            "소식",
+            "및",
+            "공지사항",
+            "생물공학연구실"
+        ],
+        "content_snippet": "연구실의 최신 뉴스와 주요 공지사항을 확인하세요.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 연구실 소식 및 공지사항 연구실의 최신 뉴스와 주요 공지사항을 확인하세요. 공지사항 번호 제목 공지 날짜 3 연구실 서버 점검 안내 (2025/09/05) 2025-09-01 2 2025년도 하반기 연구실 안전 교육 안내 2025-08-20 1 학부 연구생 모집 (2025년 후기, 마감: ~8/15) 2025-06-01 더 많은 공지사항 보기... 연구실 소식 번호 제목 작성 날짜 3 홍종광 교수님, XXX 학회 우수 연구자상 수상 2025-10-05 2 학부 연구생 이지혜, 국제 학회 (ISBioTech 2025) 발표 2025-07-22 1 2025년도 한국생물공학회 춘계학술대회 우수논문발표상 수상 (김연구 학생) 2025-04-15 더 많은 연구실 소식 보기... 연구실 소개 메인으로 돌아가기 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "openfoam_installation.html",
+        "title": "OpenFOAM 설치 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "OpenFOAM",
+            "설치"
+        ],
+        "keywords": [
+            "OpenFOAM",
+            "설치",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "OpenFOAM은 주로 Linux 환경에서 네이티브로 구동되며, 다양한 설치 방법을 제공합니다. Windows 사용자는 WSL(Windows Subsystem for Linux)을 통해, macOS 사용자는 Docker를 통해 설치하는 것이 일반적입니다. 여기서는 Li",
+        "full_text": "생물공학연구실 검색 &laquo; OpenFOAM 메인으로 돌아가기 2. 설치 OpenFOAM은 주로 Linux 환경에서 네이티브로 구동되며, 다양한 설치 방법을 제공합니다. Windows 사용자는 WSL(Windows Subsystem for Linux)을 통해, macOS 사용자는 Docker를 통해 설치하는 것이 일반적입니다. 여기서는 Linux (Ubuntu 기준) 및 WSL을 이용한 설치 방법을 중심으로 설명합니다. Linux (Ubuntu) 환경 설치 방법 1. 패키지 시스템을 이용한 설치 (권장): OpenFOAM Foundation 버전 ( openfoam.org ) 또는 ESI/OpenCFD 버전 ( openfoam.com )의 공식 안내에 따라 저장소를 추가하고 패키지를 설치합니다. 예시 (OpenFOAM Foundation 버전, Ubuntu): sudo sh -c \"wget -O - https://dl.openfoam.org/gpg.key | apt-key add -\" sudo add-apt-repository http://dl.openfoam.org/ubuntu sudo apt-get update sudo apt-get install openfoamVERSION # (예: openfoam10) 설치 후, 환경 설정을 위해 ~/.bashrc 파일에 OpenFOAM 환경 변수 스크립트 경로를 추가합니다. echo \"source /opt/openfoamVERSION/etc/bashrc\" >> ~/.bashrc # 경로 확인 필요 source ~/.bashrc 2. 소스 코드 컴파일을 이용한 설치: 공식 웹사이트에서 소스 코드(.tgz 또는 .tar.gz)와 ThirdParty 패키지를 다운로드합니다. 필요한 의존성 패키지(컴파일러, MPI 라이브러리, CMake, flex, bison 등)를 설치합니다. 압축 해제 후, OpenFOAM 환경 설정 스크립트를 소싱하고 Allwmake 스크립트를 실행하여 컴파일합니다. 컴파일 시간은 시스템 사양에"
+    },
+    {
+        "url": "openfoam_introduction.html",
+        "title": "OpenFOAM 소개 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "OpenFOAM",
+            "소개"
+        ],
+        "keywords": [
+            "OpenFOAM",
+            "소개",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "OpenFOAM (Open source Field Operation And Manipulation)은 산업 및 연구 분야에서 널리 사용되는 강력하고 유연한 오픈 소스 전산 유체 역학(CFD) 소프트웨어 패키지입니다. 2004년 OpenCFD Ltd. (현재 ESI Gr",
+        "full_text": "생물공학연구실 검색 &laquo; OpenFOAM 메인으로 돌아가기 1. 소개 OpenFOAM (Open source Field Operation And Manipulation)은 산업 및 연구 분야에서 널리 사용되는 강력하고 유연한 오픈 소스 전산 유체 역학(CFD) 소프트웨어 패키지입니다. 2004년 OpenCFD Ltd. (현재 ESI Group의 일부인 OpenCFD Ltd. 와 The OpenFOAM Foundation에서 별도 버전 관리)에 의해 처음 공개된 이후, C++ 객체 지향 라이브러리 형태로 개발되어 사용자가 직접 코드를 수정하거나 새로운 물리 모델 및 솔버를 개발하여 확장하는 것이 용이합니다. OpenFOAM은 다양한 물리 현상(단상 및 다상 유동, 화학 반응, 열 전달, 전자기학, 고체 역학 등)을 모델링할 수 있는 광범위한 솔버와 유틸리티를 제공합니다. 유한 체적법(Finite Volume Method)을 기본 수치 해법으로 사용하며, 복잡한 형상에 대한 비정형 격자(unstructured mesh)를 처리할 수 있습니다. 오픈 소스 특성상 라이선스 비용이 없으며, 전 세계의 활발한 사용자 및 개발자 커뮤니티를 통해 지속적으로 발전하고 검증되고 있습니다. OpenFOAM 로고 (출처: openfoam.com) OpenFOAM을 이용한 댐 붕괴(dam break) 다상 유동 시뮬레이션 결과 (출처: openfoam.com) 핵심 특징 및 장점 (최신 동향 포함) : 오픈 소스 및 무료 : 라이선스 비용 없이 사용 가능하며, 소스 코드에 대한 완전한 접근 및 수정 권한 제공. 광범위한 물리 모델 : 난류(RANS, LES, DES), 다상 유동(VOF, Euler-Euler, Euler-Lagrange), 열 전달, 화학 반응, 연소, 입자 추적, 전자기학, 고체 역학 등 다양한 물리 현상 모델링 지원. 최신 버전에서는 특히 다상 유동 모델(예: 비등 모델, 계면 질량 전달) 및 난류 모델(예: GEKO 모델 옵션, 벽 함수 개선)이 지속"
+    },
+    {
+        "url": "openfoam_main.html",
+        "title": "OpenFOAM - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "OpenFOAM"
+        ],
+        "keywords": [
+            "OpenFOAM",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "OpenFOAM 관련 상세 정보입니다. 아래 목록에서 원하는 주제를 선택하세요.",
+        "full_text": "생물공학연구실 검색 &laquo; 소프트웨어 목록으로 돌아가기 OpenFOAM OpenFOAM 관련 상세 정보입니다. 아래 목록에서 원하는 주제를 선택하세요. 1. 소개 (Introduction) 2. 설치 (Installation) 3. 전처리 (Pre-processing) 4. 솔버 (Solver) 5. 후처리 (Post-processing) 6. Verification & Validation 7. 문제 해결 (Troubleshooting) 8. 자료실 (Resources) 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "openfoam_postprocessing.html",
+        "title": "OpenFOAM 후처리 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "OpenFOAM",
+            "후처리"
+        ],
+        "keywords": [
+            "OpenFOAM",
+            "후처리",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "OpenFOAM 시뮬레이션 완료 후, 계산된 방대한 양의 수치 데이터를 분석하고 시각화하여 유동 특성을 파악하고 공학적 통찰력을 얻는 과정입니다. OpenFOAM은 자체 유틸리티와 외부 시각화 도구를 연동하여 강력한 후처리 환경을 제공합니다.",
+        "full_text": "생물공학연구실 검색 &laquo; OpenFOAM 메인으로 돌아가기 5. 후처리 (Post-processing) OpenFOAM 시뮬레이션 완료 후, 계산된 방대한 양의 수치 데이터를 분석하고 시각화하여 유동 특성을 파악하고 공학적 통찰력을 얻는 과정입니다. OpenFOAM은 자체 유틸리티와 외부 시각화 도구를 연동하여 강력한 후처리 환경을 제공합니다. ParaView를 이용한 시각화 OpenFOAM의 주된 후처리 및 시각화 도구는 오픈 소스 소프트웨어인 ParaView 입니다. OpenFOAM은 ParaView가 직접 읽을 수 있는 VTK(Visualization Toolkit) 형식을 지원하며, paraFoam 이라는 유틸리티를 제공하여 쉽게 ParaView를 실행하고 OpenFOAM 케이스 데이터를 불러올 수 있습니다. paraFoam 실행 : 케이스 디렉토리에서 paraFoam 명령어를 입력하면 ParaView가 실행되고 현재 케이스 데이터가 로드됩니다. (내부적으로 .OpenFOAM 확장자를 가진 빈 파일을 생성하여 ParaView가 인식하도록 합니다.) 시각화 기능 : ParaView 내에서 컨투어 플롯, 벡터 플롯, 스트림라인(유선), 글리프(glyph), 슬라이스(slice), 클립(clip), 애니메이션 등 다양한 시각화 기법을 사용하여 유동장, 압력장, 온도장 등을 분석할 수 있습니다. 데이터 분석 : 특정 지점/선/면에서의 데이터 값 추출, 통계 계산, 플롯 생성 등의 정량적 분석도 가능합니다. ParaView를 이용한 OpenFOAM 시뮬레이션 결과 후처리 예시 (출처: YouTube @WolfDynamics) OpenFOAM 자체 후처리 유틸리티 OpenFOAM은 시뮬레이션 실행 중 또는 완료 후에 특정 데이터를 추출하거나 계산하는 다양한 유틸리티를 제공합니다. 이는 주로 system/controlDict 파일 내의 functions (또는 functionObjects ) 항목을 통해 설정하거나, 별도의 명령어로 실행합니다. sample"
+    },
+    {
+        "url": "openfoam_preprocessing.html",
+        "title": "OpenFOAM 전처리 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "OpenFOAM",
+            "전처리"
+        ],
+        "keywords": [
+            "OpenFOAM",
+            "전처리",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "OpenFOAM에서의 전처리 과정은 시뮬레이션 케이스(case)를 설정하는 모든 단계를 포함하며, 주로 계산 도메인 및 격자 구성, 초기 조건 및 경계 조건 설정, 물리적 속성 정의 등으로 이루어집니다. OpenFOAM은 명령어 기반 및 텍스트 파일 편집을 통해 전처리",
+        "full_text": "생물공학연구실 검색 &laquo; OpenFOAM 메인으로 돌아가기 3. 전처리 (Pre-processing) OpenFOAM에서의 전처리 과정은 시뮬레이션 케이스(case)를 설정하는 모든 단계를 포함하며, 주로 계산 도메인 및 격자 구성, 초기 조건 및 경계 조건 설정, 물리적 속성 정의 등으로 이루어집니다. OpenFOAM은 명령어 기반 및 텍스트 파일 편집을 통해 전처리 작업을 수행하는 것이 특징입니다. 케이스 디렉토리 구조 모든 OpenFOAM 시뮬레이션은 특정 디렉토리 구조를 따릅니다. 일반적으로 케이스 디렉토리 내에는 다음 세 개의 주요 하위 디렉토리가 존재합니다: constant/ : 시뮬레이션 동안 변하지 않는 파일들을 저장합니다. 주로 메쉬 정보( polyMesh/ 디렉토리)와 물리적 속성(예: transportProperties , turbulenceProperties ) 파일이 위치합니다. system/ : 시뮬레이션 제어 및 수치 해법 설정을 위한 파일들을 저장합니다. 주요 파일로는 controlDict (시간 제어, 입출력 등), fvSchemes (이산화 스킴), fvSolution (선형 솔버, 알고리즘 제어) 등이 있습니다. 0/ (또는 초기 시간 디렉토리) : 초기 조건 및 경계 조건 파일들을 저장합니다. 각 변수(예: 압력 p , 속도 U )에 대한 파일이 있으며, 이 파일들 내부에 경계면별 조건을 정의합니다. 격자 생성 (Meshing) OpenFOAM은 다양한 격자 생성 유틸리티를 제공합니다: blockMesh : 간단한 형상에 대해 구조적(structured) 헥사헤드럴(hexahedral) 격자를 생성하는 유틸리티입니다. constant/polyMesh/blockMeshDict 파일에 형상 및 격자 정보를 텍스트로 기술하여 사용합니다. snappyHexMesh : 복잡한 CAD 형상(STL, OBJ 파일 등)으로부터 비구조적(unstructured) 또는 하이브리드 격자를 생성하는 강력한 자동 격자 생성 유틸리티입니다."
+    },
+    {
+        "url": "openfoam_resources.html",
+        "title": "OpenFOAM 자료실 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "OpenFOAM",
+            "자료"
+        ],
+        "keywords": [
+            "OpenFOAM",
+            "자료실",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "OpenFOAM은 오픈 소스 소프트웨어의 특성상 방대한 양의 공식 문서, 교육 자료, 그리고 매우 활발한 사용자 및 개발자 커뮤니티를 통해 풍부한 학습 및 지원 체계를 갖추고 있습니다. OpenFOAM 학습 및 활용에 필요한 대부분의 정보는 이러한 자원들을 통해 얻을 ",
+        "full_text": "생물공학연구실 검색 &laquo; OpenFOAM 메인으로 돌아가기 8. 자료실 (Resources) OpenFOAM은 오픈 소스 소프트웨어의 특성상 방대한 양의 공식 문서, 교육 자료, 그리고 매우 활발한 사용자 및 개발자 커뮤니티를 통해 풍부한 학습 및 지원 체계를 갖추고 있습니다. OpenFOAM 학습 및 활용에 필요한 대부분의 정보는 이러한 자원들을 통해 얻을 수 있으며, 최신 버전(예: OpenFOAM 12, v2412 등)에 대한 정보와 릴리즈 노트도 공식 웹사이트에서 제공됩니다. OpenFOAM 관련 교육 및 훈련 자료 이미지 (출처: openfoam.com) 공식 자료 (Official Resources) OpenFOAM Foundation 웹사이트 : https://openfoam.org/ 사용자 가이드 (User Guide), 프로그래머 가이드 (Programmer's Guide) 기술 문서, 커뮤니티 튜토리얼, 교육 자료, 뉴스 및 이벤트 정보 최신 버전 (예: OpenFOAM 12) 다운로드, 설치 안내 및 릴리즈 노트 ( OpenFOAM 12 Release Notes ) ESI Group (OpenCFD Ltd.) OpenFOAM 웹사이트 : https://www.openfoam.com/ 공식 문서, 사용자 가이드, 기술 문서 (버전별 제공) 주기적인 공식 교육 과정 및 심화 교육 프로그램 안내 (2024-2025년 과정 포함) 뉴스, 커뮤니티 지원, 컨설팅 서비스 정보 최신 버전 (예: OpenFOAM vYYMM, v2406, v2412 등) 다운로드, 설치 안내 및 릴리즈 정보 OpenFOAM 공식 문서 포털 (OpenFOAM.com 제공) : https://doc.openfoam.com/ 버전별 사용자 가이드, 튜토리얼 가이드, API 문서 등 가장 상세하고 포괄적인 기술 문서 모음 검증 및 타당성 평가 (V&V) 사례 포함 CFD Direct 사용자 가이드 : https://doc.cfd.direct/openfoam/user-gu"
+    },
+    {
+        "url": "openfoam_solver.html",
+        "title": "OpenFOAM 솔버 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "OpenFOAM",
+            "해석 설정"
+        ],
+        "keywords": [
+            "OpenFOAM",
+            "솔버",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "OpenFOAM은 C++ 기반으로 개발된 수백 가지의 다양한 표준 솔버(solver applications)를 제공하며, 사용자는 풀고자 하는 특정 물리 문제에 가장 적합한 솔버를 선택하여 사용합니다. 또한, OpenFOAM의 객체 지향적 라이브러리 구조는 사용자가 기",
+        "full_text": "생물공학연구실 검색 &laquo; OpenFOAM 메인으로 돌아가기 4. 솔버 (Solver) OpenFOAM은 C++ 기반으로 개발된 수백 가지의 다양한 표준 솔버(solver applications)를 제공하며, 사용자는 풀고자 하는 특정 물리 문제에 가장 적합한 솔버를 선택하여 사용합니다. 또한, OpenFOAM의 객체 지향적 라이브러리 구조는 사용자가 기존 솔버를 수정하거나 새로운 솔버를 개발하는 것을 용이하게 합니다. 솔버 선택 해석하고자 하는 문제 유형(예: 비압축성 층류 유동, 압축성 난류 유동, 다상 유동, 열 전달, 화학 반응 등)에 따라 적절한 솔버 애플리케이션을 선택해야 합니다. 주요 솔버 카테고리는 다음과 같습니다: Incompressible Flow Solvers : 예) icoFoam (비압축성, 층류, 비정상), simpleFoam (비압축성, 정상, RANS 난류), pisoFoam (비압축성, 비정상, RANS/LES 난류) Compressible Flow Solvers : 예) rhoCentralFoam (밀도 기반, 압축성, RANS/LES), sonicFoam (압축성, 천음속/초음속, RANS) Multiphase Flow Solvers : 예) interFoam (2상 비압축성, VOF 계면 추적), twoPhaseEulerFoam (2상, 오일러-오일러) Heat Transfer and Combustion Solvers : 예) chtMultiRegionFoam (공액 열전달), reactingFoam (화학 반응 및 연소) Lagrangian Solvers : 입자 추적 관련 솔버 Electromagnetics, Solid Mechanics Solvers 등 솔버 설정 파일 ( system/ 디렉토리) 선택된 솔버의 수치 해법, 시간 제어, 선형 시스템 솔버 설정, 알고리즘 제어 등은 케이스 디렉토리 내 system/ 폴더의 주요 설정 파일에서 제어됩니다: controlDict : 시뮬레이션의 전반적인 제어를 담당합니"
+    },
+    {
+        "url": "openfoam_troubleshooting.html",
+        "title": "OpenFOAM 문제 해결 - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "OpenFOAM",
+            "문제 해결"
+        ],
+        "keywords": [
+            "OpenFOAM",
+            "문제",
+            "해결",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "OpenFOAM 사용 중 다양한 문제가 발생할 수 있으며, 이는 설치, 격자 생성, 솔버 설정, 실행, 후처리 등 여러 단계에서 나타날 수 있습니다. 문제 해결을 위해서는 오류 메시지를 정확히 이해하고, 관련 문서를 참조하며, 커뮤니티의 도움을 받는 것이 중요합니다.",
+        "full_text": "생물공학연구실 검색 &laquo; OpenFOAM 메인으로 돌아가기 7. 문제 해결 (Troubleshooting) OpenFOAM 사용 중 다양한 문제가 발생할 수 있으며, 이는 설치, 격자 생성, 솔버 설정, 실행, 후처리 등 여러 단계에서 나타날 수 있습니다. 문제 해결을 위해서는 오류 메시지를 정확히 이해하고, 관련 문서를 참조하며, 커뮤니티의 도움을 받는 것이 중요합니다. 일반적인 문제 유형 및 해결 접근법 설치 및 환경 설정 오류 : 오류 : 컴파일 오류, 환경 변수 설정 문제, 의존성 패키지 누락. 해결 : 공식 설치 가이드라인을 정확히 따르고, 필요한 모든 의존성 패키지가 설치되었는지 확인합니다. ~/.bashrc (또는 해당 쉘 설정 파일)에 OpenFOAM 환경 설정 스크립트 경로가 올바르게 추가되었는지, 터미널 세션에서 환경이 제대로 로드되었는지(예: which simpleFoam ) 확인합니다. 격자 생성 문제 ( blockMesh , snappyHexMesh 등) : 오류 : blockMeshDict 또는 snappyHexMeshDict 설정 오류, 형상 파일(STL) 문제, 메모리 부족, 격자 품질 저하 (높은 비직교성, 왜곡된 셀 등). 해결 : checkMesh 유틸리티를 사용하여 격자 품질을 점검하고, 문제가 되는 부분을 수정합니다. snappyHexMesh 의 경우 locationInMesh 설정이 올바른지, 형상 표면이 닫혀 있는지(watertight), 각 단계별 설정값(refinement levels, castellated mesh controls, snapping controls, layer addition controls)이 적절한지 확인합니다. 로그 파일을 자세히 검토하여 오류 발생 지점을 파악합니다. 솔버 실행 중 수렴 실패 또는 발산 : 오류 : 잔차(residual)가 감소하지 않거나 급증, Courant 수 초과, 부동 소수점 예외(Floating Point Exception). 해결 : controlDict "
+    },
+    {
+        "url": "openfoam_validation.html",
+        "title": "OpenFOAM V&V - 소프트웨어 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어",
+            "OpenFOAM",
+            "검증/확인"
+        ],
+        "keywords": [
+            "OpenFOAM",
+            "VV",
+            "소프트웨어",
+            "생물공학연구실"
+        ],
+        "content_snippet": "OpenFOAM은 오픈 소스 소프트웨어로서 그 신뢰성과 정확성을 확보하기 위해 커뮤니티와 개발팀에 의해 지속적으로 검증(Verification) 및 타당성 평가(Validation, V&V) 작업이 이루어집니다. 소프트웨어 품질 관리의 일환으로, OpenFOAM의 각 ",
+        "full_text": "생물공학연구실 검색 &laquo; OpenFOAM 메인으로 돌아가기 6. Verification & Validation (검증 및 타당성 평가) OpenFOAM은 오픈 소스 소프트웨어로서 그 신뢰성과 정확성을 확보하기 위해 커뮤니티와 개발팀에 의해 지속적으로 검증(Verification) 및 타당성 평가(Validation, V&V) 작업이 이루어집니다. 소프트웨어 품질 관리의 일환으로, OpenFOAM의 각 버전(예: OpenFOAM 12, v2412 등)은 다양한 산업 표준 테스트 케이스 및 학술적 벤치마크 문제에 대해 정기적으로 테스트됩니다. 특히 최신 버전에서는 다상 유동, 난류, 열 전달, 입자 추적 모델 등이 개선됨에 따라, 이들 모델에 대한 V&V 사례가 공식 문서 및 커뮤니티를 통해 지속적으로 업데이트되고 있습니다. V&V 절차 및 접근법 Verification (검증) : 수학적 모델(지배 방정식 및 이산화된 방정식)이 코드 내에서 정확하게 구현되고 풀렸는지, 수치 해법 자체의 프로그래밍 오류가 없는지 확인하는 과정입니다. 주요 검증 활동은 다음과 같습니다: 격자 수렴성 테스트 (Grid Convergence Study) : 동일 문제에 대해 격자 크기/밀도를 체계적으로 변경하며 해의 변화를 관찰하고, 격자 크기에 따른 해의 수렴성을 평가하여 이산화 오류를 정량화합니다 (예: Richardson Extrapolation). 시간 간격 수렴성 테스트 (Time-step Convergence Study) : 비정상 상태 문제에서 시간 간격 크기를 변경하며 해의 수렴성을 평가합니다. 코드 간 비교 (Code-to-code Comparison) : 잘 알려진 다른 CFD 코드나 해석해/정확해와 비교하여 코드의 기본적인 정확성을 검증합니다. OpenFOAM 내 다양한 솔버 또는 이산화 스킴 간의 비교도 포함될 수 있습니다. 단위 테스트 (Unit Testing) 및 회귀 테스트 (Regression Testing) : 코드의 개별 모듈(라이브러리, 함수"
+    },
+    {
+        "url": "photo_gallery.html",
+        "title": "사진 갤러리 - 연구실 소개 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "연구실 소개",
+            "사진 갤러리"
+        ],
+        "keywords": [
+            "사진",
+            "갤러리",
+            "연구실",
+            "소개",
+            "생물공학연구실"
+        ],
+        "content_snippet": "본 페이지는 현재 준비 중입니다. 곧 업데이트될 예정입니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 사진 갤러리 본 페이지는 현재 준비 중입니다. 곧 업데이트될 예정입니다. 연구실 활동, 학회 참석 및 발표, 워크샵, 실험실 생활, 멤버들의 즐거운 순간 등 다양한 모습을 담은 사진들이 곧 업데이트될 예정입니다. 저희 연구실의 생생한 모습을 기대해주세요! 갤러리에는 다음과 같은 카테고리의 사진들이 포함될 예정입니다: 연구 활동 (실험 모습, 장비 활용 등) 학술 활동 (국내외 학회 발표, 세미나, 포스터 세션 등) 연구실 행사 (워크샵, MT, 송년회 등) 연구실 멤버들 (단체 사진, 개인 프로필 등) 실험 장비 및 시설 연구실 소개 메인으로 돌아가기 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "proc_opt_automation.html",
+        "title": "자동화 시스템 - 공정 최적화 및 자동화 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "자동화 시스템"
+        ],
+        "keywords": [
+            "자동화",
+            "시스템",
+            "공정",
+            "최적화",
+            "및",
+            "자동화",
+            "생물공학연구실"
+        ],
+        "content_snippet": "이 페이지는 바이오프로세스 자동화 시스템 구축 및 운영에 관한 연구 내용을 다룹니다.",
+        "full_text": "생물공학연구실 검색 자동화 시스템 이 페이지는 바이오프로세스 자동화 시스템 구축 및 운영에 관한 연구 내용을 다룹니다. 현재 페이지의 콘텐츠는 준비 중입니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "proc_opt_dev_analytics_data_driven.html",
+        "title": "데이터 기반 공정 분석 - 배양 공정 설계 및 분석 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포 배양 공정 최적화",
+            "배양 공정 설계 및 분석",
+            "데이터 기반 공정 분석"
+        ],
+        "keywords": [
+            "데이터",
+            "기반",
+            "공정",
+            "분석",
+            "배양",
+            "공정",
+            "설계",
+            "및",
+            "분석",
+            "생물공학연구실"
+        ],
+        "content_snippet": "공정분석기술(PAT), 품질기반설계(QbD) 등 데이터 중심의 공정 이해 및 개선 방법을 다룹니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 데이터 기반 공정 분석 (Data‑driven Process Analytics) 공정분석기술(PAT), 품질기반설계(QbD) 등 데이터 중심의 공정 이해 및 개선 방법을 다룹니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "proc_opt_dev_analytics_main.html",
+        "title": "배양 공정 설계 및 분석 - 세포 배양 공정 최적화 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포 배양 공정 최적화",
+            "배양 공정 설계 및 분석"
+        ],
+        "keywords": [
+            "배양",
+            "공정",
+            "설계",
+            "및",
+            "분석",
+            "세포",
+            "배양",
+            "공정",
+            "최적화",
+            "생물공학연구실"
+        ],
+        "content_snippet": "효율적인 세포 배양 공정 개발을 위한 설계 방법론과 데이터 기반 공정 분석 기술을 다룹니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 배양 공정 설계 및 분석 (Process Development & Analytics) 효율적인 세포 배양 공정 개발을 위한 설계 방법론과 데이터 기반 공정 분석 기술을 다룹니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다. 공정 조건 최적화 (Process Parameter Optimization) 데이터 기반 공정 분석 (Data‑driven Process Analytics) 콘텐츠 준비 중 배양 공정 설계 및 분석에 대한 상세 내용이 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "proc_opt_dev_analytics_param_opt.html",
+        "title": "공정 조건 최적화 - 배양 공정 설계 및 분석 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포 배양 공정 최적화",
+            "배양 공정 설계 및 분석",
+            "공정 조건 최적화"
+        ],
+        "keywords": [
+            "공정",
+            "조건",
+            "최적화",
+            "배양",
+            "공정",
+            "설계",
+            "및",
+            "분석",
+            "생물공학연구실"
+        ],
+        "content_snippet": "실험계획법(DoE) 등 통계적 방법을 활용한 공정 변수 최적화 전략을 소개합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 공정 조건 최적화 (Process Parameter Optimization) 실험계획법(DoE) 등 통계적 방법을 활용한 공정 변수 최적화 전략을 소개합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "proc_opt_main.html",
+        "title": "세포 배양 공정 최적화 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포 배양 공정 최적화"
+        ],
+        "keywords": [
+            "세포",
+            "배양",
+            "공정",
+            "최적화",
+            "생물공학연구실"
+        ],
+        "content_snippet": "Process Optimization",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 세포 배양 공정 최적화 (Process Optimization) Process Optimization 세포 배양 공정 최적화는 생산성 향상과 품질 확보를 위해 필수적인 연구 분야입니다. 아래 하위 항목에서 구체적인 접근 전략과 최신 동향을 확인할 수 있습니다. 연구 개요 공정 최적화의 필요성과 접근 전략을 소개합니다. 배양 공정 설계 및 분석 공정 조건 최적화와 데이터 기반 분석 방법을 다룹니다. 최신 연구 동향 관련 분야의 연구 성과와 산업 동향을 살펴봅니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "proc_opt_overview_approach_strategy.html",
+        "title": "접근 전략 - 공정 최적화 연구 개요 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포 배양 공정 최적화",
+            "연구 개요",
+            "접근 전략"
+        ],
+        "keywords": [
+            "접근",
+            "전략",
+            "공정",
+            "최적화",
+            "연구",
+            "개요",
+            "생물공학연구실"
+        ],
+        "content_snippet": "세포 배양 공정 최적화를 위해 본 연구실에서 사용하는 주요 접근 방법 및 연구 전략을 소개합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 접근 전략 (Approach & Strategy) 세포 배양 공정 최적화를 위해 본 연구실에서 사용하는 주요 접근 방법 및 연구 전략을 소개합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "proc_opt_overview_main.html",
+        "title": "연구 개요 - 세포 배양 공정 최적화 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포 배양 공정 최적화",
+            "연구 개요"
+        ],
+        "keywords": [
+            "연구",
+            "개요",
+            "세포",
+            "배양",
+            "공정",
+            "최적화",
+            "생물공학연구실"
+        ],
+        "content_snippet": "세포 배양 공정 최적화 연구의 목적, 필요성 및 주요 접근 전략을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 연구 개요 (Overview) 세포 배양 공정 최적화 연구의 목적, 필요성 및 주요 접근 전략을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다. 연구 목적 및 필요성 (Purpose & Necessity) 접근 전략 (Approach & Strategy) 콘텐츠 준비 중 세포 배양 공정 최적화 연구 개요에 대한 상세 내용이 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "proc_opt_overview_purpose_necessity.html",
+        "title": "연구 목적 및 필요성 - 공정 최적화 연구 개요 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포 배양 공정 최적화",
+            "연구 개요",
+            "연구 목적 및 필요성"
+        ],
+        "keywords": [
+            "연구",
+            "목적",
+            "및",
+            "필요성",
+            "공정",
+            "최적화",
+            "연구",
+            "개요",
+            "생물공학연구실"
+        ],
+        "content_snippet": "세포 배양 공정 최적화 연구가 왜 중요하며, 이를 통해 달성하고자 하는 목표는 무엇인지 설명합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 연구 목적 및 필요성 (Purpose & Necessity) 세포 배양 공정 최적화 연구가 왜 중요하며, 이를 통해 달성하고자 하는 목표는 무엇인지 설명합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "proc_opt_pat.html",
+        "title": "공정 분석 기술 (PAT) - 공정 최적화 및 자동화 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "공정 분석 기술 (PAT)"
+        ],
+        "keywords": [
+            "공정",
+            "분석",
+            "기술",
+            "PAT",
+            "공정",
+            "최적화",
+            "및",
+            "자동화",
+            "생물공학연구실"
+        ],
+        "content_snippet": "이 페이지는 공정 분석 기술(Process Analytical Technology, PAT)을 활용한 바이오프로세스 모니터링 및 제어에 대한 연구 내용을 소개합니다.",
+        "full_text": "생물공학연구실 검색 공정 분석 기술 (PAT) 이 페이지는 공정 분석 기술(Process Analytical Technology, PAT)을 활용한 바이오프로세스 모니터링 및 제어에 대한 연구 내용을 소개합니다. 현재 페이지의 콘텐츠는 준비 중입니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "proc_opt_scale_up_down.html",
+        "title": "스케일업/스케일다운 - 공정 최적화 및 자동화 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "스케일업/스케일다운"
+        ],
+        "keywords": [
+            "스케일업스케일다운",
+            "공정",
+            "최적화",
+            "및",
+            "자동화",
+            "생물공학연구실"
+        ],
+        "content_snippet": "이 페이지는 바이오프로세스의 스케일업 및 스케일다운 전략과 관련된 연구 내용을 다룹니다.",
+        "full_text": "생물공학연구실 검색 스케일업/스케일다운 이 페이지는 바이오프로세스의 스케일업 및 스케일다운 전략과 관련된 연구 내용을 다룹니다. 현재 페이지의 콘텐츠는 준비 중입니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "proc_opt_trends_industry_academic.html",
+        "title": "최근 산업 및 학술 동향 - 공정 최적화 최신 연구 동향 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포 배양 공정 최적화",
+            "최신 연구 동향",
+            "최근 산업 및 학술 동향"
+        ],
+        "keywords": [
+            "최근",
+            "산업",
+            "및",
+            "학술",
+            "동향",
+            "공정",
+            "최적화",
+            "최신",
+            "연구",
+            "동향",
+            "생물공학연구실"
+        ],
+        "content_snippet": "세포 배양 공정 최적화 기술의 산업계 적용 현황과 학계의 최신 연구 방향을 조망합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 최근 산업 및 학술 동향 (Industry & Academic Trends) 세포 배양 공정 최적화 기술의 산업계 적용 현황과 학계의 최신 연구 방향을 조망합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "proc_opt_trends_main.html",
+        "title": "최신 연구 동향 - 세포 배양 공정 최적화 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포 배양 공정 최적화",
+            "최신 연구 동향"
+        ],
+        "keywords": [
+            "최신",
+            "연구",
+            "동향",
+            "세포",
+            "배양",
+            "공정",
+            "최적화",
+            "생물공학연구실"
+        ],
+        "content_snippet": "세포 배양 공정 최적화 분야의 최신 연구 성과, 산업 및 학술 동향을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 최신 연구 동향 (Latest Research Trends) 세포 배양 공정 최적화 분야의 최신 연구 성과, 산업 및 학술 동향을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다. 주요 연구 성과 (Publications & Patents) 최근 산업 및 학술 동향 (Industry & Academic Trends) 콘텐츠 준비 중 최신 연구 동향에 대한 상세 내용이 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "proc_opt_trends_publications_patents.html",
+        "title": "주요 연구 성과 - 공정 최적화 최신 연구 동향 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "세포 배양 공정 최적화",
+            "최신 연구 동향",
+            "주요 연구 성과"
+        ],
+        "keywords": [
+            "주요",
+            "연구",
+            "성과",
+            "공정",
+            "최적화",
+            "최신",
+            "연구",
+            "동향",
+            "생물공학연구실"
+        ],
+        "content_snippet": "본 연구실 및 관련 분야의 주요 논문, 특허 등 연구 성과를 공유합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 주요 연구 성과 (Publications & Patents) 본 연구실 및 관련 분야의 주요 논문, 특허 등 연구 성과를 공유합니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "professor_introduction.html",
+        "title": "교수 소개 - 연구실 소개 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "연구실 소개",
+            "교수 소개"
+        ],
+        "keywords": [
+            "교수",
+            "소개",
+            "연구실",
+            "소개",
+            "생물공학연구실"
+        ],
+        "content_snippet": "조교수 (Assistant Professor)",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 교수 소개 홍종광 (Jong Kwang Hong) 조교수 (Assistant Professor) 소속 연세대학교 미래캠퍼스 생명과학기술학부 (Division of Biological Science & Technology, Yonsei University Mirae Campus) 연구실 위치 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 이메일 jongkwang.hong@yonsei.ac.kr 전화 033-760-2279 학력 KAIST 생명화학공학과 공학박사 연세대학교 생명공학과 공학사 경력 2020년 3월 – 현재: 연세대학교 미래캠퍼스 생명과학기술학부 조교수 싱가포르 A*STAR (Agency for Science, Technology and Research), Bioprocessing Technology Institute (BTI), 박사후 연구원 LG Life Sciences (현 LG화학 생명과학사업본부) 배양공정팀 연구원 주요 연구 관심 분야 디지털 트윈 기반 바이오공정 시뮬레이션 및 최적화 동물세포(CHO) 배양 공정 개발 및 생산성/품질 향상 시스템 대사공학 및 모델 기반 배지 개발 전산유체역학(CFD)을 이용한 바이오리액터 설계 및 스케일업/다운 연구 주요 활동 K-NIBRT (Global NIBRT Korea) 겸임교수 (바이오공정 인력양성 프로그램 참여) 다수 국내외 학술지 심사위원 한국생물공학회 등 주요 학회 회원 연구실 소개 메인으로 돌아가기 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "research_achievements.html",
+        "title": "연구 성과 - 연구실 소개 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "연구실 소개",
+            "연구 성과"
+        ],
+        "keywords": [
+            "연구",
+            "성과",
+            "연구실",
+            "소개",
+            "생물공학연구실"
+        ],
+        "content_snippet": "본 연구실은 디지털 트윈, CHO 세포 배양, 시스템 대사공학, CFD 시뮬레이션 등 핵심 연구 분야에서 지속적으로 의미 있는 학문적 성과들을 도출해왔습니다. 최근 대표적인 연구 성과(논문, 발표, 수상 등)는 다음과 같습니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 연구 성과 본 연구실은 디지털 트윈, CHO 세포 배양, 시스템 대사공학, CFD 시뮬레이션 등 핵심 연구 분야에서 지속적으로 의미 있는 학문적 성과들을 도출해왔습니다. 최근 대표적인 연구 성과(논문, 발표, 수상 등)는 다음과 같습니다. 연도 논문/발표/특허/수상 주요 내용 및 성과 2025 Shaking hydrodynamics of flask-based CHO cell cultures for reliable scale-down model development: an EDR and shear stress mapping approach by CFD profilings. Biotechnology and Bioprocess Engineering . (SCI, IF: 2.8) 플라스크 기반 CHO 세포 배양의 유체역학적 특성(에너지 소실률 및 전단응력)을 CFD를 통해 정량적으로 매핑하고, 이를 기반으로 신뢰성 있는 스케일 다운 모델 개발을 위한 지표 제시. 2024 AI-driven digital twin for real-time monitoring and predictive control of CHO cell bioreactors. Journal of Biotechnology . (SCI, IF: 3.5) CHO 세포 배양 바이오리액터의 실시간 모니터링 및 예측 제어를 위한 AI 기반 디지털 트윈 개발. 공정 변수 예측 정확도 95% 이상 달성 및 생산성 20% 향상. 2023 Polyamine-supplemented media improves CHO-K1 growth and monoclonal antibody galactosylation. Applied Microbiology and Biotechnology . (SCI, IF: 5.5) 다양한 폴리아민 조합 평가를 통해 CHO-K1 세포의 성장률을 향상시키고, 생산된 단일클론항체의 주요 품질 속성인 갈락토실화(Galactosyl"
+    },
+    {
+        "url": "research_areas.html",
+        "title": "연구 분야 - 연구실 소개 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "연구실 소개",
+            "연구 분야"
+        ],
+        "keywords": [
+            "연구",
+            "분야",
+            "연구실",
+            "소개",
+            "생물공학연구실"
+        ],
+        "content_snippet": "본 연구실은 다음과 같은 핵심 연구 분야에 집중하고 있습니다. 각 분야는 상호 연계되어 시너지를 창출하며, 바이오공정의 혁신을 목표로 합니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 연구 분야 본 연구실은 다음과 같은 핵심 연구 분야에 집중하고 있습니다. 각 분야는 상호 연계되어 시너지를 창출하며, 바이오공정의 혁신을 목표로 합니다. 1. 디지털 트윈 기반 바이오공정 전산유체역학(CFD)과 인공지능(AI) 기술을 융합하여, 바이오리액터 내에서 일어나는 세포 배양 과정 중 실시간으로 물리적 및 대사적 상태를 가상으로 복제(Digital Twin)합니다. 이를 통해 공정 상태를 정밀하게 예측하고, 최적화된 제어 전략을 제시하여 생산 효율성을 극대화합니다. 주요 연구 내용은 공정 데이터 통합 분석, 예측 모델 개발, AI 기반 최적 공정 제어 알고리즘 개발 등을 포함합니다. 2. CHO 세포 배양 공정 최적화 중국 햄스터 난소(CHO) 세포는 항체 의약품 생산의 핵심 세포주입니다. 본 연구실에서는 대사 모델, 유전체 정보, 실험 데이터를 통합적으로 분석하여 CHO 세포의 생산성과 최종 의약품의 품질(예: 당쇄 구조)을 동시에 향상시키는 데이터 기반의 배지 조성 및 배양 공정 설계 전략을 개발합니다. 연구 범위는 세포주 개발부터 배양 조건 최적화, 스케일업 전략 수립까지 포괄합니다. 3. 시스템 대사공학 및 배지 개발 세포 내 복잡한 대사 네트워크를 시스템 수준에서 이해하고, 이를 바탕으로 목표 물질의 생산을 극대화하도록 세포를 공학적으로 개량합니다. 특히, 체계적인 모델 가이드 프레임워크(MGF)를 활용하여 배양 배지의 화학적, 영양학적 변수를 탐색하고 최적화하는 과정을 자동화하여 고효율 맞춤형 배지 개발을 목표로 합니다. 오믹스 데이터(유전체, 전사체, 단백체, 대사체) 분석과 대사흐름분석(MFA)이 핵심 기술로 활용됩니다. 4. 바이오리액터 CFD 기반 설계 및 최적화 전산유체역학(CFD) 모델링 기술을 활용하여 다양한 규모와 형태의 바이오리액터 내부에서 발생하는 복잡한 유체 흐름, 혼합 특성, 물질 전달 현상(산소, 영양분 등), 전단응력 분포 등을 정밀하게 "
+    },
+    {
+        "url": "research_goals_vision.html",
+        "title": "연구 목표 및 비전 - 연구실 소개 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "연구실 소개",
+            "연구 목표 및 비전"
+        ],
+        "keywords": [
+            "연구",
+            "목표",
+            "및",
+            "비전",
+            "연구실",
+            "소개",
+            "생물공학연구실"
+        ],
+        "content_snippet": "본 생물공학연구실의 주요 목표는 다음과 같습니다:",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 연구 목표 및 비전 연구 목표 본 생물공학연구실의 주요 목표는 다음과 같습니다: 디지털 트윈 기술 고도화: CFD와 AI를 융합하여 바이오공정의 실시간 가상 복제(Digital Twin) 기술을 개발하고, 이를 통해 공정 예측 정확도를 향상시키며 최적화된 공정 제어 전략을 제시합니다. CHO 세포 배양 공정 혁신: 다중 오믹스 데이터(genomics, transcriptomics, proteomics, metabolomics)와 기계 학습을 통합하여 CHO 세포의 항체 의약품 생산성과 품질(예: 당쇄 구조 균일성)을 동시에 향상시키는 데이터 기반의 배지 조성 및 배양 공정 설계 기술을 확립합니다. 시스템 대사공학 적용 확대: 세포 내 대사 네트워크에 대한 깊이 있는 이해를 바탕으로, 모델 가이드 프레임워크(MGF)를 통해 목표 물질 생산을 위한 세포주 개량 및 배양 조건의 화학적, 영양학적 변수 탐색 과정을 자동화하고, 고효율 바이오 생산 시스템을 구축합니다. 첨단 바이오리액터 설계 및 최적화: CFD 모델링을 통해 다양한 스케일의 바이오리액터 내부 유동, 혼합, 물질 전달, 전단 응력 분포 등을 정밀 분석하고, 이를 기반으로 배양 효율성 증대, 품질 관리 전략 수립, 그리고 신뢰성 있는 스케일업/다운 프로토콜을 개발합니다. 궁극적으로, 이러한 연구 목표 달성을 통해 바이오 의약품 및 바이오 소재 개발의 혁신을 이끌고, 공정 개발 기간 단축, 생산성 향상, 운영 비용 절감을 실현하여 인류 보건 증진과 지속 가능한 사회 발전에 기여하고자 합니다. 연구 비전 우리의 비전은 디지털 트윈, 시스템 생물학, 전산유체역학(CFD) 시뮬레이션 기술을 융합한 데이터 기반 정밀 바이오공학 분야를 선도하는 세계적 수준의 연구 허브로 발돋움하는 것입니다. 이를 위해 다음을 추구합니다: 기술 혁신 주도: 창의적이고 도전적인 연구를 통해 바이오공정의 기존 패러다임을 전환하고, 새로운 기술 표준을 제시합니"
+    },
+    {
+        "url": "researchers_introduction.html",
+        "title": "연구원 소개 - 연구실 소개 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "연구실 소개",
+            "연구원 소개"
+        ],
+        "keywords": [
+            "연구원",
+            "소개",
+            "연구실",
+            "소개",
+            "생물공학연구실"
+        ],
+        "content_snippet": "(세부 연구원 정보는 추후 업데이트될 예정입니다.)",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 연구원 소개 연구팀 구성 (세부 연구원 정보는 추후 업데이트될 예정입니다.) 본 연구실은 다음과 같은 세부 연구팀으로 구성되어 운영되고 있으며, 각 팀은 지도교수의 지도 하에 긴밀하게 협력하여 연구 시너지를 창출하고 있습니다: 세포 배양 및 공정 개발팀: CHO 세포 및 기타 미생물 세포주 배양 기술, 배지 최적화, 바이오리액터 운전 및 스케일업/다운 등 업스트림 공정 개발 실험을 담당합니다. 분석 화학 및 품질 관리팀: 세포 대사체 분석(Metabolomics), 단백질 특성 및 품질 분석(Glycosylation, Aggregation 등), 분석법 개발 및 검증(Assay Development & Validation)을 담당합니다. 계산 모델링 및 데이터 과학팀: 전산유체역학(CFD) 시뮬레이션, 시스템 대사 모델링(MFA, FBA), 데이터 분석 및 인공지능(AI)/기계학습(ML) 모델 개발을 담당합니다. 현재 다양한 배경과 전문성을 가진 박사후 연구원, 석·박사 통합과정 학생, 석사 과정 학생들이 각 팀에 소속되어 열정적으로 연구에 참여하고 있습니다. 저희 연구실은 창의적이고 도전적인 연구 분위기 속에서 차세대 바이오공학 리더를 양성하는 것을 목표로 합니다. 주요 교육 활동 (지도교수 담당) 본 연구실의 지도교수인 홍종광 교수는 학부 및 대학원에서 다음과 같은 바이오공학 핵심 및 심화 전공과목 강의를 담당하며 후학 양성에 힘쓰고 있습니다: 학부 과정: 생물공학입문, 생물화학공학, 생물분리공학, 바이오공정캡스톤디자인 등 대학원 과정: 생물의약품공학 (Biopharmaceutical Engineering), 대사공학 (Metabolic Engineering), 디지털 바이오공정 분석 (Digital Bioprocess Analytics), 고급생물화학공학 등 이 외에도 다양한 연구실 세미나, 초청 강연, 워크샵 등을 통해 최신 연구 동향과 기술을 공유하고, 학생들의 연구 역량"
+    },
+    {
+        "url": "resources.html",
+        "title": "자료실 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "자료실"
+        ],
+        "keywords": [
+            "자료실",
+            "생물공학연구실"
+        ],
+        "content_snippet": "연구 논문, 발표 자료, 유용한 링크 등을 제공합니다.",
+        "full_text": "생물공학연구실 검색 자료실 연구 논문, 발표 자료, 유용한 링크 등을 제공합니다. 출판물 연구실의 주요 논문 및 학술 발표 자료는 추후 업데이트될 예정입니다. 현재 연구 성과 페이지 에서 일부 대표 성과를 확인하실 수 있습니다. 유용한 링크 관련 학회, 연구기관, 소프트웨어 정보 등 유용한 외부 링크 목록은 준비 중입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "software_index.html",
+        "title": "소프트웨어 - 전산유체역학 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "전산유체역학",
+            "소프트웨어"
+        ],
+        "keywords": [
+            "소프트웨어",
+            "전산유체역학",
+            "생물공학연구실"
+        ],
+        "content_snippet": "본 연구실에서 활용하거나 교육 자료를 제공하는 주요 전산 유체 역학(CFD) 및 관련 소프트웨어 목록입니다. 각 소프트웨어에 대한 상세 정보는 아래 링크를 통해 확인하실 수 있습니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 소프트웨어 본 연구실에서 활용하거나 교육 자료를 제공하는 주요 전산 유체 역학(CFD) 및 관련 소프트웨어 목록입니다. 각 소프트웨어에 대한 상세 정보는 아래 링크를 통해 확인하실 수 있습니다. M-STAR CFD Lattice Boltzmann 기반의 GPU 가속 CFD 소프트웨어로, 대규모 혼합 및 다상 유동 시스템에 특화되어 있습니다. M-STAR CFD 정보 보기 &raquo; 자세히 알아보기 Ansys Fluent 산업 표준 CFD 소프트웨어로, 복잡한 유동, 열 전달, 화학 반응 등 광범위한 물리 현상 해석에 사용됩니다. Ansys Fluent 정보 보기 &raquo; 자세히 알아보기 OpenFOAM 오픈 소스 CFD 소프트웨어로, 유연성과 확장성이 뛰어나며 다양한 물리 문제 해결에 사용됩니다. OpenFOAM 정보 보기 &raquo; 자세히 알아보기 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     }
 ]
