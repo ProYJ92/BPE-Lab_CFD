@@ -41,10 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const overlay = document.createElement('div');
         overlay.id = 'passwordOverlay';
         overlay.innerHTML = `
-            <div id="overlayContent">
-                <div id="hamsterAnimation">🐹</div>
-                <p style="color:#fff; font-size:16px;">비밀번호를 입력하세요 <span>(대소문자 구분)</span></p>
-                <input type="password" id="passwordInput" class="password-input" placeholder="비밀번호 입력" />
+            <div class="gear"></div>
+            <div class="password-container">
+                <p>비밀번호를 입력하세요 <span>(대소문자 구분)</span></p>
+                <input type="password" id="passwordInput" class="password-input" />
                 <div class="password-buttons mt-2">
                     <button id="passwordSubmit" class="mr-2 bg-blue-600 text-white px-3 py-1 rounded">확인</button>
                     <button id="passwordCancel" class="bg-gray-300 text-gray-800 px-3 py-1 rounded">취소</button>
