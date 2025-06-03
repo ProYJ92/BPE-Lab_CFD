@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
             koreanSpan.textContent = item.name_ko;
             textWrapper.appendChild(koreanSpan);
 
-            if (item.name_en) {
+            if (item.name_en && item.name_en !== item.name_ko) {
                 const englishSpan = document.createElement('span');
                 englishSpan.className = 'menu-english block text-xs opacity-80 mt-px';
                 englishSpan.textContent = `(${item.name_en})`;
@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
              a.className = 'block px-4 py-2 hover:bg-gray-100 text-sm text-gray-700 hover:text-slate-800';
              let linkText = item.name_ko;
-             if (item.name_en) {
+             if (item.name_en && item.name_en !== item.name_ko) {
                  linkText += ` <span class="text-xs opacity-80">(${item.name_en})</span>`;
              }
              a.innerHTML = linkText;
