@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             langSelect.className = 'ml-2 p-1 border rounded text-sm';
             langSelect.setAttribute('aria-label', 'Language selector');
             langSelect.setAttribute('role', 'combobox');
-            langSelect.innerHTML = '<option value="default">기본</option><option value="en">English</option><option value="zh">中文</option><option value="pt">Português</option>';
+            langSelect.innerHTML = '<option value="default">기본</option><option value="en">English</option><option value="zh">中文</option><option value="de">Deutsch</option><option value="es">Español</option><option value="pt">Português</option>';
             headerFlex.appendChild(langSelect);
             langSelect.addEventListener('change', () => {
                 loadLanguage(langSelect.value);
