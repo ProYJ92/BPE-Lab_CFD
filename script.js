@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const body = document.body;
         body.classList.add('loading');
         try {
-            const response = await fetch(`${lang}.json`);
+            const response = await fetch(`assets/i18n/${lang}.json`);
             if (!response.ok) throw new Error('File not found');
             const texts = await response.json();
             Object.keys(texts).forEach(key => {
