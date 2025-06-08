@@ -1,0 +1,51 @@
+# .github/workflows/deploy_jekyll.yml
+name: Deploy Jekyll to GitHub Pages
+
+on:
+  # ① main 브랜치로 머지되면(= push) → 빌드 + 배포
+  push:
+    branches: [main]
+
+  # ② PR 단계에서는 빌드·테스트만 수행(배포 X)
+  pull_request:
+    branches: [main]
+
+  # ③ Actions 탭에서 수동 실행 허용
+  workflow_dispatch:
+
+# 최소 권한의 GITHUB_TOKEN
+permissions:
+  contents: read
+  pages:    write
+  id-token: write
+
+# 중복 배포 방지
+concurrency:
+  group: pages-jekyll
+  cancel-in-progress: false
+
+jobs:
+  # ---------- Build ----------
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4            # 소스 가져오기
+      - uses: actions/configure-pages@v5     # Pages ENV 설정
+      - uses: actions/jekyll-build-pages@v1  # Jekyll 빌드
+        with:
+          source: .
+          destination: ./_site
+      - uses: actions/upload-pages-artifact@v3  # 산출물 저장
+
+  # ---------- Deploy (push 이벤트에서만) ----------
+  deploy:
+    if: github.event_name == 'push'          # PR 빌드 시에는 skip
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages-jekyll
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
