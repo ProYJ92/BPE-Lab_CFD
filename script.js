@@ -355,12 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         {
-            id: 'useful_tools', name_ko: '유용한 도구', name_en: 'Useful Tools', path: 'useful_tools.html',
-            children: [
-                { name_ko: 'CELBIC system angle & RPM setting', name_en: 'CELBIC system angle & RPM setting', path: 'celbic_angle_rpm.html' },
-                { name_ko: 'CFD 변수들의 통계적 값 처리', name_en: 'CFD Statistics', path: 'cfd_statistics.html' },
-                { name_ko: 'RMSE 계산기', name_en: 'RMSE Calculator', path: 'rmse_calculator.html' }
-            ]
+            id: 'useful_tools', name_ko: '유용한 도구', name_en: 'Useful Tools', path: 'useful_tools.html'
         },
         { id: 'resources', name_ko: '자료실', name_en: 'Resources', path: 'lab_resources.html' }
     ];
@@ -530,7 +525,10 @@ document.addEventListener('DOMContentLoaded', () => {
              isAncestor = currentPathArray.slice(0, -1).some(p => p.path === item.path);
         }
         
-        if(isActive) li.classList.add('active');
+        if(isActive) {
+            li.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+        }
         if(isAncestor) li.classList.add('active-ancestor');
 
 
