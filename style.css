@@ -734,6 +734,18 @@ footer {
   animation: attention 1s ease-in-out;
 }
 
+/* === helper-panel|MOBILE_FIX_START === */
+@media (max-width: 768px) {
+  #helper-btn {
+    bottom: 100px;
+  }
+  .helper-panel,
+  .helper-panel * {
+    font-size: 0.85rem;
+  }
+}
+/* === helper-panel|MOBILE_FIX_END === */
+
 /* ===== Custom styles for responsive updates ===== */
 h1.main-title {
   font-size: 3rem;
