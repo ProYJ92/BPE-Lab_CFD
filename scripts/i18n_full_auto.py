@@ -2,13 +2,16 @@ import subprocess, pathlib, json, re, hashlib, os, sys
 from bs4 import BeautifulSoup
 from google.cloud import translate_v2 as tr
 
-# ── 변경 파일 목록 (HEAD~1 없을 때 안전 처리) ─────────────────
+# ── 안전 diff: 첫 커밋·shallow clone 모두 OK ──────────────────────
 try:
     diff = subprocess.check_output(
-        ['git','diff','--name-only','HEAD~1'], stderr=subprocess.STDOUT
+        ['git', 'diff', '--name-only', 'HEAD~1'],
+        stderr=subprocess.STDOUT
     ).decode().split()
 except subprocess.CalledProcessError:
-    diff = subprocess.check_output(['git','ls-files','*.html','*.md']).decode().split()
+    diff = subprocess.check_output(
+        ['git', 'ls-files', '*.html', '*.md']
+    ).decode().split()
 
 repo = pathlib.Path(__file__).resolve().parents[1]
 process_files = [f for f in diff if f.endswith(('.html', '.md'))]
