@@ -1,6 +1,8 @@
 name: i18n full-auto
 permissions:
   contents: write
+  pull-requests: write
+
 on: [push]
 concurrency: {group: i18n-auto, cancel-in-progress: true}
 
@@ -9,20 +11,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: { persist-credentials: true }
       - uses: google-github-actions/auth@v2
-        with:
-          credentials_json: ${{ secrets.GCLOUD_SERVICE_KEY }}
+        with: { credentials_json: ${{ secrets.GCLOUD_SERVICE_KEY }} }
       - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - run: pip install beautifulsoup4 google-cloud-translate==3.*
+        with: { python-version: '3.11' }
+      - run: pip install --no-cache-dir beautifulsoup4 google-cloud-translate==3.*
       - run: |
           echo "::add-mask::${{ secrets.GCLOUD_PROJECT_ID }}"
           python scripts/i18n_full_auto.py
         env:
           GCLOUD_PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
-      - run: |
-          git config user.name  "i18n-bot"
-          git config user.email "bot@users.noreply.github.com"
-          git add -A
-          git diff --cached --quiet || (git commit -m "i18n: auto-update" && git push)
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          branch: i18n/bot-update
+          title: "\u267b\ufe0f i18n JSON \uc5c5\ub370\uc774\ud2b8"
+          commit-message: "i18n: auto-update"
+          labels: i18n, bot
+          delete-branch: true

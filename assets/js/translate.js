@@ -1,6 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const select = document.getElementById('langSwitcher');
-  if (!select) return;
+  let select = document.getElementById('langSwitcher');
+  if (!select) {
+    select = document.createElement('select');
+    select.id = 'langSwitcher';
+    ['ko','en','zh'].forEach(l => {
+      const opt = document.createElement('option');
+      opt.value = l;
+      opt.textContent = l;
+      select.appendChild(opt);
+    });
+    document.body.prepend(select);
+  }
   const saved = localStorage.getItem('lang') || 'ko';
   select.value = saved;
   loadLang(saved);

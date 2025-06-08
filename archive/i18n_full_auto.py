@@ -1,18 +1,15 @@
-import subprocess, pathlib, json, re, hashlib, os, sys
+import pathlib
+import json
+import re
+import hashlib
+import subprocess
+import os
 from bs4 import BeautifulSoup
 from google.cloud import translate_v2 as tr
 
-# ── 변경 파일 목록 (HEAD~1 없을 때 안전 처리) ─────────────────
-try:
-    diff = subprocess.check_output(
-        ['git','diff','--name-only','HEAD~1'], stderr=subprocess.STDOUT
-    ).decode().split()
-except subprocess.CalledProcessError:
-    diff = subprocess.check_output(['git','ls-files','*.html','*.md']).decode().split()
-
 repo = pathlib.Path(__file__).resolve().parents[1]
-process_files = [f for f in diff if f.endswith(('.html', '.md'))]
-
+changed = subprocess.check_output(['git','diff','--name-only','HEAD~1']).decode().split()
+process_files = [f for f in changed if f.endswith(('.html','.md'))]
 selectors = ['h1','h2','h3','h4','a.nav-link','button','li>a']
 
 assets_dir = repo / 'assets' / 'i18n'
@@ -29,7 +26,7 @@ client = tr.Client()
 
 def slug(text):
     key = re.sub(r'\W+','_',text).strip('_').lower()
-    if not key or (key in ko and ko.get(key) != text):
+    if not key or key in ko and ko.get(key) != text:
         key = hashlib.sha1(text.encode()).hexdigest()[:10]
     return key
 
