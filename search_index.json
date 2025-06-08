@@ -745,6 +745,27 @@
         "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 🐹 뭐든 물어봐! 공정 스케일업·다운 (Process Scale‑up & Scale‑down) 실험실 규모에서 상업 생산 규모로, 또는 그 반대로 공정 규모를 변경하는 스케일업 및 스케일다운 전략과 고려사항을 다룹니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     },
     {
+        "url": "celbic_angle_rpm.html",
+        "title": "CELBIC system angle & RPM setting - 유용한 도구 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "유용한 도구",
+            "CELBIC system angle & RPM setting"
+        ],
+        "keywords": [
+            "CELBIC",
+            "system",
+            "angle",
+            "RPM",
+            "setting",
+            "유용한",
+            "도구",
+            "생물공학연구실"
+        ],
+        "content_snippet": "내용 추가 예정(Coming soon).",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 🐹 뭐든 물어봐! CELBIC system angle &amp; RPM setting 내용 추가 예정(Coming soon). 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
         "url": "cfd_core_theory.html",
         "title": "CFD 핵심 이론 - 생물공학연구실",
         "breadcrumb": [
@@ -1087,6 +1108,27 @@
         ],
         "content_snippet": "전산유체역학(CFD)의 \"해석 수행(Solving)\" 단계는 전처리(Pre-processing) 과정에서 준비된 기하 형상, 격자, 물리 모델 설정 및 경계 조건 등을 바탕으로, 실제 유체 유동 현상을 지배하는 편미분 방정식(PDE) 시스템을 수치적으로 근사하여 해를 ",
         "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 🐹 뭐든 물어봐! CFD Solving (해석 수행) 전산유체역학(CFD)의 \"해석 수행(Solving)\" 단계는 전처리(Pre-processing) 과정에서 준비된 기하 형상, 격자, 물리 모델 설정 및 경계 조건 등을 바탕으로, 실제 유체 유동 현상을 지배하는 편미분 방정식(PDE) 시스템을 수치적으로 근사하여 해를 구하는 핵심 절차입니다. 이 단계에서는 선택된 수치 해석 기법을 통해 대규모 대수 방정식 시스템을 구성하고, 반복적인 계산 과정을 거쳐 유동장, 온도장, 압력장, 화학종 농도 분포 등 물리적 해를 도출합니다 [1] , [2] . 정확하고 신뢰성 있는 해석 결과를 얻기 위해서는 문제의 특성에 맞는 적절한 수치 해석 기법과 물리 모델을 선택하고 적용하는 것이 중요합니다. 본 문서는 CFD 해석 수행 단계의 주요 분류 체계인 수치 해석 기법, 난류 모델, 다상 유동 모델, 화학 반응 모델, 열전달 모델, 동적 격자/이동 경계 문제 처리 기법, 검증 및 확인 (V&V), 최신 연구 동향 등을 상세히 설명하고, 각 개념 및 모델들의 원리, 장단점, 적용 분야를 비교 분석하여 전문가 및 학습자에게 심층적인 정보를 제공합니다. 1. 수치 해석 기법 (Numerical Methods) CFD에서 유체 유동을 지배하는 Navier-Stokes 방정식을 포함한 편미분 방정식을 수치적으로 해결하기 위해 다양한 기법이 사용됩니다. 이들은 계산 영역을 이산화(Discretization)하고, 미분 방정식을 대수 방정식 시스템으로 변환하여 컴퓨터가 처리할 수 있도록 합니다. 대표적인 기법으로는 유한 차분법(FDM), 유한 체적법(FVM), 유한 요소법(FEM), 격자 볼츠만 방법(LBM) 등이 있습니다 [1] , [2] , [4] , [5] . 1.1 유한 차분법 (Finite Difference Method, FDM) 이론 및 특징: FDM은 미분 방정식의 각 미분 항을 테일러 급수 전"
+    },
+    {
+        "url": "cfd_statistics.html",
+        "title": "CFD 변수들의 통계적 값 처리 - 유용한 도구 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "유용한 도구",
+            "CFD 변수들의 통계적 값 처리"
+        ],
+        "keywords": [
+            "CFD",
+            "변수들의",
+            "통계적",
+            "값",
+            "처리",
+            "유용한",
+            "도구",
+            "생물공학연구실"
+        ],
+        "content_snippet": "내용 추가 예정(Coming soon).",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 🐹 뭐든 물어봐! CFD 변수들의 통계적 값 처리 내용 추가 예정(Coming soon). 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     },
     {
         "url": "cfd_terminology.html",
@@ -2630,6 +2672,24 @@
         "full_text": "생물공학연구실 검색 🐹 뭐든 물어봐! 자료실 연구 논문, 발표 자료, 유용한 링크 등을 제공합니다. 출판물 연구실의 주요 논문 및 학술 발표 자료는 추후 업데이트될 예정입니다. 현재 연구 성과 페이지 에서 일부 대표 성과를 확인하실 수 있습니다. 유용한 링크 관련 학회, 연구기관, 소프트웨어 정보 등 유용한 외부 링크 목록은 준비 중입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     },
     {
+        "url": "rmse_calculator.html",
+        "title": "RMSE 계산기 - 유용한 도구 | 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "유용한 도구",
+            "RMSE 계산기"
+        ],
+        "keywords": [
+            "RMSE",
+            "계산기",
+            "유용한",
+            "도구",
+            "생물공학연구실"
+        ],
+        "content_snippet": "내용 추가 예정(Coming soon).",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 🐹 뭐든 물어봐! RMSE 계산기 내용 추가 예정(Coming soon). 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
         "url": "software_index.html",
         "title": "소프트웨어 - 전산유체역학 | 생물공학연구실",
         "breadcrumb": [
@@ -2644,5 +2704,20 @@
         ],
         "content_snippet": "본 연구실에서 활용하거나 교육 자료를 제공하는 주요 전산 유체 역학(CFD) 및 관련 소프트웨어 목록입니다. 각 소프트웨어에 대한 상세 정보는 아래 링크를 통해 확인하실 수 있습니다.",
         "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 🐹 뭐든 물어봐! 소프트웨어 본 연구실에서 활용하거나 교육 자료를 제공하는 주요 전산 유체 역학(CFD) 및 관련 소프트웨어 목록입니다. 각 소프트웨어에 대한 상세 정보는 아래 링크를 통해 확인하실 수 있습니다. M-STAR CFD Lattice Boltzmann 기반의 GPU 가속 CFD 소프트웨어로, 대규모 혼합 및 다상 유동 시스템에 특화되어 있습니다. M-STAR CFD 정보 보기 &raquo; 자세히 알아보기 Ansys Fluent 산업 표준 CFD 소프트웨어로, 복잡한 유동, 열 전달, 화학 반응 등 광범위한 물리 현상 해석에 사용됩니다. Ansys Fluent 정보 보기 &raquo; 자세히 알아보기 OpenFOAM 오픈 소스 CFD 소프트웨어로, 유연성과 확장성이 뛰어나며 다양한 물리 문제 해결에 사용됩니다. OpenFOAM 정보 보기 &raquo; 자세히 알아보기 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+    },
+    {
+        "url": "useful_tools.html",
+        "title": "유용한 도구 - 생물공학연구실",
+        "breadcrumb": [
+            "홈",
+            "유용한 도구"
+        ],
+        "keywords": [
+            "유용한",
+            "도구",
+            "생물공학연구실"
+        ],
+        "content_snippet": "© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 🐹 뭐든 물어봐! 유용한 도구 (Useful Tools) CELBIC system angle &amp; RPM setting CFD 변수들의 통계적 값 처리 RMSE 계산기 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     }
 ]
