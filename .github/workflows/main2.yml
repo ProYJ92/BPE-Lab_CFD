@@ -26,6 +26,8 @@ jobs:
   # ---------- Build ----------
   build:
     runs-on: ubuntu-latest
+    env:
+      JEKYLL_ENV: production
     steps:
       - name: ⬇️ Checkout
         uses: actions/checkout@v4

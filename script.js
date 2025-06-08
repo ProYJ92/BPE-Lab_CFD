@@ -14,6 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return baseUrl + path.replace(/^\//, '');
     }
 
+    function normalizeLinks() {
+        document.querySelectorAll('a[href]').forEach(a => {
+            const href = a.getAttribute('href');
+            if (!href || href.startsWith(baseUrl) || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#') || href.startsWith('javascript:')) return;
+            a.setAttribute('href', withBase(href));
+        });
+    }
+
     if (mainNav) {
         mainNav.setAttribute('role', 'navigation');
         if (!mainNav.getAttribute('aria-label')) {
@@ -1035,6 +1043,7 @@ if (!helperBtn.dataset.helperBound) {
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'default';
     if (langSelect) langSelect.value = savedLanguage;
     loadLanguage(savedLanguage);
+    normalizeLinks();
 
     const backToTop = document.createElement('button');
     backToTop.id = 'back-to-top';
