@@ -208,9 +208,9 @@ document.addEventListener('DOMContentLoaded', () => {
             { name_ko: '사진 갤러리', name_en: 'Photo Gallery', path: 'photo_gallery.html' }
         ] },
         {
-            id: 'bp_eng', name_ko: '세포배양공정', name_en: 'Bioprocess Engineering', path: 'bp_eng_main.html',
+            id: 'bp_eng', name_ko: '생물공정공학', name_en: 'Bioprocess Engineering', path: 'bp_eng_main.html',
             children: [
-                { name_ko: '세포배양공정이란?', name_en: 'Introduction', path: 'bp_eng_intro_main.html', children: [
+                { name_ko: '소개', name_en: 'Introduction', path: 'bp_eng_intro_main.html', children: [
                     { name_ko: '개념 및 범위', name_en: 'Concept & Scope', path: 'bp_eng_intro_concept_scope.html' },
                     { name_ko: '바이오의약품 제조 공정 개요', name_en: 'Biopharmaceutical Manufacturing Overview', path: 'bp_eng_intro_biopharma_overview.html' }
                 ]},
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     { name_ko: '바이오리액터 운전 전략', name_en: 'Bioreactor Operation Strategy', path: 'bp_eng_upstream_bioreactor_strategy.html' },
                     { name_ko: '공정 스케일업·다운', name_en: 'Process Scale‑up & Scale‑down', path: 'bp_eng_upstream_scaleup_down.html' }
                 ]},
-                { name_ko: '동물세포배양', name_en: 'Animal Cell Culture', path: 'bp_eng_animal_cell_main.html', children: [
+                { name_ko: '동물 세포 배양', name_en: 'Animal Cell Culture', path: 'bp_eng_animal_cell_main.html', children: [
                     { name_ko: 'CHO 세포 배양', name_en: 'CHO Cell Culture', path: 'bp_eng_animal_cell_cho.html' },
                     { name_ko: 'HEK293 세포 배양', name_en: 'HEK293 Cell Culture', path: 'bp_eng_animal_cell_hek293.html' },
                     { name_ko: '기타 세포주 배양', name_en: 'Other Animal Cell Lines', path: 'bp_eng_animal_cell_other.html' }
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         {
-            id: 'proc_opt', name_ko: '세포 배양 공정 최적화', name_en: 'Process Optimization', path: 'proc_opt_main.html',
+            id: 'proc_opt', name_ko: '공정 최적화', name_en: 'Process Optimization', path: 'proc_opt_main.html',
             children: [
                 { name_ko: '연구 개요', name_en: 'Overview', path: 'proc_opt_overview_main.html', children: [
                     { name_ko: '연구 목적 및 필요성', name_en: 'Purpose & Necessity', path: 'proc_opt_overview_purpose_necessity.html' },
@@ -941,7 +941,7 @@ if (!helperBtn) {
         <button id="close-helper" aria-label="도우미 종료">✖</button>
         <ul>
             <li><a href="about_lab.html" aria-label="연구실 소개">🔬 우리 연구실이 어떤 연구를 하는지 궁금하신가요?</a></li>
-            <li><a href="bp_eng_main.html" aria-label="세포배양공정 소개">🧫 세포배양공정이 뭔지 쉽고 빠르게 알려드릴까요?</a></li>
+            <li><a href="bp_eng_main.html" aria-label="생물공정공학 소개">🧫 생물공정공학이 뭔지 쉽고 빠르게 알려드릴까요?</a></li>
             <li><a href="proc_opt_main.html" aria-label="공정 최적화">🚀 세포배양 효율을 높이는 최적의 방법이 궁금하세요?</a></li>
         <li><a href="meta_eng_main.html" aria-label="시스템 대사공학">🧬 시스템 대사공학과 배지 최적화의 중요성, 알고 싶으세요?</a></li>
         <li><a href="cfd_main.html" aria-label="CFD 소개">💻 CFD(전산유체역학)를 쉽게 이해하고 싶으신가요?</a></li>
