@@ -2,15 +2,7 @@
 name: Deploy Static Site to GitHub Pages 🚀
 
 on:
-  # main 브랜치 머지(push) → 빌드·배포
-  push:
-    branches: [main]
-
-  # PR 생성·수정 → 빌드(검증)만 수행
-  pull_request:
-    branches: [main]
-
-  # 수동 실행
+  # 임시로 수동 실행으로만 설정하여 기존 Pages 배포 방식과 충돌하지 않도록 한다
   workflow_dispatch:
 
 permissions:
@@ -26,6 +18,8 @@ jobs:
   # ---------- Build ----------
   build:
     runs-on: ubuntu-latest
+    env:
+      JEKYLL_ENV: production
     steps:
       - name: ⬇️ Checkout
         uses: actions/checkout@v4
