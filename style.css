@@ -860,4 +860,17 @@ td {
     right: 15px;
     padding: 8px 12px;
   }
+  #helper-btn {
+    top: auto !important;
+    bottom: 16px;
+    right: 16px;
+  }
+  #helper-menu {
+    top: auto !important;
+    bottom: 72px;
+    right: 16px;
+    max-height: 55vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
 }
