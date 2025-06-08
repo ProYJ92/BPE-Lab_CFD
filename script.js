@@ -4,24 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const breadcrumbNav = document.getElementById('breadcrumbNav');
     let langSelect;
 
-    const scriptSrc = document.currentScript?.src || '';
-    const baseUrlMatch = scriptSrc.match(/^(.*\/)script\.js(?:\?.*)?$/);
-    const baseUrl = baseUrlMatch ? baseUrlMatch[1] : '/';
-
-    function withBase(path) {
-        if (!path) return '#';
-        if (/^(?:[a-z]+:)?\/\//i.test(path) || path.startsWith('#')) return path;
-        return baseUrl + path.replace(/^\//, '');
-    }
-
-    function normalizeLinks() {
-        document.querySelectorAll('a[href]').forEach(a => {
-            const href = a.getAttribute('href');
-            if (!href || href.startsWith(baseUrl) || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#') || href.startsWith('javascript:')) return;
-            a.setAttribute('href', withBase(href));
-        });
-    }
-
     if (mainNav) {
         mainNav.setAttribute('role', 'navigation');
         if (!mainNav.getAttribute('aria-label')) {
@@ -137,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const correctPassword = 'bioprocess2025';
         if (input === correctPassword) {
             sessionStorage.setItem('labResourcesAccess', 'true');
-            window.location.href = withBase('lab_resources.html');
+            window.location.href = 'lab_resources.html';
         } else {
             alert('비밀번호가 틀렸습니다. 대소문자를 정확히 입력해주세요.');
         }
@@ -149,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.history.length > 1) {
             window.history.back();
         } else {
-            window.location.href = withBase('index.html');
+            window.location.href = 'index.html';
         }
     }
 
@@ -180,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const body = document.body;
         body.classList.add('loading');
         try {
-            const response = await fetch(withBase(`${lang}.json`));
+            const response = await fetch(`${lang}.json`);
             if (!response.ok) throw new Error('File not found');
             const texts = await response.json();
             Object.keys(texts).forEach(key => {
@@ -372,9 +354,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ]}
             ]
         },
-        {
-            id: 'useful_tools', name_ko: '유용한 도구', name_en: 'Useful Tools', path: 'useful-tools/index.html'
-        },
         { id: 'resources', name_ko: '자료실', name_en: 'Resources', path: 'lab_resources.html' }
     ];
     
@@ -481,7 +460,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 li.className = 'current-page text-gray-600 font-medium';
             } else {
                 const a = document.createElement('a');
-                a.href = withBase(item.path);
+                a.href = item.path || '#';
                 a.textContent = item.name_ko;
                 a.className = 'hover:underline text-[#0072CE] hover:text-[#004A99]';
                 li.appendChild(a);
@@ -503,7 +482,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const a = document.createElement('a');
-        a.href = withBase(item.path);
+        a.href = item.path || '#'; 
         
         if (level === 0) {
             a.className = 'px-3 sm:px-4 py-2 inline-block hover:bg-slate-600 transition-colors duration-150 flex flex-row items-center justify-center text-center';
@@ -719,7 +698,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function loadSearchIndex() {
         try {
-            const response = await fetch(withBase('search_index.json'));
+            const response = await fetch('search_index.json');
             if (!response.ok) {
                 console.error('Failed to load search index. Status:', response.status);
                 if (searchResultsList) searchResultsList.innerHTML = '<p class="text-red-500">검색 인덱스를 불러오는데 실패했습니다.</p>';
@@ -762,7 +741,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (results.length > 0) {
             results.slice(0, MAX_SUGGESTIONS).forEach(result => {
                 const suggestionAnchor = document.createElement('a');
-                suggestionAnchor.href = withBase(result.url);
+                suggestionAnchor.href = result.url;
                 suggestionAnchor.className = 'suggestion-item block p-3 hover:bg-gray-100 cursor-pointer text-sm';
 
                 const titleElement = document.createElement('div');
@@ -792,7 +771,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 suggestionAnchor.addEventListener('mousedown', () => {
                     clearTimeout(blurTimeout);
-                    window.location.href = withBase(result.url);
+                    window.location.href = result.url; 
                 });
                 suggestionsDropdown.appendChild(suggestionAnchor);
             });
@@ -855,7 +834,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 listItem.className = 'search-result-item p-5 border border-gray-200 rounded-md hover:bg-gray-50 transition-colors duration-150';
 
                 const titleElement = document.createElement('a');
-                titleElement.href = withBase(result.url);
+                titleElement.href = result.url;
                 titleElement.className = 'text-lg font-semibold text-[#0072CE] hover:text-[#004A99] hover:underline';
                 titleElement.innerHTML = highlightText(result.title, query);
                 
@@ -877,7 +856,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const urlElement = document.createElement('p');
                 urlElement.className = 'text-xs text-gray-500 mt-2';
-                urlElement.textContent = withBase(result.url);
+                urlElement.textContent = result.url;
 
                 listItem.appendChild(titleElement);
                 listItem.appendChild(snippetElement);
@@ -961,13 +940,13 @@ if (!helperBtn) {
     helperMenu.innerHTML = `
         <button id="close-helper" aria-label="도우미 종료">✖</button>
         <ul>
-            <li><a href="${withBase('about_lab.html')}" aria-label="연구실 소개">🔬 우리 연구실이 어떤 연구를 하는지 궁금하신가요?</a></li>
-            <li><a href="${withBase('bp_eng_main.html')}" aria-label="세포배양공정 소개">🧫 세포배양공정이 뭔지 쉽고 빠르게 알려드릴까요?</a></li>
-            <li><a href="${withBase('proc_opt_main.html')}" aria-label="공정 최적화">🚀 세포배양 효율을 높이는 최적의 방법이 궁금하세요?</a></li>
-        <li><a href="${withBase('meta_eng_main.html')}" aria-label="시스템 대사공학">🧬 시스템 대사공학과 배지 최적화의 중요성, 알고 싶으세요?</a></li>
-        <li><a href="${withBase('cfd_main.html')}" aria-label="CFD 소개">💻 CFD(전산유체역학)를 쉽게 이해하고 싶으신가요?</a></li>
-        <li><a href="${withBase('digital_twin_main.html')}" aria-label="디지털 트윈">🌐 디지털 트윈을 이용한 바이오공정, 어떻게 구현할 수 있을까요?</a></li>
-        <li><a href="${withBase('lab_resources.html')}" aria-label="연구실 자료">📚 유용한 자료가 필요하세요? 여기서 바로 찾아보세요!</a></li>
+            <li><a href="about_lab.html" aria-label="연구실 소개">🔬 우리 연구실이 어떤 연구를 하는지 궁금하신가요?</a></li>
+            <li><a href="bp_eng_main.html" aria-label="세포배양공정 소개">🧫 세포배양공정이 뭔지 쉽고 빠르게 알려드릴까요?</a></li>
+            <li><a href="proc_opt_main.html" aria-label="공정 최적화">🚀 세포배양 효율을 높이는 최적의 방법이 궁금하세요?</a></li>
+        <li><a href="meta_eng_main.html" aria-label="시스템 대사공학">🧬 시스템 대사공학과 배지 최적화의 중요성, 알고 싶으세요?</a></li>
+        <li><a href="cfd_main.html" aria-label="CFD 소개">💻 CFD(전산유체역학)를 쉽게 이해하고 싶으신가요?</a></li>
+        <li><a href="digital_twin_main.html" aria-label="디지털 트윈">🌐 디지털 트윈을 이용한 바이오공정, 어떻게 구현할 수 있을까요?</a></li>
+        <li><a href="lab_resources.html" aria-label="연구실 자료">📚 유용한 자료가 필요하세요? 여기서 바로 찾아보세요!</a></li>
     </ul>`;
 
     document.body.appendChild(helperBtn);
@@ -1043,7 +1022,6 @@ if (!helperBtn.dataset.helperBound) {
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'default';
     if (langSelect) langSelect.value = savedLanguage;
     loadLanguage(savedLanguage);
-    normalizeLinks();
 
     const backToTop = document.createElement('button');
     backToTop.id = 'back-to-top';
