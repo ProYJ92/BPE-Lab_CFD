@@ -2,7 +2,9 @@
 name: Deploy Static Site to GitHub Pages 🚀
 
 on:
-  # 임시로 수동 실행으로만 설정하여 기존 Pages 배포 방식과 충돌하지 않도록 한다
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
