@@ -8,8 +8,17 @@ from bs4 import BeautifulSoup
 from google.cloud import translate_v2 as tr
 
 repo = pathlib.Path(__file__).resolve().parents[1]
-changed = subprocess.check_output(['git','diff','--name-only','HEAD~1']).decode().split()
-process_files = [f for f in changed if f.endswith(('.html','.md'))]
+try:
+    diff = subprocess.check_output(
+        ['git', 'diff', '--name-only', 'HEAD~1'], stderr=subprocess.STDOUT
+    ).decode().split()
+except subprocess.CalledProcessError:
+    # 새 브랜치 첫 커밋 등 HEAD~1 없음 → 전체 파일 목록으로 대체
+    diff = subprocess.check_output(
+        ['git', 'ls-files', '*.html', '*.md']
+    ).decode().split()
+
+process_files = [f for f in diff if f.endswith(('.html', '.md'))]
 selectors = ['h1','h2','h3','h4','a.nav-link','button','li>a']
 
 assets_dir = repo / 'assets' / 'i18n'
