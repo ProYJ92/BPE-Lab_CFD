@@ -860,35 +860,4 @@ td {
     right: 15px;
     padding: 8px 12px;
   }
-  #helper-menu {
-    top: 180px;
-    bottom: auto;
-    max-height: calc(100vh - 200px);
-    overflow-y: auto;
-    overscroll-behavior: contain;
-  }
 }
-/* === helper-panel|MOBILE_FIX_START === */
-@media (max-width: 768px) {
-  /* 접힌 버튼 */
-  .helper-btn {
-    position: fixed;
-    z-index: 9999;
-    top: auto;            /* 상단 고정 해제 */
-    bottom: 16px;
-    right: 16px;
-  }
-
-  /* 펼쳐진 패널 */
-  .helper-panel {
-    position: fixed;
-    z-index: 9999;
-    top: auto;            /* 상단 고정 해제 */
-    bottom: 72px;         /* 버튼 바로 위 */
-    right: 16px;
-    max-height: 55vh;     /* 과도한 높이 방지 */
-    overflow-y: auto;     /* 내부 스크롤 */
-    overscroll-behavior: contain;
-  }
-}
-/* === helper-panel|MOBILE_FIX_END === */
