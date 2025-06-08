@@ -354,6 +354,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ]}
             ]
         },
+        {
+            id: 'useful_tools', name_ko: '유용한 도구', name_en: 'Useful Tools', path: 'useful-tools/index.html'
+        },
         { id: 'resources', name_ko: '자료실', name_en: 'Resources', path: 'lab_resources.html' }
     ];
     

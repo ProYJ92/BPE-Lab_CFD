@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유용한 도구 - 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="../style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-pretendard bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-slate-800 mb-2 sm:mb-0">
+                    <a href="../index.html" class="block no-underline hover:no-underline">
+                        <span class="block text-2xl lg:text-3xl font-bold text-slate-800">생물공학연구실</span>
+                        <span class="block text-sm lg:text-base font-normal text-gray-500 mt-1">Bioprocess Engineering Laboratory</span>
+                    </a>
+                </h1>
+                <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+                    <ul class="container mx-auto px-0 flex justify-center"></ul>
+                </nav>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden"></div>
+                </div>
+                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
+                    <span class="hamster-icon">🐹</span>
+                    <span class="helper-text">뭐든 물어봐!</span>
+                </div>
+            </div>
+        </div>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500"></div>
+        </nav>
+    </div>
+
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+            <header class="mb-10 border-b pb-6">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800">유용한 도구 (Useful Tools)</h1>
+                <p class="text-lg text-gray-600 mt-2">실험·모델링·데이터 분석을 간소화하는 계산기 모음입니다.</p>
+            </header>
+
+            <section>
+                <ul class="list-none p-0 grid grid-cols-1 sm:grid-cols-3 gap-4 not-prose">
+                    <li>
+                        <a href="#" role="button" aria-label="CELBIC system angle & RPM setting" class="block bg-slate-50 p-6 rounded-md hover:bg-gray-100 transition-colors text-center h-full">
+                            <i data-lucide="settings" class="h-8 w-8 mx-auto mb-3" aria-hidden="true"></i>
+                            <span class="font-medium text-[#0072CE]">CELBIC system angle &amp; RPM setting</span>
+                            <p class="text-sm text-gray-600 mt-1">CELBIC 시스템 각도·RPM 계산</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" role="button" aria-label="CFD statistical post processing" class="block bg-slate-50 p-6 rounded-md hover:bg-gray-100 transition-colors text-center h-full">
+                            <i data-lucide="bar-chart-2" class="h-8 w-8 mx-auto mb-3" aria-hidden="true"></i>
+                            <span class="font-medium text-[#0072CE]">CFD 변수들의 통계적 값 처리</span>
+                            <p class="text-sm text-gray-600 mt-1">시간 평활·RMS·PDF 계산 툴</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" role="button" aria-label="RMSE calculator" class="block bg-slate-50 p-6 rounded-md hover:bg-gray-100 transition-colors text-center h-full">
+                            <i data-lucide="calculator" class="h-8 w-8 mx-auto mb-3" aria-hidden="true"></i>
+                            <span class="font-medium text-[#0072CE]">RMSE 계산기</span>
+                            <p class="text-sm text-gray-600 mt-1">예측 vs 실측 오차(RMSE) 즉시 계산</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <style>
+    @media (max-width: 768px) {
+        h1.text-3xl { font-size: 1.75rem; }
+    }
+    </style>
+    <script src="../script.js" type="module"></script>
+</body>
+</html>
