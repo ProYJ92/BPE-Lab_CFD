@@ -1,14 +1,20 @@
 import subprocess, pathlib, json, re, hashlib, os, sys
+import i18n_diag  # pre-run diagnostics
 from bs4 import BeautifulSoup
-from google.cloud import translate_v2 as tr
 
-# ── 변경 파일 목록 (HEAD~1 없을 때 안전 처리) ─────────────────
+# ── 변경 파일 목록: HEAD~1 없을 때 안전 처리 ────────────────────
 try:
     diff = subprocess.check_output(
-        ['git','diff','--name-only','HEAD~1'], stderr=subprocess.STDOUT
+        ['git', 'diff', '--name-only', 'HEAD~1'],
+        stderr=subprocess.STDOUT
     ).decode().split()
 except subprocess.CalledProcessError:
-    diff = subprocess.check_output(['git','ls-files','*.html','*.md']).decode().split()
+    # 브랜치 첫 커밋이면 전체 파일 대상으로
+    diff = subprocess.check_output(
+        ['git', 'ls-files', '*.html', '*.md']
+    ).decode().split()
+# ----------------------------------------------------------------
+from google.cloud import translate_v2 as tr
 
 repo = pathlib.Path(__file__).resolve().parents[1]
 process_files = [f for f in diff if f.endswith(('.html', '.md'))]

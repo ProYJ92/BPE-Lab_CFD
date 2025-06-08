@@ -1,31 +1,70 @@
 name: i18n full-auto
+
+# → PR 생성까지 하려면 두 권한 모두 필요
 permissions:
   contents: write
   pull-requests: write
 
-on: [push]
-concurrency: {group: i18n-auto, cancel-in-progress: true}
+on:
+  push:
+
+concurrency:
+  group: i18n-auto
+  cancel-in-progress: true
 
 jobs:
   auto_i18n:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
-        with: { persist-credentials: true }
+        with:
+          persist-credentials: true     # GITHUB_TOKEN 유지
+
+      - name: Run pre-diag
+        id: diag
+        run: |
+          python scripts/i18n_diag.py > diag.json
+          echo "report=$(cat diag.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Lint workflow YAML
+        uses: frenck/action-yamllint@v1
+
       - uses: google-github-actions/auth@v2
-        with: { credentials_json: ${{ secrets.GCLOUD_SERVICE_KEY }} }
+        with:
+          credentials_json: ${{ secrets.GCLOUD_SERVICE_KEY }}
+
       - uses: actions/setup-python@v5
-        with: { python-version: '3.11' }
-      - run: pip install --no-cache-dir beautifulsoup4 google-cloud-translate==3.*
-      - run: |
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install --no-cache-dir beautifulsoup4 google-cloud-translate==3.*
+
+      - name: Run auto-tag + translate
+        run: |
           echo "::add-mask::${{ secrets.GCLOUD_PROJECT_ID }}"
           python scripts/i18n_full_auto.py
         env:
           GCLOUD_PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
-      - uses: peter-evans/create-pull-request@v6
+
+      - name: Create or update PR
+        uses: peter-evans/create-pull-request@v6
         with:
           branch: i18n/bot-update
-          title: "\u267b\ufe0f i18n JSON \uc5c5\ub370\uc774\ud2b8"
+          title: "♻️ i18n JSON 업데이트"
           commit-message: "i18n: auto-update"
           labels: i18n, bot
           delete-branch: true
+
+      - if: failure()
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: i18n/diag-report
+          title: "🚨 i18n 파이프라인 진단 보고서"
+          commit-message: "ci: add auto-diag report"
+          body: |
+            ### 자동 분석 결과
+            ```json
+            ${{ steps.diag.outputs.report }}
+            ```
