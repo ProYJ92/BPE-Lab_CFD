@@ -57,8 +57,9 @@ function extractInfo(filePath, menu) {
 
   const keywords = title.replace(/[^\w가-힣 ]/g, '').split(/\s+/);
 
+  const relativePath = path.relative(__dirname, filePath).replace(/\\/g, '/');
   return {
-    url: path.basename(filePath),
+    url: relativePath,
     title,
     breadcrumb,
     keywords,
@@ -67,10 +68,23 @@ function extractInfo(filePath, menu) {
   };
 }
 
+function listHtmlFiles(dir) {
+  let results = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      results = results.concat(listHtmlFiles(full));
+    } else if (entry.isFile() && entry.name.endsWith('.html')) {
+      results.push(full);
+    }
+  }
+  return results;
+}
+
 function generate() {
   const menu = loadMenuStructure();
-  const files = fs.readdirSync(__dirname).filter(f => f.endsWith('.html'));
-  const results = files.map(file => extractInfo(path.join(__dirname, file), menu));
+  const files = listHtmlFiles(__dirname);
+  const results = files.map(file => extractInfo(file, menu));
   fs.writeFileSync(path.join(__dirname, 'search_index.json'), JSON.stringify(results, null, 4));
 }
 
