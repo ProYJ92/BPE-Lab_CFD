@@ -44,46 +44,38 @@
 
     <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
-            <section class="container my-5">
-              <h1 class="display-5 fw-bold">유용한 도구 <span class="text-muted">(Useful Tools)</span></h1>
+            <header class="mb-10 border-b pb-6">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800">유용한 도구 (Useful Tools)</h1>
+                <p class="text-lg text-gray-600 mt-2">Useful Tools</p>
+            </header>
 
-              <div class="row g-4 mt-4">
-                <!-- CELBIC -->
-                <div class="col-md-4">
-                  <a href="celbic_angle_rpm.html" class="text-decoration-none" role="button" aria-label="CELBIC system angle & RPM setting">
-                    <div class="card h-100 shadow-sm rounded-3">
-                      <div class="card-body text-center">
-                        <i class="bi bi-compass fs-2 mb-2" aria-hidden="true"></i>
-                        <h5 class="card-title mb-0">CELBIC system angle &amp; RPM setting</h5>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+            <section class="mb-12">
+                <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                    CFD·바이오공정 연구에 유용한 계산 도구 모음입니다.
+                </p>
+            </section>
 
-                <!-- CFD 통계 -->
-                <div class="col-md-4">
-                  <a href="cfd_statistics.html" class="text-decoration-none" role="button" aria-label="CFD statistical post-processing">
-                    <div class="card h-100 shadow-sm rounded-3">
-                      <div class="card-body text-center">
-                        <i class="bi bi-graph-up fs-2 mb-2" aria-hidden="true"></i>
-                        <h5 class="card-title mb-0">CFD 변수들의 통계적 값 처리</h5>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <!-- RMSE -->
-                <div class="col-md-4">
-                  <a href="rmse_calculator.html" class="text-decoration-none" role="button" aria-label="RMSE calculator">
-                    <div class="card h-100 shadow-sm rounded-3">
-                      <div class="card-body text-center">
-                        <i class="bi bi-calculator fs-2 mb-2" aria-hidden="true"></i>
-                        <h5 class="card-title mb-0">RMSE 계산기</h5>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
+            <section>
+                <ul class="about-lab-list space-y-4 md:space-y-6">
+                    <li>
+                        <a href="celbic_angle_rpm.html" aria-label="CELBIC system angle & RPM setting">
+                            <h2 class="item-title"><i data-lucide="sliders"></i>CELBIC system angle &amp; RPM setting</h2>
+                            <p class="item-description">CELBIC 시스템 각도 및 RPM 자동 계산 도구</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cfd_statistics.html" aria-label="CFD Statistics">
+                            <h2 class="item-title"><i data-lucide="bar-chart-2"></i>CFD Statistics</h2>
+                            <p class="item-description">CFD 변수의 통계 처리(평균·RMS·PDF)</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="rmse_calculator.html" aria-label="RMSE Calculator">
+                            <h2 class="item-title"><i data-lucide="calculator"></i>RMSE Calculator</h2>
+                            <p class="item-description">예측 vs 실측 RMSE 즉시 산출</p>
+                        </a>
+                    </li>
+                </ul>
             </section>
         </div>
 
