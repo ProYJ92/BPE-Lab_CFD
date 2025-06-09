@@ -1,16 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
-// Extract menuStructure from script.js to build breadcrumbs
+// Load menuStructure from menu.json to build breadcrumbs
 function loadMenuStructure() {
-  const script = fs.readFileSync(path.join(__dirname, 'script.js'), 'utf8');
-  const match = script.match(/const menuStructure = ([\s\S]*?\n\s*\]\s*);/);
-  if (!match) return [];
   try {
-    const menu = eval('(' + match[1] + ')');
-    return menu;
+    const menuJson = fs.readFileSync(path.join(__dirname, 'menu.json'), 'utf8');
+    return JSON.parse(menuJson);
   } catch (e) {
-    console.error('Failed to parse menuStructure:', e);
+    console.error('Failed to parse menu.json:', e);
     return [];
   }
 }
