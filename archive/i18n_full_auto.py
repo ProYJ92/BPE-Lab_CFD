@@ -4,8 +4,10 @@ import re
 import hashlib
 import subprocess
 import os
+import sys
 from bs4 import BeautifulSoup
 from google.cloud import translate_v2 as tr
+from google.oauth2 import service_account
 
 repo = pathlib.Path(__file__).resolve().parents[1]
 result = subprocess.run(
@@ -33,13 +35,49 @@ ko = json.loads(ko_path.read_text('utf-8')) if ko_path.exists() else {}
 en = json.loads(en_path.read_text('utf-8')) if en_path.exists() else {}
 zh = json.loads(zh_path.read_text('utf-8')) if zh_path.exists() else {}
 
-client = tr.Client()
+credentials = None
+cred_json = os.environ.get('GCLOUD_SERVICE_KEY')
+if cred_json:
+    try:
+        info = json.loads(cred_json)
+        credentials = service_account.Credentials.from_service_account_info(
+            info, scopes=["https://www.googleapis.com/auth/cloud-platform"]
+        )
+    except json.JSONDecodeError:
+        if os.path.exists(cred_json):
+            credentials = service_account.Credentials.from_service_account_file(
+                cred_json,
+                scopes=["https://www.googleapis.com/auth/cloud-platform"],
+            )
+
+project_id = os.environ.get('GCLOUD_PROJECT_ID')
+if not project_id:
+    print('Error: GCLOUD_PROJECT_ID environment variable not set.', file=sys.stderr)
+    sys.exit(1)
+
+client = tr.Client(credentials=credentials, project=project_id) if credentials else tr.Client(project=project_id)
+try:
+    client.get_languages()
+except Exception as exc:
+    print(f'Error verifying Cloud Translation API access: {exc}', file=sys.stderr)
+    sys.exit(1)
 
 def slug(text):
     key = re.sub(r'\W+','_',text).strip('_').lower()
     if not key or key in ko and ko.get(key) != text:
         key = hashlib.sha1(text.encode()).hexdigest()[:10]
     return key
+
+def translate_or_exit(text, target_language):
+    try:
+        return client.translate(
+            text,
+            target_language=target_language,
+            source_language='ko'
+        )['translatedText']
+    except Exception as exc:
+        print(f'Error translating to {target_language}: {exc}', file=sys.stderr)
+        sys.exit(1)
 
 new_keys = set()
 for file in process_files:
@@ -72,9 +110,9 @@ if new_keys:
     for key in new_keys:
         text = ko[key]
         if not en.get(key):
-            en[key] = client.translate(text, target_language='en', source_language='ko')['translatedText']
+            en[key] = translate_or_exit(text, 'en')
         if not zh.get(key):
-            zh[key] = client.translate(text, target_language='zh', source_language='ko')['translatedText']
+            zh[key] = translate_or_exit(text, 'zh')
 
 ko_path.write_text(json.dumps(ko, ensure_ascii=False, indent=2), 'utf-8')
 en_path.write_text(json.dumps(en, ensure_ascii=False, indent=2), 'utf-8')

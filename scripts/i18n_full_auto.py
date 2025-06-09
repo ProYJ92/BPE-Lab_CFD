@@ -85,13 +85,34 @@ if cred_json:
                 scopes=["https://www.googleapis.com/auth/cloud-platform"],
             )
 
-client = tr.Client(credentials=credentials) if credentials else tr.Client()
+project_id = os.environ.get('GCLOUD_PROJECT_ID')
+if not project_id:
+    print('Error: GCLOUD_PROJECT_ID environment variable not set.', file=sys.stderr)
+    sys.exit(1)
+
+client = tr.Client(credentials=credentials, project=project_id) if credentials else tr.Client(project=project_id)
+try:
+    client.get_languages()
+except Exception as exc:
+    print(f'Error verifying Cloud Translation API access: {exc}', file=sys.stderr)
+    sys.exit(1)
 
 def slug(text):
     key = re.sub(r'\W+','_',text).strip('_').lower()
     if not key or (key in ko and ko.get(key) != text):
         key = hashlib.sha1(text.encode()).hexdigest()[:10]
     return key
+
+def translate_or_exit(text, target_language):
+    try:
+        return client.translate(
+            text,
+            target_language=target_language,
+            source_language='ko'
+        )['translatedText']
+    except Exception as exc:
+        print(f'Error translating to {target_language}: {exc}', file=sys.stderr)
+        sys.exit(1)
 
 new_keys = set()
 for file in process_files:
@@ -137,9 +158,9 @@ if new_keys:
     for key in new_keys:
         text = ko[key]
         if not en.get(key):
-            en[key] = client.translate(text, target_language='en', source_language='ko')['translatedText']
+            en[key] = translate_or_exit(text, 'en')
         if not zh.get(key):
-            zh[key] = client.translate(text, target_language='zh', source_language='ko')['translatedText']
+            zh[key] = translate_or_exit(text, 'zh')
 
 ko_path.write_text(json.dumps(ko, ensure_ascii=False, indent=2), 'utf-8')
 en_path.write_text(json.dumps(en, ensure_ascii=False, indent=2), 'utf-8')
