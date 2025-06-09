@@ -150,6 +150,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (element) element.textContent = texts[key];
             }
         });
+
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.dataset.i18n;
+            if (key in texts) {
+                if (el.hasAttribute('placeholder')) {
+                    el.placeholder = texts[key];
+                } else {
+                    el.textContent = texts[key];
+                }
+            }
+        });
     }
 
     async function loadLanguage(lang) {
@@ -172,10 +183,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else if (key.endsWith('_placeholder')) {
                         const id = key.replace('_placeholder', '');
                         const el = document.getElementById(id);
-                        if (el) defaultTexts[key] = el.placeholder || '';
+                        if (el) {
+                            defaultTexts[key] = el.placeholder || '';
+                        } else {
+                            const dataEl = document.querySelector(`[data-i18n="${key}"]`);
+                            if (dataEl && dataEl.hasAttribute('placeholder')) {
+                                defaultTexts[key] = dataEl.placeholder || '';
+                            }
+                        }
                     } else {
                         const el = document.getElementById(key);
-                        if (el) defaultTexts[key] = el.textContent || '';
+                        if (el) {
+                            defaultTexts[key] = el.textContent || '';
+                        } else {
+                            const dataEl = document.querySelector(`[data-i18n="${key}"]`);
+                            if (dataEl) {
+                                defaultTexts[key] = dataEl.hasAttribute('placeholder') ? (dataEl.placeholder || '') : (dataEl.textContent || '');
+                            }
+                        }
                     }
                 }
             });
