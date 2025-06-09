@@ -58,5 +58,5 @@ jobs:
           commit-message: "i18n: auto-update"
           delete-branch: true
           add-paths: |
-            assets/i18n/**
-            **/*.html
+            'assets/i18n/**'
+            ':(glob)**/*.html'
