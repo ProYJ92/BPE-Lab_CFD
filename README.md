@@ -20,6 +20,8 @@ This repository hosts materials for the BPE-Lab CFD website.
   thanks to the `--skip-if-no-diff` flag.
 * Bot commits open pull requests titled "♻️ i18n JSON 업데이트" whenever new
   translation files are added.
+* When manually dispatching the workflow, set the `force` input to the exact
+  string `true` to translate all files.
 
 
 ## Supported languages
