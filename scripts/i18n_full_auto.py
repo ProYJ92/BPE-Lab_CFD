@@ -5,25 +5,33 @@ from google.oauth2 import service_account
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--skip-if-no-diff', action='store_true', dest='skip')
+parser.add_argument('--force', action='store_true',
+                    help='translate all files regardless of git diff')
 args = parser.parse_args()
 
 # ── 안전 diff: 첫 커밋·shallow clone 모두 OK ──────────────────────
-result = subprocess.run(
-    ['git', 'diff', '--name-only', 'HEAD~1'],
-    stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-    text=True, check=False
-)
-if result.returncode in (0, 1):
-    diff = result.stdout.split()
-else:
+if args.force:
     diff = subprocess.run(
         ['git', 'ls-files', '*.html', '*.md'],
         stdout=subprocess.PIPE, text=True, check=False
     ).stdout.split()
+else:
+    result = subprocess.run(
+        ['git', 'diff', '--name-only', 'HEAD~1'],
+        stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+        text=True, check=False
+    )
+    if result.returncode in (0, 1):
+        diff = result.stdout.split()
+    else:
+        diff = subprocess.run(
+            ['git', 'ls-files', '*.html', '*.md'],
+            stdout=subprocess.PIPE, text=True, check=False
+        ).stdout.split()
 
 repo = pathlib.Path(__file__).resolve().parents[1]
 process_files = [f for f in diff if f.endswith(('.html', '.md'))]
-if args.skip and not process_files:
+if args.skip and not process_files and not args.force:
     print('No changes detected; skipping i18n update.')
     sys.exit(0)
 

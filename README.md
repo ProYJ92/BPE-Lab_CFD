@@ -39,6 +39,7 @@ The translation script automatically collects these strings and updates
 
 ```bash
 python scripts/i18n_full_auto.py --skip-if-no-diff
+python scripts/i18n_full_auto.py --force  # when initial translations are missing
 ```
 
 Commit the regenerated JSON files and HTML changes.
