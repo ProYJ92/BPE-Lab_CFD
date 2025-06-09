@@ -1,109 +1,101 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenFOAM V&V - 소프트웨어 | 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_openfoam_validation">OpenFOAM V&amp;V - 소프트웨어 | 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
-                    <a href="index.html">생물공학연구실</a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="container mx-auto px-4 mt-5 py-12">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-            <div class="mb-8">
-                <a href="openfoam_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; OpenFOAM 메인으로 돌아가기</a>
-            </div>
-            
-            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">6. Verification & Validation (검증 및 타당성 평가)</h2>
-            <p>OpenFOAM은 오픈 소스 소프트웨어로서 그 신뢰성과 정확성을 확보하기 위해 커뮤니티와 개발팀에 의해 지속적으로 검증(Verification) 및 타당성 평가(Validation, V&V) 작업이 이루어집니다. 소프트웨어 품질 관리의 일환으로, OpenFOAM의 각 버전(예: OpenFOAM 12, v2412 등)은 다양한 산업 표준 테스트 케이스 및 학술적 벤치마크 문제에 대해 정기적으로 테스트됩니다. 특히 최신 버전에서는 다상 유동, 난류, 열 전달, 입자 추적 모델 등이 개선됨에 따라, 이들 모델에 대한 V&V 사례가 공식 문서 및 커뮤니티를 통해 지속적으로 업데이트되고 있습니다.</p>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">V&V 절차 및 접근법</h3>
-            <ul class="list-disc pl-5 space-y-2">
-                <li><strong>Verification (검증)</strong>: 수학적 모델(지배 방정식 및 이산화된 방정식)이 코드 내에서 정확하게 구현되고 풀렸는지, 수치 해법 자체의 프로그래밍 오류가 없는지 확인하는 과정입니다. 주요 검증 활동은 다음과 같습니다:
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
+<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="container mx-auto px-4 mt-5 py-12">
+<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+<div class="mb-8" data-i18n="openfoam_메인으로_돌아가기">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="openfoam_메인으로_돌아가기" href="openfoam_main.html">« OpenFOAM 메인으로 돌아가기</a>
+</div>
+<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="6_verification_validation_검증_및_타당성_평가">6. Verification &amp; Validation (검증 및 타당성 평가)</h2>
+<p data-i18n="openfoam은_오픈_소스_소프트웨어로서_그_신뢰성과_정확성을_확보하기_위해_커뮤니티와_개발팀에_의해_지속적으로_검증_verification_및_타당성_평가_validation_v_v_작업이_이루어집니다_소프트웨어_품질_관리의_일환으로_openfoam의_각_버전_예_openfoam_12_v2412_등_은_다양한_산업_표준_테스트_케이스_및_학술적_벤치마크_문제에_대해_정기적으로_테스트됩니다_특히_최신_버전에서는_다상_유동_난류_열_전달_입자_추적_모델_등이_개선됨에_따라_이들_모델에_대한_v_v_사례가_공식_문서_및_커뮤니티를_통해_지속적으로_업데이트되고_있습니다">OpenFOAM은 오픈 소스 소프트웨어로서 그 신뢰성과 정확성을 확보하기 위해 커뮤니티와 개발팀에 의해 지속적으로 검증(Verification) 및 타당성 평가(Validation, V&amp;V) 작업이 이루어집니다. 소프트웨어 품질 관리의 일환으로, OpenFOAM의 각 버전(예: OpenFOAM 12, v2412 등)은 다양한 산업 표준 테스트 케이스 및 학술적 벤치마크 문제에 대해 정기적으로 테스트됩니다. 특히 최신 버전에서는 다상 유동, 난류, 열 전달, 입자 추적 모델 등이 개선됨에 따라, 이들 모델에 대한 V&amp;V 사례가 공식 문서 및 커뮤니티를 통해 지속적으로 업데이트되고 있습니다.</p>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="v_v_절차_및_접근법">V&amp;V 절차 및 접근법</h3>
+<ul class="list-disc pl-5 space-y-2">
+<li data-i18n="verification_검증_수학적_모델_지배_방정식_및_이산화된_방정식_이_코드_내에서_정확하게_구현되고_풀렸는지_수치_해법_자체의_프로그래밍_오류가_없는지_확인하는_과정입니다_주요_검증_활동은_다음과_같습니다_격자_수렴성_테스트_grid_convergence_study_동일_문제에_대해_격자_크기_밀도를_체계적으로_변경하며_해의_변화를_관찰하고_격자_크기에_따른_해의_수렴성을_평가하여_이산화_오류를_정량화합니다_예_richardson_extrapolation_시간_간격_수렴성_테스트_time_step_convergence_study_비정상_상태_문제에서_시간_간격_크기를_변경하며_해의_수렴성을_평가합니다_코드_간_비교_code_to_code_comparison_잘_알려진_다른_cfd_코드나_해석해_정확해와_비교하여_코드의_기본적인_정확성을_검증합니다_openfoam_내_다양한_솔버_또는_이산화_스킴_간의_비교도_포함될_수_있습니다_단위_테스트_unit_testing_및_회귀_테스트_regression_testing_코드의_개별_모듈_라이브러리_함수_에_대한_단위_테스트와_코드_변경_후_이전_버전과의_결과_일치성을_확인하는_회귀_테스트가_개발_과정에서_수행됩니다"><strong>Verification (검증)</strong>: 수학적 모델(지배 방정식 및 이산화된 방정식)이 코드 내에서 정확하게 구현되고 풀렸는지, 수치 해법 자체의 프로그래밍 오류가 없는지 확인하는 과정입니다. 주요 검증 활동은 다음과 같습니다:
                     <ul class="list-disc pl-4 mt-1">
-                        <li><strong>격자 수렴성 테스트 (Grid Convergence Study)</strong>: 동일 문제에 대해 격자 크기/밀도를 체계적으로 변경하며 해의 변화를 관찰하고, 격자 크기에 따른 해의 수렴성을 평가하여 이산화 오류를 정량화합니다 (예: Richardson Extrapolation).</li>
-                        <li><strong>시간 간격 수렴성 테스트 (Time-step Convergence Study)</strong>: 비정상 상태 문제에서 시간 간격 크기를 변경하며 해의 수렴성을 평가합니다.</li>
-                        <li><strong>코드 간 비교 (Code-to-code Comparison)</strong>: 잘 알려진 다른 CFD 코드나 해석해/정확해와 비교하여 코드의 기본적인 정확성을 검증합니다. OpenFOAM 내 다양한 솔버 또는 이산화 스킴 간의 비교도 포함될 수 있습니다.</li>
-                        <li><strong>단위 테스트 (Unit Testing) 및 회귀 테스트 (Regression Testing)</strong>: 코드의 개별 모듈(라이브러리, 함수)에 대한 단위 테스트와, 코드 변경 후 이전 버전과의 결과 일치성을 확인하는 회귀 테스트가 개발 과정에서 수행됩니다.</li>
-                    </ul>
-                </li>
-                <li><strong>Validation (타당성 평가)</strong>: 시뮬레이션 결과가 실제 물리 현상을 얼마나 정확하게 예측하는지, 즉 사용된 물리 모델(난류 모델, 다상 유동 모델 등)이 현실을 잘 반영하는지를 실험 데이터나 고품질의 이론 해, 또는 다른 검증된 시뮬레이션 결과와 비교하여 평가하는 과정입니다. 예를 들어, NREL의 2025년 보고서에서는 OpenFOAM을 사용한 호기성 가스 발효 공정 시뮬레이션 결과를 실험 데이터와 정량적으로 비교하여 모델의 타당성을 검증하였습니다.</li>
-            </ul>
-            
-            <figure class="embedded-image-figure">
-                <img src="https://designsafe-ci.org/user-guide/usecases/kareem/img/fig1.png" alt="CFD 검증: 구조물 풍하중 해석" class="max-w-xl">
-                <figcaption>CFD 시뮬레이션을 통한 구조물 풍하중 해석 및 검증 사례 (출처: designsafe-ci.org)</figcaption>
-            </figure>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">공식 자료 및 커뮤니티 노력</h3>
-            <ul class="list-disc pl-5 space-y-1">
-                <li><strong>OpenFOAM 공식 문서</strong>: OpenFOAM Foundation 웹사이트 (<a href="https://openfoam.org/validation/" target="_blank" rel="noopener noreferrer">openfoam.org/validation/</a> - 링크는 예시이며, 실제 V&V 섹션 확인 필요) 및 ESI/OpenCFD 웹사이트 (<a href="https://www.openfoam.com/documentation/guides/latest/doc/guide-verification-validation.html" target="_blank" rel="noopener noreferrer">openfoam.com V&V Guide</a>)는 다양한 물리 현상(층류, 난류, 열 전달, 연소, 다상 유동 등)에 대한 대표적인 벤치마크 케이스와 V&V 절차를 상세히 제공합니다. 최신 버전(예: OpenFOAM 12)의 경우, 모듈식 솔버 및 비등각 결합(NCC) 기능 향상에 따른 다중 영역 문제에 대한 V&V가 강화되었습니다.</li>
-                <li><strong>튜토리얼 케이스</strong>: OpenFOAM 배포판에 포함된 많은 튜토리얼 케이스들은 그 자체로 V&V 사례로 활용될 수 있도록 설계되었습니다. (예: <code>cavity</code>, <code>pitzDaily</code>, <code>damBreak</code> 등)</li>
-                <li><strong>커뮤니티 기여</strong>: OpenFOAM의 활발한 사용자 및 개발자 커뮤니티는 CFD Online 포럼, GitHub 등을 통해 다양한 V&V 사례, 테스트 케이스, 검증 결과 및 논의를 공유합니다. 이를 통해 소프트웨어의 신뢰성이 지속적으로 검토되고 향상됩니다.</li>
-                <li><strong>개발 현황</strong>: OpenFOAM V&V를 자동화하고 체계화하기 위한 테스트 스위트 개발 및 관리 노력이 지속적으로 이루어지고 있습니다. 각 버전 릴리스 시 주요 기능 및 버그 수정에 대한 테스트 결과가 공개되기도 합니다.</li>
-            </ul>
-            <p>OpenFOAM의 신뢰성은 이러한 공식 문서, 튜토리얼, 커뮤니티의 검증 노력, 그리고 수많은 학술 논문 및 산업 적용 사례를 통해 뒷받침됩니다. 사용자는 특정 문제에 OpenFOAM을 적용할 때 관련 V&V 자료를 참고하고, 필요한 경우 자신의 문제에 맞는 검증 절차를 수행하여 결과의 신뢰도를 확보하는 것이 중요합니다. 예를 들어, 바이오프로세스 분야에서의 적용 시, NREL의 2025년 가스 발효 연구와 같이 특정 공정에 대한 실험 데이터와의 비교 검증이 중요한 참고 자료가 될 수 있습니다.</p>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">참고 자료</h3>
-            <ul class="list-disc pl-5 space-y-1 text-sm">
-                <li><a href="https://doc.openfoam.com/examples/verification-validation/" target="_blank" rel="noopener noreferrer">OpenFOAM.com - Verification and Validation Examples (Official Documentation)</a></li>
-                <li><a href="https://www.openfoam.com/documentation/guides/latest/doc/guide-verification-validation.html" target="_blank" rel="noopener noreferrer">OpenFOAM.com - Verification and Validation Guide (ESI/OpenCFD)</a></li>
-                <li><a href="https://openfoam.org/version/12/" target="_blank" rel="noopener noreferrer">OpenFOAM 12 Release Information (OpenFOAM Foundation)</a></li>
-                <li><a href="https://wiki.openfoam.com/Category_Verification_and_Validation" target="_blank" rel="noopener noreferrer">OpenFOAM Wiki - Verification and Validation Category</a></li>
-                <li><a href="https://www.cfd-online.com/Forums/openfoam-verification-validation/" target="_blank" rel="noopener noreferrer">CFD-Online - OpenFOAM Verification & Validation Forum</a></li>
-                <li>NREL (2025). CFD Simulation of Aerobic Gas Fermentation to Enable Commercial Conversion of CO2 into Aquaculture and Animal Feed. (관련 학술 검색을 통해 접근)</li>
-            </ul>
-
-        </article>
-        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+<li data-i18n="격자_수렴성_테스트_grid_convergence_study_동일_문제에_대해_격자_크기_밀도를_체계적으로_변경하며_해의_변화를_관찰하고_격자_크기에_따른_해의_수렴성을_평가하여_이산화_오류를_정량화합니다_예_richardson_extrapolation"><strong>격자 수렴성 테스트 (Grid Convergence Study)</strong>: 동일 문제에 대해 격자 크기/밀도를 체계적으로 변경하며 해의 변화를 관찰하고, 격자 크기에 따른 해의 수렴성을 평가하여 이산화 오류를 정량화합니다 (예: Richardson Extrapolation).</li>
+<li data-i18n="시간_간격_수렴성_테스트_time_step_convergence_study_비정상_상태_문제에서_시간_간격_크기를_변경하며_해의_수렴성을_평가합니다"><strong>시간 간격 수렴성 테스트 (Time-step Convergence Study)</strong>: 비정상 상태 문제에서 시간 간격 크기를 변경하며 해의 수렴성을 평가합니다.</li>
+<li data-i18n="코드_간_비교_code_to_code_comparison_잘_알려진_다른_cfd_코드나_해석해_정확해와_비교하여_코드의_기본적인_정확성을_검증합니다_openfoam_내_다양한_솔버_또는_이산화_스킴_간의_비교도_포함될_수_있습니다"><strong>코드 간 비교 (Code-to-code Comparison)</strong>: 잘 알려진 다른 CFD 코드나 해석해/정확해와 비교하여 코드의 기본적인 정확성을 검증합니다. OpenFOAM 내 다양한 솔버 또는 이산화 스킴 간의 비교도 포함될 수 있습니다.</li>
+<li data-i18n="단위_테스트_unit_testing_및_회귀_테스트_regression_testing_코드의_개별_모듈_라이브러리_함수_에_대한_단위_테스트와_코드_변경_후_이전_버전과의_결과_일치성을_확인하는_회귀_테스트가_개발_과정에서_수행됩니다"><strong>단위 테스트 (Unit Testing) 및 회귀 테스트 (Regression Testing)</strong>: 코드의 개별 모듈(라이브러리, 함수)에 대한 단위 테스트와, 코드 변경 후 이전 버전과의 결과 일치성을 확인하는 회귀 테스트가 개발 과정에서 수행됩니다.</li>
+</ul>
+</li>
+<li data-i18n="validation_타당성_평가_시뮬레이션_결과가_실제_물리_현상을_얼마나_정확하게_예측하는지_즉_사용된_물리_모델_난류_모델_다상_유동_모델_등_이_현실을_잘_반영하는지를_실험_데이터나_고품질의_이론_해_또는_다른_검증된_시뮬레이션_결과와_비교하여_평가하는_과정입니다_예를_들어_nrel의_2025년_보고서에서는_openfoam을_사용한_호기성_가스_발효_공정_시뮬레이션_결과를_실험_데이터와_정량적으로_비교하여_모델의_타당성을_검증하였습니다"><strong>Validation (타당성 평가)</strong>: 시뮬레이션 결과가 실제 물리 현상을 얼마나 정확하게 예측하는지, 즉 사용된 물리 모델(난류 모델, 다상 유동 모델 등)이 현실을 잘 반영하는지를 실험 데이터나 고품질의 이론 해, 또는 다른 검증된 시뮬레이션 결과와 비교하여 평가하는 과정입니다. 예를 들어, NREL의 2025년 보고서에서는 OpenFOAM을 사용한 호기성 가스 발효 공정 시뮬레이션 결과를 실험 데이터와 정량적으로 비교하여 모델의 타당성을 검증하였습니다.</li>
+</ul>
+<figure class="embedded-image-figure">
+<img alt="CFD 검증: 구조물 풍하중 해석" class="max-w-xl" data-i18n="cfd_검증_구조물_풍하중_해석" src="https://designsafe-ci.org/user-guide/usecases/kareem/img/fig1.png"/>
+<figcaption>CFD 시뮬레이션을 통한 구조물 풍하중 해석 및 검증 사례 (출처: designsafe-ci.org)</figcaption>
+</figure>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="공식_자료_및_커뮤니티_노력">공식 자료 및 커뮤니티 노력</h3>
+<ul class="list-disc pl-5 space-y-1">
+<li data-i18n="openfoam_공식_문서_openfoam_foundation_웹사이트_openfoam_org_validation_링크는_예시이며_실제_v_v_섹션_확인_필요_및_esi_opencfd_웹사이트_openfoam_com_v_v_guide_는_다양한_물리_현상_층류_난류_열_전달_연소_다상_유동_등_에_대한_대표적인_벤치마크_케이스와_v_v_절차를_상세히_제공합니다_최신_버전_예_openfoam_12_의_경우_모듈식_솔버_및_비등각_결합_ncc_기능_향상에_따른_다중_영역_문제에_대한_v_v가_강화되었습니다"><strong>OpenFOAM 공식 문서</strong>: OpenFOAM Foundation 웹사이트 (<a data-i18n="openfoam_org_validation" href="https://openfoam.org/validation/" rel="noopener noreferrer" target="_blank">openfoam.org/validation/</a> - 링크는 예시이며, 실제 V&amp;V 섹션 확인 필요) 및 ESI/OpenCFD 웹사이트 (<a data-i18n="openfoam_com_v_v_guide" href="https://www.openfoam.com/documentation/guides/latest/doc/guide-verification-validation.html" rel="noopener noreferrer" target="_blank">openfoam.com V&amp;V Guide</a>)는 다양한 물리 현상(층류, 난류, 열 전달, 연소, 다상 유동 등)에 대한 대표적인 벤치마크 케이스와 V&amp;V 절차를 상세히 제공합니다. 최신 버전(예: OpenFOAM 12)의 경우, 모듈식 솔버 및 비등각 결합(NCC) 기능 향상에 따른 다중 영역 문제에 대한 V&amp;V가 강화되었습니다.</li>
+<li data-i18n="튜토리얼_케이스_openfoam_배포판에_포함된_많은_튜토리얼_케이스들은_그_자체로_v_v_사례로_활용될_수_있도록_설계되었습니다_예_cavity_pitzdaily_dambreak등"><strong>튜토리얼 케이스</strong>: OpenFOAM 배포판에 포함된 많은 튜토리얼 케이스들은 그 자체로 V&amp;V 사례로 활용될 수 있도록 설계되었습니다. (예: <code>cavity</code>, <code>pitzDaily</code>, <code>damBreak</code> 등)</li>
+<li data-i18n="커뮤니티_기여_openfoam의_활발한_사용자_및_개발자_커뮤니티는_cfd_online_포럼_github_등을_통해_다양한_v_v_사례_테스트_케이스_검증_결과_및_논의를_공유합니다_이를_통해_소프트웨어의_신뢰성이_지속적으로_검토되고_향상됩니다"><strong>커뮤니티 기여</strong>: OpenFOAM의 활발한 사용자 및 개발자 커뮤니티는 CFD Online 포럼, GitHub 등을 통해 다양한 V&amp;V 사례, 테스트 케이스, 검증 결과 및 논의를 공유합니다. 이를 통해 소프트웨어의 신뢰성이 지속적으로 검토되고 향상됩니다.</li>
+<li data-i18n="개발_현황_openfoam_v_v를_자동화하고_체계화하기_위한_테스트_스위트_개발_및_관리_노력이_지속적으로_이루어지고_있습니다_각_버전_릴리스_시_주요_기능_및_버그_수정에_대한_테스트_결과가_공개되기도_합니다"><strong>개발 현황</strong>: OpenFOAM V&amp;V를 자동화하고 체계화하기 위한 테스트 스위트 개발 및 관리 노력이 지속적으로 이루어지고 있습니다. 각 버전 릴리스 시 주요 기능 및 버그 수정에 대한 테스트 결과가 공개되기도 합니다.</li>
+</ul>
+<p data-i18n="openfoam의_신뢰성은_이러한_공식_문서_튜토리얼_커뮤니티의_검증_노력_그리고_수많은_학술_논문_및_산업_적용_사례를_통해_뒷받침됩니다_사용자는_특정_문제에_openfoam을_적용할_때_관련_v_v_자료를_참고하고_필요한_경우_자신의_문제에_맞는_검증_절차를_수행하여_결과의_신뢰도를_확보하는_것이_중요합니다_예를_들어_바이오프로세스_분야에서의_적용_시_nrel의_2025년_가스_발효_연구와_같이_특정_공정에_대한_실험_데이터와의_비교_검증이_중요한_참고_자료가_될_수_있습니다">OpenFOAM의 신뢰성은 이러한 공식 문서, 튜토리얼, 커뮤니티의 검증 노력, 그리고 수많은 학술 논문 및 산업 적용 사례를 통해 뒷받침됩니다. 사용자는 특정 문제에 OpenFOAM을 적용할 때 관련 V&amp;V 자료를 참고하고, 필요한 경우 자신의 문제에 맞는 검증 절차를 수행하여 결과의 신뢰도를 확보하는 것이 중요합니다. 예를 들어, 바이오프로세스 분야에서의 적용 시, NREL의 2025년 가스 발효 연구와 같이 특정 공정에 대한 실험 데이터와의 비교 검증이 중요한 참고 자료가 될 수 있습니다.</p>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="참고_자료">참고 자료</h3>
+<ul class="list-disc pl-5 space-y-1 text-sm">
+<li data-i18n="openfoam_com_verification_and_validation_examples_official_documentation"><a data-i18n="openfoam_com_verification_and_validation_examples_official_documentation" href="https://doc.openfoam.com/examples/verification-validation/" rel="noopener noreferrer" target="_blank">OpenFOAM.com - Verification and Validation Examples (Official Documentation)</a></li>
+<li data-i18n="openfoam_com_verification_and_validation_guide_esi_opencfd"><a data-i18n="openfoam_com_verification_and_validation_guide_esi_opencfd" href="https://www.openfoam.com/documentation/guides/latest/doc/guide-verification-validation.html" rel="noopener noreferrer" target="_blank">OpenFOAM.com - Verification and Validation Guide (ESI/OpenCFD)</a></li>
+<li data-i18n="openfoam_12_release_information_openfoam_foundation"><a data-i18n="openfoam_12_release_information_openfoam_foundation" href="https://openfoam.org/version/12/" rel="noopener noreferrer" target="_blank">OpenFOAM 12 Release Information (OpenFOAM Foundation)</a></li>
+<li data-i18n="openfoam_wiki_verification_and_validation_category"><a data-i18n="openfoam_wiki_verification_and_validation_category" href="https://wiki.openfoam.com/Category_Verification_and_Validation" rel="noopener noreferrer" target="_blank">OpenFOAM Wiki - Verification and Validation Category</a></li>
+<li data-i18n="cfd_online_openfoam_verification_validation_forum"><a data-i18n="cfd_online_openfoam_verification_validation_forum" href="https://www.cfd-online.com/Forums/openfoam-verification-validation/" rel="noopener noreferrer" target="_blank">CFD-Online - OpenFOAM Verification &amp; Validation Forum</a></li>
+<li data-i18n="nrel_2025_cfd_simulation_of_aerobic_gas_fermentation_to_enable_commercial_conversion_of_co2_into_aquaculture_and_animal_feed_관련_학술_검색을_통해_접근">NREL (2025). CFD Simulation of Aerobic Gas Fermentation to Enable Commercial Conversion of CO2 into Aquaculture and Animal Feed. (관련 학술 검색을 통해 접근)</li>
+</ul>
+</article>
+<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

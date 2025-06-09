@@ -1,106 +1,97 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ansys Fluent 전처리 - 소프트웨어 | 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_ansys_fluent_preprocessing">Ansys Fluent 전처리 - 소프트웨어 | 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
-                    <a href="index.html">생물공학연구실</a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="container mx-auto px-4 mt-5 py-12">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-            <div class="mb-8">
-                <a href="ansys_fluent_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; Ansys Fluent 메인으로 돌아가기</a>
-            </div>
-            
-            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">3. 전처리 방법 (메싱 및 모델 준비)</h2>
-            <p>ANSYS Fluent의 전처리 단계는 형상 준비와 메쉬 생성이 핵심입니다. 사용자는 ANSYS Workbench 환경 내의 Design Modeler 또는 SpaceClaim을 활용하여 CAD 형상을 정리하고, ANSYS Meshing 모듈을 사용하여 해석에 필요한 메쉬를 생성합니다. Fluent 자체에서도 메싱 기능을 제공하며, 특히 두 가지 주요 워크플로우를 지원합니다.</p>
-            
-            <figure class="embedded-image-figure">
-                <img src="https://i.ytimg.com/vi/VS75C4FU6EI/maxresdefault.jpg" alt="Fluent Meshing Tutorial" class="max-w-xl">
-                <figcaption>ANSYS Fluent Meshing 작업 예시 (출처: YouTube @LearnCAx)</figcaption>
-            </figure>
-
-            <ul>
-                <li><strong>Watertight Geometry Workflow</strong>: 오류 없이 깨끗하게 정리된 CAD 형상에 대해 효율적이고 자동화된 단계별 메싱 프로세스를 제공합니다. 이 워크플로우는 형상이 완벽하게 닫혀 있고, 누락된 면이나 틈이 없는 경우에 적합합니다.</li>
-                <li><strong>Fault-Tolerant Meshing Workflow (FTM)</strong>: CAD 결함(틈, 누락된 면, 중첩된 면 등)이 포함된 복잡하거나 불완전한 형상에 적합합니다. 메쉬 랩핑(Mesh Wrapping) 기술을 사용하여 결함을 자동으로 감싸거나 수정하여 견고한 표면 메쉬를 생성하고, 이를 기반으로 체적 메쉬를 생성함으로써 전처리 시간을 단축합니다.</li>
-            </ul>
-            <p>메쉬 품질 확보를 위해 표면 및 체적 메쉬에 대해 'Improve Mesh' 작업을 적용하여 왜곡도(Skewness), 종횡비(Aspect Ratio) 등 품질 지표를 정량적으로 개선할 수 있습니다. 필요에 따라 특정 영역의 메쉬를 세분화(Local Mesh Refinement)하여 해당 영역의 해상도를 높여 중요한 물리 현상을 더 정확하게 포착할 수 있습니다. 최신 버전(2025 R1 등)에서는 복잡한 대규모 모델의 전처리 속도가 대폭 향상되었으며, GUI 기반 작업 자동화 및 품질 개선 기능이 강화되었습니다.</p>
-
-            <figure class="embedded-image-figure">
-                <img src="https://www.afs.enea.it/project/neptunius/docs/fluent/html/wbtg/img156.gif" alt="Fluent Workbench 메싱 환경" class="max-w-lg">
-                <figcaption>ANSYS Workbench 내 Fluent 메싱 환경 구성 예시 (출처: afs.enea.it)</figcaption>
-            </figure>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">주요 전처리 단계</h3>
-            <ol class="list-decimal pl-5 space-y-1">
-                <li>CAD 형상 불러오기 및 정리 (Import & Clean Geometry)</li>
-                <li>메싱 워크플로우 선택 (Watertight or Fault-Tolerant)</li>
-                <li>표면 메쉬 생성 및 개선 (Surface Meshing & Improvement)</li>
-                <li>경계 영역 정의 (Named Selections / Boundary Zones)</li>
-                <li>체적 메쉬 생성 및 최적화 (Volume Meshing & Optimization)</li>
-                <li>메쉬 품질 검토 (Mesh Quality Check)</li>
-                <li>Fluent 솔버로 메쉬 내보내기 (Export Mesh to Fluent)</li>
-            </ol>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">참고 자료</h3>
-            <ul class="list-disc pl-5 space-y-1 text-sm">
-                <li><a href="https://www.ansys.com/blog/ansys-2019-r2-release" target="_blank" rel="noopener noreferrer">Ansys Blog: Streamline Pre-Processing, Meshing...</a> (관련 기술 소개)</li>
-                <li>ANSYS Fluent User's Guide - Meshing Section</li>
-                <li><a href="https://www.youtube.com/watch?v=lzUDzXslYYw" target="_blank" rel="noopener noreferrer">Ansys Fluent Meshing Tutorial (YouTube 예시)</a></li>
-            </ul>
-
-        </article>
-        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
+<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="container mx-auto px-4 mt-5 py-12">
+<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+<div class="mb-8" data-i18n="ansys_fluent_메인으로_돌아가기">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="ansys_fluent_메인으로_돌아가기" href="ansys_fluent_main.html">« Ansys Fluent 메인으로 돌아가기</a>
+</div>
+<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="3_전처리_방법_메싱_및_모델_준비">3. 전처리 방법 (메싱 및 모델 준비)</h2>
+<p data-i18n="ansys_fluent의_전처리_단계는_형상_준비와_메쉬_생성이_핵심입니다_사용자는_ansys_workbench_환경_내의_design_modeler_또는_spaceclaim을_활용하여_cad_형상을_정리하고_ansys_meshing_모듈을_사용하여_해석에_필요한_메쉬를_생성합니다_fluent_자체에서도_메싱_기능을_제공하며_특히_두_가지_주요_워크플로우를_지원합니다">ANSYS Fluent의 전처리 단계는 형상 준비와 메쉬 생성이 핵심입니다. 사용자는 ANSYS Workbench 환경 내의 Design Modeler 또는 SpaceClaim을 활용하여 CAD 형상을 정리하고, ANSYS Meshing 모듈을 사용하여 해석에 필요한 메쉬를 생성합니다. Fluent 자체에서도 메싱 기능을 제공하며, 특히 두 가지 주요 워크플로우를 지원합니다.</p>
+<figure class="embedded-image-figure">
+<img alt="Fluent Meshing Tutorial" class="max-w-xl" data-i18n="fluent_meshing_tutorial" src="https://i.ytimg.com/vi/VS75C4FU6EI/maxresdefault.jpg"/>
+<figcaption>ANSYS Fluent Meshing 작업 예시 (출처: YouTube @LearnCAx)</figcaption>
+</figure>
+<ul>
+<li data-i18n="watertight_geometry_workflow_오류_없이_깨끗하게_정리된_cad_형상에_대해_효율적이고_자동화된_단계별_메싱_프로세스를_제공합니다_이_워크플로우는_형상이_완벽하게_닫혀_있고_누락된_면이나_틈이_없는_경우에_적합합니다"><strong>Watertight Geometry Workflow</strong>: 오류 없이 깨끗하게 정리된 CAD 형상에 대해 효율적이고 자동화된 단계별 메싱 프로세스를 제공합니다. 이 워크플로우는 형상이 완벽하게 닫혀 있고, 누락된 면이나 틈이 없는 경우에 적합합니다.</li>
+<li data-i18n="fault_tolerant_meshing_workflow_ftm_cad_결함_틈_누락된_면_중첩된_면_등_이_포함된_복잡하거나_불완전한_형상에_적합합니다_메쉬_랩핑_mesh_wrapping_기술을_사용하여_결함을_자동으로_감싸거나_수정하여_견고한_표면_메쉬를_생성하고_이를_기반으로_체적_메쉬를_생성함으로써_전처리_시간을_단축합니다"><strong>Fault-Tolerant Meshing Workflow (FTM)</strong>: CAD 결함(틈, 누락된 면, 중첩된 면 등)이 포함된 복잡하거나 불완전한 형상에 적합합니다. 메쉬 랩핑(Mesh Wrapping) 기술을 사용하여 결함을 자동으로 감싸거나 수정하여 견고한 표면 메쉬를 생성하고, 이를 기반으로 체적 메쉬를 생성함으로써 전처리 시간을 단축합니다.</li>
+</ul>
+<p data-i18n="메쉬_품질_확보를_위해_표면_및_체적_메쉬에_대해_improve_mesh_작업을_적용하여_왜곡도_skewness_종횡비_aspect_ratio_등_품질_지표를_정량적으로_개선할_수_있습니다_필요에_따라_특정_영역의_메쉬를_세분화_local_mesh_refinement_하여_해당_영역의_해상도를_높여_중요한_물리_현상을_더_정확하게_포착할_수_있습니다_최신_버전_2025_r1_등_에서는_복잡한_대규모_모델의_전처리_속도가_대폭_향상되었으며_gui_기반_작업_자동화_및_품질_개선_기능이_강화되었습니다">메쉬 품질 확보를 위해 표면 및 체적 메쉬에 대해 'Improve Mesh' 작업을 적용하여 왜곡도(Skewness), 종횡비(Aspect Ratio) 등 품질 지표를 정량적으로 개선할 수 있습니다. 필요에 따라 특정 영역의 메쉬를 세분화(Local Mesh Refinement)하여 해당 영역의 해상도를 높여 중요한 물리 현상을 더 정확하게 포착할 수 있습니다. 최신 버전(2025 R1 등)에서는 복잡한 대규모 모델의 전처리 속도가 대폭 향상되었으며, GUI 기반 작업 자동화 및 품질 개선 기능이 강화되었습니다.</p>
+<figure class="embedded-image-figure">
+<img alt="Fluent Workbench 메싱 환경" class="max-w-lg" data-i18n="fluent_workbench_메싱_환경" src="https://www.afs.enea.it/project/neptunius/docs/fluent/html/wbtg/img156.gif"/>
+<figcaption>ANSYS Workbench 내 Fluent 메싱 환경 구성 예시 (출처: afs.enea.it)</figcaption>
+</figure>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="주요_전처리_단계">주요 전처리 단계</h3>
+<ol class="list-decimal pl-5 space-y-1">
+<li data-i18n="cad_형상_불러오기_및_정리_import_clean_geometry">CAD 형상 불러오기 및 정리 (Import &amp; Clean Geometry)</li>
+<li data-i18n="메싱_워크플로우_선택_watertight_or_fault_tolerant">메싱 워크플로우 선택 (Watertight or Fault-Tolerant)</li>
+<li data-i18n="표면_메쉬_생성_및_개선_surface_meshing_improvement">표면 메쉬 생성 및 개선 (Surface Meshing &amp; Improvement)</li>
+<li data-i18n="경계_영역_정의_named_selections_boundary_zones">경계 영역 정의 (Named Selections / Boundary Zones)</li>
+<li data-i18n="체적_메쉬_생성_및_최적화_volume_meshing_optimization">체적 메쉬 생성 및 최적화 (Volume Meshing &amp; Optimization)</li>
+<li data-i18n="메쉬_품질_검토_mesh_quality_check">메쉬 품질 검토 (Mesh Quality Check)</li>
+<li data-i18n="fluent_솔버로_메쉬_내보내기_export_mesh_to_fluent">Fluent 솔버로 메쉬 내보내기 (Export Mesh to Fluent)</li>
+</ol>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="참고_자료">참고 자료</h3>
+<ul class="list-disc pl-5 space-y-1 text-sm">
+<li data-i18n="ansys_blog_streamline_pre_processing_meshing_관련_기술_소개"><a data-i18n="ansys_blog_streamline_pre_processing_meshing" href="https://www.ansys.com/blog/ansys-2019-r2-release" rel="noopener noreferrer" target="_blank">Ansys Blog: Streamline Pre-Processing, Meshing...</a> (관련 기술 소개)</li>
+<li data-i18n="ansys_fluent_user_s_guide_meshing_section">ANSYS Fluent User's Guide - Meshing Section</li>
+<li data-i18n="ansys_fluent_meshing_tutorial_youtube_예시"><a data-i18n="ansys_fluent_meshing_tutorial_youtube_예시" href="https://www.youtube.com/watch?v=lzUDzXslYYw" rel="noopener noreferrer" target="_blank">Ansys Fluent Meshing Tutorial (YouTube 예시)</a></li>
+</ul>
+</article>
+<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

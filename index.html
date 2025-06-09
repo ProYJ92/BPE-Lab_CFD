@@ -1,160 +1,153 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>생물공학연구실 - Bioprocess Engineering Laboratory</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_index">생물공학연구실 - Bioprocess Engineering Laboratory</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-white text-gray-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="main-title text-slate-800 mb-2 sm:mb-0">
-                    <a href="index.html" class="block no-underline hover:no-underline">
-                        <span class="block text-2xl lg:text-3xl font-bold text-slate-800">생물공학연구실</span>
-                        <span class="subtitle block text-sm lg:text-base font-normal text-gray-500 mt-1">Bioprocess Engineering Laboratory</span>
-                    </a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main>
-        <section class="hero-section relative flex items-center justify-center text-white overflow-hidden min-h-[calc(100vh-120px)] sm:min-h-[calc(100vh-100px)]">
-            <video autoplay muted loop playsinline id="bgVideo">
-                <source src="20250603_2258_Digital Twin Bioprocess_simple_compose_01jwv1bhfnfa6b14pv63hxc0p7.mp4" type="video/mp4">
-            </video>
-            <div class="absolute inset-0 z-0 hero-bg-gradient opacity-60"></div>
-            <div class="absolute inset-0 z-0 hero-bg-pattern opacity-10"></div>
-
-            <div class="relative z-10 container mx-auto px-6 text-center py-12">
-                <h2 id="welcomeMessage" class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight shadow-text hero-highlight hero-title">
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실bioprocess_engineering_laboratory검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실bioprocess_engineering_laboratory검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실bioprocess_engineering_laboratory검색_뭐든_물어봐">
+<h1 class="main-title text-slate-800 mb-2 sm:mb-0" data-i18n="생물공학연구실bioprocess_engineering_laboratory">
+<a class="block no-underline hover:no-underline" data-i18n="생물공학연구실bioprocess_engineering_laboratory" href="index.html">
+<span class="block text-2xl lg:text-3xl font-bold text-slate-800" data-i18n="생물공학연구실">생물공학연구실</span>
+<span class="subtitle block text-sm lg:text-base font-normal text-gray-500 mt-1" data-i18n="bioprocess_engineering_laboratory">Bioprocess Engineering Laboratory</span>
+</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main>
+<section class="hero-section relative flex items-center justify-center text-white overflow-hidden min-h-[calc(100vh-120px)] sm:min-h-[calc(100vh-100px)]">
+<video autoplay="" id="bgVideo" loop="" muted="" playsinline="">
+<source src="20250603_2258_Digital Twin Bioprocess_simple_compose_01jwv1bhfnfa6b14pv63hxc0p7.mp4" type="video/mp4"/>
+</video>
+<div class="absolute inset-0 z-0 hero-bg-gradient opacity-60"></div>
+<div class="absolute inset-0 z-0 hero-bg-pattern opacity-10"></div>
+<div class="relative z-10 container mx-auto px-6 text-center py-12" data-i18n="차세대_바이오공정_혁신을_위한_융합_연구_선도데이터_과학과_공학적_모델링_시스템_생물학의_통합으로_지속_가능한_바이오공정_솔루션을_선도합니다_연구실_소개_보기">
+<h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight shadow-text hero-highlight hero-title" data-i18n="차세대_바이오공정_혁신을_위한_융합_연구_선도" id="welcomeMessage">
                     차세대 바이오공정 혁신을 위한 융합 연구 선도
                 </h2>
-                <p id="description" class="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto font-light shadow-text-sm hero-highlight hero-subtitle">
+<p class="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto font-light shadow-text-sm hero-highlight hero-subtitle" data-i18n="데이터_과학과_공학적_모델링_시스템_생물학의_통합으로_지속_가능한_바이오공정_솔루션을_선도합니다" id="description">
                     데이터 과학과 공학적 모델링, 시스템 생물학의 통합으로 지속 가능한 바이오공정 솔루션을 선도합니다.
                 </p>
-                <a href="about_lab.html" class="intro-button bg-white hover:bg-gray-100 text-[#0072CE] font-semibold py-3 px-10 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl">
+<a class="intro-button bg-white hover:bg-gray-100 text-[#0072CE] font-semibold py-3 px-10 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl" data-i18n="연구실_소개_보기" href="about_lab.html">
                     연구실 소개 보기
                 </a>
-            </div>
-        </section>
-
-        <section class="py-16 md:py-24 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <h3 class="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-800">주요 연구 분야</h3>
-                <div class="max-w-4xl mx-auto">
-                    <ul class="space-y-6 text-lg text-gray-700">
-                        <li class="flex items-start p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <i data-lucide="cpu" class="text-blue-600 h-8 w-8 mr-4 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-slate-700 mb-1">디지털 트윈 기반 바이오공정 시뮬레이션</h4>
-                                <p class="text-gray-600 text-base">AI를 활용한 실시간 공정 모니터링 및 최적 제어 전략 개발.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <i data-lucide="test-tube-2" class="text-green-600 h-8 w-8 mr-4 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-slate-700 mb-1">CHO 세포 배양 공정 최적화</h4>
-                                <p class="text-gray-600 text-base">데이터 기반 모델을 통한 항체 생산성 및 품질 향상 연구.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <i data-lucide="dna" class="text-purple-600 h-8 w-8 mr-4 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-slate-700 mb-1">시스템 대사공학 및 배지 개발</h4>
-                                <p class="text-gray-600 text-base">모델 가이드 프레임워크를 통한 배양 조건 자동 탐색 및 최적화.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <i data-lucide="flask-conical" class="text-red-600 h-8 w-8 mr-4 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-slate-700 mb-1">바이오리액터 설계 최적화</h4>
-                                <p class="text-gray-600 text-base">공학적 해석 기반 바이오리액터 설계 및 운전 효율성 극대화.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <h3 class="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-800">연구실 소식 및 공지</h3>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h4 class="text-xl font-semibold mb-3 text-slate-700 flex items-center">
-                            <i data-lucide="megaphone" class="text-indigo-600 h-6 w-6 mr-2"></i>
+</div>
+</section>
+<section class="py-16 md:py-24 bg-gray-50">
+<div class="container mx-auto px-6" data-i18n="주요_연구_분야디지털_트윈_기반_바이오공정_시뮬레이션ai를_활용한_실시간_공정_모니터링_및_최적_제어_전략_개발_cho_세포_배양_공정_최적화데이터_기반_모델을_통한_항체_생산성_및_품질_향상_연구_시스템_대사공학_및_배지_개발모델_가이드_프레임워크를_통한_배양_조건_자동_탐색_및_최적화_바이오리액터_설계_최적화공학적_해석_기반_바이오리액터_설계_및_운전_효율성_극대화">
+<h3 class="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-800" data-i18n="주요_연구_분야">주요 연구 분야</h3>
+<div class="max-w-4xl mx-auto" data-i18n="디지털_트윈_기반_바이오공정_시뮬레이션ai를_활용한_실시간_공정_모니터링_및_최적_제어_전략_개발_cho_세포_배양_공정_최적화데이터_기반_모델을_통한_항체_생산성_및_품질_향상_연구_시스템_대사공학_및_배지_개발모델_가이드_프레임워크를_통한_배양_조건_자동_탐색_및_최적화_바이오리액터_설계_최적화공학적_해석_기반_바이오리액터_설계_및_운전_효율성_극대화">
+<ul class="space-y-6 text-lg text-gray-700">
+<li class="flex items-start p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" data-i18n="디지털_트윈_기반_바이오공정_시뮬레이션ai를_활용한_실시간_공정_모니터링_및_최적_제어_전략_개발">
+<i class="text-blue-600 h-8 w-8 mr-4 mt-1 flex-shrink-0" data-lucide="cpu"></i>
+<div data-i18n="디지털_트윈_기반_바이오공정_시뮬레이션ai를_활용한_실시간_공정_모니터링_및_최적_제어_전략_개발">
+<h4 class="font-semibold text-slate-700 mb-1" data-i18n="디지털_트윈_기반_바이오공정_시뮬레이션">디지털 트윈 기반 바이오공정 시뮬레이션</h4>
+<p class="text-gray-600 text-base" data-i18n="ai를_활용한_실시간_공정_모니터링_및_최적_제어_전략_개발">AI를 활용한 실시간 공정 모니터링 및 최적 제어 전략 개발.</p>
+</div>
+</li>
+<li class="flex items-start p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" data-i18n="cho_세포_배양_공정_최적화데이터_기반_모델을_통한_항체_생산성_및_품질_향상_연구">
+<i class="text-green-600 h-8 w-8 mr-4 mt-1 flex-shrink-0" data-lucide="test-tube-2"></i>
+<div data-i18n="cho_세포_배양_공정_최적화데이터_기반_모델을_통한_항체_생산성_및_품질_향상_연구">
+<h4 class="font-semibold text-slate-700 mb-1" data-i18n="cho_세포_배양_공정_최적화">CHO 세포 배양 공정 최적화</h4>
+<p class="text-gray-600 text-base" data-i18n="데이터_기반_모델을_통한_항체_생산성_및_품질_향상_연구">데이터 기반 모델을 통한 항체 생산성 및 품질 향상 연구.</p>
+</div>
+</li>
+<li class="flex items-start p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" data-i18n="시스템_대사공학_및_배지_개발모델_가이드_프레임워크를_통한_배양_조건_자동_탐색_및_최적화">
+<i class="text-purple-600 h-8 w-8 mr-4 mt-1 flex-shrink-0" data-lucide="dna"></i>
+<div data-i18n="시스템_대사공학_및_배지_개발모델_가이드_프레임워크를_통한_배양_조건_자동_탐색_및_최적화">
+<h4 class="font-semibold text-slate-700 mb-1" data-i18n="시스템_대사공학_및_배지_개발">시스템 대사공학 및 배지 개발</h4>
+<p class="text-gray-600 text-base" data-i18n="모델_가이드_프레임워크를_통한_배양_조건_자동_탐색_및_최적화">모델 가이드 프레임워크를 통한 배양 조건 자동 탐색 및 최적화.</p>
+</div>
+</li>
+<li class="flex items-start p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" data-i18n="바이오리액터_설계_최적화공학적_해석_기반_바이오리액터_설계_및_운전_효율성_극대화">
+<i class="text-red-600 h-8 w-8 mr-4 mt-1 flex-shrink-0" data-lucide="flask-conical"></i>
+<div data-i18n="바이오리액터_설계_최적화공학적_해석_기반_바이오리액터_설계_및_운전_효율성_극대화">
+<h4 class="font-semibold text-slate-700 mb-1" data-i18n="바이오리액터_설계_최적화">바이오리액터 설계 최적화</h4>
+<p class="text-gray-600 text-base" data-i18n="공학적_해석_기반_바이오리액터_설계_및_운전_효율성_극대화">공학적 해석 기반 바이오리액터 설계 및 운전 효율성 극대화.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="py-16 md:py-24 bg-white">
+<div class="container mx-auto px-6" data-i18n="연구실_소식_및_공지공지사항학부_연구생_모집_2025년_후기_바이오공정_및_첨단_모델링_연구에_관심_있는_학부생_여러분의_많은_지원_바랍니다_마감_8_15_자세히_보기_연구실_소식2025년도_춘계학술대회_논문_발표본_연구실_소속_김연구_학생이_2025년도_한국생물공학회_춘계학술대회에서_우수논문발표상을_수상했습니다_자세히_보기_모든_소식_보기">
+<h3 class="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-800" data-i18n="연구실_소식_및_공지">연구실 소식 및 공지</h3>
+<div class="grid md:grid-cols-2 gap-8" data-i18n="공지사항학부_연구생_모집_2025년_후기_바이오공정_및_첨단_모델링_연구에_관심_있는_학부생_여러분의_많은_지원_바랍니다_마감_8_15_자세히_보기_연구실_소식2025년도_춘계학술대회_논문_발표본_연구실_소속_김연구_학생이_2025년도_한국생물공학회_춘계학술대회에서_우수논문발표상을_수상했습니다_자세히_보기">
+<div class="p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" data-i18n="공지사항학부_연구생_모집_2025년_후기_바이오공정_및_첨단_모델링_연구에_관심_있는_학부생_여러분의_많은_지원_바랍니다_마감_8_15_자세히_보기">
+<h4 class="text-xl font-semibold mb-3 text-slate-700 flex items-center" data-i18n="공지사항">
+<i class="text-indigo-600 h-6 w-6 mr-2" data-lucide="megaphone"></i>
                             공지사항
                         </h4>
-                        <h5 class="text-lg font-medium text-slate-800 mb-2">학부 연구생 모집 (2025년 후기)</h5>
-                        <p class="text-gray-600 text-sm mb-4">
+<h5 class="text-lg font-medium text-slate-800 mb-2" data-i18n="학부_연구생_모집_2025년_후기">학부 연구생 모집 (2025년 후기)</h5>
+<p class="text-gray-600 text-sm mb-4" data-i18n="바이오공정_및_첨단_모델링_연구에_관심_있는_학부생_여러분의_많은_지원_바랍니다_마감_8_15">
                             바이오공정 및 첨단 모델링 연구에 관심 있는 학부생 여러분의 많은 지원 바랍니다. (마감: ~8/15)
                         </p>
-                        <a href="news_announcements.html#announcements" class="text-[#0072CE] hover:text-[#004A99] font-medium text-sm hover:underline">자세히 보기...</a>
-                    </div>
-                    <div class="p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h4 class="text-xl font-semibold mb-3 text-slate-700 flex items-center">
-                            <i data-lucide="newspaper" class="text-teal-600 h-6 w-6 mr-2"></i>
+<a class="text-[#0072CE] hover:text-[#004A99] font-medium text-sm hover:underline" data-i18n="자세히_보기" href="news_announcements.html#announcements">자세히 보기...</a>
+</div>
+<div class="p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300" data-i18n="연구실_소식2025년도_춘계학술대회_논문_발표본_연구실_소속_김연구_학생이_2025년도_한국생물공학회_춘계학술대회에서_우수논문발표상을_수상했습니다_자세히_보기">
+<h4 class="text-xl font-semibold mb-3 text-slate-700 flex items-center" data-i18n="연구실_소식">
+<i class="text-teal-600 h-6 w-6 mr-2" data-lucide="newspaper"></i>
                             연구실 소식
                         </h4>
-                        <h5 class="text-lg font-medium text-slate-800 mb-2">2025년도 춘계학술대회 논문 발표</h5>
-                        <p class="text-gray-600 text-sm mb-4">
+<h5 class="text-lg font-medium text-slate-800 mb-2" data-i18n="2025년도_춘계학술대회_논문_발표">2025년도 춘계학술대회 논문 발표</h5>
+<p class="text-gray-600 text-sm mb-4" data-i18n="본_연구실_소속_김연구_학생이_2025년도_한국생물공학회_춘계학술대회에서_우수논문발표상을_수상했습니다">
                             본 연구실 소속 김연구 학생이 2025년도 한국생물공학회 춘계학술대회에서 우수논문발표상을 수상했습니다.
                         </p>
-                        <a href="news_announcements.html#lab-news" class="text-[#0072CE] hover:text-[#004A99] font-medium text-sm hover:underline">자세히 보기...</a>
-                    </div>
-                </div>
-                <div class="text-center mt-12">
-                    <a href="news_announcements.html" class="bg-[#0072CE] hover:bg-[#004A99] text-white font-semibold py-3 px-8 rounded-lg text-base transition duration-300 ease-in-out transform hover:scale-105 shadow-md hover:shadow-lg">
+<a class="text-[#0072CE] hover:text-[#004A99] font-medium text-sm hover:underline" data-i18n="자세히_보기" href="news_announcements.html#lab-news">자세히 보기...</a>
+</div>
+</div>
+<div class="text-center mt-12" data-i18n="모든_소식_보기">
+<a class="bg-[#0072CE] hover:bg-[#004A99] text-white font-semibold py-3 px-8 rounded-lg text-base transition duration-300 ease-in-out transform hover:scale-105 shadow-md hover:shadow-lg" data-i18n="모든_소식_보기" href="news_announcements.html">
                         모든 소식 보기
                     </a>
-                </div>
-            </div>
-        </section>
-        
-        <div id="searchResultsContainer" class="container mx-auto px-6 my-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 id="searchResultsHeading" class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-
-    <script src="script.js" type="module"></script>
+</div>
+</div>
+</section>
+<div class="container mx-auto px-6 my-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과" id="searchResultsHeading">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js" type="module"></script>
 </body>
 </html>

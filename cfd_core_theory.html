@@ -1,119 +1,108 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CFD 핵심 이론 - 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_cfd_core_theory">CFD 핵심 이론 - 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-gray-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
-                    <a href="index.html">생물공학연구실</a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
-        <div class="bg-white p-6 md:p-10 rounded-xl shadow-xl">
-            <header class="mb-8 border-b pb-4">
-                <h1 class="text-3xl md:text-4xl font-bold text-slate-800">CFD 핵심 이론</h1>
-            </header>
-            <article class="prose prose-lg max-w-none">
-                <p>CFD 해석은 유체 유동을 지배하는 기본 물리 법칙, 특히 보존 방정식을 기반으로 합니다. 난류 유동의 처리를 위한 난류 모델링 또한 핵심적인 부분이며, 최근에는 전통적인 Navier-Stokes 방정식 기반 모델 외에도 격자 볼츠만 방법(LBM)과 같은 다양한 접근법이 활용되고 있습니다. 해석 수행(Solving) 단계에서 사용되는 다양한 수치 해석 기법, 난류 모델, 다상 유동 모델 등에 대한 상세한 비교 및 설명은 <a href='cfd_solving.html' class='text-[#0072CE] hover:text-[#004A99] hover:underline'>CFD Solving 페이지</a>에서 확인할 수 있습니다.</p>
-
-                <h2>지배 방정식 (Governing Equations)</h2>
-                <p>유체 유동은 연속체 역학에 의해 지배되며, 다음과 같은 보존 법칙을 따릅니다.</p>
-                <h3>연속 방정식 (Continuity Equation) - 질량 보존</h3>
-                <p>특정 체적 요소 내에서 질량의 변화율은 그 체적 경계를 통과하는 질량 유량의 순 흐름과 같다는 원리입니다.</p>
-                <div class="my-4 p-3 bg-gray-100 border border-gray-200 rounded-md overflow-x-auto">
-                    <pre><code class="text-sm font-mono">∂ρ/∂t + ∇ ⋅ (ρu) = 0</code></pre>
-                </div>
-                <p>(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ρ</code>: 밀도, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">u</code>: 속도 벡터, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">t</code>: 시간, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">∇</code>: 나블라 연산자)</p>
-                <p>비압축성 유동(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ρ = const.</code>)의 경우 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">∇ ⋅ u = 0</code>으로 단순화됩니다.</p>
-
-                <h3>운동량 방정식 (Momentum Equation) - Navier-Stokes 방정식</h3>
-                <p>뉴턴의 제2법칙(F=ma)을 유체 요소에 적용한 것으로, 유체 요소에 작용하는 힘(압력 구배력, 점성력, 체적력 등)과 그로 인한 운동량 변화율의 균형을 나타냅니다.</p>
-                <div class="my-4 p-3 bg-gray-100 border border-gray-200 rounded-md overflow-x-auto">
-                    <pre><code class="text-sm font-mono">ρ Du/Dt = -∇p + μ∇²u + f</code></pre>
-                </div>
-                <p>(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">p</code>: 압력, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">μ</code>: 동점성 계수, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">∇²</code>: 라플라시안 연산자, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">f</code>: 체적력 벡터)</p>
-                <p>여기서 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">Du/Dt = ∂u/∂t + (u ⋅ ∇)u</code> 는 물질 도함수(Material derivative)로, 시간 변화율과 이류(Convection) 항을 포함합니다. Navier-Stokes 방정식은 비선형적이며, 해석적 해는 매우 제한적인 경우에만 존재합니다. 3차원 Navier-Stokes 방정식의 매끄러운 해의 존재성과 유일성은 아직 수학적으로 증명되지 않은 난제입니다.</p>
-
-                <h3>에너지 방정식 (Energy Equation) - 에너지 보존</h3>
-                <p>유체 요소의 총 에너지(내부 에너지, 운동 에너지) 변화율은 그 요소에 가해지는 열전달율과 일률(압력 일, 점성 일 등)의 합과 같다는 원리입니다. 온도 변화, 열 전달, 압축/팽창에 의한 에너지 변화 등을 기술합니다.</p>
-                <p>이 방정식들은 압축성 유동의 경우 속도 3성분, 압력, 밀도, 온도 등 여러 미지 변수를 포함하는 연립 편미분 방정식 시스템을 형성합니다. 이를 풀기 위해 상태 방정식(예: 이상 기체 법칙 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">p = ρRT</code>) 등이 추가로 필요합니다.</p>
-
-                <h2>난류 모델링 (Turbulence Modeling)</h2>
-                <p>대부분의 실제 공학 유동은 복잡하고 불규칙한 난류 특성을 가집니다. 난류를 직접 계산(DNS)하기에는 엄청난 계산 자원이 필요하므로, 실제 CFD에서는 난류 효과를 모델링합니다.</p>
-                <ul>
-                    <li><strong>DNS (Direct Numerical Simulation)</strong>: 난류의 모든 스케일을 직접 계산합니다. 가장 정확하지만, 매우 낮은 Reynolds 수의 간단한 유동에만 적용 가능하며 계산 비용이 엄청나 학술 연구에 주로 사용됩니다.</li>
-                    <li><strong>RANS (Reynolds-Averaged Navier-Stokes)</strong>: 순간적인 유동 변수를 시간 평균값과 변동 성분으로 분리하여 평균된 Navier-Stokes 방정식을 풉니다. 난류 변동에 의한 효과(Reynolds 응력)는 난류 모델을 사용하여 근사합니다. 계산 비용이 가장 저렴하여 산업적으로 가장 널리 사용됩니다. k-epsilon, k-omega, Spalart-Allmaras 등 다양한 모델이 있습니다. 정상 상태 유동에 적합하지만, 시간 의존적 평균 유동을 해석하기 위해 비정상 RANS(Unsteady RANS, URANS) 방법도 활발히 사용됩니다. URANS는 RANS 방정식의 시간 항을 유지하여 시간에 따라 변화하는 대규모 난류 구조나 주기적 현상을 포착할 수 있으며, 이는 기존 정상 RANS 모델보다 더 많은 정보를 제공합니다 (자세한 내용은 <a href='cfd_urans_model.html' class='text-[#0072CE] hover:text-[#004A99] hover:underline'>URANS 모델 페이지</a> 참조).<sup>[MD6, MD7]</sup></li>
-                    <li><strong>LES (Large Eddy Simulation)</strong>: 크기가 큰 난류 와류는 직접 계산하고, 격자 크기보다 작은 와류의 영향만 아격자(Sub-grid scale) 모델을 사용하여 모델링합니다. RANS보다 정확하며 비정상 유동의 거동을 더 잘 예측하나, RANS보다 계산 비용이 훨씬 많이 듭니다. 벽 근처에서는 높은 격자 해상도가 요구됩니다.</li>
-                    <li><strong>하이브리드 RANS-LES 모델 (예: DES - Detached Eddy Simulation)</strong>: 벽 근처 경계층에서는 RANS 모델을 사용하고, 벽에서 멀리 떨어진 영역에서는 LES 모델을 사용하여 계산 효율과 정확성을 절충합니다.</li>
-                </ul>
-
-                <h2>격자 볼츠만 방법 (Lattice Boltzmann Method, LBM)</h2>
-                <p>격자 볼츠만 방법(LBM)은 유체 유동을 시뮬레이션하는 메조스코픽(mesoscopic) 방법론으로, 전통적인 거시적 Navier-Stokes 방정식을 직접 이산화하는 대신, 격자 상에서 정의된 가상 입자들의 분포 함수가 시간에 따라 어떻게 충돌하고 이동하는지를 추적합니다.<sup>[MD1]</sup> 이 접근 방식은 유체의 미시적 상호작용이 거시적 유동 현상으로 나타난다는 운동론적 원리에 기반하며, 복잡한 형상의 경계 조건 처리, 다상 유동, 미세 유체역학 문제, 그리고 대규모 병렬 계산 환경에서 특히 강점을 보입니다.<sup>[MD1, MD2]</sup> LBM에 대한 더 자세한 이론, 수학적 배경, 장단점 및 응용 분야는 <a href='cfd_lbm_model.html' class='text-[#0072CE] hover:text-[#004A99] hover:underline'>LBM 모델 상세 페이지</a>에서 확인할 수 있습니다.</p>
-                
-                <h2>비정상 RANS (Unsteady RANS, URANS) 모델</h2>
-                <p>비정상 Reynolds-Averaged Navier-Stokes (URANS) 모델은 전통적인 RANS 접근법을 확장하여 시간에 따라 변화하는 유동 현상을 해석하는 기법입니다. RANS 모델이 유동 변수를 시간 평균값과 변동 성분으로 나누어 정상 상태의 평균 유동만을 예측하는 반면, URANS는 Navier-Stokes 방정식의 비정상 항(시간 미분 항)을 그대로 유지합니다.<sup>[MD6]</sup> 이를 통해, 시간에 따라 진화하는 대규모 난류 구조(예: 와류 방출, 주기적 유동 박리)나 과도 현상의 평균적인 거동을 포착할 수 있습니다. URANS는 LES나 DNS에 비해 계산 비용이 여전히 저렴하면서도, 정상 RANS 모델보다는 더 풍부한 시간적 정보를 제공하여 다양한 공학 문제에 활용됩니다.<sup>[MD7]</sup> URANS 모델의 상세 이론, 기존 RANS와의 차이점, 장단점 및 주요 적용 사례는 <a href='cfd_urans_model.html' class='text-[#0072CE] hover:text-[#004A99] hover:underline'>URANS 모델 상세 페이지</a>에서 자세히 다룹니다.</p>
-
-                <hr class="my-8 border-gray-300">
-                <h3 class="text-xl font-semibold text-slate-700 mt-6 mb-3">본문 추가 내용 관련 참고문헌</h3>
-                <ol class="list-decimal list-inside text-sm text-gray-600 space-y-1">
-                    <li>[MD1] A systematic literature review on Lattice Boltzmann Method applied to acoustics - Sciencedirect.</li>
-                    <li>[MD2] Lattice Boltzmann Methods for Industrial Applications - ResearchGate.</li>
-                    <li>[MD6] RANS and URANS. - CFD Online Forums.</li>
-                    <li>[MD7] Comparative Analysis for RANS, URANS, and DDES Turbulence Models - Dlubal Software FAQ.</li>
-                </ol>
-
-            </article>
-        </div>
-        <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
+<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
+<div class="bg-white p-6 md:p-10 rounded-xl shadow-xl" data-i18n="cfd_핵심_이론cfd_해석은_유체_유동을_지배하는_기본_물리_법칙_특히_보존_방정식을_기반으로_합니다_난류_유동의_처리를_위한_난류_모델링_또한_핵심적인_부분이며_최근에는_전통적인_navier_stokes_방정식_기반_모델_외에도_격자_볼츠만_방법_lbm_과_같은_다양한_접근법이_활용되고_있습니다_해석_수행_solving_단계에서_사용되는_다양한_수치_해석_기법_난류_모델_다상_유동_모델_등에_대한_상세한_비교_및_설명은cfd_solving_페이지에서_확인할_수_있습니다_지배_방정식_governing_equations_유체_유동은_연속체_역학에_의해_지배되며_다음과_같은_보존_법칙을_따릅니다_연속_방정식_continuity_equation_질량_보존특정_체적_요소_내에서_질량의_변화율은_그_체적_경계를_통과하는_질량_유량의_순_흐름과_같다는_원리입니다_ρ_t_ρu_0_ρ_밀도_u_속도_벡터_t_시간_나블라_연산자_비압축성_유동_ρ_const_의_경우_u_0으로_단순화됩니다_운동량_방정식_momentum_equation_navier_stokes_방정식뉴턴의_제2법칙_f_ma_을_유체_요소에_적용한_것으로_유체_요소에_작용하는_힘_압력_구배력_점성력_체적력_등_과_그로_인한_운동량_변화율의_균형을_나타냅니다_ρ_du_dt_p_μ_²u_f_p_압력_μ_동점성_계수_²_라플라시안_연산자_f_체적력_벡터_여기서du_dt_u_t_u_u는_물질_도함수_material_derivative_로_시간_변화율과_이류_convection_항을_포함합니다_navier_stokes_방정식은_비선형적이며_해석적_해는_매우_제한적인_경우에만_존재합니다_3차원_navier_stokes_방정식의_매끄러운_해의_존재성과_유일성은_아직_수학적으로_증명되지_않은_난제입니다_에너지_방정식_energy_equation_에너지_보존유체_요소의_총_에너지_내부_에너지_운동_에너지_변화율은_그_요소에_가해지는_열전달율과_일률_압력_일_점성_일_등_의_합과_같다는_원리입니다_온도_변화_열_전달_압축_팽창에_의한_에너지_변화_등을_기술합니다_이_방정식들은_압축성_유동의_경우_속도_3성분_압력_밀도_온도_등_여러_미지_변수를_포함하는_연립_편미분_방정식_시스템을_형성합니다_이를_풀기_위해_상태_방정식_예_이상_기체_법칙p_ρrt_등이_추가로_필요합니다_난류_모델링_turbulence_modeling_대부분의_실제_공학_유동은_복잡하고_불규칙한_난류_특성을_가집니다_난류를_직접_계산_dns_하기에는_엄청난_계산_자원이_필요하므로_실제_cfd에서는_난류_효과를_모델링합니다_dns_direct_numerical_simulation_난류의_모든_스케일을_직접_계산합니다_가장_정확하지만_매우_낮은_reynolds_수의_간단한_유동에만_적용_가능하며_계산_비용이_엄청나_학술_연구에_주로_사용됩니다_rans_reynolds_averaged_navier_stokes_순간적인_유동_변수를_시간_평균값과_변동_성분으로_분리하여_평균된_navier_stokes_방정식을_풉니다_난류_변동에_의한_효과_reynolds_응력_는_난류_모델을_사용하여_근사합니다_계산_비용이_가장_저렴하여_산업적으로_가장_널리_사용됩니다_k_epsilon_k_omega_spalart_allmaras_등_다양한_모델이_있습니다_정상_상태_유동에_적합하지만_시간_의존적_평균_유동을_해석하기_위해_비정상_rans_unsteady_rans_urans_방법도_활발히_사용됩니다_urans는_rans_방정식의_시간_항을_유지하여_시간에_따라_변화하는_대규모_난류_구조나_주기적_현상을_포착할_수_있으며_이는_기존_정상_rans_모델보다_더_많은_정보를_제공합니다_자세한_내용은urans_모델_페이지참조_md6_md7_les_large_eddy_simulation_크기가_큰_난류_와류는_직접_계산하고_격자_크기보다_작은_와류의_영향만_아격자_sub_grid_scale_모델을_사용하여_모델링합니다_rans보다_정확하며_비정상_유동의_거동을_더_잘_예측하나_rans보다_계산_비용이_훨씬_많이_듭니다_벽_근처에서는_높은_격자_해상도가_요구됩니다_하이브리드_rans_les_모델_예_des_detached_eddy_simulation_벽_근처_경계층에서는_rans_모델을_사용하고_벽에서_멀리_떨어진_영역에서는_les_모델을_사용하여_계산_효율과_정확성을_절충합니다_격자_볼츠만_방법_lattice_boltzmann_method_lbm_격자_볼츠만_방법_lbm_은_유체_유동을_시뮬레이션하는_메조스코픽_mesoscopic_방법론으로_전통적인_거시적_navier_stokes_방정식을_직접_이산화하는_대신_격자_상에서_정의된_가상_입자들의_분포_함수가_시간에_따라_어떻게_충돌하고_이동하는지를_추적합니다_md1_이_접근_방식은_유체의_미시적_상호작용이_거시적_유동_현상으로_나타난다는_운동론적_원리에_기반하며_복잡한_형상의_경계_조건_처리_다상_유동_미세_유체역학_문제_그리고_대규모_병렬_계산_환경에서_특히_강점을_보입니다_md1_md2_lbm에_대한_더_자세한_이론_수학적_배경_장단점_및_응용_분야는lbm_모델_상세_페이지에서_확인할_수_있습니다_비정상_rans_unsteady_rans_urans_모델비정상_reynolds_averaged_navier_stokes_urans_모델은_전통적인_rans_접근법을_확장하여_시간에_따라_변화하는_유동_현상을_해석하는_기법입니다_rans_모델이_유동_변수를_시간_평균값과_변동_성분으로_나누어_정상_상태의_평균_유동만을_예측하는_반면_urans는_navier_stokes_방정식의_비정상_항_시간_미분_항_을_그대로_유지합니다_md6_이를_통해_시간에_따라_진화하는_대규모_난류_구조_예_와류_방출_주기적_유동_박리_나_과도_현상의_평균적인_거동을_포착할_수_있습니다_urans는_les나_dns에_비해_계산_비용이_여전히_저렴하면서도_정상_rans_모델보다는_더_풍부한_시간적_정보를_제공하여_다양한_공학_문제에_활용됩니다_md7_urans_모델의_상세_이론_기존_rans와의_차이점_장단점_및_주요_적용_사례는urans_모델_상세_페이지에서_자세히_다룹니다_본문_추가_내용_관련_참고문헌_md1_a_systematic_literature_review_on_lattice_boltzmann_method_applied_to_acoustics_sciencedirect_md2_lattice_boltzmann_methods_for_industrial_applications_researchgate_md6_rans_and_urans_cfd_online_forums_md7_comparative_analysis_for_rans_urans_and_ddes_turbulence_models_dlubal_software_faq">
+<header class="mb-8 border-b pb-4">
+<h1 class="text-3xl md:text-4xl font-bold text-slate-800" data-i18n="cfd_핵심_이론">CFD 핵심 이론</h1>
+</header>
+<article class="prose prose-lg max-w-none">
+<p data-i18n="cfd_해석은_유체_유동을_지배하는_기본_물리_법칙_특히_보존_방정식을_기반으로_합니다_난류_유동의_처리를_위한_난류_모델링_또한_핵심적인_부분이며_최근에는_전통적인_navier_stokes_방정식_기반_모델_외에도_격자_볼츠만_방법_lbm_과_같은_다양한_접근법이_활용되고_있습니다_해석_수행_solving_단계에서_사용되는_다양한_수치_해석_기법_난류_모델_다상_유동_모델_등에_대한_상세한_비교_및_설명은cfd_solving_페이지에서_확인할_수_있습니다">CFD 해석은 유체 유동을 지배하는 기본 물리 법칙, 특히 보존 방정식을 기반으로 합니다. 난류 유동의 처리를 위한 난류 모델링 또한 핵심적인 부분이며, 최근에는 전통적인 Navier-Stokes 방정식 기반 모델 외에도 격자 볼츠만 방법(LBM)과 같은 다양한 접근법이 활용되고 있습니다. 해석 수행(Solving) 단계에서 사용되는 다양한 수치 해석 기법, 난류 모델, 다상 유동 모델 등에 대한 상세한 비교 및 설명은 <a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="cfd_solving_페이지" href="cfd_solving.html">CFD Solving 페이지</a>에서 확인할 수 있습니다.</p>
+<h2 data-i18n="지배_방정식_governing_equations">지배 방정식 (Governing Equations)</h2>
+<p data-i18n="유체_유동은_연속체_역학에_의해_지배되며_다음과_같은_보존_법칙을_따릅니다">유체 유동은 연속체 역학에 의해 지배되며, 다음과 같은 보존 법칙을 따릅니다.</p>
+<h3 data-i18n="연속_방정식_continuity_equation_질량_보존">연속 방정식 (Continuity Equation) - 질량 보존</h3>
+<p data-i18n="특정_체적_요소_내에서_질량의_변화율은_그_체적_경계를_통과하는_질량_유량의_순_흐름과_같다는_원리입니다">특정 체적 요소 내에서 질량의 변화율은 그 체적 경계를 통과하는 질량 유량의 순 흐름과 같다는 원리입니다.</p>
+<div class="my-4 p-3 bg-gray-100 border border-gray-200 rounded-md overflow-x-auto" data-i18n="ρ_t_ρu_0">
+<pre><code class="text-sm font-mono">∂ρ/∂t + ∇ ⋅ (ρu) = 0</code></pre>
+</div>
+<p data-i18n="ρ_밀도_u_속도_벡터_t_시간_나블라_연산자">(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ρ</code>: 밀도, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">u</code>: 속도 벡터, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">t</code>: 시간, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">∇</code>: 나블라 연산자)</p>
+<p data-i18n="비압축성_유동_ρ_const_의_경우_u_0으로_단순화됩니다">비압축성 유동(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ρ = const.</code>)의 경우 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">∇ ⋅ u = 0</code>으로 단순화됩니다.</p>
+<h3 data-i18n="운동량_방정식_momentum_equation_navier_stokes_방정식">운동량 방정식 (Momentum Equation) - Navier-Stokes 방정식</h3>
+<p data-i18n="뉴턴의_제2법칙_f_ma_을_유체_요소에_적용한_것으로_유체_요소에_작용하는_힘_압력_구배력_점성력_체적력_등_과_그로_인한_운동량_변화율의_균형을_나타냅니다">뉴턴의 제2법칙(F=ma)을 유체 요소에 적용한 것으로, 유체 요소에 작용하는 힘(압력 구배력, 점성력, 체적력 등)과 그로 인한 운동량 변화율의 균형을 나타냅니다.</p>
+<div class="my-4 p-3 bg-gray-100 border border-gray-200 rounded-md overflow-x-auto" data-i18n="ρ_du_dt_p_μ_²u_f">
+<pre><code class="text-sm font-mono">ρ Du/Dt = -∇p + μ∇²u + f</code></pre>
+</div>
+<p data-i18n="p_압력_μ_동점성_계수_²_라플라시안_연산자_f_체적력_벡터">(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">p</code>: 압력, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">μ</code>: 동점성 계수, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">∇²</code>: 라플라시안 연산자, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">f</code>: 체적력 벡터)</p>
+<p data-i18n="여기서du_dt_u_t_u_u는_물질_도함수_material_derivative_로_시간_변화율과_이류_convection_항을_포함합니다_navier_stokes_방정식은_비선형적이며_해석적_해는_매우_제한적인_경우에만_존재합니다_3차원_navier_stokes_방정식의_매끄러운_해의_존재성과_유일성은_아직_수학적으로_증명되지_않은_난제입니다">여기서 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">Du/Dt = ∂u/∂t + (u ⋅ ∇)u</code> 는 물질 도함수(Material derivative)로, 시간 변화율과 이류(Convection) 항을 포함합니다. Navier-Stokes 방정식은 비선형적이며, 해석적 해는 매우 제한적인 경우에만 존재합니다. 3차원 Navier-Stokes 방정식의 매끄러운 해의 존재성과 유일성은 아직 수학적으로 증명되지 않은 난제입니다.</p>
+<h3 data-i18n="에너지_방정식_energy_equation_에너지_보존">에너지 방정식 (Energy Equation) - 에너지 보존</h3>
+<p data-i18n="유체_요소의_총_에너지_내부_에너지_운동_에너지_변화율은_그_요소에_가해지는_열전달율과_일률_압력_일_점성_일_등_의_합과_같다는_원리입니다_온도_변화_열_전달_압축_팽창에_의한_에너지_변화_등을_기술합니다">유체 요소의 총 에너지(내부 에너지, 운동 에너지) 변화율은 그 요소에 가해지는 열전달율과 일률(압력 일, 점성 일 등)의 합과 같다는 원리입니다. 온도 변화, 열 전달, 압축/팽창에 의한 에너지 변화 등을 기술합니다.</p>
+<p data-i18n="이_방정식들은_압축성_유동의_경우_속도_3성분_압력_밀도_온도_등_여러_미지_변수를_포함하는_연립_편미분_방정식_시스템을_형성합니다_이를_풀기_위해_상태_방정식_예_이상_기체_법칙p_ρrt_등이_추가로_필요합니다">이 방정식들은 압축성 유동의 경우 속도 3성분, 압력, 밀도, 온도 등 여러 미지 변수를 포함하는 연립 편미분 방정식 시스템을 형성합니다. 이를 풀기 위해 상태 방정식(예: 이상 기체 법칙 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">p = ρRT</code>) 등이 추가로 필요합니다.</p>
+<h2 data-i18n="난류_모델링_turbulence_modeling">난류 모델링 (Turbulence Modeling)</h2>
+<p data-i18n="대부분의_실제_공학_유동은_복잡하고_불규칙한_난류_특성을_가집니다_난류를_직접_계산_dns_하기에는_엄청난_계산_자원이_필요하므로_실제_cfd에서는_난류_효과를_모델링합니다">대부분의 실제 공학 유동은 복잡하고 불규칙한 난류 특성을 가집니다. 난류를 직접 계산(DNS)하기에는 엄청난 계산 자원이 필요하므로, 실제 CFD에서는 난류 효과를 모델링합니다.</p>
+<ul>
+<li data-i18n="dns_direct_numerical_simulation_난류의_모든_스케일을_직접_계산합니다_가장_정확하지만_매우_낮은_reynolds_수의_간단한_유동에만_적용_가능하며_계산_비용이_엄청나_학술_연구에_주로_사용됩니다"><strong>DNS (Direct Numerical Simulation)</strong>: 난류의 모든 스케일을 직접 계산합니다. 가장 정확하지만, 매우 낮은 Reynolds 수의 간단한 유동에만 적용 가능하며 계산 비용이 엄청나 학술 연구에 주로 사용됩니다.</li>
+<li data-i18n="rans_reynolds_averaged_navier_stokes_순간적인_유동_변수를_시간_평균값과_변동_성분으로_분리하여_평균된_navier_stokes_방정식을_풉니다_난류_변동에_의한_효과_reynolds_응력_는_난류_모델을_사용하여_근사합니다_계산_비용이_가장_저렴하여_산업적으로_가장_널리_사용됩니다_k_epsilon_k_omega_spalart_allmaras_등_다양한_모델이_있습니다_정상_상태_유동에_적합하지만_시간_의존적_평균_유동을_해석하기_위해_비정상_rans_unsteady_rans_urans_방법도_활발히_사용됩니다_urans는_rans_방정식의_시간_항을_유지하여_시간에_따라_변화하는_대규모_난류_구조나_주기적_현상을_포착할_수_있으며_이는_기존_정상_rans_모델보다_더_많은_정보를_제공합니다_자세한_내용은urans_모델_페이지참조_md6_md7"><strong>RANS (Reynolds-Averaged Navier-Stokes)</strong>: 순간적인 유동 변수를 시간 평균값과 변동 성분으로 분리하여 평균된 Navier-Stokes 방정식을 풉니다. 난류 변동에 의한 효과(Reynolds 응력)는 난류 모델을 사용하여 근사합니다. 계산 비용이 가장 저렴하여 산업적으로 가장 널리 사용됩니다. k-epsilon, k-omega, Spalart-Allmaras 등 다양한 모델이 있습니다. 정상 상태 유동에 적합하지만, 시간 의존적 평균 유동을 해석하기 위해 비정상 RANS(Unsteady RANS, URANS) 방법도 활발히 사용됩니다. URANS는 RANS 방정식의 시간 항을 유지하여 시간에 따라 변화하는 대규모 난류 구조나 주기적 현상을 포착할 수 있으며, 이는 기존 정상 RANS 모델보다 더 많은 정보를 제공합니다 (자세한 내용은 <a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="urans_모델_페이지" href="cfd_urans_model.html">URANS 모델 페이지</a> 참조).<sup>[MD6, MD7]</sup></li>
+<li data-i18n="les_large_eddy_simulation_크기가_큰_난류_와류는_직접_계산하고_격자_크기보다_작은_와류의_영향만_아격자_sub_grid_scale_모델을_사용하여_모델링합니다_rans보다_정확하며_비정상_유동의_거동을_더_잘_예측하나_rans보다_계산_비용이_훨씬_많이_듭니다_벽_근처에서는_높은_격자_해상도가_요구됩니다"><strong>LES (Large Eddy Simulation)</strong>: 크기가 큰 난류 와류는 직접 계산하고, 격자 크기보다 작은 와류의 영향만 아격자(Sub-grid scale) 모델을 사용하여 모델링합니다. RANS보다 정확하며 비정상 유동의 거동을 더 잘 예측하나, RANS보다 계산 비용이 훨씬 많이 듭니다. 벽 근처에서는 높은 격자 해상도가 요구됩니다.</li>
+<li data-i18n="하이브리드_rans_les_모델_예_des_detached_eddy_simulation_벽_근처_경계층에서는_rans_모델을_사용하고_벽에서_멀리_떨어진_영역에서는_les_모델을_사용하여_계산_효율과_정확성을_절충합니다"><strong>하이브리드 RANS-LES 모델 (예: DES - Detached Eddy Simulation)</strong>: 벽 근처 경계층에서는 RANS 모델을 사용하고, 벽에서 멀리 떨어진 영역에서는 LES 모델을 사용하여 계산 효율과 정확성을 절충합니다.</li>
+</ul>
+<h2 data-i18n="격자_볼츠만_방법_lattice_boltzmann_method_lbm">격자 볼츠만 방법 (Lattice Boltzmann Method, LBM)</h2>
+<p data-i18n="격자_볼츠만_방법_lbm_은_유체_유동을_시뮬레이션하는_메조스코픽_mesoscopic_방법론으로_전통적인_거시적_navier_stokes_방정식을_직접_이산화하는_대신_격자_상에서_정의된_가상_입자들의_분포_함수가_시간에_따라_어떻게_충돌하고_이동하는지를_추적합니다_md1_이_접근_방식은_유체의_미시적_상호작용이_거시적_유동_현상으로_나타난다는_운동론적_원리에_기반하며_복잡한_형상의_경계_조건_처리_다상_유동_미세_유체역학_문제_그리고_대규모_병렬_계산_환경에서_특히_강점을_보입니다_md1_md2_lbm에_대한_더_자세한_이론_수학적_배경_장단점_및_응용_분야는lbm_모델_상세_페이지에서_확인할_수_있습니다">격자 볼츠만 방법(LBM)은 유체 유동을 시뮬레이션하는 메조스코픽(mesoscopic) 방법론으로, 전통적인 거시적 Navier-Stokes 방정식을 직접 이산화하는 대신, 격자 상에서 정의된 가상 입자들의 분포 함수가 시간에 따라 어떻게 충돌하고 이동하는지를 추적합니다.<sup>[MD1]</sup> 이 접근 방식은 유체의 미시적 상호작용이 거시적 유동 현상으로 나타난다는 운동론적 원리에 기반하며, 복잡한 형상의 경계 조건 처리, 다상 유동, 미세 유체역학 문제, 그리고 대규모 병렬 계산 환경에서 특히 강점을 보입니다.<sup>[MD1, MD2]</sup> LBM에 대한 더 자세한 이론, 수학적 배경, 장단점 및 응용 분야는 <a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="lbm_모델_상세_페이지" href="cfd_lbm_model.html">LBM 모델 상세 페이지</a>에서 확인할 수 있습니다.</p>
+<h2 data-i18n="비정상_rans_unsteady_rans_urans_모델">비정상 RANS (Unsteady RANS, URANS) 모델</h2>
+<p data-i18n="비정상_reynolds_averaged_navier_stokes_urans_모델은_전통적인_rans_접근법을_확장하여_시간에_따라_변화하는_유동_현상을_해석하는_기법입니다_rans_모델이_유동_변수를_시간_평균값과_변동_성분으로_나누어_정상_상태의_평균_유동만을_예측하는_반면_urans는_navier_stokes_방정식의_비정상_항_시간_미분_항_을_그대로_유지합니다_md6_이를_통해_시간에_따라_진화하는_대규모_난류_구조_예_와류_방출_주기적_유동_박리_나_과도_현상의_평균적인_거동을_포착할_수_있습니다_urans는_les나_dns에_비해_계산_비용이_여전히_저렴하면서도_정상_rans_모델보다는_더_풍부한_시간적_정보를_제공하여_다양한_공학_문제에_활용됩니다_md7_urans_모델의_상세_이론_기존_rans와의_차이점_장단점_및_주요_적용_사례는urans_모델_상세_페이지에서_자세히_다룹니다">비정상 Reynolds-Averaged Navier-Stokes (URANS) 모델은 전통적인 RANS 접근법을 확장하여 시간에 따라 변화하는 유동 현상을 해석하는 기법입니다. RANS 모델이 유동 변수를 시간 평균값과 변동 성분으로 나누어 정상 상태의 평균 유동만을 예측하는 반면, URANS는 Navier-Stokes 방정식의 비정상 항(시간 미분 항)을 그대로 유지합니다.<sup>[MD6]</sup> 이를 통해, 시간에 따라 진화하는 대규모 난류 구조(예: 와류 방출, 주기적 유동 박리)나 과도 현상의 평균적인 거동을 포착할 수 있습니다. URANS는 LES나 DNS에 비해 계산 비용이 여전히 저렴하면서도, 정상 RANS 모델보다는 더 풍부한 시간적 정보를 제공하여 다양한 공학 문제에 활용됩니다.<sup>[MD7]</sup> URANS 모델의 상세 이론, 기존 RANS와의 차이점, 장단점 및 주요 적용 사례는 <a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="urans_모델_상세_페이지" href="cfd_urans_model.html">URANS 모델 상세 페이지</a>에서 자세히 다룹니다.</p>
+<hr class="my-8 border-gray-300"/>
+<h3 class="text-xl font-semibold text-slate-700 mt-6 mb-3" data-i18n="본문_추가_내용_관련_참고문헌">본문 추가 내용 관련 참고문헌</h3>
+<ol class="list-decimal list-inside text-sm text-gray-600 space-y-1">
+<li data-i18n="md1_a_systematic_literature_review_on_lattice_boltzmann_method_applied_to_acoustics_sciencedirect">[MD1] A systematic literature review on Lattice Boltzmann Method applied to acoustics - Sciencedirect.</li>
+<li data-i18n="md2_lattice_boltzmann_methods_for_industrial_applications_researchgate">[MD2] Lattice Boltzmann Methods for Industrial Applications - ResearchGate.</li>
+<li data-i18n="md6_rans_and_urans_cfd_online_forums">[MD6] RANS and URANS. - CFD Online Forums.</li>
+<li data-i18n="md7_comparative_analysis_for_rans_urans_and_ddes_turbulence_models_dlubal_software_faq">[MD7] Comparative Analysis for RANS, URANS, and DDES Turbulence Models - Dlubal Software FAQ.</li>
+</ol>
+</article>
+</div>
+<div class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

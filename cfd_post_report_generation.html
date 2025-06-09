@@ -1,115 +1,108 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CFD 후처리 - 보고서 생성 - 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_cfd_post_report_generation">CFD 후처리 - 보고서 생성 - 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-gray-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
-                    <a href="index.html">생물공학연구실</a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
-        <div class="bg-white p-6 md:p-10 rounded-xl shadow-xl">
-            <header class="mb-8 border-b pb-4">
-                <h1 class="text-3xl md:text-4xl font-bold text-slate-800">CFD 후처리 - 보고서 생성 (Report Generation)</h1>
-            </header>
-            <article class="prose prose-lg max-w-none">
-                <p>CFD 시뮬레이션의 최종 결과와 분석 내용을 체계적으로 정리하여 공유하기 위한 보고서 생성은 후처리 단계의 중요한 산출물입니다. 많은 상용 CFD 후처리 소프트웨어는 이러한 보고서 생성 과정을 자동화하거나 반자동화하는 기능을 제공하여 사용자의 편의성을 높이고, 일관성 있는 결과 전달을 가능하게 합니다 [6].</p>
-                
-                <h2 class="mt-8">자동화된 보고서 생성 기능</h2>
-                <p>Ansys CFD-Post [6], Autodesk CFD, TCFD (Turbo CFD)와 같은 소프트웨어들은 보고서 생성기(Report Generator) 기능을 통해 시뮬레이션 개요, 주요 설정, 결과 이미지(시각화 자료), 정량적 데이터(표, 그래프) 등을 포함하는 표준화된 보고서를 자동으로 생성할 수 있습니다. 사용자는 보고서 템플릿을 선택하거나 사용자 정의 템플릿을 만들어 특정 프로젝트 요구사항에 맞는 보고서 양식을 구성할 수 있습니다. 생성된 보고서는 주로 HTML, PDF, Microsoft Word 등 다양한 형식으로 내보낼 수 있습니다.</p>
-
-                <h2 class="mt-8">보고서에 포함되는 일반적인 내용</h2>
-                <p>자동 생성 보고서 또는 수동으로 작성되는 CFD 보고서에는 일반적으로 다음과 같은 내용이 포함됩니다 [6]:</p>
-                <ul>
-                    <li><strong>표지 정보</strong>: 프로젝트명, 보고서 제목, 작성자, 작성일 등</li>
-                    <li><strong>시뮬레이션 개요</strong>: 해석 목적, 대상 모델 설명, 주요 가정 등</li>
-                    <li><strong>전처리 정보</strong>: 사용된 형상, 메시 정보 (격자 수, 유형, 품질 지표 요약)</li>
-                    <li><strong>물리 모델 및 경계 조건</strong>: 사용된 지배 방정식, 난류 모델, 다상 유동 모델, 화학 반응 모델, 열전달 모델 등의 설정값과 각 경계면에 적용된 조건 상세</li>
-                    <li><strong>솔버 설정 및 수렴 이력</strong>: 사용된 수치 해석 기법, 이산화 차수, 솔버 파라미터, 수렴 기준, 잔차(residual) 그래프 또는 수렴 과정 모니터링 결과</li>
-                    <li><strong>정성적 결과 (시각화 자료)</strong>:
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
+<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
+<div class="bg-white p-6 md:p-10 rounded-xl shadow-xl" data-i18n="cfd_후처리_보고서_생성_report_generation_cfd_시뮬레이션의_최종_결과와_분석_내용을_체계적으로_정리하여_공유하기_위한_보고서_생성은_후처리_단계의_중요한_산출물입니다_많은_상용_cfd_후처리_소프트웨어는_이러한_보고서_생성_과정을_자동화하거나_반자동화하는_기능을_제공하여_사용자의_편의성을_높이고_일관성_있는_결과_전달을_가능하게_합니다_6_자동화된_보고서_생성_기능ansys_cfd_post_6_autodesk_cfd_tcfd_turbo_cfd_와_같은_소프트웨어들은_보고서_생성기_report_generator_기능을_통해_시뮬레이션_개요_주요_설정_결과_이미지_시각화_자료_정량적_데이터_표_그래프_등을_포함하는_표준화된_보고서를_자동으로_생성할_수_있습니다_사용자는_보고서_템플릿을_선택하거나_사용자_정의_템플릿을_만들어_특정_프로젝트_요구사항에_맞는_보고서_양식을_구성할_수_있습니다_생성된_보고서는_주로_html_pdf_microsoft_word_등_다양한_형식으로_내보낼_수_있습니다_보고서에_포함되는_일반적인_내용자동_생성_보고서_또는_수동으로_작성되는_cfd_보고서에는_일반적으로_다음과_같은_내용이_포함됩니다_6_표지_정보_프로젝트명_보고서_제목_작성자_작성일_등시뮬레이션_개요_해석_목적_대상_모델_설명_주요_가정_등전처리_정보_사용된_형상_메시_정보_격자_수_유형_품질_지표_요약_물리_모델_및_경계_조건_사용된_지배_방정식_난류_모델_다상_유동_모델_화학_반응_모델_열전달_모델_등의_설정값과_각_경계면에_적용된_조건_상세솔버_설정_및_수렴_이력_사용된_수치_해석_기법_이산화_차수_솔버_파라미터_수렴_기준_잔차_residual_그래프_또는_수렴_과정_모니터링_결과정성적_결과_시각화_자료_주요_물리량_속도_압력_온도_난류_특성치_등_의_컨투어_플롯유선_벡터_플롯_입자_궤적_등을_통한_유동_패턴_시각화등표면_슬라이스_컷을_통한_3차원_유동_구조_분석_이미지애니메이션_필요시_링크_또는_별도_파일_첨부_정량적_결과_특정_지점_선_면_체적에서_추출된_데이터_테이블xy_플롯_예_특정_라인을_따른_압력_분포_시간에_따른_힘의_변화_계산된_파생_데이터_예_항력_양력_계수_효율_열전달률_압력_강하량_결론_및_제언_해석_결과_요약_주요_발견_사항_설계_개선_방안_또는_추가_연구_제안참고문헌_필요시_일부_고급_보고서_생성_기능은_외부_데이터_파일_예_실험_데이터_을_불러와_시뮬레이션_결과와_함께_그래프로_비교_표시하는_기능도_지원합니다_6_보고서_생성의_중요성_및_활용결과_공유_및_소통_엔지니어_연구원_관리자_등_다양한_이해관계자에게_시뮬레이션_결과를_명확하고_효과적으로_전달합니다_의사결정_지원_정량적_정성적_분석_결과를_바탕으로_설계_변경_공정_개선_등_중요한_의사결정을_지원합니다_기록_보존_및_추적성_확보_수행된_해석의_조건_과정_결과를_문서화하여_향후_참조하거나_문제_발생_시_원인_분석의_기초_자료로_활용합니다_일관성_및_표준화_자동화된_보고서_생성은_반복적인_작업을_줄이고_여러_해석_프로젝트_간에_일관성_있는_보고서_품질을_유지하는_데_도움이_됩니다_잘_구성된_cfd_보고서는_시뮬레이션_작업의_최종_성과물로서_그_가치를_극대화하는_데_중요한_역할을_합니다_cfd_후처리_보고서_생성에_대한_더_자세한_학술적_내용_및_참고_자료는cfd_레퍼런스_페이지를_참조하십시오">
+<header class="mb-8 border-b pb-4">
+<h1 class="text-3xl md:text-4xl font-bold text-slate-800" data-i18n="cfd_후처리_보고서_생성_report_generation">CFD 후처리 - 보고서 생성 (Report Generation)</h1>
+</header>
+<article class="prose prose-lg max-w-none">
+<p data-i18n="cfd_시뮬레이션의_최종_결과와_분석_내용을_체계적으로_정리하여_공유하기_위한_보고서_생성은_후처리_단계의_중요한_산출물입니다_많은_상용_cfd_후처리_소프트웨어는_이러한_보고서_생성_과정을_자동화하거나_반자동화하는_기능을_제공하여_사용자의_편의성을_높이고_일관성_있는_결과_전달을_가능하게_합니다_6">CFD 시뮬레이션의 최종 결과와 분석 내용을 체계적으로 정리하여 공유하기 위한 보고서 생성은 후처리 단계의 중요한 산출물입니다. 많은 상용 CFD 후처리 소프트웨어는 이러한 보고서 생성 과정을 자동화하거나 반자동화하는 기능을 제공하여 사용자의 편의성을 높이고, 일관성 있는 결과 전달을 가능하게 합니다 [6].</p>
+<h2 class="mt-8" data-i18n="자동화된_보고서_생성_기능">자동화된 보고서 생성 기능</h2>
+<p data-i18n="ansys_cfd_post_6_autodesk_cfd_tcfd_turbo_cfd_와_같은_소프트웨어들은_보고서_생성기_report_generator_기능을_통해_시뮬레이션_개요_주요_설정_결과_이미지_시각화_자료_정량적_데이터_표_그래프_등을_포함하는_표준화된_보고서를_자동으로_생성할_수_있습니다_사용자는_보고서_템플릿을_선택하거나_사용자_정의_템플릿을_만들어_특정_프로젝트_요구사항에_맞는_보고서_양식을_구성할_수_있습니다_생성된_보고서는_주로_html_pdf_microsoft_word_등_다양한_형식으로_내보낼_수_있습니다">Ansys CFD-Post [6], Autodesk CFD, TCFD (Turbo CFD)와 같은 소프트웨어들은 보고서 생성기(Report Generator) 기능을 통해 시뮬레이션 개요, 주요 설정, 결과 이미지(시각화 자료), 정량적 데이터(표, 그래프) 등을 포함하는 표준화된 보고서를 자동으로 생성할 수 있습니다. 사용자는 보고서 템플릿을 선택하거나 사용자 정의 템플릿을 만들어 특정 프로젝트 요구사항에 맞는 보고서 양식을 구성할 수 있습니다. 생성된 보고서는 주로 HTML, PDF, Microsoft Word 등 다양한 형식으로 내보낼 수 있습니다.</p>
+<h2 class="mt-8" data-i18n="보고서에_포함되는_일반적인_내용">보고서에 포함되는 일반적인 내용</h2>
+<p data-i18n="자동_생성_보고서_또는_수동으로_작성되는_cfd_보고서에는_일반적으로_다음과_같은_내용이_포함됩니다_6">자동 생성 보고서 또는 수동으로 작성되는 CFD 보고서에는 일반적으로 다음과 같은 내용이 포함됩니다 [6]:</p>
+<ul>
+<li data-i18n="표지_정보_프로젝트명_보고서_제목_작성자_작성일_등"><strong>표지 정보</strong>: 프로젝트명, 보고서 제목, 작성자, 작성일 등</li>
+<li data-i18n="시뮬레이션_개요_해석_목적_대상_모델_설명_주요_가정_등"><strong>시뮬레이션 개요</strong>: 해석 목적, 대상 모델 설명, 주요 가정 등</li>
+<li data-i18n="전처리_정보_사용된_형상_메시_정보_격자_수_유형_품질_지표_요약"><strong>전처리 정보</strong>: 사용된 형상, 메시 정보 (격자 수, 유형, 품질 지표 요약)</li>
+<li data-i18n="물리_모델_및_경계_조건_사용된_지배_방정식_난류_모델_다상_유동_모델_화학_반응_모델_열전달_모델_등의_설정값과_각_경계면에_적용된_조건_상세"><strong>물리 모델 및 경계 조건</strong>: 사용된 지배 방정식, 난류 모델, 다상 유동 모델, 화학 반응 모델, 열전달 모델 등의 설정값과 각 경계면에 적용된 조건 상세</li>
+<li data-i18n="솔버_설정_및_수렴_이력_사용된_수치_해석_기법_이산화_차수_솔버_파라미터_수렴_기준_잔차_residual_그래프_또는_수렴_과정_모니터링_결과"><strong>솔버 설정 및 수렴 이력</strong>: 사용된 수치 해석 기법, 이산화 차수, 솔버 파라미터, 수렴 기준, 잔차(residual) 그래프 또는 수렴 과정 모니터링 결과</li>
+<li data-i18n="정성적_결과_시각화_자료_주요_물리량_속도_압력_온도_난류_특성치_등_의_컨투어_플롯유선_벡터_플롯_입자_궤적_등을_통한_유동_패턴_시각화등표면_슬라이스_컷을_통한_3차원_유동_구조_분석_이미지애니메이션_필요시_링크_또는_별도_파일_첨부"><strong>정성적 결과 (시각화 자료)</strong>:
                         <ul>
-                            <li>주요 물리량(속도, 압력, 온도, 난류 특성치 등)의 컨투어 플롯</li>
-                            <li>유선, 벡터 플롯, 입자 궤적 등을 통한 유동 패턴 시각화</li>
-                            <li>등표면, 슬라이스 컷을 통한 3차원 유동 구조 분석 이미지</li>
-                            <li>애니메이션 (필요시 링크 또는 별도 파일 첨부)</li>
-                        </ul>
-                    </li>
-                    <li><strong>정량적 결과</strong>:
+<li data-i18n="주요_물리량_속도_압력_온도_난류_특성치_등_의_컨투어_플롯">주요 물리량(속도, 압력, 온도, 난류 특성치 등)의 컨투어 플롯</li>
+<li data-i18n="유선_벡터_플롯_입자_궤적_등을_통한_유동_패턴_시각화">유선, 벡터 플롯, 입자 궤적 등을 통한 유동 패턴 시각화</li>
+<li data-i18n="등표면_슬라이스_컷을_통한_3차원_유동_구조_분석_이미지">등표면, 슬라이스 컷을 통한 3차원 유동 구조 분석 이미지</li>
+<li data-i18n="애니메이션_필요시_링크_또는_별도_파일_첨부">애니메이션 (필요시 링크 또는 별도 파일 첨부)</li>
+</ul>
+</li>
+<li data-i18n="정량적_결과_특정_지점_선_면_체적에서_추출된_데이터_테이블xy_플롯_예_특정_라인을_따른_압력_분포_시간에_따른_힘의_변화_계산된_파생_데이터_예_항력_양력_계수_효율_열전달률_압력_강하량"><strong>정량적 결과</strong>:
                         <ul>
-                            <li>특정 지점, 선, 면, 체적에서 추출된 데이터 테이블</li>
-                            <li>XY 플롯 (예: 특정 라인을 따른 압력 분포, 시간에 따른 힘의 변화)</li>
-                            <li>계산된 파생 데이터 (예: 항력/양력 계수, 효율, 열전달률, 압력 강하량)</li>
-                        </ul>
-                    </li>
-                    <li><strong>결론 및 제언</strong>: 해석 결과 요약, 주요 발견 사항, 설계 개선 방안 또는 추가 연구 제안</li>
-                    <li><strong>참고문헌</strong>: (필요시)</li>
-                </ul>
-                <p>일부 고급 보고서 생성 기능은 외부 데이터 파일(예: 실험 데이터)을 불러와 시뮬레이션 결과와 함께 그래프로 비교 표시하는 기능도 지원합니다 [6].</p>
-
-                <h2 class="mt-8">보고서 생성의 중요성 및 활용</h2>
-                <ul>
-                    <li><strong>결과 공유 및 소통</strong>: 엔지니어, 연구원, 관리자 등 다양한 이해관계자에게 시뮬레이션 결과를 명확하고 효과적으로 전달합니다.</li>
-                    <li><strong>의사결정 지원</strong>: 정량적, 정성적 분석 결과를 바탕으로 설계 변경, 공정 개선 등 중요한 의사결정을 지원합니다.</li>
-                    <li><strong>기록 보존 및 추적성 확보</strong>: 수행된 해석의 조건, 과정, 결과를 문서화하여 향후 참조하거나 문제 발생 시 원인 분석의 기초 자료로 활용합니다.</li>
-                    <li><strong>일관성 및 표준화</strong>: 자동화된 보고서 생성은 반복적인 작업을 줄이고, 여러 해석 프로젝트 간에 일관성 있는 보고서 품질을 유지하는 데 도움이 됩니다.</li>
-                </ul>
-                <p>잘 구성된 CFD 보고서는 시뮬레이션 작업의 최종 성과물로서, 그 가치를 극대화하는 데 중요한 역할을 합니다.</p>
-
-                <hr class="my-8 border-gray-300">
-                <p class="text-sm text-gray-600">CFD 후처리 보고서 생성에 대한 더 자세한 학술적 내용 및 참고 자료는 <a href="cfd_references.html#cfd-postprocessing-refs" class="text-[#0072CE] hover:text-[#004A99] font-medium">CFD 레퍼런스 페이지</a>를 참조하십시오.</p>
-            </article>
-        </div>
-        <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-
-    <script src="script.js" type="module"></script>
+<li data-i18n="특정_지점_선_면_체적에서_추출된_데이터_테이블">특정 지점, 선, 면, 체적에서 추출된 데이터 테이블</li>
+<li data-i18n="xy_플롯_예_특정_라인을_따른_압력_분포_시간에_따른_힘의_변화">XY 플롯 (예: 특정 라인을 따른 압력 분포, 시간에 따른 힘의 변화)</li>
+<li data-i18n="계산된_파생_데이터_예_항력_양력_계수_효율_열전달률_압력_강하량">계산된 파생 데이터 (예: 항력/양력 계수, 효율, 열전달률, 압력 강하량)</li>
+</ul>
+</li>
+<li data-i18n="결론_및_제언_해석_결과_요약_주요_발견_사항_설계_개선_방안_또는_추가_연구_제안"><strong>결론 및 제언</strong>: 해석 결과 요약, 주요 발견 사항, 설계 개선 방안 또는 추가 연구 제안</li>
+<li data-i18n="참고문헌_필요시"><strong>참고문헌</strong>: (필요시)</li>
+</ul>
+<p data-i18n="일부_고급_보고서_생성_기능은_외부_데이터_파일_예_실험_데이터_을_불러와_시뮬레이션_결과와_함께_그래프로_비교_표시하는_기능도_지원합니다_6">일부 고급 보고서 생성 기능은 외부 데이터 파일(예: 실험 데이터)을 불러와 시뮬레이션 결과와 함께 그래프로 비교 표시하는 기능도 지원합니다 [6].</p>
+<h2 class="mt-8" data-i18n="보고서_생성의_중요성_및_활용">보고서 생성의 중요성 및 활용</h2>
+<ul>
+<li data-i18n="결과_공유_및_소통_엔지니어_연구원_관리자_등_다양한_이해관계자에게_시뮬레이션_결과를_명확하고_효과적으로_전달합니다"><strong>결과 공유 및 소통</strong>: 엔지니어, 연구원, 관리자 등 다양한 이해관계자에게 시뮬레이션 결과를 명확하고 효과적으로 전달합니다.</li>
+<li data-i18n="의사결정_지원_정량적_정성적_분석_결과를_바탕으로_설계_변경_공정_개선_등_중요한_의사결정을_지원합니다"><strong>의사결정 지원</strong>: 정량적, 정성적 분석 결과를 바탕으로 설계 변경, 공정 개선 등 중요한 의사결정을 지원합니다.</li>
+<li data-i18n="기록_보존_및_추적성_확보_수행된_해석의_조건_과정_결과를_문서화하여_향후_참조하거나_문제_발생_시_원인_분석의_기초_자료로_활용합니다"><strong>기록 보존 및 추적성 확보</strong>: 수행된 해석의 조건, 과정, 결과를 문서화하여 향후 참조하거나 문제 발생 시 원인 분석의 기초 자료로 활용합니다.</li>
+<li data-i18n="일관성_및_표준화_자동화된_보고서_생성은_반복적인_작업을_줄이고_여러_해석_프로젝트_간에_일관성_있는_보고서_품질을_유지하는_데_도움이_됩니다"><strong>일관성 및 표준화</strong>: 자동화된 보고서 생성은 반복적인 작업을 줄이고, 여러 해석 프로젝트 간에 일관성 있는 보고서 품질을 유지하는 데 도움이 됩니다.</li>
+</ul>
+<p data-i18n="잘_구성된_cfd_보고서는_시뮬레이션_작업의_최종_성과물로서_그_가치를_극대화하는_데_중요한_역할을_합니다">잘 구성된 CFD 보고서는 시뮬레이션 작업의 최종 성과물로서, 그 가치를 극대화하는 데 중요한 역할을 합니다.</p>
+<hr class="my-8 border-gray-300"/>
+<p class="text-sm text-gray-600" data-i18n="cfd_후처리_보고서_생성에_대한_더_자세한_학술적_내용_및_참고_자료는cfd_레퍼런스_페이지를_참조하십시오">CFD 후처리 보고서 생성에 대한 더 자세한 학술적 내용 및 참고 자료는 <a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="cfd_레퍼런스_페이지" href="cfd_references.html#cfd-postprocessing-refs">CFD 레퍼런스 페이지</a>를 참조하십시오.</p>
+</article>
+</div>
+<div class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js" type="module"></script>
 </body>
 </html>
