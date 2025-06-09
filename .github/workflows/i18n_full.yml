@@ -46,6 +46,7 @@ jobs:
       - name: Auto-tag & translate
         env:
           GCLOUD_PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
+          GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
         run: python scripts/i18n_full_auto.py --skip-if-no-diff
 
       - name: Create/Update PR
