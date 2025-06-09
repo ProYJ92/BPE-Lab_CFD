@@ -6,6 +6,7 @@ permissions:
 
 on:
   push:
+    branches: [main]
     paths:
       - '**.html'
       - '!assets/i18n/**'
