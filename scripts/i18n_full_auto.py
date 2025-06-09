@@ -52,6 +52,7 @@ else:
 
 process_files = [f for f in diff if f.endswith(('.html', '.md'))]
 print(f"Processing {len(process_files)} files")
+print(f"Processing files: {process_files}")
 if args.skip and not process_files and not args.force:
     print('No changes detected; skipping i18n update.')
     sys.exit(0)
@@ -112,15 +113,18 @@ def slug(text):
         key = hashlib.sha1(text.encode()).hexdigest()[:10]
     return key
 
-def translate_or_exit(text, target_language):
+def translate_or_exit(text, target_language, key):
     try:
-        return client.translate(
+        result = client.translate(
             text,
             target_language=target_language,
             source_language='ko'
         )['translatedText']
+        print(f"Translated {key} -> {target_language}")
+        return result
     except Exception as exc:
-        print(f'Error translating to {target_language}: {exc}', file=sys.stderr)
+        msg = f"Error translating key '{key}' to {target_language}: {type(exc).__name__}: {exc}"
+        print(msg, file=sys.stderr)
         sys.exit(1)
 
 new_keys = set()
@@ -170,9 +174,9 @@ if new_keys:
     for key in new_keys:
         text = ko[key]
         if not en.get(key):
-            en[key] = translate_or_exit(text, 'en')
+            en[key] = translate_or_exit(text, 'en', key)
         if not zh.get(key):
-            zh[key] = translate_or_exit(text, 'zh')
+            zh[key] = translate_or_exit(text, 'zh', key)
 
 ko_path.write_text(json.dumps(ko, ensure_ascii=False, indent=2), 'utf-8')
 en_path.write_text(json.dumps(en, ensure_ascii=False, indent=2), 'utf-8')
