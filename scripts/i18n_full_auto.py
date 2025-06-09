@@ -44,6 +44,7 @@ else:
         ).stdout.split()
 
 process_files = [f for f in diff if f.endswith(('.html', '.md'))]
+print(f"Files to process: {len(process_files)}")
 if args.skip and not process_files and not args.force:
     print('No changes detected; skipping i18n update.')
     sys.exit(0)
@@ -132,6 +133,9 @@ for file in process_files:
                 new_keys.add(key)
     if modified:
         path.write_text(str(soup), 'utf-8')
+        print(f"Updated {file}")
+
+print(f"New keys found: {len(new_keys)}")
 
 if new_keys:
     for key in new_keys:
