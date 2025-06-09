@@ -1,101 +1,108 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="title_mstar_cfd_validation">M-STAR CFD V&amp;V - 소프트웨어 | 생물공학연구실</title>
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-STAR CFD V&V - 소프트웨어 | 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
-<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
-<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
-</h1>
-<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
-<ul class="container mx-auto px-0 flex justify-center">
-</ul>
-</nav>
-<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
-<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
-<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
-<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
-</div>
-</div>
-<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
-<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
-<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
-</div>
-</div>
-</div>
-<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
-<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-</div>
-</nav>
-</div>
-<main class="container mx-auto px-4 mt-5 py-12">
-<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-<div class="mb-8" data-i18n="m_star_cfd_메인으로_돌아가기">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="m_star_cfd_메인으로_돌아가기" href="mstar_cfd_main.html">« M-STAR CFD 메인으로 돌아가기</a>
-</div>
-<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="6_verification_validation_검증_및_타당성_평가">6. Verification &amp; Validation (검증 및 타당성 평가)</h2>
-<p data-i18n="m_star_cfd는_상용_소프트웨어로서_그_예측_정확성과_신뢰성을_입증하기_위해_다양한_학술_문헌_및_실제_산업_적용_사례와의_비교를_통한_검증_verification_및_타당성_평가_validation_v_v_자료를_제공합니다_v_v는_m_star_cfd의_lattice_boltzmann_method_lbm_기반_솔버_특히_large_eddy_simulation_les_모델_및_물리_모델이_실제_현상을_얼마나_잘_모사하는지_평가하는_데_중요합니다_다수의_국제_학술지_및_컨퍼런스_발표_자료에서_m_star_cfd_시뮬레이션_결과와_실험_데이터_간의_매우_높은_수준의_일치도가_보고되고_있으며_이는_소프트웨어의_정확성과_신뢰성을_뒷받침합니다">M-STAR CFD는 상용 소프트웨어로서 그 예측 정확성과 신뢰성을 입증하기 위해 다양한 학술 문헌 및 실제 산업 적용 사례와의 비교를 통한 검증(Verification) 및 타당성 평가(Validation, V&amp;V) 자료를 제공합니다. V&amp;V는 M-STAR CFD의 Lattice Boltzmann Method (LBM) 기반 솔버, 특히 Large Eddy Simulation (LES) 모델 및 물리 모델이 실제 현상을 얼마나 잘 모사하는지 평가하는 데 중요합니다. 다수의 국제 학술지 및 컨퍼런스 발표 자료에서 M-STAR CFD 시뮬레이션 결과와 실험 데이터 간의 매우 높은 수준의 일치도가 보고되고 있으며, 이는 소프트웨어의 정확성과 신뢰성을 뒷받침합니다.</p>
-<figure class="embedded-image-figure">
-<img alt="M-STAR CFD 검증 및 타당성 평가 관련 이미지" class="max-w-xl" data-i18n="m_star_cfd_검증_및_타당성_평가_관련_이미지" src="https://mstarcfd.com/wp-content/uploads/news-post-1024x572-1.jpg"/>
-<figcaption>M-STAR CFD를 이용한 시뮬레이션 결과와 실험 데이터 비교를 통한 검증 사례 (출처: mstarcfd.com)</figcaption>
-</figure>
-<ul>
-<li data-i18n="검증_및_타당성_평가_자료_접근_m_star_cfd_공식_문서_validation_literature_섹션에서_다양한_검증_사례_및_관련_참고_문헌_목록을_제공합니다_이_자료들은_m_star_cfd의_특정_기능이나_모델이_잘_알려진_벤치마크_문제_또는_실험_결과와_비교하여_얼마나_정확한지_보여줍니다_m_star_cfd_공식_웹사이트_peer_reviewed_validation_peer_reviewed_validation_섹션및_resources_페이지에서_m_star_cfd를_사용하여_수행되고_동료_검토를_거친_학술_논문_기술_문서_산업_사례_연구_목록을_제공합니다_이를_통해_실제_문제_해결에_대한_소프트웨어의_적용성과_신뢰도를_확인할_수_있습니다"><strong>검증 및 타당성 평가 자료 접근:</strong>
-<ul class="list-disc pl-4 space-y-1">
-<li data-i18n="m_star_cfd_공식_문서_validation_literature_섹션에서_다양한_검증_사례_및_관련_참고_문헌_목록을_제공합니다_이_자료들은_m_star_cfd의_특정_기능이나_모델이_잘_알려진_벤치마크_문제_또는_실험_결과와_비교하여_얼마나_정확한지_보여줍니다"><strong>M-STAR CFD 공식 문서</strong>: <a data-i18n="validation_literature_섹션" href="https://docs.mstarcfd.com/15_Validation_Literature/txt-rst-files/Validation-literature-index.html" rel="noopener noreferrer" target="_blank">Validation / Literature 섹션</a>에서 다양한 검증 사례 및 관련 참고 문헌 목록을 제공합니다. 이 자료들은 M-STAR CFD의 특정 기능이나 모델이 잘 알려진 벤치마크 문제 또는 실험 결과와 비교하여 얼마나 정확한지 보여줍니다.</li>
-<li data-i18n="m_star_cfd_공식_웹사이트_peer_reviewed_validation_peer_reviewed_validation_섹션및_resources_페이지에서_m_star_cfd를_사용하여_수행되고_동료_검토를_거친_학술_논문_기술_문서_산업_사례_연구_목록을_제공합니다_이를_통해_실제_문제_해결에_대한_소프트웨어의_적용성과_신뢰도를_확인할_수_있습니다"><strong>M-STAR CFD 공식 웹사이트 - Peer Reviewed Validation</strong>: <a data-i18n="peer_reviewed_validation_섹션" href="https://mstarcfd.com/peer-reviewed-validation/" rel="noopener noreferrer" target="_blank">Peer Reviewed Validation 섹션</a> 및 Resources 페이지에서 M-STAR CFD를 사용하여 수행되고 동료 검토를 거친 학술 논문, 기술 문서, 산업 사례 연구 목록을 제공합니다. 이를 통해 실제 문제 해결에 대한 소프트웨어의 적용성과 신뢰도를 확인할 수 있습니다.</li>
-</ul>
-</li>
-<li data-i18n="주요_검증_및_타당성_평가_사례_분야_교반_탱크_및_바이오리액터_다양한_크기_실험실_규모부터_10_000l_이상의_생산_규모까지_의_교반_탱크에서_혼합_시간_동력_소모_유동_패턴_기체_홀드업_물질_전달_계수_kla_기포_크기_분포_에너지_소산률_등을_실험_데이터_또는_타_cfd_소프트웨어_결과와_비교_검증합니다_lbm_les_모델은_이러한_복잡한_비정상_난류_유동을_높은_정확도로_예측하는_데_강점을_보입니다_다상_유동_시스템_기체_액체_액체_액체_분산_시스템_자유_표면_유동_기포탑_bubble_column_등에서_유동_특성_및_상호작용을_실험_결과와_비교합니다_입자_유체_시스템_유동층_입자_부유_및_침강_고체_액체_혼합_등에서_입자_거동_및_농도_분포를_예측하고_실험_데이터와_비교합니다_cfd_dem_결합_모델_활용_산업_공정_적용_특히_제약_및_바이오프로세스_주요_제약_회사_예_abbvie_pfizer_bristol_myers_squibb_에서의_바이오프로세스_스케일업_대사_산소_이동_최적화_디지털_트윈_구축_등_실제_산업_공정_적용_사례를_통해_소프트웨어의_실용성과_예측_정확성을_검증합니다_이러한_사례들은m_star_cfd_news_섹션에서도_종종_소개됩니다_기타_벤치마크_문제_표준적인_유체역학_문제_예_lid_driven_cavity_flow_past_a_cylinder_에_대한_lbm_솔버의_기본적인_정확도_검증_임펠러_후류_유동_정맥_주사_장치_내_유체_역학_등_특정_응용_분야의_벤치마크_사례도_포함될_수_있습니다"><strong>주요 검증 및 타당성 평가 사례 분야:</strong>
-<ul class="list-disc pl-4 space-y-1">
-<li data-i18n="교반_탱크_및_바이오리액터_다양한_크기_실험실_규모부터_10_000l_이상의_생산_규모까지_의_교반_탱크에서_혼합_시간_동력_소모_유동_패턴_기체_홀드업_물질_전달_계수_kla_기포_크기_분포_에너지_소산률_등을_실험_데이터_또는_타_cfd_소프트웨어_결과와_비교_검증합니다_lbm_les_모델은_이러한_복잡한_비정상_난류_유동을_높은_정확도로_예측하는_데_강점을_보입니다"><strong>교반 탱크 및 바이오리액터</strong>: 다양한 크기(실험실 규모부터 10,000L 이상의 생산 규모까지)의 교반 탱크에서 혼합 시간, 동력 소모, 유동 패턴, 기체 홀드업, 물질 전달 계수(kLa), 기포 크기 분포, 에너지 소산률 등을 실험 데이터 또는 타 CFD 소프트웨어 결과와 비교 검증합니다. LBM-LES 모델은 이러한 복잡한 비정상 난류 유동을 높은 정확도로 예측하는 데 강점을 보입니다.</li>
-<li data-i18n="다상_유동_시스템_기체_액체_액체_액체_분산_시스템_자유_표면_유동_기포탑_bubble_column_등에서_유동_특성_및_상호작용을_실험_결과와_비교합니다"><strong>다상 유동 시스템</strong>: 기체-액체, 액체-액체 분산 시스템, 자유 표면 유동, 기포탑(bubble column) 등에서 유동 특성 및 상호작용을 실험 결과와 비교합니다.</li>
-<li data-i18n="입자_유체_시스템_유동층_입자_부유_및_침강_고체_액체_혼합_등에서_입자_거동_및_농도_분포를_예측하고_실험_데이터와_비교합니다_cfd_dem_결합_모델_활용"><strong>입자-유체 시스템</strong>: 유동층, 입자 부유 및 침강, 고체-액체 혼합 등에서 입자 거동 및 농도 분포를 예측하고 실험 데이터와 비교합니다 (CFD-DEM 결합 모델 활용).</li>
-<li data-i18n="산업_공정_적용_특히_제약_및_바이오프로세스_주요_제약_회사_예_abbvie_pfizer_bristol_myers_squibb_에서의_바이오프로세스_스케일업_대사_산소_이동_최적화_디지털_트윈_구축_등_실제_산업_공정_적용_사례를_통해_소프트웨어의_실용성과_예측_정확성을_검증합니다_이러한_사례들은m_star_cfd_news_섹션에서도_종종_소개됩니다"><strong>산업 공정 적용 (특히 제약 및 바이오프로세스)</strong>: 주요 제약 회사(예: AbbVie, Pfizer, Bristol Myers Squibb)에서의 바이오프로세스 스케일업, 대사 산소 이동 최적화, 디지털 트윈 구축 등 실제 산업 공정 적용 사례를 통해 소프트웨어의 실용성과 예측 정확성을 검증합니다. 이러한 사례들은 <a data-i18n="m_star_cfd_news_섹션" href="https://mstarcfd.com/news/" rel="noopener noreferrer" target="_blank">M-STAR CFD News 섹션</a>에서도 종종 소개됩니다.</li>
-<li data-i18n="기타_벤치마크_문제_표준적인_유체역학_문제_예_lid_driven_cavity_flow_past_a_cylinder_에_대한_lbm_솔버의_기본적인_정확도_검증_임펠러_후류_유동_정맥_주사_장치_내_유체_역학_등_특정_응용_분야의_벤치마크_사례도_포함될_수_있습니다"><strong>기타 벤치마크 문제</strong>: 표준적인 유체역학 문제(예: Lid-driven cavity, Flow past a cylinder)에 대한 LBM 솔버의 기본적인 정확도 검증. 임펠러 후류 유동, 정맥 주사 장치 내 유체 역학 등 특정 응용 분야의 벤치마크 사례도 포함될 수 있습니다.</li>
-</ul>
-</li>
-<li data-i18n="신뢰도_및_고려_사항_m_star_cfd는_실험_데이터와_구별할_수_없을_정도_indistinguishable_의_높은_예측_정밀도를_보이는_것으로_보고된_바_있습니다_그러나_모든_cfd_시뮬레이션과_마찬가지로_결과의_정확성은_사용된_물리_모델_예_난류_모델_기포_합체_분열_모델_격자_해상도_lattice_resolution_경계_조건_설정_유체_물성_입력값_등의_정확성에_따라_달라질_수_있습니다_따라서_사용자는_특정_적용_분야에_대해_제공된_v_v_자료를_비판적으로_검토하고_필요한_경우_자체적인_검증_연구를_수행하는_것이_권장됩니다_m_star_cfd의_간소화된_전처리_무메쉬_또는_자동_격자_생성_는_사용자_오류를_줄이는_데_기여할_수_있습니다"><strong>신뢰도 및 고려 사항</strong>: M-STAR CFD는 실험 데이터와 "구별할 수 없을 정도(indistinguishable)"의 높은 예측 정밀도를 보이는 것으로 보고된 바 있습니다. 그러나 모든 CFD 시뮬레이션과 마찬가지로, 결과의 정확성은 사용된 물리 모델(예: 난류 모델, 기포 합체/분열 모델), 격자 해상도(Lattice resolution), 경계 조건 설정, 유체 물성 입력값 등의 정확성에 따라 달라질 수 있습니다. 따라서 사용자는 특정 적용 분야에 대해 제공된 V&amp;V 자료를 비판적으로 검토하고, 필요한 경우 자체적인 검증 연구를 수행하는 것이 권장됩니다. M-STAR CFD의 간소화된 전처리(무메쉬 또는 자동 격자 생성)는 사용자 오류를 줄이는 데 기여할 수 있습니다.</li>
-</ul>
-<div class="my-6 responsive-iframe-container">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" data-i18n="youtube_video_player_agitated_tank_demonstration_using_m_star_cfd" src="https://www.youtube.com/embed/I8hmnl2wpt0" title="YouTube video player: Agitated Tank Demonstration Using M-Star CFD"></iframe>
-</div>
-<p class="text-sm text-gray-600 mt-2 italic text-center" data-i18n="m_star_cfd를_이용한_교반_탱크_시뮬레이션_데모_및_검증_관련_영상_출처_m_star_cfd_youtube">M-STAR CFD를 이용한 교반 탱크 시뮬레이션 데모 및 검증 관련 영상 (출처: M-Star CFD YouTube)</p>
-<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="참고_자료">참고 자료</h3>
-<ul class="list-disc pl-5 space-y-1 text-sm">
-<li data-i18n="m_star_cfd_official_documentation_validation_literature"><a data-i18n="m_star_cfd_official_documentation_validation_literature" href="https://docs.mstarcfd.com/15_Validation_Literature/txt-rst-files/Validation-literature-index.html" rel="noopener noreferrer" target="_blank">M-STAR CFD Official Documentation - Validation / Literature</a></li>
-<li data-i18n="m_star_cfd_website_peer_reviewed_validation_academic_papers"><a data-i18n="m_star_cfd_website_peer_reviewed_validation_academic_papers" href="https://mstarcfd.com/peer-reviewed-validation/" rel="noopener noreferrer" target="_blank">M-STAR CFD Website - Peer Reviewed Validation (Academic Papers)</a></li>
-<li data-i18n="m_star_cfd_website_resources_case_studies_webinars"><a data-i18n="m_star_cfd_website_resources_case_studies_webinars" href="https://mstarcfd.com/resources/" rel="noopener noreferrer" target="_blank">M-STAR CFD Website - Resources (Case Studies, Webinars)</a></li>
-<li data-i18n="m_star_cfd_website_news_최신_적용_사례_및_산업_동향"><a data-i18n="m_star_cfd_website_news_최신_적용_사례_및_산업_동향" href="https://mstarcfd.com/news/" rel="noopener noreferrer" target="_blank">M-STAR CFD Website - News (최신 적용 사례 및 산업 동향)</a></li>
-</ul>
-</article>
-<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
-<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
-<div class="space-y-4" id="searchResultsList"></div>
-</div>
-</main>
-<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
-<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
-</p>
-<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-</div>
-</footer>
-<script src="script.js"></script>
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
+                    <span class="hamster-icon">🐹</span>
+                    <span class="helper-text">뭐든 물어봐!</span>
+                </div>
+            </div>
+        </div>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 mt-5 py-12">
+        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+            <div class="mb-8">
+                <a href="mstar_cfd_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; M-STAR CFD 메인으로 돌아가기</a>
+            </div>
+            
+            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">6. Verification & Validation (검증 및 타당성 평가)</h2>
+            <p>M-STAR CFD는 상용 소프트웨어로서 그 예측 정확성과 신뢰성을 입증하기 위해 다양한 학술 문헌 및 실제 산업 적용 사례와의 비교를 통한 검증(Verification) 및 타당성 평가(Validation, V&V) 자료를 제공합니다. V&V는 M-STAR CFD의 Lattice Boltzmann Method (LBM) 기반 솔버, 특히 Large Eddy Simulation (LES) 모델 및 물리 모델이 실제 현상을 얼마나 잘 모사하는지 평가하는 데 중요합니다. 다수의 국제 학술지 및 컨퍼런스 발표 자료에서 M-STAR CFD 시뮬레이션 결과와 실험 데이터 간의 매우 높은 수준의 일치도가 보고되고 있으며, 이는 소프트웨어의 정확성과 신뢰성을 뒷받침합니다.</p>
+
+            <figure class="embedded-image-figure">
+                <img src="https://mstarcfd.com/wp-content/uploads/news-post-1024x572-1.jpg" alt="M-STAR CFD 검증 및 타당성 평가 관련 이미지" class="max-w-xl">
+                <figcaption>M-STAR CFD를 이용한 시뮬레이션 결과와 실험 데이터 비교를 통한 검증 사례 (출처: mstarcfd.com)</figcaption>
+            </figure>
+
+            <ul>
+                <li><strong>검증 및 타당성 평가 자료 접근:</strong>
+                    <ul class="list-disc pl-4 space-y-1">
+                        <li><strong>M-STAR CFD 공식 문서</strong>: <a href="https://docs.mstarcfd.com/15_Validation_Literature/txt-rst-files/Validation-literature-index.html" target="_blank" rel="noopener noreferrer">Validation / Literature 섹션</a>에서 다양한 검증 사례 및 관련 참고 문헌 목록을 제공합니다. 이 자료들은 M-STAR CFD의 특정 기능이나 모델이 잘 알려진 벤치마크 문제 또는 실험 결과와 비교하여 얼마나 정확한지 보여줍니다.</li>
+                        <li><strong>M-STAR CFD 공식 웹사이트 - Peer Reviewed Validation</strong>: <a href="https://mstarcfd.com/peer-reviewed-validation/" target="_blank" rel="noopener noreferrer">Peer Reviewed Validation 섹션</a> 및 Resources 페이지에서 M-STAR CFD를 사용하여 수행되고 동료 검토를 거친 학술 논문, 기술 문서, 산업 사례 연구 목록을 제공합니다. 이를 통해 실제 문제 해결에 대한 소프트웨어의 적용성과 신뢰도를 확인할 수 있습니다.</li>
+                    </ul>
+                </li>
+                <li><strong>주요 검증 및 타당성 평가 사례 분야:</strong>
+                    <ul class="list-disc pl-4 space-y-1">
+                        <li><strong>교반 탱크 및 바이오리액터</strong>: 다양한 크기(실험실 규모부터 10,000L 이상의 생산 규모까지)의 교반 탱크에서 혼합 시간, 동력 소모, 유동 패턴, 기체 홀드업, 물질 전달 계수(kLa), 기포 크기 분포, 에너지 소산률 등을 실험 데이터 또는 타 CFD 소프트웨어 결과와 비교 검증합니다. LBM-LES 모델은 이러한 복잡한 비정상 난류 유동을 높은 정확도로 예측하는 데 강점을 보입니다.</li>
+                        <li><strong>다상 유동 시스템</strong>: 기체-액체, 액체-액체 분산 시스템, 자유 표면 유동, 기포탑(bubble column) 등에서 유동 특성 및 상호작용을 실험 결과와 비교합니다.</li>
+                        <li><strong>입자-유체 시스템</strong>: 유동층, 입자 부유 및 침강, 고체-액체 혼합 등에서 입자 거동 및 농도 분포를 예측하고 실험 데이터와 비교합니다 (CFD-DEM 결합 모델 활용).</li>
+                        <li><strong>산업 공정 적용 (특히 제약 및 바이오프로세스)</strong>: 주요 제약 회사(예: AbbVie, Pfizer, Bristol Myers Squibb)에서의 바이오프로세스 스케일업, 대사 산소 이동 최적화, 디지털 트윈 구축 등 실제 산업 공정 적용 사례를 통해 소프트웨어의 실용성과 예측 정확성을 검증합니다. 이러한 사례들은 <a href="https://mstarcfd.com/news/" target="_blank" rel="noopener noreferrer">M-STAR CFD News 섹션</a>에서도 종종 소개됩니다.</li>
+                        <li><strong>기타 벤치마크 문제</strong>: 표준적인 유체역학 문제(예: Lid-driven cavity, Flow past a cylinder)에 대한 LBM 솔버의 기본적인 정확도 검증. 임펠러 후류 유동, 정맥 주사 장치 내 유체 역학 등 특정 응용 분야의 벤치마크 사례도 포함될 수 있습니다.</li>
+                    </ul>
+                </li>
+                <li><strong>신뢰도 및 고려 사항</strong>: M-STAR CFD는 실험 데이터와 "구별할 수 없을 정도(indistinguishable)"의 높은 예측 정밀도를 보이는 것으로 보고된 바 있습니다. 그러나 모든 CFD 시뮬레이션과 마찬가지로, 결과의 정확성은 사용된 물리 모델(예: 난류 모델, 기포 합체/분열 모델), 격자 해상도(Lattice resolution), 경계 조건 설정, 유체 물성 입력값 등의 정확성에 따라 달라질 수 있습니다. 따라서 사용자는 특정 적용 분야에 대해 제공된 V&V 자료를 비판적으로 검토하고, 필요한 경우 자체적인 검증 연구를 수행하는 것이 권장됩니다. M-STAR CFD의 간소화된 전처리(무메쉬 또는 자동 격자 생성)는 사용자 오류를 줄이는 데 기여할 수 있습니다.</li>
+            </ul>
+            <div class="my-6 responsive-iframe-container">
+                <iframe src="https://www.youtube.com/embed/I8hmnl2wpt0" title="YouTube video player: Agitated Tank Demonstration Using M-Star CFD" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p class="text-sm text-gray-600 mt-2 italic text-center">M-STAR CFD를 이용한 교반 탱크 시뮬레이션 데모 및 검증 관련 영상 (출처: M-Star CFD YouTube)</p>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">참고 자료</h3>
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+                <li><a href="https://docs.mstarcfd.com/15_Validation_Literature/txt-rst-files/Validation-literature-index.html" target="_blank" rel="noopener noreferrer">M-STAR CFD Official Documentation - Validation / Literature</a></li>
+                <li><a href="https://mstarcfd.com/peer-reviewed-validation/" target="_blank" rel="noopener noreferrer">M-STAR CFD Website - Peer Reviewed Validation (Academic Papers)</a></li>
+                <li><a href="https://mstarcfd.com/resources/" target="_blank" rel="noopener noreferrer">M-STAR CFD Website - Resources (Case Studies, Webinars)</a></li>
+                <li><a href="https://mstarcfd.com/news/" target="_blank" rel="noopener noreferrer">M-STAR CFD Website - News (최신 적용 사례 및 산업 동향)</a></li>
+            </ul>
+
+        </article>
+        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

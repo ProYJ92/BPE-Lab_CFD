@@ -1,132 +1,140 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="title_openfoam_resources">OpenFOAM 자료실 - 소프트웨어 | 생물공학연구실</title>
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenFOAM 자료실 - 소프트웨어 | 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
-<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
-<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
-</h1>
-<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
-<ul class="container mx-auto px-0 flex justify-center">
-</ul>
-</nav>
-<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
-<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
-<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
-<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
-</div>
-</div>
-<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
-<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
-<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
-</div>
-</div>
-</div>
-<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
-<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-</div>
-</nav>
-</div>
-<main class="container mx-auto px-4 mt-5 py-12">
-<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-<div class="mb-8" data-i18n="openfoam_메인으로_돌아가기">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="openfoam_메인으로_돌아가기" href="openfoam_main.html">« OpenFOAM 메인으로 돌아가기</a>
-</div>
-<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="8_자료실_resources">8. 자료실 (Resources)</h2>
-<p data-i18n="openfoam은_오픈_소스_소프트웨어의_특성상_방대한_양의_공식_문서_교육_자료_그리고_매우_활발한_사용자_및_개발자_커뮤니티를_통해_풍부한_학습_및_지원_체계를_갖추고_있습니다_openfoam_학습_및_활용에_필요한_대부분의_정보는_이러한_자원들을_통해_얻을_수_있으며_최신_버전_예_openfoam_12_v2412_등_에_대한_정보와_릴리즈_노트도_공식_웹사이트에서_제공됩니다">OpenFOAM은 오픈 소스 소프트웨어의 특성상 방대한 양의 공식 문서, 교육 자료, 그리고 매우 활발한 사용자 및 개발자 커뮤니티를 통해 풍부한 학습 및 지원 체계를 갖추고 있습니다. OpenFOAM 학습 및 활용에 필요한 대부분의 정보는 이러한 자원들을 통해 얻을 수 있으며, 최신 버전(예: OpenFOAM 12, v2412 등)에 대한 정보와 릴리즈 노트도 공식 웹사이트에서 제공됩니다.</p>
-<figure class="embedded-image-figure">
-<img alt="OpenFOAM 교육 자료" class="max-w-xl" data-i18n="openfoam_교육_자료" src="https://www.openfoam.com/img/slides/slide-training.jpg"/>
-<figcaption>OpenFOAM 관련 교육 및 훈련 자료 이미지 (출처: openfoam.com)</figcaption>
-</figure>
-<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="공식_자료_official_resources">공식 자료 (Official Resources)</h3>
-<ul class="list-disc pl-5 space-y-2">
-<li data-i18n="openfoam_foundation_웹사이트_https_openfoam_org_사용자_가이드_user_guide_프로그래머_가이드_programmer_s_guide_기술_문서_커뮤니티_튜토리얼_교육_자료_뉴스_및_이벤트_정보최신_버전_예_openfoam_12_다운로드_설치_안내_및_릴리즈_노트_openfoam_12_release_notes"><strong>OpenFOAM Foundation 웹사이트</strong>: <a data-i18n="https_openfoam_org" href="https://openfoam.org/" rel="noopener noreferrer" target="_blank">https://openfoam.org/</a>
-<ul class="list-disc pl-4 mt-1">
-<li data-i18n="사용자_가이드_user_guide_프로그래머_가이드_programmer_s_guide">사용자 가이드 (User Guide), 프로그래머 가이드 (Programmer's Guide)</li>
-<li data-i18n="기술_문서_커뮤니티_튜토리얼_교육_자료_뉴스_및_이벤트_정보">기술 문서, 커뮤니티 튜토리얼, 교육 자료, 뉴스 및 이벤트 정보</li>
-<li data-i18n="최신_버전_예_openfoam_12_다운로드_설치_안내_및_릴리즈_노트_openfoam_12_release_notes">최신 버전 (예: OpenFOAM 12) 다운로드, 설치 안내 및 릴리즈 노트 (<a data-i18n="openfoam_12_release_notes" href="https://openfoam.org/version/12/" rel="noopener noreferrer" target="_blank">OpenFOAM 12 Release Notes</a>)</li>
-</ul>
-</li>
-<li data-i18n="esi_group_opencfd_ltd_openfoam_웹사이트_https_www_openfoam_com_공식_문서_사용자_가이드_기술_문서_버전별_제공_주기적인_공식_교육_과정_및_심화_교육_프로그램_안내_2024_2025년_과정_포함_뉴스_커뮤니티_지원_컨설팅_서비스_정보최신_버전_예_openfoam_vyymm_v2406_v2412_등_다운로드_설치_안내_및_릴리즈_정보"><strong>ESI Group (OpenCFD Ltd.) OpenFOAM 웹사이트</strong>: <a data-i18n="https_www_openfoam_com" href="https://www.openfoam.com/" rel="noopener noreferrer" target="_blank">https://www.openfoam.com/</a>
-<ul class="list-disc pl-4 mt-1">
-<li data-i18n="공식_문서_사용자_가이드_기술_문서_버전별_제공">공식 문서, 사용자 가이드, 기술 문서 (버전별 제공)</li>
-<li data-i18n="주기적인_공식_교육_과정_및_심화_교육_프로그램_안내_2024_2025년_과정_포함">주기적인 공식 교육 과정 및 심화 교육 프로그램 안내 (2024-2025년 과정 포함)</li>
-<li data-i18n="뉴스_커뮤니티_지원_컨설팅_서비스_정보">뉴스, 커뮤니티 지원, 컨설팅 서비스 정보</li>
-<li data-i18n="최신_버전_예_openfoam_vyymm_v2406_v2412_등_다운로드_설치_안내_및_릴리즈_정보">최신 버전 (예: OpenFOAM vYYMM, v2406, v2412 등) 다운로드, 설치 안내 및 릴리즈 정보</li>
-</ul>
-</li>
-<li data-i18n="openfoam_공식_문서_포털_openfoam_com_제공_https_doc_openfoam_com_버전별_사용자_가이드_튜토리얼_가이드_api_문서_등_가장_상세하고_포괄적인_기술_문서_모음검증_및_타당성_평가_v_v_사례_포함"><strong>OpenFOAM 공식 문서 포털 (OpenFOAM.com 제공)</strong>: <a data-i18n="https_doc_openfoam_com" href="https://doc.openfoam.com/" rel="noopener noreferrer" target="_blank">https://doc.openfoam.com/</a>
-<ul class="list-disc pl-4 mt-1">
-<li data-i18n="버전별_사용자_가이드_튜토리얼_가이드_api_문서_등_가장_상세하고_포괄적인_기술_문서_모음">버전별 사용자 가이드, 튜토리얼 가이드, API 문서 등 가장 상세하고 포괄적인 기술 문서 모음</li>
-<li data-i18n="검증_및_타당성_평가_v_v_사례_포함">검증 및 타당성 평가 (V&amp;V) 사례 포함</li>
-</ul>
-</li>
-<li data-i18n="cfd_direct_사용자_가이드_https_doc_cfd_direct_openfoam_user_guide_cfd_direct_제공_또_다른_신뢰할_수_있는_종합_사용자_가이드_및_튜토리얼_제공"><strong>CFD Direct 사용자 가이드</strong>: <a data-i18n="https_doc_cfd_direct_openfoam_user_guide" href="https://doc.cfd.direct/openfoam/user-guide/" rel="noopener noreferrer" target="_blank">https://doc.cfd.direct/openfoam/user-guide/</a> (CFD Direct 제공)
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
+                    <span class="hamster-icon">🐹</span>
+                    <span class="helper-text">뭐든 물어봐!</span>
+                </div>
+            </div>
+        </div>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 mt-5 py-12">
+        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+            <div class="mb-8">
+                <a href="openfoam_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; OpenFOAM 메인으로 돌아가기</a>
+            </div>
+            
+            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">8. 자료실 (Resources)</h2>
+            <p>OpenFOAM은 오픈 소스 소프트웨어의 특성상 방대한 양의 공식 문서, 교육 자료, 그리고 매우 활발한 사용자 및 개발자 커뮤니티를 통해 풍부한 학습 및 지원 체계를 갖추고 있습니다. OpenFOAM 학습 및 활용에 필요한 대부분의 정보는 이러한 자원들을 통해 얻을 수 있으며, 최신 버전(예: OpenFOAM 12, v2412 등)에 대한 정보와 릴리즈 노트도 공식 웹사이트에서 제공됩니다.</p>
+
+            <figure class="embedded-image-figure">
+                <img src="https://www.openfoam.com/img/slides/slide-training.jpg" alt="OpenFOAM 교육 자료" class="max-w-xl">
+                <figcaption>OpenFOAM 관련 교육 및 훈련 자료 이미지 (출처: openfoam.com)</figcaption>
+            </figure>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">공식 자료 (Official Resources)</h3>
+            <ul class="list-disc pl-5 space-y-2">
+                <li><strong>OpenFOAM Foundation 웹사이트</strong>: <a href="https://openfoam.org/" target="_blank" rel="noopener noreferrer">https://openfoam.org/</a>
                     <ul class="list-disc pl-4 mt-1">
-<li data-i18n="또_다른_신뢰할_수_있는_종합_사용자_가이드_및_튜토리얼_제공">또 다른 신뢰할 수 있는 종합 사용자 가이드 및 튜토리얼 제공</li>
-</ul>
-</li>
-</ul>
-<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="커뮤니티_자료_community_resources">커뮤니티 자료 (Community Resources)</h3>
-<ul class="list-disc pl-5 space-y-2">
-<li data-i18n="cfd_online_openfoam_포럼_https_www_cfd_online_com_forums_openfoam_전_세계_openfoam_사용자들이_가장_활발하게_활동하는_온라인_커뮤니티_포럼입니다_설치_격자_솔버_후처리_프로그래밍_등_모든_주제에_대한_질문과_답변_토론_팁_공유가_이루어집니다_문제_해결_v_v_토론_사용자_개발_유틸리티_및_코드_샘플_튜토리얼_자료_등이_풍부합니다"><strong>CFD Online - OpenFOAM 포럼</strong>: <a data-i18n="https_www_cfd_online_com_forums_openfoam" href="https://www.cfd-online.com/Forums/openfoam/" rel="noopener noreferrer" target="_blank">https://www.cfd-online.com/Forums/openfoam/</a>
-<ul class="list-disc pl-4 mt-1">
-<li data-i18n="전_세계_openfoam_사용자들이_가장_활발하게_활동하는_온라인_커뮤니티_포럼입니다">전 세계 OpenFOAM 사용자들이 가장 활발하게 활동하는 온라인 커뮤니티 포럼입니다.</li>
-<li data-i18n="설치_격자_솔버_후처리_프로그래밍_등_모든_주제에_대한_질문과_답변_토론_팁_공유가_이루어집니다">설치, 격자, 솔버, 후처리, 프로그래밍 등 모든 주제에 대한 질문과 답변, 토론, 팁 공유가 이루어집니다.</li>
-<li data-i18n="문제_해결_v_v_토론_사용자_개발_유틸리티_및_코드_샘플_튜토리얼_자료_등이_풍부합니다">문제 해결, V&amp;V 토론, 사용자 개발 유틸리티 및 코드 샘플, 튜토리얼 자료 등이 풍부합니다.</li>
-</ul>
-</li>
-<li data-i18n="openfoam_wiki_https_wiki_openfoam_com_커뮤니티_기반의_지식_베이스로_faq_문제_해결_정보_사용자_작성_튜토리얼_유틸리티_및_코드_예제_등이_정리되어_있습니다"><strong>OpenFOAM Wiki</strong>: <a data-i18n="https_wiki_openfoam_com" href="https://wiki.openfoam.com/" rel="noopener noreferrer" target="_blank">https://wiki.openfoam.com/</a>
-<ul class="list-disc pl-4 mt-1">
-<li data-i18n="커뮤니티_기반의_지식_베이스로_faq_문제_해결_정보_사용자_작성_튜토리얼_유틸리티_및_코드_예제_등이_정리되어_있습니다">커뮤니티 기반의 지식 베이스로, FAQ, 문제 해결 정보, 사용자 작성 튜토리얼, 유틸리티 및 코드 예제 등이 정리되어 있습니다.</li>
-</ul>
-</li>
-<li data-i18n="github_https_github_com_openfoam_openfoam_foundation_https_github_com_opencfd_openfoam_dev_esi_opencfd_등openfoam_소스_코드_저장소_및_개발_현황을_확인할_수_있습니다_다양한_커뮤니티_개발_프로젝트_사용자_정의_솔버_및_유틸리티_코드_저장소를_찾을_수_있습니다"><strong>GitHub</strong>: <a data-i18n="https_github_com_openfoam" href="https://github.com/OpenFOAM" rel="noopener noreferrer" target="_blank">https://github.com/OpenFOAM</a> (OpenFOAM Foundation), <a data-i18n="https_github_com_opencfd_openfoam_dev" href="https://github.com/OpenCFD/OpenFOAM-dev" rel="noopener noreferrer" target="_blank">https://github.com/OpenCFD/OpenFOAM-dev</a> (ESI/OpenCFD) 등
+                        <li>사용자 가이드 (User Guide), 프로그래머 가이드 (Programmer's Guide)</li>
+                        <li>기술 문서, 커뮤니티 튜토리얼, 교육 자료, 뉴스 및 이벤트 정보</li>
+                        <li>최신 버전 (예: OpenFOAM 12) 다운로드, 설치 안내 및 릴리즈 노트 (<a href="https://openfoam.org/version/12/" target="_blank" rel="noopener noreferrer">OpenFOAM 12 Release Notes</a>)</li>
+                    </ul>
+                </li>
+                <li><strong>ESI Group (OpenCFD Ltd.) OpenFOAM 웹사이트</strong>: <a href="https://www.openfoam.com/" target="_blank" rel="noopener noreferrer">https://www.openfoam.com/</a>
                     <ul class="list-disc pl-4 mt-1">
-<li data-i18n="openfoam_소스_코드_저장소_및_개발_현황을_확인할_수_있습니다">OpenFOAM 소스 코드 저장소 및 개발 현황을 확인할 수 있습니다.</li>
-<li data-i18n="다양한_커뮤니티_개발_프로젝트_사용자_정의_솔버_및_유틸리티_코드_저장소를_찾을_수_있습니다">다양한 커뮤니티 개발 프로젝트, 사용자 정의 솔버 및 유틸리티 코드 저장소를 찾을 수 있습니다.</li>
-</ul>
-</li>
-</ul>
-<div class="my-6 responsive-iframe-container">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" data-i18n="youtube_video_player_openfoam_tutorial_flow_over_a_cylinder" src="https://www.youtube.com/embed/qL4y9iPXWEs" title="YouTube video player: OpenFOAM Tutorial - Flow Over a Cylinder"></iframe>
-</div>
-<p class="text-sm text-gray-600 mt-2 italic text-center" data-i18n="openfoam_관련_다양한_튜토리얼_영상이_youtube_등에서_제공됩니다_예_jozsef_nagy_채널">OpenFOAM 관련 다양한 튜토리얼 영상이 YouTube 등에서 제공됩니다. (예: Jozsef Nagy 채널)</p>
-<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="교육_자료_및_학술_문헌">교육 자료 및 학술 문헌</h3>
-<ul class="list-disc pl-5 space-y-1">
-<li data-i18n="공식_교육_과정_및_워크샵_opencfd_ltd_esi_group_openfoam_foundation_및_공인_파트너사에서_제공하는_유료_또는_무료_교육_과정_및_워크샵이_정기적으로_개최됩니다_2024_2025년_과정_정보_확인"><strong>공식 교육 과정 및 워크샵</strong>: OpenCFD Ltd. (ESI Group), OpenFOAM Foundation 및 공인 파트너사에서 제공하는 유료 또는 무료 교육 과정 및 워크샵이 정기적으로 개최됩니다 (2024-2025년 과정 정보 확인).</li>
-<li data-i18n="온라인_교육_자료_wolf_dynamics_jozsef_nagy의_youtube_채널_udemy_coursera_등에서_제공하는_무료_또는_유료의_openfoam_강좌_고급_교육_슬라이드_및_튜토리얼을_찾아볼_수_있습니다"><strong>온라인 교육 자료</strong>: Wolf Dynamics, Jozsef Nagy의 YouTube 채널, Udemy, Coursera 등에서 제공하는 무료 또는 유료의 OpenFOAM 강좌, 고급 교육 슬라이드 및 튜토리얼을 찾아볼 수 있습니다.</li>
-<li data-i18n="학술_자료_및_응용_사례_openfoam을_활용한_다수의_학술_논문_학위_논문_대학_강의_자료_등이_공개되어_있어_심도_있는_학습이_가능합니다_최근_바이오프로세스_분야에서는_nrel의_2025년_보고서_cfd_simulation_of_aerobic_gas_fermentation_to_enable_commercial_conversion_of_co2_into_aquaculture_and_animal_feed_와_같이_openfoam을_활용한_구체적인_산업_응용_연구_사례가_발표되고_있습니다"><strong>학술 자료 및 응용 사례</strong>: OpenFOAM을 활용한 다수의 학술 논문, 학위 논문, 대학 강의 자료 등이 공개되어 있어 심도 있는 학습이 가능합니다. 최근 바이오프로세스 분야에서는 NREL의 2025년 보고서 "CFD Simulation of Aerobic Gas Fermentation to Enable Commercial Conversion of CO2 into Aquaculture and Animal Feed" 와 같이 OpenFOAM을 활용한 구체적인 산업 응용 연구 사례가 발표되고 있습니다.</li>
-</ul>
-</article>
-<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
-<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
-<div class="space-y-4" id="searchResultsList"></div>
-</div>
-</main>
-<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
-<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
-</p>
-<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-</div>
-</footer>
-<script src="script.js"></script>
+                        <li>공식 문서, 사용자 가이드, 기술 문서 (버전별 제공)</li>
+                        <li>주기적인 공식 교육 과정 및 심화 교육 프로그램 안내 (2024-2025년 과정 포함)</li>
+                        <li>뉴스, 커뮤니티 지원, 컨설팅 서비스 정보</li>
+                        <li>최신 버전 (예: OpenFOAM vYYMM, v2406, v2412 등) 다운로드, 설치 안내 및 릴리즈 정보</li>
+                    </ul>
+                </li>
+                <li><strong>OpenFOAM 공식 문서 포털 (OpenFOAM.com 제공)</strong>: <a href="https://doc.openfoam.com/" target="_blank" rel="noopener noreferrer">https://doc.openfoam.com/</a>
+                    <ul class="list-disc pl-4 mt-1">
+                        <li>버전별 사용자 가이드, 튜토리얼 가이드, API 문서 등 가장 상세하고 포괄적인 기술 문서 모음</li>
+                        <li>검증 및 타당성 평가 (V&V) 사례 포함</li>
+                    </ul>
+                </li>
+                <li><strong>CFD Direct 사용자 가이드</strong>: <a href="https://doc.cfd.direct/openfoam/user-guide/" target="_blank" rel="noopener noreferrer">https://doc.cfd.direct/openfoam/user-guide/</a> (CFD Direct 제공)
+                    <ul class="list-disc pl-4 mt-1">
+                        <li>또 다른 신뢰할 수 있는 종합 사용자 가이드 및 튜토리얼 제공</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">커뮤니티 자료 (Community Resources)</h3>
+            <ul class="list-disc pl-5 space-y-2">
+                <li><strong>CFD Online - OpenFOAM 포럼</strong>: <a href="https://www.cfd-online.com/Forums/openfoam/" target="_blank" rel="noopener noreferrer">https://www.cfd-online.com/Forums/openfoam/</a>
+                    <ul class="list-disc pl-4 mt-1">
+                        <li>전 세계 OpenFOAM 사용자들이 가장 활발하게 활동하는 온라인 커뮤니티 포럼입니다.</li>
+                        <li>설치, 격자, 솔버, 후처리, 프로그래밍 등 모든 주제에 대한 질문과 답변, 토론, 팁 공유가 이루어집니다.</li>
+                        <li>문제 해결, V&V 토론, 사용자 개발 유틸리티 및 코드 샘플, 튜토리얼 자료 등이 풍부합니다.</li>
+                    </ul>
+                </li>
+                <li><strong>OpenFOAM Wiki</strong>: <a href="https://wiki.openfoam.com/" target="_blank" rel="noopener noreferrer">https://wiki.openfoam.com/</a>
+                    <ul class="list-disc pl-4 mt-1">
+                        <li>커뮤니티 기반의 지식 베이스로, FAQ, 문제 해결 정보, 사용자 작성 튜토리얼, 유틸리티 및 코드 예제 등이 정리되어 있습니다.</li>
+                    </ul>
+                </li>
+                <li><strong>GitHub</strong>: <a href="https://github.com/OpenFOAM" target="_blank" rel="noopener noreferrer">https://github.com/OpenFOAM</a> (OpenFOAM Foundation), <a href="https://github.com/OpenCFD/OpenFOAM-dev" target="_blank" rel="noopener noreferrer">https://github.com/OpenCFD/OpenFOAM-dev</a> (ESI/OpenCFD) 등
+                    <ul class="list-disc pl-4 mt-1">
+                        <li>OpenFOAM 소스 코드 저장소 및 개발 현황을 확인할 수 있습니다.</li>
+                        <li>다양한 커뮤니티 개발 프로젝트, 사용자 정의 솔버 및 유틸리티 코드 저장소를 찾을 수 있습니다.</li>
+                    </ul>
+                </li>
+            </ul>
+             <div class="my-6 responsive-iframe-container">
+                <iframe src="https://www.youtube.com/embed/qL4y9iPXWEs" title="YouTube video player: OpenFOAM Tutorial - Flow Over a Cylinder" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p class="text-sm text-gray-600 mt-2 italic text-center">OpenFOAM 관련 다양한 튜토리얼 영상이 YouTube 등에서 제공됩니다. (예: Jozsef Nagy 채널)</p>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">교육 자료 및 학술 문헌</h3>
+            <ul class="list-disc pl-5 space-y-1">
+                <li><strong>공식 교육 과정 및 워크샵</strong>: OpenCFD Ltd. (ESI Group), OpenFOAM Foundation 및 공인 파트너사에서 제공하는 유료 또는 무료 교육 과정 및 워크샵이 정기적으로 개최됩니다 (2024-2025년 과정 정보 확인).</li>
+                <li><strong>온라인 교육 자료</strong>: Wolf Dynamics, Jozsef Nagy의 YouTube 채널, Udemy, Coursera 등에서 제공하는 무료 또는 유료의 OpenFOAM 강좌, 고급 교육 슬라이드 및 튜토리얼을 찾아볼 수 있습니다.</li>
+                <li><strong>학술 자료 및 응용 사례</strong>: OpenFOAM을 활용한 다수의 학술 논문, 학위 논문, 대학 강의 자료 등이 공개되어 있어 심도 있는 학습이 가능합니다. 최근 바이오프로세스 분야에서는 NREL의 2025년 보고서 "CFD Simulation of Aerobic Gas Fermentation to Enable Commercial Conversion of CO2 into Aquaculture and Animal Feed" 와 같이 OpenFOAM을 활용한 구체적인 산업 응용 연구 사례가 발표되고 있습니다.</li>
+            </ul>
+
+        </article>
+        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

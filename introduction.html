@@ -1,173 +1,188 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="title_introduction">연구실 소개 - 생물공학연구실</title>
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연구실 소개 - 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
-<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
-<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
-</h1>
-<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
-<ul class="container mx-auto px-0 flex justify-center">
-</ul>
-</nav>
-<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
-<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
-<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
-<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
-</div>
-</div>
-<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
-<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
-<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
-</div>
-</div>
-</div>
-<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
-<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-</div>
-</nav>
-</div>
-<main class="container mx-auto px-4 sm:px-6 py-12">
-<article class="bg-white p-6 sm:p-8 md:p-12 rounded-lg shadow-lg">
-<header class="text-center mb-12 prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700">
-<h1 class="text-4xl md:text-5xl font-extrabold text-slate-800" data-i18n="연구실_소개">연구실 소개</h1>
-<p class="text-xl text-gray-600 mt-2" data-i18n="bioprocess_engineering_laboratory">Bioprocess Engineering Laboratory</p>
-</header>
-<div class="prose max-w-none prose-slate" data-i18n="본_연구실에_대한_다양한_정보를_아래_항목별로_확인하실_수_있습니다_각_항목을_클릭하여_상세_내용을_살펴보세요">
-<p class="text-lg text-center text-gray-700 mb-12" data-i18n="본_연구실에_대한_다양한_정보를_아래_항목별로_확인하실_수_있습니다_각_항목을_클릭하여_상세_내용을_살펴보세요">
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
+                    <span class="hamster-icon">🐹</span>
+                    <span class="helper-text">뭐든 물어봐!</span>
+                </div>
+            </div>
+        </div>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 sm:px-6 py-12">
+        <article class="bg-white p-6 sm:p-8 md:p-12 rounded-lg shadow-lg">
+            <header class="text-center mb-12 prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-800">연구실 소개</h1>
+                <p class="text-xl text-gray-600 mt-2">Bioprocess Engineering Laboratory</p>
+            </header>
+            
+            <div class="prose max-w-none prose-slate">
+                <p class="text-lg text-center text-gray-700 mb-12">
                     본 연구실에 대한 다양한 정보를 아래 항목별로 확인하실 수 있습니다. 각 항목을 클릭하여 상세 내용을 살펴보세요.
                 </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-8" data-i18n="연구실_개요연구실의_전반적인_소개_미션_그리고_핵심_가치를_안내합니다_연구_분야디지털_트윈_시스템_생물학_cfd_시뮬레이션_등_주요_연구_영역을_소개합니다_연구_목표_및_비전연구실의_장기적인_목표와_미래_지향적인_비전을_공유합니다_교수_소개연구실을_이끄는_지도교수님의_전문_분야와_경력을_안내합니다_연구원_소개연구에_참여하는_박사후연구원_박사_및_석사_과정_학생들을_소개합니다_주요_연구_프로젝트현재_진행_중이거나_대표적인_연구_프로젝트들을_소개합니다_연구실_소식_및_공지사항연구실의_최신_소식_공지사항_이벤트_등을_안내합니다_실험실_시설_및_장비연구_수행에_활용되는_주요_실험_시설과_첨단_장비들을_안내합니다_연구_성과주요_논문_특허_기술_이전_등_연구실의_대표적인_성과를_소개합니다_협력기관_및_파트너공동_연구_및_기술_개발을_함께하는_국내외_협력_기관들을_안내합니다_사진_갤러리연구실_활동_행사_멤버들의_다양한_모습을_담은_사진들을_제공합니다">
-<a class="group block p-6 bg-slate-50 hover:bg-blue-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1" data-i18n="연구실_개요연구실의_전반적인_소개_미션_그리고_핵심_가치를_안내합니다" href="lab_overview.html">
-<div class="flex items-center mb-3" data-i18n="연구실_개요">
-<div class="p-3 bg-blue-100 rounded-full group-hover:bg-blue-200 transition-colors duration-300">
-<i class="w-7 h-7 text-[#0072CE]" data-lucide="file-text"></i>
-</div>
-<h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-[#0056a4]" data-i18n="연구실_개요">연구실 개요</h3>
-</div>
-<p class="text-gray-600 text-sm" data-i18n="연구실의_전반적인_소개_미션_그리고_핵심_가치를_안내합니다">연구실의 전반적인 소개, 미션, 그리고 핵심 가치를 안내합니다.</p>
-</a>
-<a class="group block p-6 bg-slate-50 hover:bg-green-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1" data-i18n="연구_분야디지털_트윈_시스템_생물학_cfd_시뮬레이션_등_주요_연구_영역을_소개합니다" href="research_areas.html">
-<div class="flex items-center mb-3" data-i18n="연구_분야">
-<div class="p-3 bg-green-100 rounded-full group-hover:bg-green-200 transition-colors duration-300">
-<i class="w-7 h-7 text-green-600" data-lucide="atom"></i>
-</div>
-<h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-green-700" data-i18n="연구_분야">연구 분야</h3>
-</div>
-<p class="text-gray-600 text-sm" data-i18n="디지털_트윈_시스템_생물학_cfd_시뮬레이션_등_주요_연구_영역을_소개합니다">디지털 트윈, 시스템 생물학, CFD 시뮬레이션 등 주요 연구 영역을 소개합니다.</p>
-</a>
-<a class="group block p-6 bg-slate-50 hover:bg-purple-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1" data-i18n="연구_목표_및_비전연구실의_장기적인_목표와_미래_지향적인_비전을_공유합니다" href="research_goals_vision.html">
-<div class="flex items-center mb-3" data-i18n="연구_목표_및_비전">
-<div class="p-3 bg-purple-100 rounded-full group-hover:bg-purple-200 transition-colors duration-300">
-<i class="w-7 h-7 text-purple-600" data-lucide="target"></i>
-</div>
-<h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-purple-700" data-i18n="연구_목표_및_비전">연구 목표 및 비전</h3>
-</div>
-<p class="text-gray-600 text-sm" data-i18n="연구실의_장기적인_목표와_미래_지향적인_비전을_공유합니다">연구실의 장기적인 목표와 미래 지향적인 비전을 공유합니다.</p>
-</a>
-<a class="group block p-6 bg-slate-50 hover:bg-indigo-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1" data-i18n="교수_소개연구실을_이끄는_지도교수님의_전문_분야와_경력을_안내합니다" href="professor_introduction.html">
-<div class="flex items-center mb-3" data-i18n="교수_소개">
-<div class="p-3 bg-indigo-100 rounded-full group-hover:bg-indigo-200 transition-colors duration-300">
-<i class="w-7 h-7 text-indigo-600" data-lucide="user-check"></i>
-</div>
-<h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-indigo-700" data-i18n="교수_소개">교수 소개</h3>
-</div>
-<p class="text-gray-600 text-sm" data-i18n="연구실을_이끄는_지도교수님의_전문_분야와_경력을_안내합니다">연구실을 이끄는 지도교수님의 전문 분야와 경력을 안내합니다.</p>
-</a>
-<a class="group block p-6 bg-slate-50 hover:bg-teal-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1" data-i18n="연구원_소개연구에_참여하는_박사후연구원_박사_및_석사_과정_학생들을_소개합니다" href="researchers_introduction.html">
-<div class="flex items-center mb-3" data-i18n="연구원_소개">
-<div class="p-3 bg-teal-100 rounded-full group-hover:bg-teal-200 transition-colors duration-300">
-<i class="w-7 h-7 text-teal-600" data-lucide="users"></i>
-</div>
-<h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-teal-700" data-i18n="연구원_소개">연구원 소개</h3>
-</div>
-<p class="text-gray-600 text-sm" data-i18n="연구에_참여하는_박사후연구원_박사_및_석사_과정_학생들을_소개합니다">연구에 참여하는 박사후연구원, 박사 및 석사 과정 학생들을 소개합니다.</p>
-</a>
-<a class="group block p-6 bg-slate-50 hover:bg-orange-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1" data-i18n="주요_연구_프로젝트현재_진행_중이거나_대표적인_연구_프로젝트들을_소개합니다" href="major_research_projects.html">
-<div class="flex items-center mb-3" data-i18n="주요_연구_프로젝트">
-<div class="p-3 bg-orange-100 rounded-full group-hover:bg-orange-200 transition-colors duration-300">
-<i class="w-7 h-7 text-orange-600" data-lucide="briefcase"></i>
-</div>
-<h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-orange-700" data-i18n="주요_연구_프로젝트">주요 연구 프로젝트</h3>
-</div>
-<p class="text-gray-600 text-sm" data-i18n="현재_진행_중이거나_대표적인_연구_프로젝트들을_소개합니다">현재 진행 중이거나 대표적인 연구 프로젝트들을 소개합니다.</p>
-</a>
-<a class="group block p-6 bg-slate-50 hover:bg-sky-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1" data-i18n="연구실_소식_및_공지사항연구실의_최신_소식_공지사항_이벤트_등을_안내합니다" href="news_announcements.html">
-<div class="flex items-center mb-3" data-i18n="연구실_소식_및_공지사항">
-<div class="p-3 bg-sky-100 rounded-full group-hover:bg-sky-200 transition-colors duration-300">
-<i class="w-7 h-7 text-sky-600" data-lucide="megaphone"></i>
-</div>
-<h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-sky-700" data-i18n="연구실_소식_및_공지사항">연구실 소식 및 공지사항</h3>
-</div>
-<p class="text-gray-600 text-sm" data-i18n="연구실의_최신_소식_공지사항_이벤트_등을_안내합니다">연구실의 최신 소식, 공지사항, 이벤트 등을 안내합니다.</p>
-</a>
-<a class="group block p-6 bg-slate-50 hover:bg-cyan-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1" data-i18n="실험실_시설_및_장비연구_수행에_활용되는_주요_실험_시설과_첨단_장비들을_안내합니다" href="lab_facilities_equipment.html">
-<div class="flex items-center mb-3" data-i18n="실험실_시설_및_장비">
-<div class="p-3 bg-cyan-100 rounded-full group-hover:bg-cyan-200 transition-colors duration-300">
-<i class="w-7 h-7 text-cyan-600" data-lucide="flask-conical"></i>
-</div>
-<h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-cyan-700" data-i18n="실험실_시설_및_장비">실험실 시설 및 장비</h3>
-</div>
-<p class="text-gray-600 text-sm" data-i18n="연구_수행에_활용되는_주요_실험_시설과_첨단_장비들을_안내합니다">연구 수행에 활용되는 주요 실험 시설과 첨단 장비들을 안내합니다.</p>
-</a>
-<a class="group block p-6 bg-slate-50 hover:bg-amber-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1" data-i18n="연구_성과주요_논문_특허_기술_이전_등_연구실의_대표적인_성과를_소개합니다" href="research_achievements.html">
-<div class="flex items-center mb-3" data-i18n="연구_성과">
-<div class="p-3 bg-amber-100 rounded-full group-hover:bg-amber-200 transition-colors duration-300">
-<i class="w-7 h-7 text-amber-600" data-lucide="award"></i>
-</div>
-<h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-amber-700" data-i18n="연구_성과">연구 성과</h3>
-</div>
-<p class="text-gray-600 text-sm" data-i18n="주요_논문_특허_기술_이전_등_연구실의_대표적인_성과를_소개합니다">주요 논문, 특허, 기술 이전 등 연구실의 대표적인 성과를 소개합니다.</p>
-</a>
-<a class="group block p-6 bg-slate-50 hover:bg-pink-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1" data-i18n="협력기관_및_파트너공동_연구_및_기술_개발을_함께하는_국내외_협력_기관들을_안내합니다" href="collaborations_partners.html">
-<div class="flex items-center mb-3" data-i18n="협력기관_및_파트너">
-<div class="p-3 bg-pink-100 rounded-full group-hover:bg-pink-200 transition-colors duration-300">
-<i class="w-7 h-7 text-pink-600" data-lucide="handshake"></i>
-</div>
-<h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-pink-700" data-i18n="협력기관_및_파트너">협력기관 및 파트너</h3>
-</div>
-<p class="text-gray-600 text-sm" data-i18n="공동_연구_및_기술_개발을_함께하는_국내외_협력_기관들을_안내합니다">공동 연구 및 기술 개발을 함께하는 국내외 협력 기관들을 안내합니다.</p>
-</a>
-<a class="group block p-6 bg-slate-50 hover:bg-gray-100 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 md:col-span-2 lg:col-span-1" data-i18n="사진_갤러리연구실_활동_행사_멤버들의_다양한_모습을_담은_사진들을_제공합니다" href="photo_gallery.html">
-<div class="flex items-center mb-3" data-i18n="사진_갤러리">
-<div class="p-3 bg-gray-200 rounded-full group-hover:bg-gray-300 transition-colors duration-300">
-<i class="w-7 h-7 text-gray-600" data-lucide="image"></i>
-</div>
-<h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-gray-800" data-i18n="사진_갤러리">사진 갤러리</h3>
-</div>
-<p class="text-gray-600 text-sm" data-i18n="연구실_활동_행사_멤버들의_다양한_모습을_담은_사진들을_제공합니다">연구실 활동, 행사, 멤버들의 다양한 모습을 담은 사진들을 제공합니다.</p>
-</a>
-</div>
-</article>
-<div class="container mx-auto px-6 my-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
-<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
-<div class="space-y-4" id="searchResultsList"></div>
-</div>
-</main>
-<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
-<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
-</p>
-<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-</div>
-</footer>
-<script src="script.js"></script>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-8">
+                <a href="lab_overview.html" class="group block p-6 bg-slate-50 hover:bg-blue-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                        <div class="p-3 bg-blue-100 rounded-full group-hover:bg-blue-200 transition-colors duration-300">
+                            <i data-lucide="file-text" class="w-7 h-7 text-[#0072CE]"></i>
+                        </div>
+                        <h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-[#0056a4]">연구실 개요</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">연구실의 전반적인 소개, 미션, 그리고 핵심 가치를 안내합니다.</p>
+                </a>
+
+                <a href="research_areas.html" class="group block p-6 bg-slate-50 hover:bg-green-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                         <div class="p-3 bg-green-100 rounded-full group-hover:bg-green-200 transition-colors duration-300">
+                            <i data-lucide="atom" class="w-7 h-7 text-green-600"></i>
+                        </div>
+                        <h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-green-700">연구 분야</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">디지털 트윈, 시스템 생물학, CFD 시뮬레이션 등 주요 연구 영역을 소개합니다.</p>
+                </a>
+
+                <a href="research_goals_vision.html" class="group block p-6 bg-slate-50 hover:bg-purple-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                         <div class="p-3 bg-purple-100 rounded-full group-hover:bg-purple-200 transition-colors duration-300">
+                            <i data-lucide="target" class="w-7 h-7 text-purple-600"></i>
+                        </div>
+                        <h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-purple-700">연구 목표 및 비전</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">연구실의 장기적인 목표와 미래 지향적인 비전을 공유합니다.</p>
+                </a>
+                
+                <a href="professor_introduction.html" class="group block p-6 bg-slate-50 hover:bg-indigo-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                         <div class="p-3 bg-indigo-100 rounded-full group-hover:bg-indigo-200 transition-colors duration-300">
+                            <i data-lucide="user-check" class="w-7 h-7 text-indigo-600"></i>
+                        </div>
+                        <h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-indigo-700">교수 소개</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">연구실을 이끄는 지도교수님의 전문 분야와 경력을 안내합니다.</p>
+                </a>
+
+                <a href="researchers_introduction.html" class="group block p-6 bg-slate-50 hover:bg-teal-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                         <div class="p-3 bg-teal-100 rounded-full group-hover:bg-teal-200 transition-colors duration-300">
+                            <i data-lucide="users" class="w-7 h-7 text-teal-600"></i>
+                        </div>
+                        <h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-teal-700">연구원 소개</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">연구에 참여하는 박사후연구원, 박사 및 석사 과정 학생들을 소개합니다.</p>
+                </a>
+
+                <a href="major_research_projects.html" class="group block p-6 bg-slate-50 hover:bg-orange-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                         <div class="p-3 bg-orange-100 rounded-full group-hover:bg-orange-200 transition-colors duration-300">
+                            <i data-lucide="briefcase" class="w-7 h-7 text-orange-600"></i>
+                        </div>
+                        <h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-orange-700">주요 연구 프로젝트</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">현재 진행 중이거나 대표적인 연구 프로젝트들을 소개합니다.</p>
+                </a>
+                
+                <a href="news_announcements.html" class="group block p-6 bg-slate-50 hover:bg-sky-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                         <div class="p-3 bg-sky-100 rounded-full group-hover:bg-sky-200 transition-colors duration-300">
+                            <i data-lucide="megaphone" class="w-7 h-7 text-sky-600"></i>
+                        </div>
+                        <h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-sky-700">연구실 소식 및 공지사항</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">연구실의 최신 소식, 공지사항, 이벤트 등을 안내합니다.</p>
+                </a>
+
+                <a href="lab_facilities_equipment.html" class="group block p-6 bg-slate-50 hover:bg-cyan-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                         <div class="p-3 bg-cyan-100 rounded-full group-hover:bg-cyan-200 transition-colors duration-300">
+                            <i data-lucide="flask-conical" class="w-7 h-7 text-cyan-600"></i>
+                        </div>
+                        <h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-cyan-700">실험실 시설 및 장비</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">연구 수행에 활용되는 주요 실험 시설과 첨단 장비들을 안내합니다.</p>
+                </a>
+                
+                <a href="research_achievements.html" class="group block p-6 bg-slate-50 hover:bg-amber-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                         <div class="p-3 bg-amber-100 rounded-full group-hover:bg-amber-200 transition-colors duration-300">
+                            <i data-lucide="award" class="w-7 h-7 text-amber-600"></i>
+                        </div>
+                        <h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-amber-700">연구 성과</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">주요 논문, 특허, 기술 이전 등 연구실의 대표적인 성과를 소개합니다.</p>
+                </a>
+
+                <a href="collaborations_partners.html" class="group block p-6 bg-slate-50 hover:bg-pink-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                         <div class="p-3 bg-pink-100 rounded-full group-hover:bg-pink-200 transition-colors duration-300">
+                            <i data-lucide="handshake" class="w-7 h-7 text-pink-600"></i>
+                        </div>
+                        <h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-pink-700">협력기관 및 파트너</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">공동 연구 및 기술 개발을 함께하는 국내외 협력 기관들을 안내합니다.</p>
+                </a>
+
+                <a href="photo_gallery.html" class="group block p-6 bg-slate-50 hover:bg-gray-100 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center mb-3">
+                         <div class="p-3 bg-gray-200 rounded-full group-hover:bg-gray-300 transition-colors duration-300">
+                            <i data-lucide="image" class="w-7 h-7 text-gray-600"></i>
+                        </div>
+                        <h3 class="ml-4 text-xl font-semibold text-slate-700 group-hover:text-gray-800">사진 갤러리</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">연구실 활동, 행사, 멤버들의 다양한 모습을 담은 사진들을 제공합니다.</p>
+                </a>
+            </div>
+        </article>
+        <div id="searchResultsContainer" class="container mx-auto px-6 my-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

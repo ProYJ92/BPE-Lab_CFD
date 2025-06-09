@@ -1,153 +1,164 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="title_cfd_lbm_model">격자 볼츠만 방법 (LBM) - CFD 이론 | 생물공학연구실</title>
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>격자 볼츠만 방법 (LBM) - CFD 이론 | 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-gray-800 scroll-smooth">
-<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
-<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
-<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
-</h1>
-<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
-<ul class="container mx-auto px-0 flex justify-center">
-</ul>
-</nav>
-<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
-<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
-<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
-<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
-</div>
-</div>
-<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
-<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
-<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
-</div>
-</div>
-</div>
-<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
-<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-</div>
-</nav>
-</div>
-<main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
-<div class="bg-white p-6 md:p-10 rounded-xl shadow-xl" data-i18n="격자_볼츠만_방법_lattice_boltzmann_method_lbm_lbm은_유체_유동을_시뮬레이션하는_메조스코픽_방법으로_거시적인_navier_stokes_방정식을_직접_푸는_대신_격자_상에서_정의된_입자_분포_함수의_시간적_진화를_추적합니다_1_상세_이론_수학적_배경_주요_가정lbm은_확률론적_볼츠만_방정식에서_유래하며_입자들의_충돌_및_이동_과정을_이산화하여_모델링합니다_1_이_방법은_유체의_미시적인_입자_상호작용이_거시적인_유체_거동으로_나타난다는_운동론적_가설에_기반합니다_2_수학적_배경핵심은_이산_볼츠만_방정식입니다_가장_기본적인_형태는_bgk_bhatnagar_gross_krook_단일_이완_시간_모델을_사용하며_다음과_같습니다_3_fᵢ_x_cᵢδt_t_δt_fᵢ_x_t_1_τ_fᵢ_x_t_fᵢᵉ۹_x_t_여기서_fᵢ_x_t_는_위치x와_시간t에서i번째_격자_속도_방향cᵢ를_가진_입자의_분포_함수입니다_1_δt는_시간_단계_크기이며_격자_간격δx와_이산_속도_벡터cᵢ는cᵢ_δx_δt_eᵢ관계를_갖습니다_eᵢ는_단위_속도_벡터_2_τ는_충돌_이완_시간으로_유체의_점성과_관련됩니다_1_fᵢᵉ۹_x_t_는_평형_상태에서의_입자_분포_함수로_일반적으로_맥스웰_볼츠만_분포를_저마하수_조건에서_테일러_전개하여_얻습니다_3_거시적_변수_밀도ρ_속도u_는_분포_함수의_모멘트로_산출됩니다_1_ρ_σᵢ_fᵢρu_σᵢ_fᵢcᵢ주요_가정격자화된_공간_시간_속도_연속적인_공간_시간_속도_공간을_이산적인_격자점으로_근사합니다_1_저마하수_및_약한_압축성_기본적인_lbm_모델은_저마하수_비압축성_또는_약압축성_유동에_대해_ns_방정식을_정확히_복구하도록_설계됩니다_고마하수_초음속_유동에는_추가_모델링이나_변형이_필요합니다_4_충돌_및_이동_프로세스_유체_입자는_각_시간_단계에서_로컬_충돌을_겪은_후_이산_속도_방향으로_인접_격자점으로_이동합니다_1_장점_및_단점장점단점_병렬_처리_효율성_우수_로컬_연산_기반으로_대규모_병렬_계산에_적합_1_2_메모리_요구량_높음_특히_3d_대규모_문제에서_분포_함수_저장에_많은_메모리_필요_1_2_복잡한_경계_조건_처리_용이_바운스백_bounce_back_등_간단한_경계_모델_1_2_고마하수_및_강압축성_유동_적용에_제약_추가적인_모델_개발_필요_1_4_다상_복합_유동_모델링에_강점_인터페이스_처리_및_상_변화_모델링이_비교적_자연스러움_1_2_수치_안정성_문제_고주파수_고파장_유동_해석_일부_경계_조건에서_불안정성_발생_가능_1_음향_해석에_적합한_낮은_수치_소산_특성_1_물리적_직관성_낮음_ns_방정식_기반_모델_대비_해석이_직관적이지_않음_1_주요_응용_분야_및_산업_학술적_사례다공성_매체_유동_석유_회수_연료_전지_촉매_반응기_내부_유동_등_2_다상_유동_액적_형성_기포_동역학_에멀전_및_현탁액_2_미세_유체_역학_및_바이오_유체_마이크로_채널_유동_혈류_시뮬레이션_2_음향학_공기역학적_소음_예측_흡음재_내부_유동_1_복잡_기하_구조_유동_자동차_항공기_주변_건물_주변_유동_1_2_최신_연구_동향_최근_3_5년_최근_lbm_연구는_다음과_같은_방향으로_진행되고_있습니다_고급_충돌_모델_및_안정성_개선_mrt_multiple_relaxation_time_cumulant_entropic_lbm_등_다양한_충돌_연산자를_개발하여_수치_안정성_및_정확도를_향상시키고_높은_레이놀즈_수나_강한_압축성_유동으로의_적용을_시도하고_있습니다_1_9_다물리_다상_화학_반응_통합_열_전달_화학_반응_상_변화_전자기장_등_다양한_물리_현상을_lbm_프레임워크_내에_통합하는_연구가_활발합니다_1_2_10_병렬_컴퓨팅_및_하드웨어_가속_최적화_gpu_fpga_asic_등_고성능_하드웨어를_적극_활용하여_대규모_lbm_시뮬레이션의_효율성을_극대화하는_연구가_집중되고_있습니다_1_2_9_난류_모델_및_하이브리드_기법_lbm_기반의_les_rans_모델_개발_및_lbm과_ns_urans_les_기반_솔버를_결합하는_하이브리드_기법_연구가_진행_중입니다_1_2_9_참고문헌_1_a_systematic_literature_review_on_lattice_boltzmann_method_applied_to_acoustics_sciencedirect_2_lattice_boltzmann_methods_for_industrial_applications_researchgate_3_the_lattice_boltzmann_method_fundamentals_and_acoustics_viggen_2014_phd_thesis_researchgate_4_adaptive_lattice_boltzmann_model_for_compressible_flows_c_sun_2000_ieee_출처에서_언급_8_incompressible_lbm_lattice_boltzmann_method_advanced_options_simscale_docs_9_lattice_boltzmann_k_ω_sst_based_hybrid_rans_les_simulations_of_turbulent_flows_sciencedirect_10_a_novel_frequency_dependent_lattice_boltzmann_model_with_a_single_force_term_for_electromagnetic_wave_propagation_in_dispersive_media_nature_위_참고문헌_목록은_제공된_lbm_및_urans_모델_상세_분석_문서에서_관련_내용을_발췌하여_이_페이지_작성에_활용된_주요_자료들입니다">
-<header class="mb-8 border-b pb-4">
-<h1 class="text-3xl md:text-4xl font-bold text-slate-800" data-i18n="격자_볼츠만_방법_lattice_boltzmann_method_lbm">격자 볼츠만 방법 (Lattice Boltzmann Method, LBM)</h1>
-</header>
-<article class="prose prose-lg max-w-none">
-<p data-i18n="lbm은_유체_유동을_시뮬레이션하는_메조스코픽_방법으로_거시적인_navier_stokes_방정식을_직접_푸는_대신_격자_상에서_정의된_입자_분포_함수의_시간적_진화를_추적합니다_1">LBM은 유체 유동을 시뮬레이션하는 메조스코픽 방법으로, 거시적인 Navier-Stokes 방정식을 직접 푸는 대신, 격자 상에서 정의된 입자 분포 함수의 시간적 진화를 추적합니다.<sup>[1]</sup></p>
-<h2 data-i18n="상세_이론_수학적_배경_주요_가정" id="lbm-theory">상세 이론, 수학적 배경, 주요 가정</h2>
-<p data-i18n="lbm은_확률론적_볼츠만_방정식에서_유래하며_입자들의_충돌_및_이동_과정을_이산화하여_모델링합니다_1_이_방법은_유체의_미시적인_입자_상호작용이_거시적인_유체_거동으로_나타난다는_운동론적_가설에_기반합니다_2">LBM은 확률론적 볼츠만 방정식에서 유래하며, 입자들의 충돌 및 이동 과정을 이산화하여 모델링합니다.<sup>[1]</sup> 이 방법은 유체의 미시적인 입자 상호작용이 거시적인 유체 거동으로 나타난다는 운동론적 가설에 기반합니다.<sup>[2]</sup></p>
-<h3 class="text-xl font-semibold" data-i18n="수학적_배경">수학적 배경</h3>
-<p data-i18n="핵심은_이산_볼츠만_방정식입니다_가장_기본적인_형태는_bgk_bhatnagar_gross_krook_단일_이완_시간_모델을_사용하며_다음과_같습니다_3">핵심은 이산 볼츠만 방정식입니다. 가장 기본적인 형태는 BGK(Bhatnagar-Gross-Krook) 단일 이완 시간 모델을 사용하며 다음과 같습니다:<sup>[3]</sup></p>
-<div class="my-4 p-3 bg-gray-100 border border-gray-200 rounded-md overflow-x-auto" data-i18n="fᵢ_x_cᵢδt_t_δt_fᵢ_x_t_1_τ_fᵢ_x_t_fᵢᵉ۹_x_t">
-<pre><code class="text-sm font-mono">fᵢ(x + cᵢΔt, t + Δt) - fᵢ(x, t) = -(1/τ)[fᵢ(x, t) - fᵢᵉ۹(x, t)]</code></pre>
-</div>
-<p data-i18n="여기서">여기서:</p>
-<ul>
-<li data-i18n="fᵢ_x_t_는_위치x와_시간t에서i번째_격자_속도_방향cᵢ를_가진_입자의_분포_함수입니다_1"><code class="font-mono text-sm bg-gray-100 p-0.5 rounded">fᵢ(x, t)</code>는 위치 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">x</code>와 시간 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">t</code>에서 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">i</code>번째 격자 속도 방향 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">cᵢ</code>를 가진 입자의 분포 함수입니다.<sup>[1]</sup></li>
-<li data-i18n="δt는_시간_단계_크기이며_격자_간격δx와_이산_속도_벡터cᵢ는cᵢ_δx_δt_eᵢ관계를_갖습니다_eᵢ는_단위_속도_벡터_2"><code class="font-mono text-sm bg-gray-100 p-0.5 rounded">Δt</code>는 시간 단계 크기이며, 격자 간격 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">Δx</code>와 이산 속도 벡터 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">cᵢ</code>는 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">cᵢ = (Δx / Δt)eᵢ</code> 관계를 갖습니다 (<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">eᵢ</code>는 단위 속도 벡터).<sup>[2]</sup></li>
-<li data-i18n="τ는_충돌_이완_시간으로_유체의_점성과_관련됩니다_1"><code class="font-mono text-sm bg-gray-100 p-0.5 rounded">τ</code>는 충돌 이완 시간으로, 유체의 점성과 관련됩니다.<sup>[1]</sup></li>
-<li data-i18n="fᵢᵉ۹_x_t_는_평형_상태에서의_입자_분포_함수로_일반적으로_맥스웰_볼츠만_분포를_저마하수_조건에서_테일러_전개하여_얻습니다_3"><code class="font-mono text-sm bg-gray-100 p-0.5 rounded">fᵢᵉ۹(x, t)</code>는 평형 상태에서의 입자 분포 함수로, 일반적으로 맥스웰-볼츠만 분포를 저마하수 조건에서 테일러 전개하여 얻습니다.<sup>[3]</sup></li>
-</ul>
-<p data-i18n="거시적_변수_밀도ρ_속도u_는_분포_함수의_모멘트로_산출됩니다_1">거시적 변수(밀도 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ρ</code>, 속도 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">u</code>)는 분포 함수의 모멘트로 산출됩니다:<sup>[1]</sup></p>
-<div class="my-4 p-3 bg-gray-100 border border-gray-200 rounded-md overflow-x-auto" data-i18n="ρ_σᵢ_fᵢ">
-<pre><code class="text-sm font-mono">ρ = Σᵢ fᵢ</code></pre>
-</div>
-<div class="my-4 p-3 bg-gray-100 border border-gray-200 rounded-md overflow-x-auto" data-i18n="ρu_σᵢ_fᵢcᵢ">
-<pre><code class="text-sm font-mono">ρu = Σᵢ fᵢcᵢ</code></pre>
-</div>
-<h3 class="text-xl font-semibold" data-i18n="주요_가정">주요 가정</h3>
-<ul>
-<li data-i18n="격자화된_공간_시간_속도_연속적인_공간_시간_속도_공간을_이산적인_격자점으로_근사합니다_1"><strong>격자화된 공간, 시간, 속도:</strong> 연속적인 공간, 시간, 속도 공간을 이산적인 격자점으로 근사합니다.<sup>[1]</sup></li>
-<li data-i18n="저마하수_및_약한_압축성_기본적인_lbm_모델은_저마하수_비압축성_또는_약압축성_유동에_대해_ns_방정식을_정확히_복구하도록_설계됩니다_고마하수_초음속_유동에는_추가_모델링이나_변형이_필요합니다_4"><strong>저마하수 및 약한 압축성:</strong> 기본적인 LBM 모델은 저마하수 비압축성 또는 약압축성 유동에 대해 NS 방정식을 정확히 복구하도록 설계됩니다. 고마하수/초음속 유동에는 추가 모델링이나 변형이 필요합니다.<sup>[4]</sup></li>
-<li data-i18n="충돌_및_이동_프로세스_유체_입자는_각_시간_단계에서_로컬_충돌을_겪은_후_이산_속도_방향으로_인접_격자점으로_이동합니다_1"><strong>충돌 및 이동 프로세스:</strong> 유체 입자는 각 시간 단계에서 로컬 충돌을 겪은 후 이산 속도 방향으로 인접 격자점으로 이동합니다.<sup>[1]</sup></li>
-</ul>
-<h2 data-i18n="장점_및_단점" id="lbm-pros-cons">장점 및 단점</h2>
-<div class="overflow-x-auto my-6" data-i18n="장점단점_병렬_처리_효율성_우수_로컬_연산_기반으로_대규모_병렬_계산에_적합_1_2_메모리_요구량_높음_특히_3d_대규모_문제에서_분포_함수_저장에_많은_메모리_필요_1_2_복잡한_경계_조건_처리_용이_바운스백_bounce_back_등_간단한_경계_모델_1_2_고마하수_및_강압축성_유동_적용에_제약_추가적인_모델_개발_필요_1_4_다상_복합_유동_모델링에_강점_인터페이스_처리_및_상_변화_모델링이_비교적_자연스러움_1_2_수치_안정성_문제_고주파수_고파장_유동_해석_일부_경계_조건에서_불안정성_발생_가능_1_음향_해석에_적합한_낮은_수치_소산_특성_1_물리적_직관성_낮음_ns_방정식_기반_모델_대비_해석이_직관적이지_않음_1">
-<table class="w-full text-left border-collapse prose">
-<thead class="bg-slate-100">
-<tr>
-<th class="px-4 py-2 border" data-i18n="장점">장점</th>
-<th class="px-4 py-2 border" data-i18n="단점">단점</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="px-4 py-2 border align-top" data-i18n="병렬_처리_효율성_우수_로컬_연산_기반으로_대규모_병렬_계산에_적합_1_2">- 병렬 처리 효율성 우수: 로컬 연산 기반으로 대규모 병렬 계산에 적합<sup>[1,2]</sup></td>
-<td class="px-4 py-2 border align-top" data-i18n="메모리_요구량_높음_특히_3d_대규모_문제에서_분포_함수_저장에_많은_메모리_필요_1_2">- 메모리 요구량 높음: 특히 3D 대규모 문제에서 분포 함수 저장에 많은 메모리 필요<sup>[1,2]</sup></td>
-</tr>
-<tr>
-<td class="px-4 py-2 border align-top" data-i18n="복잡한_경계_조건_처리_용이_바운스백_bounce_back_등_간단한_경계_모델_1_2">- 복잡한 경계 조건 처리 용이: 바운스백(Bounce-back) 등 간단한 경계 모델<sup>[1,2]</sup></td>
-<td class="px-4 py-2 border align-top" data-i18n="고마하수_및_강압축성_유동_적용에_제약_추가적인_모델_개발_필요_1_4">- 고마하수 및 강압축성 유동 적용에 제약: 추가적인 모델 개발 필요<sup>[1,4]</sup></td>
-</tr>
-<tr>
-<td class="px-4 py-2 border align-top" data-i18n="다상_복합_유동_모델링에_강점_인터페이스_처리_및_상_변화_모델링이_비교적_자연스러움_1_2">- 다상/복합 유동 모델링에 강점: 인터페이스 처리 및 상 변화 모델링이 비교적 자연스러움<sup>[1,2]</sup></td>
-<td class="px-4 py-2 border align-top" data-i18n="수치_안정성_문제_고주파수_고파장_유동_해석_일부_경계_조건에서_불안정성_발생_가능_1">- 수치 안정성 문제: 고주파수/고파장 유동 해석, 일부 경계 조건에서 불안정성 발생 가능<sup>[1]</sup></td>
-</tr>
-<tr>
-<td class="px-4 py-2 border align-top" data-i18n="음향_해석에_적합한_낮은_수치_소산_특성_1">- 음향 해석에 적합한 낮은 수치 소산 특성<sup>[1]</sup></td>
-<td class="px-4 py-2 border align-top" data-i18n="물리적_직관성_낮음_ns_방정식_기반_모델_대비_해석이_직관적이지_않음_1">- 물리적 직관성 낮음: NS 방정식 기반 모델 대비 해석이 직관적이지 않음<sup>[1]</sup></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 data-i18n="주요_응용_분야_및_산업_학술적_사례" id="lbm-applications">주요 응용 분야 및 산업/학술적 사례</h2>
-<ul>
-<li data-i18n="다공성_매체_유동_석유_회수_연료_전지_촉매_반응기_내부_유동_등_2"><strong>다공성 매체 유동:</strong> 석유 회수, 연료 전지, 촉매 반응기 내부 유동 등<sup>[2]</sup></li>
-<li data-i18n="다상_유동_액적_형성_기포_동역학_에멀전_및_현탁액_2"><strong>다상 유동:</strong> 액적 형성, 기포 동역학, 에멀전 및 현탁액<sup>[2]</sup></li>
-<li data-i18n="미세_유체_역학_및_바이오_유체_마이크로_채널_유동_혈류_시뮬레이션_2"><strong>미세 유체 역학 및 바이오 유체:</strong> 마이크로 채널 유동, 혈류 시뮬레이션<sup>[2]</sup></li>
-<li data-i18n="음향학_공기역학적_소음_예측_흡음재_내부_유동_1"><strong>음향학:</strong> 공기역학적 소음 예측, 흡음재 내부 유동<sup>[1]</sup></li>
-<li data-i18n="복잡_기하_구조_유동_자동차_항공기_주변_건물_주변_유동_1_2"><strong>복잡 기하 구조 유동:</strong> 자동차, 항공기 주변, 건물 주변 유동<sup>[1,2]</sup></li>
-</ul>
-<h2 data-i18n="최신_연구_동향_최근_3_5년" id="lbm-research-trends">최신 연구 동향 (최근 3-5년)</h2>
-<p data-i18n="최근_lbm_연구는_다음과_같은_방향으로_진행되고_있습니다">최근 LBM 연구는 다음과 같은 방향으로 진행되고 있습니다:</p>
-<ul>
-<li data-i18n="고급_충돌_모델_및_안정성_개선_mrt_multiple_relaxation_time_cumulant_entropic_lbm_등_다양한_충돌_연산자를_개발하여_수치_안정성_및_정확도를_향상시키고_높은_레이놀즈_수나_강한_압축성_유동으로의_적용을_시도하고_있습니다_1_9"><strong>고급 충돌 모델 및 안정성 개선:</strong> MRT(Multiple Relaxation Time), Cumulant, Entropic LBM 등 다양한 충돌 연산자를 개발하여 수치 안정성 및 정확도를 향상시키고, 높은 레이놀즈 수나 강한 압축성 유동으로의 적용을 시도하고 있습니다.<sup>[1,9]</sup></li>
-<li data-i18n="다물리_다상_화학_반응_통합_열_전달_화학_반응_상_변화_전자기장_등_다양한_물리_현상을_lbm_프레임워크_내에_통합하는_연구가_활발합니다_1_2_10"><strong>다물리/다상/화학 반응 통합:</strong> 열 전달, 화학 반응, 상 변화, 전자기장 등 다양한 물리 현상을 LBM 프레임워크 내에 통합하는 연구가 활발합니다.<sup>[1,2,10]</sup></li>
-<li data-i18n="병렬_컴퓨팅_및_하드웨어_가속_최적화_gpu_fpga_asic_등_고성능_하드웨어를_적극_활용하여_대규모_lbm_시뮬레이션의_효율성을_극대화하는_연구가_집중되고_있습니다_1_2_9"><strong>병렬 컴퓨팅 및 하드웨어 가속 최적화:</strong> GPU, FPGA, ASIC 등 고성능 하드웨어를 적극 활용하여 대규모 LBM 시뮬레이션의 효율성을 극대화하는 연구가 집중되고 있습니다.<sup>[1,2,9]</sup></li>
-<li data-i18n="난류_모델_및_하이브리드_기법_lbm_기반의_les_rans_모델_개발_및_lbm과_ns_urans_les_기반_솔버를_결합하는_하이브리드_기법_연구가_진행_중입니다_1_2_9"><strong>난류 모델 및 하이브리드 기법:</strong> LBM 기반의 LES, RANS 모델 개발 및 LBM과 NS(URANS/LES) 기반 솔버를 결합하는 하이브리드 기법 연구가 진행 중입니다.<sup>[1,2,9]</sup></li>
-</ul>
-<hr class="my-8 border-gray-300"/>
-<h3 class="text-xl font-semibold text-slate-700 mt-6 mb-3" data-i18n="참고문헌">참고문헌</h3>
-<ol class="list-decimal list-inside text-sm text-gray-600 space-y-1">
-<li data-i18n="1_a_systematic_literature_review_on_lattice_boltzmann_method_applied_to_acoustics_sciencedirect">[1] A systematic literature review on Lattice Boltzmann Method applied to acoustics - Sciencedirect.</li>
-<li data-i18n="2_lattice_boltzmann_methods_for_industrial_applications_researchgate">[2] Lattice Boltzmann Methods for Industrial Applications - ResearchGate.</li>
-<li data-i18n="3_the_lattice_boltzmann_method_fundamentals_and_acoustics_viggen_2014_phd_thesis_researchgate">[3] The lattice Boltzmann method: Fundamentals and acoustics (Viggen, 2014, PhD Thesis) - ResearchGate.</li>
-<li data-i18n="4_adaptive_lattice_boltzmann_model_for_compressible_flows_c_sun_2000_ieee_출처에서_언급">[4] Adaptive Lattice Boltzmann Model for Compressible Flows. C Sun. 2000. (IEEE 출처에서 언급).</li>
-<li data-i18n="8_incompressible_lbm_lattice_boltzmann_method_advanced_options_simscale_docs">[8] Incompressible LBM (Lattice Boltzmann Method) Advanced Options - SimScale Docs.</li>
-<li data-i18n="9_lattice_boltzmann_k_ω_sst_based_hybrid_rans_les_simulations_of_turbulent_flows_sciencedirect">[9] Lattice Boltzmann k-ω SST based hybrid RANS/LES simulations of turbulent flows - Sciencedirect.</li>
-<li data-i18n="10_a_novel_frequency_dependent_lattice_boltzmann_model_with_a_single_force_term_for_electromagnetic_wave_propagation_in_dispersive_media_nature">[10] A novel frequency‐dependent lattice Boltzmann model with a single force term for electromagnetic wave propagation in dispersive media - Nature.</li>
-</ol>
-<p class="text-xs mt-2" data-i18n="위_참고문헌_목록은_제공된_lbm_및_urans_모델_상세_분석_문서에서_관련_내용을_발췌하여_이_페이지_작성에_활용된_주요_자료들입니다"><em>(위 참고문헌 목록은 제공된 "LBM 및 URANS 모델 상세 분석" 문서에서 관련 내용을 발췌하여 이 페이지 작성에 활용된 주요 자료들입니다.)</em></p>
-</article>
-</div>
-<div class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
-<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
-<div class="space-y-4" id="searchResultsList"></div>
-</div>
-</main>
-<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
-<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
-</p>
-<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-</div>
-</footer>
-<script src="script.js"></script>
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
+                    <span class="hamster-icon">🐹</span>
+                    <span class="helper-text">뭐든 물어봐!</span>
+                </div>
+            </div>
+        </div>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
+        <div class="bg-white p-6 md:p-10 rounded-xl shadow-xl">
+            <header class="mb-8 border-b pb-4">
+                <h1 class="text-3xl md:text-4xl font-bold text-slate-800">격자 볼츠만 방법 (Lattice Boltzmann Method, LBM)</h1>
+            </header>
+            <article class="prose prose-lg max-w-none">
+                <p>LBM은 유체 유동을 시뮬레이션하는 메조스코픽 방법으로, 거시적인 Navier-Stokes 방정식을 직접 푸는 대신, 격자 상에서 정의된 입자 분포 함수의 시간적 진화를 추적합니다.<sup>[1]</sup></p>
+
+                <h2 id="lbm-theory">상세 이론, 수학적 배경, 주요 가정</h2>
+                <p>LBM은 확률론적 볼츠만 방정식에서 유래하며, 입자들의 충돌 및 이동 과정을 이산화하여 모델링합니다.<sup>[1]</sup> 이 방법은 유체의 미시적인 입자 상호작용이 거시적인 유체 거동으로 나타난다는 운동론적 가설에 기반합니다.<sup>[2]</sup></p>
+                
+                <h3 class="text-xl font-semibold">수학적 배경</h3>
+                <p>핵심은 이산 볼츠만 방정식입니다. 가장 기본적인 형태는 BGK(Bhatnagar-Gross-Krook) 단일 이완 시간 모델을 사용하며 다음과 같습니다:<sup>[3]</sup></p>
+                <div class="my-4 p-3 bg-gray-100 border border-gray-200 rounded-md overflow-x-auto">
+                    <pre><code class="text-sm font-mono">fᵢ(x + cᵢΔt, t + Δt) - fᵢ(x, t) = -(1/τ)[fᵢ(x, t) - fᵢᵉ۹(x, t)]</code></pre>
+                </div>
+                <p>여기서:</p>
+                <ul>
+                    <li><code class="font-mono text-sm bg-gray-100 p-0.5 rounded">fᵢ(x, t)</code>는 위치 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">x</code>와 시간 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">t</code>에서 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">i</code>번째 격자 속도 방향 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">cᵢ</code>를 가진 입자의 분포 함수입니다.<sup>[1]</sup></li>
+                    <li><code class="font-mono text-sm bg-gray-100 p-0.5 rounded">Δt</code>는 시간 단계 크기이며, 격자 간격 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">Δx</code>와 이산 속도 벡터 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">cᵢ</code>는 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">cᵢ = (Δx / Δt)eᵢ</code> 관계를 갖습니다 (<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">eᵢ</code>는 단위 속도 벡터).<sup>[2]</sup></li>
+                    <li><code class="font-mono text-sm bg-gray-100 p-0.5 rounded">τ</code>는 충돌 이완 시간으로, 유체의 점성과 관련됩니다.<sup>[1]</sup></li>
+                    <li><code class="font-mono text-sm bg-gray-100 p-0.5 rounded">fᵢᵉ۹(x, t)</code>는 평형 상태에서의 입자 분포 함수로, 일반적으로 맥스웰-볼츠만 분포를 저마하수 조건에서 테일러 전개하여 얻습니다.<sup>[3]</sup></li>
+                </ul>
+                <p>거시적 변수(밀도 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ρ</code>, 속도 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">u</code>)는 분포 함수의 모멘트로 산출됩니다:<sup>[1]</sup></p>
+                <div class="my-4 p-3 bg-gray-100 border border-gray-200 rounded-md overflow-x-auto">
+                    <pre><code class="text-sm font-mono">ρ = Σᵢ fᵢ</code></pre>
+                </div>
+                <div class="my-4 p-3 bg-gray-100 border border-gray-200 rounded-md overflow-x-auto">
+                    <pre><code class="text-sm font-mono">ρu = Σᵢ fᵢcᵢ</code></pre>
+                </div>
+
+                <h3 class="text-xl font-semibold">주요 가정</h3>
+                <ul>
+                    <li><strong>격자화된 공간, 시간, 속도:</strong> 연속적인 공간, 시간, 속도 공간을 이산적인 격자점으로 근사합니다.<sup>[1]</sup></li>
+                    <li><strong>저마하수 및 약한 압축성:</strong> 기본적인 LBM 모델은 저마하수 비압축성 또는 약압축성 유동에 대해 NS 방정식을 정확히 복구하도록 설계됩니다. 고마하수/초음속 유동에는 추가 모델링이나 변형이 필요합니다.<sup>[4]</sup></li>
+                    <li><strong>충돌 및 이동 프로세스:</strong> 유체 입자는 각 시간 단계에서 로컬 충돌을 겪은 후 이산 속도 방향으로 인접 격자점으로 이동합니다.<sup>[1]</sup></li>
+                </ul>
+
+                <h2 id="lbm-pros-cons">장점 및 단점</h2>
+                <div class="overflow-x-auto my-6">
+                    <table class="w-full text-left border-collapse prose">
+                        <thead class="bg-slate-100">
+                            <tr>
+                                <th class="px-4 py-2 border">장점</th>
+                                <th class="px-4 py-2 border">단점</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-4 py-2 border align-top">- 병렬 처리 효율성 우수: 로컬 연산 기반으로 대규모 병렬 계산에 적합<sup>[1,2]</sup></td>
+                                <td class="px-4 py-2 border align-top">- 메모리 요구량 높음: 특히 3D 대규모 문제에서 분포 함수 저장에 많은 메모리 필요<sup>[1,2]</sup></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 border align-top">- 복잡한 경계 조건 처리 용이: 바운스백(Bounce-back) 등 간단한 경계 모델<sup>[1,2]</sup></td>
+                                <td class="px-4 py-2 border align-top">- 고마하수 및 강압축성 유동 적용에 제약: 추가적인 모델 개발 필요<sup>[1,4]</sup></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 border align-top">- 다상/복합 유동 모델링에 강점: 인터페이스 처리 및 상 변화 모델링이 비교적 자연스러움<sup>[1,2]</sup></td>
+                                <td class="px-4 py-2 border align-top">- 수치 안정성 문제: 고주파수/고파장 유동 해석, 일부 경계 조건에서 불안정성 발생 가능<sup>[1]</sup></td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 border align-top">- 음향 해석에 적합한 낮은 수치 소산 특성<sup>[1]</sup></td>
+                                <td class="px-4 py-2 border align-top">- 물리적 직관성 낮음: NS 방정식 기반 모델 대비 해석이 직관적이지 않음<sup>[1]</sup></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="lbm-applications">주요 응용 분야 및 산업/학술적 사례</h2>
+                <ul>
+                    <li><strong>다공성 매체 유동:</strong> 석유 회수, 연료 전지, 촉매 반응기 내부 유동 등<sup>[2]</sup></li>
+                    <li><strong>다상 유동:</strong> 액적 형성, 기포 동역학, 에멀전 및 현탁액<sup>[2]</sup></li>
+                    <li><strong>미세 유체 역학 및 바이오 유체:</strong> 마이크로 채널 유동, 혈류 시뮬레이션<sup>[2]</sup></li>
+                    <li><strong>음향학:</strong> 공기역학적 소음 예측, 흡음재 내부 유동<sup>[1]</sup></li>
+                    <li><strong>복잡 기하 구조 유동:</strong> 자동차, 항공기 주변, 건물 주변 유동<sup>[1,2]</sup></li>
+                </ul>
+                
+                <h2 id="lbm-research-trends">최신 연구 동향 (최근 3-5년)</h2>
+                <p>최근 LBM 연구는 다음과 같은 방향으로 진행되고 있습니다:</p>
+                <ul>
+                    <li><strong>고급 충돌 모델 및 안정성 개선:</strong> MRT(Multiple Relaxation Time), Cumulant, Entropic LBM 등 다양한 충돌 연산자를 개발하여 수치 안정성 및 정확도를 향상시키고, 높은 레이놀즈 수나 강한 압축성 유동으로의 적용을 시도하고 있습니다.<sup>[1,9]</sup></li>
+                    <li><strong>다물리/다상/화학 반응 통합:</strong> 열 전달, 화학 반응, 상 변화, 전자기장 등 다양한 물리 현상을 LBM 프레임워크 내에 통합하는 연구가 활발합니다.<sup>[1,2,10]</sup></li>
+                    <li><strong>병렬 컴퓨팅 및 하드웨어 가속 최적화:</strong> GPU, FPGA, ASIC 등 고성능 하드웨어를 적극 활용하여 대규모 LBM 시뮬레이션의 효율성을 극대화하는 연구가 집중되고 있습니다.<sup>[1,2,9]</sup></li>
+                    <li><strong>난류 모델 및 하이브리드 기법:</strong> LBM 기반의 LES, RANS 모델 개발 및 LBM과 NS(URANS/LES) 기반 솔버를 결합하는 하이브리드 기법 연구가 진행 중입니다.<sup>[1,2,9]</sup></li>
+                </ul>
+
+                <hr class="my-8 border-gray-300">
+                <h3 class="text-xl font-semibold text-slate-700 mt-6 mb-3">참고문헌</h3>
+                <ol class="list-decimal list-inside text-sm text-gray-600 space-y-1">
+                    <li>[1] A systematic literature review on Lattice Boltzmann Method applied to acoustics - Sciencedirect.</li>
+                    <li>[2] Lattice Boltzmann Methods for Industrial Applications - ResearchGate.</li>
+                    <li>[3] The lattice Boltzmann method: Fundamentals and acoustics (Viggen, 2014, PhD Thesis) - ResearchGate.</li>
+                    <li>[4] Adaptive Lattice Boltzmann Model for Compressible Flows. C Sun. 2000. (IEEE 출처에서 언급).</li>
+                    <li>[8] Incompressible LBM (Lattice Boltzmann Method) Advanced Options - SimScale Docs.</li>
+                    <li>[9] Lattice Boltzmann k-ω SST based hybrid RANS/LES simulations of turbulent flows - Sciencedirect.</li>
+                    <li>[10] A novel frequency‐dependent lattice Boltzmann model with a single force term for electromagnetic wave propagation in dispersive media - Nature.</li>
+                </ol>
+                <p class="text-xs mt-2"><em>(위 참고문헌 목록은 제공된 "LBM 및 URANS 모델 상세 분석" 문서에서 관련 내용을 발췌하여 이 페이지 작성에 활용된 주요 자료들입니다.)</em></p>
+
+            </article>
+        </div>
+        <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

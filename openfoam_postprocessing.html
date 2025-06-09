@@ -1,103 +1,111 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="title_openfoam_postprocessing">OpenFOAM 후처리 - 소프트웨어 | 생물공학연구실</title>
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenFOAM 후처리 - 소프트웨어 | 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
-<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
-<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
-</h1>
-<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
-<ul class="container mx-auto px-0 flex justify-center">
-</ul>
-</nav>
-<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
-<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
-<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
-<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
-</div>
-</div>
-<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
-<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
-<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
-</div>
-</div>
-</div>
-<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
-<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-</div>
-</nav>
-</div>
-<main class="container mx-auto px-4 mt-5 py-12">
-<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-<div class="mb-8" data-i18n="openfoam_메인으로_돌아가기">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="openfoam_메인으로_돌아가기" href="openfoam_main.html">« OpenFOAM 메인으로 돌아가기</a>
-</div>
-<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="5_후처리_post_processing">5. 후처리 (Post-processing)</h2>
-<p data-i18n="openfoam_시뮬레이션_완료_후_계산된_방대한_양의_수치_데이터를_분석하고_시각화하여_유동_특성을_파악하고_공학적_통찰력을_얻는_과정입니다_openfoam은_자체_유틸리티와_외부_시각화_도구를_연동하여_강력한_후처리_환경을_제공합니다">OpenFOAM 시뮬레이션 완료 후, 계산된 방대한 양의 수치 데이터를 분석하고 시각화하여 유동 특성을 파악하고 공학적 통찰력을 얻는 과정입니다. OpenFOAM은 자체 유틸리티와 외부 시각화 도구를 연동하여 강력한 후처리 환경을 제공합니다.</p>
-<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="paraview를_이용한_시각화">ParaView를 이용한 시각화</h3>
-<p data-i18n="openfoam의_주된_후처리_및_시각화_도구는_오픈_소스_소프트웨어인paraview입니다_openfoam은_paraview가_직접_읽을_수_있는_vtk_visualization_toolkit_형식을_지원하며_parafoam이라는_유틸리티를_제공하여_쉽게_paraview를_실행하고_openfoam_케이스_데이터를_불러올_수_있습니다">OpenFOAM의 주된 후처리 및 시각화 도구는 오픈 소스 소프트웨어인 <strong>ParaView</strong>입니다. OpenFOAM은 ParaView가 직접 읽을 수 있는 VTK(Visualization Toolkit) 형식을 지원하며, <code>paraFoam</code>이라는 유틸리티를 제공하여 쉽게 ParaView를 실행하고 OpenFOAM 케이스 데이터를 불러올 수 있습니다.</p>
-<ul class="list-disc pl-5 space-y-1">
-<li data-i18n="parafoam실행_케이스_디렉토리에서parafoam명령어를_입력하면_paraview가_실행되고_현재_케이스_데이터가_로드됩니다_내부적으로_openfoam확장자를_가진_빈_파일을_생성하여_paraview가_인식하도록_합니다"><strong><code>paraFoam</code> 실행</strong>: 케이스 디렉토리에서 <code>paraFoam</code> 명령어를 입력하면 ParaView가 실행되고 현재 케이스 데이터가 로드됩니다. (내부적으로 <code>.OpenFOAM</code> 확장자를 가진 빈 파일을 생성하여 ParaView가 인식하도록 합니다.)</li>
-<li data-i18n="시각화_기능_paraview_내에서_컨투어_플롯_벡터_플롯_스트림라인_유선_글리프_glyph_슬라이스_slice_클립_clip_애니메이션_등_다양한_시각화_기법을_사용하여_유동장_압력장_온도장_등을_분석할_수_있습니다"><strong>시각화 기능</strong>: ParaView 내에서 컨투어 플롯, 벡터 플롯, 스트림라인(유선), 글리프(glyph), 슬라이스(slice), 클립(clip), 애니메이션 등 다양한 시각화 기법을 사용하여 유동장, 압력장, 온도장 등을 분석할 수 있습니다.</li>
-<li data-i18n="데이터_분석_특정_지점_선_면에서의_데이터_값_추출_통계_계산_플롯_생성_등의_정량적_분석도_가능합니다"><strong>데이터 분석</strong>: 특정 지점/선/면에서의 데이터 값 추출, 통계 계산, 플롯 생성 등의 정량적 분석도 가능합니다.</li>
-</ul>
-<figure class="embedded-image-figure">
-<img alt="ParaView OpenFOAM 후처리" class="max-w-xl" data-i18n="paraview_openfoam_후처리" src="https://i.ytimg.com/vi/kczZPc4M-ms/maxresdefault.jpg"/>
-<figcaption>ParaView를 이용한 OpenFOAM 시뮬레이션 결과 후처리 예시 (출처: YouTube @WolfDynamics)</figcaption>
-</figure>
-<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="openfoam_자체_후처리_유틸리티">OpenFOAM 자체 후처리 유틸리티</h3>
-<p data-i18n="openfoam은_시뮬레이션_실행_중_또는_완료_후에_특정_데이터를_추출하거나_계산하는_다양한_유틸리티를_제공합니다_이는_주로system_controldict파일_내의functions_또는functionobjects_항목을_통해_설정하거나_별도의_명령어로_실행합니다">OpenFOAM은 시뮬레이션 실행 중 또는 완료 후에 특정 데이터를 추출하거나 계산하는 다양한 유틸리티를 제공합니다. 이는 주로 <code>system/controlDict</code> 파일 내의 <code>functions</code> (또는 <code>functionObjects</code>) 항목을 통해 설정하거나, 별도의 명령어로 실행합니다.</p>
-<ul class="list-disc pl-5 space-y-1">
-<li data-i18n="sample_특정_위치_선_면_점_집합_등_에서_필드_데이터를_샘플링하여_텍스트_파일로_저장합니다"><strong><code>sample</code></strong>: 특정 위치(선, 면, 점 집합 등)에서 필드 데이터를 샘플링하여 텍스트 파일로 저장합니다.</li>
-<li data-i18n="probes_지정된_위치에서_시간에_따른_필드_값_변화를_기록합니다"><strong><code>probes</code></strong>: 지정된 위치에서 시간에 따른 필드 값 변화를 기록합니다.</li>
-<li data-i18n="fieldminmax_fieldaverage_필드의_최소_최대값_또는_시간_평균값을_계산합니다"><strong><code>fieldMinMax</code>, <code>fieldAverage</code></strong>: 필드의 최소/최대값 또는 시간 평균값을 계산합니다.</li>
-<li data-i18n="forces_forcecoeffs_특정_경계면_patch_에_작용하는_힘_압력력_점성력_및_힘_계수_항력_양력_계수_등_를_계산합니다"><strong><code>forces</code>, <code>forceCoeffs</code></strong>: 특정 경계면(patch)에 작용하는 힘(압력력, 점성력) 및 힘 계수(항력, 양력 계수 등)를 계산합니다.</li>
-<li data-i18n="wallshearstress_벽면_전단_응력을_계산합니다"><strong><code>wallShearStress</code></strong>: 벽면 전단 응력을 계산합니다.</li>
-<li data-i18n="streamfunction_q_lambda2_와도_vorticity_q_criterion_lambda2_criterion_등_유동_구조_분석을_위한_파생_변수를_계산합니다"><strong><code>streamFunction</code>, <code>Q</code>, <code>Lambda2</code></strong>: 와도(vorticity), Q-criterion, Lambda2-criterion 등 유동 구조 분석을 위한 파생 변수를 계산합니다.</li>
-</ul>
-<div class="my-6 responsive-iframe-container">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" data-i18n="youtube_video_player_openfoam_post_processing_with_paraview_tutorial" src="https://www.youtube.com/embed/8J59CpaYnVc" title="YouTube video player: OpenFOAM Post-Processing with ParaView Tutorial"></iframe>
-</div>
-<p class="text-sm text-gray-600 mt-2 italic text-center" data-i18n="paraview를_활용한_openfoam_결과_분석_튜토리얼_영상_예시">ParaView를 활용한 OpenFOAM 결과 분석 튜토리얼 영상 (예시)</p>
-<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="타사_도구_연동">타사 도구 연동</h3>
-<p data-i18n="openfoam_결과는_다양한_형식으로_변환하여_다른_상용_또는_오픈_소스_후처리_소프트웨어_예_ensight_fieldview_visit_tecplot_에서도_분석할_수_있습니다_이를_위한_변환_유틸리티_예_foamtoensight_foamtotecplot360_가_제공됩니다">OpenFOAM 결과는 다양한 형식으로 변환하여 다른 상용 또는 오픈 소스 후처리 소프트웨어(예: EnSight, FieldView, VisIt, Tecplot)에서도 분석할 수 있습니다. 이를 위한 변환 유틸리티(예: <code>foamToEnsight</code>, <code>foamToTecplot360</code>)가 제공됩니다.</p>
-<p data-i18n="튜토리얼_및_공식_사용자_가이드에서_paraview_및_기타_후처리_유틸리티_사용법_데이터_분석_방법_시간_이력_플롯_생성_등에_대한_상세한_정보를_얻을_수_있습니다">튜토리얼 및 공식 사용자 가이드에서 ParaView 및 기타 후처리 유틸리티 사용법, 데이터 분석 방법, 시간 이력 플롯 생성 등에 대한 상세한 정보를 얻을 수 있습니다.</p>
-<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="참고_자료">참고 자료</h3>
-<ul class="list-disc pl-5 space-y-1 text-sm">
-<li data-i18n="openfoam_user_guide_section_7_post_processing">OpenFOAM User Guide - Section 7: Post-processing.</li>
-<li data-i18n="paraview_공식_웹사이트"><a data-i18n="paraview_공식_웹사이트" href="https://www.paraview.org/overview/" rel="noopener noreferrer" target="_blank">ParaView 공식 웹사이트</a></li>
-<li data-i18n="openfoam_user_guide_openfoam_com_post_processing"><a data-i18n="openfoam_user_guide_openfoam_com_post_processing" href="https://www.openfoam.com/documentation/user-guide/7-post-processing" rel="noopener noreferrer" target="_blank">OpenFOAM User Guide (openfoam.com): Post-Processing</a></li>
-<li data-i18n="openfoam_wiki_postprocessing_category"><a data-i18n="openfoam_wiki_postprocessing_category" href="https://wiki.openfoam.com/Category_Postprocessing" rel="noopener noreferrer" target="_blank">OpenFOAM Wiki - Postprocessing Category</a></li>
-</ul>
-</article>
-<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
-<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
-<div class="space-y-4" id="searchResultsList"></div>
-</div>
-</main>
-<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
-<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
-</p>
-<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-</div>
-</footer>
-<script src="script.js"></script>
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
+                    <span class="hamster-icon">🐹</span>
+                    <span class="helper-text">뭐든 물어봐!</span>
+                </div>
+            </div>
+        </div>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 mt-5 py-12">
+        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+            <div class="mb-8">
+                <a href="openfoam_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; OpenFOAM 메인으로 돌아가기</a>
+            </div>
+            
+            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">5. 후처리 (Post-processing)</h2>
+            <p>OpenFOAM 시뮬레이션 완료 후, 계산된 방대한 양의 수치 데이터를 분석하고 시각화하여 유동 특성을 파악하고 공학적 통찰력을 얻는 과정입니다. OpenFOAM은 자체 유틸리티와 외부 시각화 도구를 연동하여 강력한 후처리 환경을 제공합니다.</p>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">ParaView를 이용한 시각화</h3>
+            <p>OpenFOAM의 주된 후처리 및 시각화 도구는 오픈 소스 소프트웨어인 <strong>ParaView</strong>입니다. OpenFOAM은 ParaView가 직접 읽을 수 있는 VTK(Visualization Toolkit) 형식을 지원하며, <code>paraFoam</code>이라는 유틸리티를 제공하여 쉽게 ParaView를 실행하고 OpenFOAM 케이스 데이터를 불러올 수 있습니다.</p>
+            <ul class="list-disc pl-5 space-y-1">
+                <li><strong><code>paraFoam</code> 실행</strong>: 케이스 디렉토리에서 <code>paraFoam</code> 명령어를 입력하면 ParaView가 실행되고 현재 케이스 데이터가 로드됩니다. (내부적으로 <code>.OpenFOAM</code> 확장자를 가진 빈 파일을 생성하여 ParaView가 인식하도록 합니다.)</li>
+                <li><strong>시각화 기능</strong>: ParaView 내에서 컨투어 플롯, 벡터 플롯, 스트림라인(유선), 글리프(glyph), 슬라이스(slice), 클립(clip), 애니메이션 등 다양한 시각화 기법을 사용하여 유동장, 압력장, 온도장 등을 분석할 수 있습니다.</li>
+                <li><strong>데이터 분석</strong>: 특정 지점/선/면에서의 데이터 값 추출, 통계 계산, 플롯 생성 등의 정량적 분석도 가능합니다.</li>
+            </ul>
+            <figure class="embedded-image-figure">
+                <img src="https://i.ytimg.com/vi/kczZPc4M-ms/maxresdefault.jpg" alt="ParaView OpenFOAM 후처리" class="max-w-xl">
+                <figcaption>ParaView를 이용한 OpenFOAM 시뮬레이션 결과 후처리 예시 (출처: YouTube @WolfDynamics)</figcaption>
+            </figure>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">OpenFOAM 자체 후처리 유틸리티</h3>
+            <p>OpenFOAM은 시뮬레이션 실행 중 또는 완료 후에 특정 데이터를 추출하거나 계산하는 다양한 유틸리티를 제공합니다. 이는 주로 <code>system/controlDict</code> 파일 내의 <code>functions</code> (또는 <code>functionObjects</code>) 항목을 통해 설정하거나, 별도의 명령어로 실행합니다.</p>
+            <ul class="list-disc pl-5 space-y-1">
+                <li><strong><code>sample</code></strong>: 특정 위치(선, 면, 점 집합 등)에서 필드 데이터를 샘플링하여 텍스트 파일로 저장합니다.</li>
+                <li><strong><code>probes</code></strong>: 지정된 위치에서 시간에 따른 필드 값 변화를 기록합니다.</li>
+                <li><strong><code>fieldMinMax</code>, <code>fieldAverage</code></strong>: 필드의 최소/최대값 또는 시간 평균값을 계산합니다.</li>
+                <li><strong><code>forces</code>, <code>forceCoeffs</code></strong>: 특정 경계면(patch)에 작용하는 힘(압력력, 점성력) 및 힘 계수(항력, 양력 계수 등)를 계산합니다.</li>
+                <li><strong><code>wallShearStress</code></strong>: 벽면 전단 응력을 계산합니다.</li>
+                <li><strong><code>streamFunction</code>, <code>Q</code>, <code>Lambda2</code></strong>: 와도(vorticity), Q-criterion, Lambda2-criterion 등 유동 구조 분석을 위한 파생 변수를 계산합니다.</li>
+            </ul>
+             <div class="my-6 responsive-iframe-container">
+                <iframe src="https://www.youtube.com/embed/8J59CpaYnVc" title="YouTube video player: OpenFOAM Post-Processing with ParaView Tutorial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p class="text-sm text-gray-600 mt-2 italic text-center">ParaView를 활용한 OpenFOAM 결과 분석 튜토리얼 영상 (예시)</p>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">타사 도구 연동</h3>
+            <p>OpenFOAM 결과는 다양한 형식으로 변환하여 다른 상용 또는 오픈 소스 후처리 소프트웨어(예: EnSight, FieldView, VisIt, Tecplot)에서도 분석할 수 있습니다. 이를 위한 변환 유틸리티(예: <code>foamToEnsight</code>, <code>foamToTecplot360</code>)가 제공됩니다.</p>
+            <p>튜토리얼 및 공식 사용자 가이드에서 ParaView 및 기타 후처리 유틸리티 사용법, 데이터 분석 방법, 시간 이력 플롯 생성 등에 대한 상세한 정보를 얻을 수 있습니다.</p>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">참고 자료</h3>
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+                <li>OpenFOAM User Guide - Section 7: Post-processing.</li>
+                <li><a href="https://www.paraview.org/overview/" target="_blank" rel="noopener noreferrer">ParaView 공식 웹사이트</a></li>
+                <li><a href="https://www.openfoam.com/documentation/user-guide/7-post-processing" target="_blank" rel="noopener noreferrer">OpenFOAM User Guide (openfoam.com): Post-Processing</a></li>
+                <li><a href="https://wiki.openfoam.com/Category_Postprocessing" target="_blank" rel="noopener noreferrer">OpenFOAM Wiki - Postprocessing Category</a></li>
+            </ul>
+
+        </article>
+        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

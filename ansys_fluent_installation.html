@@ -1,92 +1,99 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="title_ansys_fluent_installation">Ansys Fluent 설치 - 소프트웨어 | 생물공학연구실</title>
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansys Fluent 설치 - 소프트웨어 | 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
-<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
-<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
-</h1>
-<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
-<ul class="container mx-auto px-0 flex justify-center">
-</ul>
-</nav>
-<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
-<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
-<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
-<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
-</div>
-</div>
-<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
-<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
-<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
-</div>
-</div>
-</div>
-<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
-<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-</div>
-</nav>
-</div>
-<main class="container mx-auto px-4 mt-5 py-12">
-<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-<div class="mb-8" data-i18n="ansys_fluent_메인으로_돌아가기">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="ansys_fluent_메인으로_돌아가기" href="ansys_fluent_main.html">« Ansys Fluent 메인으로 돌아가기</a>
-</div>
-<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="2_설치_가이드">2. 설치 가이드</h2>
-<p data-i18n="ansys_fluent의_공식_설치_절차는_다음과_같습니다_설치_전_시스템_요구사항을_확인하고_ansys_customer_portal을_통해_라이선스_및_설치_파일을_확보해야_합니다">ANSYS Fluent의 공식 설치 절차는 다음과 같습니다. 설치 전 시스템 요구사항을 확인하고, Ansys Customer Portal을 통해 라이선스 및 설치 파일을 확보해야 합니다.</p>
-<ol>
-<li data-i18n="소프트웨어_다운로드_ansys_customer_portal_download_ansys_com또는_customer_portal_로그인_후_에서_최신_버전의_ansys_fluids_패키지를_다운로드합니다_학생_버전은_ansys_student_community_ansys_com_academic_students_에서_받을_수_있습니다"><strong>소프트웨어 다운로드</strong>: Ansys Customer Portal (<a data-i18n="download_ansys_com" href="https://download.ansys.com/" rel="noopener noreferrer" target="_blank">download.ansys.com</a> 또는 Customer Portal 로그인 후)에서 최신 버전의 Ansys Fluids 패키지를 다운로드합니다. 학생 버전은 Ansys Student Community (<a data-i18n="ansys_com_academic_students" href="https://www.ansys.com/academic/students/ansys-student" rel="noopener noreferrer" target="_blank">ansys.com/academic/students</a>)에서 받을 수 있습니다.</li>
-<li data-i18n="설치_런처_실행_다운로드한_설치_프로그램_iso_파일_또는_압축_해제된_폴더_내의_setup_exe_또는_install_을_실행하고_install_ansys_products_를_선택합니다"><strong>설치 런처 실행</strong>: 다운로드한 설치 프로그램(ISO 파일 또는 압축 해제된 폴더 내의 `setup.exe` 또는 `install`)을 실행하고 'Install Ansys Products'를 선택합니다.</li>
-<li data-i18n="라이선스_동의_및_설치_경로_지정_라이선스_약관에_동의하고_설치_경로를_지정합니다_기본_경로_사용을_권장합니다"><strong>라이선스 동의 및 설치 경로 지정</strong>: 라이선스 약관에 동의하고 설치 경로를 지정합니다. 기본 경로 사용을 권장합니다.</li>
-<li data-i18n="제품_선택_및_라이선스_정보_입력_설치_마법사의_안내에_따라_설치할_제품_목록에서ansys_fluent_또는_fluid_dynamics_패키지_와_필요한_경우geometry_interface_spaceclaim_designmodeler_등_를_선택합니다_이어서_라이선스_서버의_hostname_정보_또는_로컬_라이선스_파일_정보를_입력합니다"><strong>제품 선택 및 라이선스 정보 입력</strong>: 설치 마법사의 안내에 따라 설치할 제품 목록에서 <strong>Ansys Fluent</strong> (또는 Fluid Dynamics 패키지)와 필요한 경우 <strong>Geometry Interface</strong> (SpaceClaim, DesignModeler 등)를 선택합니다. 이어서 라이선스 서버의 Hostname 정보 또는 로컬 라이선스 파일 정보를 입력합니다.</li>
-<li data-i18n="설치_진행_및_완료_설치_옵션_검토_후_설치를_진행합니다_설치_시간은_시스템_사양_및_선택한_구성_요소에_따라_달라질_수_있습니다_완료_후_시스템을_재시작해야_할_수_있습니다"><strong>설치 진행 및 완료</strong>: 설치 옵션 검토 후 설치를 진행합니다. 설치 시간은 시스템 사양 및 선택한 구성 요소에 따라 달라질 수 있습니다. 완료 후 시스템을 재시작해야 할 수 있습니다.</li>
-<li data-i18n="프로그램_실행_및_환경_설정_설치_완료_후_시작_메뉴_또는_바탕화면_아이콘을_통해_fluent를_실행합니다_처음_실행_시_필요한_환경_설정을_완료할_수_있습니다"><strong>프로그램 실행 및 환경 설정</strong>: 설치 완료 후 시작 메뉴 또는 바탕화면 아이콘을 통해 Fluent를 실행합니다. 처음 실행 시 필요한 환경 설정을 완료할 수 있습니다.</li>
-</ol>
-<p data-i18n="ansys_fluent는_windows_및_linux_운영체제를_지원하며_64비트_아키텍처에서_병렬_처리가_가능합니다_설치_및_라이선스_매니저_설정에_대한_추가적인_상세_안내는_ansys_공식_youtube_채널_ansys_how_to_videos_의_설치_가이드_영상이나_ansys_learning_hub의_자료를_참고하는_것이_좋습니다">ANSYS Fluent는 Windows 및 Linux 운영체제를 지원하며, 64비트 아키텍처에서 병렬 처리가 가능합니다. 설치 및 라이선스 매니저 설정에 대한 추가적인 상세 안내는 Ansys 공식 YouTube 채널(Ansys How To Videos)의 설치 가이드 영상이나 Ansys Learning Hub의 자료를 참고하는 것이 좋습니다.</p>
-<div class="my-6 responsive-iframe-container">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" data-i18n="youtube_video_player_ansys_fluent_installation_guide_placeholder" src="https://www.youtube.com/embed/VIDEO_ID_PLACEHOLDER_INSTALL" title="YouTube video player: Ansys Fluent Installation Guide (Placeholder)"></iframe>
-</div>
-<p class="text-sm text-gray-600 mt-2 italic text-center" data-i18n="ansys_공식_채널에서_fluent_설치_가이드_영상을_찾아보세요_예시">Ansys 공식 채널에서 Fluent 설치 가이드 영상을 찾아보세요. (예시)</p>
-<figure class="embedded-image-figure">
-<img alt="Ansys Fluent 파일 내보내기 예시" class="max-w-lg" data-i18n="ansys_fluent_파일_내보내기_예시" src="https://rescale.com/wp-content/uploads/fluent-export-case-file.6528fbe3-1-1024x785.png"/>
-<figcaption>Ansys Fluent 작업 환경의 모습 (출처: rescale.com) - 설치 후 Fluent 사용 화면 예시</figcaption>
-</figure>
-<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="참고_자료">참고 자료</h3>
-<ul class="list-disc pl-5 space-y-1 text-sm">
-<li data-i18n="ansys_student_version_download"><a data-i18n="ansys_student_version_download" href="https://www.ansys.com/academic/students/ansys-student" rel="noopener noreferrer" target="_blank">Ansys Student Version Download</a></li>
-<li data-i18n="ansys_customer_portal_라이선스_보유자_공식_설치_파일_및_문서_제공">Ansys Customer Portal (라이선스 보유자): 공식 설치 파일 및 문서 제공</li>
-<li data-i18n="ansys_youtube_channel_설치_및_사용법_튜토리얼"><a data-i18n="ansys_youtube_channel" href="https://www.youtube.com/@Ansys" rel="noopener noreferrer" target="_blank">Ansys YouTube Channel</a>: 설치 및 사용법 튜토리얼</li>
-<li data-i18n="ansys_fluent_user_s_guide_설치_관련_상세_정보_포함_자료실_페이지_참고">ANSYS Fluent User's Guide: 설치 관련 상세 정보 포함 (자료실 페이지 참고)</li>
-</ul>
-</article>
-<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
-<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
-<div class="space-y-4" id="searchResultsList"></div>
-</div>
-</main>
-<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
-<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
-</p>
-<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-</div>
-</footer>
-<script src="script.js"></script>
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
+                    <span class="hamster-icon">🐹</span>
+                    <span class="helper-text">뭐든 물어봐!</span>
+                </div>
+            </div>
+        </div>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 mt-5 py-12">
+        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+            <div class="mb-8">
+                <a href="ansys_fluent_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; Ansys Fluent 메인으로 돌아가기</a>
+            </div>
+            
+            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">2. 설치 가이드</h2>
+            <p>ANSYS Fluent의 공식 설치 절차는 다음과 같습니다. 설치 전 시스템 요구사항을 확인하고, Ansys Customer Portal을 통해 라이선스 및 설치 파일을 확보해야 합니다.</p>
+            <ol>
+                <li><strong>소프트웨어 다운로드</strong>: Ansys Customer Portal (<a href="https://download.ansys.com/" target="_blank" rel="noopener noreferrer">download.ansys.com</a> 또는 Customer Portal 로그인 후)에서 최신 버전의 Ansys Fluids 패키지를 다운로드합니다. 학생 버전은 Ansys Student Community (<a href="https://www.ansys.com/academic/students/ansys-student" target="_blank" rel="noopener noreferrer">ansys.com/academic/students</a>)에서 받을 수 있습니다.</li>
+                <li><strong>설치 런처 실행</strong>: 다운로드한 설치 프로그램(ISO 파일 또는 압축 해제된 폴더 내의 `setup.exe` 또는 `install`)을 실행하고 'Install Ansys Products'를 선택합니다.</li>
+                <li><strong>라이선스 동의 및 설치 경로 지정</strong>: 라이선스 약관에 동의하고 설치 경로를 지정합니다. 기본 경로 사용을 권장합니다.</li>
+                <li><strong>제품 선택 및 라이선스 정보 입력</strong>: 설치 마법사의 안내에 따라 설치할 제품 목록에서 <strong>Ansys Fluent</strong> (또는 Fluid Dynamics 패키지)와 필요한 경우 <strong>Geometry Interface</strong> (SpaceClaim, DesignModeler 등)를 선택합니다. 이어서 라이선스 서버의 Hostname 정보 또는 로컬 라이선스 파일 정보를 입력합니다.</li>
+                <li><strong>설치 진행 및 완료</strong>: 설치 옵션 검토 후 설치를 진행합니다. 설치 시간은 시스템 사양 및 선택한 구성 요소에 따라 달라질 수 있습니다. 완료 후 시스템을 재시작해야 할 수 있습니다.</li>
+                <li><strong>프로그램 실행 및 환경 설정</strong>: 설치 완료 후 시작 메뉴 또는 바탕화면 아이콘을 통해 Fluent를 실행합니다. 처음 실행 시 필요한 환경 설정을 완료할 수 있습니다.</li>
+            </ol>
+            <p>ANSYS Fluent는 Windows 및 Linux 운영체제를 지원하며, 64비트 아키텍처에서 병렬 처리가 가능합니다. 설치 및 라이선스 매니저 설정에 대한 추가적인 상세 안내는 Ansys 공식 YouTube 채널(Ansys How To Videos)의 설치 가이드 영상이나 Ansys Learning Hub의 자료를 참고하는 것이 좋습니다.</p>
+
+            <div class="my-6 responsive-iframe-container">
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID_PLACEHOLDER_INSTALL" title="YouTube video player: Ansys Fluent Installation Guide (Placeholder)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p class="text-sm text-gray-600 mt-2 italic text-center">Ansys 공식 채널에서 Fluent 설치 가이드 영상을 찾아보세요. (예시)</p>
+            
+            <figure class="embedded-image-figure">
+                <img src="https://rescale.com/wp-content/uploads/fluent-export-case-file.6528fbe3-1-1024x785.png" alt="Ansys Fluent 파일 내보내기 예시" class="max-w-lg">
+                <figcaption>Ansys Fluent 작업 환경의 모습 (출처: rescale.com) - 설치 후 Fluent 사용 화면 예시</figcaption>
+            </figure>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">참고 자료</h3>
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+                <li><a href="https://www.ansys.com/academic/students/ansys-student" target="_blank" rel="noopener noreferrer">Ansys Student Version Download</a></li>
+                <li>Ansys Customer Portal (라이선스 보유자): 공식 설치 파일 및 문서 제공</li>
+                <li><a href="https://www.youtube.com/@Ansys" target="_blank" rel="noopener noreferrer">Ansys YouTube Channel</a>: 설치 및 사용법 튜토리얼</li>
+                <li>ANSYS Fluent User's Guide: 설치 관련 상세 정보 포함 (자료실 페이지 참고)</li>
+            </ul>
+
+        </article>
+        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,127 +1,137 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="title_bioprocess_cfd_theoretical_background">Bioprocess CFD - 이론적 배경 | 생물공학연구실</title>
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bioprocess CFD - 이론적 배경 | 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-gray-800 flex flex-col min-h-screen">
-<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실bioprocess_engineering_laboratory검색_뭐든_물어봐" id="fixed-top-nav-container">
-<div class="container mx-auto px-4" data-i18n="생물공학연구실bioprocess_engineering_laboratory검색_뭐든_물어봐">
-<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실bioprocess_engineering_laboratory검색_뭐든_물어봐">
-<h1 class="text-slate-800 mb-2 sm:mb-0" data-i18n="생물공학연구실bioprocess_engineering_laboratory">
-<a class="block no-underline hover:no-underline" data-i18n="생물공학연구실bioprocess_engineering_laboratory" href="index.html">
-<span class="block text-2xl lg:text-3xl font-bold text-slate-800" data-i18n="생물공학연구실">생물공학연구실</span>
-<span class="block text-sm lg:text-base font-normal text-gray-500 mt-1" data-i18n="bioprocess_engineering_laboratory">Bioprocess Engineering Laboratory</span>
-</a>
-</h1>
-<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
-<ul class="container mx-auto px-0 flex justify-center">
-</ul>
-</nav>
-<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
-<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
-<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
-<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
-</div>
-</div>
-<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
-<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
-<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
-</div>
-</div>
-</div>
-<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
-<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-</div>
-</nav>
-</div>
-<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-<div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg" data-i18n="bioprocess_cfd_홈으로_돌아가기2_이론적_배경_theoretical_background_bioprocess_cfd는_유체의_질량_운동량_에너지_보존_방정식을_수치적으로_풀어_반응기_내_유체_흐름_및_관련_전달_현상을_모델링합니다1_핵심은_비선형_편미분_방정식인navier_stokes_방정식의_해를_구하는_것입니다1_실제_바이오프로세스에서는_난류_다상_유동_화학_반응_생물학적_활성_등_다양한_물리화학_및_생물학적_현상이_복합적으로_발생하므로_이러한_현상을_효과적으로_모델링하기_위한_추가적인_이론적_및_수치적_기법들이_필요합니다_주요_모델링_기법_및_방정식1_기본_방정식_질량_보존_방정식_연속_방정식_운동량_보존_방정식_navier_stokes_방정식_유체의_점성_및_압력에_의한_힘과_외부_힘_예_중력_교반력_하에서의_유체_운동량을_기술합니다_에너지_보존_방정식_열_전달_및_온도_변화를_기술합니다_성분_전달_방정식_특정_화학종_기질_산물_용존_가스_등_의_농도_변화를_확산_및_대류_효과를_포함하여_기술합니다_2_난류_모델_바이오리액터_내부는_대부분_난류_유동이므로_난류의_불규칙하고_복잡한_특성을_모델링해야_합니다1_reynolds_평균_navier_stokes_rans_방정식_순간적인_유동_변수를_시간_평균값과_변동_성분으로_나누어_평균_유동을_모델링합니다_추가적인_모델_난류_모델_을_통해_난류_응력_항을_계산합니다1_k_ε_모델_가장_널리_사용되는_모델로_난류_운동_에너지_k_와_소산율_ε_에_대한_수송_방정식을_풉니다_realizable_k_ε_모델_등_개선된_버전이_사용됩니다1_k_ω_모델_벽_근처_유동_해석에_강점을_가집니다_k_ω_sst_shear_stress_transport_모델은_k_ε_모델의_강점_자유_유동_과_k_ω_모델의_강점_벽_근처_을_결합하여_복잡한_유동에_적합합니다1_2_large_eddy_simulation_les_큰_규모의_난류_와류는_직접_계산하고_작은_규모의_와류는_모델링하는_방식입니다_rans보다_정확하지만_계산_비용이_훨씬_높습니다2_direct_numerical_simulation_dns_모든_규모의_난류를_직접_계산하지만_매우_높은_계산_비용으로_인해_학술_연구나_소규모_시스템에만_적용_가능합니다_3_다상_유동_모델_바이오프로세스는_액상_외에_기포_통기_세포_미립자_분산상_등을_포함하는_다상_시스템인_경우가_많습니다2_euler_euler_접근_방식_각_상_phase_을_상호_침투하는_연속체로_취급하며_각_상의_운동량_및_질량_보존_방정식을_함께_풉니다2_계산_비용이_비교적_저렴하나_개별_입자_기포의_상세_거동_모델링에는_한계가_있습니다_euler_lagrange_접근_방식_연속체인_유동장은_euler_방식으로_계산하고_분산상_입자_세포_기포_는_lagrangian_방식으로_개별_궤적을_추적하며_운동_방정식을_풉니다2_각_입자의_상세_정보_추적이_가능하나_계산_비용이_높습니다_volume_of_fluid_vof_모델_서로_섞이지_않는_두_개_이상의_유체_예_액체_기체_계면을_추적하는_데_사용됩니다1_바이오리액터_상부의_자유_표면이나_기포의_동적_거동_모델링에_적합합니다_4_세포_반응_동역학_crk_모델_통합_유체_역학_모델과_생물학적_반응_모델_일반적으로_상미분_방정식_을_결합하여_세포가_경험하는_국부_환경_변화가_생물학적_반응에_미치는_영향을_분석합니다1_2_직접_결합_coupled_cfd_방정식과_crk_방정식을_동시에_풉니다_가장_정확하지만_계산_비용이_매우_높습니다1_2_비결합_uncoupled_cfd_계산으로_유동장을_얻은_후_이_결과를_crk_모델의_입력으로_사용합니다_계산_비용이_낮지만_동적_상호작용_반영에_한계가_있습니다1_간접_결합_구획_모델_indirect_coupling_compartmental_model_cfd_결과를_바탕으로_반응기를_여러_개의_구획_compartment_으로_나누고_각_구획_내_평균_유동_특성을_이용하여_crk_모델을_적용합니다1_2_계산_비용과_정확성_사이의_균형을_제공하며_실시간_시뮬레이션에_적합할_수_있습니다_5_회전_부품_모델링_교반기_impeller_와_같은_회전_부품의_영향을_시뮬레이션하기_위해_사용됩니다_multiple_reference_frame_mrf_모델_회전하는_영역과_고정된_영역을_분리하여_계산_효율성을_높입니다1_정상_상태_steady_state_시뮬레이션에_주로_사용됩니다_sliding_mesh_모델_회전_영역과_고정_영역의_메쉬가_상대적으로_이동하는_것을_직접_모델링하여_비정상_상태_unsteady_state_유동을_정확히_모사할_수_있습니다_mrf보다_계산_비용이_높습니다1_bioprocess_cfd는_이러한_다양한_이론적_모델과_수치_해석_기법들을_조합하여_실제_생물반응기_환경을_모사하며_특히_복잡한_다상_반응_유동_및_생물학적_상호작용을_정확하게_예측하는_것이_중요합니다_참고문헌_references_industrial_case_study_based_computational_fluid_dynamic_cfd_modeling_of_stirred_and_aerated_bioreactors_https_pubs_acs_org_doi_10_1021_acsomega_2c01886computational_fluid_dynamics_simulation_improves_the_design_and_characterization_of_a_plug_flow_type_scale_down_reactor_for_microbial_cultivation_processes_https_analyticalsciencejournals_onlinelibrary_wiley_com_doi_10_1002_biot_202200152computational_fluid_dynamics_cfd_modeling_applied_to_biological_wastewater_treatment_systems_an_overview_of_strategies_for_the_kinetics_integration_https_www_sciencedirect_com_science_article_abs_pii_s1385894723019113integration_approaches_to_model_bioreactor_hydrodynamics_and_cellular_kinetics_for_advancing_bioprocess_optimisation_https_pmc_ncbi_nlm_nih_gov_articles_pmc11200465_galeazzo_et_al_2024_performance_comparison_of_cfd_microbenchmarks_on_diverse_hpc_architectures_https_doi_org_10_3390_computers13050115cfd_software_comparison_resolved_analytics_https_www_resolvedanalytics_com_theflux_comparing_cfd_software_note_this_reference_provides_general_cfd_software_comparison_specific_bioprocess_relevance_inferred_bioprocess_engineering_basic_concepts_shuler_kargi_2001_https_www_eng_uc_edu_bioprocess_20engineering_pdfbioprocess_engineering_principles_doran_2013_https_dl_icdst_org_pdfs_files4_b22084befc3006eb180f258c54e240ba_pdfcomputational_fluid_dynamics_modeling_of_cell_cultures_in_bioreactors_and_its_potential_for_cultivated_meat_production_a_mini_review_cantarero_rivera_chen_2022_https_doi_org_10_1016_j_fufo_2022_100195">
-<a class="inline-flex items-center text-sm text-[#0072CE] hover:text-[#004A99] hover:underline mb-8 font-medium" data-i18n="bioprocess_cfd_홈으로_돌아가기" href="bioprocess_cfd.html">
-<i class="w-4 h-4 mr-2" data-lucide="arrow-left"></i>
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-slate-800 mb-2 sm:mb-0">
+                    <a href="index.html" class="block no-underline hover:no-underline">
+                        <span class="block text-2xl lg:text-3xl font-bold text-slate-800">생물공학연구실</span>
+                        <span class="block text-sm lg:text-base font-normal text-gray-500 mt-1">Bioprocess Engineering Laboratory</span>
+                    </a>
+                </h1>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
+                    <span class="hamster-icon">🐹</span>
+                    <span class="helper-text">뭐든 물어봐!</span>
+                </div>
+            </div>
+        </div>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+            <a href="bioprocess_cfd.html" class="inline-flex items-center text-sm text-[#0072CE] hover:text-[#004A99] hover:underline mb-8 font-medium">
+                <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i>
                 Bioprocess CFD 홈으로 돌아가기
             </a>
-<article class="prose prose-lg max-w-none xl:prose-xl prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-<h2 data-i18n="2_이론적_배경_theoretical_background" id="theoretical-background-main">2. 이론적 배경 (Theoretical Background)</h2>
-<p data-i18n="bioprocess_cfd는_유체의_질량_운동량_에너지_보존_방정식을_수치적으로_풀어_반응기_내_유체_흐름_및_관련_전달_현상을_모델링합니다1_핵심은_비선형_편미분_방정식인navier_stokes_방정식의_해를_구하는_것입니다1_실제_바이오프로세스에서는_난류_다상_유동_화학_반응_생물학적_활성_등_다양한_물리화학_및_생물학적_현상이_복합적으로_발생하므로_이러한_현상을_효과적으로_모델링하기_위한_추가적인_이론적_및_수치적_기법들이_필요합니다">Bioprocess CFD는 유체의 질량, 운동량, 에너지 보존 방정식을 수치적으로 풀어 반응기 내 유체 흐름 및 관련 전달 현상을 모델링합니다<sup>1</sup>. 핵심은 비선형 편미분 방정식인 <strong>Navier-Stokes 방정식</strong>의 해를 구하는 것입니다<sup>1</sup>. 실제 바이오프로세스에서는 난류, 다상 유동, 화학 반응, 생물학적 활성 등 다양한 물리화학 및 생물학적 현상이 복합적으로 발생하므로, 이러한 현상을 효과적으로 모델링하기 위한 추가적인 이론적 및 수치적 기법들이 필요합니다.</p>
-<h3 data-i18n="주요_모델링_기법_및_방정식" id="modeling-techniques">주요 모델링 기법 및 방정식</h3>
-<h4 data-i18n="1_기본_방정식" id="basic-equations">1. 기본 방정식:</h4>
-<ul>
-<li data-i18n="질량_보존_방정식_연속_방정식">질량 보존 방정식 (연속 방정식)</li>
-<li data-i18n="운동량_보존_방정식_navier_stokes_방정식_유체의_점성_및_압력에_의한_힘과_외부_힘_예_중력_교반력_하에서의_유체_운동량을_기술합니다">운동량 보존 방정식 (Navier-Stokes 방정식): 유체의 점성 및 압력에 의한 힘과 외부 힘(예: 중력, 교반력) 하에서의 유체 운동량을 기술합니다.</li>
-<li data-i18n="에너지_보존_방정식_열_전달_및_온도_변화를_기술합니다">에너지 보존 방정식: 열 전달 및 온도 변화를 기술합니다.</li>
-<li data-i18n="성분_전달_방정식_특정_화학종_기질_산물_용존_가스_등_의_농도_변화를_확산_및_대류_효과를_포함하여_기술합니다">성분 전달 방정식: 특정 화학종(기질, 산물, 용존 가스 등)의 농도 변화를 확산 및 대류 효과를 포함하여 기술합니다.</li>
-</ul>
-<h4 data-i18n="2_난류_모델" id="turbulence-models">2. 난류 모델:</h4>
-<p data-i18n="바이오리액터_내부는_대부분_난류_유동이므로_난류의_불규칙하고_복잡한_특성을_모델링해야_합니다1">바이오리액터 내부는 대부분 난류 유동이므로, 난류의 불규칙하고 복잡한 특성을 모델링해야 합니다<sup>1</sup>.</p>
-<ul>
-<li data-i18n="reynolds_평균_navier_stokes_rans_방정식_순간적인_유동_변수를_시간_평균값과_변동_성분으로_나누어_평균_유동을_모델링합니다_추가적인_모델_난류_모델_을_통해_난류_응력_항을_계산합니다1_k_ε_모델_가장_널리_사용되는_모델로_난류_운동_에너지_k_와_소산율_ε_에_대한_수송_방정식을_풉니다_realizable_k_ε_모델_등_개선된_버전이_사용됩니다1_k_ω_모델_벽_근처_유동_해석에_강점을_가집니다_k_ω_sst_shear_stress_transport_모델은_k_ε_모델의_강점_자유_유동_과_k_ω_모델의_강점_벽_근처_을_결합하여_복잡한_유동에_적합합니다1_2"><strong>Reynolds 평균 Navier-Stokes (RANS) 방정식</strong>: 순간적인 유동 변수를 시간 평균값과 변동 성분으로 나누어 평균 유동을 모델링합니다. 추가적인 모델(난류 모델)을 통해 난류 응력 항을 계산합니다<sup>1</sup>.
+            <article class="prose prose-lg max-w-none xl:prose-xl prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+                <h2 id="theoretical-background-main">2. 이론적 배경 (Theoretical Background)</h2>
+                <p>Bioprocess CFD는 유체의 질량, 운동량, 에너지 보존 방정식을 수치적으로 풀어 반응기 내 유체 흐름 및 관련 전달 현상을 모델링합니다<sup>1</sup>. 핵심은 비선형 편미분 방정식인 <strong>Navier-Stokes 방정식</strong>의 해를 구하는 것입니다<sup>1</sup>. 실제 바이오프로세스에서는 난류, 다상 유동, 화학 반응, 생물학적 활성 등 다양한 물리화학 및 생물학적 현상이 복합적으로 발생하므로, 이러한 현상을 효과적으로 모델링하기 위한 추가적인 이론적 및 수치적 기법들이 필요합니다.</p>
+
+                <h3 id="modeling-techniques">주요 모델링 기법 및 방정식</h3>
+                
+                <h4 id="basic-equations">1. 기본 방정식:</h4>
+                <ul>
+                    <li>질량 보존 방정식 (연속 방정식)</li>
+                    <li>운동량 보존 방정식 (Navier-Stokes 방정식): 유체의 점성 및 압력에 의한 힘과 외부 힘(예: 중력, 교반력) 하에서의 유체 운동량을 기술합니다.</li>
+                    <li>에너지 보존 방정식: 열 전달 및 온도 변화를 기술합니다.</li>
+                    <li>성분 전달 방정식: 특정 화학종(기질, 산물, 용존 가스 등)의 농도 변화를 확산 및 대류 효과를 포함하여 기술합니다.</li>
+                </ul>
+
+                <h4 id="turbulence-models">2. 난류 모델:</h4>
+                <p>바이오리액터 내부는 대부분 난류 유동이므로, 난류의 불규칙하고 복잡한 특성을 모델링해야 합니다<sup>1</sup>.</p>
+                <ul>
+                    <li><strong>Reynolds 평균 Navier-Stokes (RANS) 방정식</strong>: 순간적인 유동 변수를 시간 평균값과 변동 성분으로 나누어 평균 유동을 모델링합니다. 추가적인 모델(난류 모델)을 통해 난류 응력 항을 계산합니다<sup>1</sup>.
                         <ul>
-<li data-i18n="k_ε_모델_가장_널리_사용되는_모델로_난류_운동_에너지_k_와_소산율_ε_에_대한_수송_방정식을_풉니다_realizable_k_ε_모델_등_개선된_버전이_사용됩니다1"><strong>k-ε 모델</strong>: 가장 널리 사용되는 모델로, 난류 운동 에너지(k)와 소산율(ε)에 대한 수송 방정식을 풉니다. realizable k-ε 모델 등 개선된 버전이 사용됩니다<sup>1</sup>.</li>
-<li data-i18n="k_ω_모델_벽_근처_유동_해석에_강점을_가집니다_k_ω_sst_shear_stress_transport_모델은_k_ε_모델의_강점_자유_유동_과_k_ω_모델의_강점_벽_근처_을_결합하여_복잡한_유동에_적합합니다1_2"><strong>k-ω 모델</strong>: 벽 근처 유동 해석에 강점을 가집니다. k-ω SST(Shear Stress Transport) 모델은 k-ε 모델의 강점(자유 유동)과 k-ω 모델의 강점(벽 근처)을 결합하여 복잡한 유동에 적합합니다<sup>1-2</sup>.</li>
-</ul>
-</li>
-<li data-i18n="large_eddy_simulation_les_큰_규모의_난류_와류는_직접_계산하고_작은_규모의_와류는_모델링하는_방식입니다_rans보다_정확하지만_계산_비용이_훨씬_높습니다2"><strong>Large Eddy Simulation (LES)</strong>: 큰 규모의 난류 와류는 직접 계산하고 작은 규모의 와류는 모델링하는 방식입니다. RANS보다 정확하지만 계산 비용이 훨씬 높습니다<sup>2</sup>.</li>
-<li data-i18n="direct_numerical_simulation_dns_모든_규모의_난류를_직접_계산하지만_매우_높은_계산_비용으로_인해_학술_연구나_소규모_시스템에만_적용_가능합니다"><strong>Direct Numerical Simulation (DNS)</strong>: 모든 규모의 난류를 직접 계산하지만, 매우 높은 계산 비용으로 인해 학술 연구나 소규모 시스템에만 적용 가능합니다.</li>
-</ul>
-<h4 data-i18n="3_다상_유동_모델" id="multiphase-flow-models">3. 다상 유동 모델:</h4>
-<p data-i18n="바이오프로세스는_액상_외에_기포_통기_세포_미립자_분산상_등을_포함하는_다상_시스템인_경우가_많습니다2">바이오프로세스는 액상 외에 기포(통기), 세포/미립자(분산상) 등을 포함하는 다상 시스템인 경우가 많습니다<sup>2</sup>.</p>
-<ul>
-<li data-i18n="euler_euler_접근_방식_각_상_phase_을_상호_침투하는_연속체로_취급하며_각_상의_운동량_및_질량_보존_방정식을_함께_풉니다2_계산_비용이_비교적_저렴하나_개별_입자_기포의_상세_거동_모델링에는_한계가_있습니다"><strong>Euler-Euler 접근 방식</strong>: 각 상(phase)을 상호 침투하는 연속체로 취급하며, 각 상의 운동량 및 질량 보존 방정식을 함께 풉니다<sup>2</sup>. 계산 비용이 비교적 저렴하나 개별 입자/기포의 상세 거동 모델링에는 한계가 있습니다.</li>
-<li data-i18n="euler_lagrange_접근_방식_연속체인_유동장은_euler_방식으로_계산하고_분산상_입자_세포_기포_는_lagrangian_방식으로_개별_궤적을_추적하며_운동_방정식을_풉니다2_각_입자의_상세_정보_추적이_가능하나_계산_비용이_높습니다"><strong>Euler-Lagrange 접근 방식</strong>: 연속체인 유동장은 Euler 방식으로 계산하고, 분산상 입자(세포, 기포)는 Lagrangian 방식으로 개별 궤적을 추적하며 운동 방정식을 풉니다<sup>2</sup>. 각 입자의 상세 정보 추적이 가능하나 계산 비용이 높습니다.</li>
-<li data-i18n="volume_of_fluid_vof_모델_서로_섞이지_않는_두_개_이상의_유체_예_액체_기체_계면을_추적하는_데_사용됩니다1_바이오리액터_상부의_자유_표면이나_기포의_동적_거동_모델링에_적합합니다"><strong>Volume of Fluid (VOF) 모델</strong>: 서로 섞이지 않는 두 개 이상의 유체(예: 액체-기체) 계면을 추적하는 데 사용됩니다<sup>1</sup>. 바이오리액터 상부의 자유 표면이나 기포의 동적 거동 모델링에 적합합니다.</li>
-</ul>
-<h4 data-i18n="4_세포_반응_동역학_crk_모델_통합" id="crk-integration">4. 세포 반응 동역학 (CRK) 모델 통합:</h4>
-<p data-i18n="유체_역학_모델과_생물학적_반응_모델_일반적으로_상미분_방정식_을_결합하여_세포가_경험하는_국부_환경_변화가_생물학적_반응에_미치는_영향을_분석합니다1_2">유체 역학 모델과 생물학적 반응 모델(일반적으로 상미분 방정식)을 결합하여 세포가 경험하는 국부 환경 변화가 생물학적 반응에 미치는 영향을 분석합니다<sup>1-2</sup>.</p>
-<ul>
-<li data-i18n="직접_결합_coupled_cfd_방정식과_crk_방정식을_동시에_풉니다_가장_정확하지만_계산_비용이_매우_높습니다1_2"><strong>직접 결합 (Coupled)</strong>: CFD 방정식과 CRK 방정식을 동시에 풉니다. 가장 정확하지만 계산 비용이 매우 높습니다<sup>1-2</sup>.</li>
-<li data-i18n="비결합_uncoupled_cfd_계산으로_유동장을_얻은_후_이_결과를_crk_모델의_입력으로_사용합니다_계산_비용이_낮지만_동적_상호작용_반영에_한계가_있습니다1"><strong>비결합 (Uncoupled)</strong>: CFD 계산으로 유동장을 얻은 후, 이 결과를 CRK 모델의 입력으로 사용합니다. 계산 비용이 낮지만 동적 상호작용 반영에 한계가 있습니다<sup>1</sup>.</li>
-<li data-i18n="간접_결합_구획_모델_indirect_coupling_compartmental_model_cfd_결과를_바탕으로_반응기를_여러_개의_구획_compartment_으로_나누고_각_구획_내_평균_유동_특성을_이용하여_crk_모델을_적용합니다1_2_계산_비용과_정확성_사이의_균형을_제공하며_실시간_시뮬레이션에_적합할_수_있습니다"><strong>간접 결합/구획 모델 (Indirect Coupling/Compartmental Model)</strong>: CFD 결과를 바탕으로 반응기를 여러 개의 구획(compartment)으로 나누고, 각 구획 내 평균 유동 특성을 이용하여 CRK 모델을 적용합니다<sup>1-2</sup>. 계산 비용과 정확성 사이의 균형을 제공하며 실시간 시뮬레이션에 적합할 수 있습니다.</li>
-</ul>
-<h4 data-i18n="5_회전_부품_모델링" id="rotating-parts-modeling">5. 회전 부품 모델링:</h4>
-<p data-i18n="교반기_impeller_와_같은_회전_부품의_영향을_시뮬레이션하기_위해_사용됩니다">교반기(impeller)와 같은 회전 부품의 영향을 시뮬레이션하기 위해 사용됩니다.</p>
-<ul>
-<li data-i18n="multiple_reference_frame_mrf_모델_회전하는_영역과_고정된_영역을_분리하여_계산_효율성을_높입니다1_정상_상태_steady_state_시뮬레이션에_주로_사용됩니다"><strong>Multiple Reference Frame (MRF) 모델</strong>: 회전하는 영역과 고정된 영역을 분리하여 계산 효율성을 높입니다<sup>1</sup>. 정상 상태(steady-state) 시뮬레이션에 주로 사용됩니다.</li>
-<li data-i18n="sliding_mesh_모델_회전_영역과_고정_영역의_메쉬가_상대적으로_이동하는_것을_직접_모델링하여_비정상_상태_unsteady_state_유동을_정확히_모사할_수_있습니다_mrf보다_계산_비용이_높습니다1"><strong>Sliding Mesh 모델</strong>: 회전 영역과 고정 영역의 메쉬가 상대적으로 이동하는 것을 직접 모델링하여 비정상 상태(unsteady-state) 유동을 정확히 모사할 수 있습니다. MRF보다 계산 비용이 높습니다<sup>1</sup>.</li>
-</ul>
-<p data-i18n="bioprocess_cfd는_이러한_다양한_이론적_모델과_수치_해석_기법들을_조합하여_실제_생물반응기_환경을_모사하며_특히_복잡한_다상_반응_유동_및_생물학적_상호작용을_정확하게_예측하는_것이_중요합니다">Bioprocess CFD는 이러한 다양한 이론적 모델과 수치 해석 기법들을 조합하여 실제 생물반응기 환경을 모사하며, 특히 복잡한 다상 반응 유동 및 생물학적 상호작용을 정확하게 예측하는 것이 중요합니다.</p>
-<h2 data-i18n="참고문헌_references" id="references">참고문헌 (References)</h2>
-<ol class="list-decimal pl-5">
-<li data-i18n="industrial_case_study_based_computational_fluid_dynamic_cfd_modeling_of_stirred_and_aerated_bioreactors_https_pubs_acs_org_doi_10_1021_acsomega_2c01886">Industrial Case-Study-Based Computational Fluid Dynamic (CFD) Modeling of Stirred and Aerated Bioreactors - <a data-i18n="https_pubs_acs_org_doi_10_1021_acsomega_2c01886" href="https://pubs.acs.org/doi/10.1021/acsomega.2c01886" rel="noopener noreferrer" target="_blank">https://pubs.acs.org/doi/10.1021/acsomega.2c01886</a></li>
-<li data-i18n="computational_fluid_dynamics_simulation_improves_the_design_and_characterization_of_a_plug_flow_type_scale_down_reactor_for_microbial_cultivation_processes_https_analyticalsciencejournals_onlinelibrary_wiley_com_doi_10_1002_biot_202200152">Computational fluid dynamics simulation improves the design and characterization of a plug-flow-type scale-down reactor for microbial cultivation processes - <a data-i18n="https_analyticalsciencejournals_onlinelibrary_wiley_com_doi_10_1002_biot_202200152" href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/biot.202200152" rel="noopener noreferrer" target="_blank">https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/biot.202200152</a></li>
-<li data-i18n="computational_fluid_dynamics_cfd_modeling_applied_to_biological_wastewater_treatment_systems_an_overview_of_strategies_for_the_kinetics_integration_https_www_sciencedirect_com_science_article_abs_pii_s1385894723019113">Computational fluid dynamics (CFD) modeling applied to biological wastewater treatment systems: An overview of strategies for the kinetics integration - <a data-i18n="https_www_sciencedirect_com_science_article_abs_pii_s1385894723019113" href="https://www.sciencedirect.com/science/article/abs/pii/S1385894723019113" rel="noopener noreferrer" target="_blank">https://www.sciencedirect.com/science/article/abs/pii/S1385894723019113</a></li>
-<li data-i18n="integration_approaches_to_model_bioreactor_hydrodynamics_and_cellular_kinetics_for_advancing_bioprocess_optimisation_https_pmc_ncbi_nlm_nih_gov_articles_pmc11200465">Integration Approaches to Model Bioreactor Hydrodynamics and Cellular Kinetics for Advancing Bioprocess Optimisation - <a data-i18n="https_pmc_ncbi_nlm_nih_gov_articles_pmc11200465" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11200465/" rel="noopener noreferrer" target="_blank">https://pmc.ncbi.nlm.nih.gov/articles/PMC11200465/</a></li>
-<li data-i18n="galeazzo_et_al_2024_performance_comparison_of_cfd_microbenchmarks_on_diverse_hpc_architectures_https_doi_org_10_3390_computers13050115">Galeazzo et al., 2024, "Performance Comparison of CFD Microbenchmarks on Diverse HPC Architectures" - <a data-i18n="https_doi_org_10_3390_computers13050115" href="https://doi.org/10.3390/computers13050115" rel="noopener noreferrer" target="_blank">https://doi.org/10.3390/computers13050115</a></li>
-<li data-i18n="cfd_software_comparison_resolved_analytics_https_www_resolvedanalytics_com_theflux_comparing_cfd_software_note_this_reference_provides_general_cfd_software_comparison_specific_bioprocess_relevance_inferred">CFD Software Comparison | Resolved Analytics - <a data-i18n="https_www_resolvedanalytics_com_theflux_comparing_cfd_software" href="https://www.resolvedanalytics.com/theflux/comparing-cfd-software" rel="noopener noreferrer" target="_blank">https://www.resolvedanalytics.com/theflux/comparing-cfd-software</a> (Note: This reference provides general CFD software comparison; specific Bioprocess relevance inferred)</li>
-<li data-i18n="bioprocess_engineering_basic_concepts_shuler_kargi_2001_https_www_eng_uc_edu_bioprocess_20engineering_pdf">Bioprocess Engineering: Basic Concepts (Shuler &amp; Kargi, 2001) - <a data-i18n="https_www_eng_uc_edu_bioprocess_20engineering_pdf" href="https://www.eng.uc.edu/~beaucag/Classes/ChEThermoBeaucage/Books/Michael%20L.%20Shuler,%20Fikret%20Kargi%20-%20Bioprocess%20Engineering_%20Basic%20Concepts-Prentice%20Hall%20(2001).pdf" rel="noopener noreferrer" target="_blank">https://www.eng.uc.edu/...Bioprocess%20Engineering...pdf</a></li>
-<li data-i18n="bioprocess_engineering_principles_doran_2013_https_dl_icdst_org_pdfs_files4_b22084befc3006eb180f258c54e240ba_pdf">Bioprocess Engineering Principles (Doran, 2013) - <a data-i18n="https_dl_icdst_org_pdfs_files4_b22084befc3006eb180f258c54e240ba_pdf" href="https://dl.icdst.org/pdfs/files4/b22084befc3006eb180f258c54e240ba.pdf" rel="noopener noreferrer" target="_blank">https://dl.icdst.org/pdfs/files4/b22084befc3006eb180f258c54e240ba.pdf</a></li>
-<li data-i18n="computational_fluid_dynamics_modeling_of_cell_cultures_in_bioreactors_and_its_potential_for_cultivated_meat_production_a_mini_review_cantarero_rivera_chen_2022_https_doi_org_10_1016_j_fufo_2022_100195">Computational fluid dynamics modeling of cell cultures in bioreactors and its potential for cultivated meat production—A mini-review (Cantarero Rivera &amp; Chen, 2022) - <a data-i18n="https_doi_org_10_1016_j_fufo_2022_100195" href="https://doi.org/10.1016/j.fufo.2022.100195" rel="noopener noreferrer" target="_blank">https://doi.org/10.1016/j.fufo.2022.100195</a></li>
-</ol>
-</article>
-</div>
-<div class="container mx-auto px-6 my-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
-<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
-<div class="space-y-4" id="searchResultsList"></div>
-</div>
-</main>
-<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
-<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
-</p>
-<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-</div>
-</footer>
-<script src="script.js" type="module"></script>
+                            <li><strong>k-ε 모델</strong>: 가장 널리 사용되는 모델로, 난류 운동 에너지(k)와 소산율(ε)에 대한 수송 방정식을 풉니다. realizable k-ε 모델 등 개선된 버전이 사용됩니다<sup>1</sup>.</li>
+                            <li><strong>k-ω 모델</strong>: 벽 근처 유동 해석에 강점을 가집니다. k-ω SST(Shear Stress Transport) 모델은 k-ε 모델의 강점(자유 유동)과 k-ω 모델의 강점(벽 근처)을 결합하여 복잡한 유동에 적합합니다<sup>1-2</sup>.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Large Eddy Simulation (LES)</strong>: 큰 규모의 난류 와류는 직접 계산하고 작은 규모의 와류는 모델링하는 방식입니다. RANS보다 정확하지만 계산 비용이 훨씬 높습니다<sup>2</sup>.</li>
+                    <li><strong>Direct Numerical Simulation (DNS)</strong>: 모든 규모의 난류를 직접 계산하지만, 매우 높은 계산 비용으로 인해 학술 연구나 소규모 시스템에만 적용 가능합니다.</li>
+                </ul>
+
+                <h4 id="multiphase-flow-models">3. 다상 유동 모델:</h4>
+                <p>바이오프로세스는 액상 외에 기포(통기), 세포/미립자(분산상) 등을 포함하는 다상 시스템인 경우가 많습니다<sup>2</sup>.</p>
+                <ul>
+                    <li><strong>Euler-Euler 접근 방식</strong>: 각 상(phase)을 상호 침투하는 연속체로 취급하며, 각 상의 운동량 및 질량 보존 방정식을 함께 풉니다<sup>2</sup>. 계산 비용이 비교적 저렴하나 개별 입자/기포의 상세 거동 모델링에는 한계가 있습니다.</li>
+                    <li><strong>Euler-Lagrange 접근 방식</strong>: 연속체인 유동장은 Euler 방식으로 계산하고, 분산상 입자(세포, 기포)는 Lagrangian 방식으로 개별 궤적을 추적하며 운동 방정식을 풉니다<sup>2</sup>. 각 입자의 상세 정보 추적이 가능하나 계산 비용이 높습니다.</li>
+                    <li><strong>Volume of Fluid (VOF) 모델</strong>: 서로 섞이지 않는 두 개 이상의 유체(예: 액체-기체) 계면을 추적하는 데 사용됩니다<sup>1</sup>. 바이오리액터 상부의 자유 표면이나 기포의 동적 거동 모델링에 적합합니다.</li>
+                </ul>
+
+                <h4 id="crk-integration">4. 세포 반응 동역학 (CRK) 모델 통합:</h4>
+                <p>유체 역학 모델과 생물학적 반응 모델(일반적으로 상미분 방정식)을 결합하여 세포가 경험하는 국부 환경 변화가 생물학적 반응에 미치는 영향을 분석합니다<sup>1-2</sup>.</p>
+                <ul>
+                    <li><strong>직접 결합 (Coupled)</strong>: CFD 방정식과 CRK 방정식을 동시에 풉니다. 가장 정확하지만 계산 비용이 매우 높습니다<sup>1-2</sup>.</li>
+                    <li><strong>비결합 (Uncoupled)</strong>: CFD 계산으로 유동장을 얻은 후, 이 결과를 CRK 모델의 입력으로 사용합니다. 계산 비용이 낮지만 동적 상호작용 반영에 한계가 있습니다<sup>1</sup>.</li>
+                    <li><strong>간접 결합/구획 모델 (Indirect Coupling/Compartmental Model)</strong>: CFD 결과를 바탕으로 반응기를 여러 개의 구획(compartment)으로 나누고, 각 구획 내 평균 유동 특성을 이용하여 CRK 모델을 적용합니다<sup>1-2</sup>. 계산 비용과 정확성 사이의 균형을 제공하며 실시간 시뮬레이션에 적합할 수 있습니다.</li>
+                </ul>
+
+                <h4 id="rotating-parts-modeling">5. 회전 부품 모델링:</h4>
+                <p>교반기(impeller)와 같은 회전 부품의 영향을 시뮬레이션하기 위해 사용됩니다.</p>
+                <ul>
+                    <li><strong>Multiple Reference Frame (MRF) 모델</strong>: 회전하는 영역과 고정된 영역을 분리하여 계산 효율성을 높입니다<sup>1</sup>. 정상 상태(steady-state) 시뮬레이션에 주로 사용됩니다.</li>
+                    <li><strong>Sliding Mesh 모델</strong>: 회전 영역과 고정 영역의 메쉬가 상대적으로 이동하는 것을 직접 모델링하여 비정상 상태(unsteady-state) 유동을 정확히 모사할 수 있습니다. MRF보다 계산 비용이 높습니다<sup>1</sup>.</li>
+                </ul>
+                <p>Bioprocess CFD는 이러한 다양한 이론적 모델과 수치 해석 기법들을 조합하여 실제 생물반응기 환경을 모사하며, 특히 복잡한 다상 반응 유동 및 생물학적 상호작용을 정확하게 예측하는 것이 중요합니다.</p>
+
+                <h2 id="references">참고문헌 (References)</h2>
+                <ol class="list-decimal pl-5">
+                    <li>Industrial Case-Study-Based Computational Fluid Dynamic (CFD) Modeling of Stirred and Aerated Bioreactors - <a href="https://pubs.acs.org/doi/10.1021/acsomega.2c01886" target="_blank" rel="noopener noreferrer">https://pubs.acs.org/doi/10.1021/acsomega.2c01886</a></li>
+                    <li>Computational fluid dynamics simulation improves the design and characterization of a plug-flow-type scale-down reactor for microbial cultivation processes - <a href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/biot.202200152" target="_blank" rel="noopener noreferrer">https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/biot.202200152</a></li>
+                    <li>Computational fluid dynamics (CFD) modeling applied to biological wastewater treatment systems: An overview of strategies for the kinetics integration - <a href="https://www.sciencedirect.com/science/article/abs/pii/S1385894723019113" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/abs/pii/S1385894723019113</a></li>
+                    <li>Integration Approaches to Model Bioreactor Hydrodynamics and Cellular Kinetics for Advancing Bioprocess Optimisation - <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11200465/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC11200465/</a></li>
+                    <li>Galeazzo et al., 2024, "Performance Comparison of CFD Microbenchmarks on Diverse HPC Architectures" - <a href="https://doi.org/10.3390/computers13050115" target="_blank" rel="noopener noreferrer">https://doi.org/10.3390/computers13050115</a></li>
+                    <li>CFD Software Comparison | Resolved Analytics - <a href="https://www.resolvedanalytics.com/theflux/comparing-cfd-software" target="_blank" rel="noopener noreferrer">https://www.resolvedanalytics.com/theflux/comparing-cfd-software</a> (Note: This reference provides general CFD software comparison; specific Bioprocess relevance inferred)</li>
+                    <li>Bioprocess Engineering: Basic Concepts (Shuler & Kargi, 2001) - <a href="https://www.eng.uc.edu/~beaucag/Classes/ChEThermoBeaucage/Books/Michael%20L.%20Shuler,%20Fikret%20Kargi%20-%20Bioprocess%20Engineering_%20Basic%20Concepts-Prentice%20Hall%20(2001).pdf" target="_blank" rel="noopener noreferrer">https://www.eng.uc.edu/...Bioprocess%20Engineering...pdf</a></li>
+                    <li>Bioprocess Engineering Principles (Doran, 2013) - <a href="https://dl.icdst.org/pdfs/files4/b22084befc3006eb180f258c54e240ba.pdf" target="_blank" rel="noopener noreferrer">https://dl.icdst.org/pdfs/files4/b22084befc3006eb180f258c54e240ba.pdf</a></li>
+                    <li>Computational fluid dynamics modeling of cell cultures in bioreactors and its potential for cultivated meat production—A mini-review (Cantarero Rivera & Chen, 2022) - <a href="https://doi.org/10.1016/j.fufo.2022.100195" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.fufo.2022.100195</a></li>
+                </ol>
+            </article>
+        </div>
+         <div id="searchResultsContainer" class="container mx-auto px-6 my-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
 </body>
 </html>

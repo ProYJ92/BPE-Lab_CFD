@@ -1,142 +1,150 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="title_cfd_post_visualisation">CFD 후처리 - 시각화 (Visualisation) - 생물공학연구실</title>
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFD 후처리 - 시각화 (Visualisation) - 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-gray-800 scroll-smooth">
-<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
-<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
-<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
-</h1>
-<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
-<ul class="container mx-auto px-0 flex justify-center">
-</ul>
-</nav>
-<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
-<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
-<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
-<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
-</div>
-</div>
-<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
-<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
-<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
-</div>
-</div>
-</div>
-<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
-<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-</div>
-</nav>
-</div>
-<main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
-<div class="bg-white p-6 md:p-10 rounded-xl shadow-xl" data-i18n="cfd_후처리_시각화_visualisation_유동_가시화는_복잡한_유체_현상을_시각적으로_표현하여_이해를_돕는_과정입니다_5_cfd_후처리의_가장_기본적이고_직관적인_단계로_수치_데이터를_그래픽_형태로_변환하여_유동장_내의_물리량_분포_및_패턴을_시각적으로_이해할_수_있도록_합니다_다양한_시각화_기법이_사용되며_목적에_따라_적절한_방법을_선택하는_것이_중요합니다_주요_시각화_기법ansys_cfd_post와_같은_소프트웨어는_point_line_plane_volume_등_다양한_형상_객체를_생성하고_이_객체_위_또는_내부에서_다음의_가시화_기법들을_적용할_수_있도록_지원합니다_6_기법_method_설명_description_활용_application_예시_소프트웨어_기능_6_벡터_vector_유동장의_속도_또는_다른_벡터량의_방향과_크기를_화살표로_표시유동_방향_재순환_영역_정체점_파악vector컨투어_contour_스칼라량_압력_온도_속도_크기_등_이_동일한_값을_갖는_지점을_연결한_선_또는_등치면물리량의_분포_패턴_기울기_파악contour유선_streamline_순간적인_속도_벡터에_접하도록_그린_선_정상_상태_유동_경로를_보여줌_유체의_이동_경로_분리_및_부착_지점_파악streamline입자_궤적_particle_track_가상의_입자가_유동장을_따라_이동한_경로_비정상_상태_유동_경로를_보여줌_시간_의존적_유동_경로_확산_특성_파악particle_track등표면_isosurface_3차원_공간에서_스칼라량이_특정_값을_갖는_표면특정_조건_예_임계_온도_특정_농도_만족_영역_식별isosurface체적_렌더링_volume_rendering_3차원_체적_데이터_내부의_분포를_투명도_색상_등을_활용하여_시각화3차원_유동_구조_밀도_분포_등_체적_데이터_전체_파악volume_rendering고급_시각화_기법3d_및_동적_transient_시각화_강화_시간_의존적인_비정상_transient_유동이나_복잡한_3차원_유동_구조를_효과적으로_이해하기_위해_3d_시각화_및_애니메이션_기법이_필수적입니다_2_ansys_cfd_post_paraview_등의_소프트웨어는_비정상_해석_결과를_일련의_그림_또는_애니메이션으로_저장하는_기능을_제공합니다_6_상세_내용은애니메이션_생성페이지_참조_특정_현상_시각화_와류_핵_영역_vortex_core_region_7_충격파_shock_wave_5_유동_박리_지점_등_특정_유동_구조나_물리_현상을_식별하고_시각화하는_알고리즘_및_기법이_학술적으로_연구됩니다_몰입형_시각화_immersive_visualization_최근에는_게임_엔진_예_unity3d_11_이나_증강_현실_ar_가상_현실_vr_11_기술을_활용하여_cfd_결과를_3d_환경에서_더욱_직관적으로_탐색하고_상호작용하는_연구가_활발히_진행되고_있습니다_이러한_기법은_비전문가와의_소통을_강화하고_공학_교육의_질을_높이며_복잡한_데이터에_대한_협업을_용이하게_합니다_5_11_시각화_도구cfd_후처리를_위한_다양한_상용_및_오픈소스_소프트웨어가_존재합니다_대표적으로_ensight_fieldview_tecplot_paraview_등이_있으며_altair_및_ansys와_같은_cfd_솔루션_자체에서_제공하는_후처리_도구_예_ansys_cfd_post_6_도_널리_사용됩니다_오픈소스_라이브러리인_vtk_visualization_toolkit_3_8_는_등고선_등표면_유선_등_다양한_시각화_알고리즘을_구현하는_데_기반이_됩니다_시각화_최적화_팁효과적인_시각화를_위해_다음과_같은_팁이_권장됩니다_6_유사한_형상은_그룹화하여_관리합니다_관심_영역만_추출하여_분석의_효율을_높입니다_유선을_사용할_때는_시드_포인트와_색상_지정을_신중하게_선택합니다_필요한_데이터만_저장하거나_로드하여_파일_처리_부담을_줄입니다_카메라_뷰_조명_설정을_활용하여_일관되고_명확한_이미지를_얻습니다_처음에는_회색조나_투명도를_활용하여_시각적_혼란을_줄입니다_state_파일_세션_파일_을_저장하여_반복적인_후처리_작업을_자동화하고_생산성을_높입니다_cfd_후처리_시각화에_대한_더_자세한_학술적_내용_및_참고_자료는cfd_레퍼런스_페이지를_참조하십시오">
-<header class="mb-8 border-b pb-4">
-<h1 class="text-3xl md:text-4xl font-bold text-slate-800" data-i18n="cfd_후처리_시각화_visualisation">CFD 후처리 - 시각화 (Visualisation)</h1>
-</header>
-<article class="prose prose-lg max-w-none">
-<p data-i18n="유동_가시화는_복잡한_유체_현상을_시각적으로_표현하여_이해를_돕는_과정입니다_5_cfd_후처리의_가장_기본적이고_직관적인_단계로_수치_데이터를_그래픽_형태로_변환하여_유동장_내의_물리량_분포_및_패턴을_시각적으로_이해할_수_있도록_합니다_다양한_시각화_기법이_사용되며_목적에_따라_적절한_방법을_선택하는_것이_중요합니다">유동 가시화는 복잡한 유체 현상을 시각적으로 표현하여 이해를 돕는 과정입니다 [5]. CFD 후처리의 가장 기본적이고 직관적인 단계로, 수치 데이터를 그래픽 형태로 변환하여 유동장 내의 물리량 분포 및 패턴을 시각적으로 이해할 수 있도록 합니다. 다양한 시각화 기법이 사용되며, 목적에 따라 적절한 방법을 선택하는 것이 중요합니다.</p>
-<h2 class="mt-8" data-i18n="주요_시각화_기법">주요 시각화 기법</h2>
-<p data-i18n="ansys_cfd_post와_같은_소프트웨어는_point_line_plane_volume_등_다양한_형상_객체를_생성하고_이_객체_위_또는_내부에서_다음의_가시화_기법들을_적용할_수_있도록_지원합니다_6">Ansys CFD-Post와 같은 소프트웨어는 Point, Line, Plane, Volume 등 다양한 형상 객체를 생성하고, 이 객체 위 또는 내부에서 다음의 가시화 기법들을 적용할 수 있도록 지원합니다 [6].</p>
-<div class="overflow-x-auto" data-i18n="기법_method_설명_description_활용_application_예시_소프트웨어_기능_6_벡터_vector_유동장의_속도_또는_다른_벡터량의_방향과_크기를_화살표로_표시유동_방향_재순환_영역_정체점_파악vector컨투어_contour_스칼라량_압력_온도_속도_크기_등_이_동일한_값을_갖는_지점을_연결한_선_또는_등치면물리량의_분포_패턴_기울기_파악contour유선_streamline_순간적인_속도_벡터에_접하도록_그린_선_정상_상태_유동_경로를_보여줌_유체의_이동_경로_분리_및_부착_지점_파악streamline입자_궤적_particle_track_가상의_입자가_유동장을_따라_이동한_경로_비정상_상태_유동_경로를_보여줌_시간_의존적_유동_경로_확산_특성_파악particle_track등표면_isosurface_3차원_공간에서_스칼라량이_특정_값을_갖는_표면특정_조건_예_임계_온도_특정_농도_만족_영역_식별isosurface체적_렌더링_volume_rendering_3차원_체적_데이터_내부의_분포를_투명도_색상_등을_활용하여_시각화3차원_유동_구조_밀도_분포_등_체적_데이터_전체_파악volume_rendering">
-<table class="min-w-full divide-y divide-gray-200 my-6">
-<thead class="bg-gray-50">
-<tr>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" data-i18n="기법_method" scope="col">기법 (Method)</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" data-i18n="설명_description" scope="col">설명 (Description)</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" data-i18n="활용_application" scope="col">활용 (Application)</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" data-i18n="예시_소프트웨어_기능_6" scope="col">예시 소프트웨어 기능 [6]</th>
-</tr>
-</thead>
-<tbody class="bg-white divide-y divide-gray-200">
-<tr>
-<td class="px-6 py-4 whitespace-nowrap font-semibold" data-i18n="벡터_vector">벡터 (Vector)</td>
-<td class="px-6 py-4" data-i18n="유동장의_속도_또는_다른_벡터량의_방향과_크기를_화살표로_표시">유동장의 속도 또는 다른 벡터량의 방향과 크기를 화살표로 표시</td>
-<td class="px-6 py-4" data-i18n="유동_방향_재순환_영역_정체점_파악">유동 방향, 재순환 영역, 정체점 파악</td>
-<td class="px-6 py-4" data-i18n="vector">Vector</td>
-</tr>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap font-semibold" data-i18n="컨투어_contour">컨투어 (Contour)</td>
-<td class="px-6 py-4" data-i18n="스칼라량_압력_온도_속도_크기_등_이_동일한_값을_갖는_지점을_연결한_선_또는_등치면">스칼라량(압력, 온도, 속도 크기 등)이 동일한 값을 갖는 지점을 연결한 선 또는 등치면</td>
-<td class="px-6 py-4" data-i18n="물리량의_분포_패턴_기울기_파악">물리량의 분포 패턴, 기울기 파악</td>
-<td class="px-6 py-4" data-i18n="contour">Contour</td>
-</tr>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap font-semibold" data-i18n="유선_streamline">유선 (Streamline)</td>
-<td class="px-6 py-4" data-i18n="순간적인_속도_벡터에_접하도록_그린_선_정상_상태_유동_경로를_보여줌">순간적인 속도 벡터에 접하도록 그린 선. 정상 상태 유동 경로를 보여줌.</td>
-<td class="px-6 py-4" data-i18n="유체의_이동_경로_분리_및_부착_지점_파악">유체의 이동 경로, 분리 및 부착 지점 파악</td>
-<td class="px-6 py-4" data-i18n="streamline">Streamline</td>
-</tr>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap font-semibold" data-i18n="입자_궤적_particle_track">입자 궤적 (Particle Track)</td>
-<td class="px-6 py-4" data-i18n="가상의_입자가_유동장을_따라_이동한_경로_비정상_상태_유동_경로를_보여줌">가상의 입자가 유동장을 따라 이동한 경로. 비정상 상태 유동 경로를 보여줌.</td>
-<td class="px-6 py-4" data-i18n="시간_의존적_유동_경로_확산_특성_파악">시간 의존적 유동 경로, 확산 특성 파악</td>
-<td class="px-6 py-4" data-i18n="particle_track">Particle Track</td>
-</tr>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap font-semibold" data-i18n="등표면_isosurface">등표면 (Isosurface)</td>
-<td class="px-6 py-4" data-i18n="3차원_공간에서_스칼라량이_특정_값을_갖는_표면">3차원 공간에서 스칼라량이 특정 값을 갖는 표면</td>
-<td class="px-6 py-4" data-i18n="특정_조건_예_임계_온도_특정_농도_만족_영역_식별">특정 조건(예: 임계 온도, 특정 농도) 만족 영역 식별</td>
-<td class="px-6 py-4" data-i18n="isosurface">Isosurface</td>
-</tr>
-<tr>
-<td class="px-6 py-4 whitespace-nowrap font-semibold" data-i18n="체적_렌더링_volume_rendering">체적 렌더링 (Volume Rendering)</td>
-<td class="px-6 py-4" data-i18n="3차원_체적_데이터_내부의_분포를_투명도_색상_등을_활용하여_시각화">3차원 체적 데이터 내부의 분포를 투명도, 색상 등을 활용하여 시각화</td>
-<td class="px-6 py-4" data-i18n="3차원_유동_구조_밀도_분포_등_체적_데이터_전체_파악">3차원 유동 구조, 밀도 분포 등 체적 데이터 전체 파악</td>
-<td class="px-6 py-4" data-i18n="volume_rendering">Volume Rendering</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 class="mt-8" data-i18n="고급_시각화_기법">고급 시각화 기법</h2>
-<ul>
-<li data-i18n="3d_및_동적_transient_시각화_강화_시간_의존적인_비정상_transient_유동이나_복잡한_3차원_유동_구조를_효과적으로_이해하기_위해_3d_시각화_및_애니메이션_기법이_필수적입니다_2_ansys_cfd_post_paraview_등의_소프트웨어는_비정상_해석_결과를_일련의_그림_또는_애니메이션으로_저장하는_기능을_제공합니다_6_상세_내용은애니메이션_생성페이지_참조"><strong>3D 및 동적(Transient) 시각화 강화</strong>: 시간 의존적인 비정상(Transient) 유동이나 복잡한 3차원 유동 구조를 효과적으로 이해하기 위해 3D 시각화 및 애니메이션 기법이 필수적입니다 [2]. Ansys CFD-Post, ParaView 등의 소프트웨어는 비정상 해석 결과를 일련의 그림 또는 애니메이션으로 저장하는 기능을 제공합니다 [6]. (상세 내용은 <a class="text-[#0072CE] hover:text-[#004A99]" data-i18n="애니메이션_생성" href="cfd_post_animation.html">애니메이션 생성</a> 페이지 참조)</li>
-<li data-i18n="특정_현상_시각화_와류_핵_영역_vortex_core_region_7_충격파_shock_wave_5_유동_박리_지점_등_특정_유동_구조나_물리_현상을_식별하고_시각화하는_알고리즘_및_기법이_학술적으로_연구됩니다"><strong>특정 현상 시각화</strong>: 와류 핵 영역(Vortex Core Region) [7], 충격파(Shock Wave) [5], 유동 박리 지점 등 특정 유동 구조나 물리 현상을 식별하고 시각화하는 알고리즘 및 기법이 학술적으로 연구됩니다.</li>
-<li data-i18n="몰입형_시각화_immersive_visualization_최근에는_게임_엔진_예_unity3d_11_이나_증강_현실_ar_가상_현실_vr_11_기술을_활용하여_cfd_결과를_3d_환경에서_더욱_직관적으로_탐색하고_상호작용하는_연구가_활발히_진행되고_있습니다_이러한_기법은_비전문가와의_소통을_강화하고_공학_교육의_질을_높이며_복잡한_데이터에_대한_협업을_용이하게_합니다_5_11"><strong>몰입형 시각화 (Immersive Visualization)</strong>: 최근에는 게임 엔진(예: Unity3D) [11]이나 증강 현실(AR)/가상 현실(VR) [11] 기술을 활용하여 CFD 결과를 3D 환경에서 더욱 직관적으로 탐색하고 상호작용하는 연구가 활발히 진행되고 있습니다. 이러한 기법은 비전문가와의 소통을 강화하고, 공학 교육의 질을 높이며, 복잡한 데이터에 대한 협업을 용이하게 합니다 [5, 11].</li>
-</ul>
-<h2 class="mt-8" data-i18n="시각화_도구">시각화 도구</h2>
-<p data-i18n="cfd_후처리를_위한_다양한_상용_및_오픈소스_소프트웨어가_존재합니다_대표적으로_ensight_fieldview_tecplot_paraview_등이_있으며_altair_및_ansys와_같은_cfd_솔루션_자체에서_제공하는_후처리_도구_예_ansys_cfd_post_6_도_널리_사용됩니다_오픈소스_라이브러리인_vtk_visualization_toolkit_3_8_는_등고선_등표면_유선_등_다양한_시각화_알고리즘을_구현하는_데_기반이_됩니다">CFD 후처리를 위한 다양한 상용 및 오픈소스 소프트웨어가 존재합니다. 대표적으로 EnSight, FieldView, Tecplot, ParaView 등이 있으며, Altair 및 ANSYS와 같은 CFD 솔루션 자체에서 제공하는 후처리 도구(예: ANSYS CFD-Post [6])도 널리 사용됩니다. 오픈소스 라이브러리인 VTK(Visualization Toolkit) [3, 8]는 등고선, 등표면, 유선 등 다양한 시각화 알고리즘을 구현하는 데 기반이 됩니다.</p>
-<h2 class="mt-8" data-i18n="시각화_최적화_팁">시각화 최적화 팁</h2>
-<p data-i18n="효과적인_시각화를_위해_다음과_같은_팁이_권장됩니다_6">효과적인 시각화를 위해 다음과 같은 팁이 권장됩니다 [6]:</p>
-<ul>
-<li data-i18n="유사한_형상은_그룹화하여_관리합니다">유사한 형상은 그룹화하여 관리합니다.</li>
-<li data-i18n="관심_영역만_추출하여_분석의_효율을_높입니다">관심 영역만 추출하여 분석의 효율을 높입니다.</li>
-<li data-i18n="유선을_사용할_때는_시드_포인트와_색상_지정을_신중하게_선택합니다">유선을 사용할 때는 시드 포인트와 색상 지정을 신중하게 선택합니다.</li>
-<li data-i18n="필요한_데이터만_저장하거나_로드하여_파일_처리_부담을_줄입니다">필요한 데이터만 저장하거나 로드하여 파일 처리 부담을 줄입니다.</li>
-<li data-i18n="카메라_뷰_조명_설정을_활용하여_일관되고_명확한_이미지를_얻습니다">카메라 뷰, 조명 설정을 활용하여 일관되고 명확한 이미지를 얻습니다.</li>
-<li data-i18n="처음에는_회색조나_투명도를_활용하여_시각적_혼란을_줄입니다">처음에는 회색조나 투명도를 활용하여 시각적 혼란을 줄입니다.</li>
-<li data-i18n="state_파일_세션_파일_을_저장하여_반복적인_후처리_작업을_자동화하고_생산성을_높입니다">State 파일(세션 파일)을 저장하여 반복적인 후처리 작업을 자동화하고 생산성을 높입니다.</li>
-</ul>
-<hr class="my-8 border-gray-300"/>
-<p class="text-sm text-gray-600" data-i18n="cfd_후처리_시각화에_대한_더_자세한_학술적_내용_및_참고_자료는cfd_레퍼런스_페이지를_참조하십시오">CFD 후처리 시각화에 대한 더 자세한 학술적 내용 및 참고 자료는 <a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="cfd_레퍼런스_페이지" href="cfd_references.html#cfd-postprocessing-refs">CFD 레퍼런스 페이지</a>를 참조하십시오.</p>
-</article>
-</div>
-<div class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
-<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
-<div class="space-y-4" id="searchResultsList"></div>
-</div>
-</main>
-<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
-<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
-</p>
-<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-</div>
-</footer>
-<script src="script.js" type="module"></script>
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
+                    <span class="hamster-icon">🐹</span>
+                    <span class="helper-text">뭐든 물어봐!</span>
+                </div>
+            </div>
+        </div>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
+        <div class="bg-white p-6 md:p-10 rounded-xl shadow-xl">
+            <header class="mb-8 border-b pb-4">
+                <h1 class="text-3xl md:text-4xl font-bold text-slate-800">CFD 후처리 - 시각화 (Visualisation)</h1>
+            </header>
+            <article class="prose prose-lg max-w-none">
+                <p>유동 가시화는 복잡한 유체 현상을 시각적으로 표현하여 이해를 돕는 과정입니다 [5]. CFD 후처리의 가장 기본적이고 직관적인 단계로, 수치 데이터를 그래픽 형태로 변환하여 유동장 내의 물리량 분포 및 패턴을 시각적으로 이해할 수 있도록 합니다. 다양한 시각화 기법이 사용되며, 목적에 따라 적절한 방법을 선택하는 것이 중요합니다.</p>
+                
+                <h2 class="mt-8">주요 시각화 기법</h2>
+                <p>Ansys CFD-Post와 같은 소프트웨어는 Point, Line, Plane, Volume 등 다양한 형상 객체를 생성하고, 이 객체 위 또는 내부에서 다음의 가시화 기법들을 적용할 수 있도록 지원합니다 [6].</p>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200 my-6">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">기법 (Method)</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">설명 (Description)</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">활용 (Application)</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">예시 소프트웨어 기능 [6]</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-semibold">벡터 (Vector)</td>
+                                <td class="px-6 py-4">유동장의 속도 또는 다른 벡터량의 방향과 크기를 화살표로 표시</td>
+                                <td class="px-6 py-4">유동 방향, 재순환 영역, 정체점 파악</td>
+                                <td class="px-6 py-4">Vector</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-semibold">컨투어 (Contour)</td>
+                                <td class="px-6 py-4">스칼라량(압력, 온도, 속도 크기 등)이 동일한 값을 갖는 지점을 연결한 선 또는 등치면</td>
+                                <td class="px-6 py-4">물리량의 분포 패턴, 기울기 파악</td>
+                                <td class="px-6 py-4">Contour</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-semibold">유선 (Streamline)</td>
+                                <td class="px-6 py-4">순간적인 속도 벡터에 접하도록 그린 선. 정상 상태 유동 경로를 보여줌.</td>
+                                <td class="px-6 py-4">유체의 이동 경로, 분리 및 부착 지점 파악</td>
+                                <td class="px-6 py-4">Streamline</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-semibold">입자 궤적 (Particle Track)</td>
+                                <td class="px-6 py-4">가상의 입자가 유동장을 따라 이동한 경로. 비정상 상태 유동 경로를 보여줌.</td>
+                                <td class="px-6 py-4">시간 의존적 유동 경로, 확산 특성 파악</td>
+                                <td class="px-6 py-4">Particle Track</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-semibold">등표면 (Isosurface)</td>
+                                <td class="px-6 py-4">3차원 공간에서 스칼라량이 특정 값을 갖는 표면</td>
+                                <td class="px-6 py-4">특정 조건(예: 임계 온도, 특정 농도) 만족 영역 식별</td>
+                                <td class="px-6 py-4">Isosurface</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-semibold">체적 렌더링 (Volume Rendering)</td>
+                                <td class="px-6 py-4">3차원 체적 데이터 내부의 분포를 투명도, 색상 등을 활용하여 시각화</td>
+                                <td class="px-6 py-4">3차원 유동 구조, 밀도 분포 등 체적 데이터 전체 파악</td>
+                                <td class="px-6 py-4">Volume Rendering</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 class="mt-8">고급 시각화 기법</h2>
+                <ul>
+                    <li><strong>3D 및 동적(Transient) 시각화 강화</strong>: 시간 의존적인 비정상(Transient) 유동이나 복잡한 3차원 유동 구조를 효과적으로 이해하기 위해 3D 시각화 및 애니메이션 기법이 필수적입니다 [2]. Ansys CFD-Post, ParaView 등의 소프트웨어는 비정상 해석 결과를 일련의 그림 또는 애니메이션으로 저장하는 기능을 제공합니다 [6]. (상세 내용은 <a href="cfd_post_animation.html" class="text-[#0072CE] hover:text-[#004A99]">애니메이션 생성</a> 페이지 참조)</li>
+                    <li><strong>특정 현상 시각화</strong>: 와류 핵 영역(Vortex Core Region) [7], 충격파(Shock Wave) [5], 유동 박리 지점 등 특정 유동 구조나 물리 현상을 식별하고 시각화하는 알고리즘 및 기법이 학술적으로 연구됩니다.</li>
+                    <li><strong>몰입형 시각화 (Immersive Visualization)</strong>: 최근에는 게임 엔진(예: Unity3D) [11]이나 증강 현실(AR)/가상 현실(VR) [11] 기술을 활용하여 CFD 결과를 3D 환경에서 더욱 직관적으로 탐색하고 상호작용하는 연구가 활발히 진행되고 있습니다. 이러한 기법은 비전문가와의 소통을 강화하고, 공학 교육의 질을 높이며, 복잡한 데이터에 대한 협업을 용이하게 합니다 [5, 11].</li>
+                </ul>
+
+                <h2 class="mt-8">시각화 도구</h2>
+                <p>CFD 후처리를 위한 다양한 상용 및 오픈소스 소프트웨어가 존재합니다. 대표적으로 EnSight, FieldView, Tecplot, ParaView 등이 있으며, Altair 및 ANSYS와 같은 CFD 솔루션 자체에서 제공하는 후처리 도구(예: ANSYS CFD-Post [6])도 널리 사용됩니다. 오픈소스 라이브러리인 VTK(Visualization Toolkit) [3, 8]는 등고선, 등표면, 유선 등 다양한 시각화 알고리즘을 구현하는 데 기반이 됩니다.</p>
+
+                <h2 class="mt-8">시각화 최적화 팁</h2>
+                <p>효과적인 시각화를 위해 다음과 같은 팁이 권장됩니다 [6]:</p>
+                <ul>
+                    <li>유사한 형상은 그룹화하여 관리합니다.</li>
+                    <li>관심 영역만 추출하여 분석의 효율을 높입니다.</li>
+                    <li>유선을 사용할 때는 시드 포인트와 색상 지정을 신중하게 선택합니다.</li>
+                    <li>필요한 데이터만 저장하거나 로드하여 파일 처리 부담을 줄입니다.</li>
+                    <li>카메라 뷰, 조명 설정을 활용하여 일관되고 명확한 이미지를 얻습니다.</li>
+                    <li>처음에는 회색조나 투명도를 활용하여 시각적 혼란을 줄입니다.</li>
+                    <li>State 파일(세션 파일)을 저장하여 반복적인 후처리 작업을 자동화하고 생산성을 높입니다.</li>
+                </ul>
+                
+                <hr class="my-8 border-gray-300">
+                <p class="text-sm text-gray-600">CFD 후처리 시각화에 대한 더 자세한 학술적 내용 및 참고 자료는 <a href="cfd_references.html#cfd-postprocessing-refs" class="text-[#0072CE] hover:text-[#004A99] font-medium">CFD 레퍼런스 페이지</a>를 참조하십시오.</p>
+            </article>
+        </div>
+        <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
 </body>
 </html>

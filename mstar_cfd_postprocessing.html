@@ -1,117 +1,126 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="title_mstar_cfd_postprocessing">M-STAR CFD 후처리 - 소프트웨어 | 생물공학연구실</title>
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-STAR CFD 후처리 - 소프트웨어 | 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
-<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
-<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
-</h1>
-<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
-<ul class="container mx-auto px-0 flex justify-center">
-</ul>
-</nav>
-<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
-<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
-<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
-<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
-</div>
-</div>
-<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
-<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
-<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
-</div>
-</div>
-</div>
-<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
-<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-</div>
-</nav>
-</div>
-<main class="container mx-auto px-4 mt-5 py-12">
-<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-<div class="mb-8" data-i18n="m_star_cfd_메인으로_돌아가기">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="m_star_cfd_메인으로_돌아가기" href="mstar_cfd_main.html">« M-STAR CFD 메인으로 돌아가기</a>
-</div>
-<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="5_후처리_post_processing">5. 후처리 (Post-processing)</h2>
-<p data-i18n="m_star_cfd_시뮬레이션_완료_후_계산된_방대한_양의_데이터를_분석하고_시각화하기_위해_m_star_post_도구_및_외부_연동_기능을_사용합니다_후처리는_시뮬레이션_결과로부터_공학적_의미를_도출하고_설계를_개선하며_물리_현상에_대한_이해를_심화하는_중요한_과정입니다">M-STAR CFD 시뮬레이션 완료 후, 계산된 방대한 양의 데이터를 분석하고 시각화하기 위해 M-STAR Post 도구 및 외부 연동 기능을 사용합니다. 후처리는 시뮬레이션 결과로부터 공학적 의미를 도출하고, 설계를 개선하며, 물리 현상에 대한 이해를 심화하는 중요한 과정입니다.</p>
-<figure class="embedded-image-figure">
-<img alt="M-STAR Post 인터페이스 예시" class="max-w-xl" data-i18n="m_star_post_인터페이스_예시" src="https://sp-ao.shortpixel.ai/client/to_webp,q_lossless,ret_img,w_600,h_400/https://think-fluid-dynamix.com/wp-content/uploads/sites/28/2023/05/m-star-post-c-600x400.jpg"/>
-<figcaption>M-STAR Post를 이용한 시뮬레이션 결과 시각화 및 분석 (출처: think-fluid-dynamix.com)</figcaption>
-</figure>
-<ul>
-<li data-i18n="주요_후처리_기능_및_도구_m_star_post_gui_m_star_cfd에_내장된_그래픽_사용자_인터페이스_기반_후처리_도구입니다_주로_paraview_기술을_기반으로_하며_다음과_같은_기능을_제공합니다_3d_시각화_컨투어_플롯_벡터_플롯_스트림라인_글리프_아이소_서피스_등가면_볼륨_렌더링_등_다양한_시각화_기법을_지원합니다_애니메이션_생성_시간에_따른_유동_변화를_동영상으로_제작하여_비정상_상태_현상을_효과적으로_분석할_수_있습니다_사용자_정의_통계_분석_특정_영역_또는_전체_도메인에_대한_평균값_rms_값_최소_최대값_등_통계량_계산이_가능합니다_데이터_추출_및_플롯_특정_지점_선_면에서_시간에_따른_데이터_변화를_추출하여_xy_플롯으로_나타낼_수_있습니다_결과_필터링_및_조작_슬라이스_클립_임계값_설정_등_다양한_필터를_적용하여_관심_영역의_데이터를_집중적으로_분석합니다_계산기_기능_calculator_기존_필드_변수들을_조합하여_새로운_파생_변수를_생성하고_시각화할_수_있습니다_특화된_분석_기능_m_star_cfd의_강점_분야에_맞춰_다음과_같은_특화된_후처리_분석이_가능합니다_에너지_소산률_ε_전단률_shear_rate_난류_운동_에너지_k_등의_분포_맵_교반_탱크_시스템의_혼합_시간_mixing_time_동력_수_power_number_유량_수_flow_number_계산_다상_유동_시스템의_기포_입자_크기_분포_가스_홀드업_gas_holdup_상간_계면_면적_농도_물질_전달_계수_kla_맵_lagrangian_추적_결과_분석_개별_입자_기포의_궤적_속도_체류_시간_분포_rtd_주기적_계측점_sensor_trajectories_에서의_시간_평균값_등_paraview_스크립팅_및_외부_연동_m_star_post는_paraview_python_스크립트를_지원하여_반복적인_후처리_작업을_자동화하거나_사용자_정의_분석_루틴을_개발할_수_있습니다_또한_시뮬레이션_결과_데이터_주로_vtk_vti_csv형식_를_내보내어_독립_실행형_paraview_tecplot_ensight_등_다른_외부_후처리_소프트웨어나_python_matplotlib_numpy_pandas_등_을_이용한_고급_분석을_수행할_수_있습니다_원격_시각화_대용량_데이터의_경우_nice_dcv와_같은_원격_데스크톱_및_시각화_솔루션을_통해_고성능_컴퓨팅_클러스터에서_직접_후처리를_수행하고_결과를_로컬에서_확인할_수_있습니다"><strong>주요 후처리 기능 및 도구:</strong>
-<ul class="list-disc pl-4 space-y-1">
-<li data-i18n="m_star_post_gui_m_star_cfd에_내장된_그래픽_사용자_인터페이스_기반_후처리_도구입니다_주로_paraview_기술을_기반으로_하며_다음과_같은_기능을_제공합니다_3d_시각화_컨투어_플롯_벡터_플롯_스트림라인_글리프_아이소_서피스_등가면_볼륨_렌더링_등_다양한_시각화_기법을_지원합니다_애니메이션_생성_시간에_따른_유동_변화를_동영상으로_제작하여_비정상_상태_현상을_효과적으로_분석할_수_있습니다_사용자_정의_통계_분석_특정_영역_또는_전체_도메인에_대한_평균값_rms_값_최소_최대값_등_통계량_계산이_가능합니다_데이터_추출_및_플롯_특정_지점_선_면에서_시간에_따른_데이터_변화를_추출하여_xy_플롯으로_나타낼_수_있습니다_결과_필터링_및_조작_슬라이스_클립_임계값_설정_등_다양한_필터를_적용하여_관심_영역의_데이터를_집중적으로_분석합니다_계산기_기능_calculator_기존_필드_변수들을_조합하여_새로운_파생_변수를_생성하고_시각화할_수_있습니다"><strong>M-STAR Post GUI</strong>: M-STAR CFD에 내장된 그래픽 사용자 인터페이스 기반 후처리 도구입니다. 주로 ParaView 기술을 기반으로 하며, 다음과 같은 기능을 제공합니다:
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
+                    <span class="hamster-icon">🐹</span>
+                    <span class="helper-text">뭐든 물어봐!</span>
+                </div>
+            </div>
+        </div>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 mt-5 py-12">
+        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+            <div class="mb-8">
+                <a href="mstar_cfd_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; M-STAR CFD 메인으로 돌아가기</a>
+            </div>
+            
+            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">5. 후처리 (Post-processing)</h2>
+            <p>M-STAR CFD 시뮬레이션 완료 후, 계산된 방대한 양의 데이터를 분석하고 시각화하기 위해 M-STAR Post 도구 및 외부 연동 기능을 사용합니다. 후처리는 시뮬레이션 결과로부터 공학적 의미를 도출하고, 설계를 개선하며, 물리 현상에 대한 이해를 심화하는 중요한 과정입니다.</p>
+
+            <figure class="embedded-image-figure">
+                <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_lossless,ret_img,w_600,h_400/https://think-fluid-dynamix.com/wp-content/uploads/sites/28/2023/05/m-star-post-c-600x400.jpg" alt="M-STAR Post 인터페이스 예시" class="max-w-xl">
+                <figcaption>M-STAR Post를 이용한 시뮬레이션 결과 시각화 및 분석 (출처: think-fluid-dynamix.com)</figcaption>
+            </figure>
+
+            <ul>
+                <li><strong>주요 후처리 기능 및 도구:</strong>
+                    <ul class="list-disc pl-4 space-y-1">
+                        <li><strong>M-STAR Post GUI</strong>: M-STAR CFD에 내장된 그래픽 사용자 인터페이스 기반 후처리 도구입니다. 주로 ParaView 기술을 기반으로 하며, 다음과 같은 기능을 제공합니다:
                             <ul class="list-disc pl-5">
-<li data-i18n="3d_시각화_컨투어_플롯_벡터_플롯_스트림라인_글리프_아이소_서피스_등가면_볼륨_렌더링_등_다양한_시각화_기법을_지원합니다"><strong>3D 시각화</strong>: 컨투어 플롯, 벡터 플롯, 스트림라인, 글리프, 아이소 서피스(등가면), 볼륨 렌더링 등 다양한 시각화 기법을 지원합니다.</li>
-<li data-i18n="애니메이션_생성_시간에_따른_유동_변화를_동영상으로_제작하여_비정상_상태_현상을_효과적으로_분석할_수_있습니다"><strong>애니메이션 생성</strong>: 시간에 따른 유동 변화를 동영상으로 제작하여 비정상 상태 현상을 효과적으로 분석할 수 있습니다.</li>
-<li data-i18n="사용자_정의_통계_분석_특정_영역_또는_전체_도메인에_대한_평균값_rms_값_최소_최대값_등_통계량_계산이_가능합니다"><strong>사용자 정의 통계 분석</strong>: 특정 영역 또는 전체 도메인에 대한 평균값, RMS 값, 최소/최대값 등 통계량 계산이 가능합니다.</li>
-<li data-i18n="데이터_추출_및_플롯_특정_지점_선_면에서_시간에_따른_데이터_변화를_추출하여_xy_플롯으로_나타낼_수_있습니다"><strong>데이터 추출 및 플롯</strong>: 특정 지점, 선, 면에서 시간에 따른 데이터 변화를 추출하여 XY 플롯으로 나타낼 수 있습니다.</li>
-<li data-i18n="결과_필터링_및_조작_슬라이스_클립_임계값_설정_등_다양한_필터를_적용하여_관심_영역의_데이터를_집중적으로_분석합니다"><strong>결과 필터링 및 조작</strong>: 슬라이스, 클립, 임계값 설정 등 다양한 필터를 적용하여 관심 영역의 데이터를 집중적으로 분석합니다.</li>
-<li data-i18n="계산기_기능_calculator_기존_필드_변수들을_조합하여_새로운_파생_변수를_생성하고_시각화할_수_있습니다"><strong>계산기 기능 (Calculator)</strong>: 기존 필드 변수들을 조합하여 새로운 파생 변수를 생성하고 시각화할 수 있습니다.</li>
-</ul>
-</li>
-<li data-i18n="특화된_분석_기능_m_star_cfd의_강점_분야에_맞춰_다음과_같은_특화된_후처리_분석이_가능합니다_에너지_소산률_ε_전단률_shear_rate_난류_운동_에너지_k_등의_분포_맵_교반_탱크_시스템의_혼합_시간_mixing_time_동력_수_power_number_유량_수_flow_number_계산_다상_유동_시스템의_기포_입자_크기_분포_가스_홀드업_gas_holdup_상간_계면_면적_농도_물질_전달_계수_kla_맵_lagrangian_추적_결과_분석_개별_입자_기포의_궤적_속도_체류_시간_분포_rtd_주기적_계측점_sensor_trajectories_에서의_시간_평균값_등"><strong>특화된 분석 기능</strong>: M-STAR CFD의 강점 분야에 맞춰 다음과 같은 특화된 후처리 분석이 가능합니다:
+                                <li><strong>3D 시각화</strong>: 컨투어 플롯, 벡터 플롯, 스트림라인, 글리프, 아이소 서피스(등가면), 볼륨 렌더링 등 다양한 시각화 기법을 지원합니다.</li>
+                                <li><strong>애니메이션 생성</strong>: 시간에 따른 유동 변화를 동영상으로 제작하여 비정상 상태 현상을 효과적으로 분석할 수 있습니다.</li>
+                                <li><strong>사용자 정의 통계 분석</strong>: 특정 영역 또는 전체 도메인에 대한 평균값, RMS 값, 최소/최대값 등 통계량 계산이 가능합니다.</li>
+                                <li><strong>데이터 추출 및 플롯</strong>: 특정 지점, 선, 면에서 시간에 따른 데이터 변화를 추출하여 XY 플롯으로 나타낼 수 있습니다.</li>
+                                <li><strong>결과 필터링 및 조작</strong>: 슬라이스, 클립, 임계값 설정 등 다양한 필터를 적용하여 관심 영역의 데이터를 집중적으로 분석합니다.</li>
+                                <li><strong>계산기 기능 (Calculator)</strong>: 기존 필드 변수들을 조합하여 새로운 파생 변수를 생성하고 시각화할 수 있습니다.</li>
+                            </ul>
+                        </li>
+                        <li><strong>특화된 분석 기능</strong>: M-STAR CFD의 강점 분야에 맞춰 다음과 같은 특화된 후처리 분석이 가능합니다:
                             <ul class="list-disc pl-5">
-<li data-i18n="에너지_소산률_ε_전단률_shear_rate_난류_운동_에너지_k_등의_분포_맵">에너지 소산률(ε), 전단률(shear rate), 난류 운동 에너지(k) 등의 분포 맵.</li>
-<li data-i18n="교반_탱크_시스템의_혼합_시간_mixing_time_동력_수_power_number_유량_수_flow_number_계산">교반 탱크 시스템의 혼합 시간(mixing time), 동력 수(power number), 유량 수(flow number) 계산.</li>
-<li data-i18n="다상_유동_시스템의_기포_입자_크기_분포_가스_홀드업_gas_holdup_상간_계면_면적_농도_물질_전달_계수_kla_맵">다상 유동 시스템의 기포/입자 크기 분포, 가스 홀드업(gas holdup), 상간 계면 면적 농도, 물질 전달 계수(kLa) 맵.</li>
-<li data-i18n="lagrangian_추적_결과_분석_개별_입자_기포의_궤적_속도_체류_시간_분포_rtd_주기적_계측점_sensor_trajectories_에서의_시간_평균값_등">Lagrangian 추적 결과 분석: 개별 입자/기포의 궤적, 속도, 체류 시간 분포(RTD), 주기적 계측점(sensor trajectories)에서의 시간 평균값 등.</li>
-</ul>
-</li>
-<li data-i18n="paraview_스크립팅_및_외부_연동_m_star_post는_paraview_python_스크립트를_지원하여_반복적인_후처리_작업을_자동화하거나_사용자_정의_분석_루틴을_개발할_수_있습니다_또한_시뮬레이션_결과_데이터_주로_vtk_vti_csv형식_를_내보내어_독립_실행형_paraview_tecplot_ensight_등_다른_외부_후처리_소프트웨어나_python_matplotlib_numpy_pandas_등_을_이용한_고급_분석을_수행할_수_있습니다"><strong>ParaView 스크립팅 및 외부 연동</strong>: M-STAR Post는 ParaView Python 스크립트를 지원하여 반복적인 후처리 작업을 자동화하거나 사용자 정의 분석 루틴을 개발할 수 있습니다. 또한, 시뮬레이션 결과 데이터(주로 <code>.vtk</code>, <code>.vti</code>, <code>.csv</code> 형식)를 내보내어 독립 실행형 ParaView, Tecplot, EnSight 등 다른 외부 후처리 소프트웨어나 Python(Matplotlib, NumPy, Pandas 등)을 이용한 고급 분석을 수행할 수 있습니다.</li>
-<li data-i18n="원격_시각화_대용량_데이터의_경우_nice_dcv와_같은_원격_데스크톱_및_시각화_솔루션을_통해_고성능_컴퓨팅_클러스터에서_직접_후처리를_수행하고_결과를_로컬에서_확인할_수_있습니다"><strong>원격 시각화</strong>: 대용량 데이터의 경우, NICE DCV와 같은 원격 데스크톱 및 시각화 솔루션을 통해 고성능 컴퓨팅 클러스터에서 직접 후처리를 수행하고 결과를 로컬에서 확인할 수 있습니다.</li>
-</ul>
-</li>
-<li data-i18n="gpu_성능_활용_m_star_post는_gpu_가속을_일부_활용하여_대규모_결과_데이터의_렌더링_및_시각화_성능을_향상시킬_수_있습니다_소프트웨어_버전에_따라_지원_범위_상이"><strong>GPU 성능 활용</strong>: M-STAR Post는 GPU 가속을 일부 활용하여 대규모 결과 데이터의 렌더링 및 시각화 성능을 향상시킬 수 있습니다 (소프트웨어 버전에 따라 지원 범위 상이).</li>
-</ul>
-<div class="animation-section" data-i18n="애니메이션_생성바이오리액터_구동_cfd_애니메이션브라우저가_비디오를_지원하지_않습니다">
-<h3 data-i18n="애니메이션_생성">애니메이션 생성</h3>
-<p data-i18n="바이오리액터_구동_cfd_애니메이션">바이오리액터 구동 CFD 애니메이션</p>
-<video aria-label="바이오리액터 CFD 애니메이션" controls="" data-i18n="브라우저가_비디오를_지원하지_않습니다">
-<source src="25.03.31 Bioreactor CFD Animation VER 1.mp4" type="video/mp4"/>
+                                <li>에너지 소산률(ε), 전단률(shear rate), 난류 운동 에너지(k) 등의 분포 맵.</li>
+                                <li>교반 탱크 시스템의 혼합 시간(mixing time), 동력 수(power number), 유량 수(flow number) 계산.</li>
+                                <li>다상 유동 시스템의 기포/입자 크기 분포, 가스 홀드업(gas holdup), 상간 계면 면적 농도, 물질 전달 계수(kLa) 맵.</li>
+                                <li>Lagrangian 추적 결과 분석: 개별 입자/기포의 궤적, 속도, 체류 시간 분포(RTD), 주기적 계측점(sensor trajectories)에서의 시간 평균값 등.</li>
+                            </ul>
+                        </li>
+                        <li><strong>ParaView 스크립팅 및 외부 연동</strong>: M-STAR Post는 ParaView Python 스크립트를 지원하여 반복적인 후처리 작업을 자동화하거나 사용자 정의 분석 루틴을 개발할 수 있습니다. 또한, 시뮬레이션 결과 데이터(주로 <code>.vtk</code>, <code>.vti</code>, <code>.csv</code> 형식)를 내보내어 독립 실행형 ParaView, Tecplot, EnSight 등 다른 외부 후처리 소프트웨어나 Python(Matplotlib, NumPy, Pandas 등)을 이용한 고급 분석을 수행할 수 있습니다.</li>
+                        <li><strong>원격 시각화</strong>: 대용량 데이터의 경우, NICE DCV와 같은 원격 데스크톱 및 시각화 솔루션을 통해 고성능 컴퓨팅 클러스터에서 직접 후처리를 수행하고 결과를 로컬에서 확인할 수 있습니다.</li>
+                    </ul>
+                </li>
+                <li><strong>GPU 성능 활용</strong>: M-STAR Post는 GPU 가속을 일부 활용하여 대규모 결과 데이터의 렌더링 및 시각화 성능을 향상시킬 수 있습니다 (소프트웨어 버전에 따라 지원 범위 상이).</li>
+            </ul>
+
+            <div class="animation-section">
+                <h3>애니메이션 생성</h3>
+                <p>바이오리액터 구동 CFD 애니메이션</p>
+                <video controls aria-label="바이오리액터 CFD 애니메이션">
+                    <source src="25.03.31 Bioreactor CFD Animation VER 1.mp4" type="video/mp4">
                     브라우저가 비디오를 지원하지 않습니다.
                 </video>
-</div>
-<div class="my-6 responsive-iframe-container">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" data-i18n="youtube_video_player_m_star_tutorials_post_processing_basics" src="https://www.youtube.com/embed/_7p4Llbz16A" title="YouTube video player: M-Star Tutorials: Post-Processing Basics"></iframe>
-</div>
-<p class="text-sm text-gray-600 mt-2 italic text-center" data-i18n="m_star_cfd_후처리_기본_튜토리얼_영상_출처_m_star_cfd_youtube">M-STAR CFD 후처리 기본 튜토리얼 영상 (출처: M-Star CFD YouTube)</p>
-<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="참고_자료">참고 자료</h3>
-<ul class="list-disc pl-5 space-y-1 text-sm">
-<li data-i18n="m_star_cfd_official_documentation_m_star_post"><a data-i18n="m_star_cfd_official_documentation_m_star_post" href="https://docs.mstarcfd.com/5_M-Star_Post/txt-files/M-Star-Post-index.html" rel="noopener noreferrer" target="_blank">M-STAR CFD Official Documentation - M-Star Post</a></li>
-<li data-i18n="m_star_cfd_튜토리얼_및_웨비나_공식_웹사이트에서_제공되는_후처리_관련_자료">M-STAR CFD 튜토리얼 및 웨비나 (공식 웹사이트에서 제공되는 후처리 관련 자료)</li>
-<li data-i18n="paraview_documentation_m_star_post의_기반이_되는_paraview_사용법_참고"><a data-i18n="paraview_documentation" href="https://www.paraview.org/documentation/" rel="noopener noreferrer" target="_blank">ParaView Documentation</a> (M-STAR Post의 기반이 되는 ParaView 사용법 참고)</li>
-</ul>
-</article>
-<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
-<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
-<div class="space-y-4" id="searchResultsList"></div>
-</div>
-</main>
-<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
-<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
-</p>
-<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-</div>
-</footer>
-<script src="script.js"></script>
+            </div>
+
+            <div class="my-6 responsive-iframe-container">
+                <iframe src="https://www.youtube.com/embed/_7p4Llbz16A" title="YouTube video player: M-Star Tutorials: Post-Processing Basics" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p class="text-sm text-gray-600 mt-2 italic text-center">M-STAR CFD 후처리 기본 튜토리얼 영상 (출처: M-Star CFD YouTube)</p>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">참고 자료</h3>
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+                <li><a href="https://docs.mstarcfd.com/5_M-Star_Post/txt-files/M-Star-Post-index.html" target="_blank" rel="noopener noreferrer">M-STAR CFD Official Documentation - M-Star Post</a></li>
+                <li>M-STAR CFD 튜토리얼 및 웨비나 (공식 웹사이트에서 제공되는 후처리 관련 자료)</li>
+                <li><a href="https://www.paraview.org/documentation/" target="_blank" rel="noopener noreferrer">ParaView Documentation</a> (M-STAR Post의 기반이 되는 ParaView 사용법 참고)</li>
+            </ul>
+
+        </article>
+        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

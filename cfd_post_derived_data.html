@@ -1,95 +1,101 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="title_cfd_post_derived_data">CFD 후처리 - 파생 데이터 계산 - 생물공학연구실</title>
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFD 후처리 - 파생 데이터 계산 - 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-gray-800 scroll-smooth">
-<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
-<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
-<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
-</h1>
-<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
-<ul class="container mx-auto px-0 flex justify-center">
-</ul>
-</nav>
-<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
-<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
-<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
-<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
-</div>
-</div>
-<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
-<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
-<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
-</div>
-</div>
-</div>
-<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
-<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-</div>
-</nav>
-</div>
-<main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
-<div class="bg-white p-6 md:p-10 rounded-xl shadow-xl" data-i18n="cfd_후처리_파생_데이터_계산_derived_data_calculation_cfd_솔버는_주로_속도_압력_온도_난류_에너지와_같은_기본_물리량을_계산합니다_그러나_실제_엔지니어링_분석_및_의사결정에는_이러한_기본량으로부터_추가적으로_계산되는_다양한_파생_데이터가_필요합니다_후처리_단계에서는_이러한_파생_데이터를_계산하여_시뮬레이션_결과의_의미를_더욱_풍부하게_하고_공학적_통찰력을_제공합니다_6_파생_데이터의_종류일반적인_파생량_전단_응력_wall_shear_stress_와도_vorticity_변형률_strain_rate_난류_강도_turbulence_intensity_압력_손실_pressure_drop_열유속_heat_flux_열전달_계수_heat_transfer_coefficient_등이_포함됩니다_무차원수_dimensionless_numbers_레이놀즈_수_reynolds_number_누셀트_수_nusselt_number_프란틀_수_prandtl_number_마하_수_mach_number_등_유동_특성을_나타내는_중요한_무차원수들을_계산합니다_엔지니어링_관련_성능_계수_공력_계수_항력_계수_drag_coefficient_cd_양력_계수_lift_coefficient_cl_모멘트_계수_moment_coefficient_cm_터보기계_성능_효율_efficiency_펌프_터빈_압축기_등_다양한_기계_유형별_공식_적용_수두_head_토크_계수_추력_계수_등내부_유동_마찰_계수_friction_factor_압력_계수_pressure_coefficient_cp_전체량_total_quantities_전체_압력_total_pressure_전체_온도_total_temperature_비운동_에너지_specific_kinetic_energy_등은_종종_솔버에_의해_자동으로_계산되거나_후처리_단계에서_쉽게_계산되어_활용될_수_있습니다_특수_분야_파생량_공동_현상_cavitation_관련_매개변수_cavitation_risk_cavitation_index_npsh_net_positive_suction_head_연소_해석에서의_화학종_질량_분율_변화율_다상_유동에서의_상분율_volume_fraction_관련_지표_등_특정_물리_모델과_관련된_파생량도_계산됩니다_파생_데이터_계산_방법후처리_소프트웨어는_다양한_방법으로_파생_데이터를_계산하는_기능을_제공합니다_6_사용자_정의_변수_및_표현식_user_variables_and_expressions_기존_결과_변수들을_조합하거나_수학적_연산_사칙연산_미분_적분_삼각함수_등_을_적용하여_새로운_사용자_정의_변수를_생성합니다_예를_들어_ansys_cfd_post에서는_cel_cfx_expression_language_을_사용하여_pressure_0_5_density_velocity_2_와_같이_동압을_계산하는_표현식을_만들_수_있습니다_6_함수_계산기_function_calculator_특정_위치_점_선_면_체적_등_에서_면적_area_체적_volume_질량_유량_massflow_평균값_areaave_volumeave_최소_최대값_힘_force_토크_torque_등_다양한_물리량을_직접_계산하는_도구입니다_6_매크로_계산기_macro_calculator_특정_애플리케이션_예_터보기계_성능_분석_팬_소음_예측_에_특화된_일련의_계산_과정을_자동화하는_매크로를_실행하거나_사용자가_직접_작성할_수_있습니다_6_메시_계산기_mesh_calculator_현재_로드된_결과_파일의_메시_품질_지표_예_aspect_ratio_skewness_orthogonality_를_계산하여_해석_결과의_신뢰성과_관련된_메시의_적합성을_평가하는_데_도움을_줍니다_6_케이스_비교_case_comparison_여러_시뮬레이션_결과_파일_간_또는_동일_파일_내_다른_타임스텝_간의_결과_차이_델타_값_를_정량적으로_계산하고_이를_시각화하여_설계_변경이나_시간_변화에_따른_영향을_분석합니다_6_이러한_파생_데이터_계산은_시뮬레이션_결과를_단순한_숫자_더미에서_실제_공학적_문제_해결에_직접_활용될_수_있는_유용한_정보로_변환하는_핵심_과정입니다_cfd_후처리_파생_데이터_계산에_대한_더_자세한_학술적_내용_및_참고_자료는cfd_레퍼런스_페이지를_참조하십시오">
-<header class="mb-8 border-b pb-4">
-<h1 class="text-3xl md:text-4xl font-bold text-slate-800" data-i18n="cfd_후처리_파생_데이터_계산_derived_data_calculation">CFD 후처리 - 파생 데이터 계산 (Derived Data Calculation)</h1>
-</header>
-<article class="prose prose-lg max-w-none">
-<p data-i18n="cfd_솔버는_주로_속도_압력_온도_난류_에너지와_같은_기본_물리량을_계산합니다_그러나_실제_엔지니어링_분석_및_의사결정에는_이러한_기본량으로부터_추가적으로_계산되는_다양한_파생_데이터가_필요합니다_후처리_단계에서는_이러한_파생_데이터를_계산하여_시뮬레이션_결과의_의미를_더욱_풍부하게_하고_공학적_통찰력을_제공합니다_6">CFD 솔버는 주로 속도, 압력, 온도, 난류 에너지와 같은 기본 물리량을 계산합니다. 그러나 실제 엔지니어링 분석 및 의사결정에는 이러한 기본량으로부터 추가적으로 계산되는 다양한 파생 데이터가 필요합니다. 후처리 단계에서는 이러한 파생 데이터를 계산하여 시뮬레이션 결과의 의미를 더욱 풍부하게 하고 공학적 통찰력을 제공합니다 [6].</p>
-<h2 class="mt-8" data-i18n="파생_데이터의_종류">파생 데이터의 종류</h2>
-<ul>
-<li data-i18n="일반적인_파생량_전단_응력_wall_shear_stress_와도_vorticity_변형률_strain_rate_난류_강도_turbulence_intensity_압력_손실_pressure_drop_열유속_heat_flux_열전달_계수_heat_transfer_coefficient_등이_포함됩니다"><strong>일반적인 파생량</strong>: 전단 응력(Wall Shear Stress), 와도(Vorticity), 변형률(Strain Rate), 난류 강도(Turbulence Intensity), 압력 손실(Pressure Drop), 열유속(Heat Flux), 열전달 계수(Heat Transfer Coefficient) 등이 포함됩니다.</li>
-<li data-i18n="무차원수_dimensionless_numbers_레이놀즈_수_reynolds_number_누셀트_수_nusselt_number_프란틀_수_prandtl_number_마하_수_mach_number_등_유동_특성을_나타내는_중요한_무차원수들을_계산합니다"><strong>무차원수 (Dimensionless Numbers)</strong>: 레이놀즈 수(Reynolds Number), 누셀트 수(Nusselt Number), 프란틀 수(Prandtl Number), 마하 수(Mach Number) 등 유동 특성을 나타내는 중요한 무차원수들을 계산합니다.</li>
-<li data-i18n="엔지니어링_관련_성능_계수_공력_계수_항력_계수_drag_coefficient_cd_양력_계수_lift_coefficient_cl_모멘트_계수_moment_coefficient_cm_터보기계_성능_효율_efficiency_펌프_터빈_압축기_등_다양한_기계_유형별_공식_적용_수두_head_토크_계수_추력_계수_등내부_유동_마찰_계수_friction_factor_압력_계수_pressure_coefficient_cp"><strong>엔지니어링 관련 성능 계수</strong>:
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
+                    <span class="hamster-icon">🐹</span>
+                    <span class="helper-text">뭐든 물어봐!</span>
+                </div>
+            </div>
+        </div>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
+        <div class="bg-white p-6 md:p-10 rounded-xl shadow-xl">
+            <header class="mb-8 border-b pb-4">
+                <h1 class="text-3xl md:text-4xl font-bold text-slate-800">CFD 후처리 - 파생 데이터 계산 (Derived Data Calculation)</h1>
+            </header>
+            <article class="prose prose-lg max-w-none">
+                <p>CFD 솔버는 주로 속도, 압력, 온도, 난류 에너지와 같은 기본 물리량을 계산합니다. 그러나 실제 엔지니어링 분석 및 의사결정에는 이러한 기본량으로부터 추가적으로 계산되는 다양한 파생 데이터가 필요합니다. 후처리 단계에서는 이러한 파생 데이터를 계산하여 시뮬레이션 결과의 의미를 더욱 풍부하게 하고 공학적 통찰력을 제공합니다 [6].</p>
+
+                <h2 class="mt-8">파생 데이터의 종류</h2>
+                <ul>
+                    <li><strong>일반적인 파생량</strong>: 전단 응력(Wall Shear Stress), 와도(Vorticity), 변형률(Strain Rate), 난류 강도(Turbulence Intensity), 압력 손실(Pressure Drop), 열유속(Heat Flux), 열전달 계수(Heat Transfer Coefficient) 등이 포함됩니다.</li>
+                    <li><strong>무차원수 (Dimensionless Numbers)</strong>: 레이놀즈 수(Reynolds Number), 누셀트 수(Nusselt Number), 프란틀 수(Prandtl Number), 마하 수(Mach Number) 등 유동 특성을 나타내는 중요한 무차원수들을 계산합니다.</li>
+                    <li><strong>엔지니어링 관련 성능 계수</strong>:
                         <ul>
-<li data-i18n="공력_계수_항력_계수_drag_coefficient_cd_양력_계수_lift_coefficient_cl_모멘트_계수_moment_coefficient_cm">공력 계수: 항력 계수(Drag Coefficient, C<sub>D</sub>), 양력 계수(Lift Coefficient, C<sub>L</sub>), 모멘트 계수(Moment Coefficient, C<sub>M</sub>)</li>
-<li data-i18n="터보기계_성능_효율_efficiency_펌프_터빈_압축기_등_다양한_기계_유형별_공식_적용_수두_head_토크_계수_추력_계수_등">터보기계 성능: 효율(Efficiency - 펌프, 터빈, 압축기 등 다양한 기계 유형별 공식 적용), 수두(Head), 토크 계수, 추력 계수 등</li>
-<li data-i18n="내부_유동_마찰_계수_friction_factor_압력_계수_pressure_coefficient_cp">내부 유동: 마찰 계수(Friction Factor), 압력 계수(Pressure Coefficient, C<sub>p</sub>)</li>
-</ul>
-</li>
-<li data-i18n="전체량_total_quantities_전체_압력_total_pressure_전체_온도_total_temperature_비운동_에너지_specific_kinetic_energy_등은_종종_솔버에_의해_자동으로_계산되거나_후처리_단계에서_쉽게_계산되어_활용될_수_있습니다"><strong>전체량 (Total Quantities)</strong>: 전체 압력(Total Pressure), 전체 온도(Total Temperature), 비운동 에너지(Specific Kinetic Energy) 등은 종종 솔버에 의해 자동으로 계산되거나 후처리 단계에서 쉽게 계산되어 활용될 수 있습니다.</li>
-<li data-i18n="특수_분야_파생량_공동_현상_cavitation_관련_매개변수_cavitation_risk_cavitation_index_npsh_net_positive_suction_head_연소_해석에서의_화학종_질량_분율_변화율_다상_유동에서의_상분율_volume_fraction_관련_지표_등_특정_물리_모델과_관련된_파생량도_계산됩니다"><strong>특수 분야 파생량</strong>: 공동 현상(Cavitation) 관련 매개변수(Cavitation Risk, Cavitation Index, NPSH - Net Positive Suction Head), 연소 해석에서의 화학종 질량 분율 변화율, 다상 유동에서의 상분율(Volume Fraction) 관련 지표 등 특정 물리 모델과 관련된 파생량도 계산됩니다.</li>
-</ul>
-<h2 class="mt-8" data-i18n="파생_데이터_계산_방법">파생 데이터 계산 방법</h2>
-<p data-i18n="후처리_소프트웨어는_다양한_방법으로_파생_데이터를_계산하는_기능을_제공합니다_6">후처리 소프트웨어는 다양한 방법으로 파생 데이터를 계산하는 기능을 제공합니다 [6]:</p>
-<ul>
-<li data-i18n="사용자_정의_변수_및_표현식_user_variables_and_expressions_기존_결과_변수들을_조합하거나_수학적_연산_사칙연산_미분_적분_삼각함수_등_을_적용하여_새로운_사용자_정의_변수를_생성합니다_예를_들어_ansys_cfd_post에서는_cel_cfx_expression_language_을_사용하여_pressure_0_5_density_velocity_2_와_같이_동압을_계산하는_표현식을_만들_수_있습니다_6"><strong>사용자 정의 변수 및 표현식 (User Variables and Expressions)</strong>: 기존 결과 변수들을 조합하거나 수학적 연산(사칙연산, 미분, 적분, 삼각함수 등)을 적용하여 새로운 사용자 정의 변수를 생성합니다. 예를 들어, Ansys CFD-Post에서는 CEL(CFX Expression Language)을 사용하여 `pressure - 0.5 * density * velocity^2` 와 같이 동압을 계산하는 표현식을 만들 수 있습니다 [6].</li>
-<li data-i18n="함수_계산기_function_calculator_특정_위치_점_선_면_체적_등_에서_면적_area_체적_volume_질량_유량_massflow_평균값_areaave_volumeave_최소_최대값_힘_force_토크_torque_등_다양한_물리량을_직접_계산하는_도구입니다_6"><strong>함수 계산기 (Function Calculator)</strong>: 특정 위치(점, 선, 면, 체적 등)에서 면적(Area), 체적(Volume), 질량 유량(massFlow), 평균값(areaAve, volumeAve), 최소/최대값, 힘(force), 토크(torque) 등 다양한 물리량을 직접 계산하는 도구입니다 [6].</li>
-<li data-i18n="매크로_계산기_macro_calculator_특정_애플리케이션_예_터보기계_성능_분석_팬_소음_예측_에_특화된_일련의_계산_과정을_자동화하는_매크로를_실행하거나_사용자가_직접_작성할_수_있습니다_6"><strong>매크로 계산기 (Macro Calculator)</strong>: 특정 애플리케이션(예: 터보기계 성능 분석, 팬 소음 예측)에 특화된 일련의 계산 과정을 자동화하는 매크로를 실행하거나 사용자가 직접 작성할 수 있습니다 [6].</li>
-<li data-i18n="메시_계산기_mesh_calculator_현재_로드된_결과_파일의_메시_품질_지표_예_aspect_ratio_skewness_orthogonality_를_계산하여_해석_결과의_신뢰성과_관련된_메시의_적합성을_평가하는_데_도움을_줍니다_6"><strong>메시 계산기 (Mesh Calculator)</strong>: 현재 로드된 결과 파일의 메시 품질 지표(예: Aspect Ratio, Skewness, Orthogonality)를 계산하여 해석 결과의 신뢰성과 관련된 메시의 적합성을 평가하는 데 도움을 줍니다 [6].</li>
-<li data-i18n="케이스_비교_case_comparison_여러_시뮬레이션_결과_파일_간_또는_동일_파일_내_다른_타임스텝_간의_결과_차이_델타_값_를_정량적으로_계산하고_이를_시각화하여_설계_변경이나_시간_변화에_따른_영향을_분석합니다_6"><strong>케이스 비교 (Case Comparison)</strong>: 여러 시뮬레이션 결과 파일 간 또는 동일 파일 내 다른 타임스텝 간의 결과 차이(델타 값)를 정량적으로 계산하고 이를 시각화하여 설계 변경이나 시간 변화에 따른 영향을 분석합니다 [6].</li>
-</ul>
-<p data-i18n="이러한_파생_데이터_계산은_시뮬레이션_결과를_단순한_숫자_더미에서_실제_공학적_문제_해결에_직접_활용될_수_있는_유용한_정보로_변환하는_핵심_과정입니다">이러한 파생 데이터 계산은 시뮬레이션 결과를 단순한 숫자 더미에서 실제 공학적 문제 해결에 직접 활용될 수 있는 유용한 정보로 변환하는 핵심 과정입니다.</p>
-<hr class="my-8 border-gray-300"/>
-<p class="text-sm text-gray-600" data-i18n="cfd_후처리_파생_데이터_계산에_대한_더_자세한_학술적_내용_및_참고_자료는cfd_레퍼런스_페이지를_참조하십시오">CFD 후처리 파생 데이터 계산에 대한 더 자세한 학술적 내용 및 참고 자료는 <a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="cfd_레퍼런스_페이지" href="cfd_references.html#cfd-postprocessing-refs">CFD 레퍼런스 페이지</a>를 참조하십시오.</p>
-</article>
-</div>
-<div class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
-<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
-<div class="space-y-4" id="searchResultsList"></div>
-</div>
-</main>
-<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
-<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
-</p>
-<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-</div>
-</footer>
-<script src="script.js" type="module"></script>
+                            <li>공력 계수: 항력 계수(Drag Coefficient, C<sub>D</sub>), 양력 계수(Lift Coefficient, C<sub>L</sub>), 모멘트 계수(Moment Coefficient, C<sub>M</sub>)</li>
+                            <li>터보기계 성능: 효율(Efficiency - 펌프, 터빈, 압축기 등 다양한 기계 유형별 공식 적용), 수두(Head), 토크 계수, 추력 계수 등</li>
+                            <li>내부 유동: 마찰 계수(Friction Factor), 압력 계수(Pressure Coefficient, C<sub>p</sub>)</li>
+                        </ul>
+                    </li>
+                    <li><strong>전체량 (Total Quantities)</strong>: 전체 압력(Total Pressure), 전체 온도(Total Temperature), 비운동 에너지(Specific Kinetic Energy) 등은 종종 솔버에 의해 자동으로 계산되거나 후처리 단계에서 쉽게 계산되어 활용될 수 있습니다.</li>
+                    <li><strong>특수 분야 파생량</strong>: 공동 현상(Cavitation) 관련 매개변수(Cavitation Risk, Cavitation Index, NPSH - Net Positive Suction Head), 연소 해석에서의 화학종 질량 분율 변화율, 다상 유동에서의 상분율(Volume Fraction) 관련 지표 등 특정 물리 모델과 관련된 파생량도 계산됩니다.</li>
+                </ul>
+
+                <h2 class="mt-8">파생 데이터 계산 방법</h2>
+                <p>후처리 소프트웨어는 다양한 방법으로 파생 데이터를 계산하는 기능을 제공합니다 [6]:</p>
+                <ul>
+                    <li><strong>사용자 정의 변수 및 표현식 (User Variables and Expressions)</strong>: 기존 결과 변수들을 조합하거나 수학적 연산(사칙연산, 미분, 적분, 삼각함수 등)을 적용하여 새로운 사용자 정의 변수를 생성합니다. 예를 들어, Ansys CFD-Post에서는 CEL(CFX Expression Language)을 사용하여 `pressure - 0.5 * density * velocity^2` 와 같이 동압을 계산하는 표현식을 만들 수 있습니다 [6].</li>
+                    <li><strong>함수 계산기 (Function Calculator)</strong>: 특정 위치(점, 선, 면, 체적 등)에서 면적(Area), 체적(Volume), 질량 유량(massFlow), 평균값(areaAve, volumeAve), 최소/최대값, 힘(force), 토크(torque) 등 다양한 물리량을 직접 계산하는 도구입니다 [6].</li>
+                    <li><strong>매크로 계산기 (Macro Calculator)</strong>: 특정 애플리케이션(예: 터보기계 성능 분석, 팬 소음 예측)에 특화된 일련의 계산 과정을 자동화하는 매크로를 실행하거나 사용자가 직접 작성할 수 있습니다 [6].</li>
+                    <li><strong>메시 계산기 (Mesh Calculator)</strong>: 현재 로드된 결과 파일의 메시 품질 지표(예: Aspect Ratio, Skewness, Orthogonality)를 계산하여 해석 결과의 신뢰성과 관련된 메시의 적합성을 평가하는 데 도움을 줍니다 [6].</li>
+                    <li><strong>케이스 비교 (Case Comparison)</strong>: 여러 시뮬레이션 결과 파일 간 또는 동일 파일 내 다른 타임스텝 간의 결과 차이(델타 값)를 정량적으로 계산하고 이를 시각화하여 설계 변경이나 시간 변화에 따른 영향을 분석합니다 [6].</li>
+                </ul>
+                <p>이러한 파생 데이터 계산은 시뮬레이션 결과를 단순한 숫자 더미에서 실제 공학적 문제 해결에 직접 활용될 수 있는 유용한 정보로 변환하는 핵심 과정입니다.</p>
+
+                <hr class="my-8 border-gray-300">
+                <p class="text-sm text-gray-600">CFD 후처리 파생 데이터 계산에 대한 더 자세한 학술적 내용 및 참고 자료는 <a href="cfd_references.html#cfd-postprocessing-refs" class="text-[#0072CE] hover:text-[#004A99] font-medium">CFD 레퍼런스 페이지</a>를 참조하십시오.</p>
+            </article>
+        </div>
+        <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
 </body>
 </html>

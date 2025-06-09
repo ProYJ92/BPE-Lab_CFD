@@ -1,121 +1,128 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="title_openfoam_troubleshooting">OpenFOAM 문제 해결 - 소프트웨어 | 생물공학연구실</title>
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenFOAM 문제 해결 - 소프트웨어 | 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
-<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
-<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
-</h1>
-<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
-<ul class="container mx-auto px-0 flex justify-center">
-</ul>
-</nav>
-<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
-<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
-<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
-<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
-</div>
-</div>
-<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
-<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
-<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
-</div>
-</div>
-</div>
-<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
-<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-</div>
-</nav>
-</div>
-<main class="container mx-auto px-4 mt-5 py-12">
-<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-<div class="mb-8" data-i18n="openfoam_메인으로_돌아가기">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="openfoam_메인으로_돌아가기" href="openfoam_main.html">« OpenFOAM 메인으로 돌아가기</a>
-</div>
-<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="7_문제_해결_troubleshooting">7. 문제 해결 (Troubleshooting)</h2>
-<p data-i18n="openfoam_사용_중_다양한_문제가_발생할_수_있으며_이는_설치_격자_생성_솔버_설정_실행_후처리_등_여러_단계에서_나타날_수_있습니다_문제_해결을_위해서는_오류_메시지를_정확히_이해하고_관련_문서를_참조하며_커뮤니티의_도움을_받는_것이_중요합니다">OpenFOAM 사용 중 다양한 문제가 발생할 수 있으며, 이는 설치, 격자 생성, 솔버 설정, 실행, 후처리 등 여러 단계에서 나타날 수 있습니다. 문제 해결을 위해서는 오류 메시지를 정확히 이해하고, 관련 문서를 참조하며, 커뮤니티의 도움을 받는 것이 중요합니다.</p>
-<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="일반적인_문제_유형_및_해결_접근법">일반적인 문제 유형 및 해결 접근법</h3>
-<ul class="list-disc pl-5 space-y-2">
-<li data-i18n="설치_및_환경_설정_오류_오류_컴파일_오류_환경_변수_설정_문제_의존성_패키지_누락_해결_공식_설치_가이드라인을_정확히_따르고_필요한_모든_의존성_패키지가_설치되었는지_확인합니다_bashrc_또는_해당_쉘_설정_파일_에_openfoam_환경_설정_스크립트_경로가_올바르게_추가되었는지_터미널_세션에서_환경이_제대로_로드되었는지_예_which_simplefoam_확인합니다"><strong>설치 및 환경 설정 오류</strong>:
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
+                    <span class="hamster-icon">🐹</span>
+                    <span class="helper-text">뭐든 물어봐!</span>
+                </div>
+            </div>
+        </div>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 mt-5 py-12">
+        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+            <div class="mb-8">
+                <a href="openfoam_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; OpenFOAM 메인으로 돌아가기</a>
+            </div>
+            
+            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">7. 문제 해결 (Troubleshooting)</h2>
+            <p>OpenFOAM 사용 중 다양한 문제가 발생할 수 있으며, 이는 설치, 격자 생성, 솔버 설정, 실행, 후처리 등 여러 단계에서 나타날 수 있습니다. 문제 해결을 위해서는 오류 메시지를 정확히 이해하고, 관련 문서를 참조하며, 커뮤니티의 도움을 받는 것이 중요합니다.</p>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">일반적인 문제 유형 및 해결 접근법</h3>
+            <ul class="list-disc pl-5 space-y-2">
+                <li><strong>설치 및 환경 설정 오류</strong>:
                     <ul class="list-disc pl-4 mt-1">
-<li data-i18n="오류_컴파일_오류_환경_변수_설정_문제_의존성_패키지_누락"><strong>오류</strong>: 컴파일 오류, 환경 변수 설정 문제, 의존성 패키지 누락.</li>
-<li data-i18n="해결_공식_설치_가이드라인을_정확히_따르고_필요한_모든_의존성_패키지가_설치되었는지_확인합니다_bashrc_또는_해당_쉘_설정_파일_에_openfoam_환경_설정_스크립트_경로가_올바르게_추가되었는지_터미널_세션에서_환경이_제대로_로드되었는지_예_which_simplefoam_확인합니다"><strong>해결</strong>: 공식 설치 가이드라인을 정확히 따르고, 필요한 모든 의존성 패키지가 설치되었는지 확인합니다. <code>~/.bashrc</code> (또는 해당 쉘 설정 파일)에 OpenFOAM 환경 설정 스크립트 경로가 올바르게 추가되었는지, 터미널 세션에서 환경이 제대로 로드되었는지(예: <code>which simpleFoam</code>) 확인합니다.</li>
-</ul>
-</li>
-<li data-i18n="격자_생성_문제_blockmesh_snappyhexmesh등_오류_blockmeshdict또는snappyhexmeshdict설정_오류_형상_파일_stl_문제_메모리_부족_격자_품질_저하_높은_비직교성_왜곡된_셀_등_해결_checkmesh유틸리티를_사용하여_격자_품질을_점검하고_문제가_되는_부분을_수정합니다_snappyhexmesh의_경우locationinmesh설정이_올바른지_형상_표면이_닫혀_있는지_watertight_각_단계별_설정값_refinement_levels_castellated_mesh_controls_snapping_controls_layer_addition_controls_이_적절한지_확인합니다_로그_파일을_자세히_검토하여_오류_발생_지점을_파악합니다"><strong>격자 생성 문제 (<code>blockMesh</code>, <code>snappyHexMesh</code> 등)</strong>:
+                        <li><strong>오류</strong>: 컴파일 오류, 환경 변수 설정 문제, 의존성 패키지 누락.</li>
+                        <li><strong>해결</strong>: 공식 설치 가이드라인을 정확히 따르고, 필요한 모든 의존성 패키지가 설치되었는지 확인합니다. <code>~/.bashrc</code> (또는 해당 쉘 설정 파일)에 OpenFOAM 환경 설정 스크립트 경로가 올바르게 추가되었는지, 터미널 세션에서 환경이 제대로 로드되었는지(예: <code>which simpleFoam</code>) 확인합니다.</li>
+                    </ul>
+                </li>
+                <li><strong>격자 생성 문제 (<code>blockMesh</code>, <code>snappyHexMesh</code> 등)</strong>:
                     <ul class="list-disc pl-4 mt-1">
-<li data-i18n="오류_blockmeshdict또는snappyhexmeshdict설정_오류_형상_파일_stl_문제_메모리_부족_격자_품질_저하_높은_비직교성_왜곡된_셀_등"><strong>오류</strong>: <code>blockMeshDict</code> 또는 <code>snappyHexMeshDict</code> 설정 오류, 형상 파일(STL) 문제, 메모리 부족, 격자 품질 저하 (높은 비직교성, 왜곡된 셀 등).</li>
-<li data-i18n="해결_checkmesh유틸리티를_사용하여_격자_품질을_점검하고_문제가_되는_부분을_수정합니다_snappyhexmesh의_경우locationinmesh설정이_올바른지_형상_표면이_닫혀_있는지_watertight_각_단계별_설정값_refinement_levels_castellated_mesh_controls_snapping_controls_layer_addition_controls_이_적절한지_확인합니다_로그_파일을_자세히_검토하여_오류_발생_지점을_파악합니다"><strong>해결</strong>: <code>checkMesh</code> 유틸리티를 사용하여 격자 품질을 점검하고, 문제가 되는 부분을 수정합니다. <code>snappyHexMesh</code>의 경우 <code>locationInMesh</code> 설정이 올바른지, 형상 표면이 닫혀 있는지(watertight), 각 단계별 설정값(refinement levels, castellated mesh controls, snapping controls, layer addition controls)이 적절한지 확인합니다. 로그 파일을 자세히 검토하여 오류 발생 지점을 파악합니다.</li>
-</ul>
-</li>
-<li data-i18n="솔버_실행_중_수렴_실패_또는_발산_오류_잔차_residual_가_감소하지_않거나_급증_courant_수_초과_부동_소수점_예외_floating_point_exception_해결_controldict_deltat_시간_간격_를_줄이거나_maxco_최대_courant_수_제한을_조정합니다_adaptive_time_stepping_사용_고려_fvschemes_초기에는_안정적인_1차_정확도_스킴_예_upwind_을_사용하고_수렴이_안정화되면_고차_스킴으로_변경합니다_fvsolution_언더릴렉세이션_팩터_relaxationfactors_를_줄여_안정성을_높입니다_simple_계열_선형_솔버의_허용_오차_tolerance_및_반복_횟수_조정_다른_솔버_알고리즘_pimple_piso_등_시도_경계_조건_및_초기_조건_물리적으로_타당한지_경계면_타입이_올바른지_예_wall_patch_symmetryplane_확인합니다_초기장이_너무_비현실적이지_않은지_검토합니다_격자_품질_checkmesh로_재확인_특정_영역의_격자_개선_필요"><strong>솔버 실행 중 수렴 실패 또는 발산</strong>:
+                        <li><strong>오류</strong>: <code>blockMeshDict</code> 또는 <code>snappyHexMeshDict</code> 설정 오류, 형상 파일(STL) 문제, 메모리 부족, 격자 품질 저하 (높은 비직교성, 왜곡된 셀 등).</li>
+                        <li><strong>해결</strong>: <code>checkMesh</code> 유틸리티를 사용하여 격자 품질을 점검하고, 문제가 되는 부분을 수정합니다. <code>snappyHexMesh</code>의 경우 <code>locationInMesh</code> 설정이 올바른지, 형상 표면이 닫혀 있는지(watertight), 각 단계별 설정값(refinement levels, castellated mesh controls, snapping controls, layer addition controls)이 적절한지 확인합니다. 로그 파일을 자세히 검토하여 오류 발생 지점을 파악합니다.</li>
+                    </ul>
+                </li>
+                <li><strong>솔버 실행 중 수렴 실패 또는 발산</strong>:
                     <ul class="list-disc pl-4 mt-1">
-<li data-i18n="오류_잔차_residual_가_감소하지_않거나_급증_courant_수_초과_부동_소수점_예외_floating_point_exception"><strong>오류</strong>: 잔차(residual)가 감소하지 않거나 급증, Courant 수 초과, 부동 소수점 예외(Floating Point Exception).</li>
-<li data-i18n="해결_controldict_deltat_시간_간격_를_줄이거나_maxco_최대_courant_수_제한을_조정합니다_adaptive_time_stepping_사용_고려_fvschemes_초기에는_안정적인_1차_정확도_스킴_예_upwind_을_사용하고_수렴이_안정화되면_고차_스킴으로_변경합니다_fvsolution_언더릴렉세이션_팩터_relaxationfactors_를_줄여_안정성을_높입니다_simple_계열_선형_솔버의_허용_오차_tolerance_및_반복_횟수_조정_다른_솔버_알고리즘_pimple_piso_등_시도_경계_조건_및_초기_조건_물리적으로_타당한지_경계면_타입이_올바른지_예_wall_patch_symmetryplane_확인합니다_초기장이_너무_비현실적이지_않은지_검토합니다_격자_품질_checkmesh로_재확인_특정_영역의_격자_개선_필요"><strong>해결</strong>:
+                        <li><strong>오류</strong>: 잔차(residual)가 감소하지 않거나 급증, Courant 수 초과, 부동 소수점 예외(Floating Point Exception).</li>
+                        <li><strong>해결</strong>:
                             <ul>
-<li data-i18n="controldict_deltat_시간_간격_를_줄이거나_maxco_최대_courant_수_제한을_조정합니다_adaptive_time_stepping_사용_고려"><strong><code>controlDict</code></strong>: <code>deltaT</code> (시간 간격)를 줄이거나, <code>maxCo</code> (최대 Courant 수) 제한을 조정합니다. Adaptive time stepping 사용 고려.</li>
-<li data-i18n="fvschemes_초기에는_안정적인_1차_정확도_스킴_예_upwind_을_사용하고_수렴이_안정화되면_고차_스킴으로_변경합니다"><strong><code>fvSchemes</code></strong>: 초기에는 안정적인 1차 정확도 스킴(예: <code>upwind</code>)을 사용하고, 수렴이 안정화되면 고차 스킴으로 변경합니다.</li>
-<li data-i18n="fvsolution_언더릴렉세이션_팩터_relaxationfactors_를_줄여_안정성을_높입니다_simple_계열_선형_솔버의_허용_오차_tolerance_및_반복_횟수_조정_다른_솔버_알고리즘_pimple_piso_등_시도"><strong><code>fvSolution</code></strong>: 언더릴렉세이션 팩터(<code>relaxationFactors</code>)를 줄여 안정성을 높입니다 (SIMPLE 계열). 선형 솔버의 허용 오차(tolerance) 및 반복 횟수 조정. 다른 솔버 알고리즘(PIMPLE, PISO 등) 시도.</li>
-<li data-i18n="경계_조건_및_초기_조건_물리적으로_타당한지_경계면_타입이_올바른지_예_wall_patch_symmetryplane_확인합니다_초기장이_너무_비현실적이지_않은지_검토합니다"><strong>경계 조건 및 초기 조건</strong>: 물리적으로 타당한지, 경계면 타입이 올바른지 (예: <code>wall</code>, <code>patch</code>, <code>symmetryPlane</code>) 확인합니다. 초기장이 너무 비현실적이지 않은지 검토합니다.</li>
-<li data-i18n="격자_품질_checkmesh로_재확인_특정_영역의_격자_개선_필요"><strong>격자 품질</strong>: <code>checkMesh</code>로 재확인. 특정 영역의 격자 개선 필요.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li data-i18n="병렬_실행_문제_오류_decomposepar실행_오류_mpi_통신_문제_각_프로세서_도메인_간_불균형_해결_decomposepardict설정_확인_분할_방법_프로세서_수_등_mpi_라이브러리_설치_및_환경_설정_확인"><strong>병렬 실행 문제</strong>:
+                                <li><strong><code>controlDict</code></strong>: <code>deltaT</code> (시간 간격)를 줄이거나, <code>maxCo</code> (최대 Courant 수) 제한을 조정합니다. Adaptive time stepping 사용 고려.</li>
+                                <li><strong><code>fvSchemes</code></strong>: 초기에는 안정적인 1차 정확도 스킴(예: <code>upwind</code>)을 사용하고, 수렴이 안정화되면 고차 스킴으로 변경합니다.</li>
+                                <li><strong><code>fvSolution</code></strong>: 언더릴렉세이션 팩터(<code>relaxationFactors</code>)를 줄여 안정성을 높입니다 (SIMPLE 계열). 선형 솔버의 허용 오차(tolerance) 및 반복 횟수 조정. 다른 솔버 알고리즘(PIMPLE, PISO 등) 시도.</li>
+                                <li><strong>경계 조건 및 초기 조건</strong>: 물리적으로 타당한지, 경계면 타입이 올바른지 (예: <code>wall</code>, <code>patch</code>, <code>symmetryPlane</code>) 확인합니다. 초기장이 너무 비현실적이지 않은지 검토합니다.</li>
+                                <li><strong>격자 품질</strong>: <code>checkMesh</code>로 재확인. 특정 영역의 격자 개선 필요.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>병렬 실행 문제</strong>:
                     <ul class="list-disc pl-4 mt-1">
-<li data-i18n="오류_decomposepar실행_오류_mpi_통신_문제_각_프로세서_도메인_간_불균형"><strong>오류</strong>: <code>decomposePar</code> 실행 오류, MPI 통신 문제, 각 프로세서 도메인 간 불균형.</li>
-<li data-i18n="해결_decomposepardict설정_확인_분할_방법_프로세서_수_등_mpi_라이브러리_설치_및_환경_설정_확인"><strong>해결</strong>: <code>decomposeParDict</code> 설정 확인 (분할 방법, 프로세서 수 등). MPI 라이브러리 설치 및 환경 설정 확인.</li>
-</ul>
-</li>
-<li data-i18n="일반적인_오류_메시지_segmentation_fault_foam_error_printstack_keyword_not_found_in_dictionary_등_해결_오류_메시지가_가리키는_파일_및_라인_또는_키워드를_확인하여_설정_파일의_오타나_누락된_부분을_수정합니다_segmentation_fault는_메모리_문제_잘못된_포인터_접근_등_다양하므로_문제_발생_직전의_설정_변경_사항이나_로그를_면밀히_검토해야_합니다"><strong>일반적인 오류 메시지</strong>: "Segmentation fault", "Foam::error::printStack", "keyword ... not found in dictionary" 등.
+                        <li><strong>오류</strong>: <code>decomposePar</code> 실행 오류, MPI 통신 문제, 각 프로세서 도메인 간 불균형.</li>
+                        <li><strong>해결</strong>: <code>decomposeParDict</code> 설정 확인 (분할 방법, 프로세서 수 등). MPI 라이브러리 설치 및 환경 설정 확인.</li>
+                    </ul>
+                </li>
+                <li><strong>일반적인 오류 메시지</strong>: "Segmentation fault", "Foam::error::printStack", "keyword ... not found in dictionary" 등.
                     <ul class="list-disc pl-4 mt-1">
-<li data-i18n="해결_오류_메시지가_가리키는_파일_및_라인_또는_키워드를_확인하여_설정_파일의_오타나_누락된_부분을_수정합니다_segmentation_fault는_메모리_문제_잘못된_포인터_접근_등_다양하므로_문제_발생_직전의_설정_변경_사항이나_로그를_면밀히_검토해야_합니다"><strong>해결</strong>: 오류 메시지가 가리키는 파일 및 라인, 또는 키워드를 확인하여 설정 파일의 오타나 누락된 부분을 수정합니다. Segmentation fault는 메모리 문제, 잘못된 포인터 접근 등 다양하므로, 문제 발생 직전의 설정 변경 사항이나 로그를 면밀히 검토해야 합니다.</li>
-</ul>
-</li>
-</ul>
-<figure class="embedded-image-figure">
-<img alt="CFD-Online 포럼의 snappyHexMesh 문제 해결 논의" class="max-w-xl" data-i18n="cfd_online_포럼의_snappyhexmesh_문제_해결_논의" src="https://www.cfd-online.com/Forums/attachments/openfoam-meshing/56503d1471700876-snappyhexmesh-refinementregion-problem-shm_refinementregionproblem.jpg"/>
-<figcaption>CFD-Online 포럼에서 사용자들이 snappyHexMesh 관련 문제를 논의하는 예시 (출처: cfd-online.com)</figcaption>
-</figure>
-<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="문제_해결을_위한_자원">문제 해결을 위한 자원</h3>
-<ul class="list-disc pl-5 space-y-1">
-<li data-i18n="openfoam_공식_문서_및_사용자_가이드_각_유틸리티_및_솔버에_대한_설명_튜토리얼_faq_섹션에서_기본적인_문제_해결_정보를_제공합니다"><strong>OpenFOAM 공식 문서 및 사용자 가이드</strong>: 각 유틸리티 및 솔버에 대한 설명, 튜토리얼, FAQ 섹션에서 기본적인 문제 해결 정보를 제공합니다.</li>
-<li data-i18n="cfd_online_포럼_openfoam_섹션_https_www_cfd_online_com_forums_openfoam_전_세계_openfoam_사용자들이_모여_질문하고_답변하는_가장_활발한_커뮤니티입니다_유사한_문제_사례와_해결책을_검색하거나_직접_질문하여_도움을_받을_수_있습니다"><strong>CFD Online 포럼 (OpenFOAM 섹션)</strong>: <a data-i18n="https_www_cfd_online_com_forums_openfoam" href="https://www.cfd-online.com/Forums/openfoam/" rel="noopener noreferrer" target="_blank">https://www.cfd-online.com/Forums/openfoam/</a>. 전 세계 OpenFOAM 사용자들이 모여 질문하고 답변하는 가장 활발한 커뮤니티입니다. 유사한 문제 사례와 해결책을 검색하거나 직접 질문하여 도움을 받을 수 있습니다.</li>
-<li data-i18n="openfoam_wiki_https_wiki_openfoam_com_faq_문제_해결_팁_사용자_작성_튜토리얼_및_유틸리티_정보가_포함되어_있습니다"><strong>OpenFOAM Wiki</strong>: <a data-i18n="https_wiki_openfoam_com" href="https://wiki.openfoam.com/" rel="noopener noreferrer" target="_blank">https://wiki.openfoam.com/</a>. FAQ, 문제 해결 팁, 사용자 작성 튜토리얼 및 유틸리티 정보가 포함되어 있습니다.</li>
-<li data-i18n="openfoam_issue_tracking_system_버그_리포트_https_bugs_openfoam_org_openfoam_foundation_또는_각_버전_관리_주체의_버그_리포팅_시스템_소프트웨어_자체의_명확한_버그로_의심될_경우_이곳에서_검색하거나_보고할_수_있습니다"><strong>OpenFOAM Issue Tracking System (버그 리포트)</strong>: <a data-i18n="https_bugs_openfoam_org" href="https://bugs.openfoam.org/" rel="noopener noreferrer" target="_blank">https://bugs.openfoam.org/</a> (OpenFOAM Foundation) 또는 각 버전 관리 주체의 버그 리포팅 시스템. 소프트웨어 자체의 명확한 버그로 의심될 경우 이곳에서 검색하거나 보고할 수 있습니다.</li>
-<li data-i18n="로그_파일_분석_솔버_실행_시_생성되는_로그_파일은_오류의_원인을_파악하는_데_매우_중요한_단서를_제공합니다_상세한_로그를_주의_깊게_검토하는_것이_첫걸음입니다"><strong>로그 파일 분석</strong>: 솔버 실행 시 생성되는 로그 파일은 오류의 원인을 파악하는 데 매우 중요한 단서를 제공합니다. 상세한 로그를 주의 깊게 검토하는 것이 첫걸음입니다.</li>
-</ul>
-<p data-i18n="문제가_발생하면_먼저_오류_메시지를_정확히_기록하고_관련_로그_파일을_확인한_후_공식_문서와_커뮤니티_포럼에서_유사_사례를_검색하는_체계적인_접근이_효과적입니다">문제가 발생하면, 먼저 오류 메시지를 정확히 기록하고, 관련 로그 파일을 확인한 후, 공식 문서와 커뮤니티 포럼에서 유사 사례를 검색하는 체계적인 접근이 효과적입니다.</p>
-</article>
-<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
-<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
-<div class="space-y-4" id="searchResultsList"></div>
-</div>
-</main>
-<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
-<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
-</p>
-<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-</div>
-</footer>
-<script src="script.js"></script>
+                        <li><strong>해결</strong>: 오류 메시지가 가리키는 파일 및 라인, 또는 키워드를 확인하여 설정 파일의 오타나 누락된 부분을 수정합니다. Segmentation fault는 메모리 문제, 잘못된 포인터 접근 등 다양하므로, 문제 발생 직전의 설정 변경 사항이나 로그를 면밀히 검토해야 합니다.</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <figure class="embedded-image-figure">
+                <img src="https://www.cfd-online.com/Forums/attachments/openfoam-meshing/56503d1471700876-snappyhexmesh-refinementregion-problem-shm_refinementregionproblem.jpg" alt="CFD-Online 포럼의 snappyHexMesh 문제 해결 논의" class="max-w-xl">
+                <figcaption>CFD-Online 포럼에서 사용자들이 snappyHexMesh 관련 문제를 논의하는 예시 (출처: cfd-online.com)</figcaption>
+            </figure>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">문제 해결을 위한 자원</h3>
+            <ul class="list-disc pl-5 space-y-1">
+                <li><strong>OpenFOAM 공식 문서 및 사용자 가이드</strong>: 각 유틸리티 및 솔버에 대한 설명, 튜토리얼, FAQ 섹션에서 기본적인 문제 해결 정보를 제공합니다.</li>
+                <li><strong>CFD Online 포럼 (OpenFOAM 섹션)</strong>: <a href="https://www.cfd-online.com/Forums/openfoam/" target="_blank" rel="noopener noreferrer">https://www.cfd-online.com/Forums/openfoam/</a>. 전 세계 OpenFOAM 사용자들이 모여 질문하고 답변하는 가장 활발한 커뮤니티입니다. 유사한 문제 사례와 해결책을 검색하거나 직접 질문하여 도움을 받을 수 있습니다.</li>
+                <li><strong>OpenFOAM Wiki</strong>: <a href="https://wiki.openfoam.com/" target="_blank" rel="noopener noreferrer">https://wiki.openfoam.com/</a>. FAQ, 문제 해결 팁, 사용자 작성 튜토리얼 및 유틸리티 정보가 포함되어 있습니다.</li>
+                <li><strong>OpenFOAM Issue Tracking System (버그 리포트)</strong>: <a href="https://bugs.openfoam.org/" target="_blank" rel="noopener noreferrer">https://bugs.openfoam.org/</a> (OpenFOAM Foundation) 또는 각 버전 관리 주체의 버그 리포팅 시스템. 소프트웨어 자체의 명확한 버그로 의심될 경우 이곳에서 검색하거나 보고할 수 있습니다.</li>
+                <li><strong>로그 파일 분석</strong>: 솔버 실행 시 생성되는 로그 파일은 오류의 원인을 파악하는 데 매우 중요한 단서를 제공합니다. 상세한 로그를 주의 깊게 검토하는 것이 첫걸음입니다.</li>
+            </ul>
+            <p>문제가 발생하면, 먼저 오류 메시지를 정확히 기록하고, 관련 로그 파일을 확인한 후, 공식 문서와 커뮤니티 포럼에서 유사 사례를 검색하는 체계적인 접근이 효과적입니다.</p>
+
+        </article>
+        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
