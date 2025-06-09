@@ -29,6 +29,7 @@ jobs:
         uses: google-github-actions/auth@v2
         with:
           credentials_json: ${{ secrets.GCLOUD_SERVICE_KEY }}
+          create_credentials_file: false
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -55,3 +56,6 @@ jobs:
           title: "♻️ i18n JSON 업데이트"
           commit-message: "i18n: auto-update"
           delete-branch: true
+          add-paths: |
+            assets/i18n/**
+            **/*.html
