@@ -24,6 +24,7 @@ This repository hosts materials for the BPE-Lab CFD website.
 * When manually dispatching the workflow, set the `force` input to the exact
   string `true` to translate all files.
 * 처음 번역을 수행할 때는 GitHub Actions에서 `force: true`를 입력하고 워크플로를 실행한다.
+* 처음 번역할 때는 GitHub Actions에서 **Run workflow → force 입력란에 반드시 `true`를 입력**해야 모든 페이지가 번역됩니다.
 
 
 ## Supported languages
