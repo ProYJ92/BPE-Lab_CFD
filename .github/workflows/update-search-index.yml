@@ -7,6 +7,10 @@ on:
       - 'script.js'
       - 'generate_search_index.js'
 
+concurrency:
+  group: search-index
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
