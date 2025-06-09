@@ -16,9 +16,16 @@ ko_path = assets_dir / 'ko.json'
 en_path = assets_dir / 'en.json'
 zh_path = assets_dir / 'zh.json'
 
-ko = json.loads(ko_path.read_text('utf-8')) if ko_path.exists() else {}
-en = json.loads(en_path.read_text('utf-8')) if en_path.exists() else {}
-zh = json.loads(zh_path.read_text('utf-8')) if zh_path.exists() else {}
+def load_json(path):
+    try:
+        return json.loads(path.read_text('utf-8'))
+    except (FileNotFoundError, json.JSONDecodeError):
+        print(f'Warning: {path} is missing or invalid. Starting empty.')
+        return {}
+
+ko = load_json(ko_path)
+en = load_json(en_path)
+zh = load_json(zh_path)
 
 if not ko or not en or not zh:
     args.force = True
