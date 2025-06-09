@@ -52,8 +52,8 @@ else:
         ).stdout.split()
 
 process_files = [f for f in diff if f.endswith(('.html', '.md'))]
-print(f"Processing {len(process_files)} files")
-print(f"Processing files: {process_files}")
+print(f"process_files: {process_files}")
+print(f"process_files count: {len(process_files)}")
 if args.skip and not process_files and not args.force:
     print('No changes detected; skipping i18n update.')
     sys.exit(0)
@@ -198,8 +198,6 @@ for file in process_files:
         path.write_text(str(soup), 'utf-8')
         print(f"Updated {file}")
 
-print(f"Total new keys: {len(new_keys)}")
-
 # Parse translation strings defined in script.js
 js_file = repo / 'script.js'
 if js_file.exists():
@@ -218,6 +216,8 @@ if js_file.exists():
                     new_keys.add(k)
         except json.JSONDecodeError:
             print('Warning: failed to parse jsI18n block in script.js')
+
+print(f"new_keys count: {len(new_keys)}")
 
 if new_keys:
     for key in new_keys:
