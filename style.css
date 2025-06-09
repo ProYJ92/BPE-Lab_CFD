@@ -288,6 +288,30 @@ a:hover {
     transform: translateY(-8px);
 }
 
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+.card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+@media (max-width: 768px) {
+    .card h3 {
+        font-size: 1rem;
+    }
+}
+
 #searchInput {
     font-size: 0.875rem; 
 }
@@ -679,6 +703,15 @@ footer {
   font-size: 16px;
 }
 
+/* === helper-panel|MOBILE_FIX_START === */
+@media (max-width: 768px) {
+  #helper-menu {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+}
+/* === helper-panel|MOBILE_FIX_END === */
+
 .animation-section {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -860,35 +893,4 @@ td {
     right: 15px;
     padding: 8px 12px;
   }
-  #helper-menu {
-    top: 180px;
-    bottom: auto;
-    max-height: calc(100vh - 200px);
-    overflow-y: auto;
-    overscroll-behavior: contain;
-  }
 }
-/* === helper-panel|MOBILE_FIX_START === */
-@media (max-width: 768px) {
-  /* 접힌 버튼 */
-  .helper-btn {
-    position: fixed;
-    z-index: 9999;
-    top: auto;            /* 상단 고정 해제 */
-    bottom: 16px;
-    right: 16px;
-  }
-
-  /* 펼쳐진 패널 */
-  .helper-panel {
-    position: fixed;
-    z-index: 9999;
-    top: auto;            /* 상단 고정 해제 */
-    bottom: 72px;         /* 버튼 바로 위 */
-    right: 16px;
-    max-height: 55vh;     /* 과도한 높이 방지 */
-    overflow-y: auto;     /* 내부 스크롤 */
-    overscroll-behavior: contain;
-  }
-}
-/* === helper-panel|MOBILE_FIX_END === */

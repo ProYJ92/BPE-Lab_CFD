@@ -1,26 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const jsI18n = {
+        "enter_password": "비밀번호를 입력하세요 <span>(대소문자 구분)</span>",
+        "password_placeholder": "비밀번호 입력",
+        "confirm_button": "확인",
+        "cancel_button": "취소",
+        "wrong_password_alert": "비밀번호가 틀렸습니다. 대소문자를 정확히 입력해주세요.",
+        "lang_file_missing_alert": "선택한 언어 파일을 찾을 수 없습니다. 기존 언어로 유지됩니다.",
+        "search_index_failed": "검색 인덱스를 불러오는데 실패했습니다.",
+        "search_function_error": "검색 기능에 오류가 발생했습니다.",
+        "search_loading": "검색 인덱스를 로딩 중입니다. 잠시 후 다시 시도해주세요.",
+        "snippet_unavailable": "내용 요약을 불러올 수 없습니다.",
+        "no_search_results": "\"{query}\"에 대한 검색 결과가 없습니다.",
+        "helper_open_label": "도우미 열기",
+        "helper_close_label": "도우미 종료",
+        "helper_link_about_lab": "🔬 우리 연구실이 어떤 연구를 하는지 궁금하신가요?",
+        "helper_link_bp_eng": "🧫 생물공정공학이 뭔지 쉽고 빠르게 알려드릴까요?",
+        "helper_link_proc_opt": "🚀 세포배양 효율을 높이는 최적의 방법이 궁금하세요?",
+        "helper_link_meta_eng": "🧬 시스템 대사공학과 배지 최적화의 중요성, 알고 싶으세요?",
+        "helper_link_cfd": "💻 CFD(전산유체역학)를 쉽게 이해하고 싶으신가요?",
+        "helper_link_digital_twin": "🌐 디지털 트윈을 이용한 바이오공정, 어떻게 구현할 수 있을까요?",
+        "helper_link_lab_resources": "📚 유용한 자료가 필요하세요? 여기서 바로 찾아보세요!",
+        "back_to_top_label": "맨 위로 가기",
+        "back_to_top_text": "↑ Top"
+    };
     const fixedNavContainer = document.getElementById('fixed-top-nav-container');
     const mainNav = document.getElementById('mainNav');
     const breadcrumbNav = document.getElementById('breadcrumbNav');
-    let langSelect;
-
-    const scriptSrc = document.currentScript?.src || '';
-    const baseUrlMatch = scriptSrc.match(/^(.*\/)script\.js(?:\?.*)?$/);
-    const baseUrl = baseUrlMatch ? baseUrlMatch[1] : '/';
-
-    function withBase(path) {
-        if (!path) return '#';
-        if (/^(?:[a-z]+:)?\/\//i.test(path) || path.startsWith('#')) return path;
-        return baseUrl + path.replace(/^\//, '');
-    }
-
-    function normalizeLinks() {
-        document.querySelectorAll('a[href]').forEach(a => {
-            const href = a.getAttribute('href');
-            if (!href || href.startsWith(baseUrl) || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#') || href.startsWith('javascript:')) return;
-            a.setAttribute('href', withBase(href));
-        });
-    }
 
     if (mainNav) {
         mainNav.setAttribute('role', 'navigation');
@@ -90,17 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (lucide) lucide.createIcons();
             });
 
-            langSelect = document.createElement('select');
-            langSelect.id = 'languageSwitcher';
-            langSelect.className = 'ml-2 p-1 border rounded text-sm';
-            langSelect.setAttribute('aria-label', 'Language selector');
-            langSelect.setAttribute('role', 'combobox');
-            langSelect.innerHTML = '<option value="default">기본</option><option value="en">English</option><option value="zh">中文</option>';
-            headerFlex.appendChild(langSelect);
-            langSelect.addEventListener('change', () => {
-                loadLanguage(langSelect.value);
-            });
-
             if (lucide) lucide.createIcons();
         }
     }
@@ -119,11 +113,11 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.innerHTML = `
             <div id="overlayContent">
                 <div id="loadingSpinner" class="spinner"></div>
-                <p style="color:#fff; font-size:16px;">비밀번호를 입력하세요 <span>(대소문자 구분)</span></p>
-                <input type="password" id="passwordInput" class="password-input" placeholder="비밀번호 입력" />
+                <p data-i18n="enter_password" style="color:#fff; font-size:16px;">${jsI18n.enter_password}</p>
+                <input type="password" id="passwordInput" class="password-input" placeholder="${jsI18n.password_placeholder}" data-i18n="password_placeholder" />
                 <div class="password-buttons mt-2">
-                    <button id="passwordSubmit" class="mr-2 bg-blue-600 text-white px-3 py-1 rounded">확인</button>
-                    <button id="passwordCancel" class="bg-gray-300 text-gray-800 px-3 py-1 rounded">취소</button>
+                    <button id="passwordSubmit" class="mr-2 bg-blue-600 text-white px-3 py-1 rounded" data-i18n="confirm_button">${jsI18n.confirm_button}</button>
+                    <button id="passwordCancel" class="bg-gray-300 text-gray-800 px-3 py-1 rounded" data-i18n="cancel_button">${jsI18n.cancel_button}</button>
                 </div>
             </div>`;
         document.body.appendChild(overlay);
@@ -137,9 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const correctPassword = 'bioprocess2025';
         if (input === correctPassword) {
             sessionStorage.setItem('labResourcesAccess', 'true');
-            window.location.href = withBase('lab_resources.html');
+            window.location.href = 'lab_resources.html';
         } else {
-            alert('비밀번호가 틀렸습니다. 대소문자를 정확히 입력해주세요.');
+            alert(jsI18n.wrong_password_alert);
         }
     }
 
@@ -149,13 +143,40 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.history.length > 1) {
             window.history.back();
         } else {
-            window.location.href = withBase('index.html');
+            window.location.href = 'index.html';
         }
     }
 
-    const defaultTexts = {};
+    const defaultTexts = { ...jsI18n };
+
+    // Store default texts for elements using data-i18n to allow reverting
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (!(key in defaultTexts)) {
+            defaultTexts[key] = el.hasAttribute('placeholder') ? (el.placeholder || '') : (el.textContent || '');
+        }
+    });
 
     function applyTexts(texts) {
+        // Apply translations for elements marked with data-i18n
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.dataset.i18n;
+            if (key in texts) {
+                if (el.hasAttribute('placeholder')) {
+                    el.placeholder = texts[key];
+                } else {
+                    el.textContent = texts[key];
+                }
+            }
+        });
+
+        Object.keys(jsI18n).forEach(k => {
+            if (k in texts) {
+                jsI18n[k] = texts[k];
+            }
+        });
+
+        // Legacy support: update elements referenced by id keys
         Object.keys(texts).forEach(key => {
             if (key === 'title') {
                 document.title = texts[key];
@@ -170,47 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    async function loadLanguage(lang) {
-        if (lang === 'default') {
-            applyTexts(defaultTexts);
-            localStorage.setItem('selectedLanguage', 'default');
-            if (langSelect) langSelect.value = 'default';
-            return;
-        }
-        const body = document.body;
-        body.classList.add('loading');
-        try {
-            const response = await fetch(withBase(`${lang}.json`));
-            if (!response.ok) throw new Error('File not found');
-            const texts = await response.json();
-            Object.keys(texts).forEach(key => {
-                if (!(key in defaultTexts)) {
-                    if (key === 'title') {
-                        defaultTexts[key] = document.title;
-                    } else if (key.endsWith('_placeholder')) {
-                        const id = key.replace('_placeholder', '');
-                        const el = document.getElementById(id);
-                        if (el) defaultTexts[key] = el.placeholder || '';
-                    } else {
-                        const el = document.getElementById(key);
-                        if (el) defaultTexts[key] = el.textContent || '';
-                    }
-                }
-            });
-            applyTexts(texts);
-            localStorage.setItem('selectedLanguage', lang);
-            if (langSelect) langSelect.value = lang;
-        } catch (error) {
-            console.warn(`${lang}.json not found, maintaining default language.`);
-            alert(`선택한 언어 파일을 찾을 수 없습니다. 기존 언어로 유지됩니다.`);
-            applyTexts(defaultTexts);
-            localStorage.setItem('selectedLanguage', 'default');
-            if (langSelect) langSelect.value = 'default';
-        } finally {
-            body.classList.remove('loading');
-        }
-    }
-
+    // A JSON copy of this menu structure is stored in menu.json for use by
+    // external scripts such as generate_search_index.js
     const menuStructure = [
         { id: 'about_lab', name_ko: '연구실 소개', name_en: 'About Lab', path: 'about_lab.html', children: [
             { name_ko: '연구실 개요', name_en: 'Overview', path: 'lab_overview.html' },
@@ -226,9 +208,9 @@ document.addEventListener('DOMContentLoaded', () => {
             { name_ko: '사진 갤러리', name_en: 'Photo Gallery', path: 'photo_gallery.html' }
         ] },
         {
-            id: 'bp_eng', name_ko: '세포배양공정', name_en: 'Bioprocess Engineering', path: 'bp_eng_main.html',
+            id: 'bp_eng', name_ko: '생물공정공학', name_en: 'Bioprocess Engineering', path: 'bp_eng_main.html',
             children: [
-                { name_ko: '세포배양공정이란?', name_en: 'Introduction', path: 'bp_eng_intro_main.html', children: [
+                { name_ko: '소개', name_en: 'Introduction', path: 'bp_eng_intro_main.html', children: [
                     { name_ko: '개념 및 범위', name_en: 'Concept & Scope', path: 'bp_eng_intro_concept_scope.html' },
                     { name_ko: '바이오의약품 제조 공정 개요', name_en: 'Biopharmaceutical Manufacturing Overview', path: 'bp_eng_intro_biopharma_overview.html' }
                 ]},
@@ -239,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     { name_ko: '바이오리액터 운전 전략', name_en: 'Bioreactor Operation Strategy', path: 'bp_eng_upstream_bioreactor_strategy.html' },
                     { name_ko: '공정 스케일업·다운', name_en: 'Process Scale‑up & Scale‑down', path: 'bp_eng_upstream_scaleup_down.html' }
                 ]},
-                { name_ko: '동물세포배양', name_en: 'Animal Cell Culture', path: 'bp_eng_animal_cell_main.html', children: [
+                { name_ko: '동물 세포 배양', name_en: 'Animal Cell Culture', path: 'bp_eng_animal_cell_main.html', children: [
                     { name_ko: 'CHO 세포 배양', name_en: 'CHO Cell Culture', path: 'bp_eng_animal_cell_cho.html' },
                     { name_ko: 'HEK293 세포 배양', name_en: 'HEK293 Cell Culture', path: 'bp_eng_animal_cell_hek293.html' },
                     { name_ko: '기타 세포주 배양', name_en: 'Other Animal Cell Lines', path: 'bp_eng_animal_cell_other.html' }
@@ -255,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         {
-            id: 'proc_opt', name_ko: '세포 배양 공정 최적화', name_en: 'Process Optimization', path: 'proc_opt_main.html',
+            id: 'proc_opt', name_ko: '공정 최적화', name_en: 'Process Optimization', path: 'proc_opt_main.html',
             children: [
                 { name_ko: '연구 개요', name_en: 'Overview', path: 'proc_opt_overview_main.html', children: [
                     { name_ko: '연구 목적 및 필요성', name_en: 'Purpose & Necessity', path: 'proc_opt_overview_purpose_necessity.html' },
@@ -373,7 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         {
-            id: 'useful_tools', name_ko: '유용한 도구', name_en: 'Useful Tools', path: 'useful-tools/index.html'
+            id: 'useful_tools', name_ko: '유용한 도구', name_en: 'Useful Tools', path: 'useful_tools.html'
         },
         { id: 'resources', name_ko: '자료실', name_en: 'Resources', path: 'lab_resources.html' }
     ];
@@ -481,7 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 li.className = 'current-page text-gray-600 font-medium';
             } else {
                 const a = document.createElement('a');
-                a.href = withBase(item.path);
+                a.href = item.path || '#';
                 a.textContent = item.name_ko;
                 a.className = 'hover:underline text-[#0072CE] hover:text-[#004A99]';
                 li.appendChild(a);
@@ -503,7 +485,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const a = document.createElement('a');
-        a.href = withBase(item.path);
+        a.href = item.path || '#'; 
         
         if (level === 0) {
             a.className = 'px-3 sm:px-4 py-2 inline-block hover:bg-slate-600 transition-colors duration-150 flex flex-row items-center justify-center text-center';
@@ -543,7 +525,10 @@ document.addEventListener('DOMContentLoaded', () => {
              isAncestor = currentPathArray.slice(0, -1).some(p => p.path === item.path);
         }
         
-        if(isActive) li.classList.add('active');
+        if(isActive) {
+            li.classList.add('active');
+            a.setAttribute('aria-current', 'page');
+        }
         if(isAncestor) li.classList.add('active-ancestor');
 
 
@@ -719,17 +704,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function loadSearchIndex() {
         try {
-            const response = await fetch(withBase('search_index.json'));
+            const response = await fetch('search_index.json');
             if (!response.ok) {
                 console.error('Failed to load search index. Status:', response.status);
-                if (searchResultsList) searchResultsList.innerHTML = '<p class="text-red-500">검색 인덱스를 불러오는데 실패했습니다.</p>';
+                if (searchResultsList) searchResultsList.innerHTML = '<p class="text-red-500">' + jsI18n.search_index_failed + '</p>';
                 if (searchResultsContainer) searchResultsContainer.style.display = 'block';
                 return;
             }
             siteSearchIndex = await response.json();
         } catch (error) {
             console.error('Error fetching or parsing search index:', error);
-            if (searchResultsList) searchResultsList.innerHTML = '<p class="text-red-500">검색 기능에 오류가 발생했습니다.</p>';
+            if (searchResultsList) searchResultsList.innerHTML = '<p class="text-red-500">' + jsI18n.search_function_error + '</p>';
             if (searchResultsContainer) searchResultsContainer.style.display = 'block';
         }
     }
@@ -762,7 +747,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (results.length > 0) {
             results.slice(0, MAX_SUGGESTIONS).forEach(result => {
                 const suggestionAnchor = document.createElement('a');
-                suggestionAnchor.href = withBase(result.url);
+                suggestionAnchor.href = result.url;
                 suggestionAnchor.className = 'suggestion-item block p-3 hover:bg-gray-100 cursor-pointer text-sm';
 
                 const titleElement = document.createElement('div');
@@ -792,7 +777,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 suggestionAnchor.addEventListener('mousedown', () => {
                     clearTimeout(blurTimeout);
-                    window.location.href = withBase(result.url);
+                    window.location.href = result.url; 
                 });
                 suggestionsDropdown.appendChild(suggestionAnchor);
             });
@@ -832,9 +817,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (!siteSearchIndex) {
-            searchResultsList.innerHTML = '<p class="text-gray-500">검색 인덱스를 로딩 중입니다. 잠시 후 다시 시도해주세요.</p>';
+            searchResultsList.innerHTML = '<p class="text-gray-500">' + jsI18n.search_loading + '</p>';
             searchResultsContainer.style.display = 'block';
-            loadSearchIndex(); 
+            loadSearchIndex();
             return;
         }
 
@@ -855,7 +840,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 listItem.className = 'search-result-item p-5 border border-gray-200 rounded-md hover:bg-gray-50 transition-colors duration-150';
 
                 const titleElement = document.createElement('a');
-                titleElement.href = withBase(result.url);
+                titleElement.href = result.url;
                 titleElement.className = 'text-lg font-semibold text-[#0072CE] hover:text-[#004A99] hover:underline';
                 titleElement.innerHTML = highlightText(result.title, query);
                 
@@ -870,14 +855,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (!snippetText && result.full_text) {
                     snippetText = result.full_text.substring(0,150) + (result.full_text.length > 150 ? "..." : "");
                 } else if (!snippetText) {
-                    snippetText = "내용 요약을 불러올 수 없습니다.";
+                    snippetText = jsI18n.snippet_unavailable;
                 }
                 
                 snippetElement.innerHTML = highlightText(snippetText, query);
 
                 const urlElement = document.createElement('p');
                 urlElement.className = 'text-xs text-gray-500 mt-2';
-                urlElement.textContent = withBase(result.url);
+                urlElement.textContent = result.url;
 
                 listItem.appendChild(titleElement);
                 listItem.appendChild(snippetElement);
@@ -885,7 +870,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 searchResultsList.appendChild(listItem);
             });
         } else {
-            searchResultsList.innerHTML = '<p class="text-gray-500">"' + query + '"에 대한 검색 결과가 없습니다.</p>';
+            searchResultsList.innerHTML = '<p class="text-gray-500">' + jsI18n.no_search_results.replace('{query}', query) + '</p>';
         }
          if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
             document.querySelector('.hero-section')?.style.setProperty('display', 'none', 'important');
@@ -952,22 +937,22 @@ let helperMenu = document.getElementById("helper-menu");
 if (!helperBtn) {
     helperBtn = document.createElement("div");
     helperBtn.id = "helper-btn";
-    helperBtn.setAttribute("aria-label", "도우미 열기");
+    helperBtn.setAttribute("aria-label", jsI18n.helper_open_label);
     helperBtn.textContent = "\uD83D\uDCAC";
 
     helperMenu = document.createElement("div");
     helperMenu.id = "helper-menu";
     helperMenu.classList.add("hidden");
     helperMenu.innerHTML = `
-        <button id="close-helper" aria-label="도우미 종료">✖</button>
+        <button id="close-helper" aria-label="${jsI18n.helper_close_label}" data-i18n="helper_close_label">✖</button>
         <ul>
-            <li><a href="${withBase('about_lab.html')}" aria-label="연구실 소개">🔬 우리 연구실이 어떤 연구를 하는지 궁금하신가요?</a></li>
-            <li><a href="${withBase('bp_eng_main.html')}" aria-label="세포배양공정 소개">🧫 세포배양공정이 뭔지 쉽고 빠르게 알려드릴까요?</a></li>
-            <li><a href="${withBase('proc_opt_main.html')}" aria-label="공정 최적화">🚀 세포배양 효율을 높이는 최적의 방법이 궁금하세요?</a></li>
-        <li><a href="${withBase('meta_eng_main.html')}" aria-label="시스템 대사공학">🧬 시스템 대사공학과 배지 최적화의 중요성, 알고 싶으세요?</a></li>
-        <li><a href="${withBase('cfd_main.html')}" aria-label="CFD 소개">💻 CFD(전산유체역학)를 쉽게 이해하고 싶으신가요?</a></li>
-        <li><a href="${withBase('digital_twin_main.html')}" aria-label="디지털 트윈">🌐 디지털 트윈을 이용한 바이오공정, 어떻게 구현할 수 있을까요?</a></li>
-        <li><a href="${withBase('lab_resources.html')}" aria-label="연구실 자료">📚 유용한 자료가 필요하세요? 여기서 바로 찾아보세요!</a></li>
+            <li><a href="about_lab.html" aria-label="연구실 소개" data-i18n="helper_link_about_lab">${jsI18n.helper_link_about_lab}</a></li>
+            <li><a href="bp_eng_main.html" aria-label="생물공정공학 소개" data-i18n="helper_link_bp_eng">${jsI18n.helper_link_bp_eng}</a></li>
+            <li><a href="proc_opt_main.html" aria-label="공정 최적화" data-i18n="helper_link_proc_opt">${jsI18n.helper_link_proc_opt}</a></li>
+        <li><a href="meta_eng_main.html" aria-label="시스템 대사공학" data-i18n="helper_link_meta_eng">${jsI18n.helper_link_meta_eng}</a></li>
+        <li><a href="cfd_main.html" aria-label="CFD 소개" data-i18n="helper_link_cfd">${jsI18n.helper_link_cfd}</a></li>
+        <li><a href="digital_twin_main.html" aria-label="디지털 트윈" data-i18n="helper_link_digital_twin">${jsI18n.helper_link_digital_twin}</a></li>
+        <li><a href="lab_resources.html" aria-label="연구실 자료" data-i18n="helper_link_lab_resources">${jsI18n.helper_link_lab_resources}</a></li>
     </ul>`;
 
     document.body.appendChild(helperBtn);
@@ -1040,15 +1025,13 @@ if (!helperBtn.dataset.helperBound) {
 
     helperBtn.dataset.helperBound = 'true';
 
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'default';
-    if (langSelect) langSelect.value = savedLanguage;
-    loadLanguage(savedLanguage);
-    normalizeLinks();
+
 
     const backToTop = document.createElement('button');
     backToTop.id = 'back-to-top';
-    backToTop.setAttribute('aria-label', '맨 위로 가기');
-    backToTop.textContent = '↑ Top';
+    backToTop.setAttribute('aria-label', jsI18n.back_to_top_label);
+    backToTop.textContent = jsI18n.back_to_top_text;
+    backToTop.dataset.i18n = 'back_to_top_text';
     document.body.appendChild(backToTop);
 
     window.addEventListener('scroll', () => {
