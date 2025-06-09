@@ -7,15 +7,18 @@ parser.add_argument('--skip-if-no-diff', action='store_true', dest='skip')
 args = parser.parse_args()
 
 # ── 안전 diff: 첫 커밋·shallow clone 모두 OK ──────────────────────
-try:
-    diff = subprocess.check_output(
-        ['git', 'diff', '--name-only', 'HEAD~1'],
-        stderr=subprocess.STDOUT
-    ).decode().split()
-except subprocess.CalledProcessError:
-    diff = subprocess.check_output(
-        ['git', 'ls-files', '*.html', '*.md']
-    ).decode().split()
+result = subprocess.run(
+    ['git', 'diff', '--name-only', 'HEAD~1'],
+    stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+    text=True, check=False
+)
+if result.returncode in (0, 1):
+    diff = result.stdout.split()
+else:
+    diff = subprocess.run(
+        ['git', 'ls-files', '*.html', '*.md'],
+        stdout=subprocess.PIPE, text=True, check=False
+    ).stdout.split()
 
 repo = pathlib.Path(__file__).resolve().parents[1]
 process_files = [f for f in diff if f.endswith(('.html', '.md'))]
