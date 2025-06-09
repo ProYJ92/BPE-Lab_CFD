@@ -81,6 +81,9 @@ selectors = [
     'div',
     'option',
     'img[title]',
+    'img[alt]',
+    'iframe[title]',
+    'a[title]',
     '[aria-label]'
 ]
 
@@ -155,6 +158,9 @@ for file in process_files:
             if not txt and el.has_attr('aria-label'):
                 txt = el['aria-label'].strip()
                 attr_mode = 'aria-label'
+            if not txt and el.has_attr('alt'):
+                txt = el['alt'].strip()
+                attr_mode = 'alt'
             if not txt and el.has_attr('title'):
                 txt = el['title'].strip()
                 attr_mode = 'title'
@@ -176,6 +182,8 @@ for file in process_files:
                 ko[key] = el['placeholder'].strip()
             elif attr_mode == 'aria-label':
                 ko[key] = el['aria-label'].strip()
+            elif attr_mode == 'alt':
+                ko[key] = el['alt'].strip()
             elif attr_mode == 'title':
                 ko[key] = el['title'].strip()
             else:
