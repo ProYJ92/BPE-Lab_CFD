@@ -1,6 +1,7 @@
 import subprocess, pathlib, json, re, hashlib, os, sys, argparse
 from bs4 import BeautifulSoup
 from google.cloud import translate_v2 as tr
+from google.oauth2 import service_account
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--skip-if-no-diff', action='store_true', dest='skip')
@@ -52,7 +53,22 @@ ko = json.loads(ko_path.read_text('utf-8')) if ko_path.exists() else {}
 en = json.loads(en_path.read_text('utf-8')) if en_path.exists() else {}
 zh = json.loads(zh_path.read_text('utf-8')) if zh_path.exists() else {}
 
-client = tr.Client()
+credentials = None
+cred_json = os.environ.get('GCLOUD_SERVICE_KEY')
+if cred_json:
+    try:
+        info = json.loads(cred_json)
+        credentials = service_account.Credentials.from_service_account_info(
+            info, scopes=["https://www.googleapis.com/auth/cloud-platform"]
+        )
+    except json.JSONDecodeError:
+        if os.path.exists(cred_json):
+            credentials = service_account.Credentials.from_service_account_file(
+                cred_json,
+                scopes=["https://www.googleapis.com/auth/cloud-platform"],
+            )
+
+client = tr.Client(credentials=credentials) if credentials else tr.Client()
 
 def slug(text):
     key = re.sub(r'\W+','_',text).strip('_').lower()
