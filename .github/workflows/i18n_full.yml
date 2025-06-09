@@ -85,4 +85,4 @@ jobs:
           delete-branch: true
           add-paths: |
             assets/i18n/**
-            :(glob)**/*.html
+            '**/*.html'
