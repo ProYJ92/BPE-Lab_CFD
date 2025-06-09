@@ -78,7 +78,10 @@ selectors = [
     'td',
     'input[placeholder]',
     'textarea[placeholder]',
-    'div'
+    'div',
+    'option',
+    'img[title]',
+    '[aria-label]'
 ]
 
 credentials = None
@@ -145,10 +148,16 @@ for file in process_files:
     for sel in selectors:
         for el in soup.select(sel):
             txt = el.get_text(strip=True)
-            placeholder_mode = False
+            attr_mode = None
             if not txt and el.has_attr('placeholder'):
                 txt = el['placeholder'].strip()
-                placeholder_mode = True
+                attr_mode = 'placeholder'
+            if not txt and el.has_attr('aria-label'):
+                txt = el['aria-label'].strip()
+                attr_mode = 'aria-label'
+            if not txt and el.has_attr('title'):
+                txt = el['title'].strip()
+                attr_mode = 'title'
             if not txt:
                 continue
             key = el.get('data-i18n')
@@ -157,14 +166,18 @@ for file in process_files:
                     basename = path.stem
                     key = f"title_{basename}"
                 else:
-                    if placeholder_mode and el.has_attr('id'):
-                        key = f"{el['id']}_placeholder"
+                    if attr_mode and el.has_attr('id'):
+                        key = f"{el['id']}_{attr_mode.replace('-', '_')}"
                     else:
                         key = slug(txt)
                 el['data-i18n'] = key
                 modified = True
-            if placeholder_mode:
+            if attr_mode == 'placeholder':
                 ko[key] = el['placeholder'].strip()
+            elif attr_mode == 'aria-label':
+                ko[key] = el['aria-label'].strip()
+            elif attr_mode == 'title':
+                ko[key] = el['title'].strip()
             else:
                 ko[key] = txt
             if key not in en:
