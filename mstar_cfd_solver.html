@@ -1,112 +1,105 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M-STAR CFD 솔버 - 소프트웨어 | 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_mstar_cfd_solver">M-STAR CFD 솔버 - 소프트웨어 | 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
-                    <a href="index.html">생물공학연구실</a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="container mx-auto px-4 mt-5 py-12">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-            <div class="mb-8">
-                <a href="mstar_cfd_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; M-STAR CFD 메인으로 돌아가기</a>
-            </div>
-            
-            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">4. 솔버 (Solver)</h2>
-            <p>M-STAR Solve는 M-STAR CFD 소프트웨어 스위트의 핵심 계산 엔진으로, M-STAR Pre에서 설정된 입력 파일(`.msb` - M-Star Binary)을 기반으로 복잡한 유동 및 다물리 현상을 시뮬레이션합니다. 이 솔버는 특히 GPU의 병렬 처리 능력을 최대한 활용하도록 설계되어, 대규모 및 비정상 상태 문제에 대해 빠른 계산 속도를 제공합니다.</p>
-
-            <figure class="embedded-image-figure">
-                <img src="https://mstarcfd.com/wp-content/uploads/news-post-1024x572-1.jpg" alt="M-STAR CFD 솔버를 이용한 시뮬레이션 결과 예시" class="max-w-xl">
-                <figcaption>M-STAR CFD 솔버를 통해 얻어진 교반 탱크 내 유동 시뮬레이션 결과 (출처: mstarcfd.com)</figcaption>
-            </figure>
-            
-            <ul>
-                <li><strong>핵심 기술 및 기능:</strong>
-                    <ul class="list-disc pl-4 space-y-1">
-                        <li><strong>Lattice Boltzmann Method (LBM) 기반 LES</strong>: 격자 볼츠만 방법을 주된 수치 기법으로 사용하며, 이를 통해 Large Eddy Simulation (LES)을 수행하여 난류 유동을 높은 정확도로 해석합니다. 일반적인 LBM 모델(예: D3Q19, D3Q27)과 충돌 연산자(예: BGK, MRT)를 사용합니다.</li>
-                        <li><strong>GPU 최적화</strong>: NVIDIA CUDA 기술을 활용하여 다중 GPU 환경에서 뛰어난 병렬 처리 성능과 확장성을 보입니다. 이를 통해 기존 CPU 기반 솔버 대비 계산 시간을 크게 단축합니다.</li>
-                        <li><strong>Immersed Boundary Method (IBM)</strong>: 복잡한 고정 또는 이동 경계를 효율적으로 처리하여, 경계면에 정확히 일치하는 체적 격자 생성의 필요성을 줄입니다.</li>
-                        <li><strong>다양한 물리 모델 지원</strong>:
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
+<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="container mx-auto px-4 mt-5 py-12">
+<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+<div class="mb-8" data-i18n="m_star_cfd_메인으로_돌아가기">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="m_star_cfd_메인으로_돌아가기" href="mstar_cfd_main.html">« M-STAR CFD 메인으로 돌아가기</a>
+</div>
+<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="4_솔버_solver">4. 솔버 (Solver)</h2>
+<p data-i18n="m_star_solve는_m_star_cfd_소프트웨어_스위트의_핵심_계산_엔진으로_m_star_pre에서_설정된_입력_파일_msb_m_star_binary_을_기반으로_복잡한_유동_및_다물리_현상을_시뮬레이션합니다_이_솔버는_특히_gpu의_병렬_처리_능력을_최대한_활용하도록_설계되어_대규모_및_비정상_상태_문제에_대해_빠른_계산_속도를_제공합니다">M-STAR Solve는 M-STAR CFD 소프트웨어 스위트의 핵심 계산 엔진으로, M-STAR Pre에서 설정된 입력 파일(`.msb` - M-Star Binary)을 기반으로 복잡한 유동 및 다물리 현상을 시뮬레이션합니다. 이 솔버는 특히 GPU의 병렬 처리 능력을 최대한 활용하도록 설계되어, 대규모 및 비정상 상태 문제에 대해 빠른 계산 속도를 제공합니다.</p>
+<figure class="embedded-image-figure">
+<img alt="M-STAR CFD 솔버를 이용한 시뮬레이션 결과 예시" class="max-w-xl" data-i18n="m_star_cfd_솔버를_이용한_시뮬레이션_결과_예시" src="https://mstarcfd.com/wp-content/uploads/news-post-1024x572-1.jpg"/>
+<figcaption>M-STAR CFD 솔버를 통해 얻어진 교반 탱크 내 유동 시뮬레이션 결과 (출처: mstarcfd.com)</figcaption>
+</figure>
+<ul>
+<li data-i18n="핵심_기술_및_기능_lattice_boltzmann_method_lbm_기반_les_격자_볼츠만_방법을_주된_수치_기법으로_사용하며_이를_통해_large_eddy_simulation_les_을_수행하여_난류_유동을_높은_정확도로_해석합니다_일반적인_lbm_모델_예_d3q19_d3q27_과_충돌_연산자_예_bgk_mrt_를_사용합니다_gpu_최적화_nvidia_cuda_기술을_활용하여_다중_gpu_환경에서_뛰어난_병렬_처리_성능과_확장성을_보입니다_이를_통해_기존_cpu_기반_솔버_대비_계산_시간을_크게_단축합니다_immersed_boundary_method_ibm_복잡한_고정_또는_이동_경계를_효율적으로_처리하여_경계면에_정확히_일치하는_체적_격자_생성의_필요성을_줄입니다_다양한_물리_모델_지원_단상_및_다상_유동_예_기체_액체_액체_액체_자유_표면_모델_lagrangian_입자_기포_액적_추적_단방향_또는_양방향_연동_cfd_dem_결합_가능_newtonian_및_non_newtonian_비뉴턴_유체_모델_예_power_law_carreau_yasuda_열_전달_conduction_convection_radiation은_제한적일_수_있음_주로_유체_열_전달_수동_스칼라_passive_scalar_및_반응_스칼라_reacting_scalar_필드_수송6_dof_degrees_of_freedom_강체_동역학_모델_유체와_상호작용하는_고체의_움직임_모사"><strong>핵심 기술 및 기능:</strong>
+<ul class="list-disc pl-4 space-y-1">
+<li data-i18n="lattice_boltzmann_method_lbm_기반_les_격자_볼츠만_방법을_주된_수치_기법으로_사용하며_이를_통해_large_eddy_simulation_les_을_수행하여_난류_유동을_높은_정확도로_해석합니다_일반적인_lbm_모델_예_d3q19_d3q27_과_충돌_연산자_예_bgk_mrt_를_사용합니다"><strong>Lattice Boltzmann Method (LBM) 기반 LES</strong>: 격자 볼츠만 방법을 주된 수치 기법으로 사용하며, 이를 통해 Large Eddy Simulation (LES)을 수행하여 난류 유동을 높은 정확도로 해석합니다. 일반적인 LBM 모델(예: D3Q19, D3Q27)과 충돌 연산자(예: BGK, MRT)를 사용합니다.</li>
+<li data-i18n="gpu_최적화_nvidia_cuda_기술을_활용하여_다중_gpu_환경에서_뛰어난_병렬_처리_성능과_확장성을_보입니다_이를_통해_기존_cpu_기반_솔버_대비_계산_시간을_크게_단축합니다"><strong>GPU 최적화</strong>: NVIDIA CUDA 기술을 활용하여 다중 GPU 환경에서 뛰어난 병렬 처리 성능과 확장성을 보입니다. 이를 통해 기존 CPU 기반 솔버 대비 계산 시간을 크게 단축합니다.</li>
+<li data-i18n="immersed_boundary_method_ibm_복잡한_고정_또는_이동_경계를_효율적으로_처리하여_경계면에_정확히_일치하는_체적_격자_생성의_필요성을_줄입니다"><strong>Immersed Boundary Method (IBM)</strong>: 복잡한 고정 또는 이동 경계를 효율적으로 처리하여, 경계면에 정확히 일치하는 체적 격자 생성의 필요성을 줄입니다.</li>
+<li data-i18n="다양한_물리_모델_지원_단상_및_다상_유동_예_기체_액체_액체_액체_자유_표면_모델_lagrangian_입자_기포_액적_추적_단방향_또는_양방향_연동_cfd_dem_결합_가능_newtonian_및_non_newtonian_비뉴턴_유체_모델_예_power_law_carreau_yasuda_열_전달_conduction_convection_radiation은_제한적일_수_있음_주로_유체_열_전달_수동_스칼라_passive_scalar_및_반응_스칼라_reacting_scalar_필드_수송6_dof_degrees_of_freedom_강체_동역학_모델_유체와_상호작용하는_고체의_움직임_모사"><strong>다양한 물리 모델 지원</strong>:
                             <ul class="list-disc pl-5">
-                                <li>단상 및 다상 유동 (예: 기체-액체, 액체-액체, 자유 표면 모델)</li>
-                                <li>Lagrangian 입자/기포/액적 추적 (단방향 또는 양방향 연동, CFD-DEM 결합 가능)</li>
-                                <li>Newtonian 및 Non-Newtonian (비뉴턴) 유체 모델 (예: Power Law, Carreau-Yasuda)</li>
-                                <li>열 전달 (Conduction, Convection, Radiation은 제한적일 수 있음 - 주로 유체 열 전달)</li>
-                                <li>수동 스칼라(Passive Scalar) 및 반응 스칼라(Reacting Scalar) 필드 수송</li>
-                                <li>6-DOF (Degrees of Freedom) 강체 동역학 모델 (유체와 상호작용하는 고체의 움직임 모사)</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><strong>사용법 및 워크플로우:</strong>
-                    <ul class="list-disc pl-4 space-y-1">
-                        <li><strong>입력 파일</strong>: M-STAR Pre에서 생성된 <code>.msb</code> (M-Star Binary) 파일이 주 입력 파일입니다. 경우에 따라 추가적인 <code>.xml</code> (설정) 또는 <code>.stl</code> (형상) 파일이 활용될 수 있습니다.</li>
-                        <li><strong>실행 환경</strong>: M-STAR Pre GUI 내의 Solver Control Panel을 통해 시뮬레이션을 시작, 모니터링, 중단, 재개할 수 있습니다. 또는, 커맨드 라인 인터페이스(CLI)를 통해 배치(batch) 모드로 실행할 수도 있습니다 (예: <code>MStarSolve job_name.msb</code>).</li>
-                        <li><strong>실시간 모니터링 및 출력</strong>: 시뮬레이션 진행 중 주요 변수(예: 속도, 압력, 운동 에너지)의 수렴 상태나 통계값을 실시간으로 모니터링할 수 있습니다. 또한, 열유속, 체류 시간 분포(RTD), 표면 힘 등 다양한 공학적 출력값을 실시간 또는 후처리 단계에서 계산할 수 있습니다.</li>
-                        <li><strong>결과 저장</strong>: 시뮬레이션 결과는 지정된 시간 간격마다 저장되며, M-STAR Post 또는 ParaView와 같은 후처리 도구에서 분석할 수 있도록 다양한 형식(예: <code>.vtk</code>, <code>.vti</code>, M-Star 자체 형식)으로 출력됩니다.</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>M-STAR Solve는 사용 편의성과 고성능 계산을 결합하여, 복잡한 산업 및 연구 문제 해결에 효과적인 도구로 자리매김하고 있습니다.</p>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">참고 자료</h3>
-            <ul class="list-disc pl-5 space-y-1 text-sm">
-                <li><a href="https://docs.mstarcfd.com/4_M-Star_Solve/txt-files/M-Star-Solve-index.html" target="_blank" rel="noopener noreferrer">M-STAR CFD Official Documentation - M-Star Solve</a></li>
-                <li>M-STAR CFD 기술 백서 및 학술 논문 (공식 웹사이트 제공)</li>
-            </ul>
-
-        </article>
-        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+<li data-i18n="단상_및_다상_유동_예_기체_액체_액체_액체_자유_표면_모델">단상 및 다상 유동 (예: 기체-액체, 액체-액체, 자유 표면 모델)</li>
+<li data-i18n="lagrangian_입자_기포_액적_추적_단방향_또는_양방향_연동_cfd_dem_결합_가능">Lagrangian 입자/기포/액적 추적 (단방향 또는 양방향 연동, CFD-DEM 결합 가능)</li>
+<li data-i18n="newtonian_및_non_newtonian_비뉴턴_유체_모델_예_power_law_carreau_yasuda">Newtonian 및 Non-Newtonian (비뉴턴) 유체 모델 (예: Power Law, Carreau-Yasuda)</li>
+<li data-i18n="열_전달_conduction_convection_radiation은_제한적일_수_있음_주로_유체_열_전달">열 전달 (Conduction, Convection, Radiation은 제한적일 수 있음 - 주로 유체 열 전달)</li>
+<li data-i18n="수동_스칼라_passive_scalar_및_반응_스칼라_reacting_scalar_필드_수송">수동 스칼라(Passive Scalar) 및 반응 스칼라(Reacting Scalar) 필드 수송</li>
+<li data-i18n="6_dof_degrees_of_freedom_강체_동역학_모델_유체와_상호작용하는_고체의_움직임_모사">6-DOF (Degrees of Freedom) 강체 동역학 모델 (유체와 상호작용하는 고체의 움직임 모사)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-i18n="사용법_및_워크플로우_입력_파일_m_star_pre에서_생성된_msb_m_star_binary_파일이_주_입력_파일입니다_경우에_따라_추가적인_xml_설정_또는_stl_형상_파일이_활용될_수_있습니다_실행_환경_m_star_pre_gui_내의_solver_control_panel을_통해_시뮬레이션을_시작_모니터링_중단_재개할_수_있습니다_또는_커맨드_라인_인터페이스_cli_를_통해_배치_batch_모드로_실행할_수도_있습니다_예_mstarsolve_job_name_msb_실시간_모니터링_및_출력_시뮬레이션_진행_중_주요_변수_예_속도_압력_운동_에너지_의_수렴_상태나_통계값을_실시간으로_모니터링할_수_있습니다_또한_열유속_체류_시간_분포_rtd_표면_힘_등_다양한_공학적_출력값을_실시간_또는_후처리_단계에서_계산할_수_있습니다_결과_저장_시뮬레이션_결과는_지정된_시간_간격마다_저장되며_m_star_post_또는_paraview와_같은_후처리_도구에서_분석할_수_있도록_다양한_형식_예_vtk_vti_m_star_자체_형식_으로_출력됩니다"><strong>사용법 및 워크플로우:</strong>
+<ul class="list-disc pl-4 space-y-1">
+<li data-i18n="입력_파일_m_star_pre에서_생성된_msb_m_star_binary_파일이_주_입력_파일입니다_경우에_따라_추가적인_xml_설정_또는_stl_형상_파일이_활용될_수_있습니다"><strong>입력 파일</strong>: M-STAR Pre에서 생성된 <code>.msb</code> (M-Star Binary) 파일이 주 입력 파일입니다. 경우에 따라 추가적인 <code>.xml</code> (설정) 또는 <code>.stl</code> (형상) 파일이 활용될 수 있습니다.</li>
+<li data-i18n="실행_환경_m_star_pre_gui_내의_solver_control_panel을_통해_시뮬레이션을_시작_모니터링_중단_재개할_수_있습니다_또는_커맨드_라인_인터페이스_cli_를_통해_배치_batch_모드로_실행할_수도_있습니다_예_mstarsolve_job_name_msb"><strong>실행 환경</strong>: M-STAR Pre GUI 내의 Solver Control Panel을 통해 시뮬레이션을 시작, 모니터링, 중단, 재개할 수 있습니다. 또는, 커맨드 라인 인터페이스(CLI)를 통해 배치(batch) 모드로 실행할 수도 있습니다 (예: <code>MStarSolve job_name.msb</code>).</li>
+<li data-i18n="실시간_모니터링_및_출력_시뮬레이션_진행_중_주요_변수_예_속도_압력_운동_에너지_의_수렴_상태나_통계값을_실시간으로_모니터링할_수_있습니다_또한_열유속_체류_시간_분포_rtd_표면_힘_등_다양한_공학적_출력값을_실시간_또는_후처리_단계에서_계산할_수_있습니다"><strong>실시간 모니터링 및 출력</strong>: 시뮬레이션 진행 중 주요 변수(예: 속도, 압력, 운동 에너지)의 수렴 상태나 통계값을 실시간으로 모니터링할 수 있습니다. 또한, 열유속, 체류 시간 분포(RTD), 표면 힘 등 다양한 공학적 출력값을 실시간 또는 후처리 단계에서 계산할 수 있습니다.</li>
+<li data-i18n="결과_저장_시뮬레이션_결과는_지정된_시간_간격마다_저장되며_m_star_post_또는_paraview와_같은_후처리_도구에서_분석할_수_있도록_다양한_형식_예_vtk_vti_m_star_자체_형식_으로_출력됩니다"><strong>결과 저장</strong>: 시뮬레이션 결과는 지정된 시간 간격마다 저장되며, M-STAR Post 또는 ParaView와 같은 후처리 도구에서 분석할 수 있도록 다양한 형식(예: <code>.vtk</code>, <code>.vti</code>, M-Star 자체 형식)으로 출력됩니다.</li>
+</ul>
+</li>
+</ul>
+<p data-i18n="m_star_solve는_사용_편의성과_고성능_계산을_결합하여_복잡한_산업_및_연구_문제_해결에_효과적인_도구로_자리매김하고_있습니다">M-STAR Solve는 사용 편의성과 고성능 계산을 결합하여, 복잡한 산업 및 연구 문제 해결에 효과적인 도구로 자리매김하고 있습니다.</p>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="참고_자료">참고 자료</h3>
+<ul class="list-disc pl-5 space-y-1 text-sm">
+<li data-i18n="m_star_cfd_official_documentation_m_star_solve"><a data-i18n="m_star_cfd_official_documentation_m_star_solve" href="https://docs.mstarcfd.com/4_M-Star_Solve/txt-files/M-Star-Solve-index.html" rel="noopener noreferrer" target="_blank">M-STAR CFD Official Documentation - M-Star Solve</a></li>
+<li data-i18n="m_star_cfd_기술_백서_및_학술_논문_공식_웹사이트_제공">M-STAR CFD 기술 백서 및 학술 논문 (공식 웹사이트 제공)</li>
+</ul>
+</article>
+<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,114 +1,106 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ansys Fluent 문제 해결 - 소프트웨어 | 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_ansys_fluent_troubleshooting">Ansys Fluent 문제 해결 - 소프트웨어 | 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
-                    <a href="index.html">생물공학연구실</a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="container mx-auto px-4 mt-5 py-12">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-70
-0 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-            <div class="mb-8">
-                <a href="ansys_fluent_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; Ansys Fluent 메인으로 돌아가기</a>
-            </div>
-            
-            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">7. 일반적인 문제 해결 방안</h2>
-            <p>ANSYS Fluent 사용 중 발생할 수 있는 일반적인 문제(수렴 실패, 발산, 비물리적 결과 등)에 대한 해결 방안은 다음과 같습니다. 문제 해결은 체계적인 접근이 중요하며, 로그 메시지, 잔차 플롯, 물리적 현상에 대한 이해를 바탕으로 원인을 진단해야 합니다.</p>
-            
-            <figure class="embedded-image-figure">
-                <img src="https://www.afs.enea.it/project/neptunius/docs/fluent/html/wbtg/img61.gif" alt="Ansys Fluent 작업 환경" class="max-w-xl">
-                <figcaption>Ansys Fluent 작업 환경에서 문제 진단 및 설정 변경 (출처: afs.enea.it)</figcaption>
-            </figure>
-
-            <ul>
-                <li><strong>수렴 실패 및 발산 (Convergence Failure & Divergence)</strong>:
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
+<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="container mx-auto px-4 mt-5 py-12">
+<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-70 0 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+<div class="mb-8" data-i18n="ansys_fluent_메인으로_돌아가기">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="ansys_fluent_메인으로_돌아가기" href="ansys_fluent_main.html">« Ansys Fluent 메인으로 돌아가기</a>
+</div>
+<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="7_일반적인_문제_해결_방안">7. 일반적인 문제 해결 방안</h2>
+<p data-i18n="ansys_fluent_사용_중_발생할_수_있는_일반적인_문제_수렴_실패_발산_비물리적_결과_등_에_대한_해결_방안은_다음과_같습니다_문제_해결은_체계적인_접근이_중요하며_로그_메시지_잔차_플롯_물리적_현상에_대한_이해를_바탕으로_원인을_진단해야_합니다">ANSYS Fluent 사용 중 발생할 수 있는 일반적인 문제(수렴 실패, 발산, 비물리적 결과 등)에 대한 해결 방안은 다음과 같습니다. 문제 해결은 체계적인 접근이 중요하며, 로그 메시지, 잔차 플롯, 물리적 현상에 대한 이해를 바탕으로 원인을 진단해야 합니다.</p>
+<figure class="embedded-image-figure">
+<img alt="Ansys Fluent 작업 환경" class="max-w-xl" data-i18n="ansys_fluent_작업_환경" src="https://www.afs.enea.it/project/neptunius/docs/fluent/html/wbtg/img61.gif"/>
+<figcaption>Ansys Fluent 작업 환경에서 문제 진단 및 설정 변경 (출처: afs.enea.it)</figcaption>
+</figure>
+<ul>
+<li data-i18n="수렴_실패_및_발산_convergence_failure_divergence_메쉬_품질_확인_및_개선_메쉬가_너무_거칠거나_coarse_왜곡_skewness_이_심하거나_종횡비_aspect_ratio_가_매우_높은_셀이_있는지_확인합니다_mesh_quality도구를_사용하여_품질을_점검하고_필요한_경우_메쉬를_개선하거나_재생성합니다_전처리_단계의_improve_mesh_기능_또는_국소적_메쉬_세분화_local_refinement_를_활용합니다_특히_경계층_boundary_layer_이나_유동_변화가_급격한_영역의_메쉬_품질이_중요합니다_경계_조건_확인_모든_경계_조건이_물리적으로_타당하고_문제_정의에_부합하는지_다시_검토합니다_입출구_조건_벽면_조건_등이_올바르게_설정되었는지_값의_범위가_적절한지_확인합니다_물리_모델_적합성_검토_해석하려는_물리_현상에_적합한_모델_난류_모델_다상_모델_연소_모델_등_을_선택했는지_확인합니다_예를_들어_매우_복잡한_난류_유동에_단순한_난류_모델을_사용하면_수렴이_어렵거나_부정확한_결과를_초래할_수_있습니다_솔버_설정_조정_언더릴렉세이션_팩터_under_relaxation_factors_각_변수의_urf_값을_낮추면_예_압력_운동량_기본값_0_3_0_7에서_더_작게_수치적_안정성을_높일_수_있지만_수렴_속도는_느려집니다_발산_시_urf를_줄여보는_것이_일반적인_접근입니다_시간_간격_time_step_size_비정상_상태_transient_해석_시_시간_간격이_너무_클_경우_발산의_원인이_될_수_있습니다_courant_number를_고려하여_적절한_시간_간격을_설정하거나_adaptive_time_stepping_기능을_활용합니다_정상_상태_steady_해석에서도_pseudo_transient_기법_사용_시_가상_시간_간격_설정이_중요할_수_있습니다_수치_스킴_discretization_schemes_초기에는_1차_정확도_스킴_first_order_upwind_등_으로_계산을_시작하여_안정적인_초기_해를_얻은_후_점차_고차_정확도_스킴_second_order_upwind_quick_등_으로_변경하여_정확도를_높이는_전략을_사용할_수_있습니다_압력_속도_연성_알고리즘_coupling_algorithm_simple_simplec_piso_coupled_알고리즘_중_문제_특성에_맞는_것을_선택합니다_coupled_알고리즘은_일반적으로_더_강건하지만_메모리_사용량이_많을_수_있습니다_초기_조건_initial_conditions_부적절한_초기_조건은_발산의_원인이_될_수_있습니다_가능한_실제_물리_현상에_가까운_초기값을_설정하거나_점진적으로_조건을_변경하며_해석을_진행합니다_예_낮은_입구_속도에서_시작하여_점차_목표_속도로_증가"><strong>수렴 실패 및 발산 (Convergence Failure &amp; Divergence)</strong>:
                     <ul>
-                        <li><strong>메쉬 품질 확인 및 개선</strong>: 메쉬가 너무 거칠거나(coarse), 왜곡(skewness)이 심하거나, 종횡비(aspect ratio)가 매우 높은 셀이 있는지 확인합니다. <code>Mesh Quality</code> 도구를 사용하여 품질을 점검하고, 필요한 경우 메쉬를 개선하거나 재생성합니다. 전처리 단계의 'Improve Mesh' 기능 또는 국소적 메쉬 세분화(local refinement)를 활용합니다. 특히 경계층(boundary layer)이나 유동 변화가 급격한 영역의 메쉬 품질이 중요합니다.</li>
-                        <li><strong>경계 조건 확인</strong>: 모든 경계 조건이 물리적으로 타당하고 문제 정의에 부합하는지 다시 검토합니다. 입출구 조건, 벽면 조건 등이 올바르게 설정되었는지, 값의 범위가 적절한지 확인합니다.</li>
-                        <li><strong>물리 모델 적합성 검토</strong>: 해석하려는 물리 현상에 적합한 모델(난류 모델, 다상 모델, 연소 모델 등)을 선택했는지 확인합니다. 예를 들어, 매우 복잡한 난류 유동에 단순한 난류 모델을 사용하면 수렴이 어렵거나 부정확한 결과를 초래할 수 있습니다.</li>
-                        <li><strong>솔버 설정 조정</strong>:
+<li data-i18n="메쉬_품질_확인_및_개선_메쉬가_너무_거칠거나_coarse_왜곡_skewness_이_심하거나_종횡비_aspect_ratio_가_매우_높은_셀이_있는지_확인합니다_mesh_quality도구를_사용하여_품질을_점검하고_필요한_경우_메쉬를_개선하거나_재생성합니다_전처리_단계의_improve_mesh_기능_또는_국소적_메쉬_세분화_local_refinement_를_활용합니다_특히_경계층_boundary_layer_이나_유동_변화가_급격한_영역의_메쉬_품질이_중요합니다"><strong>메쉬 품질 확인 및 개선</strong>: 메쉬가 너무 거칠거나(coarse), 왜곡(skewness)이 심하거나, 종횡비(aspect ratio)가 매우 높은 셀이 있는지 확인합니다. <code>Mesh Quality</code> 도구를 사용하여 품질을 점검하고, 필요한 경우 메쉬를 개선하거나 재생성합니다. 전처리 단계의 'Improve Mesh' 기능 또는 국소적 메쉬 세분화(local refinement)를 활용합니다. 특히 경계층(boundary layer)이나 유동 변화가 급격한 영역의 메쉬 품질이 중요합니다.</li>
+<li data-i18n="경계_조건_확인_모든_경계_조건이_물리적으로_타당하고_문제_정의에_부합하는지_다시_검토합니다_입출구_조건_벽면_조건_등이_올바르게_설정되었는지_값의_범위가_적절한지_확인합니다"><strong>경계 조건 확인</strong>: 모든 경계 조건이 물리적으로 타당하고 문제 정의에 부합하는지 다시 검토합니다. 입출구 조건, 벽면 조건 등이 올바르게 설정되었는지, 값의 범위가 적절한지 확인합니다.</li>
+<li data-i18n="물리_모델_적합성_검토_해석하려는_물리_현상에_적합한_모델_난류_모델_다상_모델_연소_모델_등_을_선택했는지_확인합니다_예를_들어_매우_복잡한_난류_유동에_단순한_난류_모델을_사용하면_수렴이_어렵거나_부정확한_결과를_초래할_수_있습니다"><strong>물리 모델 적합성 검토</strong>: 해석하려는 물리 현상에 적합한 모델(난류 모델, 다상 모델, 연소 모델 등)을 선택했는지 확인합니다. 예를 들어, 매우 복잡한 난류 유동에 단순한 난류 모델을 사용하면 수렴이 어렵거나 부정확한 결과를 초래할 수 있습니다.</li>
+<li data-i18n="솔버_설정_조정_언더릴렉세이션_팩터_under_relaxation_factors_각_변수의_urf_값을_낮추면_예_압력_운동량_기본값_0_3_0_7에서_더_작게_수치적_안정성을_높일_수_있지만_수렴_속도는_느려집니다_발산_시_urf를_줄여보는_것이_일반적인_접근입니다_시간_간격_time_step_size_비정상_상태_transient_해석_시_시간_간격이_너무_클_경우_발산의_원인이_될_수_있습니다_courant_number를_고려하여_적절한_시간_간격을_설정하거나_adaptive_time_stepping_기능을_활용합니다_정상_상태_steady_해석에서도_pseudo_transient_기법_사용_시_가상_시간_간격_설정이_중요할_수_있습니다_수치_스킴_discretization_schemes_초기에는_1차_정확도_스킴_first_order_upwind_등_으로_계산을_시작하여_안정적인_초기_해를_얻은_후_점차_고차_정확도_스킴_second_order_upwind_quick_등_으로_변경하여_정확도를_높이는_전략을_사용할_수_있습니다_압력_속도_연성_알고리즘_coupling_algorithm_simple_simplec_piso_coupled_알고리즘_중_문제_특성에_맞는_것을_선택합니다_coupled_알고리즘은_일반적으로_더_강건하지만_메모리_사용량이_많을_수_있습니다"><strong>솔버 설정 조정</strong>:
                             <ul>
-                                <li><strong>언더릴렉세이션 팩터 (Under-Relaxation Factors)</strong>: 각 변수의 URF 값을 낮추면(예: 압력, 운동량 기본값 0.3, 0.7에서 더 작게) 수치적 안정성을 높일 수 있지만 수렴 속도는 느려집니다. 발산 시 URF를 줄여보는 것이 일반적인 접근입니다.</li>
-                                <li><strong>시간 간격 (Time Step Size)</strong>: 비정상 상태(Transient) 해석 시 시간 간격이 너무 클 경우 발산의 원인이 될 수 있습니다. Courant Number를 고려하여 적절한 시간 간격을 설정하거나, Adaptive Time Stepping 기능을 활용합니다. 정상 상태(Steady) 해석에서도 Pseudo Transient 기법 사용 시 가상 시간 간격 설정이 중요할 수 있습니다.</li>
-                                <li><strong>수치 스킴 (Discretization Schemes)</strong>: 초기에는 1차 정확도 스킴(First Order Upwind 등)으로 계산을 시작하여 안정적인 초기 해를 얻은 후, 점차 고차 정확도 스킴(Second Order Upwind, QUICK 등)으로 변경하여 정확도를 높이는 전략을 사용할 수 있습니다.</li>
-                                <li><strong>압력-속도 연성 알고리즘 (Coupling Algorithm)</strong>: SIMPLE, SIMPLEC, PISO, Coupled 알고리즘 중 문제 특성에 맞는 것을 선택합니다. Coupled 알고리즘은 일반적으로 더 강건하지만 메모리 사용량이 많을 수 있습니다.</li>
-                            </ul>
-                        </li>
-                        <li><strong>초기 조건 (Initial Conditions)</strong>: 부적절한 초기 조건은 발산의 원인이 될 수 있습니다. 가능한 실제 물리 현상에 가까운 초기값을 설정하거나, 점진적으로 조건을 변경하며 해석을 진행합니다 (예: 낮은 입구 속도에서 시작하여 점차 목표 속도로 증가).</li>
-                    </ul>
-                </li>
-                <li><strong>비물리적 또는 이상 결과 (Non-physical or Unexpected Results)</strong>:
+<li data-i18n="언더릴렉세이션_팩터_under_relaxation_factors_각_변수의_urf_값을_낮추면_예_압력_운동량_기본값_0_3_0_7에서_더_작게_수치적_안정성을_높일_수_있지만_수렴_속도는_느려집니다_발산_시_urf를_줄여보는_것이_일반적인_접근입니다"><strong>언더릴렉세이션 팩터 (Under-Relaxation Factors)</strong>: 각 변수의 URF 값을 낮추면(예: 압력, 운동량 기본값 0.3, 0.7에서 더 작게) 수치적 안정성을 높일 수 있지만 수렴 속도는 느려집니다. 발산 시 URF를 줄여보는 것이 일반적인 접근입니다.</li>
+<li data-i18n="시간_간격_time_step_size_비정상_상태_transient_해석_시_시간_간격이_너무_클_경우_발산의_원인이_될_수_있습니다_courant_number를_고려하여_적절한_시간_간격을_설정하거나_adaptive_time_stepping_기능을_활용합니다_정상_상태_steady_해석에서도_pseudo_transient_기법_사용_시_가상_시간_간격_설정이_중요할_수_있습니다"><strong>시간 간격 (Time Step Size)</strong>: 비정상 상태(Transient) 해석 시 시간 간격이 너무 클 경우 발산의 원인이 될 수 있습니다. Courant Number를 고려하여 적절한 시간 간격을 설정하거나, Adaptive Time Stepping 기능을 활용합니다. 정상 상태(Steady) 해석에서도 Pseudo Transient 기법 사용 시 가상 시간 간격 설정이 중요할 수 있습니다.</li>
+<li data-i18n="수치_스킴_discretization_schemes_초기에는_1차_정확도_스킴_first_order_upwind_등_으로_계산을_시작하여_안정적인_초기_해를_얻은_후_점차_고차_정확도_스킴_second_order_upwind_quick_등_으로_변경하여_정확도를_높이는_전략을_사용할_수_있습니다"><strong>수치 스킴 (Discretization Schemes)</strong>: 초기에는 1차 정확도 스킴(First Order Upwind 등)으로 계산을 시작하여 안정적인 초기 해를 얻은 후, 점차 고차 정확도 스킴(Second Order Upwind, QUICK 등)으로 변경하여 정확도를 높이는 전략을 사용할 수 있습니다.</li>
+<li data-i18n="압력_속도_연성_알고리즘_coupling_algorithm_simple_simplec_piso_coupled_알고리즘_중_문제_특성에_맞는_것을_선택합니다_coupled_알고리즘은_일반적으로_더_강건하지만_메모리_사용량이_많을_수_있습니다"><strong>압력-속도 연성 알고리즘 (Coupling Algorithm)</strong>: SIMPLE, SIMPLEC, PISO, Coupled 알고리즘 중 문제 특성에 맞는 것을 선택합니다. Coupled 알고리즘은 일반적으로 더 강건하지만 메모리 사용량이 많을 수 있습니다.</li>
+</ul>
+</li>
+<li data-i18n="초기_조건_initial_conditions_부적절한_초기_조건은_발산의_원인이_될_수_있습니다_가능한_실제_물리_현상에_가까운_초기값을_설정하거나_점진적으로_조건을_변경하며_해석을_진행합니다_예_낮은_입구_속도에서_시작하여_점차_목표_속도로_증가"><strong>초기 조건 (Initial Conditions)</strong>: 부적절한 초기 조건은 발산의 원인이 될 수 있습니다. 가능한 실제 물리 현상에 가까운 초기값을 설정하거나, 점진적으로 조건을 변경하며 해석을 진행합니다 (예: 낮은 입구 속도에서 시작하여 점차 목표 속도로 증가).</li>
+</ul>
+</li>
+<li data-i18n="비물리적_또는_이상_결과_non_physical_or_unexpected_results_입력_값_재점검_유체_물성_밀도_점성_등_모델_상수_경계_조건_값_등_모든_입력_값이_정확한_단위계로_올바르게_입력되었는지_확인합니다_메쉬_오류_메쉬에_구멍_hole_중복된_면_duplicate_faces_잘못_연결된_요소_incorrect_connectivity_등의_치명적인_오류가_없는지_확인합니다_fault_tolerant_meshing_워크플로우를_사용했더라도_최종_메쉬_품질을_점검해야_합니다_모델_설정_오류_물리_모델_내의_특정_설정_예_난류_모델_상수_상호작용_모델_파라미터_이_문제의_특성에_적합한지_문헌값_또는_경험적_데이터를_바탕으로_설정되었는지_확인합니다_단위계_일관성_unit_consistency_지오메트리_메쉬_물리량_입력_시_모든_단위가_일관되게_사용되었는지_확인합니다"><strong>비물리적 또는 이상 결과 (Non-physical or Unexpected Results)</strong>:
                     <ul>
-                        <li><strong>입력 값 재점검</strong>: 유체 물성(밀도, 점성 등), 모델 상수, 경계 조건 값 등 모든 입력 값이 정확한 단위계로 올바르게 입력되었는지 확인합니다.</li>
-                        <li><strong>메쉬 오류</strong>: 메쉬에 구멍(hole), 중복된 면(duplicate faces), 잘못 연결된 요소(incorrect connectivity) 등의 치명적인 오류가 없는지 확인합니다. Fault-Tolerant Meshing 워크플로우를 사용했더라도 최종 메쉬 품질을 점검해야 합니다.</li>
-                        <li><strong>모델 설정 오류</strong>: 물리 모델 내의 특정 설정(예: 난류 모델 상수, 상호작용 모델 파라미터)이 문제의 특성에 적합한지, 문헌값 또는 경험적 데이터를 바탕으로 설정되었는지 확인합니다.</li>
-                        <li><strong>단위계 일관성 (Unit Consistency)</strong>: 지오메트리, 메쉬, 물리량 입력 시 모든 단위가 일관되게 사용되었는지 확인합니다.</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>문제 발생 시 Fluent의 콘솔 창에 출력되는 로그 메시지 및 경고/오류 메시지를 주의 깊게 살펴보는 것이 중요합니다. 또한, 잔차 플롯의 거동, 특정 지점에서의 물리량 변화 등을 모니터링하여 문제의 원인을 추정할 수 있습니다. Ansys 공식 FAQ, 사용자 가이드의 문제 해결 섹션, Ansys Learning Hub 및 Ansys Innovation Space의 문제 해결 관련 강좌에서 상세한 진단 및 해결 절차를 안내합니다. CFD Online과 같은 사용자 포럼에서도 다양한 문제 해결 경험과 팁을 공유하고 있으니 참고할 수 있습니다.</p>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">참고 자료</h3>
-            <ul class="list-disc pl-5 space-y-1 text-sm">
-                <li><a href="https://www.mr-cfd.com/troubleshooting-common-errors-in-ansys-fluent/" target="_blank" rel="noopener noreferrer">MR CFD: Troubleshooting Common Errors in ANSYS Fluent</a></li>
-                <li><a href="https://innovationspace.ansys.com/product/topics-in-troubleshooting-ansys-fluent-common-errors/" target="_blank" rel="noopener noreferrer">Ansys Innovation Space: Troubleshooting Tips for Ansys Fluent</a></li>
-                <li>ANSYS Fluent User's Guide - Troubleshooting Section</li>
-                <li><a href="https://www.cfd-online.com/Forums/fluent/" target="_blank" rel="noopener noreferrer">CFD-Online Ansys Fluent Forum</a></li>
-            </ul>
-
-        </article>
-        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+<li data-i18n="입력_값_재점검_유체_물성_밀도_점성_등_모델_상수_경계_조건_값_등_모든_입력_값이_정확한_단위계로_올바르게_입력되었는지_확인합니다"><strong>입력 값 재점검</strong>: 유체 물성(밀도, 점성 등), 모델 상수, 경계 조건 값 등 모든 입력 값이 정확한 단위계로 올바르게 입력되었는지 확인합니다.</li>
+<li data-i18n="메쉬_오류_메쉬에_구멍_hole_중복된_면_duplicate_faces_잘못_연결된_요소_incorrect_connectivity_등의_치명적인_오류가_없는지_확인합니다_fault_tolerant_meshing_워크플로우를_사용했더라도_최종_메쉬_품질을_점검해야_합니다"><strong>메쉬 오류</strong>: 메쉬에 구멍(hole), 중복된 면(duplicate faces), 잘못 연결된 요소(incorrect connectivity) 등의 치명적인 오류가 없는지 확인합니다. Fault-Tolerant Meshing 워크플로우를 사용했더라도 최종 메쉬 품질을 점검해야 합니다.</li>
+<li data-i18n="모델_설정_오류_물리_모델_내의_특정_설정_예_난류_모델_상수_상호작용_모델_파라미터_이_문제의_특성에_적합한지_문헌값_또는_경험적_데이터를_바탕으로_설정되었는지_확인합니다"><strong>모델 설정 오류</strong>: 물리 모델 내의 특정 설정(예: 난류 모델 상수, 상호작용 모델 파라미터)이 문제의 특성에 적합한지, 문헌값 또는 경험적 데이터를 바탕으로 설정되었는지 확인합니다.</li>
+<li data-i18n="단위계_일관성_unit_consistency_지오메트리_메쉬_물리량_입력_시_모든_단위가_일관되게_사용되었는지_확인합니다"><strong>단위계 일관성 (Unit Consistency)</strong>: 지오메트리, 메쉬, 물리량 입력 시 모든 단위가 일관되게 사용되었는지 확인합니다.</li>
+</ul>
+</li>
+</ul>
+<p data-i18n="문제_발생_시_fluent의_콘솔_창에_출력되는_로그_메시지_및_경고_오류_메시지를_주의_깊게_살펴보는_것이_중요합니다_또한_잔차_플롯의_거동_특정_지점에서의_물리량_변화_등을_모니터링하여_문제의_원인을_추정할_수_있습니다_ansys_공식_faq_사용자_가이드의_문제_해결_섹션_ansys_learning_hub_및_ansys_innovation_space의_문제_해결_관련_강좌에서_상세한_진단_및_해결_절차를_안내합니다_cfd_online과_같은_사용자_포럼에서도_다양한_문제_해결_경험과_팁을_공유하고_있으니_참고할_수_있습니다">문제 발생 시 Fluent의 콘솔 창에 출력되는 로그 메시지 및 경고/오류 메시지를 주의 깊게 살펴보는 것이 중요합니다. 또한, 잔차 플롯의 거동, 특정 지점에서의 물리량 변화 등을 모니터링하여 문제의 원인을 추정할 수 있습니다. Ansys 공식 FAQ, 사용자 가이드의 문제 해결 섹션, Ansys Learning Hub 및 Ansys Innovation Space의 문제 해결 관련 강좌에서 상세한 진단 및 해결 절차를 안내합니다. CFD Online과 같은 사용자 포럼에서도 다양한 문제 해결 경험과 팁을 공유하고 있으니 참고할 수 있습니다.</p>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="참고_자료">참고 자료</h3>
+<ul class="list-disc pl-5 space-y-1 text-sm">
+<li data-i18n="mr_cfd_troubleshooting_common_errors_in_ansys_fluent"><a data-i18n="mr_cfd_troubleshooting_common_errors_in_ansys_fluent" href="https://www.mr-cfd.com/troubleshooting-common-errors-in-ansys-fluent/" rel="noopener noreferrer" target="_blank">MR CFD: Troubleshooting Common Errors in ANSYS Fluent</a></li>
+<li data-i18n="ansys_innovation_space_troubleshooting_tips_for_ansys_fluent"><a data-i18n="ansys_innovation_space_troubleshooting_tips_for_ansys_fluent" href="https://innovationspace.ansys.com/product/topics-in-troubleshooting-ansys-fluent-common-errors/" rel="noopener noreferrer" target="_blank">Ansys Innovation Space: Troubleshooting Tips for Ansys Fluent</a></li>
+<li data-i18n="ansys_fluent_user_s_guide_troubleshooting_section">ANSYS Fluent User's Guide - Troubleshooting Section</li>
+<li data-i18n="cfd_online_ansys_fluent_forum"><a data-i18n="cfd_online_ansys_fluent_forum" href="https://www.cfd-online.com/Forums/fluent/" rel="noopener noreferrer" target="_blank">CFD-Online Ansys Fluent Forum</a></li>
+</ul>
+</article>
+<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

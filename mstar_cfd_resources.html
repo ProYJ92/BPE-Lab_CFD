@@ -1,129 +1,120 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M-STAR CFD 자료실 - 소프트웨어 | 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_mstar_cfd_resources">M-STAR CFD 자료실 - 소프트웨어 | 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
-                    <a href="index.html">생물공학연구실</a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="container mx-auto px-4 mt-5 py-12">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-            <div class="mb-8">
-                <a href="mstar_cfd_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; M-STAR CFD 메인으로 돌아가기</a>
-            </div>
-            
-            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">8. 자료실 (Resources)</h2>
-            <p>M-STAR CFD 학습 및 활용을 위한 신뢰성 높은 자료는 주로 개발사인 M-Star CFD (CoVar Applied Technologies의 사업부, 2024년 Dotmatics에 인수)에서 제공하는 공식 채널을 통해 얻을 수 있습니다. 다른 대형 상용 CFD 소프트웨어나 오픈 소스 소프트웨어만큼 방대한 공개 커뮤니티 리소스는 제한적일 수 있으나, 공식 자료는 매우 상세하고 전문적이며, 특히 Peer-Reviewed Validation 논문들이 소프트웨어의 신뢰성을 뒷받침합니다.</p>
-
-            <figure class="embedded-image-figure">
-                <img src="https://i.ytimg.com/vi/I8hmnl2wpt0/maxresdefault.jpg" alt="M-STAR CFD 데모 영상" class="max-w-xl">
-                <figcaption>M-STAR CFD의 교반 탱크 시뮬레이션 데모 및 학습 자료 예시 (출처: M-Star CFD YouTube)</figcaption>
-            </figure>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">공식 자료원 (Official Resources)</h3>
-            <ul class="list-disc pl-5 space-y-2">
-                <li><strong>M-Star CFD 공식 문서 (M-STAR Documentation)</strong>: <a href="https://docs.mstarcfd.com" target="_blank" rel="noopener noreferrer">https://docs.mstarcfd.com</a>
-                    <ul class="list-disc pl-4 mt-1">
-
-                        <li>가장 포괄적이고 신뢰할 수 있는 정보 출처입니다.</li>
-                        <li>설치 가이드, M-Star Pre (전처리기), M-Star Solve (솔버), M-Star Post (후처리기) 사용법 상세 안내.</li>
-                        <li>LBM 이론적 배경, 물리 모델 설명, 경계 조건 정의, Python API 사용법 등 기술적 내용 포함.</li>
-                        <li>검증 및 타당성 평가 (Validation / Literature) 사례 및 참고 문헌 목록 (<a href="https://mstarcfd.com/peer-reviewed-validation/" target="_blank" rel="noopener noreferrer">Peer Reviewed Validation 페이지</a> 참조).</li>
-                        <li>문제 해결을 위한 Knowledge Base (KB) 및 How-To 가이드.</li>
-                        <li>튜토리얼 및 예제 파일 설명.</li>
-                    </ul>
-                </li>
-                <li><strong>M-Star CFD 공식 웹사이트</strong>: <a href="https://mstarcfd.com/" target="_blank" rel="noopener noreferrer">https://mstarcfd.com/</a>
-                    <ul class="list-disc pl-4 mt-1">
-                        <li><strong>Resources 섹션</strong> (<a href="https://mstarcfd.com/resources/" target="_blank" rel="noopener noreferrer">mstarcfd.com/resources/</a>):
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
+<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="container mx-auto px-4 mt-5 py-12">
+<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+<div class="mb-8" data-i18n="m_star_cfd_메인으로_돌아가기">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="m_star_cfd_메인으로_돌아가기" href="mstar_cfd_main.html">« M-STAR CFD 메인으로 돌아가기</a>
+</div>
+<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="8_자료실_resources">8. 자료실 (Resources)</h2>
+<p data-i18n="m_star_cfd_학습_및_활용을_위한_신뢰성_높은_자료는_주로_개발사인_m_star_cfd_covar_applied_technologies의_사업부_2024년_dotmatics에_인수_에서_제공하는_공식_채널을_통해_얻을_수_있습니다_다른_대형_상용_cfd_소프트웨어나_오픈_소스_소프트웨어만큼_방대한_공개_커뮤니티_리소스는_제한적일_수_있으나_공식_자료는_매우_상세하고_전문적이며_특히_peer_reviewed_validation_논문들이_소프트웨어의_신뢰성을_뒷받침합니다">M-STAR CFD 학습 및 활용을 위한 신뢰성 높은 자료는 주로 개발사인 M-Star CFD (CoVar Applied Technologies의 사업부, 2024년 Dotmatics에 인수)에서 제공하는 공식 채널을 통해 얻을 수 있습니다. 다른 대형 상용 CFD 소프트웨어나 오픈 소스 소프트웨어만큼 방대한 공개 커뮤니티 리소스는 제한적일 수 있으나, 공식 자료는 매우 상세하고 전문적이며, 특히 Peer-Reviewed Validation 논문들이 소프트웨어의 신뢰성을 뒷받침합니다.</p>
+<figure class="embedded-image-figure">
+<img alt="M-STAR CFD 데모 영상" class="max-w-xl" data-i18n="m_star_cfd_데모_영상" src="https://i.ytimg.com/vi/I8hmnl2wpt0/maxresdefault.jpg"/>
+<figcaption>M-STAR CFD의 교반 탱크 시뮬레이션 데모 및 학습 자료 예시 (출처: M-Star CFD YouTube)</figcaption>
+</figure>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="공식_자료원_official_resources">공식 자료원 (Official Resources)</h3>
+<ul class="list-disc pl-5 space-y-2">
+<li data-i18n="m_star_cfd_공식_문서_m_star_documentation_https_docs_mstarcfd_com가장_포괄적이고_신뢰할_수_있는_정보_출처입니다_설치_가이드_m_star_pre_전처리기_m_star_solve_솔버_m_star_post_후처리기_사용법_상세_안내_lbm_이론적_배경_물리_모델_설명_경계_조건_정의_python_api_사용법_등_기술적_내용_포함_검증_및_타당성_평가_validation_literature_사례_및_참고_문헌_목록_peer_reviewed_validation_페이지참조_문제_해결을_위한_knowledge_base_kb_및_how_to_가이드_튜토리얼_및_예제_파일_설명"><strong>M-Star CFD 공식 문서 (M-STAR Documentation)</strong>: <a data-i18n="https_docs_mstarcfd_com" href="https://docs.mstarcfd.com" rel="noopener noreferrer" target="_blank">https://docs.mstarcfd.com</a>
+<ul class="list-disc pl-4 mt-1">
+<li data-i18n="가장_포괄적이고_신뢰할_수_있는_정보_출처입니다">가장 포괄적이고 신뢰할 수 있는 정보 출처입니다.</li>
+<li data-i18n="설치_가이드_m_star_pre_전처리기_m_star_solve_솔버_m_star_post_후처리기_사용법_상세_안내">설치 가이드, M-Star Pre (전처리기), M-Star Solve (솔버), M-Star Post (후처리기) 사용법 상세 안내.</li>
+<li data-i18n="lbm_이론적_배경_물리_모델_설명_경계_조건_정의_python_api_사용법_등_기술적_내용_포함">LBM 이론적 배경, 물리 모델 설명, 경계 조건 정의, Python API 사용법 등 기술적 내용 포함.</li>
+<li data-i18n="검증_및_타당성_평가_validation_literature_사례_및_참고_문헌_목록_peer_reviewed_validation_페이지참조">검증 및 타당성 평가 (Validation / Literature) 사례 및 참고 문헌 목록 (<a data-i18n="peer_reviewed_validation_페이지" href="https://mstarcfd.com/peer-reviewed-validation/" rel="noopener noreferrer" target="_blank">Peer Reviewed Validation 페이지</a> 참조).</li>
+<li data-i18n="문제_해결을_위한_knowledge_base_kb_및_how_to_가이드">문제 해결을 위한 Knowledge Base (KB) 및 How-To 가이드.</li>
+<li data-i18n="튜토리얼_및_예제_파일_설명">튜토리얼 및 예제 파일 설명.</li>
+</ul>
+</li>
+<li data-i18n="m_star_cfd_공식_웹사이트_https_mstarcfd_com_resources_섹션_mstarcfd_com_resources_학술_논문_academic_papers_peer_reviewed_validation_m_star_cfd를_사용한_연구_결과_발표_논문_목록_기술_문서_white_papers_technical_briefs_특정_기능이나_응용_분야에_대한_심층_분석_자료_사례_연구_case_studies_산업_적용_성공_사례_소개_예_제약_바이오프로세스_분야_블로그_blog_최신_기술_동향_소프트웨어_업데이트_활용_팁_등_팟캐스트_podcast_관련_전문가_인터뷰_및_토론_웨비나_webinars_및_이벤트_제품_소개_신기능_시연_교육_세션_녹화_영상_또는_예정_안내_news_섹션_mstarcfd_com_news_최신_업데이트_산업_동향_dotmatics_인수_관련_소식_등을_확인할_수_있습니다_제품_정보_라이선스_문의_기술_지원_안내"><strong>M-Star CFD 공식 웹사이트</strong>: <a data-i18n="https_mstarcfd_com" href="https://mstarcfd.com/" rel="noopener noreferrer" target="_blank">https://mstarcfd.com/</a>
+<ul class="list-disc pl-4 mt-1">
+<li data-i18n="resources_섹션_mstarcfd_com_resources_학술_논문_academic_papers_peer_reviewed_validation_m_star_cfd를_사용한_연구_결과_발표_논문_목록_기술_문서_white_papers_technical_briefs_특정_기능이나_응용_분야에_대한_심층_분석_자료_사례_연구_case_studies_산업_적용_성공_사례_소개_예_제약_바이오프로세스_분야_블로그_blog_최신_기술_동향_소프트웨어_업데이트_활용_팁_등_팟캐스트_podcast_관련_전문가_인터뷰_및_토론_웨비나_webinars_및_이벤트_제품_소개_신기능_시연_교육_세션_녹화_영상_또는_예정_안내"><strong>Resources 섹션</strong> (<a data-i18n="mstarcfd_com_resources" href="https://mstarcfd.com/resources/" rel="noopener noreferrer" target="_blank">mstarcfd.com/resources/</a>):
                             <ul>
-                                <li>학술 논문 (Academic Papers / Peer Reviewed Validation): M-STAR CFD를 사용한 연구 결과 발표 논문 목록.</li>
-                                <li>기술 문서 (White Papers, Technical Briefs): 특정 기능이나 응용 분야에 대한 심층 분석 자료.</li>
-                                <li>사례 연구 (Case Studies): 산업 적용 성공 사례 소개 (예: 제약, 바이오프로세스 분야).</li>
-                                <li>블로그 (Blog): 최신 기술 동향, 소프트웨어 업데이트, 활용 팁 등.</li>
-                                <li>팟캐스트 (Podcast): 관련 전문가 인터뷰 및 토론.</li>
-                                <li>웨비나 (Webinars) 및 이벤트: 제품 소개, 신기능 시연, 교육 세션 녹화 영상 또는 예정 안내.</li>
-                            </ul>
-                        </li>
-                        <li><strong>News 섹션</strong> (<a href="https://mstarcfd.com/news/" target="_blank" rel="noopener noreferrer">mstarcfd.com/news/</a>): 최신 업데이트, 산업 동향, Dotmatics 인수 관련 소식 등을 확인할 수 있습니다.</li>
-                        <li>제품 정보, 라이선스 문의, 기술 지원 안내.</li>
-                    </ul>
-                </li>
-                <li><strong>M-Star CFD YouTube 채널</strong>: <a href="https://www.youtube.com/@MStarCFD" target="_blank" rel="noopener noreferrer">youtube.com/@MStarCFD</a> (또는 유사 채널 검색)
+<li data-i18n="학술_논문_academic_papers_peer_reviewed_validation_m_star_cfd를_사용한_연구_결과_발표_논문_목록">학술 논문 (Academic Papers / Peer Reviewed Validation): M-STAR CFD를 사용한 연구 결과 발표 논문 목록.</li>
+<li data-i18n="기술_문서_white_papers_technical_briefs_특정_기능이나_응용_분야에_대한_심층_분석_자료">기술 문서 (White Papers, Technical Briefs): 특정 기능이나 응용 분야에 대한 심층 분석 자료.</li>
+<li data-i18n="사례_연구_case_studies_산업_적용_성공_사례_소개_예_제약_바이오프로세스_분야">사례 연구 (Case Studies): 산업 적용 성공 사례 소개 (예: 제약, 바이오프로세스 분야).</li>
+<li data-i18n="블로그_blog_최신_기술_동향_소프트웨어_업데이트_활용_팁_등">블로그 (Blog): 최신 기술 동향, 소프트웨어 업데이트, 활용 팁 등.</li>
+<li data-i18n="팟캐스트_podcast_관련_전문가_인터뷰_및_토론">팟캐스트 (Podcast): 관련 전문가 인터뷰 및 토론.</li>
+<li data-i18n="웨비나_webinars_및_이벤트_제품_소개_신기능_시연_교육_세션_녹화_영상_또는_예정_안내">웨비나 (Webinars) 및 이벤트: 제품 소개, 신기능 시연, 교육 세션 녹화 영상 또는 예정 안내.</li>
+</ul>
+</li>
+<li data-i18n="news_섹션_mstarcfd_com_news_최신_업데이트_산업_동향_dotmatics_인수_관련_소식_등을_확인할_수_있습니다"><strong>News 섹션</strong> (<a data-i18n="mstarcfd_com_news" href="https://mstarcfd.com/news/" rel="noopener noreferrer" target="_blank">mstarcfd.com/news/</a>): 최신 업데이트, 산업 동향, Dotmatics 인수 관련 소식 등을 확인할 수 있습니다.</li>
+<li data-i18n="제품_정보_라이선스_문의_기술_지원_안내">제품 정보, 라이선스 문의, 기술 지원 안내.</li>
+</ul>
+</li>
+<li data-i18n="m_star_cfd_youtube_채널_youtube_com_mstarcfd_또는_유사_채널_검색_소프트웨어_데모_영상_튜토리얼_웨비나_녹화본_등_시각적인_학습_자료_제공_예_post_processing_basics_tutorial"><strong>M-Star CFD YouTube 채널</strong>: <a data-i18n="youtube_com_mstarcfd" href="https://www.youtube.com/@MStarCFD" rel="noopener noreferrer" target="_blank">youtube.com/@MStarCFD</a> (또는 유사 채널 검색)
                     <ul class="list-disc pl-4 mt-1">
-                        <li>소프트웨어 데모 영상, 튜토리얼, 웨비나 녹화본 등 시각적인 학습 자료 제공. (예: <a href="https://m.youtube.com/watch?v=_7p4Llbz16A" target="_blank" rel="noopener noreferrer">Post-Processing Basics Tutorial</a>)</li>
-                    </ul>
-                </li>
-                <li><strong>Python API 예제 스크립트</strong>: 공식 문서 또는 설치 패키지에 포함된 Python API 예제 코드는 사용자 맞춤형 자동화 및 고급 기능 확장에 유용한 참고 자료가 됩니다.</li>
-            </ul>
-             <div class="my-6 responsive-iframe-container">
-                <iframe src="https://www.youtube.com/embed/_7p4Llbz16A" title="YouTube video player: M-Star Tutorials: Post-Processing Basics" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <p class="text-sm text-gray-600 mt-2 italic text-center">M-STAR CFD 후처리 기본 튜토리얼 영상 (출처: M-Star CFD YouTube)</p>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">커뮤니티 및 기술 지원</h3>
-            <ul class="list-disc pl-5 space-y-1">
-                <li><strong>공식 기술 지원 채널</strong>: M-STAR CFD 라이선스 사용자는 공식 기술 지원팀을 통해 전문적인 도움을 받을 수 있습니다. 문제 해결, 사용법 문의, 특정 적용 분야에 대한 조언 등을 제공합니다.</li>
-                <li><strong>Dotmatics 커뮤니티 (향후)</strong>: Dotmatics에 인수됨에 따라, 향후 Dotmatics의 R&D 플랫폼 커뮤니티를 통해 지원 및 정보 교류가 확대될 가능성이 있습니다. (<a href="https://www.dotmatics.com/" target="_blank" rel="noopener noreferrer">Dotmatics 웹사이트</a> 참고)</li>
-                <li><strong>학술 문헌 및 컨퍼런스</strong>: M-STAR CFD를 활용한 연구 결과가 다양한 학술지(예: Chemical Engineering Science, AIChE Journal) 및 학술대회(예: AIChE Annual Meeting, International Conference on Multiphase Flow)에서 발표되므로, 이를 통해 최신 적용 사례 및 연구 동향을 파악할 수 있습니다. 특히 바이오프로세스, 제약 분야의 디지털 트윈 및 스케일업 연구 사례가 주목받고 있습니다.</li>
-            </ul>
-
-            <hr class="my-8 border-gray-300">            
-            <h3 class="text-xl mt-6 mb-3">결론</h3>
-            <p>M-STAR CFD는 Lattice Boltzmann Method와 GPU 가속에 기반한 혁신적인 CFD 솔루션으로, 특히 대규모 다상 유동 및 입자 시스템, 교반 탱크 등의 해석에 강력한 성능과 효율성을 제공합니다. 체적 격자 생성의 부담을 크게 줄인 전처리 과정, 강력한 솔버 성능, 통합된 후처리 기능이 주요 장점입니다. 공식 문서를 통해 제공되는 상세한 기술 정보, 특히 Peer-Reviewed Validation 자료와 튜토리얼은 사용자가 소프트웨어를 효과적으로 학습하고 신뢰성 있는 시뮬레이션 결과를 얻는 데 중요한 역할을 합니다. 2024년 Dotmatics에 인수되어 과학 R&D 데이터 플랫폼과의 시너지가 기대되며, 제약 및 바이오프로세스 분야에서의 디지털 트윈 구축 및 공정 최적화 등 첨단 산업 응용 사례가 지속적으로 발표되고 있습니다. 공개 커뮤니티 리소스는 다른 주류 CFD 소프트웨어에 비해 제한적일 수 있으나, 공식 지원 채널과 지속적으로 발표되는 학술 자료를 통해 필요한 정보를 얻을 수 있습니다.</p>
-
-        </article>
-        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+<li data-i18n="소프트웨어_데모_영상_튜토리얼_웨비나_녹화본_등_시각적인_학습_자료_제공_예_post_processing_basics_tutorial">소프트웨어 데모 영상, 튜토리얼, 웨비나 녹화본 등 시각적인 학습 자료 제공. (예: <a data-i18n="post_processing_basics_tutorial" href="https://m.youtube.com/watch?v=_7p4Llbz16A" rel="noopener noreferrer" target="_blank">Post-Processing Basics Tutorial</a>)</li>
+</ul>
+</li>
+<li data-i18n="python_api_예제_스크립트_공식_문서_또는_설치_패키지에_포함된_python_api_예제_코드는_사용자_맞춤형_자동화_및_고급_기능_확장에_유용한_참고_자료가_됩니다"><strong>Python API 예제 스크립트</strong>: 공식 문서 또는 설치 패키지에 포함된 Python API 예제 코드는 사용자 맞춤형 자동화 및 고급 기능 확장에 유용한 참고 자료가 됩니다.</li>
+</ul>
+<div class="my-6 responsive-iframe-container">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" data-i18n="youtube_video_player_m_star_tutorials_post_processing_basics" src="https://www.youtube.com/embed/_7p4Llbz16A" title="YouTube video player: M-Star Tutorials: Post-Processing Basics"></iframe>
+</div>
+<p class="text-sm text-gray-600 mt-2 italic text-center" data-i18n="m_star_cfd_후처리_기본_튜토리얼_영상_출처_m_star_cfd_youtube">M-STAR CFD 후처리 기본 튜토리얼 영상 (출처: M-Star CFD YouTube)</p>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="커뮤니티_및_기술_지원">커뮤니티 및 기술 지원</h3>
+<ul class="list-disc pl-5 space-y-1">
+<li data-i18n="공식_기술_지원_채널_m_star_cfd_라이선스_사용자는_공식_기술_지원팀을_통해_전문적인_도움을_받을_수_있습니다_문제_해결_사용법_문의_특정_적용_분야에_대한_조언_등을_제공합니다"><strong>공식 기술 지원 채널</strong>: M-STAR CFD 라이선스 사용자는 공식 기술 지원팀을 통해 전문적인 도움을 받을 수 있습니다. 문제 해결, 사용법 문의, 특정 적용 분야에 대한 조언 등을 제공합니다.</li>
+<li data-i18n="dotmatics_커뮤니티_향후_dotmatics에_인수됨에_따라_향후_dotmatics의_r_d_플랫폼_커뮤니티를_통해_지원_및_정보_교류가_확대될_가능성이_있습니다_dotmatics_웹사이트참고"><strong>Dotmatics 커뮤니티 (향후)</strong>: Dotmatics에 인수됨에 따라, 향후 Dotmatics의 R&amp;D 플랫폼 커뮤니티를 통해 지원 및 정보 교류가 확대될 가능성이 있습니다. (<a data-i18n="dotmatics_웹사이트" href="https://www.dotmatics.com/" rel="noopener noreferrer" target="_blank">Dotmatics 웹사이트</a> 참고)</li>
+<li data-i18n="학술_문헌_및_컨퍼런스_m_star_cfd를_활용한_연구_결과가_다양한_학술지_예_chemical_engineering_science_aiche_journal_및_학술대회_예_aiche_annual_meeting_international_conference_on_multiphase_flow_에서_발표되므로_이를_통해_최신_적용_사례_및_연구_동향을_파악할_수_있습니다_특히_바이오프로세스_제약_분야의_디지털_트윈_및_스케일업_연구_사례가_주목받고_있습니다"><strong>학술 문헌 및 컨퍼런스</strong>: M-STAR CFD를 활용한 연구 결과가 다양한 학술지(예: Chemical Engineering Science, AIChE Journal) 및 학술대회(예: AIChE Annual Meeting, International Conference on Multiphase Flow)에서 발표되므로, 이를 통해 최신 적용 사례 및 연구 동향을 파악할 수 있습니다. 특히 바이오프로세스, 제약 분야의 디지털 트윈 및 스케일업 연구 사례가 주목받고 있습니다.</li>
+</ul>
+<hr class="my-8 border-gray-300"/>
+<h3 class="text-xl mt-6 mb-3" data-i18n="결론">결론</h3>
+<p data-i18n="m_star_cfd는_lattice_boltzmann_method와_gpu_가속에_기반한_혁신적인_cfd_솔루션으로_특히_대규모_다상_유동_및_입자_시스템_교반_탱크_등의_해석에_강력한_성능과_효율성을_제공합니다_체적_격자_생성의_부담을_크게_줄인_전처리_과정_강력한_솔버_성능_통합된_후처리_기능이_주요_장점입니다_공식_문서를_통해_제공되는_상세한_기술_정보_특히_peer_reviewed_validation_자료와_튜토리얼은_사용자가_소프트웨어를_효과적으로_학습하고_신뢰성_있는_시뮬레이션_결과를_얻는_데_중요한_역할을_합니다_2024년_dotmatics에_인수되어_과학_r_d_데이터_플랫폼과의_시너지가_기대되며_제약_및_바이오프로세스_분야에서의_디지털_트윈_구축_및_공정_최적화_등_첨단_산업_응용_사례가_지속적으로_발표되고_있습니다_공개_커뮤니티_리소스는_다른_주류_cfd_소프트웨어에_비해_제한적일_수_있으나_공식_지원_채널과_지속적으로_발표되는_학술_자료를_통해_필요한_정보를_얻을_수_있습니다">M-STAR CFD는 Lattice Boltzmann Method와 GPU 가속에 기반한 혁신적인 CFD 솔루션으로, 특히 대규모 다상 유동 및 입자 시스템, 교반 탱크 등의 해석에 강력한 성능과 효율성을 제공합니다. 체적 격자 생성의 부담을 크게 줄인 전처리 과정, 강력한 솔버 성능, 통합된 후처리 기능이 주요 장점입니다. 공식 문서를 통해 제공되는 상세한 기술 정보, 특히 Peer-Reviewed Validation 자료와 튜토리얼은 사용자가 소프트웨어를 효과적으로 학습하고 신뢰성 있는 시뮬레이션 결과를 얻는 데 중요한 역할을 합니다. 2024년 Dotmatics에 인수되어 과학 R&amp;D 데이터 플랫폼과의 시너지가 기대되며, 제약 및 바이오프로세스 분야에서의 디지털 트윈 구축 및 공정 최적화 등 첨단 산업 응용 사례가 지속적으로 발표되고 있습니다. 공개 커뮤니티 리소스는 다른 주류 CFD 소프트웨어에 비해 제한적일 수 있으나, 공식 지원 채널과 지속적으로 발표되는 학술 자료를 통해 필요한 정보를 얻을 수 있습니다.</p>
+</article>
+<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,148 +1,141 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M-STAR CFD 문제 해결 - 소프트웨어 | 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_mstar_cfd_troubleshooting">M-STAR CFD 문제 해결 - 소프트웨어 | 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
-                    <a href="index.html">생물공학연구실</a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="container mx-auto px-4 mt-5 py-12">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-            <div class="mb-8">
-                <a href="mstar_cfd_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; M-STAR CFD 메인으로 돌아가기</a>
-            </div>
-            
-            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">7. 문제 해결 (Troubleshooting)</h2>
-            <p>M-STAR CFD 사용 중 발생할 수 있는 일반적인 문제와 그 해결 방안은 주로 공식 문서 내 Knowledge Base (KB) 및 How-To 가이드를 통해 제공됩니다. 문제 해결은 체계적인 접근과 로그 파일 분석이 중요합니다.</p>
-
-            <figure class="embedded-image-figure">
-                 <img src="https://mstarcfd.com/wp-content/uploads/PRE.png" alt="M-STAR Pre GUI에서의 설정 화면" class="max-w-xl">
-                 <figcaption>M-STAR Pre GUI에서 설정을 검토하고 문제를 진단하는 과정 (출처: mstarcfd.com)</figcaption>
-            </figure>
-
-            <ul>
-                <li><strong>주요 문제 유형 및 일반적인 해결 접근법:</strong>
-                    <ul class="list-disc pl-4 space-y-2">
-                        <li><strong>M-Star Pre/Post GUI 시작 오류 (특히 3D 렌더링 문제)</strong>:
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
+<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="container mx-auto px-4 mt-5 py-12">
+<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+<div class="mb-8" data-i18n="m_star_cfd_메인으로_돌아가기">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="m_star_cfd_메인으로_돌아가기" href="mstar_cfd_main.html">« M-STAR CFD 메인으로 돌아가기</a>
+</div>
+<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="7_문제_해결_troubleshooting">7. 문제 해결 (Troubleshooting)</h2>
+<p data-i18n="m_star_cfd_사용_중_발생할_수_있는_일반적인_문제와_그_해결_방안은_주로_공식_문서_내_knowledge_base_kb_및_how_to_가이드를_통해_제공됩니다_문제_해결은_체계적인_접근과_로그_파일_분석이_중요합니다">M-STAR CFD 사용 중 발생할 수 있는 일반적인 문제와 그 해결 방안은 주로 공식 문서 내 Knowledge Base (KB) 및 How-To 가이드를 통해 제공됩니다. 문제 해결은 체계적인 접근과 로그 파일 분석이 중요합니다.</p>
+<figure class="embedded-image-figure">
+<img alt="M-STAR Pre GUI에서의 설정 화면" class="max-w-xl" data-i18n="m_star_pre_gui에서의_설정_화면" src="https://mstarcfd.com/wp-content/uploads/PRE.png"/>
+<figcaption>M-STAR Pre GUI에서 설정을 검토하고 문제를 진단하는 과정 (출처: mstarcfd.com)</figcaption>
+</figure>
+<ul>
+<li data-i18n="주요_문제_유형_및_일반적인_해결_접근법_m_star_pre_post_gui_시작_오류_특히_3d_렌더링_문제_증상_gui가_시작되지_않거나_3d_뷰포트가_제대로_표시되지_않는_경우_원인_호환되지_않거나_오래된_gpu_드라이버_opengl_지원_부족_원격_데스크톱_환경에서의_3d_가속_문제_등_확인_및_해결_최신_nvidia_드라이버_설치_확인_gpu가_opengl_3_2_windows_또는_3_3_linux_를_지원하는지_확인_windows의_경우_gpu가_wddm_모드로_실행_중인지_확인_원격_데스크톱_rdp_등_사용_시_3d_가속_하드웨어_렌더링_지원_여부_및_설정_점검_nice_dcv와_같은_전문_원격_시각화_도구_권장_디버그_로그_파일_생성_예_mstarpost_l_paraview_l명령어_활용_하여_오류_메시지_확인_시뮬레이션_발산_또는_불안정_divergence_or_instability_증상_솔버_실행_중_비정상적인_값_nan_infinity_발생_물리적으로_타당하지_않은_결과_갑작스러운_계산_중단_원인_부적절한_격자_해상도_너무_거칠거나_특정_영역에서_불충분_너무_큰_시간_간격_time_step_잘못된_경계_조건_설정_물리_모델_파라미터_오류_수치적_불안정성_해결_격자_해상도_lattice_resolution_를_높여봅니다_계산_시간_증가_유의_시간_간격을_줄여봅니다_courant_수_확인_경계_조건_설정_유형_값_을_다시_한번_검토합니다_물리_모델_예_난류_모델_기포_입자_모델_의_파라미터가_적절한지_확인합니다_초기_조건이_물리적으로_타당한지_검토합니다_로그_파일에서_특정_경고나_오류_메시지를_확인합니다_격자화_gridding_관련_문제_m_star_cfd는_ibm을_사용하므로_전통적인_의미의_체적_격자_문제는_적지만_stl_파일_품질_형상_위치_격자_해상도_설정_등이_중요합니다_증상_형상이_제대로_인식되지_않거나_유동이_형상을_통과하는_등의_문제_해결_stl_파일의_오류_구멍_중첩면_등_를_수정합니다_형상의_크기_및_위치를_확인하고_격자_해상도가_형상의_세부_특징을_충분히_표현할_수_있도록_조정합니다_라이선스_오류_증상_소프트웨어_실행_불가_라이선스_서버_연결_실패_등의_메시지_해결_라이선스_서버_주소_및_포트_정보가_정확한지_라이선스_서버가_정상_작동_중인지_라이선스_기간이_유효한지_확인합니다_방화벽_설정_등_네트워크_문제도_점검합니다_python_api_연동_문제_증상_python_스크립트_실행_오류_모듈_임포트_실패_등_해결_python_버전_호환성_확인_필요한_환경_변수_pythonpath_ld_library_path등_설정_여부_확인_m_star_cfd_python_라이브러리가_올바르게_설치되었는지_확인합니다_클라우드_컨테이너_환경_특정_문제_증상_aws_docker_등_환경에서_gpu_인식_문제_mpi_통신_오류_nvrtc_컴파일_오류_gpu_피어_액세스_peer_to_peer_access_문제_등_해결_해당_환경의_m_star_cfd_설치_가이드_및_권장_설정을_따릅니다_컨테이너_이미지_가상_머신_설정_네트워크_구성_등을_확인합니다"><strong>주요 문제 유형 및 일반적인 해결 접근법:</strong>
+<ul class="list-disc pl-4 space-y-2">
+<li data-i18n="m_star_pre_post_gui_시작_오류_특히_3d_렌더링_문제_증상_gui가_시작되지_않거나_3d_뷰포트가_제대로_표시되지_않는_경우_원인_호환되지_않거나_오래된_gpu_드라이버_opengl_지원_부족_원격_데스크톱_환경에서의_3d_가속_문제_등_확인_및_해결_최신_nvidia_드라이버_설치_확인_gpu가_opengl_3_2_windows_또는_3_3_linux_를_지원하는지_확인_windows의_경우_gpu가_wddm_모드로_실행_중인지_확인_원격_데스크톱_rdp_등_사용_시_3d_가속_하드웨어_렌더링_지원_여부_및_설정_점검_nice_dcv와_같은_전문_원격_시각화_도구_권장_디버그_로그_파일_생성_예_mstarpost_l_paraview_l명령어_활용_하여_오류_메시지_확인"><strong>M-Star Pre/Post GUI 시작 오류 (특히 3D 렌더링 문제)</strong>:
                             <ul>
-                                <li><strong>증상</strong>: GUI가 시작되지 않거나, 3D 뷰포트가 제대로 표시되지 않는 경우.</li>
-                                <li><strong>원인</strong>: 호환되지 않거나 오래된 GPU 드라이버, OpenGL 지원 부족, 원격 데스크톱 환경에서의 3D 가속 문제 등.</li>
-                                <li><strong>확인 및 해결</strong>:
+<li data-i18n="증상_gui가_시작되지_않거나_3d_뷰포트가_제대로_표시되지_않는_경우"><strong>증상</strong>: GUI가 시작되지 않거나, 3D 뷰포트가 제대로 표시되지 않는 경우.</li>
+<li data-i18n="원인_호환되지_않거나_오래된_gpu_드라이버_opengl_지원_부족_원격_데스크톱_환경에서의_3d_가속_문제_등"><strong>원인</strong>: 호환되지 않거나 오래된 GPU 드라이버, OpenGL 지원 부족, 원격 데스크톱 환경에서의 3D 가속 문제 등.</li>
+<li data-i18n="확인_및_해결_최신_nvidia_드라이버_설치_확인_gpu가_opengl_3_2_windows_또는_3_3_linux_를_지원하는지_확인_windows의_경우_gpu가_wddm_모드로_실행_중인지_확인_원격_데스크톱_rdp_등_사용_시_3d_가속_하드웨어_렌더링_지원_여부_및_설정_점검_nice_dcv와_같은_전문_원격_시각화_도구_권장_디버그_로그_파일_생성_예_mstarpost_l_paraview_l명령어_활용_하여_오류_메시지_확인"><strong>확인 및 해결</strong>:
                                     <ul>
-                                        <li>최신 NVIDIA 드라이버 설치 확인.</li>
-                                        <li>GPU가 OpenGL 3.2+ (Windows) 또는 3.3+ (Linux)를 지원하는지 확인.</li>
-                                        <li>Windows의 경우, GPU가 WDDM 모드로 실행 중인지 확인.</li>
-                                        <li>원격 데스크톱(RDP 등) 사용 시, 3D 가속(하드웨어 렌더링) 지원 여부 및 설정 점검 (NICE DCV와 같은 전문 원격 시각화 도구 권장).</li>
-                                        <li>디버그 로그 파일 생성 (예: <code>MStarPost -l</code>, <code>paraview -l</code> 명령어 활용)하여 오류 메시지 확인.</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><strong>시뮬레이션 발산 또는 불안정 (Divergence or Instability)</strong>:
+<li data-i18n="최신_nvidia_드라이버_설치_확인">최신 NVIDIA 드라이버 설치 확인.</li>
+<li data-i18n="gpu가_opengl_3_2_windows_또는_3_3_linux_를_지원하는지_확인">GPU가 OpenGL 3.2+ (Windows) 또는 3.3+ (Linux)를 지원하는지 확인.</li>
+<li data-i18n="windows의_경우_gpu가_wddm_모드로_실행_중인지_확인">Windows의 경우, GPU가 WDDM 모드로 실행 중인지 확인.</li>
+<li data-i18n="원격_데스크톱_rdp_등_사용_시_3d_가속_하드웨어_렌더링_지원_여부_및_설정_점검_nice_dcv와_같은_전문_원격_시각화_도구_권장">원격 데스크톱(RDP 등) 사용 시, 3D 가속(하드웨어 렌더링) 지원 여부 및 설정 점검 (NICE DCV와 같은 전문 원격 시각화 도구 권장).</li>
+<li data-i18n="디버그_로그_파일_생성_예_mstarpost_l_paraview_l명령어_활용_하여_오류_메시지_확인">디버그 로그 파일 생성 (예: <code>MStarPost -l</code>, <code>paraview -l</code> 명령어 활용)하여 오류 메시지 확인.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-i18n="시뮬레이션_발산_또는_불안정_divergence_or_instability_증상_솔버_실행_중_비정상적인_값_nan_infinity_발생_물리적으로_타당하지_않은_결과_갑작스러운_계산_중단_원인_부적절한_격자_해상도_너무_거칠거나_특정_영역에서_불충분_너무_큰_시간_간격_time_step_잘못된_경계_조건_설정_물리_모델_파라미터_오류_수치적_불안정성_해결_격자_해상도_lattice_resolution_를_높여봅니다_계산_시간_증가_유의_시간_간격을_줄여봅니다_courant_수_확인_경계_조건_설정_유형_값_을_다시_한번_검토합니다_물리_모델_예_난류_모델_기포_입자_모델_의_파라미터가_적절한지_확인합니다_초기_조건이_물리적으로_타당한지_검토합니다_로그_파일에서_특정_경고나_오류_메시지를_확인합니다"><strong>시뮬레이션 발산 또는 불안정 (Divergence or Instability)</strong>:
                             <ul>
-                                <li><strong>증상</strong>: 솔버 실행 중 비정상적인 값(NaN, Infinity) 발생, 물리적으로 타당하지 않은 결과, 갑작스러운 계산 중단.</li>
-                                <li><strong>원인</strong>: 부적절한 격자 해상도 (너무 거칠거나 특정 영역에서 불충분), 너무 큰 시간 간격(time step), 잘못된 경계 조건 설정, 물리 모델 파라미터 오류, 수치적 불안정성.</li>
-                                <li><strong>해결</strong>:
+<li data-i18n="증상_솔버_실행_중_비정상적인_값_nan_infinity_발생_물리적으로_타당하지_않은_결과_갑작스러운_계산_중단"><strong>증상</strong>: 솔버 실행 중 비정상적인 값(NaN, Infinity) 발생, 물리적으로 타당하지 않은 결과, 갑작스러운 계산 중단.</li>
+<li data-i18n="원인_부적절한_격자_해상도_너무_거칠거나_특정_영역에서_불충분_너무_큰_시간_간격_time_step_잘못된_경계_조건_설정_물리_모델_파라미터_오류_수치적_불안정성"><strong>원인</strong>: 부적절한 격자 해상도 (너무 거칠거나 특정 영역에서 불충분), 너무 큰 시간 간격(time step), 잘못된 경계 조건 설정, 물리 모델 파라미터 오류, 수치적 불안정성.</li>
+<li data-i18n="해결_격자_해상도_lattice_resolution_를_높여봅니다_계산_시간_증가_유의_시간_간격을_줄여봅니다_courant_수_확인_경계_조건_설정_유형_값_을_다시_한번_검토합니다_물리_모델_예_난류_모델_기포_입자_모델_의_파라미터가_적절한지_확인합니다_초기_조건이_물리적으로_타당한지_검토합니다_로그_파일에서_특정_경고나_오류_메시지를_확인합니다"><strong>해결</strong>:
                                     <ul>
-                                        <li>격자 해상도(Lattice Resolution)를 높여봅니다. (계산 시간 증가 유의)</li>
-                                        <li>시간 간격을 줄여봅니다 (Courant 수 확인).</li>
-                                        <li>경계 조건 설정(유형, 값)을 다시 한번 검토합니다.</li>
-                                        <li>물리 모델(예: 난류 모델, 기포/입자 모델)의 파라미터가 적절한지 확인합니다.</li>
-                                        <li>초기 조건이 물리적으로 타당한지 검토합니다.</li>
-                                        <li>로그 파일에서 특정 경고나 오류 메시지를 확인합니다.</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><strong>격자화(Gridding) 관련 문제</strong>: M-STAR CFD는 IBM을 사용하므로 전통적인 의미의 체적 격자 문제는 적지만, STL 파일 품질, 형상 위치, 격자 해상도 설정 등이 중요합니다.
+<li data-i18n="격자_해상도_lattice_resolution_를_높여봅니다_계산_시간_증가_유의">격자 해상도(Lattice Resolution)를 높여봅니다. (계산 시간 증가 유의)</li>
+<li data-i18n="시간_간격을_줄여봅니다_courant_수_확인">시간 간격을 줄여봅니다 (Courant 수 확인).</li>
+<li data-i18n="경계_조건_설정_유형_값_을_다시_한번_검토합니다">경계 조건 설정(유형, 값)을 다시 한번 검토합니다.</li>
+<li data-i18n="물리_모델_예_난류_모델_기포_입자_모델_의_파라미터가_적절한지_확인합니다">물리 모델(예: 난류 모델, 기포/입자 모델)의 파라미터가 적절한지 확인합니다.</li>
+<li data-i18n="초기_조건이_물리적으로_타당한지_검토합니다">초기 조건이 물리적으로 타당한지 검토합니다.</li>
+<li data-i18n="로그_파일에서_특정_경고나_오류_메시지를_확인합니다">로그 파일에서 특정 경고나 오류 메시지를 확인합니다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-i18n="격자화_gridding_관련_문제_m_star_cfd는_ibm을_사용하므로_전통적인_의미의_체적_격자_문제는_적지만_stl_파일_품질_형상_위치_격자_해상도_설정_등이_중요합니다_증상_형상이_제대로_인식되지_않거나_유동이_형상을_통과하는_등의_문제_해결_stl_파일의_오류_구멍_중첩면_등_를_수정합니다_형상의_크기_및_위치를_확인하고_격자_해상도가_형상의_세부_특징을_충분히_표현할_수_있도록_조정합니다"><strong>격자화(Gridding) 관련 문제</strong>: M-STAR CFD는 IBM을 사용하므로 전통적인 의미의 체적 격자 문제는 적지만, STL 파일 품질, 형상 위치, 격자 해상도 설정 등이 중요합니다.
                             <ul>
-                                <li><strong>증상</strong>: 형상이 제대로 인식되지 않거나, 유동이 형상을 통과하는 등의 문제.</li>
-                                <li><strong>해결</strong>: STL 파일의 오류(구멍, 중첩면 등)를 수정합니다. 형상의 크기 및 위치를 확인하고, 격자 해상도가 형상의 세부 특징을 충분히 표현할 수 있도록 조정합니다.</li>
-                            </ul>
-                        </li>
-                        <li><strong>라이선스 오류</strong>:
+<li data-i18n="증상_형상이_제대로_인식되지_않거나_유동이_형상을_통과하는_등의_문제"><strong>증상</strong>: 형상이 제대로 인식되지 않거나, 유동이 형상을 통과하는 등의 문제.</li>
+<li data-i18n="해결_stl_파일의_오류_구멍_중첩면_등_를_수정합니다_형상의_크기_및_위치를_확인하고_격자_해상도가_형상의_세부_특징을_충분히_표현할_수_있도록_조정합니다"><strong>해결</strong>: STL 파일의 오류(구멍, 중첩면 등)를 수정합니다. 형상의 크기 및 위치를 확인하고, 격자 해상도가 형상의 세부 특징을 충분히 표현할 수 있도록 조정합니다.</li>
+</ul>
+</li>
+<li data-i18n="라이선스_오류_증상_소프트웨어_실행_불가_라이선스_서버_연결_실패_등의_메시지_해결_라이선스_서버_주소_및_포트_정보가_정확한지_라이선스_서버가_정상_작동_중인지_라이선스_기간이_유효한지_확인합니다_방화벽_설정_등_네트워크_문제도_점검합니다"><strong>라이선스 오류</strong>:
                             <ul>
-                                <li><strong>증상</strong>: 소프트웨어 실행 불가, 라이선스 서버 연결 실패 등의 메시지.</li>
-                                <li><strong>해결</strong>: 라이선스 서버 주소 및 포트 정보가 정확한지, 라이선스 서버가 정상 작동 중인지, 라이선스 기간이 유효한지 확인합니다. 방화벽 설정 등 네트워크 문제도 점검합니다.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Python API 연동 문제</strong>:
+<li data-i18n="증상_소프트웨어_실행_불가_라이선스_서버_연결_실패_등의_메시지"><strong>증상</strong>: 소프트웨어 실행 불가, 라이선스 서버 연결 실패 등의 메시지.</li>
+<li data-i18n="해결_라이선스_서버_주소_및_포트_정보가_정확한지_라이선스_서버가_정상_작동_중인지_라이선스_기간이_유효한지_확인합니다_방화벽_설정_등_네트워크_문제도_점검합니다"><strong>해결</strong>: 라이선스 서버 주소 및 포트 정보가 정확한지, 라이선스 서버가 정상 작동 중인지, 라이선스 기간이 유효한지 확인합니다. 방화벽 설정 등 네트워크 문제도 점검합니다.</li>
+</ul>
+</li>
+<li data-i18n="python_api_연동_문제_증상_python_스크립트_실행_오류_모듈_임포트_실패_등_해결_python_버전_호환성_확인_필요한_환경_변수_pythonpath_ld_library_path등_설정_여부_확인_m_star_cfd_python_라이브러리가_올바르게_설치되었는지_확인합니다"><strong>Python API 연동 문제</strong>:
                             <ul>
-                                <li><strong>증상</strong>: Python 스크립트 실행 오류, 모듈 임포트 실패 등.</li>
-                                <li><strong>해결</strong>: Python 버전 호환성 확인, 필요한 환경 변수(<code>PYTHONPATH</code>, <code>LD_LIBRARY_PATH</code> 등) 설정 여부 확인, M-STAR CFD Python 라이브러리가 올바르게 설치되었는지 확인합니다.</li>
-                            </ul>
-                        </li>
-                        <li><strong>클라우드/컨테이너 환경 특정 문제</strong>:
+<li data-i18n="증상_python_스크립트_실행_오류_모듈_임포트_실패_등"><strong>증상</strong>: Python 스크립트 실행 오류, 모듈 임포트 실패 등.</li>
+<li data-i18n="해결_python_버전_호환성_확인_필요한_환경_변수_pythonpath_ld_library_path등_설정_여부_확인_m_star_cfd_python_라이브러리가_올바르게_설치되었는지_확인합니다"><strong>해결</strong>: Python 버전 호환성 확인, 필요한 환경 변수(<code>PYTHONPATH</code>, <code>LD_LIBRARY_PATH</code> 등) 설정 여부 확인, M-STAR CFD Python 라이브러리가 올바르게 설치되었는지 확인합니다.</li>
+</ul>
+</li>
+<li data-i18n="클라우드_컨테이너_환경_특정_문제_증상_aws_docker_등_환경에서_gpu_인식_문제_mpi_통신_오류_nvrtc_컴파일_오류_gpu_피어_액세스_peer_to_peer_access_문제_등_해결_해당_환경의_m_star_cfd_설치_가이드_및_권장_설정을_따릅니다_컨테이너_이미지_가상_머신_설정_네트워크_구성_등을_확인합니다"><strong>클라우드/컨테이너 환경 특정 문제</strong>:
                             <ul>
-                                <li><strong>증상</strong>: AWS, Docker 등 환경에서 GPU 인식 문제, MPI 통신 오류, NVRTC 컴파일 오류, GPU 피어 액세스(Peer-to-Peer access) 문제 등.</li>
-                                <li><strong>해결</strong>: 해당 환경의 M-STAR CFD 설치 가이드 및 권장 설정을 따릅니다. 컨테이너 이미지, 가상 머신 설정, 네트워크 구성 등을 확인합니다.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <p>문제 발생 시, 가장 먼저 M-STAR CFD 공식 문서의 Knowledge Base (KB)와 FAQ 섹션을 참조하고, 로그 파일을 면밀히 검토하는 것이 중요합니다. 해결이 어려운 경우, 공식 기술 지원 채널을 통해 문의하는 것이 가장 효과적입니다.</p>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">참고 자료</h3>
-            <ul class="list-disc pl-5 space-y-1 text-sm">
-                <li><a href="https://docs.mstarcfd.com/KB/index.html" target="_blank" rel="noopener noreferrer">M-STAR CFD Official Documentation - Knowledge Base (KB)</a></li>
-                <li><a href="https://docs.mstarcfd.com/11_How_To_Guides/txt-rst-files/How-to-guides-index.html" target="_blank" rel="noopener noreferrer">M-STAR CFD Official Documentation - How-To Guides</a></li>
-                <li>M-STAR CFD 공식 튜토리얼 및 예제 파일 (문제 해결 팁 포함 가능)</li>
-                <li>M-STAR CFD 공식 기술 지원 채널 (라이선스 사용자 대상)</li>
-            </ul>
-
-        </article>
-        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+<li data-i18n="증상_aws_docker_등_환경에서_gpu_인식_문제_mpi_통신_오류_nvrtc_컴파일_오류_gpu_피어_액세스_peer_to_peer_access_문제_등"><strong>증상</strong>: AWS, Docker 등 환경에서 GPU 인식 문제, MPI 통신 오류, NVRTC 컴파일 오류, GPU 피어 액세스(Peer-to-Peer access) 문제 등.</li>
+<li data-i18n="해결_해당_환경의_m_star_cfd_설치_가이드_및_권장_설정을_따릅니다_컨테이너_이미지_가상_머신_설정_네트워크_구성_등을_확인합니다"><strong>해결</strong>: 해당 환경의 M-STAR CFD 설치 가이드 및 권장 설정을 따릅니다. 컨테이너 이미지, 가상 머신 설정, 네트워크 구성 등을 확인합니다.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p data-i18n="문제_발생_시_가장_먼저_m_star_cfd_공식_문서의_knowledge_base_kb_와_faq_섹션을_참조하고_로그_파일을_면밀히_검토하는_것이_중요합니다_해결이_어려운_경우_공식_기술_지원_채널을_통해_문의하는_것이_가장_효과적입니다">문제 발생 시, 가장 먼저 M-STAR CFD 공식 문서의 Knowledge Base (KB)와 FAQ 섹션을 참조하고, 로그 파일을 면밀히 검토하는 것이 중요합니다. 해결이 어려운 경우, 공식 기술 지원 채널을 통해 문의하는 것이 가장 효과적입니다.</p>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="참고_자료">참고 자료</h3>
+<ul class="list-disc pl-5 space-y-1 text-sm">
+<li data-i18n="m_star_cfd_official_documentation_knowledge_base_kb"><a data-i18n="m_star_cfd_official_documentation_knowledge_base_kb" href="https://docs.mstarcfd.com/KB/index.html" rel="noopener noreferrer" target="_blank">M-STAR CFD Official Documentation - Knowledge Base (KB)</a></li>
+<li data-i18n="m_star_cfd_official_documentation_how_to_guides"><a data-i18n="m_star_cfd_official_documentation_how_to_guides" href="https://docs.mstarcfd.com/11_How_To_Guides/txt-rst-files/How-to-guides-index.html" rel="noopener noreferrer" target="_blank">M-STAR CFD Official Documentation - How-To Guides</a></li>
+<li data-i18n="m_star_cfd_공식_튜토리얼_및_예제_파일_문제_해결_팁_포함_가능">M-STAR CFD 공식 튜토리얼 및 예제 파일 (문제 해결 팁 포함 가능)</li>
+<li data-i18n="m_star_cfd_공식_기술_지원_채널_라이선스_사용자_대상">M-STAR CFD 공식 기술 지원 채널 (라이선스 사용자 대상)</li>
+</ul>
+</article>
+<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

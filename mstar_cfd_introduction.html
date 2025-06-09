@@ -1,127 +1,119 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M-STAR CFD 소개 - 소프트웨어 | 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_mstar_cfd_introduction">M-STAR CFD 소개 - 소프트웨어 | 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
-                    <a href="index.html">생물공학연구실</a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="container mx-auto px-4 mt-5 py-12">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-            <div class="mb-8">
-                <a href="mstar_cfd_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; M-STAR CFD 메인으로 돌아가기</a>
-            </div>
-            
-            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">1. 소개</h2>
-            <p><strong>M-STAR CFD</strong>는 M-Star Simulations LLC에서 개발되어 현재 CoVar Applied Technologies의 사업부인 M-Star CFD에서 관리하는 상용 전산 유체 역학(CFD) 소프트웨어입니다. 특히 Lattice Boltzmann Method (LBM) 기반의 Large Eddy Simulation (LES)과 Lagrangian 입자 추적 기법(CFD-DEM 결합 가능)에 특화되어 있으며, GPU(Graphics Processing Unit) 가속을 적극적으로 활용하여 기존 CPU 기반 솔버에 비해 매우 빠른 계산 속도를 제공합니다. 2024년에는 과학 R&D 통합 플랫폼인 Dotmatics에 인수되어 데이터 인포매틱스 기반 생태계로의 발전을 모색하고 있습니다.</p>
-            <p>M-STAR CFD는 과학자 및 엔지니어가 복잡한 다물리 현상, 특히 대규모 혼합 시스템, 다상 유동, 입자-유체 상호작용 등을 빠르고 정밀하게 시뮬레이션할 수 있도록 지원합니다. 주요 특징으로는 메쉬 설계 과정이 거의 불필요하거나 대폭 간소화된 워크플로우, 직관적인 GUI, 실시간 후처리 및 포토리얼리스틱 렌더링 기능 등이 있으며, 이를 통해 사용자는 수 시간 내에 소프트웨어 사용법을 익히고 복잡한 문제를 해결할 수 있습니다. 다수의 peer-reviewed 연구를 통해 실험 데이터와 매우 높은 정밀도로 일치하는 결과를 제공하는 것으로 검증되었습니다.</p>
-            
-            <figure class="embedded-image-figure">
-                <img src="https://mstarcfd.com/wp-content/uploads/M-Star-Logo-Dark.svg" alt="M-STAR CFD 로고" class="max-w-xs bg-gray-100 p-4">
-                <figcaption>M-STAR CFD 로고 (출처: mstarcfd.com)</figcaption>
-            </figure>
-            
-            <figure class="embedded-image-figure">
-                <img src="https://mstarcfd.com/wp-content/uploads/cfd-simulations.png" alt="M-STAR CFD 시뮬레이션 예시" class="max-w-xl">
-                <figcaption>M-STAR CFD를 이용한 다양한 시뮬레이션 예시 (출처: mstarcfd.com)</figcaption>
-            </figure>
-
-            <ul>
-                <li><strong>핵심 특징 및 기술 (최신 동향 포함)</strong>:
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
+<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="container mx-auto px-4 mt-5 py-12">
+<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+<div class="mb-8" data-i18n="m_star_cfd_메인으로_돌아가기">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="m_star_cfd_메인으로_돌아가기" href="mstar_cfd_main.html">« M-STAR CFD 메인으로 돌아가기</a>
+</div>
+<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="1_소개">1. 소개</h2>
+<p data-i18n="m_star_cfd는_m_star_simulations_llc에서_개발되어_현재_covar_applied_technologies의_사업부인_m_star_cfd에서_관리하는_상용_전산_유체_역학_cfd_소프트웨어입니다_특히_lattice_boltzmann_method_lbm_기반의_large_eddy_simulation_les_과_lagrangian_입자_추적_기법_cfd_dem_결합_가능_에_특화되어_있으며_gpu_graphics_processing_unit_가속을_적극적으로_활용하여_기존_cpu_기반_솔버에_비해_매우_빠른_계산_속도를_제공합니다_2024년에는_과학_r_d_통합_플랫폼인_dotmatics에_인수되어_데이터_인포매틱스_기반_생태계로의_발전을_모색하고_있습니다"><strong>M-STAR CFD</strong>는 M-Star Simulations LLC에서 개발되어 현재 CoVar Applied Technologies의 사업부인 M-Star CFD에서 관리하는 상용 전산 유체 역학(CFD) 소프트웨어입니다. 특히 Lattice Boltzmann Method (LBM) 기반의 Large Eddy Simulation (LES)과 Lagrangian 입자 추적 기법(CFD-DEM 결합 가능)에 특화되어 있으며, GPU(Graphics Processing Unit) 가속을 적극적으로 활용하여 기존 CPU 기반 솔버에 비해 매우 빠른 계산 속도를 제공합니다. 2024년에는 과학 R&amp;D 통합 플랫폼인 Dotmatics에 인수되어 데이터 인포매틱스 기반 생태계로의 발전을 모색하고 있습니다.</p>
+<p data-i18n="m_star_cfd는_과학자_및_엔지니어가_복잡한_다물리_현상_특히_대규모_혼합_시스템_다상_유동_입자_유체_상호작용_등을_빠르고_정밀하게_시뮬레이션할_수_있도록_지원합니다_주요_특징으로는_메쉬_설계_과정이_거의_불필요하거나_대폭_간소화된_워크플로우_직관적인_gui_실시간_후처리_및_포토리얼리스틱_렌더링_기능_등이_있으며_이를_통해_사용자는_수_시간_내에_소프트웨어_사용법을_익히고_복잡한_문제를_해결할_수_있습니다_다수의_peer_reviewed_연구를_통해_실험_데이터와_매우_높은_정밀도로_일치하는_결과를_제공하는_것으로_검증되었습니다">M-STAR CFD는 과학자 및 엔지니어가 복잡한 다물리 현상, 특히 대규모 혼합 시스템, 다상 유동, 입자-유체 상호작용 등을 빠르고 정밀하게 시뮬레이션할 수 있도록 지원합니다. 주요 특징으로는 메쉬 설계 과정이 거의 불필요하거나 대폭 간소화된 워크플로우, 직관적인 GUI, 실시간 후처리 및 포토리얼리스틱 렌더링 기능 등이 있으며, 이를 통해 사용자는 수 시간 내에 소프트웨어 사용법을 익히고 복잡한 문제를 해결할 수 있습니다. 다수의 peer-reviewed 연구를 통해 실험 데이터와 매우 높은 정밀도로 일치하는 결과를 제공하는 것으로 검증되었습니다.</p>
+<figure class="embedded-image-figure">
+<img alt="M-STAR CFD 로고" class="max-w-xs bg-gray-100 p-4" data-i18n="m_star_cfd_로고" src="https://mstarcfd.com/wp-content/uploads/M-Star-Logo-Dark.svg"/>
+<figcaption>M-STAR CFD 로고 (출처: mstarcfd.com)</figcaption>
+</figure>
+<figure class="embedded-image-figure">
+<img alt="M-STAR CFD 시뮬레이션 예시" class="max-w-xl" data-i18n="m_star_cfd_시뮬레이션_예시" src="https://mstarcfd.com/wp-content/uploads/cfd-simulations.png"/>
+<figcaption>M-STAR CFD를 이용한 다양한 시뮬레이션 예시 (출처: mstarcfd.com)</figcaption>
+</figure>
+<ul>
+<li data-i18n="핵심_특징_및_기술_최신_동향_포함_gpu_기반_병렬_연산_nvidia_gpu의_대규모_병렬_처리_능력을_활용하여_기존_cpu_솔버_대비_수십에서_수백_배_빠른_계산_속도_달성_lattice_boltzmann_method_lbm_복잡한_경계_조건_처리_다상_유동_미세_유체역학_등에_강점을_가지는_수치_기법_사용_immersed_boundary_method_ibm_복잡한_형상이나_움직이는_경계를_격자_내에_효과적으로_임베딩하여_처리_기존_fvm과_달리_체적_격자_volume_meshing_과정이_불필요하거나_대폭_간소화된_워크플로우_제공_large_eddy_simulation_les_난류_유동의_큰_스케일_와동을_직접_해석하여_높은_정확도의_비정상_유동_해석_가능_lagrangian_particle_bubble_tracking_유체_내_입자_기포_액적_등의_거동을_정밀하게_추적하고_상호작용_모델링_cfd_dem_결합_가능_실시간_후처리_및_시각화_시뮬레이션_진행_중_실시간_분석_및_포토리얼리스틱_렌더링_기능_제공"><strong>핵심 특징 및 기술 (최신 동향 포함)</strong>:
                     <ul class="list-disc pl-4">
-                        <li><strong>GPU 기반 병렬 연산</strong>: NVIDIA GPU의 대규모 병렬 처리 능력을 활용하여 기존 CPU 솔버 대비 수십에서 수백 배 빠른 계산 속도 달성.</li>
-                        <li><strong>Lattice Boltzmann Method (LBM)</strong>: 복잡한 경계 조건 처리, 다상 유동, 미세 유체역학 등에 강점을 가지는 수치 기법 사용.</li>
-                        <li><strong>Immersed Boundary Method (IBM)</strong>: 복잡한 형상이나 움직이는 경계를 격자 내에 효과적으로 임베딩하여 처리. 기존 FVM과 달리 체적 격자(volume meshing) 과정이 불필요하거나 대폭 간소화된 워크플로우 제공.</li>
-                        <li><strong>Large Eddy Simulation (LES)</strong>: 난류 유동의 큰 스케일 와동을 직접 해석하여 높은 정확도의 비정상 유동 해석 가능.</li>
-                        <li><strong>Lagrangian Particle/Bubble Tracking</strong>: 유체 내 입자, 기포, 액적 등의 거동을 정밀하게 추적하고 상호작용 모델링 (CFD-DEM 결합 가능).</li>
-                        <li><strong>실시간 후처리 및 시각화</strong>: 시뮬레이션 진행 중 실시간 분석 및 포토리얼리스틱 렌더링 기능 제공.</li>
-                    </ul>
-                </li>
-                <li><strong>주요 구성 요소</strong>:
+<li data-i18n="gpu_기반_병렬_연산_nvidia_gpu의_대규모_병렬_처리_능력을_활용하여_기존_cpu_솔버_대비_수십에서_수백_배_빠른_계산_속도_달성"><strong>GPU 기반 병렬 연산</strong>: NVIDIA GPU의 대규모 병렬 처리 능력을 활용하여 기존 CPU 솔버 대비 수십에서 수백 배 빠른 계산 속도 달성.</li>
+<li data-i18n="lattice_boltzmann_method_lbm_복잡한_경계_조건_처리_다상_유동_미세_유체역학_등에_강점을_가지는_수치_기법_사용"><strong>Lattice Boltzmann Method (LBM)</strong>: 복잡한 경계 조건 처리, 다상 유동, 미세 유체역학 등에 강점을 가지는 수치 기법 사용.</li>
+<li data-i18n="immersed_boundary_method_ibm_복잡한_형상이나_움직이는_경계를_격자_내에_효과적으로_임베딩하여_처리_기존_fvm과_달리_체적_격자_volume_meshing_과정이_불필요하거나_대폭_간소화된_워크플로우_제공"><strong>Immersed Boundary Method (IBM)</strong>: 복잡한 형상이나 움직이는 경계를 격자 내에 효과적으로 임베딩하여 처리. 기존 FVM과 달리 체적 격자(volume meshing) 과정이 불필요하거나 대폭 간소화된 워크플로우 제공.</li>
+<li data-i18n="large_eddy_simulation_les_난류_유동의_큰_스케일_와동을_직접_해석하여_높은_정확도의_비정상_유동_해석_가능"><strong>Large Eddy Simulation (LES)</strong>: 난류 유동의 큰 스케일 와동을 직접 해석하여 높은 정확도의 비정상 유동 해석 가능.</li>
+<li data-i18n="lagrangian_particle_bubble_tracking_유체_내_입자_기포_액적_등의_거동을_정밀하게_추적하고_상호작용_모델링_cfd_dem_결합_가능"><strong>Lagrangian Particle/Bubble Tracking</strong>: 유체 내 입자, 기포, 액적 등의 거동을 정밀하게 추적하고 상호작용 모델링 (CFD-DEM 결합 가능).</li>
+<li data-i18n="실시간_후처리_및_시각화_시뮬레이션_진행_중_실시간_분석_및_포토리얼리스틱_렌더링_기능_제공"><strong>실시간 후처리 및 시각화</strong>: 시뮬레이션 진행 중 실시간 분석 및 포토리얼리스틱 렌더링 기능 제공.</li>
+</ul>
+</li>
+<li data-i18n="주요_구성_요소_m_star_pre_시뮬레이션_설정을_위한_그래픽_사용자_인터페이스_gui_형상_불러오기_물리_모델_설정_경계_조건_정의_솔버_파라미터_입력_등을_수행_m_star_solve_핵심_솔버_엔진_gpu에서_lbm_및_관련_물리_모델_계산_수행_m_star_post_시뮬레이션_결과_시각화_및_분석을_위한_gui_도구_paraview_기반으로_다양한_후처리_기능_제공_python_api_시뮬레이션_설정_실행_후처리_자동화_및_사용자_정의_기능_확장을_위한_파이썬_인터페이스_제공"><strong>주요 구성 요소</strong>:
                     <ul class="list-disc pl-4">
-                        <li><strong>M-STAR Pre</strong>: 시뮬레이션 설정을 위한 그래픽 사용자 인터페이스(GUI). 형상 불러오기, 물리 모델 설정, 경계 조건 정의, 솔버 파라미터 입력 등을 수행.</li>
-                        <li><strong>M-STAR Solve</strong>: 핵심 솔버 엔진. GPU에서 LBM 및 관련 물리 모델 계산 수행.</li>
-                        <li><strong>M-STAR Post</strong>: 시뮬레이션 결과 시각화 및 분석을 위한 GUI 도구. ParaView 기반으로 다양한 후처리 기능 제공.</li>
-                        <li><strong>Python API</strong>: 시뮬레이션 설정, 실행, 후처리 자동화 및 사용자 정의 기능 확장을 위한 파이썬 인터페이스 제공.</li>
-                    </ul>
-                </li>
-                <li><strong>응용 분야 (최신 사례 포함)</strong>:
+<li data-i18n="m_star_pre_시뮬레이션_설정을_위한_그래픽_사용자_인터페이스_gui_형상_불러오기_물리_모델_설정_경계_조건_정의_솔버_파라미터_입력_등을_수행"><strong>M-STAR Pre</strong>: 시뮬레이션 설정을 위한 그래픽 사용자 인터페이스(GUI). 형상 불러오기, 물리 모델 설정, 경계 조건 정의, 솔버 파라미터 입력 등을 수행.</li>
+<li data-i18n="m_star_solve_핵심_솔버_엔진_gpu에서_lbm_및_관련_물리_모델_계산_수행"><strong>M-STAR Solve</strong>: 핵심 솔버 엔진. GPU에서 LBM 및 관련 물리 모델 계산 수행.</li>
+<li data-i18n="m_star_post_시뮬레이션_결과_시각화_및_분석을_위한_gui_도구_paraview_기반으로_다양한_후처리_기능_제공"><strong>M-STAR Post</strong>: 시뮬레이션 결과 시각화 및 분석을 위한 GUI 도구. ParaView 기반으로 다양한 후처리 기능 제공.</li>
+<li data-i18n="python_api_시뮬레이션_설정_실행_후처리_자동화_및_사용자_정의_기능_확장을_위한_파이썬_인터페이스_제공"><strong>Python API</strong>: 시뮬레이션 설정, 실행, 후처리 자동화 및 사용자 정의 기능 확장을 위한 파이썬 인터페이스 제공.</li>
+</ul>
+</li>
+<li data-i18n="응용_분야_최신_사례_포함_바이오리액터_및_교반_탱크_혼합_효율_전단_응력_분포_가스_액체_전달_kla_입자_부유_및_분포_스케일업_스케일다운_연구_특히_제약_대기업_abbvie_pfizer_bristol_myers_squibb_등_에서_대규모_바이오프로세스_최적화_혼합_산소_전달_등_백신_개발_대사공정_분석을_위한_디지털_트윈_구축에_활발히_적용_화학_공업_반응기_설계_결정화_공정_유동층_반응기_핵폐기물_처리_제약_및_식품_산업_의약품_혼합_시스템_정제_공정_분무_건조_코팅_업스트림_바이오파마_공정_자유_표면_유동_슬로싱_sloshing_충전_배출_공정_댐_붕괴_입자_유체_시스템_cfd_dem_고체_입자_수송_침식_필터링_기타_대규모_혼합_및_대류_지배_시스템_복잡한_다상_유동_문제"><strong>응용 분야 (최신 사례 포함)</strong>:
                     <ul class="list-disc pl-4">
-                        <li><strong>바이오리액터 및 교반 탱크</strong>: 혼합 효율, 전단 응력 분포, 가스-액체 전달(kLa), 입자 부유 및 분포, 스케일업/스케일다운 연구. 특히 제약 대기업(AbbVie, Pfizer, Bristol Myers Squibb 등)에서 대규모 바이오프로세스 최적화(혼합, 산소 전달 등), 백신 개발, 대사공정 분석을 위한 디지털 트윈 구축에 활발히 적용.</li>
-                        <li><strong>화학 공업</strong>: 반응기 설계, 결정화 공정, 유동층 반응기, 핵폐기물 처리.</li>
-                        <li><strong>제약 및 식품 산업</strong>: 의약품 혼합 시스템, 정제 공정, 분무 건조, 코팅, 업스트림 바이오파마 공정.</li>
-                        <li><strong>자유 표면 유동</strong>: 슬로싱(sloshing), 충전/배출 공정, 댐 붕괴.</li>
-                        <li><strong>입자-유체 시스템 (CFD-DEM)</strong>: 고체 입자 수송, 침식, 필터링.</li>
-                        <li>기타 대규모 혼합 및 대류 지배 시스템, 복잡한 다상 유동 문제.</li>
-                    </ul>
-                </li>
-                <li><strong>타 소프트웨어와의 비교</strong>: 전통적인 FVM 기반 CFD 소프트웨어(예: Ansys Fluent, OpenFOAM)와 비교 시, M-STAR CFD는 Lattice Boltzmann Method(LBM)와 GPU 가속에 특화되어 대규모 다상 유동 및 입자 시스템, 특히 교반 탱크와 같은 복잡한 혼합 공정에서 매우 빠른 계산 속도와 간소화된 전처리(무메쉬 또는 간소화된 메쉬) 과정을 제공합니다. 이는 복잡한 형상 처리와 비정상 LES 해석에서 강점을 보입니다.</li>
-            </ul>
-            <div class="my-6 responsive-iframe-container">
-                <iframe src="https://www.youtube.com/embed/I8hmnl2wpt0" title="YouTube video player: Agitated Tank Demonstration Using M-Star CFD" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <p class="text-sm text-gray-600 mt-2 italic text-center">M-STAR CFD를 이용한 교반 탱크 시뮬레이션 데모 영상 (출처: M-Star CFD YouTube)</p>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">더 읽을거리</h3>
-            <ul class="list-disc pl-5 space-y-1 text-sm">
-                <li><a href="https://mstarcfd.com/" target="_blank" rel="noopener noreferrer">M-STAR CFD 공식 웹사이트</a></li>
-                <li><a href="https://docs.mstarcfd.com/" target="_blank" rel="noopener noreferrer">M-STAR CFD 공식 문서</a></li>
-                <li><a href="https://mstarcfd.com/news/" target="_blank" rel="noopener noreferrer">M-STAR CFD 뉴스 (최신 업데이트 및 적용 사례)</a></li>
-                <li><a href="https://www.dotmatics.com/" target="_blank" rel="noopener noreferrer">Dotmatics 공식 웹사이트 (인수 관련 정보)</a></li>
-            </ul>
-
-        </article>
-        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+<li data-i18n="바이오리액터_및_교반_탱크_혼합_효율_전단_응력_분포_가스_액체_전달_kla_입자_부유_및_분포_스케일업_스케일다운_연구_특히_제약_대기업_abbvie_pfizer_bristol_myers_squibb_등_에서_대규모_바이오프로세스_최적화_혼합_산소_전달_등_백신_개발_대사공정_분석을_위한_디지털_트윈_구축에_활발히_적용"><strong>바이오리액터 및 교반 탱크</strong>: 혼합 효율, 전단 응력 분포, 가스-액체 전달(kLa), 입자 부유 및 분포, 스케일업/스케일다운 연구. 특히 제약 대기업(AbbVie, Pfizer, Bristol Myers Squibb 등)에서 대규모 바이오프로세스 최적화(혼합, 산소 전달 등), 백신 개발, 대사공정 분석을 위한 디지털 트윈 구축에 활발히 적용.</li>
+<li data-i18n="화학_공업_반응기_설계_결정화_공정_유동층_반응기_핵폐기물_처리"><strong>화학 공업</strong>: 반응기 설계, 결정화 공정, 유동층 반응기, 핵폐기물 처리.</li>
+<li data-i18n="제약_및_식품_산업_의약품_혼합_시스템_정제_공정_분무_건조_코팅_업스트림_바이오파마_공정"><strong>제약 및 식품 산업</strong>: 의약품 혼합 시스템, 정제 공정, 분무 건조, 코팅, 업스트림 바이오파마 공정.</li>
+<li data-i18n="자유_표면_유동_슬로싱_sloshing_충전_배출_공정_댐_붕괴"><strong>자유 표면 유동</strong>: 슬로싱(sloshing), 충전/배출 공정, 댐 붕괴.</li>
+<li data-i18n="입자_유체_시스템_cfd_dem_고체_입자_수송_침식_필터링"><strong>입자-유체 시스템 (CFD-DEM)</strong>: 고체 입자 수송, 침식, 필터링.</li>
+<li data-i18n="기타_대규모_혼합_및_대류_지배_시스템_복잡한_다상_유동_문제">기타 대규모 혼합 및 대류 지배 시스템, 복잡한 다상 유동 문제.</li>
+</ul>
+</li>
+<li data-i18n="타_소프트웨어와의_비교_전통적인_fvm_기반_cfd_소프트웨어_예_ansys_fluent_openfoam_와_비교_시_m_star_cfd는_lattice_boltzmann_method_lbm_와_gpu_가속에_특화되어_대규모_다상_유동_및_입자_시스템_특히_교반_탱크와_같은_복잡한_혼합_공정에서_매우_빠른_계산_속도와_간소화된_전처리_무메쉬_또는_간소화된_메쉬_과정을_제공합니다_이는_복잡한_형상_처리와_비정상_les_해석에서_강점을_보입니다"><strong>타 소프트웨어와의 비교</strong>: 전통적인 FVM 기반 CFD 소프트웨어(예: Ansys Fluent, OpenFOAM)와 비교 시, M-STAR CFD는 Lattice Boltzmann Method(LBM)와 GPU 가속에 특화되어 대규모 다상 유동 및 입자 시스템, 특히 교반 탱크와 같은 복잡한 혼합 공정에서 매우 빠른 계산 속도와 간소화된 전처리(무메쉬 또는 간소화된 메쉬) 과정을 제공합니다. 이는 복잡한 형상 처리와 비정상 LES 해석에서 강점을 보입니다.</li>
+</ul>
+<div class="my-6 responsive-iframe-container">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" data-i18n="youtube_video_player_agitated_tank_demonstration_using_m_star_cfd" src="https://www.youtube.com/embed/I8hmnl2wpt0" title="YouTube video player: Agitated Tank Demonstration Using M-Star CFD"></iframe>
+</div>
+<p class="text-sm text-gray-600 mt-2 italic text-center" data-i18n="m_star_cfd를_이용한_교반_탱크_시뮬레이션_데모_영상_출처_m_star_cfd_youtube">M-STAR CFD를 이용한 교반 탱크 시뮬레이션 데모 영상 (출처: M-Star CFD YouTube)</p>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="더_읽을거리">더 읽을거리</h3>
+<ul class="list-disc pl-5 space-y-1 text-sm">
+<li data-i18n="m_star_cfd_공식_웹사이트"><a data-i18n="m_star_cfd_공식_웹사이트" href="https://mstarcfd.com/" rel="noopener noreferrer" target="_blank">M-STAR CFD 공식 웹사이트</a></li>
+<li data-i18n="m_star_cfd_공식_문서"><a data-i18n="m_star_cfd_공식_문서" href="https://docs.mstarcfd.com/" rel="noopener noreferrer" target="_blank">M-STAR CFD 공식 문서</a></li>
+<li data-i18n="m_star_cfd_뉴스_최신_업데이트_및_적용_사례"><a data-i18n="m_star_cfd_뉴스_최신_업데이트_및_적용_사례" href="https://mstarcfd.com/news/" rel="noopener noreferrer" target="_blank">M-STAR CFD 뉴스 (최신 업데이트 및 적용 사례)</a></li>
+<li data-i18n="dotmatics_공식_웹사이트_인수_관련_정보"><a data-i18n="dotmatics_공식_웹사이트_인수_관련_정보" href="https://www.dotmatics.com/" rel="noopener noreferrer" target="_blank">Dotmatics 공식 웹사이트 (인수 관련 정보)</a></li>
+</ul>
+</article>
+<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,81 +1,78 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>최신 연구 동향 - 공정 최적화 | 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_proc_opt_trends_main">최신 연구 동향 - 공정 최적화 | 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-gray-800 flex flex-col min-h-screen">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-slate-800 mb-2 sm:mb-0">
-                    <a href="index.html" class="block no-underline hover:no-underline">
-                        <span class="block text-2xl lg:text-3xl font-bold text-slate-800">생물공학연구실</span>
-                        <span class="block text-sm lg:text-base font-normal text-gray-500 mt-1">Bioprocess Engineering Laboratory</span>
-                    </a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
-            <article class="prose max-w-none">
-                <h1>최신 연구 동향 (Latest Research Trends)</h1>
-                <p>공정 최적화 분야의 최신 연구 성과, 산업 및 학술 동향을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.</p>
-                <ul>
-                    <li><a href="proc_opt_trends_publications_patents.html">주요 연구 성과 (Publications & Patents)</a></li>
-                    <li><a href="proc_opt_trends_industry_academic.html">최근 산업 및 학술 동향 (Industry & Academic Trends)</a></li>
-                </ul>
-                <div class="mt-12 p-6 bg-blue-50 border border-blue-200 rounded-lg">
-                    <h2 class="text-2xl font-semibold text-blue-700 mb-3">콘텐츠 준비 중</h2>
-                    <p class="text-gray-700">최신 연구 동향에 대한 상세 내용이 곧 업데이트될 예정입니다.</p>
-                </div>
-            </article>
-        </div>
-         <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실bioprocess_engineering_laboratory검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실bioprocess_engineering_laboratory검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실bioprocess_engineering_laboratory검색_뭐든_물어봐">
+<h1 class="text-slate-800 mb-2 sm:mb-0" data-i18n="생물공학연구실bioprocess_engineering_laboratory">
+<a class="block no-underline hover:no-underline" data-i18n="생물공학연구실bioprocess_engineering_laboratory" href="index.html">
+<span class="block text-2xl lg:text-3xl font-bold text-slate-800" data-i18n="생물공학연구실">생물공학연구실</span>
+<span class="block text-sm lg:text-base font-normal text-gray-500 mt-1" data-i18n="bioprocess_engineering_laboratory">Bioprocess Engineering Laboratory</span>
+</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg" data-i18n="최신_연구_동향_latest_research_trends_공정_최적화_분야의_최신_연구_성과_산업_및_학술_동향을_소개합니다_하위_메뉴에서_더_자세한_내용을_확인하실_수_있습니다_주요_연구_성과_publications_patents_최근_산업_및_학술_동향_industry_academic_trends_콘텐츠_준비_중최신_연구_동향에_대한_상세_내용이_곧_업데이트될_예정입니다">
+<article class="prose max-w-none">
+<h1 data-i18n="최신_연구_동향_latest_research_trends">최신 연구 동향 (Latest Research Trends)</h1>
+<p data-i18n="공정_최적화_분야의_최신_연구_성과_산업_및_학술_동향을_소개합니다_하위_메뉴에서_더_자세한_내용을_확인하실_수_있습니다">공정 최적화 분야의 최신 연구 성과, 산업 및 학술 동향을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.</p>
+<ul>
+<li data-i18n="주요_연구_성과_publications_patents"><a data-i18n="주요_연구_성과_publications_patents" href="proc_opt_trends_publications_patents.html">주요 연구 성과 (Publications &amp; Patents)</a></li>
+<li data-i18n="최근_산업_및_학술_동향_industry_academic_trends"><a data-i18n="최근_산업_및_학술_동향_industry_academic_trends" href="proc_opt_trends_industry_academic.html">최근 산업 및 학술 동향 (Industry &amp; Academic Trends)</a></li>
+</ul>
+<div class="mt-12 p-6 bg-blue-50 border border-blue-200 rounded-lg" data-i18n="콘텐츠_준비_중최신_연구_동향에_대한_상세_내용이_곧_업데이트될_예정입니다">
+<h2 class="text-2xl font-semibold text-blue-700 mb-3" data-i18n="콘텐츠_준비_중">콘텐츠 준비 중</h2>
+<p class="text-gray-700" data-i18n="최신_연구_동향에_대한_상세_내용이_곧_업데이트될_예정입니다">최신 연구 동향에 대한 상세 내용이 곧 업데이트될 예정입니다.</p>
+</div>
+</article>
+</div>
+<div class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

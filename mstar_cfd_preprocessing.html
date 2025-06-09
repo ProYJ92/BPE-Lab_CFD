@@ -1,104 +1,97 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M-STAR CFD 전처리 - 소프트웨어 | 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_mstar_cfd_preprocessing">M-STAR CFD 전처리 - 소프트웨어 | 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
-                    <a href="index.html">생물공학연구실</a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="container mx-auto px-4 mt-5 py-12">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-            <div class="mb-8">
-                <a href="mstar_cfd_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; M-STAR CFD 메인으로 돌아가기</a>
-            </div>
-            
-            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">3. 전처리 (Pre-processing)</h2>
-            <p>M-STAR CFD의 전처리 과정은 기존 유한 체적법(Finite Volume Method, FVM) 기반 CFD 소프트웨어와 비교하여 중요한 차이점을 가집니다. LBM(Lattice Boltzmann Method)과 IBM(Immersed Boundary Method)의 특성을 활용하여, 복잡한 <strong>체적 격자 생성(volume meshing) 단계가 거의 필요 없거나 대폭 간소화</strong>됩니다. 이는 전처리 작업에 소요되는 시간과 노력을 크게 줄이는 M-STAR CFD의 주요 장점 중 하나입니다.</p>
-            
-            <figure class="embedded-image-figure">
-                <img src="https://mstarcfd.com/wp-content/uploads/defineGeom-1024x543.png" alt="M-STAR Pre 형상 정의" class="max-w-xl">
-                <figcaption>M-STAR Pre GUI에서 형상을 정의하고 설정하는 과정 (출처: mstarcfd.com)</figcaption>
-            </figure>
-
-            <ul>
-                <li><strong>주요 전처리 방식 및 특징:</strong>
-                    <ul class="list-disc pl-4 space-y-1">
-                        <li><strong>CAD 형상 직접 활용</strong>: 표준 3D CAD 파일 형식(예: STL, STEP, IGES, Parasolid 등)을 직접 불러와 사용할 수 있습니다. M-STAR CFD는 어느 정도의 CAD 품질 문제(예: 작은 틈, 비다양체 형상)에 대해 비교적 관대한 편이며, 복잡한 형상 정리 작업 없이도 시뮬레이션을 진행할 수 있는 경우가 많습니다.</li>
-                        <li><strong>내장 형상 생성 도구</strong>: M-STAR Pre GUI 내에는 기본적인 형상(실린더, 박스 등) 생성 기능 및 표준 교반 탱크, 임펠러, 배플, 배관 등의 파라메트릭 형상 카탈로그가 포함되어 있어, 사용자가 직접 동적으로 형상을 생성하고 조합할 수 있습니다.</li>
-                        <li><strong>Immersed Boundary Method (IBM)</strong>: 복잡하거나 움직이는 고체 경계를 격자 내에 효과적으로 임베딩하여 처리합니다. 이로 인해 경계면에 정확히 일치하는 체적 격자를 생성할 필요 없이, 단순한 직교 격자(Cartesian grid) 기반으로 시뮬레이션이 가능합니다.</li>
-                        <li><strong>M-STAR Pre GUI</strong>: 전처리 작업은 주로 M-STAR Pre 그래픽 사용자 인터페이스를 통해 이루어집니다. 사용자는 모델 트리(model tree)를 구성하여 시뮬레이션 도메인, 유체 정의, 고체 형상(STL 파일 로드 또는 생성), 경계 조건, 물리 모델, 솔버 파라미터 등을 단계별로 설정합니다.</li>
-                        <li><strong>격자 해상도 설정</strong>: 체적 격자 생성은 없지만, 전체 계산 도메인에 대한 격자 해상도(Lattice Resolution)는 사용자가 정의합니다. 이는 시뮬레이션의 정확도와 계산 시간에 직접적인 영향을 미칩니다. 국소적으로 격자 해상도를 높이는 기능(Local Refinement Zones)도 지원될 수 있습니다.</li>
-                        <li><strong>사용자 정의 함수 (UDFs) 및 물성 정의</strong>: Python API를 통해 사용자 정의 경계 조건, 물리 모델, 초기 조건 등을 구현하거나, 다양한 유체 물성(점도, 밀도 등, 뉴턴/비뉴턴 유체 포함)을 정의할 수 있습니다.</li>
-                    </ul>
-                </li>
-                <li><strong>전처리 목표 및 장점:</strong>
-                    <ul class="list-disc pl-4 space-y-1">
-                        <li>복잡한 형상에 대한 격자 생성 및 수정에 소요되는 시간과 전문 지식 요구 수준 최소화.</li>
-                        <li>사용자가 물리 모델링, 시뮬레이션 파라미터 설정, 결과 분석 등 핵심적인 엔지니어링 작업에 더 집중할 수 있도록 지원.</li>
-                        <li>설계 변경에 따른 신속한 재해석(Rapid Re-simulation) 가능.</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>M-STAR CFD의 전처리 과정은 자동화 수준이 높고 사용자 친화적으로 설계되어, CFD 경험이 상대적으로 적은 사용자도 비교적 쉽게 접근할 수 있도록 돕습니다.</p>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">참고 자료</h3>
-            <ul class="list-disc pl-5 space-y-1 text-sm">
-                <li><a href="https://docs.mstarcfd.com/3_M-Star_Pre/txt-files/M-Star-Pre-index.html" target="_blank" rel="noopener noreferrer">M-STAR CFD Official Documentation - M-Star Pre</a></li>
-                <li>M-STAR CFD 튜토리얼 및 웨비나 자료 (공식 웹사이트 제공)</li>
-            </ul>
-
-        </article>
-        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
+<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="container mx-auto px-4 mt-5 py-12">
+<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+<div class="mb-8" data-i18n="m_star_cfd_메인으로_돌아가기">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="m_star_cfd_메인으로_돌아가기" href="mstar_cfd_main.html">« M-STAR CFD 메인으로 돌아가기</a>
+</div>
+<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="3_전처리_pre_processing">3. 전처리 (Pre-processing)</h2>
+<p data-i18n="m_star_cfd의_전처리_과정은_기존_유한_체적법_finite_volume_method_fvm_기반_cfd_소프트웨어와_비교하여_중요한_차이점을_가집니다_lbm_lattice_boltzmann_method_과_ibm_immersed_boundary_method_의_특성을_활용하여_복잡한체적_격자_생성_volume_meshing_단계가_거의_필요_없거나_대폭_간소화됩니다_이는_전처리_작업에_소요되는_시간과_노력을_크게_줄이는_m_star_cfd의_주요_장점_중_하나입니다">M-STAR CFD의 전처리 과정은 기존 유한 체적법(Finite Volume Method, FVM) 기반 CFD 소프트웨어와 비교하여 중요한 차이점을 가집니다. LBM(Lattice Boltzmann Method)과 IBM(Immersed Boundary Method)의 특성을 활용하여, 복잡한 <strong>체적 격자 생성(volume meshing) 단계가 거의 필요 없거나 대폭 간소화</strong>됩니다. 이는 전처리 작업에 소요되는 시간과 노력을 크게 줄이는 M-STAR CFD의 주요 장점 중 하나입니다.</p>
+<figure class="embedded-image-figure">
+<img alt="M-STAR Pre 형상 정의" class="max-w-xl" data-i18n="m_star_pre_형상_정의" src="https://mstarcfd.com/wp-content/uploads/defineGeom-1024x543.png"/>
+<figcaption>M-STAR Pre GUI에서 형상을 정의하고 설정하는 과정 (출처: mstarcfd.com)</figcaption>
+</figure>
+<ul>
+<li data-i18n="주요_전처리_방식_및_특징_cad_형상_직접_활용_표준_3d_cad_파일_형식_예_stl_step_iges_parasolid_등_을_직접_불러와_사용할_수_있습니다_m_star_cfd는_어느_정도의_cad_품질_문제_예_작은_틈_비다양체_형상_에_대해_비교적_관대한_편이며_복잡한_형상_정리_작업_없이도_시뮬레이션을_진행할_수_있는_경우가_많습니다_내장_형상_생성_도구_m_star_pre_gui_내에는_기본적인_형상_실린더_박스_등_생성_기능_및_표준_교반_탱크_임펠러_배플_배관_등의_파라메트릭_형상_카탈로그가_포함되어_있어_사용자가_직접_동적으로_형상을_생성하고_조합할_수_있습니다_immersed_boundary_method_ibm_복잡하거나_움직이는_고체_경계를_격자_내에_효과적으로_임베딩하여_처리합니다_이로_인해_경계면에_정확히_일치하는_체적_격자를_생성할_필요_없이_단순한_직교_격자_cartesian_grid_기반으로_시뮬레이션이_가능합니다_m_star_pre_gui_전처리_작업은_주로_m_star_pre_그래픽_사용자_인터페이스를_통해_이루어집니다_사용자는_모델_트리_model_tree_를_구성하여_시뮬레이션_도메인_유체_정의_고체_형상_stl_파일_로드_또는_생성_경계_조건_물리_모델_솔버_파라미터_등을_단계별로_설정합니다_격자_해상도_설정_체적_격자_생성은_없지만_전체_계산_도메인에_대한_격자_해상도_lattice_resolution_는_사용자가_정의합니다_이는_시뮬레이션의_정확도와_계산_시간에_직접적인_영향을_미칩니다_국소적으로_격자_해상도를_높이는_기능_local_refinement_zones_도_지원될_수_있습니다_사용자_정의_함수_udfs_및_물성_정의_python_api를_통해_사용자_정의_경계_조건_물리_모델_초기_조건_등을_구현하거나_다양한_유체_물성_점도_밀도_등_뉴턴_비뉴턴_유체_포함_을_정의할_수_있습니다"><strong>주요 전처리 방식 및 특징:</strong>
+<ul class="list-disc pl-4 space-y-1">
+<li data-i18n="cad_형상_직접_활용_표준_3d_cad_파일_형식_예_stl_step_iges_parasolid_등_을_직접_불러와_사용할_수_있습니다_m_star_cfd는_어느_정도의_cad_품질_문제_예_작은_틈_비다양체_형상_에_대해_비교적_관대한_편이며_복잡한_형상_정리_작업_없이도_시뮬레이션을_진행할_수_있는_경우가_많습니다"><strong>CAD 형상 직접 활용</strong>: 표준 3D CAD 파일 형식(예: STL, STEP, IGES, Parasolid 등)을 직접 불러와 사용할 수 있습니다. M-STAR CFD는 어느 정도의 CAD 품질 문제(예: 작은 틈, 비다양체 형상)에 대해 비교적 관대한 편이며, 복잡한 형상 정리 작업 없이도 시뮬레이션을 진행할 수 있는 경우가 많습니다.</li>
+<li data-i18n="내장_형상_생성_도구_m_star_pre_gui_내에는_기본적인_형상_실린더_박스_등_생성_기능_및_표준_교반_탱크_임펠러_배플_배관_등의_파라메트릭_형상_카탈로그가_포함되어_있어_사용자가_직접_동적으로_형상을_생성하고_조합할_수_있습니다"><strong>내장 형상 생성 도구</strong>: M-STAR Pre GUI 내에는 기본적인 형상(실린더, 박스 등) 생성 기능 및 표준 교반 탱크, 임펠러, 배플, 배관 등의 파라메트릭 형상 카탈로그가 포함되어 있어, 사용자가 직접 동적으로 형상을 생성하고 조합할 수 있습니다.</li>
+<li data-i18n="immersed_boundary_method_ibm_복잡하거나_움직이는_고체_경계를_격자_내에_효과적으로_임베딩하여_처리합니다_이로_인해_경계면에_정확히_일치하는_체적_격자를_생성할_필요_없이_단순한_직교_격자_cartesian_grid_기반으로_시뮬레이션이_가능합니다"><strong>Immersed Boundary Method (IBM)</strong>: 복잡하거나 움직이는 고체 경계를 격자 내에 효과적으로 임베딩하여 처리합니다. 이로 인해 경계면에 정확히 일치하는 체적 격자를 생성할 필요 없이, 단순한 직교 격자(Cartesian grid) 기반으로 시뮬레이션이 가능합니다.</li>
+<li data-i18n="m_star_pre_gui_전처리_작업은_주로_m_star_pre_그래픽_사용자_인터페이스를_통해_이루어집니다_사용자는_모델_트리_model_tree_를_구성하여_시뮬레이션_도메인_유체_정의_고체_형상_stl_파일_로드_또는_생성_경계_조건_물리_모델_솔버_파라미터_등을_단계별로_설정합니다"><strong>M-STAR Pre GUI</strong>: 전처리 작업은 주로 M-STAR Pre 그래픽 사용자 인터페이스를 통해 이루어집니다. 사용자는 모델 트리(model tree)를 구성하여 시뮬레이션 도메인, 유체 정의, 고체 형상(STL 파일 로드 또는 생성), 경계 조건, 물리 모델, 솔버 파라미터 등을 단계별로 설정합니다.</li>
+<li data-i18n="격자_해상도_설정_체적_격자_생성은_없지만_전체_계산_도메인에_대한_격자_해상도_lattice_resolution_는_사용자가_정의합니다_이는_시뮬레이션의_정확도와_계산_시간에_직접적인_영향을_미칩니다_국소적으로_격자_해상도를_높이는_기능_local_refinement_zones_도_지원될_수_있습니다"><strong>격자 해상도 설정</strong>: 체적 격자 생성은 없지만, 전체 계산 도메인에 대한 격자 해상도(Lattice Resolution)는 사용자가 정의합니다. 이는 시뮬레이션의 정확도와 계산 시간에 직접적인 영향을 미칩니다. 국소적으로 격자 해상도를 높이는 기능(Local Refinement Zones)도 지원될 수 있습니다.</li>
+<li data-i18n="사용자_정의_함수_udfs_및_물성_정의_python_api를_통해_사용자_정의_경계_조건_물리_모델_초기_조건_등을_구현하거나_다양한_유체_물성_점도_밀도_등_뉴턴_비뉴턴_유체_포함_을_정의할_수_있습니다"><strong>사용자 정의 함수 (UDFs) 및 물성 정의</strong>: Python API를 통해 사용자 정의 경계 조건, 물리 모델, 초기 조건 등을 구현하거나, 다양한 유체 물성(점도, 밀도 등, 뉴턴/비뉴턴 유체 포함)을 정의할 수 있습니다.</li>
+</ul>
+</li>
+<li data-i18n="전처리_목표_및_장점_복잡한_형상에_대한_격자_생성_및_수정에_소요되는_시간과_전문_지식_요구_수준_최소화_사용자가_물리_모델링_시뮬레이션_파라미터_설정_결과_분석_등_핵심적인_엔지니어링_작업에_더_집중할_수_있도록_지원_설계_변경에_따른_신속한_재해석_rapid_re_simulation_가능"><strong>전처리 목표 및 장점:</strong>
+<ul class="list-disc pl-4 space-y-1">
+<li data-i18n="복잡한_형상에_대한_격자_생성_및_수정에_소요되는_시간과_전문_지식_요구_수준_최소화">복잡한 형상에 대한 격자 생성 및 수정에 소요되는 시간과 전문 지식 요구 수준 최소화.</li>
+<li data-i18n="사용자가_물리_모델링_시뮬레이션_파라미터_설정_결과_분석_등_핵심적인_엔지니어링_작업에_더_집중할_수_있도록_지원">사용자가 물리 모델링, 시뮬레이션 파라미터 설정, 결과 분석 등 핵심적인 엔지니어링 작업에 더 집중할 수 있도록 지원.</li>
+<li data-i18n="설계_변경에_따른_신속한_재해석_rapid_re_simulation_가능">설계 변경에 따른 신속한 재해석(Rapid Re-simulation) 가능.</li>
+</ul>
+</li>
+</ul>
+<p data-i18n="m_star_cfd의_전처리_과정은_자동화_수준이_높고_사용자_친화적으로_설계되어_cfd_경험이_상대적으로_적은_사용자도_비교적_쉽게_접근할_수_있도록_돕습니다">M-STAR CFD의 전처리 과정은 자동화 수준이 높고 사용자 친화적으로 설계되어, CFD 경험이 상대적으로 적은 사용자도 비교적 쉽게 접근할 수 있도록 돕습니다.</p>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="참고_자료">참고 자료</h3>
+<ul class="list-disc pl-5 space-y-1 text-sm">
+<li data-i18n="m_star_cfd_official_documentation_m_star_pre"><a data-i18n="m_star_cfd_official_documentation_m_star_pre" href="https://docs.mstarcfd.com/3_M-Star_Pre/txt-files/M-Star-Pre-index.html" rel="noopener noreferrer" target="_blank">M-STAR CFD Official Documentation - M-Star Pre</a></li>
+<li data-i18n="m_star_cfd_튜토리얼_및_웨비나_자료_공식_웹사이트_제공">M-STAR CFD 튜토리얼 및 웨비나 자료 (공식 웹사이트 제공)</li>
+</ul>
+</article>
+<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

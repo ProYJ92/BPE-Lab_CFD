@@ -1,129 +1,120 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenFOAM 솔버 - 소프트웨어 | 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_openfoam_solver">OpenFOAM 솔버 - 소프트웨어 | 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
-                    <a href="index.html">생물공학연구실</a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="container mx-auto px-4 mt-5 py-12">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-            <div class="mb-8">
-                <a href="openfoam_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; OpenFOAM 메인으로 돌아가기</a>
-            </div>
-            
-            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">4. 솔버 (Solver)</h2>
-            <p>OpenFOAM은 C++ 기반으로 개발된 수백 가지의 다양한 표준 솔버(solver applications)를 제공하며, 사용자는 풀고자 하는 특정 물리 문제에 가장 적합한 솔버를 선택하여 사용합니다. 또한, OpenFOAM의 객체 지향적 라이브러리 구조는 사용자가 기존 솔버를 수정하거나 새로운 솔버를 개발하는 것을 용이하게 합니다.</p>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">솔버 선택</h3>
-            <p>해석하고자 하는 문제 유형(예: 비압축성 층류 유동, 압축성 난류 유동, 다상 유동, 열 전달, 화학 반응 등)에 따라 적절한 솔버 애플리케이션을 선택해야 합니다. 주요 솔버 카테고리는 다음과 같습니다:</p>
-            <ul class="list-disc pl-5 space-y-1">
-                <li><strong>Incompressible Flow Solvers</strong>: 예) <code>icoFoam</code> (비압축성, 층류, 비정상), <code>simpleFoam</code> (비압축성, 정상, RANS 난류), <code>pisoFoam</code> (비압축성, 비정상, RANS/LES 난류)</li>
-                <li><strong>Compressible Flow Solvers</strong>: 예) <code>rhoCentralFoam</code> (밀도 기반, 압축성, RANS/LES), <code>sonicFoam</code> (압축성, 천음속/초음속, RANS)</li>
-                <li><strong>Multiphase Flow Solvers</strong>: 예) <code>interFoam</code> (2상 비압축성, VOF 계면 추적), <code>twoPhaseEulerFoam</code> (2상, 오일러-오일러)</li>
-                <li><strong>Heat Transfer and Combustion Solvers</strong>: 예) <code>chtMultiRegionFoam</code> (공액 열전달), <code>reactingFoam</code> (화학 반응 및 연소)</li>
-                <li><strong>Lagrangian Solvers</strong>: 입자 추적 관련 솔버</li>
-                <li><strong>Electromagnetics, Solid Mechanics Solvers</strong> 등</li>
-            </ul>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">솔버 설정 파일 (<code>system/</code> 디렉토리)</h3>
-            <p>선택된 솔버의 수치 해법, 시간 제어, 선형 시스템 솔버 설정, 알고리즘 제어 등은 케이스 디렉토리 내 <code>system/</code> 폴더의 주요 설정 파일에서 제어됩니다:</p>
-            <ul class="list-disc pl-5 space-y-2">
-                <li><strong><code>controlDict</code></strong>: 시뮬레이션의 전반적인 제어를 담당합니다.
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
+<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="container mx-auto px-4 mt-5 py-12">
+<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+<div class="mb-8" data-i18n="openfoam_메인으로_돌아가기">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="openfoam_메인으로_돌아가기" href="openfoam_main.html">« OpenFOAM 메인으로 돌아가기</a>
+</div>
+<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="4_솔버_solver">4. 솔버 (Solver)</h2>
+<p data-i18n="openfoam은_c_기반으로_개발된_수백_가지의_다양한_표준_솔버_solver_applications_를_제공하며_사용자는_풀고자_하는_특정_물리_문제에_가장_적합한_솔버를_선택하여_사용합니다_또한_openfoam의_객체_지향적_라이브러리_구조는_사용자가_기존_솔버를_수정하거나_새로운_솔버를_개발하는_것을_용이하게_합니다">OpenFOAM은 C++ 기반으로 개발된 수백 가지의 다양한 표준 솔버(solver applications)를 제공하며, 사용자는 풀고자 하는 특정 물리 문제에 가장 적합한 솔버를 선택하여 사용합니다. 또한, OpenFOAM의 객체 지향적 라이브러리 구조는 사용자가 기존 솔버를 수정하거나 새로운 솔버를 개발하는 것을 용이하게 합니다.</p>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="솔버_선택">솔버 선택</h3>
+<p data-i18n="해석하고자_하는_문제_유형_예_비압축성_층류_유동_압축성_난류_유동_다상_유동_열_전달_화학_반응_등_에_따라_적절한_솔버_애플리케이션을_선택해야_합니다_주요_솔버_카테고리는_다음과_같습니다">해석하고자 하는 문제 유형(예: 비압축성 층류 유동, 압축성 난류 유동, 다상 유동, 열 전달, 화학 반응 등)에 따라 적절한 솔버 애플리케이션을 선택해야 합니다. 주요 솔버 카테고리는 다음과 같습니다:</p>
+<ul class="list-disc pl-5 space-y-1">
+<li data-i18n="incompressible_flow_solvers_예_icofoam_비압축성_층류_비정상_simplefoam_비압축성_정상_rans_난류_pisofoam_비압축성_비정상_rans_les_난류"><strong>Incompressible Flow Solvers</strong>: 예) <code>icoFoam</code> (비압축성, 층류, 비정상), <code>simpleFoam</code> (비압축성, 정상, RANS 난류), <code>pisoFoam</code> (비압축성, 비정상, RANS/LES 난류)</li>
+<li data-i18n="compressible_flow_solvers_예_rhocentralfoam_밀도_기반_압축성_rans_les_sonicfoam_압축성_천음속_초음속_rans"><strong>Compressible Flow Solvers</strong>: 예) <code>rhoCentralFoam</code> (밀도 기반, 압축성, RANS/LES), <code>sonicFoam</code> (압축성, 천음속/초음속, RANS)</li>
+<li data-i18n="multiphase_flow_solvers_예_interfoam_2상_비압축성_vof_계면_추적_twophaseeulerfoam_2상_오일러_오일러"><strong>Multiphase Flow Solvers</strong>: 예) <code>interFoam</code> (2상 비압축성, VOF 계면 추적), <code>twoPhaseEulerFoam</code> (2상, 오일러-오일러)</li>
+<li data-i18n="heat_transfer_and_combustion_solvers_예_chtmultiregionfoam_공액_열전달_reactingfoam_화학_반응_및_연소"><strong>Heat Transfer and Combustion Solvers</strong>: 예) <code>chtMultiRegionFoam</code> (공액 열전달), <code>reactingFoam</code> (화학 반응 및 연소)</li>
+<li data-i18n="lagrangian_solvers_입자_추적_관련_솔버"><strong>Lagrangian Solvers</strong>: 입자 추적 관련 솔버</li>
+<li data-i18n="electromagnetics_solid_mechanics_solvers등"><strong>Electromagnetics, Solid Mechanics Solvers</strong> 등</li>
+</ul>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="솔버_설정_파일_system_디렉토리">솔버 설정 파일 (<code>system/</code> 디렉토리)</h3>
+<p data-i18n="선택된_솔버의_수치_해법_시간_제어_선형_시스템_솔버_설정_알고리즘_제어_등은_케이스_디렉토리_내system_폴더의_주요_설정_파일에서_제어됩니다">선택된 솔버의 수치 해법, 시간 제어, 선형 시스템 솔버 설정, 알고리즘 제어 등은 케이스 디렉토리 내 <code>system/</code> 폴더의 주요 설정 파일에서 제어됩니다:</p>
+<ul class="list-disc pl-5 space-y-2">
+<li data-i18n="controldict_시뮬레이션의_전반적인_제어를_담당합니다_솔버_애플리케이션_이름_application_시작_시간_starttime_종료_시간_endtime_시간_간격_deltat_데이터_저장_빈도_writeinterval_저장_형식_writeformat_최대_courant_수_maxco_최대_diag_수_maxdi_등_실행_제어function_objects_실행_중_데이터_추출_및_처리_설정"><strong><code>controlDict</code></strong>: 시뮬레이션의 전반적인 제어를 담당합니다.
                     <ul class="list-disc pl-4 mt-1">
-                        <li>솔버 애플리케이션 이름 (<code>application</code>)</li>
-                        <li>시작 시간 (<code>startTime</code>), 종료 시간 (<code>endTime</code>), 시간 간격 (<code>deltaT</code>)</li>
-                        <li>데이터 저장 빈도 (<code>writeInterval</code>), 저장 형식 (<code>writeFormat</code>)</li>
-                        <li>최대 Courant 수 (<code>maxCo</code>), 최대 Diag 수 (<code>maxDi</code>) 등 실행 제어</li>
-                        <li>Function Objects (실행 중 데이터 추출 및 처리) 설정</li>
-                    </ul>
-                </li>
-                <li><strong><code>fvSchemes</code></strong>: 유한 체적법(Finite Volume Method)에서 사용되는 다양한 이산화 스킴(discretization scheme)을 정의합니다.
+<li data-i18n="솔버_애플리케이션_이름_application">솔버 애플리케이션 이름 (<code>application</code>)</li>
+<li data-i18n="시작_시간_starttime_종료_시간_endtime_시간_간격_deltat">시작 시간 (<code>startTime</code>), 종료 시간 (<code>endTime</code>), 시간 간격 (<code>deltaT</code>)</li>
+<li data-i18n="데이터_저장_빈도_writeinterval_저장_형식_writeformat">데이터 저장 빈도 (<code>writeInterval</code>), 저장 형식 (<code>writeFormat</code>)</li>
+<li data-i18n="최대_courant_수_maxco_최대_diag_수_maxdi_등_실행_제어">최대 Courant 수 (<code>maxCo</code>), 최대 Diag 수 (<code>maxDi</code>) 등 실행 제어</li>
+<li data-i18n="function_objects_실행_중_데이터_추출_및_처리_설정">Function Objects (실행 중 데이터 추출 및 처리) 설정</li>
+</ul>
+</li>
+<li data-i18n="fvschemes_유한_체적법_finite_volume_method_에서_사용되는_다양한_이산화_스킴_discretization_scheme_을_정의합니다_시간_미분항_ddtschemes_예_euler_cranknicolson구배항_gradschemes_예_gauss_linear발산항_divschemes_예_gauss_upwind_gauss_linearupwind_gauss_limitedlinear라플라시안항_laplacianschemes_예_gauss_linear_corrected보간_스킴_interpolationschemes_예_linear"><strong><code>fvSchemes</code></strong>: 유한 체적법(Finite Volume Method)에서 사용되는 다양한 이산화 스킴(discretization scheme)을 정의합니다.
                     <ul class="list-disc pl-4 mt-1">
-                        <li>시간 미분항 (<code>ddtSchemes</code>): 예) <code>Euler</code>, <code>CrankNicolson</code></li>
-                        <li>구배항 (<code>gradSchemes</code>): 예) <code>Gauss linear</code></li>
-                        <li>발산항 (<code>divSchemes</code>): 예) <code>Gauss upwind</code>, <code>Gauss linearUpwind</code>, <code>Gauss limitedLinear</code></li>
-                        <li>라플라시안항 (<code>laplacianSchemes</code>): 예) <code>Gauss linear corrected</code></li>
-                        <li>보간 스킴 (<code>interpolationSchemes</code>): 예) <code>linear</code></li>
-                    </ul>
-                </li>
-                <li><strong><code>fvSolution</code></strong>: 이산화된 대수 방정식을 푸는 방법을 제어합니다.
+<li data-i18n="시간_미분항_ddtschemes_예_euler_cranknicolson">시간 미분항 (<code>ddtSchemes</code>): 예) <code>Euler</code>, <code>CrankNicolson</code></li>
+<li data-i18n="구배항_gradschemes_예_gauss_linear">구배항 (<code>gradSchemes</code>): 예) <code>Gauss linear</code></li>
+<li data-i18n="발산항_divschemes_예_gauss_upwind_gauss_linearupwind_gauss_limitedlinear">발산항 (<code>divSchemes</code>): 예) <code>Gauss upwind</code>, <code>Gauss linearUpwind</code>, <code>Gauss limitedLinear</code></li>
+<li data-i18n="라플라시안항_laplacianschemes_예_gauss_linear_corrected">라플라시안항 (<code>laplacianSchemes</code>): 예) <code>Gauss linear corrected</code></li>
+<li data-i18n="보간_스킴_interpolationschemes_예_linear">보간 스킴 (<code>interpolationSchemes</code>): 예) <code>linear</code></li>
+</ul>
+</li>
+<li data-i18n="fvsolution_이산화된_대수_방정식을_푸는_방법을_제어합니다_각_변수_예_p_u_k_epsilon_에_대한_선형_솔버_solver_예비_조건자_preconditioner_허용_오차_tolerance_상대_허용_오차_reltol_설정_예_gamg_pcg_pbicgstab_압력_속도_연계_알고리즘_piso_simple_pimple_등_및_관련_제어_파라미터_설정_언더릴렉세이션_팩터_relaxationfactors_설정_simple_계열_알고리즘_사용_시"><strong><code>fvSolution</code></strong>: 이산화된 대수 방정식을 푸는 방법을 제어합니다.
                     <ul class="list-disc pl-4 mt-1">
-                        <li>각 변수(예: <code>p</code>, <code>U</code>, <code>k</code>, <code>epsilon</code>)에 대한 선형 솔버(solver), 예비 조건자(preconditioner), 허용 오차(tolerance), 상대 허용 오차(relTol) 설정. (예: GAMG, PCG, PBiCGStab)</li>
-                        <li>압력-속도 연계 알고리즘(PISO, SIMPLE, PIMPLE 등) 및 관련 제어 파라미터 설정.</li>
-                        <li>언더릴렉세이션 팩터(<code>relaxationFactors</code>) 설정 (SIMPLE 계열 알고리즘 사용 시).</li>
-                    </ul>
-                </li>
-            </ul>
-            
-            <figure class="embedded-image-figure">
-                <img src="https://www.openfoam.com/releases/openfoam-v1906/img/post-processing-run-time-pp.png" alt="OpenFOAM 실행 중 후처리 예시" class="max-w-lg">
-                <figcaption>OpenFOAM 솔버 실행 중 Function Objects를 이용한 실시간 데이터 모니터링 및 후처리 예시 (출처: openfoam.com)</figcaption>
-            </figure>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">솔버 실행</h3>
-            <p>대부분의 OpenFOAM 작업은 터미널에서 명령어를 통해 실행됩니다. 케이스 디렉토리로 이동한 후, 선택한 솔버 애플리케이션 이름을 입력하여 시뮬레이션을 시작합니다 (예: <code>icoFoam</code>, <code>simpleFoam</code>). 병렬 실행 시에는 <code>mpirun</code> 또는 decomposePar/reconstructPar 유틸리티와 함께 사용됩니다.</p>
-            <p>OpenFOAM의 객체 지향 구조와 소스 코드 접근성은 사용자가 특정 문제에 맞춰 기존 코드를 수정하거나 새로운 물리 모델 또는 솔버를 개발하여 통합할 수 있는 강력한 유연성을 제공합니다 ('Programming CFD' 교육 자료, OpenFOAM 프로그래머 가이드 등 참고).</p>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">참고 자료</h3>
-            <ul class="list-disc pl-5 space-y-1 text-sm">
-                <li>OpenFOAM User Guide - Section 4: Running applications, Section 6: Solution and algorithm control.</li>
-                <li><a href="https://www.openfoam.com/documentation/user-guide/6-solution-and-algorithm-control" target="_blank" rel="noopener noreferrer">OpenFOAM User Guide (openfoam.com): Solution and Algorithm Control</a></li>
-                <li><a href="https://cfd.direct/openfoam/user-guide/standard-solvers/" target="_blank" rel="noopener noreferrer">CFD Direct - OpenFOAM User Guide: Standard Solvers</a></li>
-            </ul>
-
-        </article>
-        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+<li data-i18n="각_변수_예_p_u_k_epsilon_에_대한_선형_솔버_solver_예비_조건자_preconditioner_허용_오차_tolerance_상대_허용_오차_reltol_설정_예_gamg_pcg_pbicgstab">각 변수(예: <code>p</code>, <code>U</code>, <code>k</code>, <code>epsilon</code>)에 대한 선형 솔버(solver), 예비 조건자(preconditioner), 허용 오차(tolerance), 상대 허용 오차(relTol) 설정. (예: GAMG, PCG, PBiCGStab)</li>
+<li data-i18n="압력_속도_연계_알고리즘_piso_simple_pimple_등_및_관련_제어_파라미터_설정">압력-속도 연계 알고리즘(PISO, SIMPLE, PIMPLE 등) 및 관련 제어 파라미터 설정.</li>
+<li data-i18n="언더릴렉세이션_팩터_relaxationfactors_설정_simple_계열_알고리즘_사용_시">언더릴렉세이션 팩터(<code>relaxationFactors</code>) 설정 (SIMPLE 계열 알고리즘 사용 시).</li>
+</ul>
+</li>
+</ul>
+<figure class="embedded-image-figure">
+<img alt="OpenFOAM 실행 중 후처리 예시" class="max-w-lg" data-i18n="openfoam_실행_중_후처리_예시" src="https://www.openfoam.com/releases/openfoam-v1906/img/post-processing-run-time-pp.png"/>
+<figcaption>OpenFOAM 솔버 실행 중 Function Objects를 이용한 실시간 데이터 모니터링 및 후처리 예시 (출처: openfoam.com)</figcaption>
+</figure>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="솔버_실행">솔버 실행</h3>
+<p data-i18n="대부분의_openfoam_작업은_터미널에서_명령어를_통해_실행됩니다_케이스_디렉토리로_이동한_후_선택한_솔버_애플리케이션_이름을_입력하여_시뮬레이션을_시작합니다_예_icofoam_simplefoam_병렬_실행_시에는mpirun또는_decomposepar_reconstructpar_유틸리티와_함께_사용됩니다">대부분의 OpenFOAM 작업은 터미널에서 명령어를 통해 실행됩니다. 케이스 디렉토리로 이동한 후, 선택한 솔버 애플리케이션 이름을 입력하여 시뮬레이션을 시작합니다 (예: <code>icoFoam</code>, <code>simpleFoam</code>). 병렬 실행 시에는 <code>mpirun</code> 또는 decomposePar/reconstructPar 유틸리티와 함께 사용됩니다.</p>
+<p data-i18n="openfoam의_객체_지향_구조와_소스_코드_접근성은_사용자가_특정_문제에_맞춰_기존_코드를_수정하거나_새로운_물리_모델_또는_솔버를_개발하여_통합할_수_있는_강력한_유연성을_제공합니다_programming_cfd_교육_자료_openfoam_프로그래머_가이드_등_참고">OpenFOAM의 객체 지향 구조와 소스 코드 접근성은 사용자가 특정 문제에 맞춰 기존 코드를 수정하거나 새로운 물리 모델 또는 솔버를 개발하여 통합할 수 있는 강력한 유연성을 제공합니다 ('Programming CFD' 교육 자료, OpenFOAM 프로그래머 가이드 등 참고).</p>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="참고_자료">참고 자료</h3>
+<ul class="list-disc pl-5 space-y-1 text-sm">
+<li data-i18n="openfoam_user_guide_section_4_running_applications_section_6_solution_and_algorithm_control">OpenFOAM User Guide - Section 4: Running applications, Section 6: Solution and algorithm control.</li>
+<li data-i18n="openfoam_user_guide_openfoam_com_solution_and_algorithm_control"><a data-i18n="openfoam_user_guide_openfoam_com_solution_and_algorithm_control" href="https://www.openfoam.com/documentation/user-guide/6-solution-and-algorithm-control" rel="noopener noreferrer" target="_blank">OpenFOAM User Guide (openfoam.com): Solution and Algorithm Control</a></li>
+<li data-i18n="cfd_direct_openfoam_user_guide_standard_solvers"><a data-i18n="cfd_direct_openfoam_user_guide_standard_solvers" href="https://cfd.direct/openfoam/user-guide/standard-solvers/" rel="noopener noreferrer" target="_blank">CFD Direct - OpenFOAM User Guide: Standard Solvers</a></li>
+</ul>
+</article>
+<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

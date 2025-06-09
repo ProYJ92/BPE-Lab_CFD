@@ -1,112 +1,102 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenFOAM 전처리 - 소프트웨어 | 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_openfoam_preprocessing">OpenFOAM 전처리 - 소프트웨어 | 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
-                    <a href="index.html">생물공학연구실</a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="container mx-auto px-4 mt-5 py-12">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-            <div class="mb-8">
-                <a href="openfoam_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; OpenFOAM 메인으로 돌아가기</a>
-            </div>
-            
-            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">3. 전처리 (Pre-processing)</h2>
-            <p>OpenFOAM에서의 전처리 과정은 시뮬레이션 케이스(case)를 설정하는 모든 단계를 포함하며, 주로 계산 도메인 및 격자 구성, 초기 조건 및 경계 조건 설정, 물리적 속성 정의 등으로 이루어집니다. OpenFOAM은 명령어 기반 및 텍스트 파일 편집을 통해 전처리 작업을 수행하는 것이 특징입니다.</p>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">케이스 디렉토리 구조</h3>
-            <p>모든 OpenFOAM 시뮬레이션은 특정 디렉토리 구조를 따릅니다. 일반적으로 케이스 디렉토리 내에는 다음 세 개의 주요 하위 디렉토리가 존재합니다:</p>
-            <ul class="list-disc pl-5 space-y-1">
-                <li><strong><code>constant/</code></strong>: 시뮬레이션 동안 변하지 않는 파일들을 저장합니다. 주로 메쉬 정보(<code>polyMesh/</code> 디렉토리)와 물리적 속성(예: <code>transportProperties</code>, <code>turbulenceProperties</code>) 파일이 위치합니다.</li>
-                <li><strong><code>system/</code></strong>: 시뮬레이션 제어 및 수치 해법 설정을 위한 파일들을 저장합니다. 주요 파일로는 <code>controlDict</code> (시간 제어, 입출력 등), <code>fvSchemes</code> (이산화 스킴), <code>fvSolution</code> (선형 솔버, 알고리즘 제어) 등이 있습니다.</li>
-                <li><strong><code>0/</code> (또는 초기 시간 디렉토리)</strong>: 초기 조건 및 경계 조건 파일들을 저장합니다. 각 변수(예: 압력 <code>p</code>, 속도 <code>U</code>)에 대한 파일이 있으며, 이 파일들 내부에 경계면별 조건을 정의합니다.</li>
-            </ul>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">격자 생성 (Meshing)</h3>
-            <p>OpenFOAM은 다양한 격자 생성 유틸리티를 제공합니다:</p>
-            <ul class="list-disc pl-5 space-y-2">
-                <li><strong><code>blockMesh</code></strong>: 간단한 형상에 대해 구조적(structured) 헥사헤드럴(hexahedral) 격자를 생성하는 유틸리티입니다. <code>constant/polyMesh/blockMeshDict</code> 파일에 형상 및 격자 정보를 텍스트로 기술하여 사용합니다.</li>
-                <li><strong><code>snappyHexMesh</code></strong>: 복잡한 CAD 형상(STL, OBJ 파일 등)으로부터 비구조적(unstructured) 또는 하이브리드 격자를 생성하는 강력한 자동 격자 생성 유틸리티입니다. 외부 CAD 파일과 <code>system/snappyHexMeshDict</code> 설정 파일을 사용하여 격자를 생성하며, 표면 정제(surface refinement), 영역 정제(region refinement), 경계층(boundary layer) 추가 등의 고급 기능을 제공합니다.
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
+<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="container mx-auto px-4 mt-5 py-12">
+<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+<div class="mb-8" data-i18n="openfoam_메인으로_돌아가기">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="openfoam_메인으로_돌아가기" href="openfoam_main.html">« OpenFOAM 메인으로 돌아가기</a>
+</div>
+<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="3_전처리_pre_processing">3. 전처리 (Pre-processing)</h2>
+<p data-i18n="openfoam에서의_전처리_과정은_시뮬레이션_케이스_case_를_설정하는_모든_단계를_포함하며_주로_계산_도메인_및_격자_구성_초기_조건_및_경계_조건_설정_물리적_속성_정의_등으로_이루어집니다_openfoam은_명령어_기반_및_텍스트_파일_편집을_통해_전처리_작업을_수행하는_것이_특징입니다">OpenFOAM에서의 전처리 과정은 시뮬레이션 케이스(case)를 설정하는 모든 단계를 포함하며, 주로 계산 도메인 및 격자 구성, 초기 조건 및 경계 조건 설정, 물리적 속성 정의 등으로 이루어집니다. OpenFOAM은 명령어 기반 및 텍스트 파일 편집을 통해 전처리 작업을 수행하는 것이 특징입니다.</p>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="케이스_디렉토리_구조">케이스 디렉토리 구조</h3>
+<p data-i18n="모든_openfoam_시뮬레이션은_특정_디렉토리_구조를_따릅니다_일반적으로_케이스_디렉토리_내에는_다음_세_개의_주요_하위_디렉토리가_존재합니다">모든 OpenFOAM 시뮬레이션은 특정 디렉토리 구조를 따릅니다. 일반적으로 케이스 디렉토리 내에는 다음 세 개의 주요 하위 디렉토리가 존재합니다:</p>
+<ul class="list-disc pl-5 space-y-1">
+<li data-i18n="constant_시뮬레이션_동안_변하지_않는_파일들을_저장합니다_주로_메쉬_정보_polymesh_디렉토리_와_물리적_속성_예_transportproperties_turbulenceproperties_파일이_위치합니다"><strong><code>constant/</code></strong>: 시뮬레이션 동안 변하지 않는 파일들을 저장합니다. 주로 메쉬 정보(<code>polyMesh/</code> 디렉토리)와 물리적 속성(예: <code>transportProperties</code>, <code>turbulenceProperties</code>) 파일이 위치합니다.</li>
+<li data-i18n="system_시뮬레이션_제어_및_수치_해법_설정을_위한_파일들을_저장합니다_주요_파일로는controldict_시간_제어_입출력_등_fvschemes_이산화_스킴_fvsolution_선형_솔버_알고리즘_제어_등이_있습니다"><strong><code>system/</code></strong>: 시뮬레이션 제어 및 수치 해법 설정을 위한 파일들을 저장합니다. 주요 파일로는 <code>controlDict</code> (시간 제어, 입출력 등), <code>fvSchemes</code> (이산화 스킴), <code>fvSolution</code> (선형 솔버, 알고리즘 제어) 등이 있습니다.</li>
+<li data-i18n="0_또는_초기_시간_디렉토리_초기_조건_및_경계_조건_파일들을_저장합니다_각_변수_예_압력p_속도u_에_대한_파일이_있으며_이_파일들_내부에_경계면별_조건을_정의합니다"><strong><code>0/</code> (또는 초기 시간 디렉토리)</strong>: 초기 조건 및 경계 조건 파일들을 저장합니다. 각 변수(예: 압력 <code>p</code>, 속도 <code>U</code>)에 대한 파일이 있으며, 이 파일들 내부에 경계면별 조건을 정의합니다.</li>
+</ul>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="격자_생성_meshing">격자 생성 (Meshing)</h3>
+<p data-i18n="openfoam은_다양한_격자_생성_유틸리티를_제공합니다">OpenFOAM은 다양한 격자 생성 유틸리티를 제공합니다:</p>
+<ul class="list-disc pl-5 space-y-2">
+<li data-i18n="blockmesh_간단한_형상에_대해_구조적_structured_헥사헤드럴_hexahedral_격자를_생성하는_유틸리티입니다_constant_polymesh_blockmeshdict파일에_형상_및_격자_정보를_텍스트로_기술하여_사용합니다"><strong><code>blockMesh</code></strong>: 간단한 형상에 대해 구조적(structured) 헥사헤드럴(hexahedral) 격자를 생성하는 유틸리티입니다. <code>constant/polyMesh/blockMeshDict</code> 파일에 형상 및 격자 정보를 텍스트로 기술하여 사용합니다.</li>
+<li data-i18n="snappyhexmesh_복잡한_cad_형상_stl_obj_파일_등_으로부터_비구조적_unstructured_또는_하이브리드_격자를_생성하는_강력한_자동_격자_생성_유틸리티입니다_외부_cad_파일과system_snappyhexmeshdict설정_파일을_사용하여_격자를_생성하며_표면_정제_surface_refinement_영역_정제_region_refinement_경계층_boundary_layer_추가_등의_고급_기능을_제공합니다_snappyhexmesh를_이용한_격자_생성_과정_중_castellated_mesh_단계_출처_youtube_tobias_holzmann"><strong><code>snappyHexMesh</code></strong>: 복잡한 CAD 형상(STL, OBJ 파일 등)으로부터 비구조적(unstructured) 또는 하이브리드 격자를 생성하는 강력한 자동 격자 생성 유틸리티입니다. 외부 CAD 파일과 <code>system/snappyHexMeshDict</code> 설정 파일을 사용하여 격자를 생성하며, 표면 정제(surface refinement), 영역 정제(region refinement), 경계층(boundary layer) 추가 등의 고급 기능을 제공합니다.
                     <figure class="embedded-image-figure">
-                        <img src="https://i.ytimg.com/vi/ICJxysKTnVw/maxresdefault.jpg" alt="snappyHexMesh castellated mesh" class="max-w-lg">
-                        <figcaption>snappyHexMesh를 이용한 격자 생성 과정 중 Castellated Mesh 단계 (출처: YouTube @Tobias Holzmann)</figcaption>
-                    </figure>
-                </li>
-                <li><strong>타사 격자 생성 도구 활용</strong>: ANSYS Meshing, ICEM CFD, Gmsh, Salome 등 다양한 외부 격자 생성 소프트웨어에서 생성된 격자를 OpenFOAM 형식으로 변환하여 사용할 수 있습니다 (예: <code>fluentMeshToFoam</code>, <code>ideasUnvToFoam</code> 유틸리티 사용).</li>
-            </ul>
-            <p>OpenFOAM은 폴리헤드럴(polyhedral) 셀을 포함한 임의의 형태의 3차원 비정형 격자를 처리할 수 있는 유연성을 가지고 있습니다.</p>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">경계 조건 및 초기 조건 설정</h3>
-            <p>초기 시간 디렉토리(예: <code>0/</code>) 내에 각 필드 변수(<code>U</code>, <code>p</code>, <code>T</code> 등)에 대한 파일을 생성하고, 이 파일들 안에 각 경계면(patch)에 대한 경계 조건을 타입과 값으로 지정합니다. 초기 내부 필드 값도 이곳에서 설정합니다.</p>
-            
-            <figure class="embedded-image-figure">
-                <img src="https://i.ytimg.com/vi/O10wHijEkdU/maxresdefault.jpg" alt="snappyHexMesh boundary layers" class="max-w-lg">
-                <figcaption>snappyHexMesh를 이용한 경계층 격자 추가 예시 (출처: YouTube @Tobias Holzmann)</figcaption>
-            </figure>
-            
-            <h3 class="text-lg font-semibold mt-6 mb-3">물리적 속성 정의</h3>
-            <p><code>constant/</code> 디렉토리 내의 파일들(예: <code>transportProperties</code>)에서 유체의 밀도, 점성 계수 등과 같은 물리적 속성 값을 정의합니다. 난류 모델을 사용하는 경우 <code>constant/turbulenceProperties</code> 파일에서 모델을 선택하고 관련 상수를 설정합니다.</p>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">참고 자료</h3>
-            <ul class="list-disc pl-5 space-y-1 text-sm">
-                <li>OpenFOAM User Guide - Section 2: Tutorials, Section 3: Applications and libraries, Section 5: Mesh generation and conversion.</li>
-                <li><a href="https://cfd.direct/openfoam/user-guide/v9-meshing/" target="_blank" rel="noopener noreferrer">CFD Direct - OpenFOAM User Guide: Meshing (v9 예시)</a></li>
-                <li><a href="https://wiki.openfoam.com/Category_Tutorials" target="_blank" rel="noopener noreferrer">OpenFOAM Wiki - Tutorials Category</a></li>
-            </ul>
-
-        </article>
-        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+<img alt="snappyHexMesh castellated mesh" class="max-w-lg" data-i18n="snappyhexmesh_castellated_mesh" src="https://i.ytimg.com/vi/ICJxysKTnVw/maxresdefault.jpg"/>
+<figcaption>snappyHexMesh를 이용한 격자 생성 과정 중 Castellated Mesh 단계 (출처: YouTube @Tobias Holzmann)</figcaption>
+</figure>
+</li>
+<li data-i18n="타사_격자_생성_도구_활용_ansys_meshing_icem_cfd_gmsh_salome_등_다양한_외부_격자_생성_소프트웨어에서_생성된_격자를_openfoam_형식으로_변환하여_사용할_수_있습니다_예_fluentmeshtofoam_ideasunvtofoam유틸리티_사용"><strong>타사 격자 생성 도구 활용</strong>: ANSYS Meshing, ICEM CFD, Gmsh, Salome 등 다양한 외부 격자 생성 소프트웨어에서 생성된 격자를 OpenFOAM 형식으로 변환하여 사용할 수 있습니다 (예: <code>fluentMeshToFoam</code>, <code>ideasUnvToFoam</code> 유틸리티 사용).</li>
+</ul>
+<p data-i18n="openfoam은_폴리헤드럴_polyhedral_셀을_포함한_임의의_형태의_3차원_비정형_격자를_처리할_수_있는_유연성을_가지고_있습니다">OpenFOAM은 폴리헤드럴(polyhedral) 셀을 포함한 임의의 형태의 3차원 비정형 격자를 처리할 수 있는 유연성을 가지고 있습니다.</p>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="경계_조건_및_초기_조건_설정">경계 조건 및 초기 조건 설정</h3>
+<p data-i18n="초기_시간_디렉토리_예_0_내에_각_필드_변수_u_p_t등_에_대한_파일을_생성하고_이_파일들_안에_각_경계면_patch_에_대한_경계_조건을_타입과_값으로_지정합니다_초기_내부_필드_값도_이곳에서_설정합니다">초기 시간 디렉토리(예: <code>0/</code>) 내에 각 필드 변수(<code>U</code>, <code>p</code>, <code>T</code> 등)에 대한 파일을 생성하고, 이 파일들 안에 각 경계면(patch)에 대한 경계 조건을 타입과 값으로 지정합니다. 초기 내부 필드 값도 이곳에서 설정합니다.</p>
+<figure class="embedded-image-figure">
+<img alt="snappyHexMesh boundary layers" class="max-w-lg" data-i18n="snappyhexmesh_boundary_layers" src="https://i.ytimg.com/vi/O10wHijEkdU/maxresdefault.jpg"/>
+<figcaption>snappyHexMesh를 이용한 경계층 격자 추가 예시 (출처: YouTube @Tobias Holzmann)</figcaption>
+</figure>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="물리적_속성_정의">물리적 속성 정의</h3>
+<p data-i18n="constant_디렉토리_내의_파일들_예_transportproperties_에서_유체의_밀도_점성_계수_등과_같은_물리적_속성_값을_정의합니다_난류_모델을_사용하는_경우constant_turbulenceproperties파일에서_모델을_선택하고_관련_상수를_설정합니다"><code>constant/</code> 디렉토리 내의 파일들(예: <code>transportProperties</code>)에서 유체의 밀도, 점성 계수 등과 같은 물리적 속성 값을 정의합니다. 난류 모델을 사용하는 경우 <code>constant/turbulenceProperties</code> 파일에서 모델을 선택하고 관련 상수를 설정합니다.</p>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="참고_자료">참고 자료</h3>
+<ul class="list-disc pl-5 space-y-1 text-sm">
+<li data-i18n="openfoam_user_guide_section_2_tutorials_section_3_applications_and_libraries_section_5_mesh_generation_and_conversion">OpenFOAM User Guide - Section 2: Tutorials, Section 3: Applications and libraries, Section 5: Mesh generation and conversion.</li>
+<li data-i18n="cfd_direct_openfoam_user_guide_meshing_v9_예시"><a data-i18n="cfd_direct_openfoam_user_guide_meshing_v9_예시" href="https://cfd.direct/openfoam/user-guide/v9-meshing/" rel="noopener noreferrer" target="_blank">CFD Direct - OpenFOAM User Guide: Meshing (v9 예시)</a></li>
+<li data-i18n="openfoam_wiki_tutorials_category"><a data-i18n="openfoam_wiki_tutorials_category" href="https://wiki.openfoam.com/Category_Tutorials" rel="noopener noreferrer" target="_blank">OpenFOAM Wiki - Tutorials Category</a></li>
+</ul>
+</article>
+<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

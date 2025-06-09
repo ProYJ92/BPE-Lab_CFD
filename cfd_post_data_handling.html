@@ -1,114 +1,107 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CFD 후처리 - 데이터 처리 - 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_cfd_post_data_handling">CFD 후처리 - 데이터 처리 - 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-gray-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
-                    <a href="index.html">생물공학연구실</a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
-        <div class="bg-white p-6 md:p-10 rounded-xl shadow-xl">
-            <header class="mb-8 border-b pb-4">
-                <h1 class="text-3xl md:text-4xl font-bold text-slate-800">CFD 후처리 - 데이터 처리 (Data Handling)</h1>
-            </header>
-            <article class="prose prose-lg max-w-none">
-                <p>CFD 시뮬레이션은 방대한 양의 데이터를 생성하므로, 효과적인 데이터 관리, 저장, 접근 및 처리를 위한 표준화된 형식과 도구가 필요합니다. 후처리 소프트웨어는 다양한 솔버 및 파일 형식의 결과 데이터를 읽어들일 수 있어야 합니다 [6].</p>
-                
-                <h2 class="mt-8">데이터 형식 및 출력</h2>
-                <p>CFD 결과 데이터를 저장하는 다양한 표준 및 독자 형식이 사용됩니다.</p>
-                <ul>
-                    <li><strong>표준 형식</strong>:
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
+<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
+<div class="bg-white p-6 md:p-10 rounded-xl shadow-xl" data-i18n="cfd_후처리_데이터_처리_data_handling_cfd_시뮬레이션은_방대한_양의_데이터를_생성하므로_효과적인_데이터_관리_저장_접근_및_처리를_위한_표준화된_형식과_도구가_필요합니다_후처리_소프트웨어는_다양한_솔버_및_파일_형식의_결과_데이터를_읽어들일_수_있어야_합니다_6_데이터_형식_및_출력cfd_결과_데이터를_저장하는_다양한_표준_및_독자_형식이_사용됩니다_표준_형식_cgns_cfd_general_notation_system_cfd_데이터를_저장하기_위한_이식성이_높은_표준_형식입니다_6_격자_유동_솔루션_경계_조건_등_모든_관련_정보를_포함할_수_있도록_설계되었습니다_vtk_visualization_toolkit_시각화_및_데이터_처리를_위한_오픈소스_라이브러리이자_데이터_형식을_지원합니다_3_8_paraview와_같은_많은_후처리_도구가_vtk를_기반으로_합니다_2_hdf5_hierarchical_data_format_5_대용량의_과학_데이터를_저장하고_관리하는_데_널리_사용되는_파일_형식으로_일부_cfd_도구에서_지원합니다_솔버별_독자_형식_ansys_fluent_cas_dat_flprj_res_cdat_등_6_ansys_cfx_res_def_등_6_openfoam_자체_디렉토리_및_파일_구조기타_tecplot_plt_ensight_case_geo_fieldview_등_다양한_소프트웨어별_형식이_존재합니다_2_시뮬레이션_결과는_분석_목적에_따라수치_표_매개변수_값_그래프_시간_또는_공간에_따른_변화_이미지_2d_3d_시각화_등_다양한_형태로_출력됩니다_5_처리_도구_및_자동화_automation_workflow_데이터_처리는_후처리_소프트웨어의_gui_환경에서_수행되기도_하지만_반복적인_작업이나_대규모_데이터_처리를_위해_스크립팅_및_자동화_도구가_필수적입니다_2_3_스크립팅_scripting_python_많은_후처리_소프트웨어_예_paraview_2_tecplot_ansys_cfd_post_6_가_python_스크립팅_인터페이스를_지원합니다_이를_통해_데이터_로딩_필터_적용_시각화_객체_생성_이미지_저장_데이터_추출_등의_작업을_자동화할_수_있습니다_ccl_cfx_command_language_ansys_cfx_및_cfd_post에서_사용되는_스크립트_언어로_세션_파일_cst_을_통해_gui_작업을_기록하고_재생하거나_직접_명령어를_작성하여_후처리_작업을_자동화합니다_6_저널링_journaling_사용자의_gui_작업을_기록하여_스크립트나_매크로_형태로_저장하고_이를_재실행하여_동일한_작업을_반복_수행할_수_있는_기능입니다_6_배치_모드_실행_batch_mode_execution_사용자_인터페이스_gui_없이_스크립트나_저널_파일을_사용하여_백그라운드에서_후처리_작업을_실행합니다_6_대량의_케이스를_처리하거나_서버_환경에서_작업할_때_유용합니다_자동_보고서_생성_automated_report_generation_설정된_시각화_결과_이미지_애니메이션_및_정량적_분석_결과_표_그래프_를_포함하는_보고서를_자동으로_생성하는_기능입니다_6_자세한_내용은보고서_생성페이지를_참조하십시오_후처리_파이프라인_구축_산업체에서는_데이터_로딩부터_분석_시각화_보고서_생성까지_일련의_과정을_자동화하는_후처리_파이프라인을_구축하여_신뢰성을_높이고_개발_요구사항_변경에_유연하게_대처합니다_2_3_대용량_비정상_데이터_처리대규모_격자나_장시간의_비정상_시간_의존적_cfd_시뮬레이션_결과는_매우_커서_효과적인_처리_기법이_필요합니다_주파수_필터링_메타데이터_추출_데이터_압축_이벤트_기반_gui_프로그래밍_자동화된_파이프라인_구축_등이_대규모_비정상_데이터_처리에_중요합니다_8_인사이투_in_situ_처리_시뮬레이션_실행_중_데이터_처리_및_분석_와_같은_고급_기법도_연구되고_있습니다_cfd_후처리_데이터_처리에_대한_더_자세한_학술적_내용_및_참고_자료는cfd_레퍼런스_페이지를_참조하십시오">
+<header class="mb-8 border-b pb-4">
+<h1 class="text-3xl md:text-4xl font-bold text-slate-800" data-i18n="cfd_후처리_데이터_처리_data_handling">CFD 후처리 - 데이터 처리 (Data Handling)</h1>
+</header>
+<article class="prose prose-lg max-w-none">
+<p data-i18n="cfd_시뮬레이션은_방대한_양의_데이터를_생성하므로_효과적인_데이터_관리_저장_접근_및_처리를_위한_표준화된_형식과_도구가_필요합니다_후처리_소프트웨어는_다양한_솔버_및_파일_형식의_결과_데이터를_읽어들일_수_있어야_합니다_6">CFD 시뮬레이션은 방대한 양의 데이터를 생성하므로, 효과적인 데이터 관리, 저장, 접근 및 처리를 위한 표준화된 형식과 도구가 필요합니다. 후처리 소프트웨어는 다양한 솔버 및 파일 형식의 결과 데이터를 읽어들일 수 있어야 합니다 [6].</p>
+<h2 class="mt-8" data-i18n="데이터_형식_및_출력">데이터 형식 및 출력</h2>
+<p data-i18n="cfd_결과_데이터를_저장하는_다양한_표준_및_독자_형식이_사용됩니다">CFD 결과 데이터를 저장하는 다양한 표준 및 독자 형식이 사용됩니다.</p>
+<ul>
+<li data-i18n="표준_형식_cgns_cfd_general_notation_system_cfd_데이터를_저장하기_위한_이식성이_높은_표준_형식입니다_6_격자_유동_솔루션_경계_조건_등_모든_관련_정보를_포함할_수_있도록_설계되었습니다_vtk_visualization_toolkit_시각화_및_데이터_처리를_위한_오픈소스_라이브러리이자_데이터_형식을_지원합니다_3_8_paraview와_같은_많은_후처리_도구가_vtk를_기반으로_합니다_2_hdf5_hierarchical_data_format_5_대용량의_과학_데이터를_저장하고_관리하는_데_널리_사용되는_파일_형식으로_일부_cfd_도구에서_지원합니다"><strong>표준 형식</strong>:
                         <ul>
-                            <li><strong>CGNS (CFD General Notation System)</strong>: CFD 데이터를 저장하기 위한 이식성이 높은 표준 형식입니다 [6]. 격자, 유동 솔루션, 경계 조건 등 모든 관련 정보를 포함할 수 있도록 설계되었습니다.</li>
-                            <li><strong>VTK (Visualization Toolkit)</strong>: 시각화 및 데이터 처리를 위한 오픈소스 라이브러리이자 데이터 형식을 지원합니다 [3, 8]. ParaView와 같은 많은 후처리 도구가 VTK를 기반으로 합니다 [2].</li>
-                            <li><strong>HDF5 (Hierarchical Data Format 5)</strong>: 대용량의 과학 데이터를 저장하고 관리하는 데 널리 사용되는 파일 형식으로, 일부 CFD 도구에서 지원합니다.</li>
-                        </ul>
-                    </li>
-                    <li><strong>솔버별 독자 형식</strong>:
+<li data-i18n="cgns_cfd_general_notation_system_cfd_데이터를_저장하기_위한_이식성이_높은_표준_형식입니다_6_격자_유동_솔루션_경계_조건_등_모든_관련_정보를_포함할_수_있도록_설계되었습니다"><strong>CGNS (CFD General Notation System)</strong>: CFD 데이터를 저장하기 위한 이식성이 높은 표준 형식입니다 [6]. 격자, 유동 솔루션, 경계 조건 등 모든 관련 정보를 포함할 수 있도록 설계되었습니다.</li>
+<li data-i18n="vtk_visualization_toolkit_시각화_및_데이터_처리를_위한_오픈소스_라이브러리이자_데이터_형식을_지원합니다_3_8_paraview와_같은_많은_후처리_도구가_vtk를_기반으로_합니다_2"><strong>VTK (Visualization Toolkit)</strong>: 시각화 및 데이터 처리를 위한 오픈소스 라이브러리이자 데이터 형식을 지원합니다 [3, 8]. ParaView와 같은 많은 후처리 도구가 VTK를 기반으로 합니다 [2].</li>
+<li data-i18n="hdf5_hierarchical_data_format_5_대용량의_과학_데이터를_저장하고_관리하는_데_널리_사용되는_파일_형식으로_일부_cfd_도구에서_지원합니다"><strong>HDF5 (Hierarchical Data Format 5)</strong>: 대용량의 과학 데이터를 저장하고 관리하는 데 널리 사용되는 파일 형식으로, 일부 CFD 도구에서 지원합니다.</li>
+</ul>
+</li>
+<li data-i18n="솔버별_독자_형식_ansys_fluent_cas_dat_flprj_res_cdat_등_6_ansys_cfx_res_def_등_6_openfoam_자체_디렉토리_및_파일_구조기타_tecplot_plt_ensight_case_geo_fieldview_등_다양한_소프트웨어별_형식이_존재합니다_2"><strong>솔버별 독자 형식</strong>:
                         <ul>
-                            <li>Ansys Fluent: .cas/.dat, .flprj, .res, .cdat 등 [6]</li>
-                            <li>Ansys CFX: .res, .def 등 [6]</li>
-                            <li>OpenFOAM: 자체 디렉토리 및 파일 구조</li>
-                            <li>기타: Tecplot (.plt), EnSight (.case, .geo), FieldView 등 다양한 소프트웨어별 형식이 존재합니다 [2].</li>
-                        </ul>
-                    </li>
-                </ul>
-                <p>시뮬레이션 결과는 분석 목적에 따라 <strong>수치 표</strong> (매개변수 값), <strong>그래프</strong> (시간 또는 공간에 따른 변화), <strong>이미지</strong> (2D/3D 시각화) 등 다양한 형태로 출력됩니다 [5].</p>
-
-                <h2 class="mt-8">처리 도구 및 자동화 (Automation & Workflow)</h2>
-                <p>데이터 처리는 후처리 소프트웨어의 GUI 환경에서 수행되기도 하지만, 반복적인 작업이나 대규모 데이터 처리를 위해 스크립팅 및 자동화 도구가 필수적입니다 [2, 3].</p>
-                <ul>
-                    <li><strong>스크립팅 (Scripting)</strong>:
+<li data-i18n="ansys_fluent_cas_dat_flprj_res_cdat_등_6">Ansys Fluent: .cas/.dat, .flprj, .res, .cdat 등 [6]</li>
+<li data-i18n="ansys_cfx_res_def_등_6">Ansys CFX: .res, .def 등 [6]</li>
+<li data-i18n="openfoam_자체_디렉토리_및_파일_구조">OpenFOAM: 자체 디렉토리 및 파일 구조</li>
+<li data-i18n="기타_tecplot_plt_ensight_case_geo_fieldview_등_다양한_소프트웨어별_형식이_존재합니다_2">기타: Tecplot (.plt), EnSight (.case, .geo), FieldView 등 다양한 소프트웨어별 형식이 존재합니다 [2].</li>
+</ul>
+</li>
+</ul>
+<p data-i18n="시뮬레이션_결과는_분석_목적에_따라수치_표_매개변수_값_그래프_시간_또는_공간에_따른_변화_이미지_2d_3d_시각화_등_다양한_형태로_출력됩니다_5">시뮬레이션 결과는 분석 목적에 따라 <strong>수치 표</strong> (매개변수 값), <strong>그래프</strong> (시간 또는 공간에 따른 변화), <strong>이미지</strong> (2D/3D 시각화) 등 다양한 형태로 출력됩니다 [5].</p>
+<h2 class="mt-8" data-i18n="처리_도구_및_자동화_automation_workflow">처리 도구 및 자동화 (Automation &amp; Workflow)</h2>
+<p data-i18n="데이터_처리는_후처리_소프트웨어의_gui_환경에서_수행되기도_하지만_반복적인_작업이나_대규모_데이터_처리를_위해_스크립팅_및_자동화_도구가_필수적입니다_2_3">데이터 처리는 후처리 소프트웨어의 GUI 환경에서 수행되기도 하지만, 반복적인 작업이나 대규모 데이터 처리를 위해 스크립팅 및 자동화 도구가 필수적입니다 [2, 3].</p>
+<ul>
+<li data-i18n="스크립팅_scripting_python_많은_후처리_소프트웨어_예_paraview_2_tecplot_ansys_cfd_post_6_가_python_스크립팅_인터페이스를_지원합니다_이를_통해_데이터_로딩_필터_적용_시각화_객체_생성_이미지_저장_데이터_추출_등의_작업을_자동화할_수_있습니다_ccl_cfx_command_language_ansys_cfx_및_cfd_post에서_사용되는_스크립트_언어로_세션_파일_cst_을_통해_gui_작업을_기록하고_재생하거나_직접_명령어를_작성하여_후처리_작업을_자동화합니다_6_저널링_journaling_사용자의_gui_작업을_기록하여_스크립트나_매크로_형태로_저장하고_이를_재실행하여_동일한_작업을_반복_수행할_수_있는_기능입니다_6"><strong>스크립팅 (Scripting)</strong>:
                         <ul>
-                            <li><strong>Python</strong>: 많은 후처리 소프트웨어(예: ParaView [2], Tecplot, Ansys CFD-Post [6])가 Python 스크립팅 인터페이스를 지원합니다. 이를 통해 데이터 로딩, 필터 적용, 시각화 객체 생성, 이미지 저장, 데이터 추출 등의 작업을 자동화할 수 있습니다.</li>
-                            <li><strong>CCL (CFX Command Language)</strong>: Ansys CFX 및 CFD-Post에서 사용되는 스크립트 언어로, 세션 파일(.cst)을 통해 GUI 작업을 기록하고 재생하거나, 직접 명령어를 작성하여 후처리 작업을 자동화합니다 [6].</li>
-                            <li><strong>저널링 (Journaling)</strong>: 사용자의 GUI 작업을 기록하여 스크립트나 매크로 형태로 저장하고, 이를 재실행하여 동일한 작업을 반복 수행할 수 있는 기능입니다 [6].</li>
-                        </ul>
-                    </li>
-                    <li><strong>배치 모드 실행 (Batch Mode Execution)</strong>: 사용자 인터페이스(GUI) 없이 스크립트나 저널 파일을 사용하여 백그라운드에서 후처리 작업을 실행합니다 [6]. 대량의 케이스를 처리하거나 서버 환경에서 작업할 때 유용합니다.</li>
-                    <li><strong>자동 보고서 생성 (Automated Report Generation)</strong>: 설정된 시각화 결과(이미지, 애니메이션) 및 정량적 분석 결과(표, 그래프)를 포함하는 보고서를 자동으로 생성하는 기능입니다 [6]. 자세한 내용은 <a href="cfd_post_report_generation.html" class="text-[#0072CE] hover:text-[#004A99]">보고서 생성</a> 페이지를 참조하십시오.</li>
-                    <li><strong>후처리 파이프라인 구축</strong>: 산업체에서는 데이터 로딩부터 분석, 시각화, 보고서 생성까지 일련의 과정을 자동화하는 후처리 파이프라인을 구축하여 신뢰성을 높이고 개발 요구사항 변경에 유연하게 대처합니다 [2, 3].</li>
-                </ul>
-
-                <h2 class="mt-8">대용량/비정상 데이터 처리</h2>
-                <p>대규모 격자나 장시간의 비정상(시간 의존적) CFD 시뮬레이션 결과는 매우 커서 효과적인 처리 기법이 필요합니다. 주파수 필터링, 메타데이터 추출, 데이터 압축, 이벤트 기반 GUI 프로그래밍, 자동화된 파이프라인 구축 등이 대규모 비정상 데이터 처리에 중요합니다 [8]. 인사이투(In-situ) 처리(시뮬레이션 실행 중 데이터 처리 및 분석)와 같은 고급 기법도 연구되고 있습니다.</p>
-
-                <hr class="my-8 border-gray-300">
-                <p class="text-sm text-gray-600">CFD 후처리 데이터 처리에 대한 더 자세한 학술적 내용 및 참고 자료는 <a href="cfd_references.html#cfd-postprocessing-refs" class="text-[#0072CE] hover:text-[#004A99] font-medium">CFD 레퍼런스 페이지</a>를 참조하십시오.</p>
-            </article>
-        </div>
-        <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-
-    <script src="script.js" type="module"></script>
+<li data-i18n="python_많은_후처리_소프트웨어_예_paraview_2_tecplot_ansys_cfd_post_6_가_python_스크립팅_인터페이스를_지원합니다_이를_통해_데이터_로딩_필터_적용_시각화_객체_생성_이미지_저장_데이터_추출_등의_작업을_자동화할_수_있습니다"><strong>Python</strong>: 많은 후처리 소프트웨어(예: ParaView [2], Tecplot, Ansys CFD-Post [6])가 Python 스크립팅 인터페이스를 지원합니다. 이를 통해 데이터 로딩, 필터 적용, 시각화 객체 생성, 이미지 저장, 데이터 추출 등의 작업을 자동화할 수 있습니다.</li>
+<li data-i18n="ccl_cfx_command_language_ansys_cfx_및_cfd_post에서_사용되는_스크립트_언어로_세션_파일_cst_을_통해_gui_작업을_기록하고_재생하거나_직접_명령어를_작성하여_후처리_작업을_자동화합니다_6"><strong>CCL (CFX Command Language)</strong>: Ansys CFX 및 CFD-Post에서 사용되는 스크립트 언어로, 세션 파일(.cst)을 통해 GUI 작업을 기록하고 재생하거나, 직접 명령어를 작성하여 후처리 작업을 자동화합니다 [6].</li>
+<li data-i18n="저널링_journaling_사용자의_gui_작업을_기록하여_스크립트나_매크로_형태로_저장하고_이를_재실행하여_동일한_작업을_반복_수행할_수_있는_기능입니다_6"><strong>저널링 (Journaling)</strong>: 사용자의 GUI 작업을 기록하여 스크립트나 매크로 형태로 저장하고, 이를 재실행하여 동일한 작업을 반복 수행할 수 있는 기능입니다 [6].</li>
+</ul>
+</li>
+<li data-i18n="배치_모드_실행_batch_mode_execution_사용자_인터페이스_gui_없이_스크립트나_저널_파일을_사용하여_백그라운드에서_후처리_작업을_실행합니다_6_대량의_케이스를_처리하거나_서버_환경에서_작업할_때_유용합니다"><strong>배치 모드 실행 (Batch Mode Execution)</strong>: 사용자 인터페이스(GUI) 없이 스크립트나 저널 파일을 사용하여 백그라운드에서 후처리 작업을 실행합니다 [6]. 대량의 케이스를 처리하거나 서버 환경에서 작업할 때 유용합니다.</li>
+<li data-i18n="자동_보고서_생성_automated_report_generation_설정된_시각화_결과_이미지_애니메이션_및_정량적_분석_결과_표_그래프_를_포함하는_보고서를_자동으로_생성하는_기능입니다_6_자세한_내용은보고서_생성페이지를_참조하십시오"><strong>자동 보고서 생성 (Automated Report Generation)</strong>: 설정된 시각화 결과(이미지, 애니메이션) 및 정량적 분석 결과(표, 그래프)를 포함하는 보고서를 자동으로 생성하는 기능입니다 [6]. 자세한 내용은 <a class="text-[#0072CE] hover:text-[#004A99]" data-i18n="보고서_생성" href="cfd_post_report_generation.html">보고서 생성</a> 페이지를 참조하십시오.</li>
+<li data-i18n="후처리_파이프라인_구축_산업체에서는_데이터_로딩부터_분석_시각화_보고서_생성까지_일련의_과정을_자동화하는_후처리_파이프라인을_구축하여_신뢰성을_높이고_개발_요구사항_변경에_유연하게_대처합니다_2_3"><strong>후처리 파이프라인 구축</strong>: 산업체에서는 데이터 로딩부터 분석, 시각화, 보고서 생성까지 일련의 과정을 자동화하는 후처리 파이프라인을 구축하여 신뢰성을 높이고 개발 요구사항 변경에 유연하게 대처합니다 [2, 3].</li>
+</ul>
+<h2 class="mt-8" data-i18n="대용량_비정상_데이터_처리">대용량/비정상 데이터 처리</h2>
+<p data-i18n="대규모_격자나_장시간의_비정상_시간_의존적_cfd_시뮬레이션_결과는_매우_커서_효과적인_처리_기법이_필요합니다_주파수_필터링_메타데이터_추출_데이터_압축_이벤트_기반_gui_프로그래밍_자동화된_파이프라인_구축_등이_대규모_비정상_데이터_처리에_중요합니다_8_인사이투_in_situ_처리_시뮬레이션_실행_중_데이터_처리_및_분석_와_같은_고급_기법도_연구되고_있습니다">대규모 격자나 장시간의 비정상(시간 의존적) CFD 시뮬레이션 결과는 매우 커서 효과적인 처리 기법이 필요합니다. 주파수 필터링, 메타데이터 추출, 데이터 압축, 이벤트 기반 GUI 프로그래밍, 자동화된 파이프라인 구축 등이 대규모 비정상 데이터 처리에 중요합니다 [8]. 인사이투(In-situ) 처리(시뮬레이션 실행 중 데이터 처리 및 분석)와 같은 고급 기법도 연구되고 있습니다.</p>
+<hr class="my-8 border-gray-300"/>
+<p class="text-sm text-gray-600" data-i18n="cfd_후처리_데이터_처리에_대한_더_자세한_학술적_내용_및_참고_자료는cfd_레퍼런스_페이지를_참조하십시오">CFD 후처리 데이터 처리에 대한 더 자세한 학술적 내용 및 참고 자료는 <a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="cfd_레퍼런스_페이지" href="cfd_references.html#cfd-postprocessing-refs">CFD 레퍼런스 페이지</a>를 참조하십시오.</p>
+</article>
+</div>
+<div class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js" type="module"></script>
 </body>
 </html>

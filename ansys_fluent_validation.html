@@ -1,107 +1,100 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ansys Fluent V&V - 소프트웨어 | 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_ansys_fluent_validation">Ansys Fluent V&amp;V - 소프트웨어 | 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
-                    <a href="index.html">생물공학연구실</a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="container mx-auto px-4 mt-5 py-12">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-            <div class="mb-8">
-                <a href="ansys_fluent_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; Ansys Fluent 메인으로 돌아가기</a>
-            </div>
-            
-            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">6. Verification & Validation (검증 및 타당성 평가)</h2>
-            <p>ANSYS Fluent는 해석 결과의 신뢰성을 확보하기 위해 체계적인 검증(Verification) 및 타당성 평가(Validation, V&V) 절차를 지원하고, 관련 자료를 제공합니다. V&V는 CFD 시뮬레이션의 정확성과 예측 능력을 평가하는 데 필수적인 과정입니다. Ansys는 다양한 산업 표준 테스트 케이스 및 학술적 벤치마크 문제에 대해 정기적으로 V&V를 수행하고 그 결과를 공식 문서, 기술 백서, 사용자 매뉴얼 등을 통해 공개합니다. 특히 최신 버전(예: 2024 R2, 2025 R1)에서는 새롭게 추가되거나 개선된 기능(예: GPU 솔버 확장, 배터리 모델, 연소 모델, 고속 유동 해석 정확도, 빙착 모델 등)에 대한 V&V 사례가 지속적으로 업데이트되고 있습니다.</p>
-            
-            <figure class="embedded-image-figure">
-                <img src="https://flow3d.co.kr/wp-content/uploads/FIG8FL4.webp" alt="CFD 검증 예시: 유동 해석 결과" class="max-w-xl">
-                <figcaption>CFD 시뮬레이션 결과와 실험 데이터 비교를 통한 검증 과정 예시 (출처: flow3d.co.kr)</figcaption>
-            </figure>
-
-            <ul>
-                <li><strong>검증 (Verification)</strong>: "Are we solving the equations right?" 즉, 수학적 모델(지배방정식 및 이산화된 방정식)이 코드 내에서 정확하게 구현되고 풀렸는지, 수치 해법 자체의 오류가 없는지 확인하는 과정입니다. 주요 방법은 다음과 같습니다:
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
+<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="container mx-auto px-4 mt-5 py-12">
+<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+<div class="mb-8" data-i18n="ansys_fluent_메인으로_돌아가기">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="ansys_fluent_메인으로_돌아가기" href="ansys_fluent_main.html">« Ansys Fluent 메인으로 돌아가기</a>
+</div>
+<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="6_verification_validation_검증_및_타당성_평가">6. Verification &amp; Validation (검증 및 타당성 평가)</h2>
+<p data-i18n="ansys_fluent는_해석_결과의_신뢰성을_확보하기_위해_체계적인_검증_verification_및_타당성_평가_validation_v_v_절차를_지원하고_관련_자료를_제공합니다_v_v는_cfd_시뮬레이션의_정확성과_예측_능력을_평가하는_데_필수적인_과정입니다_ansys는_다양한_산업_표준_테스트_케이스_및_학술적_벤치마크_문제에_대해_정기적으로_v_v를_수행하고_그_결과를_공식_문서_기술_백서_사용자_매뉴얼_등을_통해_공개합니다_특히_최신_버전_예_2024_r2_2025_r1_에서는_새롭게_추가되거나_개선된_기능_예_gpu_솔버_확장_배터리_모델_연소_모델_고속_유동_해석_정확도_빙착_모델_등_에_대한_v_v_사례가_지속적으로_업데이트되고_있습니다">ANSYS Fluent는 해석 결과의 신뢰성을 확보하기 위해 체계적인 검증(Verification) 및 타당성 평가(Validation, V&amp;V) 절차를 지원하고, 관련 자료를 제공합니다. V&amp;V는 CFD 시뮬레이션의 정확성과 예측 능력을 평가하는 데 필수적인 과정입니다. Ansys는 다양한 산업 표준 테스트 케이스 및 학술적 벤치마크 문제에 대해 정기적으로 V&amp;V를 수행하고 그 결과를 공식 문서, 기술 백서, 사용자 매뉴얼 등을 통해 공개합니다. 특히 최신 버전(예: 2024 R2, 2025 R1)에서는 새롭게 추가되거나 개선된 기능(예: GPU 솔버 확장, 배터리 모델, 연소 모델, 고속 유동 해석 정확도, 빙착 모델 등)에 대한 V&amp;V 사례가 지속적으로 업데이트되고 있습니다.</p>
+<figure class="embedded-image-figure">
+<img alt="CFD 검증 예시: 유동 해석 결과" class="max-w-xl" data-i18n="cfd_검증_예시_유동_해석_결과" src="https://flow3d.co.kr/wp-content/uploads/FIG8FL4.webp"/>
+<figcaption>CFD 시뮬레이션 결과와 실험 데이터 비교를 통한 검증 과정 예시 (출처: flow3d.co.kr)</figcaption>
+</figure>
+<ul>
+<li data-i18n="검증_verification_are_we_solving_the_equations_right_즉_수학적_모델_지배방정식_및_이산화된_방정식_이_코드_내에서_정확하게_구현되고_풀렸는지_수치_해법_자체의_오류가_없는지_확인하는_과정입니다_주요_방법은_다음과_같습니다_격자_독립성_grid_independence_또는_grid_convergence_시험_다양한_크기_또는_밀도의_메쉬를_사용하여_해석_결과를_비교하고_메쉬_해상도가_결과에_미치는_영향이_일정_수준_이하로_줄어들어_수렴하는_격자_조건을_결정합니다_이를_통해_이산화_오류_discretization_error_를_평가하고_수치_정확도를_확보합니다_최신_버전에서는_대규모_모델의_메싱_성능이_향상되어_이러한_검증_과정이_더_효율적으로_수행될_수_있습니다_수렴_convergence_확인_해석_과정_중_각_방정식의_잔차_residual_가_충분히_작은_값_예_10_4_10_6_으로_감소하고_관심_있는_주요_물리량_예_유량_압력_강하_힘_이_더_이상_변하지_않고_안정적인_값에_도달했는지_확인하여_계산의_수치적_수렴을_검토합니다_코드_간_비교_code_to_code_comparison_동일_문제에_대해_다른_신뢰성_있는_코드의_결과와_비교합니다_정확해와의_비교_comparison_with_analytical_exact_solutions_단순화된_문제에_대해_알려진_이론해_또는_정확해와_비교합니다"><strong>검증 (Verification)</strong>: "Are we solving the equations right?" 즉, 수학적 모델(지배방정식 및 이산화된 방정식)이 코드 내에서 정확하게 구현되고 풀렸는지, 수치 해법 자체의 오류가 없는지 확인하는 과정입니다. 주요 방법은 다음과 같습니다:
                     <ul>
-                        <li><strong>격자 독립성(Grid Independence 또는 Grid Convergence) 시험</strong>: 다양한 크기 또는 밀도의 메쉬를 사용하여 해석 결과를 비교하고, 메쉬 해상도가 결과에 미치는 영향이 일정 수준 이하로 줄어들어 수렴하는 격자 조건을 결정합니다. 이를 통해 이산화 오류(discretization error)를 평가하고 수치 정확도를 확보합니다. 최신 버전에서는 대규모 모델의 메싱 성능이 향상되어 이러한 검증 과정이 더 효율적으로 수행될 수 있습니다.</li>
-                        <li><strong>수렴(Convergence) 확인</strong>: 해석 과정 중 각 방정식의 잔차(Residual)가 충분히 작은 값(예: 10<sup>-4</sup> ~ 10<sup>-6</sup>)으로 감소하고, 관심 있는 주요 물리량(예: 유량, 압력 강하, 힘)이 더 이상 변하지 않고 안정적인 값에 도달했는지 확인하여 계산의 수치적 수렴을 검토합니다.</li>
-                        <li><strong>코드 간 비교 (Code-to-code comparison)</strong>: 동일 문제에 대해 다른 신뢰성 있는 코드의 결과와 비교합니다.</li>
-                        <li><strong>정확해와의 비교 (Comparison with analytical/exact solutions)</strong>: 단순화된 문제에 대해 알려진 이론해 또는 정확해와 비교합니다.</li>
-                    </ul>
-                </li>
-                <li><strong>타당성 평가 (Validation)</strong>: "Are we solving the right equations?" 즉, 사용된 물리 모델과 수치 시뮬레이션 결과가 실제 물리 현상이나 신뢰할 수 있는 실험 데이터, 또는 고품질의 벤치마크 데이터와 얼마나 잘 일치하는지 평가하는 과정입니다. 다양한 물리 현상에 대한 벤치마크 사례가 Ansys 자료 등을 통해 제공됩니다.
+<li data-i18n="격자_독립성_grid_independence_또는_grid_convergence_시험_다양한_크기_또는_밀도의_메쉬를_사용하여_해석_결과를_비교하고_메쉬_해상도가_결과에_미치는_영향이_일정_수준_이하로_줄어들어_수렴하는_격자_조건을_결정합니다_이를_통해_이산화_오류_discretization_error_를_평가하고_수치_정확도를_확보합니다_최신_버전에서는_대규모_모델의_메싱_성능이_향상되어_이러한_검증_과정이_더_효율적으로_수행될_수_있습니다"><strong>격자 독립성(Grid Independence 또는 Grid Convergence) 시험</strong>: 다양한 크기 또는 밀도의 메쉬를 사용하여 해석 결과를 비교하고, 메쉬 해상도가 결과에 미치는 영향이 일정 수준 이하로 줄어들어 수렴하는 격자 조건을 결정합니다. 이를 통해 이산화 오류(discretization error)를 평가하고 수치 정확도를 확보합니다. 최신 버전에서는 대규모 모델의 메싱 성능이 향상되어 이러한 검증 과정이 더 효율적으로 수행될 수 있습니다.</li>
+<li data-i18n="수렴_convergence_확인_해석_과정_중_각_방정식의_잔차_residual_가_충분히_작은_값_예_10_4_10_6_으로_감소하고_관심_있는_주요_물리량_예_유량_압력_강하_힘_이_더_이상_변하지_않고_안정적인_값에_도달했는지_확인하여_계산의_수치적_수렴을_검토합니다"><strong>수렴(Convergence) 확인</strong>: 해석 과정 중 각 방정식의 잔차(Residual)가 충분히 작은 값(예: 10<sup>-4</sup> ~ 10<sup>-6</sup>)으로 감소하고, 관심 있는 주요 물리량(예: 유량, 압력 강하, 힘)이 더 이상 변하지 않고 안정적인 값에 도달했는지 확인하여 계산의 수치적 수렴을 검토합니다.</li>
+<li data-i18n="코드_간_비교_code_to_code_comparison_동일_문제에_대해_다른_신뢰성_있는_코드의_결과와_비교합니다"><strong>코드 간 비교 (Code-to-code comparison)</strong>: 동일 문제에 대해 다른 신뢰성 있는 코드의 결과와 비교합니다.</li>
+<li data-i18n="정확해와의_비교_comparison_with_analytical_exact_solutions_단순화된_문제에_대해_알려진_이론해_또는_정확해와_비교합니다"><strong>정확해와의 비교 (Comparison with analytical/exact solutions)</strong>: 단순화된 문제에 대해 알려진 이론해 또는 정확해와 비교합니다.</li>
+</ul>
+</li>
+<li data-i18n="타당성_평가_validation_are_we_solving_the_right_equations_즉_사용된_물리_모델과_수치_시뮬레이션_결과가_실제_물리_현상이나_신뢰할_수_있는_실험_데이터_또는_고품질의_벤치마크_데이터와_얼마나_잘_일치하는지_평가하는_과정입니다_다양한_물리_현상에_대한_벤치마크_사례가_ansys_자료_등을_통해_제공됩니다_자연_및_강제_대류_동심원통_사이_자연대류_수직_평판_위_자연대류_후연면_유동_flow_over_a_backward_facing_step_원관_확장부_유동_및_열전달_등_고전적인_실험_및_이론_해와_비교합니다_고속_유동_웨지_wedge_충격파_문제_압축성_난류_혼합층_등을_이론_해_또는_실험_데이터와_비교합니다_최신_버전에서는_압축성_고속_극초음속_유동에_대한_수치_안정성_및_수렴성이_개선되어_관련_v_v_사례가_강화되었습니다_복사_열전달_평행판_및_동심원통_사이_복사_등을_이론_해와_비교하며_surface_to_surface_s2s_discrete_ordinates_do_모델_등을_검증합니다_최신_gpu_솔버는_표면간_복사_모델링을_지원합니다_종족_수송_및_다상_유동_혼합_기둥_확산_수증기_응축_문제_등을_해석해_및_다상_유동_모델_결과와_비교합니다_gpu_솔버는_dpm_입자_및_vof_자유표면_모델을_지원하며_관련_v_v가_중요합니다_특수_모델_검증_최신_버전에서_도입된_배터리_열악영향_모델_pem_연료전지_모델_빙착_모델_fgm_연소_모델_등에_대한_spezifische_검증_사례가_제공됩니다"><strong>타당성 평가 (Validation)</strong>: "Are we solving the right equations?" 즉, 사용된 물리 모델과 수치 시뮬레이션 결과가 실제 물리 현상이나 신뢰할 수 있는 실험 데이터, 또는 고품질의 벤치마크 데이터와 얼마나 잘 일치하는지 평가하는 과정입니다. 다양한 물리 현상에 대한 벤치마크 사례가 Ansys 자료 등을 통해 제공됩니다.
                     <ul>
-                        <li><strong>자연 및 강제 대류</strong>: 동심원통 사이 자연대류, 수직 평판 위 자연대류, 후연면 유동(flow over a backward-facing step), 원관 확장부 유동 및 열전달 등 고전적인 실험 및 이론 해와 비교합니다.</li>
-                        <li><strong>고속 유동</strong>: 웨지(wedge) 충격파 문제, 압축성 난류 혼합층 등을 이론 해 또는 실험 데이터와 비교합니다. 최신 버전에서는 압축성 고속/극초음속 유동에 대한 수치 안정성 및 수렴성이 개선되어 관련 V&V 사례가 강화되었습니다.</li>
-                        <li><strong>복사 열전달</strong>: 평행판 및 동심원통 사이 복사 등을 이론 해와 비교하며 Surface-to-Surface (S2S), Discrete Ordinates (DO) 모델 등을 검증합니다. 최신 GPU 솔버는 표면간 복사 모델링을 지원합니다.</li>
-                        <li><strong>종족 수송 및 다상 유동</strong>: 혼합 기둥 확산, 수증기 응축 문제 등을 해석해 및 다상 유동 모델 결과와 비교합니다. GPU 솔버는 DPM(입자) 및 VOF(자유표면) 모델을 지원하며, 관련 V&V가 중요합니다.</li>
-                        <li><strong>특수 모델 검증</strong>: 최신 버전에서 도입된 배터리 열악영향 모델, PEM 연료전지 모델, 빙착 모델, FGM 연소 모델 등에 대한 spezifische 검증 사례가 제공됩니다.</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>검증 및 타당성 평가 과정에는 적절한 물리 모델 선정, 경계 조건의 정확한 설정, 실험 데이터와의 불확실성 분석, 그리고 체계적인 계산 검증 절차가 포함됩니다. 일부 사례에서는 사용자 정의 함수(UDF)를 활용한 맞춤형 모델 구현에 대한 V&V도 다룹니다. V&V 결과는 해석 모델별로 일정 오차 범위(예: 주요 변수에 대해 최대 5-25% 내외, 문제에 따라 다름)를 기준으로 실제 값과의 일치도를 평가합니다. Ansys 공식 웹사이트 및 기술 백서에서는 GEKO 난류 모델 등 최신 모델에 대한 V&V 사례를 정기적으로 제공합니다.</p>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">참고 자료</h3>
-            <ul class="list-disc pl-5 space-y-1 text-sm">
-                <li><a href="https://innovationspace.ansys.com/courses/courses/turbulent-pipe-flow-rans/lessons/verification-validation-lesson-7-4/topic/verification-in-fluent/" target="_blank" rel="noopener noreferrer">Ansys Innovation Courses: Verification in Fluent</a></li>
-                <li><a href="https://www.nrc.gov/docs/ml1110/ml111010456.pdf" target="_blank" rel="noopener noreferrer">NRC.gov: Software Validation Test Plan and Report for ANSYS-FLUENT Version 12.1</a> (구 버전이지만 V&V 절차 참고용)</li>
-                <li>ANSYS Fluent Validation Manual (Ansys Customer Portal 또는 자료실 참고 - 최신 버전에 대한 매뉴얼 확인 필요)</li>
-                <li>AIAA G-077-1998: Guide for the Verification and Validation of Computational Fluid Dynamics Simulations.</li>
-                <li><a href="https://www.ansys.com/blog/" target="_blank" rel="noopener noreferrer">Ansys Official Blog</a> (최신 기능 및 V&V 관련 포스트 검색 가능)</li>
-            </ul>
-
-        </article>
-        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+<li data-i18n="자연_및_강제_대류_동심원통_사이_자연대류_수직_평판_위_자연대류_후연면_유동_flow_over_a_backward_facing_step_원관_확장부_유동_및_열전달_등_고전적인_실험_및_이론_해와_비교합니다"><strong>자연 및 강제 대류</strong>: 동심원통 사이 자연대류, 수직 평판 위 자연대류, 후연면 유동(flow over a backward-facing step), 원관 확장부 유동 및 열전달 등 고전적인 실험 및 이론 해와 비교합니다.</li>
+<li data-i18n="고속_유동_웨지_wedge_충격파_문제_압축성_난류_혼합층_등을_이론_해_또는_실험_데이터와_비교합니다_최신_버전에서는_압축성_고속_극초음속_유동에_대한_수치_안정성_및_수렴성이_개선되어_관련_v_v_사례가_강화되었습니다"><strong>고속 유동</strong>: 웨지(wedge) 충격파 문제, 압축성 난류 혼합층 등을 이론 해 또는 실험 데이터와 비교합니다. 최신 버전에서는 압축성 고속/극초음속 유동에 대한 수치 안정성 및 수렴성이 개선되어 관련 V&amp;V 사례가 강화되었습니다.</li>
+<li data-i18n="복사_열전달_평행판_및_동심원통_사이_복사_등을_이론_해와_비교하며_surface_to_surface_s2s_discrete_ordinates_do_모델_등을_검증합니다_최신_gpu_솔버는_표면간_복사_모델링을_지원합니다"><strong>복사 열전달</strong>: 평행판 및 동심원통 사이 복사 등을 이론 해와 비교하며 Surface-to-Surface (S2S), Discrete Ordinates (DO) 모델 등을 검증합니다. 최신 GPU 솔버는 표면간 복사 모델링을 지원합니다.</li>
+<li data-i18n="종족_수송_및_다상_유동_혼합_기둥_확산_수증기_응축_문제_등을_해석해_및_다상_유동_모델_결과와_비교합니다_gpu_솔버는_dpm_입자_및_vof_자유표면_모델을_지원하며_관련_v_v가_중요합니다"><strong>종족 수송 및 다상 유동</strong>: 혼합 기둥 확산, 수증기 응축 문제 등을 해석해 및 다상 유동 모델 결과와 비교합니다. GPU 솔버는 DPM(입자) 및 VOF(자유표면) 모델을 지원하며, 관련 V&amp;V가 중요합니다.</li>
+<li data-i18n="특수_모델_검증_최신_버전에서_도입된_배터리_열악영향_모델_pem_연료전지_모델_빙착_모델_fgm_연소_모델_등에_대한_spezifische_검증_사례가_제공됩니다"><strong>특수 모델 검증</strong>: 최신 버전에서 도입된 배터리 열악영향 모델, PEM 연료전지 모델, 빙착 모델, FGM 연소 모델 등에 대한 spezifische 검증 사례가 제공됩니다.</li>
+</ul>
+</li>
+</ul>
+<p data-i18n="검증_및_타당성_평가_과정에는_적절한_물리_모델_선정_경계_조건의_정확한_설정_실험_데이터와의_불확실성_분석_그리고_체계적인_계산_검증_절차가_포함됩니다_일부_사례에서는_사용자_정의_함수_udf_를_활용한_맞춤형_모델_구현에_대한_v_v도_다룹니다_v_v_결과는_해석_모델별로_일정_오차_범위_예_주요_변수에_대해_최대_5_25_내외_문제에_따라_다름_를_기준으로_실제_값과의_일치도를_평가합니다_ansys_공식_웹사이트_및_기술_백서에서는_geko_난류_모델_등_최신_모델에_대한_v_v_사례를_정기적으로_제공합니다">검증 및 타당성 평가 과정에는 적절한 물리 모델 선정, 경계 조건의 정확한 설정, 실험 데이터와의 불확실성 분석, 그리고 체계적인 계산 검증 절차가 포함됩니다. 일부 사례에서는 사용자 정의 함수(UDF)를 활용한 맞춤형 모델 구현에 대한 V&amp;V도 다룹니다. V&amp;V 결과는 해석 모델별로 일정 오차 범위(예: 주요 변수에 대해 최대 5-25% 내외, 문제에 따라 다름)를 기준으로 실제 값과의 일치도를 평가합니다. Ansys 공식 웹사이트 및 기술 백서에서는 GEKO 난류 모델 등 최신 모델에 대한 V&amp;V 사례를 정기적으로 제공합니다.</p>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="참고_자료">참고 자료</h3>
+<ul class="list-disc pl-5 space-y-1 text-sm">
+<li data-i18n="ansys_innovation_courses_verification_in_fluent"><a data-i18n="ansys_innovation_courses_verification_in_fluent" href="https://innovationspace.ansys.com/courses/courses/turbulent-pipe-flow-rans/lessons/verification-validation-lesson-7-4/topic/verification-in-fluent/" rel="noopener noreferrer" target="_blank">Ansys Innovation Courses: Verification in Fluent</a></li>
+<li data-i18n="nrc_gov_software_validation_test_plan_and_report_for_ansys_fluent_version_12_1_구_버전이지만_v_v_절차_참고용"><a data-i18n="nrc_gov_software_validation_test_plan_and_report_for_ansys_fluent_version_12_1" href="https://www.nrc.gov/docs/ml1110/ml111010456.pdf" rel="noopener noreferrer" target="_blank">NRC.gov: Software Validation Test Plan and Report for ANSYS-FLUENT Version 12.1</a> (구 버전이지만 V&amp;V 절차 참고용)</li>
+<li data-i18n="ansys_fluent_validation_manual_ansys_customer_portal_또는_자료실_참고_최신_버전에_대한_매뉴얼_확인_필요">ANSYS Fluent Validation Manual (Ansys Customer Portal 또는 자료실 참고 - 최신 버전에 대한 매뉴얼 확인 필요)</li>
+<li data-i18n="aiaa_g_077_1998_guide_for_the_verification_and_validation_of_computational_fluid_dynamics_simulations">AIAA G-077-1998: Guide for the Verification and Validation of Computational Fluid Dynamics Simulations.</li>
+<li data-i18n="ansys_official_blog_최신_기능_및_v_v_관련_포스트_검색_가능"><a data-i18n="ansys_official_blog" href="https://www.ansys.com/blog/" rel="noopener noreferrer" target="_blank">Ansys Official Blog</a> (최신 기능 및 V&amp;V 관련 포스트 검색 가능)</li>
+</ul>
+</article>
+<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

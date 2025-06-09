@@ -1,118 +1,110 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenFOAM 소개 - 소프트웨어 | 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_openfoam_introduction">OpenFOAM 소개 - 소프트웨어 | 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
-                    <a href="index.html">생물공학연구실</a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="container mx-auto px-4 mt-5 py-12">
-        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-            <div class="mb-8">
-                <a href="openfoam_main.html" class="text-[#0072CE] hover:text-[#004A99] hover:underline">&laquo; OpenFOAM 메인으로 돌아가기</a>
-            </div>
-            
-            <h2 class="text-2xl !mb-4 !mt-0 border-b pb-2">1. 소개</h2>
-            <p>OpenFOAM (Open source Field Operation And Manipulation)은 산업 및 연구 분야에서 널리 사용되는 강력하고 유연한 오픈 소스 전산 유체 역학(CFD) 소프트웨어 패키지입니다. 2004년 OpenCFD Ltd. (현재 ESI Group의 일부인 OpenCFD Ltd. 와 The OpenFOAM Foundation에서 별도 버전 관리)에 의해 처음 공개된 이후, C++ 객체 지향 라이브러리 형태로 개발되어 사용자가 직접 코드를 수정하거나 새로운 물리 모델 및 솔버를 개발하여 확장하는 것이 용이합니다.</p>
-            <p>OpenFOAM은 다양한 물리 현상(단상 및 다상 유동, 화학 반응, 열 전달, 전자기학, 고체 역학 등)을 모델링할 수 있는 광범위한 솔버와 유틸리티를 제공합니다. 유한 체적법(Finite Volume Method)을 기본 수치 해법으로 사용하며, 복잡한 형상에 대한 비정형 격자(unstructured mesh)를 처리할 수 있습니다. 오픈 소스 특성상 라이선스 비용이 없으며, 전 세계의 활발한 사용자 및 개발자 커뮤니티를 통해 지속적으로 발전하고 검증되고 있습니다.</p>
-            
-            <figure class="embedded-image-figure">
-                <img src="https://www.openfoam.com/img/brand/openfoam-logo-200x100.png" alt="OpenFOAM 로고" class="max-w-xs bg-gray-100 p-4">
-                <figcaption>OpenFOAM 로고 (출처: openfoam.com)</figcaption>
-            </figure>
-            
-            <figure class="embedded-image-figure">
-                <img src="https://www.openfoam.com/img/screenshots/openfoam-screenshot-multiphase-dam-break-zoom.jpg" alt="OpenFOAM 다상 유동 시뮬레이션 예시" class="max-w-xl">
-                <figcaption>OpenFOAM을 이용한 댐 붕괴(dam break) 다상 유동 시뮬레이션 결과 (출처: openfoam.com)</figcaption>
-            </figure>
-
-            <ul>
-                <li><strong>핵심 특징 및 장점 (최신 동향 포함)</strong>:
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
+<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="container mx-auto px-4 mt-5 py-12">
+<article class="bg-white p-6 md:p-8 rounded-lg shadow-lg prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+<div class="mb-8" data-i18n="openfoam_메인으로_돌아가기">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="openfoam_메인으로_돌아가기" href="openfoam_main.html">« OpenFOAM 메인으로 돌아가기</a>
+</div>
+<h2 class="text-2xl !mb-4 !mt-0 border-b pb-2" data-i18n="1_소개">1. 소개</h2>
+<p data-i18n="openfoam_open_source_field_operation_and_manipulation_은_산업_및_연구_분야에서_널리_사용되는_강력하고_유연한_오픈_소스_전산_유체_역학_cfd_소프트웨어_패키지입니다_2004년_opencfd_ltd_현재_esi_group의_일부인_opencfd_ltd_와_the_openfoam_foundation에서_별도_버전_관리_에_의해_처음_공개된_이후_c_객체_지향_라이브러리_형태로_개발되어_사용자가_직접_코드를_수정하거나_새로운_물리_모델_및_솔버를_개발하여_확장하는_것이_용이합니다">OpenFOAM (Open source Field Operation And Manipulation)은 산업 및 연구 분야에서 널리 사용되는 강력하고 유연한 오픈 소스 전산 유체 역학(CFD) 소프트웨어 패키지입니다. 2004년 OpenCFD Ltd. (현재 ESI Group의 일부인 OpenCFD Ltd. 와 The OpenFOAM Foundation에서 별도 버전 관리)에 의해 처음 공개된 이후, C++ 객체 지향 라이브러리 형태로 개발되어 사용자가 직접 코드를 수정하거나 새로운 물리 모델 및 솔버를 개발하여 확장하는 것이 용이합니다.</p>
+<p data-i18n="openfoam은_다양한_물리_현상_단상_및_다상_유동_화학_반응_열_전달_전자기학_고체_역학_등_을_모델링할_수_있는_광범위한_솔버와_유틸리티를_제공합니다_유한_체적법_finite_volume_method_을_기본_수치_해법으로_사용하며_복잡한_형상에_대한_비정형_격자_unstructured_mesh_를_처리할_수_있습니다_오픈_소스_특성상_라이선스_비용이_없으며_전_세계의_활발한_사용자_및_개발자_커뮤니티를_통해_지속적으로_발전하고_검증되고_있습니다">OpenFOAM은 다양한 물리 현상(단상 및 다상 유동, 화학 반응, 열 전달, 전자기학, 고체 역학 등)을 모델링할 수 있는 광범위한 솔버와 유틸리티를 제공합니다. 유한 체적법(Finite Volume Method)을 기본 수치 해법으로 사용하며, 복잡한 형상에 대한 비정형 격자(unstructured mesh)를 처리할 수 있습니다. 오픈 소스 특성상 라이선스 비용이 없으며, 전 세계의 활발한 사용자 및 개발자 커뮤니티를 통해 지속적으로 발전하고 검증되고 있습니다.</p>
+<figure class="embedded-image-figure">
+<img alt="OpenFOAM 로고" class="max-w-xs bg-gray-100 p-4" data-i18n="openfoam_로고" src="https://www.openfoam.com/img/brand/openfoam-logo-200x100.png"/>
+<figcaption>OpenFOAM 로고 (출처: openfoam.com)</figcaption>
+</figure>
+<figure class="embedded-image-figure">
+<img alt="OpenFOAM 다상 유동 시뮬레이션 예시" class="max-w-xl" data-i18n="openfoam_다상_유동_시뮬레이션_예시" src="https://www.openfoam.com/img/screenshots/openfoam-screenshot-multiphase-dam-break-zoom.jpg"/>
+<figcaption>OpenFOAM을 이용한 댐 붕괴(dam break) 다상 유동 시뮬레이션 결과 (출처: openfoam.com)</figcaption>
+</figure>
+<ul>
+<li data-i18n="핵심_특징_및_장점_최신_동향_포함_오픈_소스_및_무료_라이선스_비용_없이_사용_가능하며_소스_코드에_대한_완전한_접근_및_수정_권한_제공_광범위한_물리_모델_난류_rans_les_des_다상_유동_vof_euler_euler_euler_lagrange_열_전달_화학_반응_연소_입자_추적_전자기학_고체_역학_등_다양한_물리_현상_모델링_지원_최신_버전에서는_특히_다상_유동_모델_예_비등_모델_계면_질량_전달_및_난류_모델_예_geko_모델_옵션_벽_함수_개선_이_지속적으로_개선되고_있습니다_복잡한_형상_및_비정형_격자_처리_blockmesh_snappyhexmesh와_같은_내장_유틸리티_및_외부_격자_생성_도구와의_연동을_통해_복잡한_형상에_대한_고품질_격자_생성_및_처리_가능_폴리헤드럴_polyhedral_셀_지원_고성능_병렬_컴퓨팅_mpi_message_passing_interface_를_이용한_대규모_병렬_처리_지원으로_클러스터_환경에서_효율적인_계산_수행_가능_높은_유연성_및_확장성_c_라이브러리_기반으로_사용자가_직접_새로운_솔버_유틸리티_물리_모델_경계_조건_등을_개발하여_통합_가능_활발한_커뮤니티_및_풍부한_자료_전_세계_사용자_및_개발자_커뮤니티를_통해_다양한_튜토리얼_문서_포럼_지원을_받을_수_있으며_문제_해결_및_지식_공유가_활발함_지속적인_개발_및_업데이트_openfoam_foundation_및_esi_opencfd를_중심으로_정기적인_버전_업데이트_및_기능_개선이_이루어짐_예_openfoam_12_v2406_등"><strong>핵심 특징 및 장점 (최신 동향 포함)</strong>:
                     <ul class="list-disc pl-4">
-                        <li><strong>오픈 소스 및 무료</strong>: 라이선스 비용 없이 사용 가능하며, 소스 코드에 대한 완전한 접근 및 수정 권한 제공.</li>
-                        <li><strong>광범위한 물리 모델</strong>: 난류(RANS, LES, DES), 다상 유동(VOF, Euler-Euler, Euler-Lagrange), 열 전달, 화학 반응, 연소, 입자 추적, 전자기학, 고체 역학 등 다양한 물리 현상 모델링 지원. 최신 버전에서는 특히 다상 유동 모델(예: 비등 모델, 계면 질량 전달) 및 난류 모델(예: GEKO 모델 옵션, 벽 함수 개선)이 지속적으로 개선되고 있습니다.</li>
-                        <li><strong>복잡한 형상 및 비정형 격자 처리</strong>: <code>blockMesh</code>, <code>snappyHexMesh</code>와 같은 내장 유틸리티 및 외부 격자 생성 도구와의 연동을 통해 복잡한 형상에 대한 고품질 격자 생성 및 처리 가능. 폴리헤드럴(polyhedral) 셀 지원.</li>
-                        <li><strong>고성능 병렬 컴퓨팅</strong>: MPI(Message Passing Interface)를 이용한 대규모 병렬 처리 지원으로, 클러스터 환경에서 효율적인 계산 수행 가능.</li>
-                        <li><strong>높은 유연성 및 확장성</strong>: C++ 라이브러리 기반으로 사용자가 직접 새로운 솔버, 유틸리티, 물리 모델, 경계 조건 등을 개발하여 통합 가능.</li>
-                        <li><strong>활발한 커뮤니티 및 풍부한 자료</strong>: 전 세계 사용자 및 개발자 커뮤니티를 통해 다양한 튜토리얼, 문서, 포럼 지원을 받을 수 있으며, 문제 해결 및 지식 공유가 활발함.</li>
-                        <li><strong>지속적인 개발 및 업데이트</strong>: OpenFOAM Foundation 및 ESI/OpenCFD를 중심으로 정기적인 버전 업데이트 및 기능 개선이 이루어짐 (예: OpenFOAM 12, v2406 등).</li>
-                    </ul>
-                </li>
-                 <li><strong>주요 구성 요소</strong>:
+<li data-i18n="오픈_소스_및_무료_라이선스_비용_없이_사용_가능하며_소스_코드에_대한_완전한_접근_및_수정_권한_제공"><strong>오픈 소스 및 무료</strong>: 라이선스 비용 없이 사용 가능하며, 소스 코드에 대한 완전한 접근 및 수정 권한 제공.</li>
+<li data-i18n="광범위한_물리_모델_난류_rans_les_des_다상_유동_vof_euler_euler_euler_lagrange_열_전달_화학_반응_연소_입자_추적_전자기학_고체_역학_등_다양한_물리_현상_모델링_지원_최신_버전에서는_특히_다상_유동_모델_예_비등_모델_계면_질량_전달_및_난류_모델_예_geko_모델_옵션_벽_함수_개선_이_지속적으로_개선되고_있습니다"><strong>광범위한 물리 모델</strong>: 난류(RANS, LES, DES), 다상 유동(VOF, Euler-Euler, Euler-Lagrange), 열 전달, 화학 반응, 연소, 입자 추적, 전자기학, 고체 역학 등 다양한 물리 현상 모델링 지원. 최신 버전에서는 특히 다상 유동 모델(예: 비등 모델, 계면 질량 전달) 및 난류 모델(예: GEKO 모델 옵션, 벽 함수 개선)이 지속적으로 개선되고 있습니다.</li>
+<li data-i18n="복잡한_형상_및_비정형_격자_처리_blockmesh_snappyhexmesh와_같은_내장_유틸리티_및_외부_격자_생성_도구와의_연동을_통해_복잡한_형상에_대한_고품질_격자_생성_및_처리_가능_폴리헤드럴_polyhedral_셀_지원"><strong>복잡한 형상 및 비정형 격자 처리</strong>: <code>blockMesh</code>, <code>snappyHexMesh</code>와 같은 내장 유틸리티 및 외부 격자 생성 도구와의 연동을 통해 복잡한 형상에 대한 고품질 격자 생성 및 처리 가능. 폴리헤드럴(polyhedral) 셀 지원.</li>
+<li data-i18n="고성능_병렬_컴퓨팅_mpi_message_passing_interface_를_이용한_대규모_병렬_처리_지원으로_클러스터_환경에서_효율적인_계산_수행_가능"><strong>고성능 병렬 컴퓨팅</strong>: MPI(Message Passing Interface)를 이용한 대규모 병렬 처리 지원으로, 클러스터 환경에서 효율적인 계산 수행 가능.</li>
+<li data-i18n="높은_유연성_및_확장성_c_라이브러리_기반으로_사용자가_직접_새로운_솔버_유틸리티_물리_모델_경계_조건_등을_개발하여_통합_가능"><strong>높은 유연성 및 확장성</strong>: C++ 라이브러리 기반으로 사용자가 직접 새로운 솔버, 유틸리티, 물리 모델, 경계 조건 등을 개발하여 통합 가능.</li>
+<li data-i18n="활발한_커뮤니티_및_풍부한_자료_전_세계_사용자_및_개발자_커뮤니티를_통해_다양한_튜토리얼_문서_포럼_지원을_받을_수_있으며_문제_해결_및_지식_공유가_활발함"><strong>활발한 커뮤니티 및 풍부한 자료</strong>: 전 세계 사용자 및 개발자 커뮤니티를 통해 다양한 튜토리얼, 문서, 포럼 지원을 받을 수 있으며, 문제 해결 및 지식 공유가 활발함.</li>
+<li data-i18n="지속적인_개발_및_업데이트_openfoam_foundation_및_esi_opencfd를_중심으로_정기적인_버전_업데이트_및_기능_개선이_이루어짐_예_openfoam_12_v2406_등"><strong>지속적인 개발 및 업데이트</strong>: OpenFOAM Foundation 및 ESI/OpenCFD를 중심으로 정기적인 버전 업데이트 및 기능 개선이 이루어짐 (예: OpenFOAM 12, v2406 등).</li>
+</ul>
+</li>
+<li data-i18n="주요_구성_요소_라이브러리_libraries_텐서_및_필드_연산_이산화_선형_시스템_해법_물리_모델_등을_포함하는_핵심_c_클래스_라이브러리_솔버_solvers_특정_물리_문제를_풀기_위한_실행_프로그램_예_icofoam_simplefoam_interfoam등_유틸리티_utilities_격자_생성_데이터_변환_후처리_등_시뮬레이션_작업을_보조하는_도구_예_blockmesh_snappyhexmesh_parafoam_sample등"><strong>주요 구성 요소</strong>:
                     <ul class="list-disc pl-4">
-                        <li><strong>라이브러리 (Libraries)</strong>: 텐서 및 필드 연산, 이산화, 선형 시스템 해법, 물리 모델 등을 포함하는 핵심 C++ 클래스 라이브러리.</li>
-                        <li><strong>솔버 (Solvers)</strong>: 특정 물리 문제를 풀기 위한 실행 프로그램. (예: <code>icoFoam</code>, <code>simpleFoam</code>, <code>interFoam</code> 등)</li>
-                        <li><strong>유틸리티 (Utilities)</strong>: 격자 생성, 데이터 변환, 후처리 등 시뮬레이션 작업을 보조하는 도구. (예: <code>blockMesh</code>, <code>snappyHexMesh</code>, <code>paraFoam</code>, <code>sample</code> 등)</li>
-                    </ul>
-                </li>
-                <li><strong>타 소프트웨어와의 비교</strong>: 상용 CFD 소프트웨어(예: Ansys Fluent, STAR-CCM+)와 비교 시, OpenFOAM은 비용 없이 사용할 수 있고 소스 코드 수정이 자유롭다는 큰 장점이 있지만, GUI 부재(또는 별도 설치 필요) 및 공식적인 기술 지원 부족으로 인해 학습 곡선이 상대적으로 높을 수 있습니다. 그러나 강력한 물리 모델링 능력과 커스터마이징 유연성은 학계 및 고급 사용자들에게 매력적인 선택지입니다.</li>
-            </ul>
-             <div class="my-6 responsive-iframe-container">
-                <iframe src="https://www.youtube.com/embed/qL4y9iPXWEs" title="YouTube video player: OpenFOAM Tutorial - Flow Over a Cylinder" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <p class="text-sm text-gray-600 mt-2 italic text-center">OpenFOAM을 이용한 실린더 주위 유동 해석 튜토리얼 영상 (출처: YouTube @Jozsef Nagy)</p>
-
-            <h3 class="text-lg font-semibold mt-6 mb-3">더 읽을거리</h3>
-            <ul class="list-disc pl-5 space-y-1 text-sm">
-                <li><a href="https://openfoam.org/" target="_blank" rel="noopener noreferrer">OpenFOAM Foundation 공식 웹사이트</a></li>
-                <li><a href="https://www.openfoam.com/" target="_blank" rel="noopener noreferrer">ESI Group (OpenCFD Ltd.) OpenFOAM 웹사이트</a></li>
-                <li><a href="https://doc.openfoam.com/" target="_blank" rel="noopener noreferrer">OpenFOAM 공식 문서 (openfoam.com 제공)</a></li>
-                <li><a href="https://wiki.openfoam.com/" target="_blank" rel="noopener noreferrer">OpenFOAM Wiki (커뮤니티 운영)</a></li>
-                <li><a href="https://www.cfd-online.com/Forums/openfoam/" target="_blank" rel="noopener noreferrer">CFD-Online OpenFOAM 포럼</a></li>
-            </ul>
-
-        </article>
-        <div id="searchResultsContainer" class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+<li data-i18n="라이브러리_libraries_텐서_및_필드_연산_이산화_선형_시스템_해법_물리_모델_등을_포함하는_핵심_c_클래스_라이브러리"><strong>라이브러리 (Libraries)</strong>: 텐서 및 필드 연산, 이산화, 선형 시스템 해법, 물리 모델 등을 포함하는 핵심 C++ 클래스 라이브러리.</li>
+<li data-i18n="솔버_solvers_특정_물리_문제를_풀기_위한_실행_프로그램_예_icofoam_simplefoam_interfoam등"><strong>솔버 (Solvers)</strong>: 특정 물리 문제를 풀기 위한 실행 프로그램. (예: <code>icoFoam</code>, <code>simpleFoam</code>, <code>interFoam</code> 등)</li>
+<li data-i18n="유틸리티_utilities_격자_생성_데이터_변환_후처리_등_시뮬레이션_작업을_보조하는_도구_예_blockmesh_snappyhexmesh_parafoam_sample등"><strong>유틸리티 (Utilities)</strong>: 격자 생성, 데이터 변환, 후처리 등 시뮬레이션 작업을 보조하는 도구. (예: <code>blockMesh</code>, <code>snappyHexMesh</code>, <code>paraFoam</code>, <code>sample</code> 등)</li>
+</ul>
+</li>
+<li data-i18n="타_소프트웨어와의_비교_상용_cfd_소프트웨어_예_ansys_fluent_star_ccm_와_비교_시_openfoam은_비용_없이_사용할_수_있고_소스_코드_수정이_자유롭다는_큰_장점이_있지만_gui_부재_또는_별도_설치_필요_및_공식적인_기술_지원_부족으로_인해_학습_곡선이_상대적으로_높을_수_있습니다_그러나_강력한_물리_모델링_능력과_커스터마이징_유연성은_학계_및_고급_사용자들에게_매력적인_선택지입니다"><strong>타 소프트웨어와의 비교</strong>: 상용 CFD 소프트웨어(예: Ansys Fluent, STAR-CCM+)와 비교 시, OpenFOAM은 비용 없이 사용할 수 있고 소스 코드 수정이 자유롭다는 큰 장점이 있지만, GUI 부재(또는 별도 설치 필요) 및 공식적인 기술 지원 부족으로 인해 학습 곡선이 상대적으로 높을 수 있습니다. 그러나 강력한 물리 모델링 능력과 커스터마이징 유연성은 학계 및 고급 사용자들에게 매력적인 선택지입니다.</li>
+</ul>
+<div class="my-6 responsive-iframe-container">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" data-i18n="youtube_video_player_openfoam_tutorial_flow_over_a_cylinder" src="https://www.youtube.com/embed/qL4y9iPXWEs" title="YouTube video player: OpenFOAM Tutorial - Flow Over a Cylinder"></iframe>
+</div>
+<p class="text-sm text-gray-600 mt-2 italic text-center" data-i18n="openfoam을_이용한_실린더_주위_유동_해석_튜토리얼_영상_출처_youtube_jozsef_nagy">OpenFOAM을 이용한 실린더 주위 유동 해석 튜토리얼 영상 (출처: YouTube @Jozsef Nagy)</p>
+<h3 class="text-lg font-semibold mt-6 mb-3" data-i18n="더_읽을거리">더 읽을거리</h3>
+<ul class="list-disc pl-5 space-y-1 text-sm">
+<li data-i18n="openfoam_foundation_공식_웹사이트"><a data-i18n="openfoam_foundation_공식_웹사이트" href="https://openfoam.org/" rel="noopener noreferrer" target="_blank">OpenFOAM Foundation 공식 웹사이트</a></li>
+<li data-i18n="esi_group_opencfd_ltd_openfoam_웹사이트"><a data-i18n="esi_group_opencfd_ltd_openfoam_웹사이트" href="https://www.openfoam.com/" rel="noopener noreferrer" target="_blank">ESI Group (OpenCFD Ltd.) OpenFOAM 웹사이트</a></li>
+<li data-i18n="openfoam_공식_문서_openfoam_com_제공"><a data-i18n="openfoam_공식_문서_openfoam_com_제공" href="https://doc.openfoam.com/" rel="noopener noreferrer" target="_blank">OpenFOAM 공식 문서 (openfoam.com 제공)</a></li>
+<li data-i18n="openfoam_wiki_커뮤니티_운영"><a data-i18n="openfoam_wiki_커뮤니티_운영" href="https://wiki.openfoam.com/" rel="noopener noreferrer" target="_blank">OpenFOAM Wiki (커뮤니티 운영)</a></li>
+<li data-i18n="cfd_online_openfoam_포럼"><a data-i18n="cfd_online_openfoam_포럼" href="https://www.cfd-online.com/Forums/openfoam/" rel="noopener noreferrer" target="_blank">CFD-Online OpenFOAM 포럼</a></li>
+</ul>
+</article>
+<div class="mt-8 mb-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

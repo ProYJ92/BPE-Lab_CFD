@@ -1,154 +1,141 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>비정상 RANS (URANS) 모델 - CFD 이론 | 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="title_cfd_urans_model">비정상 RANS (URANS) 모델 - CFD 이론 | 생물공학연구실</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-gray-800 scroll-smooth">
-
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
-                    <a href="index.html">생물공학연구실</a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
-
-    <main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
-        <div class="bg-white p-6 md:p-10 rounded-xl shadow-xl">
-            <header class="mb-8 border-b pb-4">
-                <h1 class="text-3xl md:text-4xl font-bold text-slate-800">비정상 Reynolds-Averaged Navier-Stokes (URANS) 모델</h1>
-            </header>
-            <article class="prose prose-lg max-w-none">
-                <p>URANS는 Navier-Stokes 방정식을 시간 평균하여 얻어진 RANS 방정식에 비정상(Unsteady) 항을 유지함으로써, 시간에 따라 변화하는 평균 유동장을 해석하는 방법입니다.<sup>[6]</sup></p>
-
-                <h2 id="urans-theory">상세 이론, 기존 RANS와의 차이점, 시간 전개 방식</h2>
-                
-                <h3 class="text-xl font-semibold">상세 이론</h3>
-                <p>URANS는 유동 변수(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ϕ</code>)를 평균값(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ϕ̄</code>)과 변동 성분(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ϕ'</code>)으로 분해(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ϕ = ϕ̄ + ϕ'</code>)하고, 이를 Navier-Stokes 방정식에 대입한 후 시간 평균을 취하는 RANS 기법에 기반합니다.<sup>[6]</sup> RANS 방정식에는 난류 변동으로 인해 발생하는 Reynolds 응력 항(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">uᵢ'uⱼ'</code>의 평균)이 추가되며, 이 항을 모델링하기 위해 추가적인 난류 모델(예: k-ε, k-ω, SST 등)이 필요합니다.<sup>[2]</sup> URANS는 이러한 RANS 방정식의 비정상 형태를 풀어서, 시간에 따른 평균 유동의 변화를 포착합니다.<sup>[6]</sup></p>
-
-                <h3 class="text-xl font-semibold">기존 RANS와의 차이점</h3>
-                <ul>
-                    <li><strong>시간 의존성:</strong> 가장 큰 차이는 시간 항(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">∂/∂t</code>)을 유지한다는 것입니다. 기존 RANS는 정상 상태(Steady-State)를 가정하고 시간 평균 방정식을 풀어 최종적인 평균 유동장을 구합니다.<sup>[6]</sup> URANS는 시간에 따라 변화하는 평균 유동의 스냅샷을 시간 단계별로 계산합니다.<sup>[6]</sup></li>
-                    <li><strong>물리 현상 포착:</strong> URANS는 시간에 따라 진화하는 대규모 난류 구조 및 비정상 현상(예: 와류 방출, 주기적 박리)을 RANS보다 더 잘 포착할 수 있습니다.<sup>[6]</sup> 그러나 RANS와 마찬가지로 작은 스케일의 난류 변동은 여전히 난류 모델에 의해 모델링됩니다.<sup>[2]</sup></li>
-                </ul>
-
-                <h3 class="text-xl font-semibold">시간 전개 방식</h3>
-                <p>URANS 시뮬레이션은 초기 유동장부터 시작하여, 시간 단계를 반복하며 유동 변수를 업데이트합니다. 각 시간 단계에서 평균 운동량 방정식 및 난류 모델 방정식을 풀어 다음 시간 단계에서의 평균 속도, 압력, 난류 변수 등을 계산합니다.<sup>[6]</sup> 시간 단계 크기(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">Δt</code>)와 수치 기법(Explicit/Implicit) 선택은 시뮬레이션의 안정성과 정확도에 영향을 미칩니다.</p>
-                
-                <h3 class="text-xl font-semibold">수학적 모델</h3>
-                <p>평균 운동량 방정식(Reynolds-Averaged Momentum Equation)은 다음과 같은 형태를 가집니다:<sup>[2]</sup></p>
-                <div class="my-4 p-3 bg-gray-100 border border-gray-200 rounded-md overflow-x-auto">
-                    <pre><code class="text-sm font-mono">∂ūᵢ/∂t + ūⱼ∂ūᵢ/∂xⱼ = -(1/ρ)∂p̄/∂xᵢ + ν(∂²ūᵢ/∂xⱼ²) - ∂(ū'ᵢū'ⱼ)/∂xⱼ</code></pre>
-                </div>
-                <p>여기서 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ūᵢ</code>는 평균 속도 성분, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">p̄</code>는 평균 압력, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ν</code>는 동점성 계수, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ρ</code>는 밀도입니다. 마지막 항 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ū'ᵢū'ⱼ</code>의 평균은 Reynolds 응력 텐서로, 난류 모델을 통해 모델링됩니다. 예를 들어, k-ω SST 모델은 난류 운동 에너지 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">k</code>와 특정 소산율 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ω</code>에 대한 수송 방정식을 풀어 Reynolds 응력을 모델링합니다.<sup>[5]</sup></p>
-
-                <h2 id="urans-pros-cons">장점 및 단점</h2>
-                <div class="overflow-x-auto my-6">
-                    <table class="w-full text-left border-collapse prose">
-                        <thead class="bg-slate-100">
-                            <tr>
-                                <th class="px-4 py-2 border">장점</th>
-                                <th class="px-4 py-2 border">단점</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="px-4 py-2 border align-top">- 계산 비용 효율적: LES나 DNS 대비 현저히 낮은 계산 비용<sup>[7]</sup></td>
-                                <td class="px-4 py-2 border align-top">- 난류 미세 구조 재현 한계: 모든 난류 스케일을 모델링하므로 세부 구조 손실<sup>[6]</sup></td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-2 border align-top">- 산업 분야에서 광범위하게 사용, 높은 신뢰도: 오랜 검증 및 적용 사례 풍부<sup>[2,7]</sup></td>
-                                <td class="px-4 py-2 border align-top">- 모델링 오차 발생 가능: 특히 복잡한 유동(박리, 강한 압력 구배)에서 난류 모델의 가정으로 인한 부정확성<sup>[2]</sup></td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-2 border align-top">- 대규모/장시간 스케일 문제 해석에 적합: 실무 엔지니어링 문제에 실용적<sup>[2]</sup></td>
-                                <td class="px-4 py-2 border align-top">- 적절한 난류 모델 및 입구 경계 조건 설정 중요<sup>[6]</sup></td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-2 border align-top">- 비정상 현상 일부 포착 가능 (RANS 대비)<sup>[7]</sup></td>
-                                <td class="px-4 py-2 border align-top">- 시간 평균 개념의 물리적 해석 한계<sup>[6]</sup></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h2 id="urans-applications">주요 응용 분야 및 산업/학술적 사례</h2>
-                <ul>
-                    <li><strong>항공우주 및 자동차 공기역학:</strong> 비정상 와류 방출, 차량 주변 유동<sup>[8]</sup></li>
-                    <li><strong>터보 기계:</strong> 압축기, 터빈 블레이드 유동, 펌프 내부 유동<sup>[6,8]</sup></li>
-                    <li><strong>구조물 주변 유동:</strong> 건물 주변 풍하중, 교량 주변 유동<sup>[6]</sup></li>
-                    <li><strong>해양 공학:</strong> 선박 및 해양 구조물 주변 유동<sup>[6]</sup></li>
-                    <li><strong>엔진 내부 유동:</strong> 연소실 내 흡/배기 및 연소 과정 중 비정상 유동 일부 포착<sup>[8]</sup></li>
-                </ul>
-
-                <h2 id="urans-research-trends">최신 연구 동향 (최근 3-5년)</h2>
-                <p>최근 URANS 모델 연구는 다음과 같은 방향으로 진행되고 있습니다:</p>
-                <ul>
-                    <li><strong>난류 모델 정교화 및 개선:</strong> 기존 k-ε, k-ω SST 모델의 정확도를 향상시키기 위한 수정(예: Helicity 보정, QCR 모델) 및 새로운 모델 개발이 이루어지고 있습니다.<sup>[5]</sup></li>
-                    <li><strong>하이브리드 RANS-LES 기법 연구:</strong> URANS의 효율성과 LES의 정확도를 결합한 DDES(Delayed Detached Eddy Simulation), IDDES(Improved Delayed Detached Eddy Simulation) 등 하이브리드 모델 연구가 활발하며, 특히 벽면 유동 및 박리 현상 모델링에 초점을 맞추고 있습니다.<sup>[2,9]</sup></li>
-                    <li><strong>머신러닝/AI 활용:</strong> 실험 데이터나 고정밀 시뮬레이션 데이터(LES/DNS)를 활용하여 난류 모델의 경험적 계수를 보정하거나 데이터 기반 모델을 개발하는 연구가 시도되고 있습니다.<sup>[2]</sup></li>
-                    <li><strong>복잡 유동 적용성 확대:</strong> 실제 산업 현장의 복잡한 형상(터보 기계 내부, 누설 유동 등)에서의 URANS/하이브리드 모델 예측 정확도 검증 및 개선 연구가 지속됩니다.<sup>[2,8]</sup></li>
-                </ul>
-
-                <hr class="my-8 border-gray-300">
-                <h3 class="text-xl font-semibold text-slate-700 mt-6 mb-3">참고문헌</h3>
-                <ol class="list-decimal list-inside text-sm text-gray-600 space-y-1">
-                    <li>[2] Lattice Boltzmann Methods for Industrial Applications - ResearchGate.</li>
-                    <li>[5] Assessment of advanced RANS turbulence models for prediction of complex flows in compressors - Sciencedirect.</li>
-                    <li>[6] RANS and URANS. - CFD Online Forums.</li>
-                    <li>[7] Comparative Analysis for RANS, URANS, and DDES Turbulence Models - Dlubal Software FAQ.</li>
-                    <li>[8] Incompressible LBM (Lattice Boltzmann Method) Advanced Options - SimScale Docs. (Note: While titled LBM, section 2.3 applications might cover general CFD applications where URANS is also used, specific relevance may vary.)</li>
-                    <li>[9] Lattice Boltzmann k-ω SST based hybrid RANS/LES simulations of turbulent flows - Sciencedirect. (Note: While primarily LBM, discusses hybrid RANS/LES which is relevant to URANS evolution.)</li>
-                </ol>
-                <p class="text-xs mt-2"><em>(위 참고문헌 목록은 제공된 "LBM 및 URANS 모델 상세 분석" 문서에서 관련 내용을 발췌하여 이 페이지 작성에 활용된 주요 자료들입니다.)</em></p>
-
-            </article>
-        </div>
-        <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
-
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
+<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
+<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
+<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
+</h1>
+<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
+<ul class="container mx-auto px-0 flex justify-center">
+</ul>
+</nav>
+<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
+<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
+<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
+<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
+</div>
+</div>
+<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
+<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
+<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
+</div>
+</div>
+</div>
+<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
+<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+</div>
+</nav>
+</div>
+<main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
+<div class="bg-white p-6 md:p-10 rounded-xl shadow-xl" data-i18n="비정상_reynolds_averaged_navier_stokes_urans_모델urans는_navier_stokes_방정식을_시간_평균하여_얻어진_rans_방정식에_비정상_unsteady_항을_유지함으로써_시간에_따라_변화하는_평균_유동장을_해석하는_방법입니다_6_상세_이론_기존_rans와의_차이점_시간_전개_방식상세_이론urans는_유동_변수_ϕ_를_평균값_ϕ_과_변동_성분_ϕ_으로_분해_ϕ_ϕ_ϕ_하고_이를_navier_stokes_방정식에_대입한_후_시간_평균을_취하는_rans_기법에_기반합니다_6_rans_방정식에는_난류_변동으로_인해_발생하는_reynolds_응력_항_uᵢ_uⱼ_의_평균_이_추가되며_이_항을_모델링하기_위해_추가적인_난류_모델_예_k_ε_k_ω_sst_등_이_필요합니다_2_urans는_이러한_rans_방정식의_비정상_형태를_풀어서_시간에_따른_평균_유동의_변화를_포착합니다_6_기존_rans와의_차이점시간_의존성_가장_큰_차이는_시간_항_t_을_유지한다는_것입니다_기존_rans는_정상_상태_steady_state_를_가정하고_시간_평균_방정식을_풀어_최종적인_평균_유동장을_구합니다_6_urans는_시간에_따라_변화하는_평균_유동의_스냅샷을_시간_단계별로_계산합니다_6_물리_현상_포착_urans는_시간에_따라_진화하는_대규모_난류_구조_및_비정상_현상_예_와류_방출_주기적_박리_을_rans보다_더_잘_포착할_수_있습니다_6_그러나_rans와_마찬가지로_작은_스케일의_난류_변동은_여전히_난류_모델에_의해_모델링됩니다_2_시간_전개_방식urans_시뮬레이션은_초기_유동장부터_시작하여_시간_단계를_반복하며_유동_변수를_업데이트합니다_각_시간_단계에서_평균_운동량_방정식_및_난류_모델_방정식을_풀어_다음_시간_단계에서의_평균_속도_압력_난류_변수_등을_계산합니다_6_시간_단계_크기_δt_와_수치_기법_explicit_implicit_선택은_시뮬레이션의_안정성과_정확도에_영향을_미칩니다_수학적_모델평균_운동량_방정식_reynolds_averaged_momentum_equation_은_다음과_같은_형태를_가집니다_2_u_ᵢ_t_u_ⱼ_u_ᵢ_xⱼ_1_ρ_p_xᵢ_ν_²u_ᵢ_xⱼ²_u_ᵢu_ⱼ_xⱼ여기서u_ᵢ는_평균_속도_성분_p_는_평균_압력_ν는_동점성_계수_ρ는_밀도입니다_마지막_항u_ᵢu_ⱼ의_평균은_reynolds_응력_텐서로_난류_모델을_통해_모델링됩니다_예를_들어_k_ω_sst_모델은_난류_운동_에너지k와_특정_소산율ω에_대한_수송_방정식을_풀어_reynolds_응력을_모델링합니다_5_장점_및_단점장점단점_계산_비용_효율적_les나_dns_대비_현저히_낮은_계산_비용_7_난류_미세_구조_재현_한계_모든_난류_스케일을_모델링하므로_세부_구조_손실_6_산업_분야에서_광범위하게_사용_높은_신뢰도_오랜_검증_및_적용_사례_풍부_2_7_모델링_오차_발생_가능_특히_복잡한_유동_박리_강한_압력_구배_에서_난류_모델의_가정으로_인한_부정확성_2_대규모_장시간_스케일_문제_해석에_적합_실무_엔지니어링_문제에_실용적_2_적절한_난류_모델_및_입구_경계_조건_설정_중요_6_비정상_현상_일부_포착_가능_rans_대비_7_시간_평균_개념의_물리적_해석_한계_6_주요_응용_분야_및_산업_학술적_사례항공우주_및_자동차_공기역학_비정상_와류_방출_차량_주변_유동_8_터보_기계_압축기_터빈_블레이드_유동_펌프_내부_유동_6_8_구조물_주변_유동_건물_주변_풍하중_교량_주변_유동_6_해양_공학_선박_및_해양_구조물_주변_유동_6_엔진_내부_유동_연소실_내_흡_배기_및_연소_과정_중_비정상_유동_일부_포착_8_최신_연구_동향_최근_3_5년_최근_urans_모델_연구는_다음과_같은_방향으로_진행되고_있습니다_난류_모델_정교화_및_개선_기존_k_ε_k_ω_sst_모델의_정확도를_향상시키기_위한_수정_예_helicity_보정_qcr_모델_및_새로운_모델_개발이_이루어지고_있습니다_5_하이브리드_rans_les_기법_연구_urans의_효율성과_les의_정확도를_결합한_ddes_delayed_detached_eddy_simulation_iddes_improved_delayed_detached_eddy_simulation_등_하이브리드_모델_연구가_활발하며_특히_벽면_유동_및_박리_현상_모델링에_초점을_맞추고_있습니다_2_9_머신러닝_ai_활용_실험_데이터나_고정밀_시뮬레이션_데이터_les_dns_를_활용하여_난류_모델의_경험적_계수를_보정하거나_데이터_기반_모델을_개발하는_연구가_시도되고_있습니다_2_복잡_유동_적용성_확대_실제_산업_현장의_복잡한_형상_터보_기계_내부_누설_유동_등_에서의_urans_하이브리드_모델_예측_정확도_검증_및_개선_연구가_지속됩니다_2_8_참고문헌_2_lattice_boltzmann_methods_for_industrial_applications_researchgate_5_assessment_of_advanced_rans_turbulence_models_for_prediction_of_complex_flows_in_compressors_sciencedirect_6_rans_and_urans_cfd_online_forums_7_comparative_analysis_for_rans_urans_and_ddes_turbulence_models_dlubal_software_faq_8_incompressible_lbm_lattice_boltzmann_method_advanced_options_simscale_docs_note_while_titled_lbm_section_2_3_applications_might_cover_general_cfd_applications_where_urans_is_also_used_specific_relevance_may_vary_9_lattice_boltzmann_k_ω_sst_based_hybrid_rans_les_simulations_of_turbulent_flows_sciencedirect_note_while_primarily_lbm_discusses_hybrid_rans_les_which_is_relevant_to_urans_evolution_위_참고문헌_목록은_제공된_lbm_및_urans_모델_상세_분석_문서에서_관련_내용을_발췌하여_이_페이지_작성에_활용된_주요_자료들입니다">
+<header class="mb-8 border-b pb-4">
+<h1 class="text-3xl md:text-4xl font-bold text-slate-800" data-i18n="비정상_reynolds_averaged_navier_stokes_urans_모델">비정상 Reynolds-Averaged Navier-Stokes (URANS) 모델</h1>
+</header>
+<article class="prose prose-lg max-w-none">
+<p data-i18n="urans는_navier_stokes_방정식을_시간_평균하여_얻어진_rans_방정식에_비정상_unsteady_항을_유지함으로써_시간에_따라_변화하는_평균_유동장을_해석하는_방법입니다_6">URANS는 Navier-Stokes 방정식을 시간 평균하여 얻어진 RANS 방정식에 비정상(Unsteady) 항을 유지함으로써, 시간에 따라 변화하는 평균 유동장을 해석하는 방법입니다.<sup>[6]</sup></p>
+<h2 data-i18n="상세_이론_기존_rans와의_차이점_시간_전개_방식" id="urans-theory">상세 이론, 기존 RANS와의 차이점, 시간 전개 방식</h2>
+<h3 class="text-xl font-semibold" data-i18n="상세_이론">상세 이론</h3>
+<p data-i18n="urans는_유동_변수_ϕ_를_평균값_ϕ_과_변동_성분_ϕ_으로_분해_ϕ_ϕ_ϕ_하고_이를_navier_stokes_방정식에_대입한_후_시간_평균을_취하는_rans_기법에_기반합니다_6_rans_방정식에는_난류_변동으로_인해_발생하는_reynolds_응력_항_uᵢ_uⱼ_의_평균_이_추가되며_이_항을_모델링하기_위해_추가적인_난류_모델_예_k_ε_k_ω_sst_등_이_필요합니다_2_urans는_이러한_rans_방정식의_비정상_형태를_풀어서_시간에_따른_평균_유동의_변화를_포착합니다_6">URANS는 유동 변수(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ϕ</code>)를 평균값(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ϕ̄</code>)과 변동 성분(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ϕ'</code>)으로 분해(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ϕ = ϕ̄ + ϕ'</code>)하고, 이를 Navier-Stokes 방정식에 대입한 후 시간 평균을 취하는 RANS 기법에 기반합니다.<sup>[6]</sup> RANS 방정식에는 난류 변동으로 인해 발생하는 Reynolds 응력 항(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">uᵢ'uⱼ'</code>의 평균)이 추가되며, 이 항을 모델링하기 위해 추가적인 난류 모델(예: k-ε, k-ω, SST 등)이 필요합니다.<sup>[2]</sup> URANS는 이러한 RANS 방정식의 비정상 형태를 풀어서, 시간에 따른 평균 유동의 변화를 포착합니다.<sup>[6]</sup></p>
+<h3 class="text-xl font-semibold" data-i18n="기존_rans와의_차이점">기존 RANS와의 차이점</h3>
+<ul>
+<li data-i18n="시간_의존성_가장_큰_차이는_시간_항_t_을_유지한다는_것입니다_기존_rans는_정상_상태_steady_state_를_가정하고_시간_평균_방정식을_풀어_최종적인_평균_유동장을_구합니다_6_urans는_시간에_따라_변화하는_평균_유동의_스냅샷을_시간_단계별로_계산합니다_6"><strong>시간 의존성:</strong> 가장 큰 차이는 시간 항(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">∂/∂t</code>)을 유지한다는 것입니다. 기존 RANS는 정상 상태(Steady-State)를 가정하고 시간 평균 방정식을 풀어 최종적인 평균 유동장을 구합니다.<sup>[6]</sup> URANS는 시간에 따라 변화하는 평균 유동의 스냅샷을 시간 단계별로 계산합니다.<sup>[6]</sup></li>
+<li data-i18n="물리_현상_포착_urans는_시간에_따라_진화하는_대규모_난류_구조_및_비정상_현상_예_와류_방출_주기적_박리_을_rans보다_더_잘_포착할_수_있습니다_6_그러나_rans와_마찬가지로_작은_스케일의_난류_변동은_여전히_난류_모델에_의해_모델링됩니다_2"><strong>물리 현상 포착:</strong> URANS는 시간에 따라 진화하는 대규모 난류 구조 및 비정상 현상(예: 와류 방출, 주기적 박리)을 RANS보다 더 잘 포착할 수 있습니다.<sup>[6]</sup> 그러나 RANS와 마찬가지로 작은 스케일의 난류 변동은 여전히 난류 모델에 의해 모델링됩니다.<sup>[2]</sup></li>
+</ul>
+<h3 class="text-xl font-semibold" data-i18n="시간_전개_방식">시간 전개 방식</h3>
+<p data-i18n="urans_시뮬레이션은_초기_유동장부터_시작하여_시간_단계를_반복하며_유동_변수를_업데이트합니다_각_시간_단계에서_평균_운동량_방정식_및_난류_모델_방정식을_풀어_다음_시간_단계에서의_평균_속도_압력_난류_변수_등을_계산합니다_6_시간_단계_크기_δt_와_수치_기법_explicit_implicit_선택은_시뮬레이션의_안정성과_정확도에_영향을_미칩니다">URANS 시뮬레이션은 초기 유동장부터 시작하여, 시간 단계를 반복하며 유동 변수를 업데이트합니다. 각 시간 단계에서 평균 운동량 방정식 및 난류 모델 방정식을 풀어 다음 시간 단계에서의 평균 속도, 압력, 난류 변수 등을 계산합니다.<sup>[6]</sup> 시간 단계 크기(<code class="font-mono text-sm bg-gray-100 p-0.5 rounded">Δt</code>)와 수치 기법(Explicit/Implicit) 선택은 시뮬레이션의 안정성과 정확도에 영향을 미칩니다.</p>
+<h3 class="text-xl font-semibold" data-i18n="수학적_모델">수학적 모델</h3>
+<p data-i18n="평균_운동량_방정식_reynolds_averaged_momentum_equation_은_다음과_같은_형태를_가집니다_2">평균 운동량 방정식(Reynolds-Averaged Momentum Equation)은 다음과 같은 형태를 가집니다:<sup>[2]</sup></p>
+<div class="my-4 p-3 bg-gray-100 border border-gray-200 rounded-md overflow-x-auto" data-i18n="u_ᵢ_t_u_ⱼ_u_ᵢ_xⱼ_1_ρ_p_xᵢ_ν_²u_ᵢ_xⱼ²_u_ᵢu_ⱼ_xⱼ">
+<pre><code class="text-sm font-mono">∂ūᵢ/∂t + ūⱼ∂ūᵢ/∂xⱼ = -(1/ρ)∂p̄/∂xᵢ + ν(∂²ūᵢ/∂xⱼ²) - ∂(ū'ᵢū'ⱼ)/∂xⱼ</code></pre>
+</div>
+<p data-i18n="여기서u_ᵢ는_평균_속도_성분_p_는_평균_압력_ν는_동점성_계수_ρ는_밀도입니다_마지막_항u_ᵢu_ⱼ의_평균은_reynolds_응력_텐서로_난류_모델을_통해_모델링됩니다_예를_들어_k_ω_sst_모델은_난류_운동_에너지k와_특정_소산율ω에_대한_수송_방정식을_풀어_reynolds_응력을_모델링합니다_5">여기서 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ūᵢ</code>는 평균 속도 성분, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">p̄</code>는 평균 압력, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ν</code>는 동점성 계수, <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ρ</code>는 밀도입니다. 마지막 항 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ū'ᵢū'ⱼ</code>의 평균은 Reynolds 응력 텐서로, 난류 모델을 통해 모델링됩니다. 예를 들어, k-ω SST 모델은 난류 운동 에너지 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">k</code>와 특정 소산율 <code class="font-mono text-sm bg-gray-100 p-0.5 rounded">ω</code>에 대한 수송 방정식을 풀어 Reynolds 응력을 모델링합니다.<sup>[5]</sup></p>
+<h2 data-i18n="장점_및_단점" id="urans-pros-cons">장점 및 단점</h2>
+<div class="overflow-x-auto my-6" data-i18n="장점단점_계산_비용_효율적_les나_dns_대비_현저히_낮은_계산_비용_7_난류_미세_구조_재현_한계_모든_난류_스케일을_모델링하므로_세부_구조_손실_6_산업_분야에서_광범위하게_사용_높은_신뢰도_오랜_검증_및_적용_사례_풍부_2_7_모델링_오차_발생_가능_특히_복잡한_유동_박리_강한_압력_구배_에서_난류_모델의_가정으로_인한_부정확성_2_대규모_장시간_스케일_문제_해석에_적합_실무_엔지니어링_문제에_실용적_2_적절한_난류_모델_및_입구_경계_조건_설정_중요_6_비정상_현상_일부_포착_가능_rans_대비_7_시간_평균_개념의_물리적_해석_한계_6">
+<table class="w-full text-left border-collapse prose">
+<thead class="bg-slate-100">
+<tr>
+<th class="px-4 py-2 border" data-i18n="장점">장점</th>
+<th class="px-4 py-2 border" data-i18n="단점">단점</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="px-4 py-2 border align-top" data-i18n="계산_비용_효율적_les나_dns_대비_현저히_낮은_계산_비용_7">- 계산 비용 효율적: LES나 DNS 대비 현저히 낮은 계산 비용<sup>[7]</sup></td>
+<td class="px-4 py-2 border align-top" data-i18n="난류_미세_구조_재현_한계_모든_난류_스케일을_모델링하므로_세부_구조_손실_6">- 난류 미세 구조 재현 한계: 모든 난류 스케일을 모델링하므로 세부 구조 손실<sup>[6]</sup></td>
+</tr>
+<tr>
+<td class="px-4 py-2 border align-top" data-i18n="산업_분야에서_광범위하게_사용_높은_신뢰도_오랜_검증_및_적용_사례_풍부_2_7">- 산업 분야에서 광범위하게 사용, 높은 신뢰도: 오랜 검증 및 적용 사례 풍부<sup>[2,7]</sup></td>
+<td class="px-4 py-2 border align-top" data-i18n="모델링_오차_발생_가능_특히_복잡한_유동_박리_강한_압력_구배_에서_난류_모델의_가정으로_인한_부정확성_2">- 모델링 오차 발생 가능: 특히 복잡한 유동(박리, 강한 압력 구배)에서 난류 모델의 가정으로 인한 부정확성<sup>[2]</sup></td>
+</tr>
+<tr>
+<td class="px-4 py-2 border align-top" data-i18n="대규모_장시간_스케일_문제_해석에_적합_실무_엔지니어링_문제에_실용적_2">- 대규모/장시간 스케일 문제 해석에 적합: 실무 엔지니어링 문제에 실용적<sup>[2]</sup></td>
+<td class="px-4 py-2 border align-top" data-i18n="적절한_난류_모델_및_입구_경계_조건_설정_중요_6">- 적절한 난류 모델 및 입구 경계 조건 설정 중요<sup>[6]</sup></td>
+</tr>
+<tr>
+<td class="px-4 py-2 border align-top" data-i18n="비정상_현상_일부_포착_가능_rans_대비_7">- 비정상 현상 일부 포착 가능 (RANS 대비)<sup>[7]</sup></td>
+<td class="px-4 py-2 border align-top" data-i18n="시간_평균_개념의_물리적_해석_한계_6">- 시간 평균 개념의 물리적 해석 한계<sup>[6]</sup></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 data-i18n="주요_응용_분야_및_산업_학술적_사례" id="urans-applications">주요 응용 분야 및 산업/학술적 사례</h2>
+<ul>
+<li data-i18n="항공우주_및_자동차_공기역학_비정상_와류_방출_차량_주변_유동_8"><strong>항공우주 및 자동차 공기역학:</strong> 비정상 와류 방출, 차량 주변 유동<sup>[8]</sup></li>
+<li data-i18n="터보_기계_압축기_터빈_블레이드_유동_펌프_내부_유동_6_8"><strong>터보 기계:</strong> 압축기, 터빈 블레이드 유동, 펌프 내부 유동<sup>[6,8]</sup></li>
+<li data-i18n="구조물_주변_유동_건물_주변_풍하중_교량_주변_유동_6"><strong>구조물 주변 유동:</strong> 건물 주변 풍하중, 교량 주변 유동<sup>[6]</sup></li>
+<li data-i18n="해양_공학_선박_및_해양_구조물_주변_유동_6"><strong>해양 공학:</strong> 선박 및 해양 구조물 주변 유동<sup>[6]</sup></li>
+<li data-i18n="엔진_내부_유동_연소실_내_흡_배기_및_연소_과정_중_비정상_유동_일부_포착_8"><strong>엔진 내부 유동:</strong> 연소실 내 흡/배기 및 연소 과정 중 비정상 유동 일부 포착<sup>[8]</sup></li>
+</ul>
+<h2 data-i18n="최신_연구_동향_최근_3_5년" id="urans-research-trends">최신 연구 동향 (최근 3-5년)</h2>
+<p data-i18n="최근_urans_모델_연구는_다음과_같은_방향으로_진행되고_있습니다">최근 URANS 모델 연구는 다음과 같은 방향으로 진행되고 있습니다:</p>
+<ul>
+<li data-i18n="난류_모델_정교화_및_개선_기존_k_ε_k_ω_sst_모델의_정확도를_향상시키기_위한_수정_예_helicity_보정_qcr_모델_및_새로운_모델_개발이_이루어지고_있습니다_5"><strong>난류 모델 정교화 및 개선:</strong> 기존 k-ε, k-ω SST 모델의 정확도를 향상시키기 위한 수정(예: Helicity 보정, QCR 모델) 및 새로운 모델 개발이 이루어지고 있습니다.<sup>[5]</sup></li>
+<li data-i18n="하이브리드_rans_les_기법_연구_urans의_효율성과_les의_정확도를_결합한_ddes_delayed_detached_eddy_simulation_iddes_improved_delayed_detached_eddy_simulation_등_하이브리드_모델_연구가_활발하며_특히_벽면_유동_및_박리_현상_모델링에_초점을_맞추고_있습니다_2_9"><strong>하이브리드 RANS-LES 기법 연구:</strong> URANS의 효율성과 LES의 정확도를 결합한 DDES(Delayed Detached Eddy Simulation), IDDES(Improved Delayed Detached Eddy Simulation) 등 하이브리드 모델 연구가 활발하며, 특히 벽면 유동 및 박리 현상 모델링에 초점을 맞추고 있습니다.<sup>[2,9]</sup></li>
+<li data-i18n="머신러닝_ai_활용_실험_데이터나_고정밀_시뮬레이션_데이터_les_dns_를_활용하여_난류_모델의_경험적_계수를_보정하거나_데이터_기반_모델을_개발하는_연구가_시도되고_있습니다_2"><strong>머신러닝/AI 활용:</strong> 실험 데이터나 고정밀 시뮬레이션 데이터(LES/DNS)를 활용하여 난류 모델의 경험적 계수를 보정하거나 데이터 기반 모델을 개발하는 연구가 시도되고 있습니다.<sup>[2]</sup></li>
+<li data-i18n="복잡_유동_적용성_확대_실제_산업_현장의_복잡한_형상_터보_기계_내부_누설_유동_등_에서의_urans_하이브리드_모델_예측_정확도_검증_및_개선_연구가_지속됩니다_2_8"><strong>복잡 유동 적용성 확대:</strong> 실제 산업 현장의 복잡한 형상(터보 기계 내부, 누설 유동 등)에서의 URANS/하이브리드 모델 예측 정확도 검증 및 개선 연구가 지속됩니다.<sup>[2,8]</sup></li>
+</ul>
+<hr class="my-8 border-gray-300"/>
+<h3 class="text-xl font-semibold text-slate-700 mt-6 mb-3" data-i18n="참고문헌">참고문헌</h3>
+<ol class="list-decimal list-inside text-sm text-gray-600 space-y-1">
+<li data-i18n="2_lattice_boltzmann_methods_for_industrial_applications_researchgate">[2] Lattice Boltzmann Methods for Industrial Applications - ResearchGate.</li>
+<li data-i18n="5_assessment_of_advanced_rans_turbulence_models_for_prediction_of_complex_flows_in_compressors_sciencedirect">[5] Assessment of advanced RANS turbulence models for prediction of complex flows in compressors - Sciencedirect.</li>
+<li data-i18n="6_rans_and_urans_cfd_online_forums">[6] RANS and URANS. - CFD Online Forums.</li>
+<li data-i18n="7_comparative_analysis_for_rans_urans_and_ddes_turbulence_models_dlubal_software_faq">[7] Comparative Analysis for RANS, URANS, and DDES Turbulence Models - Dlubal Software FAQ.</li>
+<li data-i18n="8_incompressible_lbm_lattice_boltzmann_method_advanced_options_simscale_docs_note_while_titled_lbm_section_2_3_applications_might_cover_general_cfd_applications_where_urans_is_also_used_specific_relevance_may_vary">[8] Incompressible LBM (Lattice Boltzmann Method) Advanced Options - SimScale Docs. (Note: While titled LBM, section 2.3 applications might cover general CFD applications where URANS is also used, specific relevance may vary.)</li>
+<li data-i18n="9_lattice_boltzmann_k_ω_sst_based_hybrid_rans_les_simulations_of_turbulent_flows_sciencedirect_note_while_primarily_lbm_discusses_hybrid_rans_les_which_is_relevant_to_urans_evolution">[9] Lattice Boltzmann k-ω SST based hybrid RANS/LES simulations of turbulent flows - Sciencedirect. (Note: While primarily LBM, discusses hybrid RANS/LES which is relevant to URANS evolution.)</li>
+</ol>
+<p class="text-xs mt-2" data-i18n="위_참고문헌_목록은_제공된_lbm_및_urans_모델_상세_분석_문서에서_관련_내용을_발췌하여_이_페이지_작성에_활용된_주요_자료들입니다"><em>(위 참고문헌 목록은 제공된 "LBM 및 URANS 모델 상세 분석" 문서에서 관련 내용을 발췌하여 이 페이지 작성에 활용된 주요 자료들입니다.)</em></p>
+</article>
+</div>
+<div class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
+<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
+<div class="space-y-4" id="searchResultsList"></div>
+</div>
+</main>
+<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
+<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
+<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
+</p>
+<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
