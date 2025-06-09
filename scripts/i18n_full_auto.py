@@ -142,7 +142,8 @@ for file in process_files:
             key = el.get('data-i18n')
             if not key:
                 if el.name == 'title':
-                    key = 'title'
+                    basename = path.stem
+                    key = f"title_{basename}"
                 else:
                     if placeholder_mode and el.has_attr('id'):
                         key = f"{el['id']}_placeholder"
