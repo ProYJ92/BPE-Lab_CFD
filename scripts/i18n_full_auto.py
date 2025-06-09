@@ -32,14 +32,20 @@ selectors = [
     'h2',
     'h3',
     'h4',
+    'h5',
+    'h6',
     'a.nav-link',
+    'a',
     'button',
     'li>a',
+    'li',
     'p',
     'span',
     'label',
     'th',
-    'td'
+    'td',
+    'input[placeholder]',
+    'textarea[placeholder]'
 ]
 
 assets_dir = repo / 'assets' / 'i18n'
@@ -70,6 +76,10 @@ for file in process_files:
     for sel in selectors:
         for el in soup.select(sel):
             txt = el.get_text(strip=True)
+            placeholder_mode = False
+            if not txt and el.has_attr('placeholder'):
+                txt = el['placeholder'].strip()
+                placeholder_mode = True
             if not txt:
                 continue
             key = el.get('data-i18n')
@@ -77,10 +87,16 @@ for file in process_files:
                 if el.name == 'title':
                     key = 'title'
                 else:
-                    key = slug(txt)
+                    if placeholder_mode and el.has_attr('id'):
+                        key = f"{el['id']}_placeholder"
+                    else:
+                        key = slug(txt)
                 el['data-i18n'] = key
                 modified = True
-            ko[key] = txt
+            if placeholder_mode:
+                ko[key] = el['placeholder'].strip()
+            else:
+                ko[key] = txt
             if key not in en:
                 en[key] = ''
             if key not in zh:
