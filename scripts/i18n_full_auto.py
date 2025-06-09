@@ -179,6 +179,25 @@ for file in process_files:
 
 print(f"Total new keys: {len(new_keys)}")
 
+# Parse translation strings defined in script.js
+js_file = repo / 'script.js'
+if js_file.exists():
+    m = re.search(r'const\s+jsI18n\s*=\s*(\{[\s\S]*?\});', js_file.read_text('utf-8'))
+    if m:
+        try:
+            js_dict = json.loads(m.group(1))
+            for k, v in js_dict.items():
+                if k not in ko:
+                    ko[k] = v
+                if k not in en:
+                    en[k] = ''
+                if k not in zh:
+                    zh[k] = ''
+                if not en[k] or not zh[k]:
+                    new_keys.add(k)
+        except json.JSONDecodeError:
+            print('Warning: failed to parse jsI18n block in script.js')
+
 if new_keys:
     for key in new_keys:
         text = ko[key]

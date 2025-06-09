@@ -1,4 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const jsI18n = {
+        "enter_password": "비밀번호를 입력하세요 <span>(대소문자 구분)</span>",
+        "password_placeholder": "비밀번호 입력",
+        "confirm_button": "확인",
+        "cancel_button": "취소",
+        "wrong_password_alert": "비밀번호가 틀렸습니다. 대소문자를 정확히 입력해주세요.",
+        "lang_file_missing_alert": "선택한 언어 파일을 찾을 수 없습니다. 기존 언어로 유지됩니다.",
+        "search_index_failed": "검색 인덱스를 불러오는데 실패했습니다.",
+        "search_function_error": "검색 기능에 오류가 발생했습니다.",
+        "search_loading": "검색 인덱스를 로딩 중입니다. 잠시 후 다시 시도해주세요.",
+        "snippet_unavailable": "내용 요약을 불러올 수 없습니다.",
+        "no_search_results": "\"{query}\"에 대한 검색 결과가 없습니다.",
+        "helper_open_label": "도우미 열기",
+        "helper_close_label": "도우미 종료",
+        "helper_link_about_lab": "🔬 우리 연구실이 어떤 연구를 하는지 궁금하신가요?",
+        "helper_link_bp_eng": "🧫 생물공정공학이 뭔지 쉽고 빠르게 알려드릴까요?",
+        "helper_link_proc_opt": "🚀 세포배양 효율을 높이는 최적의 방법이 궁금하세요?",
+        "helper_link_meta_eng": "🧬 시스템 대사공학과 배지 최적화의 중요성, 알고 싶으세요?",
+        "helper_link_cfd": "💻 CFD(전산유체역학)를 쉽게 이해하고 싶으신가요?",
+        "helper_link_digital_twin": "🌐 디지털 트윈을 이용한 바이오공정, 어떻게 구현할 수 있을까요?",
+        "helper_link_lab_resources": "📚 유용한 자료가 필요하세요? 여기서 바로 찾아보세요!",
+        "back_to_top_label": "맨 위로 가기",
+        "back_to_top_text": "↑ Top"
+    };
     const fixedNavContainer = document.getElementById('fixed-top-nav-container');
     const mainNav = document.getElementById('mainNav');
     const breadcrumbNav = document.getElementById('breadcrumbNav');
@@ -101,11 +125,11 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.innerHTML = `
             <div id="overlayContent">
                 <div id="loadingSpinner" class="spinner"></div>
-                <p style="color:#fff; font-size:16px;">비밀번호를 입력하세요 <span>(대소문자 구분)</span></p>
-                <input type="password" id="passwordInput" class="password-input" placeholder="비밀번호 입력" />
+                <p data-i18n="enter_password" style="color:#fff; font-size:16px;">${jsI18n.enter_password}</p>
+                <input type="password" id="passwordInput" class="password-input" placeholder="${jsI18n.password_placeholder}" data-i18n="password_placeholder" />
                 <div class="password-buttons mt-2">
-                    <button id="passwordSubmit" class="mr-2 bg-blue-600 text-white px-3 py-1 rounded">확인</button>
-                    <button id="passwordCancel" class="bg-gray-300 text-gray-800 px-3 py-1 rounded">취소</button>
+                    <button id="passwordSubmit" class="mr-2 bg-blue-600 text-white px-3 py-1 rounded" data-i18n="confirm_button">${jsI18n.confirm_button}</button>
+                    <button id="passwordCancel" class="bg-gray-300 text-gray-800 px-3 py-1 rounded" data-i18n="cancel_button">${jsI18n.cancel_button}</button>
                 </div>
             </div>`;
         document.body.appendChild(overlay);
@@ -121,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sessionStorage.setItem('labResourcesAccess', 'true');
             window.location.href = 'lab_resources.html';
         } else {
-            alert('비밀번호가 틀렸습니다. 대소문자를 정확히 입력해주세요.');
+            alert(jsI18n.wrong_password_alert);
         }
     }
 
@@ -135,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const defaultTexts = {};
+    const defaultTexts = { ...jsI18n };
 
     // Store default texts for elements using data-i18n to allow reverting
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -155,6 +179,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     el.textContent = texts[key];
                 }
+            }
+        });
+
+        Object.keys(jsI18n).forEach(k => {
+            if (k in texts) {
+                jsI18n[k] = texts[k];
             }
         });
 
@@ -219,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (langSelect) langSelect.value = lang;
         } catch (error) {
             console.warn(`${lang}.json not found, maintaining default language.`);
-            alert(`선택한 언어 파일을 찾을 수 없습니다. 기존 언어로 유지됩니다.`);
+            alert(jsI18n.lang_file_missing_alert);
             applyTexts(defaultTexts);
             localStorage.setItem('selectedLanguage', 'default');
             if (langSelect) langSelect.value = 'default';
@@ -742,14 +772,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('search_index.json');
             if (!response.ok) {
                 console.error('Failed to load search index. Status:', response.status);
-                if (searchResultsList) searchResultsList.innerHTML = '<p class="text-red-500">검색 인덱스를 불러오는데 실패했습니다.</p>';
+                if (searchResultsList) searchResultsList.innerHTML = '<p class="text-red-500">' + jsI18n.search_index_failed + '</p>';
                 if (searchResultsContainer) searchResultsContainer.style.display = 'block';
                 return;
             }
             siteSearchIndex = await response.json();
         } catch (error) {
             console.error('Error fetching or parsing search index:', error);
-            if (searchResultsList) searchResultsList.innerHTML = '<p class="text-red-500">검색 기능에 오류가 발생했습니다.</p>';
+            if (searchResultsList) searchResultsList.innerHTML = '<p class="text-red-500">' + jsI18n.search_function_error + '</p>';
             if (searchResultsContainer) searchResultsContainer.style.display = 'block';
         }
     }
@@ -852,9 +882,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (!siteSearchIndex) {
-            searchResultsList.innerHTML = '<p class="text-gray-500">검색 인덱스를 로딩 중입니다. 잠시 후 다시 시도해주세요.</p>';
+            searchResultsList.innerHTML = '<p class="text-gray-500">' + jsI18n.search_loading + '</p>';
             searchResultsContainer.style.display = 'block';
-            loadSearchIndex(); 
+            loadSearchIndex();
             return;
         }
 
@@ -890,7 +920,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (!snippetText && result.full_text) {
                     snippetText = result.full_text.substring(0,150) + (result.full_text.length > 150 ? "..." : "");
                 } else if (!snippetText) {
-                    snippetText = "내용 요약을 불러올 수 없습니다.";
+                    snippetText = jsI18n.snippet_unavailable;
                 }
                 
                 snippetElement.innerHTML = highlightText(snippetText, query);
@@ -905,7 +935,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 searchResultsList.appendChild(listItem);
             });
         } else {
-            searchResultsList.innerHTML = '<p class="text-gray-500">"' + query + '"에 대한 검색 결과가 없습니다.</p>';
+            searchResultsList.innerHTML = '<p class="text-gray-500">' + jsI18n.no_search_results.replace('{query}', query) + '</p>';
         }
          if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
             document.querySelector('.hero-section')?.style.setProperty('display', 'none', 'important');
@@ -972,22 +1002,22 @@ let helperMenu = document.getElementById("helper-menu");
 if (!helperBtn) {
     helperBtn = document.createElement("div");
     helperBtn.id = "helper-btn";
-    helperBtn.setAttribute("aria-label", "도우미 열기");
+    helperBtn.setAttribute("aria-label", jsI18n.helper_open_label);
     helperBtn.textContent = "\uD83D\uDCAC";
 
     helperMenu = document.createElement("div");
     helperMenu.id = "helper-menu";
     helperMenu.classList.add("hidden");
     helperMenu.innerHTML = `
-        <button id="close-helper" aria-label="도우미 종료">✖</button>
+        <button id="close-helper" aria-label="${jsI18n.helper_close_label}" data-i18n="helper_close_label">✖</button>
         <ul>
-            <li><a href="about_lab.html" aria-label="연구실 소개">🔬 우리 연구실이 어떤 연구를 하는지 궁금하신가요?</a></li>
-            <li><a href="bp_eng_main.html" aria-label="생물공정공학 소개">🧫 생물공정공학이 뭔지 쉽고 빠르게 알려드릴까요?</a></li>
-            <li><a href="proc_opt_main.html" aria-label="공정 최적화">🚀 세포배양 효율을 높이는 최적의 방법이 궁금하세요?</a></li>
-        <li><a href="meta_eng_main.html" aria-label="시스템 대사공학">🧬 시스템 대사공학과 배지 최적화의 중요성, 알고 싶으세요?</a></li>
-        <li><a href="cfd_main.html" aria-label="CFD 소개">💻 CFD(전산유체역학)를 쉽게 이해하고 싶으신가요?</a></li>
-        <li><a href="digital_twin_main.html" aria-label="디지털 트윈">🌐 디지털 트윈을 이용한 바이오공정, 어떻게 구현할 수 있을까요?</a></li>
-        <li><a href="lab_resources.html" aria-label="연구실 자료">📚 유용한 자료가 필요하세요? 여기서 바로 찾아보세요!</a></li>
+            <li><a href="about_lab.html" aria-label="연구실 소개" data-i18n="helper_link_about_lab">${jsI18n.helper_link_about_lab}</a></li>
+            <li><a href="bp_eng_main.html" aria-label="생물공정공학 소개" data-i18n="helper_link_bp_eng">${jsI18n.helper_link_bp_eng}</a></li>
+            <li><a href="proc_opt_main.html" aria-label="공정 최적화" data-i18n="helper_link_proc_opt">${jsI18n.helper_link_proc_opt}</a></li>
+        <li><a href="meta_eng_main.html" aria-label="시스템 대사공학" data-i18n="helper_link_meta_eng">${jsI18n.helper_link_meta_eng}</a></li>
+        <li><a href="cfd_main.html" aria-label="CFD 소개" data-i18n="helper_link_cfd">${jsI18n.helper_link_cfd}</a></li>
+        <li><a href="digital_twin_main.html" aria-label="디지털 트윈" data-i18n="helper_link_digital_twin">${jsI18n.helper_link_digital_twin}</a></li>
+        <li><a href="lab_resources.html" aria-label="연구실 자료" data-i18n="helper_link_lab_resources">${jsI18n.helper_link_lab_resources}</a></li>
     </ul>`;
 
     document.body.appendChild(helperBtn);
@@ -1066,8 +1096,9 @@ if (!helperBtn.dataset.helperBound) {
 
     const backToTop = document.createElement('button');
     backToTop.id = 'back-to-top';
-    backToTop.setAttribute('aria-label', '맨 위로 가기');
-    backToTop.textContent = '↑ Top';
+    backToTop.setAttribute('aria-label', jsI18n.back_to_top_label);
+    backToTop.textContent = jsI18n.back_to_top_text;
+    backToTop.dataset.i18n = 'back_to_top_text';
     document.body.appendChild(backToTop);
 
     window.addEventListener('scroll', () => {
