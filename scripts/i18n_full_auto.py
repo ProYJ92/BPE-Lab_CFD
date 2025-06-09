@@ -44,7 +44,7 @@ else:
         ).stdout.split()
 
 process_files = [f for f in diff if f.endswith(('.html', '.md'))]
-print(f"Files to process: {len(process_files)}")
+print(f"Processing {len(process_files)} files")
 if args.skip and not process_files and not args.force:
     print('No changes detected; skipping i18n update.')
     sys.exit(0)
@@ -157,7 +157,7 @@ for file in process_files:
         path.write_text(str(soup), 'utf-8')
         print(f"Updated {file}")
 
-print(f"New keys found: {len(new_keys)}")
+print(f"Total new keys: {len(new_keys)}")
 
 if new_keys:
     for key in new_keys:
@@ -170,3 +170,6 @@ if new_keys:
 ko_path.write_text(json.dumps(ko, ensure_ascii=False, indent=2), 'utf-8')
 en_path.write_text(json.dumps(en, ensure_ascii=False, indent=2), 'utf-8')
 zh_path.write_text(json.dumps(zh, ensure_ascii=False, indent=2), 'utf-8')
+print(f"ko.json keys: {len(ko)}")
+print(f"en.json keys: {len(en)}")
+print(f"zh.json keys: {len(zh)}")
