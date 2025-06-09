@@ -8,8 +8,19 @@ from bs4 import BeautifulSoup
 from google.cloud import translate_v2 as tr
 
 repo = pathlib.Path(__file__).resolve().parents[1]
-changed = subprocess.check_output(['git','diff','--name-only','HEAD~1']).decode().split()
-process_files = [f for f in changed if f.endswith(('.html','.md'))]
+result = subprocess.run(
+    ['git', 'diff', '--name-only', 'HEAD~1'],
+    stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+    text=True, check=False
+)
+if result.returncode in (0, 1):
+    diff = result.stdout.split()
+else:
+    diff = subprocess.run(
+        ['git', 'ls-files', '*.html', '*.md'],
+        stdout=subprocess.PIPE, text=True, check=False
+    ).stdout.split()
+process_files = [f for f in diff if f.endswith(('.html', '.md'))]
 selectors = ['h1','h2','h3','h4','a.nav-link','button','li>a']
 
 assets_dir = repo / 'assets' / 'i18n'
