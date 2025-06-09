@@ -1,108 +1,116 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="title_cfd_post_animation">CFD 후처리 - 애니메이션 생성 - 생물공학연구실</title>
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFD 후처리 - 애니메이션 생성 - 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-gray-800 scroll-smooth">
-<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
-<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
-<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
-</h1>
-<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
-<ul class="container mx-auto px-0 flex justify-center">
-</ul>
-</nav>
-<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
-<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
-<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
-<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
-</div>
-</div>
-<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
-<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
-<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
-</div>
-</div>
-</div>
-<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
-<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-</div>
-</nav>
-</div>
-<main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
-<div class="bg-white p-6 md:p-10 rounded-xl shadow-xl" data-i18n="cfd_후처리_애니메이션_생성_animation_generation_비정상_transient_또는_unsteady_cfd_시뮬레이션_결과는_시간에_따라_유동장이_변화하므로_이러한_동적인_특성을_효과적으로_파악하고_전달하기_위해_애니메이션_생성이_필수적입니다_2_6_애니메이션은_복잡한_시간_의존적_유동_현상을_직관적으로_이해하고_주요_유동_구조의_발달_및_거동을_시각적으로_추적하는_데_매우_유용합니다_애니메이션_생성의_목적유동장의_시간적_발달_과정_시각화_예_와류_생성_및_소멸_충격파_이동_물리량_압력_온도_농도_등_의_시간에_따른_변화_추이_관찰경계_조건_변화_또는_공정_변화에_따른_유동_거동의_동적_응답_확인주기적인_유동_현상_예_와류_방출_맥동_유동_의_특성_파악복잡한_3차원_유동_구조의_시간적_변화를_효과적으로_전달애니메이션_생성_과정일반적으로_다음과_같은_과정을_통해_애니메이션을_생성합니다_시간_단계별_데이터_로딩_비정상_시뮬레이션_중_저장된_각_시간_단계_timestep_별_결과_데이터_파일_예_ansys_fluent의_cas_dat_파일_시퀀스_ansys_cfd_post의_cdat_파일_paraview가_읽을_수_있는_시계열_데이터_형식_을_후처리_도구로_불러옵니다_6_시각화_객체_설정_첫_번째_또는_특정_시간_단계에서_원하는_시각화_객체_예_컨투어_벡터_유선_등표면_입자_궤적_를_설정합니다_색상_맵_범위_카메라_뷰_등도_함께_정의합니다_애니메이션_설정_타임스텝_범위_지정_애니메이션을_생성할_시작_및_종료_시간_단계_그리고_프레임_간_간격을_설정합니다_키프레임_애니메이션_keyframe_animation_특정_시간_단계에서_카메라_위치_객체_속성_투명도_색상_등_등을_변경하는_키프레임을_설정하여_더욱_동적인_애니메이션을_만들_수_있습니다_저장_옵션_프레임_속도_fps_해상도_비디오_파일_형식_avi_mp4_등_또는_이미지_시퀀스_png_jpg_등_형식을_지정합니다_애니메이션_생성_및_저장_설정된_내용에_따라_후처리_도구가_각_시간_단계별로_이미지를_렌더링하고_이를_연결하여_비디오_파일_또는_이미지_시퀀스로_저장합니다_6_주요_도구_및_기능다양한_cfd_후처리_소프트웨어가_애니메이션_생성_기능을_제공합니다_ansys_cfd_post_transient_animation_또는_quick_animation_기능을_통해_시간_단계별_결과로부터_애니메이션을_쉽게_생성할_수_있습니다_키프레임_설정_카메라_경로_지정_등_고급_기능도_지원합니다_6_paraview_강력한_오픈소스_후처리_도구로_시간_컨트롤러와_애니메이션_뷰를_통해_복잡한_애니메이션_시퀀스를_만들_수_있습니다_python_스크립팅을_이용한_자동화도_가능합니다_2_tecplot_360_시간_의존적_데이터를_효과적으로_처리하며_다양한_시각화_객체를_활용한_애니메이션_제작_기능을_제공합니다_ensight_fieldview_전문적인_상용_후처리_도구로_고품질의_애니메이션_생성_기능을_지원합니다_이러한_도구들은_단순히_시간의_흐름에_따른_변화뿐만_아니라_특정_파라미터_예_입구_속도_회전_각도_의_변화에_따른_유동장_변화를_애니메이션으로_표현하는_기능도_제공할_수_있습니다_고려_사항데이터_크기_및_저장_간격_비정상_시뮬레이션은_매우_큰_데이터를_생성할_수_있으므로_애니메이션_생성에_필요한_변수와_시간_단계_저장_간격을_적절히_설정하여_디스크_공간과_처리_시간을_관리해야_합니다_프레임_속도_및_해상도_애니메이션의_부드러움과_선명도에_영향을_미치므로_목적에_맞게_조절합니다_정보_전달력_애니메이션이_전달하고자_하는_핵심_메시지가_명확하도록_시각화_객체_색상_맵_카메라_뷰_등을_신중하게_선택해야_합니다_과도한_정보는_오히려_이해를_방해할_수_있습니다_cfd_후처리_애니메이션_생성에_대한_더_자세한_학술적_내용_및_참고_자료는cfd_레퍼런스_페이지를_참조하십시오">
-<header class="mb-8 border-b pb-4">
-<h1 class="text-3xl md:text-4xl font-bold text-slate-800" data-i18n="cfd_후처리_애니메이션_생성_animation_generation">CFD 후처리 - 애니메이션 생성 (Animation Generation)</h1>
-</header>
-<article class="prose prose-lg max-w-none">
-<p data-i18n="비정상_transient_또는_unsteady_cfd_시뮬레이션_결과는_시간에_따라_유동장이_변화하므로_이러한_동적인_특성을_효과적으로_파악하고_전달하기_위해_애니메이션_생성이_필수적입니다_2_6_애니메이션은_복잡한_시간_의존적_유동_현상을_직관적으로_이해하고_주요_유동_구조의_발달_및_거동을_시각적으로_추적하는_데_매우_유용합니다">비정상(transient 또는 unsteady) CFD 시뮬레이션 결과는 시간에 따라 유동장이 변화하므로, 이러한 동적인 특성을 효과적으로 파악하고 전달하기 위해 애니메이션 생성이 필수적입니다 [2, 6]. 애니메이션은 복잡한 시간 의존적 유동 현상을 직관적으로 이해하고, 주요 유동 구조의 발달 및 거동을 시각적으로 추적하는 데 매우 유용합니다.</p>
-<h2 class="mt-8" data-i18n="애니메이션_생성의_목적">애니메이션 생성의 목적</h2>
-<ul>
-<li data-i18n="유동장의_시간적_발달_과정_시각화_예_와류_생성_및_소멸_충격파_이동">유동장의 시간적 발달 과정 시각화 (예: 와류 생성 및 소멸, 충격파 이동)</li>
-<li data-i18n="물리량_압력_온도_농도_등_의_시간에_따른_변화_추이_관찰">물리량(압력, 온도, 농도 등)의 시간에 따른 변화 추이 관찰</li>
-<li data-i18n="경계_조건_변화_또는_공정_변화에_따른_유동_거동의_동적_응답_확인">경계 조건 변화 또는 공정 변화에 따른 유동 거동의 동적 응답 확인</li>
-<li data-i18n="주기적인_유동_현상_예_와류_방출_맥동_유동_의_특성_파악">주기적인 유동 현상(예: 와류 방출, 맥동 유동)의 특성 파악</li>
-<li data-i18n="복잡한_3차원_유동_구조의_시간적_변화를_효과적으로_전달">복잡한 3차원 유동 구조의 시간적 변화를 효과적으로 전달</li>
-</ul>
-<h2 class="mt-8" data-i18n="애니메이션_생성_과정">애니메이션 생성 과정</h2>
-<p data-i18n="일반적으로_다음과_같은_과정을_통해_애니메이션을_생성합니다">일반적으로 다음과 같은 과정을 통해 애니메이션을 생성합니다:</p>
-<ol>
-<li data-i18n="시간_단계별_데이터_로딩_비정상_시뮬레이션_중_저장된_각_시간_단계_timestep_별_결과_데이터_파일_예_ansys_fluent의_cas_dat_파일_시퀀스_ansys_cfd_post의_cdat_파일_paraview가_읽을_수_있는_시계열_데이터_형식_을_후처리_도구로_불러옵니다_6"><strong>시간 단계별 데이터 로딩</strong>: 비정상 시뮬레이션 중 저장된 각 시간 단계(timestep)별 결과 데이터 파일(예: Ansys Fluent의 .cas/.dat 파일 시퀀스, Ansys CFD-Post의 .cdat 파일, ParaView가 읽을 수 있는 시계열 데이터 형식)을 후처리 도구로 불러옵니다 [6].</li>
-<li data-i18n="시각화_객체_설정_첫_번째_또는_특정_시간_단계에서_원하는_시각화_객체_예_컨투어_벡터_유선_등표면_입자_궤적_를_설정합니다_색상_맵_범위_카메라_뷰_등도_함께_정의합니다"><strong>시각화 객체 설정</strong>: 첫 번째 또는 특정 시간 단계에서 원하는 시각화 객체(예: 컨투어, 벡터, 유선, 등표면, 입자 궤적)를 설정합니다. 색상 맵, 범위, 카메라 뷰 등도 함께 정의합니다.</li>
-<li data-i18n="애니메이션_설정_타임스텝_범위_지정_애니메이션을_생성할_시작_및_종료_시간_단계_그리고_프레임_간_간격을_설정합니다_키프레임_애니메이션_keyframe_animation_특정_시간_단계에서_카메라_위치_객체_속성_투명도_색상_등_등을_변경하는_키프레임을_설정하여_더욱_동적인_애니메이션을_만들_수_있습니다_저장_옵션_프레임_속도_fps_해상도_비디오_파일_형식_avi_mp4_등_또는_이미지_시퀀스_png_jpg_등_형식을_지정합니다"><strong>애니메이션 설정</strong>:
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
+                    <span class="hamster-icon">🐹</span>
+                    <span class="helper-text">뭐든 물어봐!</span>
+                </div>
+            </div>
+        </div>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
+        <div class="bg-white p-6 md:p-10 rounded-xl shadow-xl">
+            <header class="mb-8 border-b pb-4">
+                <h1 class="text-3xl md:text-4xl font-bold text-slate-800">CFD 후처리 - 애니메이션 생성 (Animation Generation)</h1>
+            </header>
+            <article class="prose prose-lg max-w-none">
+                <p>비정상(transient 또는 unsteady) CFD 시뮬레이션 결과는 시간에 따라 유동장이 변화하므로, 이러한 동적인 특성을 효과적으로 파악하고 전달하기 위해 애니메이션 생성이 필수적입니다 [2, 6]. 애니메이션은 복잡한 시간 의존적 유동 현상을 직관적으로 이해하고, 주요 유동 구조의 발달 및 거동을 시각적으로 추적하는 데 매우 유용합니다.</p>
+                
+                <h2 class="mt-8">애니메이션 생성의 목적</h2>
+                <ul>
+                    <li>유동장의 시간적 발달 과정 시각화 (예: 와류 생성 및 소멸, 충격파 이동)</li>
+                    <li>물리량(압력, 온도, 농도 등)의 시간에 따른 변화 추이 관찰</li>
+                    <li>경계 조건 변화 또는 공정 변화에 따른 유동 거동의 동적 응답 확인</li>
+                    <li>주기적인 유동 현상(예: 와류 방출, 맥동 유동)의 특성 파악</li>
+                    <li>복잡한 3차원 유동 구조의 시간적 변화를 효과적으로 전달</li>
+                </ul>
+
+                <h2 class="mt-8">애니메이션 생성 과정</h2>
+                <p>일반적으로 다음과 같은 과정을 통해 애니메이션을 생성합니다:</p>
+                <ol>
+                    <li><strong>시간 단계별 데이터 로딩</strong>: 비정상 시뮬레이션 중 저장된 각 시간 단계(timestep)별 결과 데이터 파일(예: Ansys Fluent의 .cas/.dat 파일 시퀀스, Ansys CFD-Post의 .cdat 파일, ParaView가 읽을 수 있는 시계열 데이터 형식)을 후처리 도구로 불러옵니다 [6].</li>
+                    <li><strong>시각화 객체 설정</strong>: 첫 번째 또는 특정 시간 단계에서 원하는 시각화 객체(예: 컨투어, 벡터, 유선, 등표면, 입자 궤적)를 설정합니다. 색상 맵, 범위, 카메라 뷰 등도 함께 정의합니다.</li>
+                    <li><strong>애니메이션 설정</strong>:
                         <ul>
-<li data-i18n="타임스텝_범위_지정_애니메이션을_생성할_시작_및_종료_시간_단계_그리고_프레임_간_간격을_설정합니다"><strong>타임스텝 범위 지정</strong>: 애니메이션을 생성할 시작 및 종료 시간 단계, 그리고 프레임 간 간격을 설정합니다.</li>
-<li data-i18n="키프레임_애니메이션_keyframe_animation_특정_시간_단계에서_카메라_위치_객체_속성_투명도_색상_등_등을_변경하는_키프레임을_설정하여_더욱_동적인_애니메이션을_만들_수_있습니다"><strong>키프레임 애니메이션 (Keyframe Animation)</strong>: 특정 시간 단계에서 카메라 위치, 객체 속성(투명도, 색상 등) 등을 변경하는 키프레임을 설정하여 더욱 동적인 애니메이션을 만들 수 있습니다.</li>
-<li data-i18n="저장_옵션_프레임_속도_fps_해상도_비디오_파일_형식_avi_mp4_등_또는_이미지_시퀀스_png_jpg_등_형식을_지정합니다"><strong>저장 옵션</strong>: 프레임 속도(FPS), 해상도, 비디오 파일 형식(AVI, MP4 등) 또는 이미지 시퀀스(PNG, JPG 등) 형식을 지정합니다.</li>
-</ul>
-</li>
-<li data-i18n="애니메이션_생성_및_저장_설정된_내용에_따라_후처리_도구가_각_시간_단계별로_이미지를_렌더링하고_이를_연결하여_비디오_파일_또는_이미지_시퀀스로_저장합니다_6"><strong>애니메이션 생성 및 저장</strong>: 설정된 내용에 따라 후처리 도구가 각 시간 단계별로 이미지를 렌더링하고 이를 연결하여 비디오 파일 또는 이미지 시퀀스로 저장합니다 [6].</li>
-</ol>
-<h2 class="mt-8" data-i18n="주요_도구_및_기능">주요 도구 및 기능</h2>
-<p data-i18n="다양한_cfd_후처리_소프트웨어가_애니메이션_생성_기능을_제공합니다">다양한 CFD 후처리 소프트웨어가 애니메이션 생성 기능을 제공합니다:</p>
-<ul>
-<li data-i18n="ansys_cfd_post_transient_animation_또는_quick_animation_기능을_통해_시간_단계별_결과로부터_애니메이션을_쉽게_생성할_수_있습니다_키프레임_설정_카메라_경로_지정_등_고급_기능도_지원합니다_6"><strong>Ansys CFD-Post</strong>: 'Transient Animation' 또는 'Quick Animation' 기능을 통해 시간 단계별 결과로부터 애니메이션을 쉽게 생성할 수 있습니다. 키프레임 설정, 카메라 경로 지정 등 고급 기능도 지원합니다 [6].</li>
-<li data-i18n="paraview_강력한_오픈소스_후처리_도구로_시간_컨트롤러와_애니메이션_뷰를_통해_복잡한_애니메이션_시퀀스를_만들_수_있습니다_python_스크립팅을_이용한_자동화도_가능합니다_2"><strong>ParaView</strong>: 강력한 오픈소스 후처리 도구로, 시간 컨트롤러와 애니메이션 뷰를 통해 복잡한 애니메이션 시퀀스를 만들 수 있습니다. Python 스크립팅을 이용한 자동화도 가능합니다 [2].</li>
-<li data-i18n="tecplot_360_시간_의존적_데이터를_효과적으로_처리하며_다양한_시각화_객체를_활용한_애니메이션_제작_기능을_제공합니다"><strong>Tecplot 360</strong>: 시간 의존적 데이터를 효과적으로 처리하며, 다양한 시각화 객체를 활용한 애니메이션 제작 기능을 제공합니다.</li>
-<li data-i18n="ensight_fieldview_전문적인_상용_후처리_도구로_고품질의_애니메이션_생성_기능을_지원합니다"><strong>EnSight / FieldView</strong>: 전문적인 상용 후처리 도구로, 고품질의 애니메이션 생성 기능을 지원합니다.</li>
-</ul>
-<p data-i18n="이러한_도구들은_단순히_시간의_흐름에_따른_변화뿐만_아니라_특정_파라미터_예_입구_속도_회전_각도_의_변화에_따른_유동장_변화를_애니메이션으로_표현하는_기능도_제공할_수_있습니다">이러한 도구들은 단순히 시간의 흐름에 따른 변화뿐만 아니라, 특정 파라미터(예: 입구 속도, 회전 각도)의 변화에 따른 유동장 변화를 애니메이션으로 표현하는 기능도 제공할 수 있습니다.</p>
-<h2 class="mt-8" data-i18n="고려_사항">고려 사항</h2>
-<ul>
-<li data-i18n="데이터_크기_및_저장_간격_비정상_시뮬레이션은_매우_큰_데이터를_생성할_수_있으므로_애니메이션_생성에_필요한_변수와_시간_단계_저장_간격을_적절히_설정하여_디스크_공간과_처리_시간을_관리해야_합니다"><strong>데이터 크기 및 저장 간격</strong>: 비정상 시뮬레이션은 매우 큰 데이터를 생성할 수 있으므로, 애니메이션 생성에 필요한 변수와 시간 단계 저장 간격을 적절히 설정하여 디스크 공간과 처리 시간을 관리해야 합니다.</li>
-<li data-i18n="프레임_속도_및_해상도_애니메이션의_부드러움과_선명도에_영향을_미치므로_목적에_맞게_조절합니다"><strong>프레임 속도 및 해상도</strong>: 애니메이션의 부드러움과 선명도에 영향을 미치므로, 목적에 맞게 조절합니다.</li>
-<li data-i18n="정보_전달력_애니메이션이_전달하고자_하는_핵심_메시지가_명확하도록_시각화_객체_색상_맵_카메라_뷰_등을_신중하게_선택해야_합니다_과도한_정보는_오히려_이해를_방해할_수_있습니다"><strong>정보 전달력</strong>: 애니메이션이 전달하고자 하는 핵심 메시지가 명확하도록 시각화 객체, 색상 맵, 카메라 뷰 등을 신중하게 선택해야 합니다. 과도한 정보는 오히려 이해를 방해할 수 있습니다.</li>
-</ul>
-<hr class="my-8 border-gray-300"/>
-<p class="text-sm text-gray-600" data-i18n="cfd_후처리_애니메이션_생성에_대한_더_자세한_학술적_내용_및_참고_자료는cfd_레퍼런스_페이지를_참조하십시오">CFD 후처리 애니메이션 생성에 대한 더 자세한 학술적 내용 및 참고 자료는 <a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="cfd_레퍼런스_페이지" href="cfd_references.html#cfd-postprocessing-refs">CFD 레퍼런스 페이지</a>를 참조하십시오.</p>
-</article>
-</div>
-<div class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
-<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
-<div class="space-y-4" id="searchResultsList"></div>
-</div>
-</main>
-<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
-<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
-</p>
-<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-</div>
-</footer>
-<script src="script.js" type="module"></script>
+                            <li><strong>타임스텝 범위 지정</strong>: 애니메이션을 생성할 시작 및 종료 시간 단계, 그리고 프레임 간 간격을 설정합니다.</li>
+                            <li><strong>키프레임 애니메이션 (Keyframe Animation)</strong>: 특정 시간 단계에서 카메라 위치, 객체 속성(투명도, 색상 등) 등을 변경하는 키프레임을 설정하여 더욱 동적인 애니메이션을 만들 수 있습니다.</li>
+                            <li><strong>저장 옵션</strong>: 프레임 속도(FPS), 해상도, 비디오 파일 형식(AVI, MP4 등) 또는 이미지 시퀀스(PNG, JPG 등) 형식을 지정합니다.</li>
+                        </ul>
+                    </li>
+                    <li><strong>애니메이션 생성 및 저장</strong>: 설정된 내용에 따라 후처리 도구가 각 시간 단계별로 이미지를 렌더링하고 이를 연결하여 비디오 파일 또는 이미지 시퀀스로 저장합니다 [6].</li>
+                </ol>
+
+                <h2 class="mt-8">주요 도구 및 기능</h2>
+                <p>다양한 CFD 후처리 소프트웨어가 애니메이션 생성 기능을 제공합니다:</p>
+                <ul>
+                    <li><strong>Ansys CFD-Post</strong>: 'Transient Animation' 또는 'Quick Animation' 기능을 통해 시간 단계별 결과로부터 애니메이션을 쉽게 생성할 수 있습니다. 키프레임 설정, 카메라 경로 지정 등 고급 기능도 지원합니다 [6].</li>
+                    <li><strong>ParaView</strong>: 강력한 오픈소스 후처리 도구로, 시간 컨트롤러와 애니메이션 뷰를 통해 복잡한 애니메이션 시퀀스를 만들 수 있습니다. Python 스크립팅을 이용한 자동화도 가능합니다 [2].</li>
+                    <li><strong>Tecplot 360</strong>: 시간 의존적 데이터를 효과적으로 처리하며, 다양한 시각화 객체를 활용한 애니메이션 제작 기능을 제공합니다.</li>
+                    <li><strong>EnSight / FieldView</strong>: 전문적인 상용 후처리 도구로, 고품질의 애니메이션 생성 기능을 지원합니다.</li>
+                </ul>
+                <p>이러한 도구들은 단순히 시간의 흐름에 따른 변화뿐만 아니라, 특정 파라미터(예: 입구 속도, 회전 각도)의 변화에 따른 유동장 변화를 애니메이션으로 표현하는 기능도 제공할 수 있습니다.</p>
+
+                <h2 class="mt-8">고려 사항</h2>
+                <ul>
+                    <li><strong>데이터 크기 및 저장 간격</strong>: 비정상 시뮬레이션은 매우 큰 데이터를 생성할 수 있으므로, 애니메이션 생성에 필요한 변수와 시간 단계 저장 간격을 적절히 설정하여 디스크 공간과 처리 시간을 관리해야 합니다.</li>
+                    <li><strong>프레임 속도 및 해상도</strong>: 애니메이션의 부드러움과 선명도에 영향을 미치므로, 목적에 맞게 조절합니다.</li>
+                    <li><strong>정보 전달력</strong>: 애니메이션이 전달하고자 하는 핵심 메시지가 명확하도록 시각화 객체, 색상 맵, 카메라 뷰 등을 신중하게 선택해야 합니다. 과도한 정보는 오히려 이해를 방해할 수 있습니다.</li>
+                </ul>
+
+                <hr class="my-8 border-gray-300">
+                <p class="text-sm text-gray-600">CFD 후처리 애니메이션 생성에 대한 더 자세한 학술적 내용 및 참고 자료는 <a href="cfd_references.html#cfd-postprocessing-refs" class="text-[#0072CE] hover:text-[#004A99] font-medium">CFD 레퍼런스 페이지</a>를 참조하십시오.</p>
+            </article>
+        </div>
+        <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
 </body>
 </html>

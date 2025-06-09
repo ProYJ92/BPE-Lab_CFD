@@ -1,97 +1,105 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="title_cfd_postprocessing">CFD 후처리 과정 - 생물공학연구실</title>
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFD 후처리 과정 - 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-gray-800 scroll-smooth">
-<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
-<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
-<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
-</h1>
-<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
-<ul class="container mx-auto px-0 flex justify-center">
-</ul>
-</nav>
-<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
-<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
-<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
-<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
-</div>
-</div>
-<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
-<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
-<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
-</div>
-</div>
-</div>
-<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
-<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-</div>
-</nav>
-</div>
-<main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
-<div class="bg-white p-6 md:p-10 rounded-xl shadow-xl" data-i18n="cfd_후처리_과정_post_processing_전산유체역학_cfd_시뮬레이션의_후처리_post_processing_단계는_계산_결과를_해석하고_유효성_및_신뢰성을_평가하며_물리적_의미를_추출하는_과정입니다_1_3_4_유체_액체_또는_기체_가_모델_내_물체를_통과하거나_그_주변으로_이동하는_움직임_그리고_관련된_물리량_압력_속도_온도_등_의_분포를_정량적_및_정성적으로_분석합니다_정성적_분석_유동_패턴_와류_구조_온도_분포_등을_시각화하여_직관적으로_이해합니다_정량적_분석_특정_위치에서의_값_면적_체적_평균값_힘_토크_유량_등_수치적_데이터를_계산하여_물리량을_정량화합니다_후처리는_단순히_그림을_그리는_것을_넘어_시뮬레이션_데이터로부터_가치_있는_공학적_통찰력을_추출하고_엔지니어_및_연구자가_정보에_입각한_의사결정을_내릴_수_있도록_지원하는_핵심_단계입니다_5_신뢰할_수_있는_후처리_없이는_아무리_정확한_시뮬레이션_결과라도_그_의미를_제대로_파악하고_활용하기_어렵습니다_후처리_주요_내용본_섹션에서는_cfd_후처리의_다양한_측면을_다루며_각_하위_페이지에서_상세_내용을_확인할_수_있습니다_각_주제는_학술적_깊이를_더하고_최신_연구_동향을_반영하여_구성되었습니다_시각화_visualisation_등고선_등표면_유선_등_다양한_시각화_기법과_도구_최적화_팁_그리고_몰입형_시각화와_같은_고급_기법을_설명합니다_통계_분석_statistical_analysis_평균_rms_fft_psd_pod_dmd_및_시간_이력_데이터_분석_푸리에_분석_등_결과_데이터의_통계적_속성을_파악하는_방법을_다룹니다_데이터_처리_data_handling_cfd_결과_데이터_형식_cgns_vtk_등_처리_도구_스크립팅을_통한_자동화_대용량_비정상_데이터_처리_방법을_소개합니다_설계_및_불확실성_정량화_design_uq_후처리_결과를_활용한_doe_rsm_moga_수반법_몬테카를로_pce_등_설계_최적화_및_불확실성_정량화_기법과의_연관성을_설명합니다_파생_데이터_계산_derived_data_calculation_기본_물리량으로부터_사용자_정의_변수_표현식_cel_등_함수_계산기_매크로를_활용하여_엔지니어링_분석에_필요한_파생_데이터를_계산하는_방법을_다룹니다_정량적_데이터_추출_quantitative_data_extraction_특정_지점_선_면_체적에서_정량적_데이터를_추출하고_이를_시계열_플롯_등으로_분석하는_방법을_소개합니다_애니메이션_생성_animation_generation_비정상_transient_시뮬레이션_결과의_동적_특성을_파악하기_위한_3d_및_동적_시각화_강화_방법으로서_애니메이션_생성_과정을_설명합니다_보고서_생성_report_generation_cfd_시뮬레이션_결과_및_분석_내용을_정리하는_자동화된_보고서_생성_기능과_그_중요성을_다룹니다_최적_사례_및_팁_best_practices_tips_효율적이고_정확한_cfd_후처리를_위한_최적_사례_및_결과_신뢰성_확보_검증_방법을_제공합니다_후처리_도구_개요_overview_of_post_processing_tools_다양한_상용_ansys_cfd_post_tecplot_등_및_오픈소스_paraview_visit_등_후처리_도구와_라이브러리_vtk_python_를_소개합니다_후처리_분야의_최신_동향_및_미래_전망cfd_후처리_분야는_지속적으로_발전하고_있으며_주요_최신_동향은_다음과_같습니다_몰입형_시각화_immersive_visualization_게임_엔진_unity3d_등_11_및_증강_현실_ar_가상_현실_vr_11_기술을_활용하여_cfd_결과를_3차원_환경에서_직관적으로_탐색하고_상호작용하는_연구가_활발히_진행_중입니다_이는_비전문가와의_소통_공학_교육_복잡한_데이터_기반_협업에_매우_유용합니다_5_11_ai_머신러닝_통합_ai_machine_learning_integration_머신러닝_기법을_사용하여_대규모_cfd_데이터에서_숨겨진_패턴을_식별하거나_후처리_과정을_자동화하고_최적화하는_연구가_모색되고_있습니다_2_ai_ml은_의약품_개발과_같은_다양한_분야에서_fda_ema와_같은_규제_기관의_관심을_받고_있으며_10_cfd_후처리에도_적용될_잠재력이_큽니다_클라우드_기반_후처리_cloud_based_post_processing_대규모_계산_자원이_필요한_후처리_작업이나_결과_공유_및_협업을_위해_클라우드_컴퓨팅을_활용하는_기술이_점차_확산되고_있습니다_2_연계_해석_및_실험_데이터_융합_고도화_다양한_물리_모델과의_연계_해석_결과를_효과적으로_통합_분석하고_2_실험_데이터와의_정밀한_비교_및_융합을_통한_검증_validation_의_중요성이_더욱_강조되고_있습니다_3_5_각_주제에_대한_자세한_내용은_해당_링크를_참조하십시오_모든_내용은_신뢰할_수_있는_출처를_바탕으로_작성되었으며_관련참고문헌은_별도로_정리되어_있습니다">
-<header class="mb-8 border-b pb-4">
-<h1 class="text-3xl md:text-4xl font-bold text-slate-800" data-i18n="cfd_후처리_과정_post_processing">CFD 후처리 과정 (Post-processing)</h1>
-</header>
-<article class="prose prose-lg max-w-none">
-<p data-i18n="전산유체역학_cfd_시뮬레이션의_후처리_post_processing_단계는_계산_결과를_해석하고_유효성_및_신뢰성을_평가하며_물리적_의미를_추출하는_과정입니다_1_3_4_유체_액체_또는_기체_가_모델_내_물체를_통과하거나_그_주변으로_이동하는_움직임_그리고_관련된_물리량_압력_속도_온도_등_의_분포를_정량적_및_정성적으로_분석합니다">전산유체역학(CFD) 시뮬레이션의 후처리(Post-processing) 단계는 계산 결과를 해석하고, 유효성 및 신뢰성을 평가하며, 물리적 의미를 추출하는 과정입니다 [1, 3, 4]. 유체(액체 또는 기체)가 모델 내 물체를 통과하거나 그 주변으로 이동하는 움직임, 그리고 관련된 물리량(압력, 속도, 온도 등)의 분포를 정량적 및 정성적으로 분석합니다.</p>
-<ul>
-<li data-i18n="정성적_분석_유동_패턴_와류_구조_온도_분포_등을_시각화하여_직관적으로_이해합니다"><strong>정성적 분석</strong>: 유동 패턴, 와류 구조, 온도 분포 등을 시각화하여 직관적으로 이해합니다.</li>
-<li data-i18n="정량적_분석_특정_위치에서의_값_면적_체적_평균값_힘_토크_유량_등_수치적_데이터를_계산하여_물리량을_정량화합니다"><strong>정량적 분석</strong>: 특정 위치에서의 값, 면적/체적 평균값, 힘, 토크, 유량 등 수치적 데이터를 계산하여 물리량을 정량화합니다.</li>
-</ul>
-<p data-i18n="후처리는_단순히_그림을_그리는_것을_넘어_시뮬레이션_데이터로부터_가치_있는_공학적_통찰력을_추출하고_엔지니어_및_연구자가_정보에_입각한_의사결정을_내릴_수_있도록_지원하는_핵심_단계입니다_5_신뢰할_수_있는_후처리_없이는_아무리_정확한_시뮬레이션_결과라도_그_의미를_제대로_파악하고_활용하기_어렵습니다">후처리는 단순히 그림을 그리는 것을 넘어, 시뮬레이션 데이터로부터 가치 있는 공학적 통찰력을 추출하고 엔지니어 및 연구자가 정보에 입각한 의사결정을 내릴 수 있도록 지원하는 핵심 단계입니다 [5]. 신뢰할 수 있는 후처리 없이는 아무리 정확한 시뮬레이션 결과라도 그 의미를 제대로 파악하고 활용하기 어렵습니다.</p>
-<h2 class="mt-8" data-i18n="후처리_주요_내용">후처리 주요 내용</h2>
-<p data-i18n="본_섹션에서는_cfd_후처리의_다양한_측면을_다루며_각_하위_페이지에서_상세_내용을_확인할_수_있습니다_각_주제는_학술적_깊이를_더하고_최신_연구_동향을_반영하여_구성되었습니다">본 섹션에서는 CFD 후처리의 다양한 측면을 다루며, 각 하위 페이지에서 상세 내용을 확인할 수 있습니다. 각 주제는 학술적 깊이를 더하고 최신 연구 동향을 반영하여 구성되었습니다.</p>
-<ul class="list-disc pl-5 space-y-2 my-6">
-<li data-i18n="시각화_visualisation_등고선_등표면_유선_등_다양한_시각화_기법과_도구_최적화_팁_그리고_몰입형_시각화와_같은_고급_기법을_설명합니다"><a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="시각화_visualisation" href="cfd_post_visualisation.html">시각화 (Visualisation)</a>: 등고선, 등표면, 유선 등 다양한 시각화 기법과 도구, 최적화 팁, 그리고 몰입형 시각화와 같은 고급 기법을 설명합니다.</li>
-<li data-i18n="통계_분석_statistical_analysis_평균_rms_fft_psd_pod_dmd_및_시간_이력_데이터_분석_푸리에_분석_등_결과_데이터의_통계적_속성을_파악하는_방법을_다룹니다"><a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="통계_분석_statistical_analysis" href="cfd_post_statistical_analysis.html">통계 분석 (Statistical Analysis)</a>: 평균/RMS, FFT/PSD, POD, DMD 및 시간 이력 데이터 분석, 푸리에 분석 등 결과 데이터의 통계적 속성을 파악하는 방법을 다룹니다.</li>
-<li data-i18n="데이터_처리_data_handling_cfd_결과_데이터_형식_cgns_vtk_등_처리_도구_스크립팅을_통한_자동화_대용량_비정상_데이터_처리_방법을_소개합니다"><a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="데이터_처리_data_handling" href="cfd_post_data_handling.html">데이터 처리 (Data Handling)</a>: CFD 결과 데이터 형식(CGNS, VTK 등), 처리 도구, 스크립팅을 통한 자동화, 대용량/비정상 데이터 처리 방법을 소개합니다.</li>
-<li data-i18n="설계_및_불확실성_정량화_design_uq_후처리_결과를_활용한_doe_rsm_moga_수반법_몬테카를로_pce_등_설계_최적화_및_불확실성_정량화_기법과의_연관성을_설명합니다"><a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="설계_및_불확실성_정량화_design_uq" href="cfd_post_design_uq.html">설계 및 불확실성 정량화 (Design &amp; UQ)</a>: 후처리 결과를 활용한 DOE, RSM, MOGA, 수반법, 몬테카를로, PCE 등 설계 최적화 및 불확실성 정량화 기법과의 연관성을 설명합니다.</li>
-<li data-i18n="파생_데이터_계산_derived_data_calculation_기본_물리량으로부터_사용자_정의_변수_표현식_cel_등_함수_계산기_매크로를_활용하여_엔지니어링_분석에_필요한_파생_데이터를_계산하는_방법을_다룹니다"><a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="파생_데이터_계산_derived_data_calculation" href="cfd_post_derived_data.html">파생 데이터 계산 (Derived Data Calculation)</a>: 기본 물리량으로부터 사용자 정의 변수, 표현식(CEL 등), 함수 계산기, 매크로를 활용하여 엔지니어링 분석에 필요한 파생 데이터를 계산하는 방법을 다룹니다.</li>
-<li data-i18n="정량적_데이터_추출_quantitative_data_extraction_특정_지점_선_면_체적에서_정량적_데이터를_추출하고_이를_시계열_플롯_등으로_분석하는_방법을_소개합니다"><a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="정량적_데이터_추출_quantitative_data_extraction" href="cfd_post_quantitative_extraction.html">정량적 데이터 추출 (Quantitative Data Extraction)</a>: 특정 지점, 선, 면, 체적에서 정량적 데이터를 추출하고, 이를 시계열 플롯 등으로 분석하는 방법을 소개합니다.</li>
-<li data-i18n="애니메이션_생성_animation_generation_비정상_transient_시뮬레이션_결과의_동적_특성을_파악하기_위한_3d_및_동적_시각화_강화_방법으로서_애니메이션_생성_과정을_설명합니다"><a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="애니메이션_생성_animation_generation" href="cfd_post_animation.html">애니메이션 생성 (Animation Generation)</a>: 비정상(transient) 시뮬레이션 결과의 동적 특성을 파악하기 위한 3D 및 동적 시각화 강화 방법으로서 애니메이션 생성 과정을 설명합니다.</li>
-<li data-i18n="보고서_생성_report_generation_cfd_시뮬레이션_결과_및_분석_내용을_정리하는_자동화된_보고서_생성_기능과_그_중요성을_다룹니다"><a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="보고서_생성_report_generation" href="cfd_post_report_generation.html">보고서 생성 (Report Generation)</a>: CFD 시뮬레이션 결과 및 분석 내용을 정리하는 자동화된 보고서 생성 기능과 그 중요성을 다룹니다.</li>
-<li data-i18n="최적_사례_및_팁_best_practices_tips_효율적이고_정확한_cfd_후처리를_위한_최적_사례_및_결과_신뢰성_확보_검증_방법을_제공합니다"><a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="최적_사례_및_팁_best_practices_tips" href="cfd_post_best_practices.html">최적 사례 및 팁 (Best Practices &amp; Tips)</a>: 효율적이고 정확한 CFD 후처리를 위한 최적 사례 및 결과 신뢰성 확보, 검증 방법을 제공합니다.</li>
-<li data-i18n="후처리_도구_개요_overview_of_post_processing_tools_다양한_상용_ansys_cfd_post_tecplot_등_및_오픈소스_paraview_visit_등_후처리_도구와_라이브러리_vtk_python_를_소개합니다"><a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="후처리_도구_개요_overview_of_post_processing_tools" href="cfd_post_tools_overview.html">후처리 도구 개요 (Overview of Post-processing Tools)</a>: 다양한 상용(Ansys CFD-Post, Tecplot 등) 및 오픈소스(ParaView, VisIt 등) 후처리 도구와 라이브러리(VTK, Python)를 소개합니다.</li>
-</ul>
-<h2 class="mt-8" data-i18n="후처리_분야의_최신_동향_및_미래_전망">후처리 분야의 최신 동향 및 미래 전망</h2>
-<p data-i18n="cfd_후처리_분야는_지속적으로_발전하고_있으며_주요_최신_동향은_다음과_같습니다">CFD 후처리 분야는 지속적으로 발전하고 있으며, 주요 최신 동향은 다음과 같습니다:</p>
-<ul>
-<li data-i18n="몰입형_시각화_immersive_visualization_게임_엔진_unity3d_등_11_및_증강_현실_ar_가상_현실_vr_11_기술을_활용하여_cfd_결과를_3차원_환경에서_직관적으로_탐색하고_상호작용하는_연구가_활발히_진행_중입니다_이는_비전문가와의_소통_공학_교육_복잡한_데이터_기반_협업에_매우_유용합니다_5_11"><strong>몰입형 시각화 (Immersive Visualization)</strong>: 게임 엔진(Unity3D 등) [11] 및 증강 현실(AR)/가상 현실(VR) [11] 기술을 활용하여 CFD 결과를 3차원 환경에서 직관적으로 탐색하고 상호작용하는 연구가 활발히 진행 중입니다. 이는 비전문가와의 소통, 공학 교육, 복잡한 데이터 기반 협업에 매우 유용합니다 [5, 11].</li>
-<li data-i18n="ai_머신러닝_통합_ai_machine_learning_integration_머신러닝_기법을_사용하여_대규모_cfd_데이터에서_숨겨진_패턴을_식별하거나_후처리_과정을_자동화하고_최적화하는_연구가_모색되고_있습니다_2_ai_ml은_의약품_개발과_같은_다양한_분야에서_fda_ema와_같은_규제_기관의_관심을_받고_있으며_10_cfd_후처리에도_적용될_잠재력이_큽니다"><strong>AI/머신러닝 통합 (AI/Machine Learning Integration)</strong>: 머신러닝 기법을 사용하여 대규모 CFD 데이터에서 숨겨진 패턴을 식별하거나, 후처리 과정을 자동화하고 최적화하는 연구가 모색되고 있습니다 [2]. AI/ML은 의약품 개발과 같은 다양한 분야에서 FDA/EMA와 같은 규제 기관의 관심을 받고 있으며 [10], CFD 후처리에도 적용될 잠재력이 큽니다.</li>
-<li data-i18n="클라우드_기반_후처리_cloud_based_post_processing_대규모_계산_자원이_필요한_후처리_작업이나_결과_공유_및_협업을_위해_클라우드_컴퓨팅을_활용하는_기술이_점차_확산되고_있습니다_2"><strong>클라우드 기반 후처리 (Cloud-based Post-processing)</strong>: 대규모 계산 자원이 필요한 후처리 작업이나 결과 공유 및 협업을 위해 클라우드 컴퓨팅을 활용하는 기술이 점차 확산되고 있습니다 [2].</li>
-<li data-i18n="연계_해석_및_실험_데이터_융합_고도화_다양한_물리_모델과의_연계_해석_결과를_효과적으로_통합_분석하고_2_실험_데이터와의_정밀한_비교_및_융합을_통한_검증_validation_의_중요성이_더욱_강조되고_있습니다_3_5"><strong>연계 해석 및 실험 데이터 융합 고도화</strong>: 다양한 물리 모델과의 연계 해석 결과를 효과적으로 통합 분석하고 [2], 실험 데이터와의 정밀한 비교 및 융합을 통한 검증(Validation)의 중요성이 더욱 강조되고 있습니다 [3, 5].</li>
-</ul>
-<p class="mt-6" data-i18n="각_주제에_대한_자세한_내용은_해당_링크를_참조하십시오_모든_내용은_신뢰할_수_있는_출처를_바탕으로_작성되었으며_관련참고문헌은_별도로_정리되어_있습니다">각 주제에 대한 자세한 내용은 해당 링크를 참조하십시오. 모든 내용은 신뢰할 수 있는 출처를 바탕으로 작성되었으며, 관련 <a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="참고문헌" href="cfd_references.html#cfd-postprocessing-refs">참고문헌</a>은 별도로 정리되어 있습니다.</p>
-</article>
-</div>
-<div class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
-<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
-<div class="space-y-4" id="searchResultsList"></div>
-</div>
-</main>
-<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
-<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
-</p>
-<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-</div>
-</footer>
-<script src="script.js" type="module"></script>
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
+                    <span class="hamster-icon">🐹</span>
+                    <span class="helper-text">뭐든 물어봐!</span>
+                </div>
+            </div>
+        </div>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
+        <div class="bg-white p-6 md:p-10 rounded-xl shadow-xl">
+            <header class="mb-8 border-b pb-4">
+                <h1 class="text-3xl md:text-4xl font-bold text-slate-800">CFD 후처리 과정 (Post-processing)</h1>
+            </header>
+            <article class="prose prose-lg max-w-none">
+                <p>전산유체역학(CFD) 시뮬레이션의 후처리(Post-processing) 단계는 계산 결과를 해석하고, 유효성 및 신뢰성을 평가하며, 물리적 의미를 추출하는 과정입니다 [1, 3, 4]. 유체(액체 또는 기체)가 모델 내 물체를 통과하거나 그 주변으로 이동하는 움직임, 그리고 관련된 물리량(압력, 속도, 온도 등)의 분포를 정량적 및 정성적으로 분석합니다.</p>
+                <ul>
+                    <li><strong>정성적 분석</strong>: 유동 패턴, 와류 구조, 온도 분포 등을 시각화하여 직관적으로 이해합니다.</li>
+                    <li><strong>정량적 분석</strong>: 특정 위치에서의 값, 면적/체적 평균값, 힘, 토크, 유량 등 수치적 데이터를 계산하여 물리량을 정량화합니다.</li>
+                </ul>
+                <p>후처리는 단순히 그림을 그리는 것을 넘어, 시뮬레이션 데이터로부터 가치 있는 공학적 통찰력을 추출하고 엔지니어 및 연구자가 정보에 입각한 의사결정을 내릴 수 있도록 지원하는 핵심 단계입니다 [5]. 신뢰할 수 있는 후처리 없이는 아무리 정확한 시뮬레이션 결과라도 그 의미를 제대로 파악하고 활용하기 어렵습니다.</p>
+                
+                <h2 class="mt-8">후처리 주요 내용</h2>
+                <p>본 섹션에서는 CFD 후처리의 다양한 측면을 다루며, 각 하위 페이지에서 상세 내용을 확인할 수 있습니다. 각 주제는 학술적 깊이를 더하고 최신 연구 동향을 반영하여 구성되었습니다.</p>
+                
+                <ul class="list-disc pl-5 space-y-2 my-6">
+                    <li><a href="cfd_post_visualisation.html" class="text-[#0072CE] hover:text-[#004A99] font-medium">시각화 (Visualisation)</a>: 등고선, 등표면, 유선 등 다양한 시각화 기법과 도구, 최적화 팁, 그리고 몰입형 시각화와 같은 고급 기법을 설명합니다.</li>
+                    <li><a href="cfd_post_statistical_analysis.html" class="text-[#0072CE] hover:text-[#004A99] font-medium">통계 분석 (Statistical Analysis)</a>: 평균/RMS, FFT/PSD, POD, DMD 및 시간 이력 데이터 분석, 푸리에 분석 등 결과 데이터의 통계적 속성을 파악하는 방법을 다룹니다.</li>
+                    <li><a href="cfd_post_data_handling.html" class="text-[#0072CE] hover:text-[#004A99] font-medium">데이터 처리 (Data Handling)</a>: CFD 결과 데이터 형식(CGNS, VTK 등), 처리 도구, 스크립팅을 통한 자동화, 대용량/비정상 데이터 처리 방법을 소개합니다.</li>
+                    <li><a href="cfd_post_design_uq.html" class="text-[#0072CE] hover:text-[#004A99] font-medium">설계 및 불확실성 정량화 (Design & UQ)</a>: 후처리 결과를 활용한 DOE, RSM, MOGA, 수반법, 몬테카를로, PCE 등 설계 최적화 및 불확실성 정량화 기법과의 연관성을 설명합니다.</li>
+                    <li><a href="cfd_post_derived_data.html" class="text-[#0072CE] hover:text-[#004A99] font-medium">파생 데이터 계산 (Derived Data Calculation)</a>: 기본 물리량으로부터 사용자 정의 변수, 표현식(CEL 등), 함수 계산기, 매크로를 활용하여 엔지니어링 분석에 필요한 파생 데이터를 계산하는 방법을 다룹니다.</li>
+                    <li><a href="cfd_post_quantitative_extraction.html" class="text-[#0072CE] hover:text-[#004A99] font-medium">정량적 데이터 추출 (Quantitative Data Extraction)</a>: 특정 지점, 선, 면, 체적에서 정량적 데이터를 추출하고, 이를 시계열 플롯 등으로 분석하는 방법을 소개합니다.</li>
+                    <li><a href="cfd_post_animation.html" class="text-[#0072CE] hover:text-[#004A99] font-medium">애니메이션 생성 (Animation Generation)</a>: 비정상(transient) 시뮬레이션 결과의 동적 특성을 파악하기 위한 3D 및 동적 시각화 강화 방법으로서 애니메이션 생성 과정을 설명합니다.</li>
+                    <li><a href="cfd_post_report_generation.html" class="text-[#0072CE] hover:text-[#004A99] font-medium">보고서 생성 (Report Generation)</a>: CFD 시뮬레이션 결과 및 분석 내용을 정리하는 자동화된 보고서 생성 기능과 그 중요성을 다룹니다.</li>
+                    <li><a href="cfd_post_best_practices.html" class="text-[#0072CE] hover:text-[#004A99] font-medium">최적 사례 및 팁 (Best Practices & Tips)</a>: 효율적이고 정확한 CFD 후처리를 위한 최적 사례 및 결과 신뢰성 확보, 검증 방법을 제공합니다.</li>
+                    <li><a href="cfd_post_tools_overview.html" class="text-[#0072CE] hover:text-[#004A99] font-medium">후처리 도구 개요 (Overview of Post-processing Tools)</a>: 다양한 상용(Ansys CFD-Post, Tecplot 등) 및 오픈소스(ParaView, VisIt 등) 후처리 도구와 라이브러리(VTK, Python)를 소개합니다.</li>
+                </ul>
+
+                <h2 class="mt-8">후처리 분야의 최신 동향 및 미래 전망</h2>
+                <p>CFD 후처리 분야는 지속적으로 발전하고 있으며, 주요 최신 동향은 다음과 같습니다:</p>
+                <ul>
+                    <li><strong>몰입형 시각화 (Immersive Visualization)</strong>: 게임 엔진(Unity3D 등) [11] 및 증강 현실(AR)/가상 현실(VR) [11] 기술을 활용하여 CFD 결과를 3차원 환경에서 직관적으로 탐색하고 상호작용하는 연구가 활발히 진행 중입니다. 이는 비전문가와의 소통, 공학 교육, 복잡한 데이터 기반 협업에 매우 유용합니다 [5, 11].</li>
+                    <li><strong>AI/머신러닝 통합 (AI/Machine Learning Integration)</strong>: 머신러닝 기법을 사용하여 대규모 CFD 데이터에서 숨겨진 패턴을 식별하거나, 후처리 과정을 자동화하고 최적화하는 연구가 모색되고 있습니다 [2]. AI/ML은 의약품 개발과 같은 다양한 분야에서 FDA/EMA와 같은 규제 기관의 관심을 받고 있으며 [10], CFD 후처리에도 적용될 잠재력이 큽니다.</li>
+                    <li><strong>클라우드 기반 후처리 (Cloud-based Post-processing)</strong>: 대규모 계산 자원이 필요한 후처리 작업이나 결과 공유 및 협업을 위해 클라우드 컴퓨팅을 활용하는 기술이 점차 확산되고 있습니다 [2].</li>
+                    <li><strong>연계 해석 및 실험 데이터 융합 고도화</strong>: 다양한 물리 모델과의 연계 해석 결과를 효과적으로 통합 분석하고 [2], 실험 데이터와의 정밀한 비교 및 융합을 통한 검증(Validation)의 중요성이 더욱 강조되고 있습니다 [3, 5].</li>
+                </ul>
+
+                <p class="mt-6">각 주제에 대한 자세한 내용은 해당 링크를 참조하십시오. 모든 내용은 신뢰할 수 있는 출처를 바탕으로 작성되었으며, 관련 <a href="cfd_references.html#cfd-postprocessing-refs" class="text-[#0072CE] hover:text-[#004A99] font-medium">참고문헌</a>은 별도로 정리되어 있습니다.</p>
+
+            </article>
+        </div>
+        <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
 </body>
 </html>

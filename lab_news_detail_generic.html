@@ -1,93 +1,99 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="title_lab_news_detail_generic">연구실 소식 상세 - 생물공학연구실</title>
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연구실 소식 상세 - 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth flex flex-col min-h-screen">
-<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실bioprocess_engineering_laboratory검색_뭐든_물어봐" id="fixed-top-nav-container">
-<div class="container mx-auto px-4" data-i18n="생물공학연구실bioprocess_engineering_laboratory검색_뭐든_물어봐">
-<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실bioprocess_engineering_laboratory검색_뭐든_물어봐">
-<h1 class="text-slate-800 mb-2 sm:mb-0" data-i18n="생물공학연구실bioprocess_engineering_laboratory">
-<a class="block no-underline hover:no-underline" data-i18n="생물공학연구실bioprocess_engineering_laboratory" href="index.html">
-<span class="block text-2xl lg:text-3xl font-bold text-slate-800" data-i18n="생물공학연구실">생물공학연구실</span>
-<span class="block text-sm lg:text-base font-normal text-gray-500 mt-1" data-i18n="bioprocess_engineering_laboratory">Bioprocess Engineering Laboratory</span>
-</a>
-</h1>
-<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
-<ul class="container mx-auto px-0 flex justify-center">
-</ul>
-</nav>
-<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
-<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
-<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
-<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
-</div>
-</div>
-<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
-<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
-<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
-</div>
-</div>
-</div>
-<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
-<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-</div>
-</nav>
-</div>
-<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-<div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg" data-i18n="연구실_소식_제목게시_날짜_yyyy_mm_dd본_연구실_소식은_일반적인_내용을_담고_있는_예시_페이지입니다_실제_소식_내용은_동적으로_업데이트될_수_있습니다_예를_들어_교수님의_수상_소식이나_새로운_연구_프로젝트_시작과_같은_내용이_여기에_표시될_수_있습니다_예시_홍종광_교수님_xxx_학회_우수_연구자상_수상생물공학연구실의_홍종광_교수님께서_2025년_10월_5일_개최된_xxx_학회_연례_총회에서_바이오공정_분야의_혁신적인_연구_성과를_인정받아_우수_연구자상_을_수상하셨습니다_홍_교수님은_지난_수년간_디지털_트윈_기반_바이오공정_최적화_및_cho_세포_배양_기술_개발에_매진하여_다수의_sci급_논문을_발표하고_특허를_출원하는_등_탁월한_연구_업적을_쌓아오셨습니다_특히_최근_발표된_ai_기반_실시간_바이오리액터_제어_시스템_연구는_산업계로부터_큰_주목을_받았습니다_이번_수상은_홍_교수님의_끊임없는_연구_열정과_연구실_구성원들의_노력이_함께_이루어낸_결과입니다_연구실一同_진심으로_축하드립니다_교수님_수상_관련_이미지_준비_중_xxx_학회_우수_연구자상_시상식_예시_목록으로_돌아가기">
-<article class="prose lg:prose-xl max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-<header class="mb-10 border-b pb-4">
-<h1 class="text-3xl md:text-4xl font-extrabold text-slate-800" data-i18n="연구실_소식_제목" id="newsTitle">연구실 소식 제목</h1>
-<p class="text-gray-500 mt-2" data-i18n="게시_날짜_yyyy_mm_dd" id="newsDate">게시 날짜: YYYY-MM-DD</p>
-</header>
-<div data-i18n="본_연구실_소식은_일반적인_내용을_담고_있는_예시_페이지입니다_실제_소식_내용은_동적으로_업데이트될_수_있습니다_예를_들어_교수님의_수상_소식이나_새로운_연구_프로젝트_시작과_같은_내용이_여기에_표시될_수_있습니다_예시_홍종광_교수님_xxx_학회_우수_연구자상_수상생물공학연구실의_홍종광_교수님께서_2025년_10월_5일_개최된_xxx_학회_연례_총회에서_바이오공정_분야의_혁신적인_연구_성과를_인정받아_우수_연구자상_을_수상하셨습니다_홍_교수님은_지난_수년간_디지털_트윈_기반_바이오공정_최적화_및_cho_세포_배양_기술_개발에_매진하여_다수의_sci급_논문을_발표하고_특허를_출원하는_등_탁월한_연구_업적을_쌓아오셨습니다_특히_최근_발표된_ai_기반_실시간_바이오리액터_제어_시스템_연구는_산업계로부터_큰_주목을_받았습니다_이번_수상은_홍_교수님의_끊임없는_연구_열정과_연구실_구성원들의_노력이_함께_이루어낸_결과입니다_연구실一同_진심으로_축하드립니다_교수님_수상_관련_이미지_준비_중_xxx_학회_우수_연구자상_시상식_예시" id="newsContent">
-<p data-i18n="본_연구실_소식은_일반적인_내용을_담고_있는_예시_페이지입니다_실제_소식_내용은_동적으로_업데이트될_수_있습니다">본 연구실 소식은 일반적인 내용을 담고 있는 예시 페이지입니다. 실제 소식 내용은 동적으로 업데이트될 수 있습니다.</p>
-<p data-i18n="예를_들어_교수님의_수상_소식이나_새로운_연구_프로젝트_시작과_같은_내용이_여기에_표시될_수_있습니다">예를 들어, 교수님의 수상 소식이나 새로운 연구 프로젝트 시작과 같은 내용이 여기에 표시될 수 있습니다.</p>
-<h2 class="text-xl font-semibold mt-6" data-i18n="예시_홍종광_교수님_xxx_학회_우수_연구자상_수상">예시: 홍종광 교수님, XXX 학회 우수 연구자상 수상</h2>
-<p data-i18n="생물공학연구실의_홍종광_교수님께서_2025년_10월_5일_개최된_xxx_학회_연례_총회에서_바이오공정_분야의_혁신적인_연구_성과를_인정받아_우수_연구자상_을_수상하셨습니다">생물공학연구실의 홍종광 교수님께서 2025년 10월 5일 개최된 XXX 학회 연례 총회에서 바이오공정 분야의 혁신적인 연구 성과를 인정받아 '우수 연구자상'을 수상하셨습니다.</p>
-<p data-i18n="홍_교수님은_지난_수년간_디지털_트윈_기반_바이오공정_최적화_및_cho_세포_배양_기술_개발에_매진하여_다수의_sci급_논문을_발표하고_특허를_출원하는_등_탁월한_연구_업적을_쌓아오셨습니다_특히_최근_발표된_ai_기반_실시간_바이오리액터_제어_시스템_연구는_산업계로부터_큰_주목을_받았습니다">홍 교수님은 지난 수년간 디지털 트윈 기반 바이오공정 최적화 및 CHO 세포 배양 기술 개발에 매진하여 다수의 SCI급 논문을 발표하고 특허를 출원하는 등 탁월한 연구 업적을 쌓아오셨습니다. 특히, 최근 발표된 'AI 기반 실시간 바이오리액터 제어 시스템' 연구는 산업계로부터 큰 주목을 받았습니다.</p>
-<p data-i18n="이번_수상은_홍_교수님의_끊임없는_연구_열정과_연구실_구성원들의_노력이_함께_이루어낸_결과입니다_연구실一同_진심으로_축하드립니다">이번 수상은 홍 교수님의 끊임없는 연구 열정과 연구실 구성원들의 노력이 함께 이루어낸 결과입니다. 연구실一同 진심으로 축하드립니다!</p>
-<figure class="my-8">
-<div class="bg-gray-200 aspect-video w-full max-w-2xl mx-auto rounded-md flex items-center justify-center" data-i18n="교수님_수상_관련_이미지_준비_중">
-<p class="text-gray-500" data-i18n="교수님_수상_관련_이미지_준비_중">교수님 수상 관련 이미지 (준비 중)</p>
-</div>
-<figcaption class="text-center text-sm text-gray-500 mt-2">XXX 학회 우수 연구자상 시상식 (예시)</figcaption>
-</figure>
-</div>
-<div class="mt-12 pt-8 border-t border-gray-200" data-i18n="목록으로_돌아가기">
-<a class="inline-flex items-center text-[#0072CE] hover:text-[#004A99] hover:underline font-medium" data-i18n="목록으로_돌아가기" href="news_announcements.html">
-<i class="w-5 h-5 mr-2" data-lucide="arrow-left"></i>
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-slate-800 mb-2 sm:mb-0">
+                    <a href="index.html" class="block no-underline hover:no-underline">
+                        <span class="block text-2xl lg:text-3xl font-bold text-slate-800">생물공학연구실</span>
+                        <span class="block text-sm lg:text-base font-normal text-gray-500 mt-1">Bioprocess Engineering Laboratory</span>
+                    </a>
+                </h1>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
+                    <span class="hamster-icon">🐹</span>
+                    <span class="helper-text">뭐든 물어봐!</span>
+                </div>
+            </div>
+        </div>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+            <article class="prose lg:prose-xl max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
+                <header class="mb-10 border-b pb-4">
+                    <h1 id="newsTitle" class="text-3xl md:text-4xl font-extrabold text-slate-800">연구실 소식 제목</h1>
+                    <p id="newsDate" class="text-gray-500 mt-2">게시 날짜: YYYY-MM-DD</p>
+                </header>
+                
+                <div id="newsContent">
+                    <p>본 연구실 소식은 일반적인 내용을 담고 있는 예시 페이지입니다. 실제 소식 내용은 동적으로 업데이트될 수 있습니다.</p>
+                    <p>예를 들어, 교수님의 수상 소식이나 새로운 연구 프로젝트 시작과 같은 내용이 여기에 표시될 수 있습니다.</p>
+                    
+                    <h2 class="text-xl font-semibold mt-6">예시: 홍종광 교수님, XXX 학회 우수 연구자상 수상</h2>
+                    <p>생물공학연구실의 홍종광 교수님께서 2025년 10월 5일 개최된 XXX 학회 연례 총회에서 바이오공정 분야의 혁신적인 연구 성과를 인정받아 '우수 연구자상'을 수상하셨습니다.</p>
+                    <p>홍 교수님은 지난 수년간 디지털 트윈 기반 바이오공정 최적화 및 CHO 세포 배양 기술 개발에 매진하여 다수의 SCI급 논문을 발표하고 특허를 출원하는 등 탁월한 연구 업적을 쌓아오셨습니다. 특히, 최근 발표된 'AI 기반 실시간 바이오리액터 제어 시스템' 연구는 산업계로부터 큰 주목을 받았습니다.</p>
+                    <p>이번 수상은 홍 교수님의 끊임없는 연구 열정과 연구실 구성원들의 노력이 함께 이루어낸 결과입니다. 연구실一同 진심으로 축하드립니다!</p>
+                     <figure class="my-8">
+                         <div class="bg-gray-200 aspect-video w-full max-w-2xl mx-auto rounded-md flex items-center justify-center">
+                            <p class="text-gray-500">교수님 수상 관련 이미지 (준비 중)</p>
+                        </div>
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">XXX 학회 우수 연구자상 시상식 (예시)</figcaption>
+                    </figure>
+                </div>
+
+                <div class="mt-12 pt-8 border-t border-gray-200">
+                    <a href="news_announcements.html" class="inline-flex items-center text-[#0072CE] hover:text-[#004A99] hover:underline font-medium">
+                        <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
                         목록으로 돌아가기
                     </a>
-</div>
-</article>
-</div>
-<div class="container mx-auto px-6 my-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
-<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
-<div class="space-y-4" id="searchResultsList"></div>
-</div>
-</main>
-<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
-<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
-</p>
-<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-</div>
-</footer>
-<script type="module">
+                </div>
+            </article>
+        </div>
+        
+        <div id="searchResultsContainer" class="container mx-auto px-6 my-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+    <script type="module">
         import { menuStructure, generateNavigation, generateBreadcrumbs, adjustBodyPadding, loadSearchIndex, performSiteSearch, displaySuggestions } from './script.js';
         
         document.addEventListener('DOMContentLoaded', () => {
@@ -127,6 +133,6 @@
 
         });
     </script>
-<script src="script.js" type="module"></script>
+    <script src="script.js" type="module"></script>
 </body>
 </html>

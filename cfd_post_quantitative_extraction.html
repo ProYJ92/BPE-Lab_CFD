@@ -1,109 +1,115 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-i18n="title_cfd_post_quantitative_extraction">CFD 후처리 - 정량적 데이터 추출 - 생물공학연구실</title>
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFD 후처리 - 정량적 데이터 추출 - 생물공학연구실</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-gray-800 scroll-smooth">
-<div class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" data-i18n="생물공학연구실검색_뭐든_물어봐" id="fixed-top-nav-container">
-<div class="container mx-auto px-4" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<div class="header-container flex flex-col sm:flex-row justify-between items-center py-3" data-i18n="생물공학연구실검색_뭐든_물어봐">
-<h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0" data-i18n="생물공학연구실">
-<a data-i18n="생물공학연구실" href="index.html">생물공학연구실</a>
-</h1>
-<nav class="bg-slate-700 text-white border-t border-b border-slate-600" id="mainNav">
-<ul class="container mx-auto px-0 flex justify-center">
-</ul>
-</nav>
-<div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4" data-i18n="검색">
-<input class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64" data-i18n="searchInput_placeholder" id="searchInput" placeholder="검색..." type="text"/>
-<button class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]" data-i18n="검색" id="searchButton">검색</button>
-<div class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden" id="suggestionsDropdown">
-</div>
-</div>
-<div aria-label="도우미 열기" class="helper-btn" data-i18n="a21c86eddc" id="header-helper-btn">
-<span class="hamster-icon" data-i18n="0ded9f762b">🐹</span>
-<span class="helper-text" data-i18n="뭐든_물어봐">뭐든 물어봐!</span>
-</div>
-</div>
-</div>
-<nav aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200" data-i18n="breadcrumbNav_aria_label" id="breadcrumbNav">
-<div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-</div>
-</nav>
-</div>
-<main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
-<div class="bg-white p-6 md:p-10 rounded-xl shadow-xl" data-i18n="cfd_후처리_정량적_데이터_추출_quantitative_data_extraction_정량적_데이터_추출은_cfd_시뮬레이션_결과에서_수치적인_정보를_특정_위치나_영역에서_얻어내는_과정입니다_6_이는_시각적_분석을_보완하며_실험_결과와의_비교_검증_validation_설계_요구사항_만족_여부_확인_그리고_더_깊이_있는_공학적_분석에_필수적입니다_추출_대상_및_방법후처리_소프트웨어는_다양한_기하학적_객체로부터_데이터를_추출하는_기능을_제공합니다_6_특정_지점_point_추출_계산_도메인_내의_특정_xyz_좌표에서_물리량_압력_속도_온도_등_값을_직접_탐색합니다_프로브_probe_기능을_사용하여_특정_좌표나_노드에서_시간_경과에_따른_데이터를_추출하여_시계열_플롯_time_series_plot_으로_만들_수_있습니다_이는_비정상_transient_해석_결과_분석에_유용합니다_2_6_선_line_polyline_추출_사용자가_정의한_직선_곡선_또는_다각형_선_polyline_을_따라_물리량_분포_데이터를_추출합니다_추출된_데이터는_주로_xy_플롯_형태로_시각화되어_특정_경로를_따른_물리량의_변화_양상을_파악하는_데_사용됩니다_예_파이프_중심선을_따른_압력_강하_날개_표면을_따른_압력_분포_면_plane_surface_slice_추출_특정_평면_plane_또는_곡면_surface_으로_계산_도메인을_잘라낸_단면_slice_에서_물리량_분포를_추출합니다_단면_전체_또는_특정_영역에서_데이터를_추출하거나_면적_적분_area_integral_또는_면적_가중_평균_area_weighted_average_값을_계산할_수_있습니다_예_특정_단면에서의_평균_속도_유량_등표면_isosurface_과_같이_특정_물리량_값을_기준으로_생성된_표면에서도_데이터_추출이_가능합니다_체적_volume_추출_계산_도메인_내의_특정_체적_영역_volume_region_에서_데이터를_추출합니다_체적_적분_volume_integral_또는_체적_가중_평균_volume_weighted_average_을_통해_해당_영역의_전체적인_물리량_특성을_파악할_수_있습니다_예_특정_공간_내의_평균_온도_전체_운동_에너지_추출_데이터의_활용xy_플롯_생성_선이나_특정_지점의_시간_변화에_따른_데이터를_xy_그래프로_그려_물리량의_변화_추이를_정량적으로_분석합니다_데이터_테이블_생성_추출된_데이터를_표_형식으로_내보내어_다른_분석_도구_예_excel_matlab_python_pandas_에서_추가적인_처리나_분석을_수행할_수_있습니다_실험_데이터와_비교_실험에서_측정된_특정_지점_또는_경로의_데이터와_cfd_시뮬레이션에서_추출한_데이터를_직접_비교하여_모델의_정확도를_검증_validation_합니다_3_5_설계_지표_계산_추출된_데이터를_바탕으로파생_데이터_예_힘_모멘트_효율_를_계산하여_설계_성능을_평가합니다_보고서_및_발표_자료_작성_정량적으로_추출된_데이터와_이를_시각화한_그래프는_cfd_해석_결과를_뒷받침하는_중요한_근거_자료로_활용됩니다_정확한_위치에서_데이터를_추출하고_추출된_값의_물리적_의미를_올바르게_해석하는_것이_중요합니다_데이터_추출_시_격자_해상도에_따른_보간_interpolation_오류_가능성도_인지하고_있어야_합니다_cfd_후처리_정량적_데이터_추출에_대한_더_자세한_학술적_내용_및_참고_자료는cfd_레퍼런스_페이지를_참조하십시오">
-<header class="mb-8 border-b pb-4">
-<h1 class="text-3xl md:text-4xl font-bold text-slate-800" data-i18n="cfd_후처리_정량적_데이터_추출_quantitative_data_extraction">CFD 후처리 - 정량적 데이터 추출 (Quantitative Data Extraction)</h1>
-</header>
-<article class="prose prose-lg max-w-none">
-<p data-i18n="정량적_데이터_추출은_cfd_시뮬레이션_결과에서_수치적인_정보를_특정_위치나_영역에서_얻어내는_과정입니다_6_이는_시각적_분석을_보완하며_실험_결과와의_비교_검증_validation_설계_요구사항_만족_여부_확인_그리고_더_깊이_있는_공학적_분석에_필수적입니다">정량적 데이터 추출은 CFD 시뮬레이션 결과에서 수치적인 정보를 특정 위치나 영역에서 얻어내는 과정입니다 [6]. 이는 시각적 분석을 보완하며, 실험 결과와의 비교 검증(Validation), 설계 요구사항 만족 여부 확인, 그리고 더 깊이 있는 공학적 분석에 필수적입니다.</p>
-<h2 class="mt-8" data-i18n="추출_대상_및_방법">추출 대상 및 방법</h2>
-<p data-i18n="후처리_소프트웨어는_다양한_기하학적_객체로부터_데이터를_추출하는_기능을_제공합니다_6">후처리 소프트웨어는 다양한 기하학적 객체로부터 데이터를 추출하는 기능을 제공합니다 [6]:</p>
-<ul>
-<li data-i18n="특정_지점_point_추출_계산_도메인_내의_특정_xyz_좌표에서_물리량_압력_속도_온도_등_값을_직접_탐색합니다_프로브_probe_기능을_사용하여_특정_좌표나_노드에서_시간_경과에_따른_데이터를_추출하여_시계열_플롯_time_series_plot_으로_만들_수_있습니다_이는_비정상_transient_해석_결과_분석에_유용합니다_2_6"><strong>특정 지점 (Point) 추출</strong>:
+
+    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
+                <h1 class="text-2xl lg:text-3xl font-bold text-slate-800 truncate mb-2 sm:mb-0">
+                    <a href="index.html">생물공학연구실</a>
+                </h1>
+        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
+            <ul class="container mx-auto px-0 flex justify-center">
+            </ul>
+        </nav>
+                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
+                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
+                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
+                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
+                    </div>
+                </div>
+                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
+                    <span class="hamster-icon">🐹</span>
+                    <span class="helper-text">뭐든 물어봐!</span>
+                </div>
+            </div>
+        </div>
+        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 md:px-6 py-8 md:py-12">
+        <div class="bg-white p-6 md:p-10 rounded-xl shadow-xl">
+            <header class="mb-8 border-b pb-4">
+                <h1 class="text-3xl md:text-4xl font-bold text-slate-800">CFD 후처리 - 정량적 데이터 추출 (Quantitative Data Extraction)</h1>
+            </header>
+            <article class="prose prose-lg max-w-none">
+                <p>정량적 데이터 추출은 CFD 시뮬레이션 결과에서 수치적인 정보를 특정 위치나 영역에서 얻어내는 과정입니다 [6]. 이는 시각적 분석을 보완하며, 실험 결과와의 비교 검증(Validation), 설계 요구사항 만족 여부 확인, 그리고 더 깊이 있는 공학적 분석에 필수적입니다.</p>
+                
+                <h2 class="mt-8">추출 대상 및 방법</h2>
+                <p>후처리 소프트웨어는 다양한 기하학적 객체로부터 데이터를 추출하는 기능을 제공합니다 [6]:</p>
+                <ul>
+                    <li><strong>특정 지점 (Point) 추출</strong>:
                         <ul>
-<li data-i18n="계산_도메인_내의_특정_xyz_좌표에서_물리량_압력_속도_온도_등_값을_직접_탐색합니다">계산 도메인 내의 특정 XYZ 좌표에서 물리량(압력, 속도, 온도 등) 값을 직접 탐색합니다.</li>
-<li data-i18n="프로브_probe_기능을_사용하여_특정_좌표나_노드에서_시간_경과에_따른_데이터를_추출하여_시계열_플롯_time_series_plot_으로_만들_수_있습니다_이는_비정상_transient_해석_결과_분석에_유용합니다_2_6">프로브(Probe) 기능을 사용하여 특정 좌표나 노드에서 시간 경과에 따른 데이터를 추출하여 시계열 플롯(Time Series Plot)으로 만들 수 있습니다. 이는 비정상(transient) 해석 결과 분석에 유용합니다 [2, 6].</li>
-</ul>
-</li>
-<li data-i18n="선_line_polyline_추출_사용자가_정의한_직선_곡선_또는_다각형_선_polyline_을_따라_물리량_분포_데이터를_추출합니다_추출된_데이터는_주로_xy_플롯_형태로_시각화되어_특정_경로를_따른_물리량의_변화_양상을_파악하는_데_사용됩니다_예_파이프_중심선을_따른_압력_강하_날개_표면을_따른_압력_분포"><strong>선 (Line/Polyline) 추출</strong>:
+                            <li>계산 도메인 내의 특정 XYZ 좌표에서 물리량(압력, 속도, 온도 등) 값을 직접 탐색합니다.</li>
+                            <li>프로브(Probe) 기능을 사용하여 특정 좌표나 노드에서 시간 경과에 따른 데이터를 추출하여 시계열 플롯(Time Series Plot)으로 만들 수 있습니다. 이는 비정상(transient) 해석 결과 분석에 유용합니다 [2, 6].</li>
+                        </ul>
+                    </li>
+                    <li><strong>선 (Line/Polyline) 추출</strong>:
                         <ul>
-<li data-i18n="사용자가_정의한_직선_곡선_또는_다각형_선_polyline_을_따라_물리량_분포_데이터를_추출합니다">사용자가 정의한 직선, 곡선 또는 다각형 선(Polyline)을 따라 물리량 분포 데이터를 추출합니다.</li>
-<li data-i18n="추출된_데이터는_주로_xy_플롯_형태로_시각화되어_특정_경로를_따른_물리량의_변화_양상을_파악하는_데_사용됩니다_예_파이프_중심선을_따른_압력_강하_날개_표면을_따른_압력_분포">추출된 데이터는 주로 XY 플롯 형태로 시각화되어, 특정 경로를 따른 물리량의 변화 양상을 파악하는 데 사용됩니다. (예: 파이프 중심선을 따른 압력 강하, 날개 표면을 따른 압력 분포)</li>
-</ul>
-</li>
-<li data-i18n="면_plane_surface_slice_추출_특정_평면_plane_또는_곡면_surface_으로_계산_도메인을_잘라낸_단면_slice_에서_물리량_분포를_추출합니다_단면_전체_또는_특정_영역에서_데이터를_추출하거나_면적_적분_area_integral_또는_면적_가중_평균_area_weighted_average_값을_계산할_수_있습니다_예_특정_단면에서의_평균_속도_유량_등표면_isosurface_과_같이_특정_물리량_값을_기준으로_생성된_표면에서도_데이터_추출이_가능합니다"><strong>면 (Plane/Surface/Slice) 추출</strong>:
+                            <li>사용자가 정의한 직선, 곡선 또는 다각형 선(Polyline)을 따라 물리량 분포 데이터를 추출합니다.</li>
+                            <li>추출된 데이터는 주로 XY 플롯 형태로 시각화되어, 특정 경로를 따른 물리량의 변화 양상을 파악하는 데 사용됩니다. (예: 파이프 중심선을 따른 압력 강하, 날개 표면을 따른 압력 분포)</li>
+                        </ul>
+                    </li>
+                    <li><strong>면 (Plane/Surface/Slice) 추출</strong>:
                         <ul>
-<li data-i18n="특정_평면_plane_또는_곡면_surface_으로_계산_도메인을_잘라낸_단면_slice_에서_물리량_분포를_추출합니다">특정 평면(Plane) 또는 곡면(Surface)으로 계산 도메인을 잘라낸 단면(Slice)에서 물리량 분포를 추출합니다.</li>
-<li data-i18n="단면_전체_또는_특정_영역에서_데이터를_추출하거나_면적_적분_area_integral_또는_면적_가중_평균_area_weighted_average_값을_계산할_수_있습니다_예_특정_단면에서의_평균_속도_유량">단면 전체 또는 특정 영역에서 데이터를 추출하거나, 면적 적분(Area Integral) 또는 면적 가중 평균(Area-Weighted Average) 값을 계산할 수 있습니다 (예: 특정 단면에서의 평균 속도, 유량).</li>
-<li data-i18n="등표면_isosurface_과_같이_특정_물리량_값을_기준으로_생성된_표면에서도_데이터_추출이_가능합니다">등표면(Isosurface)과 같이 특정 물리량 값을 기준으로 생성된 표면에서도 데이터 추출이 가능합니다.</li>
-</ul>
-</li>
-<li data-i18n="체적_volume_추출_계산_도메인_내의_특정_체적_영역_volume_region_에서_데이터를_추출합니다_체적_적분_volume_integral_또는_체적_가중_평균_volume_weighted_average_을_통해_해당_영역의_전체적인_물리량_특성을_파악할_수_있습니다_예_특정_공간_내의_평균_온도_전체_운동_에너지"><strong>체적 (Volume) 추출</strong>:
+                            <li>특정 평면(Plane) 또는 곡면(Surface)으로 계산 도메인을 잘라낸 단면(Slice)에서 물리량 분포를 추출합니다.</li>
+                            <li>단면 전체 또는 특정 영역에서 데이터를 추출하거나, 면적 적분(Area Integral) 또는 면적 가중 평균(Area-Weighted Average) 값을 계산할 수 있습니다 (예: 특정 단면에서의 평균 속도, 유량).</li>
+                            <li>등표면(Isosurface)과 같이 특정 물리량 값을 기준으로 생성된 표면에서도 데이터 추출이 가능합니다.</li>
+                        </ul>
+                    </li>
+                    <li><strong>체적 (Volume) 추출</strong>:
                         <ul>
-<li data-i18n="계산_도메인_내의_특정_체적_영역_volume_region_에서_데이터를_추출합니다">계산 도메인 내의 특정 체적 영역(Volume Region)에서 데이터를 추출합니다.</li>
-<li data-i18n="체적_적분_volume_integral_또는_체적_가중_평균_volume_weighted_average_을_통해_해당_영역의_전체적인_물리량_특성을_파악할_수_있습니다_예_특정_공간_내의_평균_온도_전체_운동_에너지">체적 적분(Volume Integral) 또는 체적 가중 평균(Volume-Weighted Average)을 통해 해당 영역의 전체적인 물리량 특성을 파악할 수 있습니다 (예: 특정 공간 내의 평균 온도, 전체 운동 에너지).</li>
-</ul>
-</li>
-</ul>
-<h2 class="mt-8" data-i18n="추출_데이터의_활용">추출 데이터의 활용</h2>
-<ul>
-<li data-i18n="xy_플롯_생성_선이나_특정_지점의_시간_변화에_따른_데이터를_xy_그래프로_그려_물리량의_변화_추이를_정량적으로_분석합니다"><strong>XY 플롯 생성</strong>: 선이나 특정 지점의 시간 변화에 따른 데이터를 XY 그래프로 그려 물리량의 변화 추이를 정량적으로 분석합니다.</li>
-<li data-i18n="데이터_테이블_생성_추출된_데이터를_표_형식으로_내보내어_다른_분석_도구_예_excel_matlab_python_pandas_에서_추가적인_처리나_분석을_수행할_수_있습니다"><strong>데이터 테이블 생성</strong>: 추출된 데이터를 표 형식으로 내보내어 다른 분석 도구(예: Excel, MATLAB, Python Pandas)에서 추가적인 처리나 분석을 수행할 수 있습니다.</li>
-<li data-i18n="실험_데이터와_비교_실험에서_측정된_특정_지점_또는_경로의_데이터와_cfd_시뮬레이션에서_추출한_데이터를_직접_비교하여_모델의_정확도를_검증_validation_합니다_3_5"><strong>실험 데이터와 비교</strong>: 실험에서 측정된 특정 지점 또는 경로의 데이터와 CFD 시뮬레이션에서 추출한 데이터를 직접 비교하여 모델의 정확도를 검증(Validation)합니다 [3, 5].</li>
-<li data-i18n="설계_지표_계산_추출된_데이터를_바탕으로파생_데이터_예_힘_모멘트_효율_를_계산하여_설계_성능을_평가합니다"><strong>설계 지표 계산</strong>: 추출된 데이터를 바탕으로 <a class="text-[#0072CE] hover:text-[#004A99]" data-i18n="파생_데이터" href="cfd_post_derived_data.html">파생 데이터</a>(예: 힘, 모멘트, 효율)를 계산하여 설계 성능을 평가합니다.</li>
-<li data-i18n="보고서_및_발표_자료_작성_정량적으로_추출된_데이터와_이를_시각화한_그래프는_cfd_해석_결과를_뒷받침하는_중요한_근거_자료로_활용됩니다"><strong>보고서 및 발표 자료 작성</strong>: 정량적으로 추출된 데이터와 이를 시각화한 그래프는 CFD 해석 결과를 뒷받침하는 중요한 근거 자료로 활용됩니다.</li>
-</ul>
-<p data-i18n="정확한_위치에서_데이터를_추출하고_추출된_값의_물리적_의미를_올바르게_해석하는_것이_중요합니다_데이터_추출_시_격자_해상도에_따른_보간_interpolation_오류_가능성도_인지하고_있어야_합니다">정확한 위치에서 데이터를 추출하고, 추출된 값의 물리적 의미를 올바르게 해석하는 것이 중요합니다. 데이터 추출 시 격자 해상도에 따른 보간(interpolation) 오류 가능성도 인지하고 있어야 합니다.</p>
-<hr class="my-8 border-gray-300"/>
-<p class="text-sm text-gray-600" data-i18n="cfd_후처리_정량적_데이터_추출에_대한_더_자세한_학술적_내용_및_참고_자료는cfd_레퍼런스_페이지를_참조하십시오">CFD 후처리 정량적 데이터 추출에 대한 더 자세한 학술적 내용 및 참고 자료는 <a class="text-[#0072CE] hover:text-[#004A99] font-medium" data-i18n="cfd_레퍼런스_페이지" href="cfd_references.html#cfd-postprocessing-refs">CFD 레퍼런스 페이지</a>를 참조하십시오.</p>
-</article>
-</div>
-<div class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden" data-i18n="검색_결과" id="searchResultsContainer">
-<h2 class="text-2xl font-semibold mb-4 text-slate-700" data-i18n="검색_결과">검색 결과</h2>
-<div class="space-y-4" id="searchResultsList"></div>
-</div>
-</main>
-<footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-<div class="container mx-auto px-6 text-sm text-gray-600" data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스_강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr연세대학교미래캠퍼스생명과학기술학부본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">
-<p data-i18n="2025_생물공학연구실_bioprocess_engineering_laboratory_연세대학교_미래캠퍼스">© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-<p class="mt-1" data-i18n="강원특별자치도_원주시_흥업면_연세대길_1_미래관_306호_033_760_2279_jongkwang_hong_yonsei_ac_kr">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-<p class="mt-1" data-i18n="연세대학교미래캠퍼스생명과학기술학부">
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline" data-i18n="연세대학교" href="https://www.yonsei.ac.kr/sc/index.do" rel="noopener noreferrer" target="_blank">연세대학교</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="미래캠퍼스" href="https://mirae.yonsei.ac.kr/wj/index.do" rel="noopener noreferrer" target="_blank">미래캠퍼스</a>
-<a class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1" data-i18n="생명과학기술학부" href="https://bst.yonsei.ac.kr/ymbst21/index.do" rel="noopener noreferrer" target="_blank">생명과학기술학부</a>
-</p>
-<p class="text-xs text-gray-500 mt-1" data-i18n="본_웹사이트는_교육_및_연구_목적으로_제작되었습니다">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-</div>
-</footer>
-<script src="script.js" type="module"></script>
+                            <li>계산 도메인 내의 특정 체적 영역(Volume Region)에서 데이터를 추출합니다.</li>
+                            <li>체적 적분(Volume Integral) 또는 체적 가중 평균(Volume-Weighted Average)을 통해 해당 영역의 전체적인 물리량 특성을 파악할 수 있습니다 (예: 특정 공간 내의 평균 온도, 전체 운동 에너지).</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h2 class="mt-8">추출 데이터의 활용</h2>
+                <ul>
+                    <li><strong>XY 플롯 생성</strong>: 선이나 특정 지점의 시간 변화에 따른 데이터를 XY 그래프로 그려 물리량의 변화 추이를 정량적으로 분석합니다.</li>
+                    <li><strong>데이터 테이블 생성</strong>: 추출된 데이터를 표 형식으로 내보내어 다른 분석 도구(예: Excel, MATLAB, Python Pandas)에서 추가적인 처리나 분석을 수행할 수 있습니다.</li>
+                    <li><strong>실험 데이터와 비교</strong>: 실험에서 측정된 특정 지점 또는 경로의 데이터와 CFD 시뮬레이션에서 추출한 데이터를 직접 비교하여 모델의 정확도를 검증(Validation)합니다 [3, 5].</li>
+                    <li><strong>설계 지표 계산</strong>: 추출된 데이터를 바탕으로 <a href="cfd_post_derived_data.html" class="text-[#0072CE] hover:text-[#004A99]">파생 데이터</a>(예: 힘, 모멘트, 효율)를 계산하여 설계 성능을 평가합니다.</li>
+                    <li><strong>보고서 및 발표 자료 작성</strong>: 정량적으로 추출된 데이터와 이를 시각화한 그래프는 CFD 해석 결과를 뒷받침하는 중요한 근거 자료로 활용됩니다.</li>
+                </ul>
+                <p>정확한 위치에서 데이터를 추출하고, 추출된 값의 물리적 의미를 올바르게 해석하는 것이 중요합니다. 데이터 추출 시 격자 해상도에 따른 보간(interpolation) 오류 가능성도 인지하고 있어야 합니다.</p>
+
+                <hr class="my-8 border-gray-300">
+                <p class="text-sm text-gray-600">CFD 후처리 정량적 데이터 추출에 대한 더 자세한 학술적 내용 및 참고 자료는 <a href="cfd_references.html#cfd-postprocessing-refs" class="text-[#0072CE] hover:text-[#004A99] font-medium">CFD 레퍼런스 페이지</a>를 참조하십시오.</p>
+            </article>
+        </div>
+        <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
+            <div id="searchResultsList" class="space-y-4"></div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto px-6 text-sm text-gray-600">
+            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
+            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
+            <p class="mt-1">
+                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
+                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
+                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
 </body>
 </html>
