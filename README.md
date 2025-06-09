@@ -30,3 +30,15 @@ Currently the website is localized into the following languages:
 - English (`en`)
 - Chinese (`zh`)
 
+
+## Using data-i18n attributes
+
+Wrap any new text in an element with `data-i18n="yourKey"` or assign it an ID.
+The translation script automatically collects these strings and updates
+`assets/i18n/*.json` when run:
+
+```bash
+python scripts/i18n_full_auto.py --skip-if-no-diff
+```
+
+Commit the regenerated JSON files and HTML changes.
