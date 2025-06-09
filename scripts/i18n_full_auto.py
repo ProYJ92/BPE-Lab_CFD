@@ -91,7 +91,8 @@ if not project_id:
     print('Error: GCLOUD_PROJECT_ID environment variable not set.', file=sys.stderr)
     sys.exit(1)
 
-client = tr.Client(credentials=credentials, project=project_id) if credentials else tr.Client(project=project_id)
+os.environ.setdefault('GOOGLE_CLOUD_PROJECT', project_id)
+client = tr.Client(credentials=credentials)
 try:
     client.get_languages()
 except Exception as exc:
