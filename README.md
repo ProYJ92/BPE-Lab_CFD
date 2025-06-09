@@ -7,10 +7,14 @@ This repository hosts materials for the BPE-Lab CFD website.
 
 ## i18n automation
 
-The `i18n_full.yml` workflow runs only on pushes to the `main` branch and
-explicitly ignores branches under `i18n/**`. The underlying script is invoked
-with the `--skip-if-no-diff` flag so it will exit early when no HTML files have
-changed, printing a message that the update was skipped. Pull requests titled
-"♻️ i18n JSON 업데이트" are opened automatically whenever new translation files
-are committed.
+The repository uses GitHub Actions to keep the Korean translation files up to
+date.  The process works as follows:
+
+* **Trigger conditions** – `i18n_full.yml` runs whenever a commit is pushed to
+  `main` and it explicitly ignores branches matching `i18n/**`.
+* **Skipping unchanged content** – the script is called with
+  `--skip-if-no-diff`, which exits early when no HTML or Markdown files were
+  modified.
+* **Automatic pull requests** – when new JSON files are generated, a bot
+  creates a pull request titled "♻️ i18n JSON 업데이트".
 
