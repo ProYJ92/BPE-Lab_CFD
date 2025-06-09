@@ -21,3 +21,12 @@ This repository hosts materials for the BPE-Lab CFD website.
 * Bot commits open pull requests titled "♻️ i18n JSON 업데이트" whenever new
   translation files are added.
 
+
+## Supported languages
+
+Currently the website is localized into the following languages:
+
+- Korean (`ko`)
+- English (`en`)
+- Chinese (`zh`)
+
