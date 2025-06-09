@@ -258,6 +258,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // A JSON copy of this menu structure is stored in menu.json for use by
+    // external scripts such as generate_search_index.js
     const menuStructure = [
         { id: 'about_lab', name_ko: '연구실 소개', name_en: 'About Lab', path: 'about_lab.html', children: [
             { name_ko: '연구실 개요', name_en: 'Overview', path: 'lab_overview.html' },
