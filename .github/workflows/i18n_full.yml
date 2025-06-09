@@ -53,7 +53,12 @@ jobs:
           GCLOUD_PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
           GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
         run: |
-          python scripts/i18n_full_auto.py --skip-if-no-diff${{ github.event_name == 'workflow_dispatch' && github.event.inputs.force == 'true' && ' --force' || '' }}
+          cmd="python scripts/i18n_full_auto.py --skip-if-no-diff"
+          if [ "${{ github.event.inputs.force }}" = "true" ]; then
+            cmd="$cmd --force"
+          fi
+          echo "Running: $cmd"
+          $cmd
 
       - name: Create/Update PR
         uses: peter-evans/create-pull-request@v6
