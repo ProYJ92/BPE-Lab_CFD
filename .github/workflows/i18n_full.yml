@@ -55,8 +55,11 @@ jobs:
           GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
         run: |
           cmd="python scripts/i18n_full_auto.py --skip-if-no-diff"
-          if [ "${{ github.event.inputs.force }}" = "true" ]; then
+          force_input="${{ github.event.inputs.force }}"
+          if [ "$force_input" = "true" ]; then
             cmd="$cmd --force"
+          else
+            echo "Warning: force input '$force_input' is not 'true'; running without --force"
           fi
           echo "Running: $cmd"
           $cmd
