@@ -78,6 +78,7 @@ selectors = [
     'td',
     'input[placeholder]',
     'textarea[placeholder]',
+    'img[alt]',
     'div'
 ]
 
