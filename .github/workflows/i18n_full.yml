@@ -60,6 +60,9 @@ jobs:
           echo "Running: $cmd"
           $cmd
 
+      - name: Check git status
+        run: git status --short
+
       - name: Create/Update PR
         uses: peter-evans/create-pull-request@v6
         with:
