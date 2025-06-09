@@ -77,7 +77,8 @@ selectors = [
     'th',
     'td',
     'input[placeholder]',
-    'textarea[placeholder]'
+    'textarea[placeholder]',
+    'div'
 ]
 
 credentials = None
