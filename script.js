@@ -137,7 +137,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const defaultTexts = {};
 
+    // Store default texts for elements using data-i18n to allow reverting
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (!(key in defaultTexts)) {
+            defaultTexts[key] = el.hasAttribute('placeholder') ? (el.placeholder || '') : (el.textContent || '');
+        }
+    });
+
     function applyTexts(texts) {
+        // Apply translations for elements marked with data-i18n
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.dataset.i18n;
+            if (key in texts) {
+                if (el.hasAttribute('placeholder')) {
+                    el.placeholder = texts[key];
+                } else {
+                    el.textContent = texts[key];
+                }
+            }
+        });
+
+        // Legacy support: update elements referenced by id keys
         Object.keys(texts).forEach(key => {
             if (key === 'title') {
                 document.title = texts[key];
@@ -148,17 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 const element = document.getElementById(key);
                 if (element) element.textContent = texts[key];
-            }
-        });
-
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.dataset.i18n;
-            if (key in texts) {
-                if (el.hasAttribute('placeholder')) {
-                    el.placeholder = texts[key];
-                } else {
-                    el.textContent = texts[key];
-                }
             }
         });
     }
