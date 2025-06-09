@@ -1,17 +1,27 @@
-import subprocess, pathlib, json, re, hashlib, os, sys
+import subprocess, pathlib, json, re, hashlib, os, sys, argparse
 from bs4 import BeautifulSoup
 from google.cloud import translate_v2 as tr
 
-# ── 변경 파일 목록 (HEAD~1 없을 때 안전 처리) ─────────────────
+parser = argparse.ArgumentParser()
+parser.add_argument('--skip-if-no-diff', action='store_true', dest='skip')
+args = parser.parse_args()
+
+# ── 안전 diff: 첫 커밋·shallow clone 모두 OK ──────────────────────
 try:
     diff = subprocess.check_output(
-        ['git','diff','--name-only','HEAD~1'], stderr=subprocess.STDOUT
+        ['git', 'diff', '--name-only', 'HEAD~1'],
+        stderr=subprocess.STDOUT
     ).decode().split()
 except subprocess.CalledProcessError:
-    diff = subprocess.check_output(['git','ls-files','*.html','*.md']).decode().split()
+    diff = subprocess.check_output(
+        ['git', 'ls-files', '*.html', '*.md']
+    ).decode().split()
 
 repo = pathlib.Path(__file__).resolve().parents[1]
 process_files = [f for f in diff if f.endswith(('.html', '.md'))]
+if args.skip and not process_files:
+    print('No changes detected; skipping i18n update.')
+    sys.exit(0)
 
 selectors = ['h1','h2','h3','h4','a.nav-link','button','li>a']
 
@@ -38,7 +48,8 @@ for file in process_files:
     path = repo / file
     if not path.exists():
         continue
-    soup = BeautifulSoup(path.read_text('utf-8'), 'html.parser')
+    original_html = path.read_text('utf-8')
+    soup = BeautifulSoup(original_html, 'html.parser')
     modified = False
     for sel in selectors:
         for el in soup.select(sel):
@@ -58,7 +69,9 @@ for file in process_files:
             if not en[key] or not zh[key]:
                 new_keys.add(key)
     if modified:
-        path.write_text(str(soup), 'utf-8')
+        new_html = str(soup)
+        if original_html != new_html:
+            path.write_text(new_html, 'utf-8')
 
 if new_keys:
     for key in new_keys:
