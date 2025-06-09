@@ -10,7 +10,8 @@ This repository hosts materials for the BPE-Lab CFD website.
 1. In the Google Cloud Console open **IAM & Admin → Service Accounts**. Create a service account if needed and, from the **Keys** tab, click **Add Key → Create new key** in **JSON** format to download the file.
 2. In this repository navigate to **Settings → Secrets and variables → Actions**. Create a secret named `GCLOUD_SERVICE_KEY` and paste the entire downloaded JSON.
 3. Add another secret named `GCLOUD_PROJECT_ID` containing your Google Cloud project ID.
-4. Optionally configure a budget alert in Google Cloud Billing to track API usage and prevent unexpected charges.
+4. The workflow exports this value as `GOOGLE_CLOUD_PROJECT` so the translation client knows which project to use. **Keep this variable configured** or translations will fail.
+5. Optionally configure a budget alert in Google Cloud Billing to track API usage and prevent unexpected charges.
 
 ## i18n automation
 
