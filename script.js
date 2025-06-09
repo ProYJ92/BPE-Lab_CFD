@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const fixedNavContainer = document.getElementById('fixed-top-nav-container');
     const mainNav = document.getElementById('mainNav');
     const breadcrumbNav = document.getElementById('breadcrumbNav');
-    let langSelect;
 
     if (mainNav) {
         mainNav.setAttribute('role', 'navigation');
@@ -94,17 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     : '<i data-lucide="menu" class="w-6 h-6"></i>';
                 menuToggle.setAttribute('aria-expanded', expanded);
                 if (lucide) lucide.createIcons();
-            });
-
-            langSelect = document.createElement('select');
-            langSelect.id = 'languageSwitcher';
-            langSelect.className = 'ml-2 p-1 border rounded text-sm';
-            langSelect.setAttribute('aria-label', 'Language selector');
-            langSelect.setAttribute('role', 'combobox');
-            langSelect.innerHTML = '<option value="default">기본</option><option value="en">English</option><option value="zh">中文</option>';
-            headerFlex.appendChild(langSelect);
-            langSelect.addEventListener('change', () => {
-                loadLanguage(langSelect.value);
             });
 
             if (lucide) lucide.createIcons();
@@ -201,61 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (element) element.textContent = texts[key];
             }
         });
-    }
-
-    async function loadLanguage(lang) {
-        if (lang === 'default') {
-            applyTexts(defaultTexts);
-            localStorage.setItem('selectedLanguage', 'default');
-            if (langSelect) langSelect.value = 'default';
-            return;
-        }
-        const body = document.body;
-        body.classList.add('loading');
-        try {
-            const response = await fetch(`assets/i18n/${lang}.json`);
-            if (!response.ok) throw new Error('File not found');
-            const texts = await response.json();
-            Object.keys(texts).forEach(key => {
-                if (!(key in defaultTexts)) {
-                    if (key === 'title') {
-                        defaultTexts[key] = document.title;
-                    } else if (key.endsWith('_placeholder')) {
-                        const id = key.replace('_placeholder', '');
-                        const el = document.getElementById(id);
-                        if (el) {
-                            defaultTexts[key] = el.placeholder || '';
-                        } else {
-                            const dataEl = document.querySelector(`[data-i18n="${key}"]`);
-                            if (dataEl && dataEl.hasAttribute('placeholder')) {
-                                defaultTexts[key] = dataEl.placeholder || '';
-                            }
-                        }
-                    } else {
-                        const el = document.getElementById(key);
-                        if (el) {
-                            defaultTexts[key] = el.textContent || '';
-                        } else {
-                            const dataEl = document.querySelector(`[data-i18n="${key}"]`);
-                            if (dataEl) {
-                                defaultTexts[key] = dataEl.hasAttribute('placeholder') ? (dataEl.placeholder || '') : (dataEl.textContent || '');
-                            }
-                        }
-                    }
-                }
-            });
-            applyTexts(texts);
-            localStorage.setItem('selectedLanguage', lang);
-            if (langSelect) langSelect.value = lang;
-        } catch (error) {
-            console.warn(`${lang}.json not found, maintaining default language.`);
-            alert(jsI18n.lang_file_missing_alert);
-            applyTexts(defaultTexts);
-            localStorage.setItem('selectedLanguage', 'default');
-            if (langSelect) langSelect.value = 'default';
-        } finally {
-            body.classList.remove('loading');
-        }
     }
 
     // A JSON copy of this menu structure is stored in menu.json for use by
@@ -1092,9 +1025,7 @@ if (!helperBtn.dataset.helperBound) {
 
     helperBtn.dataset.helperBound = 'true';
 
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'default';
-    if (langSelect) langSelect.value = savedLanguage;
-    loadLanguage(savedLanguage);
+
 
     const backToTop = document.createElement('button');
     backToTop.id = 'back-to-top';
