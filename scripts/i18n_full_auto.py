@@ -9,6 +9,20 @@ parser.add_argument('--force', action='store_true',
                     help='translate all files regardless of git diff')
 args = parser.parse_args()
 
+repo = pathlib.Path(__file__).resolve().parents[1]
+assets_dir = repo / 'assets' / 'i18n'
+assets_dir.mkdir(parents=True, exist_ok=True)
+ko_path = assets_dir / 'ko.json'
+en_path = assets_dir / 'en.json'
+zh_path = assets_dir / 'zh.json'
+
+ko = json.loads(ko_path.read_text('utf-8')) if ko_path.exists() else {}
+en = json.loads(en_path.read_text('utf-8')) if en_path.exists() else {}
+zh = json.loads(zh_path.read_text('utf-8')) if zh_path.exists() else {}
+
+if not ko or not en or not zh:
+    args.force = True
+
 # ── 안전 diff: 첫 커밋·shallow clone 모두 OK ──────────────────────
 if args.force:
     diff = subprocess.run(
@@ -29,7 +43,6 @@ else:
             stdout=subprocess.PIPE, text=True, check=False
         ).stdout.split()
 
-repo = pathlib.Path(__file__).resolve().parents[1]
 process_files = [f for f in diff if f.endswith(('.html', '.md'))]
 if args.skip and not process_files and not args.force:
     print('No changes detected; skipping i18n update.')
@@ -56,16 +69,6 @@ selectors = [
     'input[placeholder]',
     'textarea[placeholder]'
 ]
-
-assets_dir = repo / 'assets' / 'i18n'
-assets_dir.mkdir(parents=True, exist_ok=True)
-ko_path = assets_dir / 'ko.json'
-en_path = assets_dir / 'en.json'
-zh_path = assets_dir / 'zh.json'
-
-ko = json.loads(ko_path.read_text('utf-8')) if ko_path.exists() else {}
-en = json.loads(en_path.read_text('utf-8')) if en_path.exists() else {}
-zh = json.loads(zh_path.read_text('utf-8')) if zh_path.exists() else {}
 
 credentials = None
 cred_json = os.environ.get('GCLOUD_SERVICE_KEY')

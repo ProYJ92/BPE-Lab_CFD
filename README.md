@@ -42,4 +42,6 @@ python scripts/i18n_full_auto.py --skip-if-no-diff
 python scripts/i18n_full_auto.py --force  # when initial translations are missing
 ```
 
+초기 실행 시 빈 JSON 파일이 있으면 스크립트가 자동으로 `--force` 모드로 동작합니다.
+
 Commit the regenerated JSON files and HTML changes.
