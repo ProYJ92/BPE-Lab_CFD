@@ -7,10 +7,10 @@ This repository hosts materials for the BPE-Lab CFD website.
 
 ## Setup
 
-1. Generate a service account key JSON in Google Cloud. Navigate to **IAM & Admin → Service Accounts**, create a key in JSON format and download it.
-2. Set the `GCLOUD_SERVICE_KEY` environment variable (or GitHub secret) to the downloaded JSON contents.
-3. Set `GCLOUD_PROJECT_ID` to your Google Cloud project ID.
-4. Optionally configure a budget alert in Google Cloud to avoid unexpected charges.
+1. In the Google Cloud Console open **IAM & Admin → Service Accounts**. Create a service account if needed and, from the **Keys** tab, click **Add Key → Create new key** in **JSON** format to download the file.
+2. In this repository navigate to **Settings → Secrets and variables → Actions**. Create a secret named `GCLOUD_SERVICE_KEY` and paste the entire downloaded JSON.
+3. Add another secret named `GCLOUD_PROJECT_ID` containing your Google Cloud project ID.
+4. Optionally configure a budget alert in Google Cloud Billing to track API usage and prevent unexpected charges.
 
 ## i18n automation
 
