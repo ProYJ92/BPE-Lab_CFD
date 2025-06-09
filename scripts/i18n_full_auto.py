@@ -26,7 +26,20 @@ if args.skip and not process_files:
     print('No changes detected; skipping i18n update.')
     sys.exit(0)
 
-selectors = ['h1','h2','h3','h4','a.nav-link','button','li>a']
+selectors = [
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'a.nav-link',
+    'button',
+    'li>a',
+    'p',
+    'span',
+    'label',
+    'th',
+    'td'
+]
 
 assets_dir = repo / 'assets' / 'i18n'
 assets_dir.mkdir(parents=True, exist_ok=True)
