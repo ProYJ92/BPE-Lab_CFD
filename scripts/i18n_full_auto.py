@@ -27,6 +27,7 @@ if args.skip and not process_files:
     sys.exit(0)
 
 selectors = [
+    'title',
     'h1',
     'h2',
     'h3',
@@ -73,7 +74,10 @@ for file in process_files:
                 continue
             key = el.get('data-i18n')
             if not key:
-                key = slug(txt)
+                if el.name == 'title':
+                    key = 'title'
+                else:
+                    key = slug(txt)
                 el['data-i18n'] = key
                 modified = True
             ko[key] = txt
