@@ -62,7 +62,15 @@ jobs:
             echo "Warning: force input '$force_input' is not 'true'; running without --force"
           fi
           echo "Running: $cmd"
+          set +e
           $cmd
+          status=$?
+          set -e
+          echo "Translation script exited with $status"
+          if [ $status -ne 0 ]; then
+            echo "::error::Translation failed"
+            exit $status
+          fi
 
       - name: Check git status
         run: git status --short

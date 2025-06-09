@@ -2,6 +2,7 @@ import subprocess, pathlib, json, re, hashlib, os, sys, argparse
 from bs4 import BeautifulSoup
 from google.cloud import translate_v2 as tr
 from google.oauth2 import service_account
+from google.auth.exceptions import GoogleAuthError
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--skip-if-no-diff', action='store_true', dest='skip')
@@ -103,6 +104,9 @@ os.environ.setdefault('GOOGLE_CLOUD_PROJECT', project_id)
 client = tr.Client(credentials=credentials)
 try:
     client.get_languages()
+except GoogleAuthError as exc:
+    print(f'Invalid Google Cloud credentials: {exc}', file=sys.stderr)
+    sys.exit(1)
 except Exception as exc:
     print(f'Error verifying Cloud Translation API access: {exc}', file=sys.stderr)
     sys.exit(1)
@@ -122,6 +126,9 @@ def translate_or_exit(text, target_language, key):
         )['translatedText']
         print(f"Translated {key} -> {target_language}")
         return result
+    except GoogleAuthError as exc:
+        print(f'Invalid Google Cloud credentials: {exc}', file=sys.stderr)
+        sys.exit(1)
     except Exception as exc:
         msg = f"Error translating key '{key}' to {target_language}: {type(exc).__name__}: {exc}"
         print(msg, file=sys.stderr)
