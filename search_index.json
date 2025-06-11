@@ -1125,8 +1125,8 @@
             "도구",
             "생물공학연구실"
         ],
-        "content_snippet": "CFD 데이터의 평균, RMS, PDF 등을 계산하기 위한 도구입니다.",
-        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 🐹 뭐든 물어봐! CFD 변수들의 통계적 값 처리 CFD 데이터의 평균, RMS, PDF 등을 계산하기 위한 도구입니다. 콘텐츠 준비 중 이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다. 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+        "content_snippet": "CFD 시뮬레이션 결과의 단위 시간 평균 을 자동 산출합니다. Excel(.xlsx)·CSV만 지원하며 첫 행=열 제목, 첫 열=시간(s) 형식이어야 합니다. RPM·Cycle·소수점·Outlier(IQR) 제거 여부를 지정하면 결과가 분석 노트 에 순차 저장됩니다.",
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 🐹 뭐든 물어봐! CFD 변수들의 통계적 값 처리 CFD 시뮬레이션 결과의 단위 시간 평균 을 자동 산출합니다. Excel(.xlsx)·CSV만 지원하며 첫 행=열 제목, 첫 열=시간(s) 형식이어야 합니다. RPM·Cycle·소수점·Outlier(IQR) 제거 여부를 지정하면 결과가 분석 노트 에 순차 저장됩니다. 파일을 드래그하거나 [파일 첨부] 를 클릭하세요 파일 첨부 RPM Cycle Outlier(IQR) 제거 소수점 자리수 분석 분석 노트 CSV 다운로드 일괄 제거 No 일시 ID 시트 결과1 결과2 &times; 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     },
     {
         "url": "cfd_terminology.html",
