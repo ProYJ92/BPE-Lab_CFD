@@ -1,4 +1,8 @@
 /* === cfd-statistics|ANALYZER === */
+if (typeof XLSX === 'undefined') {
+  alert('SheetJS 라이브러리를 불러오지 못했습니다.\n네트워크 상태를 확인한 뒤 다시 시도하세요.');
+  throw new Error('SheetJS not loaded');
+}
 (() => {
   const dropArea = document.getElementById('drop-area');
   const fileInput = document.getElementById('file-input');
