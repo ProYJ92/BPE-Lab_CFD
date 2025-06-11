@@ -18,7 +18,6 @@
                     <a href="index.html" class="block no-underline hover:no-underline">
                         <span class="block text-2xl lg:text-3xl font-bold text-slate-800">생물공학연구실</span>
                         <span class="block text-sm lg:text-base font-normal text-gray-500 mt-1">Bioprocess Engineering Laboratory</span>
-                    </a>
                 </h1>
         <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
             <ul class="container mx-auto px-0 flex justify-center">
@@ -45,33 +44,24 @@
     <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
             <article class="prose max-w-none prose-slate prose-headings:font-semibold prose-headings:text-slate-700 prose-a:text-[#0072CE] hover:prose-a:text-[#004A99]">
-                <h1 class="text-3xl md:text-4xl mb-6 border-b pb-4">소프트웨어</h1>
-                <p>본 연구실에서 활용하거나 교육 자료를 제공하는 주요 전산 유체 역학(CFD) 및 관련 소프트웨어 목록입니다. 각 소프트웨어에 대한 상세 정보는 아래 링크를 통해 확인하실 수 있습니다.</p>
+                <h1 class="software-title border-b pb-4">소프트웨어</h1>
+                <p class="software-subtitle">본 연구실에서 활용하거나 교육 자료를 제공하는 주요 전산 유체 역학(CFD) 및 관련 소프트웨어 목록입니다. 각 소프트웨어에 대한 상세 정보는 아래 링크를 통해 확인하실 수 있습니다.</p>
                 
-                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 not-prose">
-                     <div class="bg-slate-50 p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col border border-slate-200 hover:border-purple-500">
-                        <h2 class="text-2xl font-semibold mb-3 text-purple-700">M-STAR CFD</h2>
-                        <p class="software-description text-gray-600 mb-4 flex-grow">Lattice Boltzmann 기반의 GPU 가속 CFD 소프트웨어로, 대규모 혼합 및 다상 유동 시스템에 특화되어 있습니다.</p>
-                        <a href="mstar_cfd_main.html" class="software-index-btn bg-[#0072CE] text-white px-4 py-2 rounded hover:bg-[#004A99] transition-colors mt-auto font-medium">
-                            M-STAR CFD 정보 보기 &raquo;
-                            <span class="learn-more-text block mt-1 text-white/80">자세히 알아보기</span>
-                        </a>
+                <div class="software-cards mt-8 not-prose">
+                     <div class="software-card border-slate-200 hover:border-purple-500">
+                        <h3 class="text-purple-700">M-STAR CFD</h3>
+                        <p class="software-description text-gray-600 mb-4">Lattice Boltzmann 기반의 GPU 가속 CFD 소프트웨어로, 대규모 혼합 및 다상 유동 시스템에 특화되어 있습니다.</p>
+                        <a href="mstar_cfd_main.html" class="btn-learn mt-auto" aria-label="M-STAR CFD 자세히 알아보기">자세히 알아보기</a>
                     </div>
-                    <div class="bg-slate-50 p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col border border-slate-200 hover:border-sky-500">
-                        <h2 class="text-2xl font-semibold mb-3 text-sky-700">Ansys Fluent</h2>
-                        <p class="software-description text-gray-600 mb-4 flex-grow">산업 표준 CFD 소프트웨어로, 복잡한 유동, 열 전달, 화학 반응 등 광범위한 물리 현상 해석에 사용됩니다.</p>
-                        <a href="ansys_fluent_main.html" class="software-index-btn bg-[#0072CE] text-white px-4 py-2 rounded hover:bg-[#004A99] transition-colors mt-auto font-medium">
-                            Ansys Fluent 정보 보기 &raquo;
-                            <span class="learn-more-text block mt-1 text-white/80">자세히 알아보기</span>
-                        </a>
+                    <div class="software-card border-slate-200 hover:border-sky-500">
+                        <h3 class="text-sky-700">Ansys Fluent</h3>
+                        <p class="software-description text-gray-600 mb-4">산업 표준 CFD 소프트웨어로, 복잡한 유동, 열 전달, 화학 반응 등 광범위한 물리 현상 해석에 사용됩니다.</p>
+                        <a href="ansys_fluent_main.html" class="btn-learn mt-auto" aria-label="Ansys Fluent 자세히 알아보기">자세히 알아보기</a>
                     </div>
-                    <div class="bg-slate-50 p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col border border-slate-200 hover:border-green-500">
-                        <h2 class="text-2xl font-semibold mb-3 text-green-700">OpenFOAM</h2>
-                        <p class="software-description text-gray-600 mb-4 flex-grow">오픈 소스 CFD 소프트웨어로, 유연성과 확장성이 뛰어나며 다양한 물리 문제 해결에 사용됩니다.</p>
-                        <a href="openfoam_main.html" class="software-index-btn bg-[#0072CE] text-white px-4 py-2 rounded hover:bg-[#004A99] transition-colors mt-auto font-medium">
-                            OpenFOAM 정보 보기 &raquo;
-                            <span class="learn-more-text block mt-1 text-white/80">자세히 알아보기</span>
-                        </a>
+                    <div class="software-card border-slate-200 hover:border-green-500">
+                        <h3 class="text-green-700">OpenFOAM</h3>
+                        <p class="software-description text-gray-600 mb-4">오픈 소스 CFD 소프트웨어로, 유연성과 확장성이 뛰어나며 다양한 물리 문제 해결에 사용됩니다.</p>
+                        <a href="openfoam_main.html" class="btn-learn mt-auto" aria-label="OpenFOAM 자세히 알아보기">자세히 알아보기</a>
                     </div>
                 </div>
             </article>
