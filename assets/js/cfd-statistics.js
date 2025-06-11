@@ -20,6 +20,16 @@
   let workbook = null;
   let uploadedName = '';
 
+  function parseTextToWorkbook(text){
+    const lines = text.trim().split(/\r?\n/);
+    const delim = (lines[0].includes('\t') ? '\t' : ',');
+    const rows  = lines.map(l => l.split(delim).map(v => v.trim()));
+    const wb = XLSX.utils.book_new();
+    const ws = XLSX.utils.aoa_to_sheet(rows);
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+    return wb;
+  }
+
   dropArea.addEventListener('click', () => fileInput.click());
   fileBtn.addEventListener('click', () => fileInput.click());
   dropArea.addEventListener('keydown', e => { if (e.key === 'Enter') fileInput.click(); });
@@ -36,31 +46,32 @@
   });
   fileInput.addEventListener('change', () => { if (fileInput.files[0]) handleFile(fileInput.files[0]); });
 
-  function handleFile(file){
+  async function handleFile(file){
     const ext = file.name.split('.').pop().toLowerCase();
-    const isText = ['csv','txt'].includes(ext);
-    if(!['csv','xlsx','xls','txt'].includes(ext)){
-      alert('CSV·TXT·Excel 형식만 지원합니다.');
+    const isExcel = ['xlsx','xls'].includes(ext);
+    const isText  = ['csv','txt'].includes(ext);
+
+    if(!isExcel && !isText){
+      alert('지원 형식: xlsx, xls, csv, txt');
       return;
     }
+
     const reader = new FileReader();
-    reader.onload = e=>{
+    reader.onerror = () => alert(`${file.name} 읽기 오류`);
+
+    reader.onload = e => {
       try{
-        if(isText){
-          workbook = XLSX.read(e.target.result, {type:'string', raw:true});
-        }else{
-          workbook = XLSX.read(e.target.result, {type:'array'});
-        }
+        workbook = isExcel
+          ? XLSX.read(e.target.result, {type:'array'})
+          : parseTextToWorkbook(e.target.result);
         afterLoadSuccess(file.name);
       }catch(err){
-        alert(`${file.name} 파일을 열 수 없습니다.\n(${err.message})`);
+        alert(`${file.name} 파일을 열 수 없습니다.\n${err.message}`);
       }
     };
-    if(isText){
-      reader.readAsText(file,'utf-8');
-    }else{
-      reader.readAsArrayBuffer(file);
-    }
+
+    isExcel ? reader.readAsArrayBuffer(file)
+            : reader.readAsText(file,'utf-8');
   }
 
   function afterLoadSuccess(fname){
