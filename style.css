@@ -894,3 +894,16 @@ td {
     padding: 8px 12px;
   }
 }
+
+/* === celbic-angle-rpm|STYLE_START === */
+.calc-wrapper { margin-top: 2rem; padding: 1.5rem; border: 1px solid var(--border, #d1d5db); }
+.calc-form { display: flex; flex-wrap: wrap; gap: 1rem; align-items: end; }
+.calc-form label { flex: 1 1 120px; font-weight: 600; }
+.calc-form .btn { height: 40px; min-width: 90px; }
+.result-list { margin-top: 1rem; list-style: none; padding: 0; }
+.result-list li { display: flex; gap: .5rem; align-items: center; margin-bottom: .5rem; }
+.copy-btn { min-width: 70px; }
+@media (max-width: 768px) {
+  .calc-form { flex-direction: column; align-items: stretch; }
+}
+/* === celbic-angle-rpm|STYLE_END === */
