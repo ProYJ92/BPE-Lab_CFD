@@ -88,20 +88,13 @@
                     <button id="export-notes" class="btn success-outline btn-sm">CSV 다운로드</button>
                     <button id="clear-notes"  class="btn danger-outline  btn-sm">일괄 제거</button>
                 </div>
-                <table id="note-table">
-                    <thead>
-                        <tr><th>No</th><th>일시</th><th>ID</th><th>시트</th><th>결과1</th><th>결과2</th><th></th></tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </section>
-
-            <div id="note-modal" class="modal d-none" role="dialog" aria-modal="true">
-                <div class="modal-content" tabindex="-1">
-                    <button class="close-btn" aria-label="닫기">&times;</button>
-                    <pre id="modal-body"></pre>
+                <div class="note-table-wrapper">
+                    <table id="note-table">
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
                 </div>
-            </div>
+            </section>
             <!-- === cfd-statistics|UI_END === -->
         </div>
 

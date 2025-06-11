@@ -929,10 +929,9 @@ td {
 .file-preview{display:flex;align-items:center;gap:.5rem;margin-top:1rem}
 .form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;align-items:end}
 .note-header{display:flex;gap:.5rem;align-items:center;margin-bottom:.6rem}
-#note-table{width:100%;border-collapse:collapse;font-size:.875rem}
+#note-table{min-width:600px;border-collapse:collapse;font-size:.875rem}
 #note-table th,#note-table td{padding:.45rem;border-bottom:1px solid #eee;white-space:nowrap}
 #note-table tbody tr:hover{background:#fafafa;cursor:pointer}
 .btn.icon{padding:.25rem .5rem}
-.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.4)}
-.modal-content{background:#fff;padding:1rem;border-radius:8px;max-width:90%;max-height:90%;overflow:auto}
+.note-table-wrapper{width:100%;overflow-x:auto}
 /* === cfd-statistics|STYLE_END === */
