@@ -3,10 +3,10 @@
   const dropArea = document.getElementById('drop-area');
   const fileInput = document.getElementById('file-input');
   const fileBtn = document.getElementById('file-btn');
-  const filePreview = document.getElementById('file-preview');
-  const fileNameEl = document.getElementById('file-name');
+  const preview = document.getElementById('file-preview');
+  const fileName = document.getElementById('file-name');
   const fileRemove = document.getElementById('file-remove');
-  const form = document.getElementById('stat-form');
+  const statForm = document.getElementById('stat-form');
   const rpmEl = document.getElementById('rpm');
   const cycleEl = document.getElementById('cycle');
   const outlierEl = document.getElementById('outlier');
@@ -17,70 +17,71 @@
   const exportBtn = document.getElementById('export-notes');
   const clearBtn = document.getElementById('clear-notes');
 
-  let selectedFile = null;
+  let workbook = null;
+  let uploadedName = '';
 
   dropArea.addEventListener('click', () => fileInput.click());
   fileBtn.addEventListener('click', () => fileInput.click());
   dropArea.addEventListener('keydown', e => { if (e.key === 'Enter') fileInput.click(); });
 
-  ['dragenter','dragover'].forEach(evt => {
-    dropArea.addEventListener(evt, e => { e.preventDefault(); dropArea.classList.add('dragover'); });
+  dropArea.addEventListener('dragover', e => {
+    e.preventDefault();
+    dropArea.classList.add('dragover');
   });
-  ['dragleave','drop'].forEach(evt => {
-    dropArea.addEventListener(evt, e => { e.preventDefault(); dropArea.classList.remove('dragover'); });
-  });
+  dropArea.addEventListener('dragleave', () => dropArea.classList.remove('dragover'));
   dropArea.addEventListener('drop', e => {
-    const f = e.dataTransfer.files[0];
-    if (f) handleFile(f);
+    e.preventDefault();
+    dropArea.classList.remove('dragover');
+    if (e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]);
   });
   fileInput.addEventListener('change', () => { if (fileInput.files[0]) handleFile(fileInput.files[0]); });
 
-  function handleFile(file){
-    const ext = file.name.split('.').pop().toLowerCase();
-    if(!/(csv|xlsx?)$/.test(ext)){ alert('Excel(.xlsx) 또는 CSV 파일만 지원합니다.'); return; }
-    selectedFile = file;
-    fileNameEl.textContent = file.name;
-    filePreview.classList.remove('d-none');
-    dropArea.classList.add('d-none');
-    form.classList.remove('d-none');
+  function handleFile(f){
+    const ext = f.name.split('.').pop().toLowerCase();
+    if(!['csv','xlsx','xls','txt'].includes(ext)){
+      alert('CSV·TXT·Excel 형식만 지원합니다.');
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = e => {
+      if(ext === 'txt'){
+        const txt = e.target.result;
+        workbook = XLSX.read(txt, {type:'string'});
+      }else if(ext === 'csv'){
+        workbook = XLSX.read(e.target.result, {type:'binary', codepage:65001});
+      }else{
+        workbook = XLSX.read(e.target.result, {type:'array'});
+      }
+      uploadedName = f.name;
+      preview.classList.remove('d-none');
+      dropArea.classList.add('d-none');
+      fileName.textContent = f.name;
+      statForm.classList.remove('d-none');
+    };
+    (ext==='txt' || ext==='csv') ? reader.readAsText(f) : reader.readAsArrayBuffer(f);
   }
 
-  fileRemove.addEventListener('click', resetUploader);
-
-  function resetUploader(){
-    selectedFile = null;
+  fileRemove.addEventListener('click', () => {
+    workbook = null;
+    uploadedName = '';
     fileInput.value = '';
-    filePreview.classList.add('d-none');
+    preview.classList.add('d-none');
+    statForm.classList.add('d-none');
     dropArea.classList.remove('d-none');
-    form.classList.add('d-none');
-  }
+  });
 
   analyzeBtn.addEventListener('click', analyze);
 
-  function parseWorkbook(file){
-    return new Promise((resolve,reject)=>{
-      const reader = new FileReader();
-      reader.onload = e => {
-        try { resolve(XLSX.read(new Uint8Array(e.target.result), {type:'array'})); }
-        catch(err){ reject(err); }
-      };
-      reader.onerror = reject;
-      reader.readAsArrayBuffer(file);
-    });
-  }
-
   async function analyze(){
-    if(!selectedFile) return;
+    if(!workbook) return;
     const rpm = parseFloat(rpmEl.value);
     const cycle = parseFloat(cycleEl.value);
     const decimals = parseInt(decimalsEl.value,10) || 0;
     const useOutlier = outlierEl.checked;
     if(isNaN(rpm) || isNaN(cycle) || rpm === 0) { alert('RPM과 Cycle을 확인하세요'); return; }
-    let wb;
-    try{ wb = await parseWorkbook(selectedFile); }catch(e){ alert('파일을 읽을 수 없습니다.'); return; }
     const span = cycle * (60 / rpm);
-    wb.SheetNames.forEach(sheetName => {
-      const sheet = wb.Sheets[sheetName];
+    workbook.SheetNames.forEach(sheetName => {
+      const sheet = workbook.Sheets[sheetName];
       const rows = XLSX.utils.sheet_to_json(sheet,{header:1,defval:null});
       if(!rows.length) return;
       const headers = rows[0].slice(1);
@@ -97,7 +98,6 @@
       });
       storeNote(sheetName,avgs);
     });
-    resetUploader();
   }
 
   function percentile(sorted,p){
@@ -128,7 +128,7 @@
 
   function storeNote(sheet,avgs){
     const notes=getNotes();
-    notes.push([dayjs().format('YYYY-MM-DD HH:mm:ss'), selectedFile.name, sheet, ...avgs]);
+    notes.push([dayjs().format('YYYY-MM-DD HH:mm:ss'), uploadedName, sheet, ...avgs]);
     saveNotes(notes);
     buildHeader(avgs.length);
     renderNotes();
