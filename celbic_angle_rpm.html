@@ -52,6 +52,21 @@
                     <p class="text-gray-700">이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다.</p>
                 </div>
             </article>
+            <!-- === CELBIC|ANGLE_RPM_CALC_START === -->
+            <section id="angle-rpm-calc" class="calc-wrapper">
+                <h2 class="text-xl font-semibold mb-4">Angle · RPM Calculator</h2>
+                <form class="calc-form" onsubmit="return false;" aria-label="CELBIC angle-RPM calculator">
+                    <label>RPM
+                        <input id="rpm-input" type="number" required step="any" class="form-control px-2 py-1 border rounded" placeholder="e.g. 24">
+                    </label>
+                    <label>Angle (°)
+                        <input id="angle-input" type="number" required step="any" class="form-control px-2 py-1 border rounded" placeholder="e.g. 6">
+                    </label>
+                    <button id="calc-btn" class="btn bg-blue-600 text-white px-4 rounded">출력</button>
+                </form>
+                <ul id="calc-result" class="result-list" aria-live="polite"></ul>
+            </section>
+            <!-- === CELBIC|ANGLE_RPM_CALC_END === -->
         </div>
 
         <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
@@ -74,5 +89,6 @@
     </footer>
 
     <script src="script.js" type="module"></script>
+    <script src="angle-rpm.js"></script>
 </body>
 </html>
