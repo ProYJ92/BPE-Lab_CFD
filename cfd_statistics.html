@@ -46,12 +46,63 @@
         <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
             <article class="prose max-w-none">
                 <h1>CFD 변수들의 통계적 값 처리</h1>
-                <p>CFD 데이터의 평균, RMS, PDF 등을 계산하기 위한 도구입니다.</p>
-                <div class="mt-12 p-6 bg-blue-50 border border-blue-200 rounded-lg">
-                    <h2 class="text-2xl font-semibold text-blue-700 mb-3">콘텐츠 준비 중</h2>
-                    <p class="text-gray-700">이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다.</p>
-                </div>
+                <p class="tool-desc">
+                    CFD 시뮬레이션 결과의 <b>단위 시간 평균</b>을 자동 산출합니다.<br>
+                    Excel(.xlsx)·CSV만 지원하며 <em>첫 행=열 제목, 첫 열=시간(s)</em> 형식이어야 합니다.<br>
+                    RPM·Cycle·소수점·Outlier(IQR) 제거 여부를 지정하면 결과가 <b>분석 노트</b>에 순차 저장됩니다.
+                </p>
             </article>
+            <!-- === cfd-statistics|UI_START === -->
+            <section id="stat-uploader" class="card stat-card shadow">
+                <div id="drop-area" class="dropzone" tabindex="0" aria-label="파일 드래그 영역">
+                    <p><i class="fa fa-cloud-upload-alt"></i><br>파일을 드래그하거나<br><b>[파일 첨부]</b>를 클릭하세요</p>
+                    <input id="file-input" hidden
+                           type="file"
+                           accept=".csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+                    <button id="file-btn" class="btn secondary">파일 첨부</button>
+                </div>
+                <div id="file-preview" class="file-preview d-none" aria-live="polite">
+                    <i class="fa fa-file-excel"></i>
+                    <span id="file-name"></span>
+                    <button id="file-remove" class="btn icon danger" aria-label="업로드 파일 제거">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </section>
+
+            <form id="stat-form" class="card stat-card shadow d-none" onsubmit="return false;">
+                <div class="form-grid">
+                    <label>RPM <input id="rpm" class="form-control" type="number" required step="any"></label>
+                    <label>Cycle <input id="cycle" class="form-control" type="number" required step="any"></label>
+                    <label class="switch">Outlier(IQR) 제거
+                        <input id="outlier" type="checkbox"><span class="slider"></span>
+                    </label>
+                    <label>소수점 자리수 <input id="decimals" class="form-control" type="number" min="0" max="10" value="3"></label>
+                    <button id="analyze-btn" class="btn primary btn-lg rounded">분석</button>
+                </div>
+            </form>
+
+            <section id="note-section" class="card stat-card shadow">
+                <div class="note-header">
+                    <h3>분석 노트</h3>
+                    <button id="export-notes" class="btn success-outline btn-sm">CSV 다운로드</button>
+                    <button id="clear-notes"  class="btn danger-outline  btn-sm">일괄 제거</button>
+                </div>
+                <table id="note-table">
+                    <thead>
+                        <tr><th>No</th><th>일시</th><th>ID</th><th>시트</th><th>결과1</th><th>결과2</th><th></th></tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+
+            <div id="note-modal" class="modal d-none" role="dialog" aria-modal="true">
+                <div class="modal-content" tabindex="-1">
+                    <button class="close-btn" aria-label="닫기">&times;</button>
+                    <pre id="modal-body"></pre>
+                </div>
+            </div>
+            <!-- === cfd-statistics|UI_END === -->
         </div>
 
         <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
@@ -73,6 +124,9 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.19.3/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="assets/js/cfd-statistics.js"></script>
     <script src="script.js" type="module"></script>
 </body>
 </html>
