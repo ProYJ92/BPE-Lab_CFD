@@ -12,12 +12,10 @@
   const outlierEl = document.getElementById('outlier');
   const decimalsEl = document.getElementById('decimals');
   const analyzeBtn = document.getElementById('analyze-btn');
+  const thead = document.querySelector('#note-table thead');
   const notesBody = document.querySelector('#note-table tbody');
   const exportBtn = document.getElementById('export-notes');
   const clearBtn = document.getElementById('clear-notes');
-  const modal = document.getElementById('note-modal');
-  const modalBody = document.getElementById('modal-body');
-  const modalClose = modal.querySelector('.close-btn');
 
   let selectedFile = null;
 
@@ -122,20 +120,27 @@
   function getNotes(){ return JSON.parse(localStorage.getItem('cfdStatNotes')||'[]'); }
   function saveNotes(a){ localStorage.setItem('cfdStatNotes',JSON.stringify(a)); }
 
+  function buildHeader(n){
+    const base=['No','일시','ID','시트'];
+    const ths=[...base,...Array.from({length:n},(_,i)=>`결과${i+1}`),''];
+    thead.innerHTML=`<tr>${ths.map(t=>`<th>${t}</th>`).join('')}</tr>`;
+  }
+
   function storeNote(sheet,avgs){
     const notes=getNotes();
     notes.push([dayjs().format('YYYY-MM-DD HH:mm:ss'), selectedFile.name, sheet, ...avgs]);
     saveNotes(notes);
+    buildHeader(avgs.length);
     renderNotes();
   }
 
   function renderNotes(){
     const notes=getNotes();
     notesBody.innerHTML='';
-    const thead=document.querySelector('#note-table thead tr');
     if(notes.length){
-      const nRes=notes[0].length-3;
-      thead.innerHTML='<th>No</th><th>일시</th><th>ID</th><th>시트</th>'+Array.from({length:nRes},(_,i)=>`<th>결과${i+1}</th>`).join('')+'<th></th>';
+      buildHeader(notes[0].length-3);
+    } else {
+      thead.innerHTML='';
     }
     notes.forEach((n,i)=>{
       const tr=document.createElement('tr');
@@ -147,18 +152,10 @@
 
   notesBody.addEventListener('click',e=>{
     const btn=e.target.closest('button[data-idx]');
-    const row=e.target.closest('tr');
     if(btn){
       const idx=parseInt(btn.dataset.idx,10);
       const arr=getNotes();
       arr.splice(idx,1); saveNotes(arr); renderNotes();
-      e.stopPropagation();
-      return;
-    }
-    if(row){
-      const idx=[...notesBody.children].indexOf(row);
-      const note=getNotes()[idx];
-      showModal(JSON.stringify(note,null,2));
     }
   });
 
@@ -181,15 +178,7 @@
     renderNotes();
   });
 
-  function showModal(text){
-    modalBody.textContent=text;
-    modal.classList.remove('d-none');
-    modal.querySelector('.modal-content').focus();
-  }
-  function hideModal(){ modal.classList.add('d-none'); }
-  modalClose.addEventListener('click', hideModal);
-  modal.addEventListener('click', e=>{ if(e.target===modal) hideModal(); });
-  document.addEventListener('keydown', e=>{ if(e.key==='Escape' && !modal.classList.contains('d-none')) hideModal(); });
+
 
   renderNotes();
 })();
