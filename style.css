@@ -941,3 +941,14 @@ td {
 .btn.icon{padding:.25rem .5rem}
 .note-table-wrapper{width:100%;overflow-x:auto}
 /* === cfd-statistics|STYLE_END === */
+
+/* === software-card|BTN_V_CENTER_OVERRIDE === */
+.software-card .btn,
+.software-card .btn-primary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  padding: 0.50rem 1.50rem !important;
+}
+/* === END === */
