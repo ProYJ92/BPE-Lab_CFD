@@ -803,8 +803,12 @@ h1.main-title {
 }
 
 .software-card .software-index-btn {
-  padding-top: calc(0.5rem * 0.67);
-  padding-bottom: calc(0.5rem * 0.67);
+  padding-top: calc(0.5rem * 0.67 - 2px);
+  padding-bottom: calc(0.5rem * 0.67 - 2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: normal;
 }
 /* === software-card|UI_TWEAK_END === */
 
