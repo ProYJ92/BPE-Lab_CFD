@@ -1,9 +1,18 @@
 /* === cfd-statistics|ANALYZER === */
-if (typeof XLSX === 'undefined') {
-  alert('SheetJS 라이브러리를 불러오지 못했습니다.\n네트워크 상태를 확인한 뒤 다시 시도하세요.');
-  throw new Error('SheetJS not loaded');
-}
-(() => {
+(async function ensureSheetJS(){
+  if(typeof XLSX === 'undefined'){
+    try{
+      await import('https://cdn.jsdelivr.net/npm/xlsx@0.19.3/dist/xlsx.full.min.js');
+      console.info('SheetJS 동적 로드 완료');
+    }catch(e){
+      alert('필수 라이브러리를 불러오지 못했습니다.\n네트워크 상태를 확인하세요.');
+      throw e;
+    }
+  }
+  initStatTool();
+})();
+
+function initStatTool(){
   const dropArea = document.getElementById('drop-area');
   const fileInput = document.getElementById('file-input');
   const fileBtn = document.getElementById('file-btn');
@@ -214,4 +223,4 @@ if (typeof XLSX === 'undefined') {
 
 
   renderNotes();
-})();
+}
