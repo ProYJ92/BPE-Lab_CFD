@@ -808,6 +808,8 @@ h1.main-title {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Visually nudge button text upward for better centering */
+  transform: translateY(-1px);
   line-height: normal;
 }
 /* === software-card|UI_TWEAK_END === */
