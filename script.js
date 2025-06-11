@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (fixedNavContainer && mainNav) {
-        const headerFlex = fixedNavContainer.querySelector('.flex-col');
+        const headerFlex = fixedNavContainer.querySelector('.flex-col') || fixedNavContainer.querySelector('.header-container');
         if (headerFlex) {
             const menuToggle = document.createElement('button');
             menuToggle.className = 'menu-toggle sm:hidden p-2 text-gray-700';
@@ -95,8 +95,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (lucide) lucide.createIcons();
             });
 
+            const translateDiv = document.createElement('div');
+            translateDiv.id = 'google_translate_element';
+            const helperBtnHeader = document.getElementById('header-helper-btn');
+            headerFlex.insertBefore(translateDiv, helperBtnHeader || null);
+
             if (lucide) lucide.createIcons();
         }
+        function initGoogleTranslate() {
+            window.googleTranslateElementInit = function() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'ko',
+                    includedLanguages: 'en,zh-CN,ja,hi,de,fr',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+            };
+            const s = document.createElement('script');
+            s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            s.defer = true;
+            document.head.appendChild(s);
+        }
+        initGoogleTranslate();
     }
     
     function adjustBodyPadding() {
