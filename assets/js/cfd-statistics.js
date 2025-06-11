@@ -36,29 +36,40 @@
   });
   fileInput.addEventListener('change', () => { if (fileInput.files[0]) handleFile(fileInput.files[0]); });
 
-  function handleFile(f){
-    const ext = f.name.split('.').pop().toLowerCase();
+  function handleFile(file){
+    const ext = file.name.split('.').pop().toLowerCase();
+    const isText = ['csv','txt'].includes(ext);
     if(!['csv','xlsx','xls','txt'].includes(ext)){
       alert('CSV·TXT·Excel 형식만 지원합니다.');
       return;
     }
     const reader = new FileReader();
-    reader.onload = e => {
-      if(ext === 'txt'){
-        const txt = e.target.result;
-        workbook = XLSX.read(txt, {type:'string'});
-      }else if(ext === 'csv'){
-        workbook = XLSX.read(e.target.result, {type:'binary', codepage:65001});
-      }else{
-        workbook = XLSX.read(e.target.result, {type:'array'});
+    reader.onload = e=>{
+      try{
+        if(isText){
+          workbook = XLSX.read(e.target.result, {type:'string', raw:true});
+        }else{
+          workbook = XLSX.read(e.target.result, {type:'array'});
+        }
+        afterLoadSuccess(file.name);
+      }catch(err){
+        alert(`${file.name} 파일을 열 수 없습니다.\n(${err.message})`);
       }
-      uploadedName = f.name;
-      preview.classList.remove('d-none');
-      dropArea.classList.add('d-none');
-      fileName.textContent = f.name;
-      statForm.classList.remove('d-none');
     };
-    (ext==='txt' || ext==='csv') ? reader.readAsText(f) : reader.readAsArrayBuffer(f);
+    if(isText){
+      reader.readAsText(file,'utf-8');
+    }else{
+      reader.readAsArrayBuffer(file);
+    }
+  }
+
+  function afterLoadSuccess(fname){
+    uploadedName = fname;
+    preview.classList.remove('d-none');
+    fileName.textContent = fname;
+    statForm.classList.remove('d-none');
+    fileInput.value='';
+    dropArea.classList.add('d-none');
   }
 
   fileRemove.addEventListener('click', () => {
@@ -73,31 +84,38 @@
   analyzeBtn.addEventListener('click', analyze);
 
   async function analyze(){
-    if(!workbook) return;
-    const rpm = parseFloat(rpmEl.value);
-    const cycle = parseFloat(cycleEl.value);
-    const decimals = parseInt(decimalsEl.value,10) || 0;
-    const useOutlier = outlierEl.checked;
-    if(isNaN(rpm) || isNaN(cycle) || rpm === 0) { alert('RPM과 Cycle을 확인하세요'); return; }
-    const span = cycle * (60 / rpm);
-    workbook.SheetNames.forEach(sheetName => {
-      const sheet = workbook.Sheets[sheetName];
-      const rows = XLSX.utils.sheet_to_json(sheet,{header:1,defval:null});
-      if(!rows.length) return;
-      const headers = rows[0].slice(1);
-      const dataRows = rows.slice(1).map(r => r.map(v => parseFloat(v)));
-      const lastTime = dataRows[dataRows.length-1][0];
-      const filtered = dataRows.filter(r => r[0] >= lastTime - span);
-      const avgs = headers.map((_,i)=>{
-        const vals = filtered.map(r => r[i+1]).filter(v => !isNaN(v));
-        if(!vals.length) return null;
-        let data = vals;
-        if(useOutlier && vals.length>3) data = removeOutliers(vals);
-        const avg = data.reduce((a,b)=>a+b,0)/data.length;
-        return Number(avg.toFixed(decimals));
+    if(!workbook){
+      alert('먼저 파일을 업로드하세요');
+      return;
+    }
+    try{
+      const rpm = parseFloat(rpmEl.value);
+      const cycle = parseFloat(cycleEl.value);
+      const decimals = parseInt(decimalsEl.value,10) || 0;
+      const useOutlier = outlierEl.checked;
+      if(isNaN(rpm) || isNaN(cycle) || rpm === 0) { alert('RPM과 Cycle을 확인하세요'); return; }
+      const span = cycle * (60 / rpm);
+      workbook.SheetNames.forEach(sheetName => {
+        const sheet = workbook.Sheets[sheetName];
+        const rows = XLSX.utils.sheet_to_json(sheet,{header:1,defval:null});
+        if(!rows.length) return;
+        const headers = rows[0].slice(1);
+        const dataRows = rows.slice(1).map(r => r.map(v => parseFloat(v)));
+        const lastTime = dataRows[dataRows.length-1][0];
+        const filtered = dataRows.filter(r => r[0] >= lastTime - span);
+        const avgs = headers.map((_,i)=>{
+          const vals = filtered.map(r => r[i+1]).filter(v => !isNaN(v));
+          if(!vals.length) return null;
+          let data = vals;
+          if(useOutlier && vals.length>3) data = removeOutliers(vals);
+          const avg = data.reduce((a,b)=>a+b,0)/data.length;
+          return Number(avg.toFixed(decimals));
+        });
+        storeNote(sheetName,avgs);
       });
-      storeNote(sheetName,avgs);
-    });
+    }catch(err){
+      alert(`데이터를 처리하는 중 오류가 발생했습니다.\n(${err.message})`);
+    }
   }
 
   function percentile(sorted,p){
