@@ -920,3 +920,34 @@ td {
   }
 }
 /* === google-translate-widget|END === */
+
+/* === software-cards|CTA_STYLE_START === */
+.software-card .software-description {
+  margin-bottom: 1rem;
+}
+.software-card .cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  font-size: .9rem;
+  font-weight: 600;
+  color: #0056d2;
+  text-decoration: none;
+  transition: color .15s ease;
+  margin-top: .5rem;
+}
+.software-card .cta-link::after {
+  content: "\2192";
+  font-size: 1rem;
+  line-height: 1;
+}
+.software-card .cta-link:hover,
+.software-card .cta-link:focus {
+  color: #003f9e;
+  text-decoration: underline;
+}
+.software-card .software-index-btn,
+.software-card .btn.btn-primary {
+  display: none;
+}
+/* === software-cards|CTA_STYLE_END === */
