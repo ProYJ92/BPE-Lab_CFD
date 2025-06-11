@@ -820,69 +820,6 @@ h1.main-title {
   }
 }
 
-/* === software|STYLE_REWORK_START === */
-.software-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-.software-card {
-  flex: 1 1 30%;
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  padding: 1.75rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,.06);
-  display: flex;
-  flex-direction: column;
-  transition: box-shadow .25s ease;
-}
-.software-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,.12);
-}
-.software-card h3 {
-  font-size: 1.35rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-.software-card p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-.btn-learn {
-  display: inline-block;
-  background: #006cd8;
-  color: #fff;
-  padding: 0.55rem 1.5rem;
-  font-size: 0.9rem;
-  border-radius: 0.5rem;
-  transition: box-shadow .2s ease, transform .2s ease;
-  text-align: center;
-}
-.btn-learn:hover {
-  box-shadow: 0 2px 6px rgba(0,0,0,.15);
-  transform: translateY(-2px);
-}
-.software-title {
-  font-size: 1.9rem;
-  letter-spacing: -0.5px;
-}
-.software-subtitle {
-  font-size: 0.95rem;
-  color: #666;
-}
-@media (max-width: 768px) {
-  .software-cards {
-    flex-direction: column;
-  }
-  .software-card {
-    flex: 1 1 100%;
-    margin-bottom: 1.25rem;
-  }
-}
-/* === software|STYLE_REWORK_END === */
-
 /* ================= Table styling for better readability ================ */
 table {
   width: 100%;
