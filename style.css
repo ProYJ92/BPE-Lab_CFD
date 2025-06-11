@@ -904,19 +904,3 @@ td {
   .calc-form   {grid-template-columns:1fr;grid-auto-rows:auto;}
 }
 /* === celbic-angle-rpm|UI_REFINEMENT_END === */
-
-/* === google-translate-widget|START === */
-#google_translate_element {
-  display: inline-block;
-  margin-left: 1rem;
-  font-size: 0.85rem;
-  vertical-align: middle;
-}
-
-@media (max-width: 768px) {
-  #google_translate_element {
-    width: 100%;
-    margin-top: 0.5rem;
-  }
-}
-/* === google-translate-widget|END === */
