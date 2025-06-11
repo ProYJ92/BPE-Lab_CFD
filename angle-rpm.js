@@ -3,7 +3,7 @@
   const π = Math.PI;
   const rpmEl = document.getElementById('rpm-input');
   const angleEl = document.getElementById('angle-input');
-  const outUl = document.getElementById('calc-result');
+  const outDiv = document.getElementById('calc-result');
 
   document.getElementById('calc-btn').addEventListener('click', () => {
     const rpm = parseFloat(rpmEl.value);
@@ -21,13 +21,24 @@
       { label: 'Z', str: `value=${baseVal}*sin(-${omega}*t);` }
     ];
 
-    outUl.innerHTML = results.map(r => `\n      <li><code>${r.label} = ${r.str}</code>\n          <button class="btn copy-btn" aria-label="${r.label} 복사" data-copy="${r.str}">복사</button></li>`).join('');
+    outDiv.innerHTML = results.map(r => `
+      <div class="result-row">
+        <code class="result-text">${r.label} = ${r.str}</code>
+        <button class="btn outline-secondary btn-sm copy-btn" aria-label="${r.label} 복사" data-copy="${r.str}">
+          <i class="fa fa-copy" aria-hidden="true"></i> 복사
+        </button>
+      </div>`).join('');
   });
 
   document.addEventListener('click', e => {
-    if (!e.target.matches('.copy-btn')) return;
-    navigator.clipboard.writeText(e.target.dataset.copy)
-      .then(() => { e.target.textContent = 'Copied!'; })
+    const btn = e.target.closest('.copy-btn');
+    if (!btn) return;
+    const original = btn.innerHTML;
+    navigator.clipboard.writeText(btn.dataset.copy)
+      .then(() => {
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.innerHTML = original; }, 1200);
+      })
       .catch(() => alert('복사 실패'));
   });
 })();

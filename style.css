@@ -895,15 +895,12 @@ td {
   }
 }
 
-/* === celbic-angle-rpm|STYLE_START === */
-.calc-wrapper { margin-top: 2rem; padding: 1.5rem; border: 1px solid var(--border, #d1d5db); }
-.calc-form { display: flex; flex-wrap: wrap; gap: 1rem; align-items: end; }
-.calc-form label { flex: 1 1 120px; font-weight: 600; }
-.calc-form .btn { height: 40px; min-width: 90px; }
-.result-list { margin-top: 1rem; list-style: none; padding: 0; }
-.result-list li { display: flex; gap: .5rem; align-items: center; margin-bottom: .5rem; }
-.copy-btn { min-width: 70px; }
-@media (max-width: 768px) {
-  .calc-form { flex-direction: column; align-items: stretch; }
+/* === celbic-angle-rpm|UI_REFINEMENT_START === */
+.calc-card     {padding:1.5rem;border-radius:8px;background:#fff;box-shadow:0 4px 8px rgba(0,0,0,.05);}
+.calc-form     {display:grid;grid-template-columns:1fr 1fr auto;gap:1rem;align-items:end;}
+.copy-btn i    {margin-right:4px}
+.result-row    {display:flex;align-items:center;gap:.5rem;margin:.25rem 0;font-family:var(--font-mono,monospace);}
+@media (max-width:768px){
+  .calc-form   {grid-template-columns:1fr;grid-auto-rows:auto;}
 }
-/* === celbic-angle-rpm|STYLE_END === */
+/* === celbic-angle-rpm|UI_REFINEMENT_END === */
