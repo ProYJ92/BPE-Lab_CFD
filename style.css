@@ -792,6 +792,22 @@ h1.main-title {
   text-align: center;
 }
 
+/* === software-card|UI_TWEAK_START === */
+.software-card .software-card-title {
+  font-size: calc(1.5rem + 2pt);
+  text-align: center;
+}
+
+.software-card .software-description {
+  font-size: calc(1.2rem - 1pt);
+}
+
+.software-card .software-index-btn {
+  padding-top: calc(0.5rem * 0.67);
+  padding-bottom: calc(0.5rem * 0.67);
+}
+/* === software-card|UI_TWEAK_END === */
+
 /* Larger text for the "자세히 알아보기" span inside software buttons */
 .learn-more-text {
   font-size: 1.2em;
@@ -811,9 +827,11 @@ h1.main-title {
   }
   .software-index-btn {
     font-size: 1rem;
+    padding-top: calc(0.5rem * 0.67);
+    padding-bottom: calc(0.5rem * 0.67);
   }
   .software-description {
-    font-size: 1rem;
+    font-size: calc(1rem - 1pt);
   }
   .learn-more-text {
     font-size: 1.1em;
