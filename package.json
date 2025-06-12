@@ -1,0 +1,18 @@
+{
+  "name": "bpe-lab-cfd",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "verify:agents": "node verify_agent_doc.js",
+    "lint:js": "echo 'No JS lint configured'",
+    "lint:css": "echo 'No CSS lint configured'",
+    "validate:html": "echo 'No HTML validation configured'",
+    "check:links": "echo 'No link check configured'",
+    "build:search": "node generate_search_index.js",
+    "codex:test": "npm-run-all verify:agents lint:js lint:css validate:html check:links build:search"
+  },
+  "devDependencies": {
+    "markdownlint-cli": "^0.39.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

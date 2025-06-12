@@ -20,3 +20,8 @@ The site will be available at `http://localhost:3000` by default.
 This project is licensed under the [MIT License](LICENSE).
 
 
+
+## Contributing & CI
+
+See [AGENTS.md](AGENTS.md) for workflow and coding guidelines.
+
