@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <link href="{{ '/assets/css/cfd-stat.css' | relative_url }}" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-gray-800 flex flex-col min-h-screen">
@@ -57,18 +58,10 @@
                 <label id="drop-area" class="dropzone" tabindex="0" for="file-input">
                     <p><i class="fa fa-cloud-upload-alt"></i><br>
                        Drag & Drop or <b>[Choose File]</b></p>
-                    <input id="file-input" hidden type="file"
-                           accept=".csv,.txt,text/plain,
-                                   application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,
-                                   application/vnd.ms-excel">
+                    <input id="file-input" hidden type="file" accept=".xlsx,.xls,.csv,.txt">
                     <button type="button" class="btn secondary">Choose File</button>
                 </label>
-                <div id="file-preview" class="file-preview d-none" aria-live="polite">
-                    <i class="fa fa-file"></i><span id="file-name"></span>
-                    <button id="file-remove" class="btn icon danger" aria-label="Remove file">
-                        <i class="fa fa-times"></i>
-                    </button>
-                </div>
+                <div id="file-preview" class="file-preview" aria-live="polite"></div>
             </section>
 
             <form id="stat-form" class="card stat-card shadow d-none" onsubmit="return false;">
@@ -121,10 +114,10 @@
     <!-- ① 로컬 복사본 (네트워크 없어도 100% 로드) -->
     <script src="{{ '/assets/js/libs/xlsx.full.min.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/libs/papaparse.min.js' | relative_url }}"></script>
-    <!-- ② 분석 로직 (defer) -->
-    <script src="{{ '/assets/js/cfd-statistics.js' | relative_url }}" defer></script>
-    <!-- ③ dayjs (CDN, 이미 존재) -->
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js" defer></script>
+    <!-- ② 로컬 라이브러리 -->
+    <script src="{{ '/assets/js/libs/dayjs.min.js' | relative_url }}"></script>
+    <!-- ③ 분석 로직 (defer) -->
+    <script src="{{ '/assets/js/cfd-stat.js' | relative_url }}" defer></script>
     <script src="script.js" type="module"></script>
 </body>
 </html>
