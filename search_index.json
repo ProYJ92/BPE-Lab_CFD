@@ -1110,18 +1110,16 @@
     },
     {
         "url": "cfd_statistics.html",
-        "title": "데이터 평균 계산기",
+        "title": "cfd_statistics.html",
         "breadcrumb": [
             "홈",
-            "데이터 평균 계산기"
+            "cfd_statistics.html"
         ],
         "keywords": [
-            "데이터",
-            "평균",
-            "계산기"
+            "cfd_statisticshtml"
         ],
         "content_snippet": "",
-        "full_text": "데이터 평균 계산기 여기로 파일을 끌어오거나 클릭하여 첨부 const drop = document.getElementById('drop'); const file = document.getElementById('file'); const out = document.getElementById('out'); ['dragenter','dragover','dragleave','drop'].forEach(ev=>{ drop.addEventListener(ev,e=>{e.preventDefault();e.stopPropagation();}); }); drop.addEventListener('dragover',()=>drop.classList.add('drag')); drop.addEventListener('dragleave',()=>drop.classList.remove('drag')); drop.addEventListener('drop',e=>{ drop.classList.remove('drag'); handle(e.dataTransfer.files[0]); }); drop.addEventListener('click',()=>file.click()); file.addEventListener('change',e=>handle(e.target.files[0])); function handle(f){ if(!f)return; drop.innerHTML = `📄 ${f.name} `; const ext = f.name.split('.').pop().toLowerCase(); (ext==='csv'||ext==='txt') ? readCSV(f) : readXLSX(f); } function readCSV(f){ Papa.parse(f,{ complete:({data})=>show(avg(data)), dynamicTyping:true }); } function readXLSX(f){ f.arrayBuffer().then(b=>{ const wb=XLSX.read(b,{type:"
+        "full_text": ""
     },
     {
         "url": "cfd_terminology.html",

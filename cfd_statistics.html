@@ -1,86 +1,17 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>데이터 평균 계산기</title>
-  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-  <style>
-    body{font-family:Arial,Helvetica,sans-serif;margin:40px;text-align:center;}
-    #drop{border:2px dashed #888;border-radius:8px;padding:60px 20px;cursor:pointer;}
-    #drop.drag{border-color:#2196f3;background:#f1f9ff;}
-    .filename{margin-top:10px;font-weight:600;}
-    table{margin:24px auto;border-collapse:collapse;}
-    th,td{border:1px solid #ccc;padding:6px 12px;}
-  </style>
-</head>
-<body>
-  <h1>데이터 평균 계산기</h1>
-  <div id="drop">여기로 파일을 끌어오거나 클릭하여 첨부</div>
-  <input id="file" type="file" accept=".xlsx,.xls,.csv,.txt" hidden>
-  <div id="out"></div>
+---
+title: "CFD Statistics"
+layout: tool
+parent: "유용한 도구"
+nav_order: 2
+---
 
-  <script>
-    const drop = document.getElementById('drop');
-    const file = document.getElementById('file');
-    const out  = document.getElementById('out');
+<link rel="stylesheet" href="{{ '/assets/css/cfd-stat.css' | relative_url }}">
 
-    ['dragenter','dragover','dragleave','drop'].forEach(ev=>{
-      drop.addEventListener(ev,e=>{e.preventDefault();e.stopPropagation();});
-    });
-    drop.addEventListener('dragover',()=>drop.classList.add('drag'));
-    drop.addEventListener('dragleave',()=>drop.classList.remove('drag'));
-    drop.addEventListener('drop',e=>{
-      drop.classList.remove('drag');
-      handle(e.dataTransfer.files[0]);
-    });
-    drop.addEventListener('click',()=>file.click());
-    file.addEventListener('change',e=>handle(e.target.files[0]));
+<h1>데이터 평균 계산기</h1>
+<div id="drop">여기로 파일을 끌어오거나 클릭하여 첨부</div>
+<input id="file" type="file" accept=".xlsx,.xls,.csv,.txt" hidden>
+<div id="out"></div>
 
-    function handle(f){
-      if(!f)return;
-      drop.innerHTML = `📄 <span class="filename">${f.name}</span>`;
-      const ext = f.name.split('.').pop().toLowerCase();
-      (ext==='csv'||ext==='txt') ? readCSV(f) : readXLSX(f);
-    }
-
-    function readCSV(f){
-      Papa.parse(f,{
-        complete:({data})=>show(avg(data)),
-        dynamicTyping:true
-      });
-    }
-    function readXLSX(f){
-      f.arrayBuffer().then(b=>{
-        const wb=XLSX.read(b,{type:'array'});
-        const ws=wb.Sheets[wb.SheetNames[0]];
-        const data=XLSX.utils.sheet_to_json(ws,{header:1});
-        show(avg(data));
-      });
-    }
-
-    function avg(rows){
-      const sums=[], cnts=[];
-      rows.forEach(r=>{
-        r.forEach((v,i)=>{
-          if(typeof v==='number'&&!isNaN(v)){
-            sums[i]=(sums[i]||0)+v;
-            cnts[i]=(cnts[i]||0)+1;
-          }
-        });
-      });
-      return sums.map((s,i)=>cnts[i]? (s/cnts[i]).toFixed(2) : '');
-    }
-
-    function show(a){
-      if(!a.length){out.textContent='숫자 데이터가 없습니다.';return;}
-      const head=a.map((_,i)=>String.fromCharCode(65+i));
-      const tbl=`<table>
-          <tr>${head.map(h=>`<th>${h}</th>`).join('')}</tr>
-          <tr>${a.map(v=>`<td>${v}</td>`).join('')}</tr>
-        </table>`;
-      out.innerHTML=tbl;
-    }
-  </script>
-</body>
-</html>
+<script src="{{ '/assets/js/libs/xlsx.full.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/libs/papaparse.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/cfd-stat-simple.js' | relative_url }}"></script>
