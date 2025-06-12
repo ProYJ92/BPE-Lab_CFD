@@ -809,8 +809,8 @@ h1.main-title {
   align-items: center;
   justify-content: center;
   line-height: 1;
-  /* Visually nudge button text upward for better centering */
-  transform: translateY(-2px);
+  /* Center the button text */
+  transform: translateY(0);
 }
 /* === software-card|UI_TWEAK_END === */
 
