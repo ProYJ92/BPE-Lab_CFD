@@ -70,6 +70,7 @@
   drop.addEventListener('dragleave',()=>drop.classList.remove('dragover'));
   drop.addEventListener('drop',e=>{e.preventDefault();drop.classList.remove('dragover');
                                    if(e.dataTransfer.files[0]) handle(e.dataTransfer.files[0]);});
+  drop.addEventListener('click',()=>input.click());
   choose.addEventListener('click',()=>input.click());
   input.addEventListener('change',e=>{if(e.target.files[0]) handle(e.target.files[0]);});
   rmvBtn.addEventListener('click',()=>{workbook='';uploaded='';prev.classList.add('d-none');toast('파일 제거');});
