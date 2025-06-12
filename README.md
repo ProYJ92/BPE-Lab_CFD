@@ -15,4 +15,8 @@ ACCESS_PASSWORD=bioprocess2025 node server.js
 The site will be available at `http://localhost:3000` by default.
 
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
 
