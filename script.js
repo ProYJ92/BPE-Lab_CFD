@@ -128,13 +128,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function checkPassword() {
         const input = document.getElementById('passwordInput').value;
-        const correctPassword = 'bioprocess2025';
-        if (input === correctPassword) {
-            sessionStorage.setItem('labResourcesAccess', 'true');
-            window.location.href = 'lab_resources.html';
-        } else {
-            alert(jsI18n.wrong_password_alert);
-        }
+        fetch('/validate-password', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ password: input })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.valid) {
+                sessionStorage.setItem('labResourcesAccess', 'true');
+                window.location.href = 'lab_resources.html';
+            } else {
+                alert(jsI18n.wrong_password_alert);
+            }
+        })
+        .catch(() => alert(jsI18n.wrong_password_alert));
     }
 
     function closeOverlay() {
