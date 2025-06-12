@@ -54,18 +54,18 @@
             </article>
             <!-- === cfd-statistics|UI_START === -->
             <section id="stat-uploader" class="card stat-card shadow">
-                <div id="drop-area" class="dropzone" tabindex="0" aria-label="파일 드래그 영역">
+                <div id="drop-area" class="dropzone" tabindex="0">
                     <p><i class="fa fa-cloud-upload-alt"></i><br>
-                       파일을 드래그하거나 <b>[파일 첨부]</b>를 클릭하세요</p>
-                    <input id="file-input" hidden
-                           type="file"
-                           accept=".csv,.txt,text/plain,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
-                    <button id="file-btn" class="btn secondary">파일 첨부</button>
+                       Drag & Drop or <b>[Choose File]</b></p>
+                    <input id="file-input" hidden type="file"
+                           accept=".csv,.txt,text/plain,
+                                   application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,
+                                   application/vnd.ms-excel">
+                    <button id="file-btn" class="btn secondary">Choose File</button>
                 </div>
                 <div id="file-preview" class="file-preview d-none" aria-live="polite">
-                    <i class="fa fa-file"></i>
-                    <span id="file-name"></span>
-                    <button id="file-remove" class="btn icon danger" aria-label="업로드 파일 제거">
+                    <i class="fa fa-file"></i><span id="file-name"></span>
+                    <button id="file-remove" class="btn icon danger" aria-label="Remove file">
                         <i class="fa fa-times"></i>
                     </button>
                 </div>

@@ -1,23 +1,15 @@
 /* === cfd-statistics|SCRIPT_START === */
-(async () => {
-  // 1) 라이브러리 검증 + CDN fallback
-  async function ensureLib(url, g){
-    if(window[g]) return;
-    try{ await import(url); }catch{}
-    if(!window[g]) throw new Error(`${g} load failed`);
-  }
-  try{
-    await ensureLib('https://cdn.jsdelivr.net/npm/xlsx@0.19.3/dist/xlsx.full.min.js','XLSX');
-    await ensureLib('https://cdn.jsdelivr.net/npm/papaparse@5/papaparse.min.js','Papa');
-  }catch(e){
-    alert('필수 라이브러리를 불러올 수 없습니다.\n네트워크 설정을 확인하세요.');
-    console.error(e); return;
+(() => {
+  // 1. 필수 라이브러리 존재 검사 (로컬 복사본이므로 실패 시 404 → 즉시 알림)
+  if(typeof XLSX==='undefined' || typeof Papa==='undefined'){
+    alert('필수 라이브러리를 로드하지 못했습니다. 파일 경로를 확인하세요.');
+    return;
   }
 
-  // 2) DOM 참조
+  // 2. DOM 요소
   const drop   = document.getElementById('drop-area');
   const input  = document.getElementById('file-input');
-  const btn    = document.getElementById('file-btn');
+  const choose = document.getElementById('file-btn');
   const prev   = document.getElementById('file-preview');
   const fname  = document.getElementById('file-name');
   const rmvBtn = document.getElementById('file-remove');
@@ -35,57 +27,52 @@
   let workbook='', uploaded='';
 
   // 3) 토스트
-  function toast(msg,type='ok'){
-    const t=document.createElement('div');
-    t.className=`toast ${type}`;
-    t.textContent=msg;
-    document.body.appendChild(t);
-    setTimeout(()=>t.remove(),3000);
-  }
+  const toast=(m,err=false)=>{ const t=document.createElement('div');
+    t.className='toast'+(err?' error':'');t.textContent=m;document.body.appendChild(t);
+    setTimeout(()=>t.remove(),2500);};
 
   // 4) 텍스트→Workbook util (PapaParse)
-  function csvToWb(txt){
-    const {data} = Papa.parse(txt.trim(), {skipEmptyLines:true});
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(data), 'Sheet1');
+  const csvToWb=txt=>{
+    const arr=Papa.parse(txt.trim(),{skipEmptyLines:true}).data;
+    const wb=XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(arr),'Sheet1');
     return wb;
-  }
+  };
 
   // 5) 파일 처리
-  function handleFile(file){
+  function handle(file){
     const ext=file.name.split('.').pop().toLowerCase();
-    const reader=new FileReader();
-    reader.onerror=()=>toast('파일을 읽지 못했습니다','error');
-    reader.onload=e=>{
+    const rdr=new FileReader();
+    rdr.onerror=()=>toast('읽기 오류',true);
+    rdr.onload=e=>{
       try{
-        workbook = ['xlsx','xls'].includes(ext)
-          ? XLSX.read(e.target.result,{type:'array'})
-          : csvToWb(e.target.result);
-        uploaded = file.name;
+        workbook=['xlsx','xls'].includes(ext)
+           ? XLSX.read(e.target.result,{type:'array'})
+           : csvToWb(e.target.result);
+        uploaded=file.name;
         fname.textContent=file.name;
         prev.classList.remove('d-none');
         statForm.classList.remove('d-none');
         input.value='';
-        toast('파일 업로드 완료');
+        toast('업로드 완료');
         renderNotes();
       }catch(err){
         console.error(err);
         toast('파싱 실패: '+err.message,'error');
       }
     };
-    ['xlsx','xls'].includes(ext)
-      ? reader.readAsArrayBuffer(file)
-      : reader.readAsText(file,'utf-8');
+    (ext==='xlsx'||ext==='xls') ? rdr.readAsArrayBuffer(file)
+                                : rdr.readAsText(file,'utf-8');
   }
 
   // 6) drag&drop + click
   drop.addEventListener('dragover',e=>{e.preventDefault();drop.classList.add('dragover');});
   drop.addEventListener('dragleave',()=>drop.classList.remove('dragover'));
   drop.addEventListener('drop',e=>{e.preventDefault();drop.classList.remove('dragover');
-                                   if(e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);});
-  btn.addEventListener('click',()=>input.click());
-  input.addEventListener('change',e=>{if(e.target.files[0]) handleFile(e.target.files[0]);});
-  rmvBtn.addEventListener('click',()=>{workbook='';uploaded='';input.value='';prev.classList.add('d-none');statForm.classList.add('d-none');toast('파일 제거','ok');});
+                                   if(e.dataTransfer.files[0]) handle(e.dataTransfer.files[0]);});
+  choose.addEventListener('click',()=>input.click());
+  input.addEventListener('change',e=>{if(e.target.files[0]) handle(e.target.files[0]);});
+  rmvBtn.addEventListener('click',()=>{workbook='';uploaded='';prev.classList.add('d-none');toast('파일 제거');});
 
   analyzeBtn.addEventListener('click', analyze);
   exportBtn.addEventListener('click', exportNotes);
