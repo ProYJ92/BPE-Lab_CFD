@@ -1,12 +1,6 @@
 /* === cfd-statistics|SCRIPT_START === */
 (() => {
-  // 1. 필수 라이브러리 존재 검사 (로컬 복사본이므로 실패 시 404 → 즉시 알림)
-  if(typeof XLSX==='undefined' || typeof Papa==='undefined'){
-    alert('필수 라이브러리를 로드하지 못했습니다. 파일 경로를 확인하세요.');
-    return;
-  }
-
-  // 2. DOM 요소
+  // 1. DOM 요소 및 기본 이벤트
   const drop   = document.getElementById('drop-area');
   const input  = document.getElementById('file-input');
   const choose = document.getElementById('file-btn');
@@ -26,6 +20,16 @@
 
   let workbook='', uploaded='';
 
+  // 드롭존/버튼 클릭으로 파일 선택창 열기
+  drop.addEventListener('click', ()=>input.click());
+  choose.addEventListener('click', ()=>input.click());
+
+  // 2. 필수 라이브러리 로드 여부 확인
+  const libsLoaded = !(typeof XLSX==='undefined' || typeof Papa==='undefined');
+  if(!libsLoaded){
+    alert('필수 라이브러리를 불러오지 못했습니다. 분석 기능이 제한됩니다.');
+  }
+
   // 3) 토스트
   const toast=(m,err=false)=>{ const t=document.createElement('div');
     t.className='toast'+(err?' error':'');t.textContent=m;document.body.appendChild(t);
@@ -41,6 +45,7 @@
 
   // 5) 파일 처리
   function handle(file){
+    if(!libsLoaded){ toast('라이브러리가 없어 파일을 처리할 수 없습니다', true); return; }
     const ext=file.name.split('.').pop().toLowerCase();
     const rdr=new FileReader();
     rdr.onerror=()=>toast('읽기 오류',true);
@@ -70,8 +75,6 @@
   drop.addEventListener('dragleave',()=>drop.classList.remove('dragover'));
   drop.addEventListener('drop',e=>{e.preventDefault();drop.classList.remove('dragover');
                                    if(e.dataTransfer.files[0]) handle(e.dataTransfer.files[0]);});
-  drop.addEventListener('click',()=>input.click());
-  choose.addEventListener('click',()=>input.click());
   input.addEventListener('change',e=>{if(e.target.files[0]) handle(e.target.files[0]);});
   rmvBtn.addEventListener('click',()=>{workbook='';uploaded='';prev.classList.add('d-none');toast('파일 제거');});
 
@@ -82,6 +85,7 @@
 
   // ----- 분석 로직 -----
   function analyze(){
+    if(!libsLoaded){ toast('필수 라이브러리가 로드되지 않았습니다', true); return; }
     if(!workbook){ toast('먼저 파일을 업로드하세요','error'); return; }
     try{
       const rpm = parseFloat(rpmEl.value);
