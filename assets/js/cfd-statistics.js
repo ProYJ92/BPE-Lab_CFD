@@ -83,6 +83,7 @@
   drop.addEventListener('dragleave',()=>drop.classList.remove('dragover'));
   drop.addEventListener('drop',e=>{e.preventDefault();drop.classList.remove('dragover');
                                    if(e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);});
+  drop.addEventListener('click',()=>input.click());
   btn.addEventListener('click',()=>input.click());
   input.addEventListener('change',e=>{if(e.target.files[0]) handleFile(e.target.files[0]);});
   rmvBtn.addEventListener('click',()=>{workbook='';uploaded='';input.value='';prev.classList.add('d-none');statForm.classList.add('d-none');toast('파일 제거','ok');});
