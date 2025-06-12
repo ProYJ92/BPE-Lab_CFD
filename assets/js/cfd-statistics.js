@@ -1,16 +1,32 @@
 /* === cfd-statistics|ANALYZER === */
-(async function ensureSheetJS(){
-  if(typeof XLSX === 'undefined'){
-    try{
-      await import('https://cdn.jsdelivr.net/npm/xlsx@0.19.3/dist/xlsx.full.min.js');
-      console.info('SheetJS 동적 로드 완료');
-    }catch(e){
-      alert('필수 라이브러리를 불러오지 못했습니다.\n네트워크 상태를 확인하세요.');
-      throw e;
-    }
+async function ensureLib(url, globalName){
+  if(window[globalName]) return;
+  try{
+    await import(url);
+    if(window[globalName]) return;
+  }catch{}
+  throw new Error(`${globalName} 로드 실패`);
+}
+
+(async () => {
+  try{
+    await ensureLib('https://cdn.jsdelivr.net/npm/xlsx@0.19.3/dist/xlsx.full.min.js','XLSX');
+    await ensureLib('https://cdn.jsdelivr.net/npm/papaparse@5/papaparse.min.js','Papa');
+  }catch(e){
+    showToast('필수 라이브러리를 불러오지 못했습니다.\n네트워크 설정을 확인 후 새로고침하세요.');
+    console.error(e);
+    return;
   }
   initStatTool();
 })();
+
+function showToast(msg){
+  const t=document.createElement('div');
+  t.className='toast-error';
+  t.textContent=msg;
+  document.body.appendChild(t);
+  setTimeout(()=>t.remove(),3000);
+}
 
 function initStatTool(){
   const dropArea = document.getElementById('drop-area');
@@ -33,12 +49,10 @@ function initStatTool(){
   let workbook = null;
   let uploadedName = '';
 
-  function parseTextToWorkbook(text){
-    const lines = text.trim().split(/\r?\n/);
-    const delim = (lines[0].includes('\t') ? '\t' : ',');
-    const rows  = lines.map(l => l.split(delim).map(v => v.trim()));
+  function toWorkbookFromCSV(csvText){
+    const papa = Papa.parse(csvText.trim(), {skipEmptyLines:true});
     const wb = XLSX.utils.book_new();
-    const ws = XLSX.utils.aoa_to_sheet(rows);
+    const ws = XLSX.utils.aoa_to_sheet(papa.data);
     XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
     return wb;
   }
@@ -65,21 +79,22 @@ function initStatTool(){
     const isText  = ['csv','txt'].includes(ext);
 
     if(!isExcel && !isText){
-      alert('지원 형식: xlsx, xls, csv, txt');
+      showToast('지원 형식: xlsx, xls, csv, txt');
       return;
     }
 
     const reader = new FileReader();
-    reader.onerror = () => alert(`${file.name} 읽기 오류`);
+    reader.onerror = () => showToast(`${file.name} 읽기 오류`);
 
     reader.onload = e => {
       try{
         workbook = isExcel
-          ? XLSX.read(e.target.result, {type:'array'})
-          : parseTextToWorkbook(e.target.result);
+          ? XLSX.read(e.target.result,{type:'array'})
+          : toWorkbookFromCSV(e.target.result);
         afterLoadSuccess(file.name);
       }catch(err){
-        alert(`${file.name} 파일을 열 수 없습니다.\n${err.message}`);
+        showToast(`${file.name} 처리 실패:\n${err.message}`);
+        console.error(err);
       }
     };
 
@@ -109,7 +124,7 @@ function initStatTool(){
 
   async function analyze(){
     if(!workbook){
-      alert('먼저 파일을 업로드하세요');
+      showToast('먼저 파일을 업로드하세요');
       return;
     }
     try{
@@ -117,7 +132,7 @@ function initStatTool(){
       const cycle = parseFloat(cycleEl.value);
       const decimals = parseInt(decimalsEl.value,10) || 0;
       const useOutlier = outlierEl.checked;
-      if(isNaN(rpm) || isNaN(cycle) || rpm === 0) { alert('RPM과 Cycle을 확인하세요'); return; }
+      if(isNaN(rpm) || isNaN(cycle) || rpm === 0) { showToast('RPM과 Cycle을 확인하세요'); return; }
       const span = cycle * (60 / rpm);
       workbook.SheetNames.forEach(sheetName => {
         const sheet = workbook.Sheets[sheetName];
@@ -138,7 +153,8 @@ function initStatTool(){
         storeNote(sheetName,avgs);
       });
     }catch(err){
-      alert(`데이터를 처리하는 중 오류가 발생했습니다.\n(${err.message})`);
+      showToast(`데이터를 처리하는 중 오류가 발생했습니다.\n(${err.message})`);
+      console.error(err);
     }
   }
 
