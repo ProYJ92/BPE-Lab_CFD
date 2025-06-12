@@ -117,9 +117,13 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.19.3/dist/xlsx.full.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <!-- ① 로컬 복사본 (네트워크 없어도 100% 로드) -->
+    <script src="/assets/js/libs/xlsx.full.min.js"></script>
+    <script src="/assets/js/libs/papaparse.min.js"></script>
+    <!-- ② 분석 로직 (defer) -->
     <script src="/assets/js/cfd-statistics.js" defer></script>
+    <!-- ③ dayjs (CDN, 이미 존재) -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js" defer></script>
     <script src="script.js" type="module"></script>
 </body>
 </html>
