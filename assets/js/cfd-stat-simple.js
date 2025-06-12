@@ -20,7 +20,11 @@ file.addEventListener('change',e=>handleFile(e.target.files[0]));
 function handleFile(f){
   if(!f) return;
   // 파일명 표시
-  drop.innerHTML = `📄 <span class="filename">${f.name}</span>`;
+  drop.textContent = '📄 ';
+  const span = document.createElement('span');
+  span.className = 'filename';
+  span.textContent = f.name;
+  drop.appendChild(span);
   const ext = f.name.split('.').pop().toLowerCase();
   if(ext === 'csv' || ext === 'txt'){
     if(typeof Papa === 'undefined'){
