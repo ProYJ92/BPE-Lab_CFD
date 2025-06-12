@@ -814,6 +814,28 @@ h1.main-title {
 }
 /* === software-card|UI_TWEAK_END === */
 
+/* Inline text link style for software cards */
+.software-card .software-link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  color: #0072CE;
+  transition: color 0.15s ease-in-out;
+}
+.software-card .software-link:hover {
+  color: #004A99;
+}
+.software-card .software-link i {
+  margin-left: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+}
+.software-card .software-link .learn-more-text {
+  margin-left: 0.25rem;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
 /* Larger text for the "자세히 알아보기" span inside software buttons */
 .learn-more-text {
   font-size: 1.2em;
