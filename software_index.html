@@ -8,6 +8,20 @@
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/assets/css/override.css?v={{ site.time | date: '%s' }}">
+    <style>
+      /* Fallback ② – 인라인 중앙정렬 */
+      .software-card .btn,
+      .software-card .btn-primary{display:flex!important;align-items:center!important;justify-content:center!important;line-height:1!important;padding:.50rem 1.50rem!important;}
+    </style>
+    <script>
+    (function(){
+      /* Fallback ③ – 런타임 주입 */
+      const s=document.createElement('style');
+      s.textContent='.software-card .btn,.software-card .btn-primary{display:flex!important;align-items:center!important;justify-content:center!important;line-height:1!important;padding:.50rem 1.50rem!important;}';
+      document.head.appendChild(s);
+    })();
+    </script>
 </head>
 <body class="font-pretendard bg-gray-50 text-slate-800 scroll-smooth flex flex-col min-h-screen">
 

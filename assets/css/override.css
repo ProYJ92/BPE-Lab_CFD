@@ -1,0 +1,11 @@
+/* === software-card|BTN_CENTER_SAFE === */
+.software-card .btn,
+.software-card .btn-primary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  padding-top: 0.50rem !important;
+  padding-bottom: 0.50rem !important;
+}
+/* === END === */
