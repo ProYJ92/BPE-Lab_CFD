@@ -18,7 +18,11 @@ input.addEventListener('change',e=>handleFile(e.target.files[0]));
 
 function handleFile(file){
   if(!file)return;
-  drop.innerHTML = `<span class="filename">📄 ${file.name}</span>`;
+  drop.textContent = '📄 ';
+  const span = document.createElement('span');
+  span.className = 'filename';
+  span.textContent = file.name;
+  drop.appendChild(span);
   const ext = file.name.split('.').pop().toLowerCase();
   if(['csv','txt'].includes(ext)) parseCSV(file);
   else parseXLSX(file);
