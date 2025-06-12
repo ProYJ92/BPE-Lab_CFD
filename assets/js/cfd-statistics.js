@@ -1,149 +1,117 @@
-/* === cfd-statistics|ANALYZER === */
-async function ensureLib(url, globalName){
-  if(window[globalName]) return;
-  try{
-    await import(url);
-    if(window[globalName]) return;
-  }catch{}
-  throw new Error(`${globalName} 로드 실패`);
-}
-
+/* === cfd-statistics|SCRIPT_START === */
 (async () => {
+  // 1) 라이브러리 검증 + CDN fallback
+  async function ensureLib(url, g){
+    if(window[g]) return;
+    try{ await import(url); }catch{}
+    if(!window[g]) throw new Error(`${g} load failed`);
+  }
   try{
     await ensureLib('https://cdn.jsdelivr.net/npm/xlsx@0.19.3/dist/xlsx.full.min.js','XLSX');
     await ensureLib('https://cdn.jsdelivr.net/npm/papaparse@5/papaparse.min.js','Papa');
   }catch(e){
-    showToast('필수 라이브러리를 불러오지 못했습니다.\n네트워크 설정을 확인 후 새로고침하세요.');
-    console.error(e);
-    return;
+    alert('필수 라이브러리를 불러올 수 없습니다.\n네트워크 설정을 확인하세요.');
+    console.error(e); return;
   }
-  initStatTool();
-})();
 
-function showToast(msg){
-  const t=document.createElement('div');
-  t.className='toast-error';
-  t.textContent=msg;
-  document.body.appendChild(t);
-  setTimeout(()=>t.remove(),3000);
-}
-
-function initStatTool(){
-  const dropArea = document.getElementById('drop-area');
-  const fileInput = document.getElementById('file-input');
-  const fileBtn = document.getElementById('file-btn');
-  const preview = document.getElementById('file-preview');
-  const fileName = document.getElementById('file-name');
-  const fileRemove = document.getElementById('file-remove');
+  // 2) DOM 참조
+  const drop   = document.getElementById('drop-area');
+  const input  = document.getElementById('file-input');
+  const btn    = document.getElementById('file-btn');
+  const prev   = document.getElementById('file-preview');
+  const fname  = document.getElementById('file-name');
+  const rmvBtn = document.getElementById('file-remove');
   const statForm = document.getElementById('stat-form');
-  const rpmEl = document.getElementById('rpm');
-  const cycleEl = document.getElementById('cycle');
+  const rpmEl  = document.getElementById('rpm');
+  const cycleEl= document.getElementById('cycle');
   const outlierEl = document.getElementById('outlier');
   const decimalsEl = document.getElementById('decimals');
   const analyzeBtn = document.getElementById('analyze-btn');
-  const thead = document.querySelector('#note-table thead');
+  const thead  = document.querySelector('#note-table thead');
   const notesBody = document.querySelector('#note-table tbody');
   const exportBtn = document.getElementById('export-notes');
-  const clearBtn = document.getElementById('clear-notes');
+  const clearBtn  = document.getElementById('clear-notes');
 
-  let workbook = null;
-  let uploadedName = '';
+  let workbook='', uploaded='';
 
-  function toWorkbookFromCSV(csvText){
-    const papa = Papa.parse(csvText.trim(), {skipEmptyLines:true});
+  // 3) 토스트
+  function toast(msg,type='ok'){
+    const t=document.createElement('div');
+    t.className=`toast ${type}`;
+    t.textContent=msg;
+    document.body.appendChild(t);
+    setTimeout(()=>t.remove(),3000);
+  }
+
+  // 4) 텍스트→Workbook util (PapaParse)
+  function csvToWb(txt){
+    const {data} = Papa.parse(txt.trim(), {skipEmptyLines:true});
     const wb = XLSX.utils.book_new();
-    const ws = XLSX.utils.aoa_to_sheet(papa.data);
-    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(data), 'Sheet1');
     return wb;
   }
 
-  dropArea.addEventListener('click', () => fileInput.click());
-  fileBtn.addEventListener('click', () => fileInput.click());
-  dropArea.addEventListener('keydown', e => { if (e.key === 'Enter') fileInput.click(); });
-
-  dropArea.addEventListener('dragover', e => {
-    e.preventDefault();
-    dropArea.classList.add('dragover');
-  });
-  dropArea.addEventListener('dragleave', () => dropArea.classList.remove('dragover'));
-  dropArea.addEventListener('drop', e => {
-    e.preventDefault();
-    dropArea.classList.remove('dragover');
-    if (e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]);
-  });
-  fileInput.addEventListener('change', () => { if (fileInput.files[0]) handleFile(fileInput.files[0]); });
-
-  async function handleFile(file){
-    const ext = file.name.split('.').pop().toLowerCase();
-    const isExcel = ['xlsx','xls'].includes(ext);
-    const isText  = ['csv','txt'].includes(ext);
-
-    if(!isExcel && !isText){
-      showToast('지원 형식: xlsx, xls, csv, txt');
-      return;
-    }
-
-    const reader = new FileReader();
-    reader.onerror = () => showToast(`${file.name} 읽기 오류`);
-
-    reader.onload = e => {
+  // 5) 파일 처리
+  function handleFile(file){
+    const ext=file.name.split('.').pop().toLowerCase();
+    const reader=new FileReader();
+    reader.onerror=()=>toast('파일을 읽지 못했습니다','error');
+    reader.onload=e=>{
       try{
-        workbook = isExcel
+        workbook = ['xlsx','xls'].includes(ext)
           ? XLSX.read(e.target.result,{type:'array'})
-          : toWorkbookFromCSV(e.target.result);
-        afterLoadSuccess(file.name);
+          : csvToWb(e.target.result);
+        uploaded = file.name;
+        fname.textContent=file.name;
+        prev.classList.remove('d-none');
+        statForm.classList.remove('d-none');
+        input.value='';
+        toast('파일 업로드 완료');
+        renderNotes();
       }catch(err){
-        showToast(`${file.name} 처리 실패:\n${err.message}`);
         console.error(err);
+        toast('파싱 실패: '+err.message,'error');
       }
     };
-
-    isExcel ? reader.readAsArrayBuffer(file)
-            : reader.readAsText(file,'utf-8');
+    ['xlsx','xls'].includes(ext)
+      ? reader.readAsArrayBuffer(file)
+      : reader.readAsText(file,'utf-8');
   }
 
-  function afterLoadSuccess(fname){
-    uploadedName = fname;
-    preview.classList.remove('d-none');
-    fileName.textContent = fname;
-    statForm.classList.remove('d-none');
-    fileInput.value='';
-    dropArea.classList.add('d-none');
-  }
-
-  fileRemove.addEventListener('click', () => {
-    workbook = null;
-    uploadedName = '';
-    fileInput.value = '';
-    preview.classList.add('d-none');
-    statForm.classList.add('d-none');
-    dropArea.classList.remove('d-none');
-  });
+  // 6) drag&drop + click
+  drop.addEventListener('dragover',e=>{e.preventDefault();drop.classList.add('dragover');});
+  drop.addEventListener('dragleave',()=>drop.classList.remove('dragover'));
+  drop.addEventListener('drop',e=>{e.preventDefault();drop.classList.remove('dragover');
+                                   if(e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);});
+  btn.addEventListener('click',()=>input.click());
+  input.addEventListener('change',e=>{if(e.target.files[0]) handleFile(e.target.files[0]);});
+  rmvBtn.addEventListener('click',()=>{workbook='';uploaded='';input.value='';prev.classList.add('d-none');statForm.classList.add('d-none');toast('파일 제거','ok');});
 
   analyzeBtn.addEventListener('click', analyze);
+  exportBtn.addEventListener('click', exportNotes);
+  clearBtn.addEventListener('click', clearNotes);
+  notesBody.addEventListener('click', onRemoveNote);
 
-  async function analyze(){
-    if(!workbook){
-      showToast('먼저 파일을 업로드하세요');
-      return;
-    }
+  // ----- 분석 로직 -----
+  function analyze(){
+    if(!workbook){ toast('먼저 파일을 업로드하세요','error'); return; }
     try{
       const rpm = parseFloat(rpmEl.value);
       const cycle = parseFloat(cycleEl.value);
       const decimals = parseInt(decimalsEl.value,10) || 0;
       const useOutlier = outlierEl.checked;
-      if(isNaN(rpm) || isNaN(cycle) || rpm === 0) { showToast('RPM과 Cycle을 확인하세요'); return; }
+      if(isNaN(rpm) || isNaN(cycle) || rpm===0){ toast('RPM과 Cycle을 확인하세요','error'); return; }
       const span = cycle * (60 / rpm);
       workbook.SheetNames.forEach(sheetName => {
         const sheet = workbook.Sheets[sheetName];
         const rows = XLSX.utils.sheet_to_json(sheet,{header:1,defval:null});
         if(!rows.length) return;
         const headers = rows[0].slice(1);
-        const dataRows = rows.slice(1).map(r => r.map(v => parseFloat(v)));
+        const dataRows = rows.slice(1).map(r=>r.map(v=>parseFloat(v)));
         const lastTime = dataRows[dataRows.length-1][0];
-        const filtered = dataRows.filter(r => r[0] >= lastTime - span);
+        const filtered = dataRows.filter(r=>r[0]>= lastTime - span);
         const avgs = headers.map((_,i)=>{
-          const vals = filtered.map(r => r[i+1]).filter(v => !isNaN(v));
+          const vals = filtered.map(r=>r[i+1]).filter(v=>!isNaN(v));
           if(!vals.length) return null;
           let data = vals;
           if(useOutlier && vals.length>3) data = removeOutliers(vals);
@@ -153,8 +121,8 @@ function initStatTool(){
         storeNote(sheetName,avgs);
       });
     }catch(err){
-      showToast(`데이터를 처리하는 중 오류가 발생했습니다.\n(${err.message})`);
       console.error(err);
+      toast('데이터 처리 중 오류: '+err.message,'error');
     }
   }
 
@@ -164,7 +132,6 @@ function initStatTool(){
     const rest=pos-base;
     return sorted[base]+(sorted[base+1]-sorted[base])*rest;
   }
-
   function removeOutliers(arr){
     const s=arr.slice().sort((a,b)=>a-b);
     const q1=percentile(s,0.25);
@@ -174,24 +141,20 @@ function initStatTool(){
     const max=q3+1.5*i;
     return arr.filter(v=>v>=min && v<=max);
   }
-
   function getNotes(){ return JSON.parse(localStorage.getItem('cfdStatNotes')||'[]'); }
   function saveNotes(a){ localStorage.setItem('cfdStatNotes',JSON.stringify(a)); }
-
   function buildHeader(n){
     const base=['No','일시','ID','시트'];
     const ths=[...base,...Array.from({length:n},(_,i)=>`결과${i+1}`),''];
     thead.innerHTML=`<tr>${ths.map(t=>`<th>${t}</th>`).join('')}</tr>`;
   }
-
   function storeNote(sheet,avgs){
     const notes=getNotes();
-    notes.push([dayjs().format('YYYY-MM-DD HH:mm:ss'), uploadedName, sheet, ...avgs]);
+    notes.push([dayjs().format('YYYY-MM-DD HH:mm:ss'), uploaded, sheet, ...avgs]);
     saveNotes(notes);
     buildHeader(avgs.length);
     renderNotes();
   }
-
   function renderNotes(){
     const notes=getNotes();
     notesBody.innerHTML='';
@@ -207,17 +170,15 @@ function initStatTool(){
       notesBody.appendChild(tr);
     });
   }
-
-  notesBody.addEventListener('click',e=>{
+  function onRemoveNote(e){
     const btn=e.target.closest('button[data-idx]');
     if(btn){
       const idx=parseInt(btn.dataset.idx,10);
       const arr=getNotes();
       arr.splice(idx,1); saveNotes(arr); renderNotes();
     }
-  });
-
-  exportBtn.addEventListener('click',()=>{
+  }
+  function exportNotes(){
     const notes=getNotes();
     if(!notes.length) return;
     const header=['일시','ID','시트',...notes[0].slice(3).map((_,i)=>`결과${i+1}`)];
@@ -228,15 +189,13 @@ function initStatTool(){
     a.download='cfd_notes.csv';
     a.click();
     URL.revokeObjectURL(a.href);
-  });
-
-  clearBtn.addEventListener('click',()=>{
+  }
+  function clearNotes(){
     if(!confirm('모든 노트를 삭제하시겠습니까?')) return;
     localStorage.removeItem('cfdStatNotes');
     renderNotes();
-  });
-
-
+  }
 
   renderNotes();
-}
+})();
+/* === cfd-statistics|SCRIPT_END === */
