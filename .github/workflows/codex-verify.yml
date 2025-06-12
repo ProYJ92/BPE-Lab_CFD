@@ -1,0 +1,24 @@
+name: codex-prepr-check
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  codex-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install codex-cli
+        run: npm install -g codex-cli
+      - name: Run Codex dry-run
+        run: codex-cli verify .
+

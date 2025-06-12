@@ -20,3 +20,13 @@ The site will be available at `http://localhost:3000` by default.
 This project is licensed under the [MIT License](LICENSE).
 
 
+
+## Codex Pre-PR Verification
+모든 PR 작성 전, 저장소 최상단에서 다음 명령으로 Codex 사전 점검을 실시하세요.
+
+```bash
+./scripts/codex-test.sh
+```
+
+Codex 테스트가 실패하면 PR을 제출하지 말고 먼저 문제를 수정해 주세요.
+
