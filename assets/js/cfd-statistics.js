@@ -3,7 +3,6 @@
   // 1. DOM 요소 및 기본 이벤트
   const drop   = document.getElementById('drop-area');
   const input  = document.getElementById('file-input');
-  const choose = document.getElementById('file-btn');
   const prev   = document.getElementById('file-preview');
   const fname  = document.getElementById('file-name');
   const rmvBtn = document.getElementById('file-remove');
@@ -20,9 +19,7 @@
 
   let workbook='', uploaded='';
 
-  // 드롭존/버튼 클릭으로 파일 선택창 열기
-  drop.addEventListener('click', ()=>input.click());
-  choose.addEventListener('click', ()=>input.click());
+  // 드롭존/버튼 클릭으로 파일 선택창 열기 - label 연결로 기본 동작
 
   // 2. 필수 라이브러리 로드 여부 확인
   const libsLoaded = !(typeof XLSX==='undefined' || typeof Papa==='undefined');
