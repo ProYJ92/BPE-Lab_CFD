@@ -2,3 +2,7 @@
 .uploader.dragover{border-color:#2196f3;background:#f1f9ff;}
 .filename{margin-top:8px;font-weight:600;}
 #result-box{margin-top:20px;font-family:monospace;}
+#drop{border:2px dashed #888;border-radius:8px;padding:60px 20px;text-align:center;cursor:pointer;}
+#drop.drag{border-color:#2196f3;background:#f1f9ff;}
+table{margin:24px auto;border-collapse:collapse;}
+th,td{border:1px solid #ccc;padding:6px 12px;}
