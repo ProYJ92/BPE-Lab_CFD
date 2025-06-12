@@ -922,7 +922,7 @@ td {
 /* === celbic-angle-rpm|UI_REFINEMENT_START === */
 .calc-card     {padding:1.5rem;border-radius:8px;background:#fff;box-shadow:0 4px 8px rgba(0,0,0,.05);}
 .calc-form     {display:grid;grid-template-columns:1fr 1fr auto;gap:1rem;align-items:end;}
-.copy-btn i    {margin-right:4px}
+.copy-btn i    {margin-right:0}
 .result-row    {display:flex;align-items:center;gap:.5rem;margin:.25rem 0;font-family:var(--font-mono,monospace);}
 @media (max-width:768px){
   .calc-form   {grid-template-columns:1fr;grid-auto-rows:auto;}
