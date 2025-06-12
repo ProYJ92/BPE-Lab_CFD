@@ -25,9 +25,10 @@
       <div class="result-row">
         <code class="result-text">${r.label} = ${r.str}</code>
         <button class="btn outline-secondary btn-sm copy-btn" aria-label="${r.label} 복사" data-copy="${r.str}">
-          <i class="fa fa-copy" aria-hidden="true"></i> 복사
+          <i data-lucide="copy" class="w-4 h-4"></i>
         </button>
       </div>`).join('');
+    if (window.lucide) lucide.createIcons();
   });
 
   document.addEventListener('click', e => {
