@@ -54,15 +54,15 @@
             </article>
             <!-- === cfd-statistics|UI_START === -->
             <section id="stat-uploader" class="card stat-card shadow">
-                <div id="drop-area" class="dropzone" tabindex="0">
+                <label id="drop-area" class="dropzone" tabindex="0" for="file-input">
                     <p><i class="fa fa-cloud-upload-alt"></i><br>
                        Drag & Drop or <b>[Choose File]</b></p>
                     <input id="file-input" hidden type="file"
                            accept=".csv,.txt,text/plain,
                                    application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,
                                    application/vnd.ms-excel">
-                    <button id="file-btn" class="btn secondary">Choose File</button>
-                </div>
+                    <button type="button" class="btn secondary">Choose File</button>
+                </label>
                 <div id="file-preview" class="file-preview d-none" aria-live="polite">
                     <i class="fa fa-file"></i><span id="file-name"></span>
                     <button id="file-remove" class="btn icon danger" aria-label="Remove file">
