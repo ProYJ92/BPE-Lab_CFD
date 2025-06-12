@@ -22,7 +22,19 @@ function handleFile(f){
   // 파일명 표시
   drop.innerHTML = `📄 <span class="filename">${f.name}</span>`;
   const ext = f.name.split('.').pop().toLowerCase();
-  (ext === 'csv' || ext === 'txt') ? parseCSV(f) : parseXLSX(f);
+  if(ext === 'csv' || ext === 'txt'){
+    if(typeof Papa === 'undefined'){
+      console.error('Missing Papa Parse library');
+      return;
+    }
+    parseCSV(f);
+  }else{
+    if(typeof XLSX === 'undefined'){
+      console.error('Missing XLSX library');
+      return;
+    }
+    parseXLSX(f);
+  }
 }
 
 /* ---------- CSV / TXT ---------- */
