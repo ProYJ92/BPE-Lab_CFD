@@ -1,7 +1,8 @@
+@import url("assets/css/variables.css");
 body {
     font-family: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     background-color: #F1F5F9; 
-    color: #374151; 
+    color: var(--color-text-base); 
     line-height: 1.7; 
     letter-spacing: -0.01em; 
     -webkit-font-smoothing: antialiased;
@@ -23,12 +24,12 @@ p {
 }
 
 a {
-    color: #0072CE; 
+    color: var(--color-primary); 
     text-decoration: none;
     transition: color 0.15s ease-in-out;
 }
 a:hover {
-    color: #004A99; 
+    color: var(--color-primary-hover); 
     text-decoration: underline;
 }
 
@@ -45,10 +46,10 @@ a:hover {
 }
 
 #fixed-top-nav-container h1 a:hover span {
-    color: #0072CE; 
+    color: var(--color-primary); 
 }
 #fixed-top-nav-container h1 a .text-gray-500:hover {
-     color: #0072CE !important;
+     color: var(--color-primary) !important;
 }
 
 /* Mobile menu toggle button */
@@ -138,7 +139,7 @@ a:hover {
     justify-content: space-between; 
     align-items: center; 
     padding: 5px 10px;
-    color: #374151;
+    color: var(--color-text-base);
     text-decoration: none;
     font-size: 14px;
     white-space: nowrap;
@@ -225,7 +226,7 @@ a:hover {
   }
 }
 .hero-bg-gradient {
-    background: linear-gradient(135deg, #0072CE 0%, #3b82f6 50%, #60a5fa 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, #3b82f6 50%, #60a5fa 100%);
 }
 .hero-bg-pattern { 
     background-image: 
@@ -376,11 +377,11 @@ a:hover {
 }
 
 .prose a { 
-    color: #0072CE;
+    color: var(--color-primary);
     font-weight: 500; 
 }
 .prose a:hover {
-    color: #004A99;
+    color: var(--color-primary-hover);
 }
 .prose strong {
     color: #1e293b; 
@@ -431,7 +432,7 @@ footer {
     transition: all 0.2s ease-in-out;
 }
 .about-lab-list li:hover {
-    border-color: #0072CE; 
+    border-color: var(--color-primary); 
     box-shadow: 0 4px 10px rgba(0, 114, 206, 0.1);
     transform: translateY(-2px);
 }
@@ -452,7 +453,7 @@ footer {
     align-items: center;
 }
 .about-lab-list .item-title .lucide {
-    color: #0072CE;
+    color: var(--color-primary);
     margin-right: 0.75rem;
     flex-shrink: 0;
 }
@@ -597,7 +598,7 @@ footer {
         margin-left: 0;
         padding-left: 0;
         background-color: #293548;
-        border-left: 3px solid #004A99;
+        border-left: 3px solid var(--color-primary-hover);
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out;
