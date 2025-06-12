@@ -1,88 +1,86 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CFD 변수들의 통계적 값 처리 - 유용한 도구 | 생물공학연구실</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <link href="{{ '/assets/css/cfd-stat.css' | relative_url }}" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8">
+  <title>데이터 평균 계산기</title>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:40px;text-align:center;}
+    #drop{border:2px dashed #888;border-radius:8px;padding:60px 20px;cursor:pointer;}
+    #drop.drag{border-color:#2196f3;background:#f1f9ff;}
+    .filename{margin-top:10px;font-weight:600;}
+    table{margin:24px auto;border-collapse:collapse;}
+    th,td{border:1px solid #ccc;padding:6px 12px;}
+  </style>
 </head>
-<body class="font-pretendard bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+<body>
+  <h1>데이터 평균 계산기</h1>
+  <div id="drop">여기로 파일을 끌어오거나 클릭하여 첨부</div>
+  <input id="file" type="file" accept=".xlsx,.xls,.csv,.txt" hidden>
+  <div id="out"></div>
 
-    <div id="fixed-top-nav-container" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="header-container flex flex-col sm:flex-row justify-between items-center py-3">
-                <h1 class="text-slate-800 mb-2 sm:mb-0">
-                    <a href="index.html" class="block no-underline hover:no-underline">
-                        <span class="block text-2xl lg:text-3xl font-bold text-slate-800">생물공학연구실</span>
-                        <span class="block text-sm lg:text-base font-normal text-gray-500 mt-1">Bioprocess Engineering Laboratory</span>
-                    </a>
-                </h1>
-        <nav id="mainNav" class="bg-slate-700 text-white border-t border-b border-slate-600">
-            <ul class="container mx-auto px-0 flex justify-center">
-            </ul>
-        </nav>
-                <div class="search-container relative flex items-center flex-shrink-0 w-full sm:w-auto sm:ml-4">
-                    <input type="text" id="searchInput" placeholder="검색..." class="px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-sm w-full sm:w-48 md:w-64">
-                    <button id="searchButton" class="px-4 py-2 bg-[#0072CE] text-white rounded-r-md hover:bg-[#004A99] text-sm border border-[#0072CE]">검색</button>
-                    <div id="suggestionsDropdown" class="absolute top-full mt-1 w-full rounded-md bg-white shadow-lg z-[60] border border-gray-200 hidden">
-                    </div>
-                </div>
-                <div id="header-helper-btn" class="helper-btn" aria-label="도우미 열기">
-                    <span class="hamster-icon">🐹</span>
-                    <span class="helper-text">뭐든 물어봐!</span>
-                </div>
-            </div>
-        </div>
-        <nav id="breadcrumbNav" aria-label="breadcrumb" class="bg-gray-100 border-b border-gray-200">
-            <div class="container mx-auto px-4 py-2 text-sm text-gray-500">
-            </div>
-        </nav>
-    </div>
+  <script>
+    const drop = document.getElementById('drop');
+    const file = document.getElementById('file');
+    const out  = document.getElementById('out');
 
-    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
-            <article class="prose max-w-none">
-                <h1>CFD 변수들의 통계적 값 처리</h1>
-                <p class="tool-desc">
-                    업로드한 데이터 파일의 <b>열별 평균</b>을 계산합니다.<br>
-                    Excel(xlsx/xls)·CSV·TXT를 지원하며 <em>첫 행은 열 이름</em>이어야 합니다.
-                </p>
-            </article>
-            <!-- === cfd-statistics|UI_START === -->
-            <div id="drop-area" class="uploader">여기로 파일을 끌어오거나 클릭하여 첨부</div>
-            <input id="file-input" type="file" accept=".xlsx,.xls,.csv,.txt" hidden>
-            <div id="result-box"></div>
-            <!-- === cfd-statistics|UI_END === -->
-        </div>
+    ['dragenter','dragover','dragleave','drop'].forEach(ev=>{
+      drop.addEventListener(ev,e=>{e.preventDefault();e.stopPropagation();});
+    });
+    drop.addEventListener('dragover',()=>drop.classList.add('drag'));
+    drop.addEventListener('dragleave',()=>drop.classList.remove('drag'));
+    drop.addEventListener('drop',e=>{
+      drop.classList.remove('drag');
+      handle(e.dataTransfer.files[0]);
+    });
+    drop.addEventListener('click',()=>file.click());
+    file.addEventListener('change',e=>handle(e.target.files[0]));
 
-        <div id="searchResultsContainer" class="mt-8 p-6 bg-white rounded-lg shadow-lg hidden">
-            <h2 class="text-2xl font-semibold mb-4 text-slate-700">검색 결과</h2>
-            <div id="searchResultsList" class="space-y-4"></div>
-        </div>
-    </main>
+    function handle(f){
+      if(!f)return;
+      drop.innerHTML = `📄 <span class="filename">${f.name}</span>`;
+      const ext = f.name.split('.').pop().toLowerCase();
+      (ext==='csv'||ext==='txt') ? readCSV(f) : readXLSX(f);
+    }
 
-    <footer class="text-center py-8 mt-12 border-t border-gray-200 bg-gray-100">
-        <div class="container mx-auto px-6 text-sm text-gray-600">
-            <p>© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.</p>
-            <p class="mt-1">강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr</p>
-            <p class="mt-1">
-                <a href="https://www.yonsei.ac.kr/sc/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline">연세대학교</a>
-                <a href="https://mirae.yonsei.ac.kr/wj/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">미래캠퍼스</a>
-                <a href="https://bst.yonsei.ac.kr/ymbst21/index.do" target="_blank" rel="noopener noreferrer" class="text-[#0072CE] hover:text-[#004A99] hover:underline ml-1">생명과학기술학부</a>
-            </p>
-            <p class="text-xs text-gray-500 mt-1">본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.</p>
-        </div>
-    </footer>
+    function readCSV(f){
+      Papa.parse(f,{
+        complete:({data})=>show(avg(data)),
+        dynamicTyping:true
+      });
+    }
+    function readXLSX(f){
+      f.arrayBuffer().then(b=>{
+        const wb=XLSX.read(b,{type:'array'});
+        const ws=wb.Sheets[wb.SheetNames[0]];
+        const data=XLSX.utils.sheet_to_json(ws,{header:1});
+        show(avg(data));
+      });
+    }
 
-    <!-- ① 로컬 복사본 (네트워크 없어도 100% 로드) -->
-    <script src="{{ '/assets/js/libs/xlsx.full.min.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/libs/papaparse.min.js' | relative_url }}"></script>
-    <!-- ② 분석 로직 (defer) -->
-    <script src="{{ '/assets/js/cfd-stat.js' | relative_url }}" defer></script>
-    <script src="script.js" type="module"></script>
+    function avg(rows){
+      const sums=[], cnts=[];
+      rows.forEach(r=>{
+        r.forEach((v,i)=>{
+          if(typeof v==='number'&&!isNaN(v)){
+            sums[i]=(sums[i]||0)+v;
+            cnts[i]=(cnts[i]||0)+1;
+          }
+        });
+      });
+      return sums.map((s,i)=>cnts[i]? (s/cnts[i]).toFixed(2) : '');
+    }
+
+    function show(a){
+      if(!a.length){out.textContent='숫자 데이터가 없습니다.';return;}
+      const head=a.map((_,i)=>String.fromCharCode(65+i));
+      const tbl=`<table>
+          <tr>${head.map(h=>`<th>${h}</th>`).join('')}</tr>
+          <tr>${a.map(v=>`<td>${v}</td>`).join('')}</tr>
+        </table>`;
+      out.innerHTML=tbl;
+    }
+  </script>
 </body>
 </html>
