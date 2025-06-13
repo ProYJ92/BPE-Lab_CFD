@@ -205,7 +205,7 @@ function downloadCSV(){
   const blob=new Blob([lines.join('\n')],{type:'text/tab-separated-values'});
   const a=document.createElement('a');
   a.href=URL.createObjectURL(blob);
-  a.download='notes.csv';
+  a.download='notes.tsv';
   a.click();
   URL.revokeObjectURL(a.href);
 }
