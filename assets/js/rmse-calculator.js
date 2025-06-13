@@ -18,6 +18,7 @@ const resultsBox = document.getElementById('results');
 const notesBox = document.getElementById('notes');
 const clearBtn = document.getElementById('clearNotes');
 const tsvBtn = document.getElementById('downloadTSV');
+const xlsxBtn = document.getElementById('downloadXLSX');
 
 let leftFile, rightFile;
 
@@ -44,6 +45,7 @@ removeLeft.addEventListener('click',()=>clearFile('left'));
 removeRight.addEventListener('click',()=>clearFile('right'));
 clearBtn.addEventListener('click',clearNotes);
 tsvBtn.addEventListener('click',downloadTSV);
+xlsxBtn.addEventListener('click', downloadXLSX);
 
 function handleFile(side,f){
   if(!f) return;
@@ -182,6 +184,18 @@ function downloadTSV(){
   a.download='rmse_notes.txt';
   a.click();
   URL.revokeObjectURL(a.href);
+}
+
+function downloadXLSX(){
+  const notes = JSON.parse(localStorage.getItem('rmseNotes') || '[]');
+  if(!notes.length) return;
+  const header = ['Index','Timestamp','ID','RMSE'];
+  const data = notes.map((n,i) => [i+1, n.ts, n.id, n.value]);
+  data.unshift(header);
+  const wb = XLSX.utils.book_new();
+  const ws = XLSX.utils.aoa_to_sheet(data);
+  XLSX.utils.book_append_sheet(wb, ws, 'RMSE Results');
+  XLSX.writeFile(wb, 'rmse_notes.xlsx');
 }
 
 (function init(){renderNotes();})();
