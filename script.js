@@ -115,6 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div id="loadingSpinner" class="spinner"></div>
                 <p data-i18n="enter_password" style="color:#fff; font-size:16px;">${jsI18n.enter_password}</p>
                 <input type="password" id="passwordInput" class="password-input" placeholder="${jsI18n.password_placeholder}" data-i18n="password_placeholder" />
+                <p id="passwordError" class="text-red-500 mt-2" style="display:none;"></p>
                 <div class="password-buttons mt-2">
                     <button id="passwordSubmit" class="mr-2 bg-blue-600 text-white px-3 py-1 rounded" data-i18n="confirm_button">${jsI18n.confirm_button}</button>
                     <button id="passwordCancel" class="bg-gray-300 text-gray-800 px-3 py-1 rounded" data-i18n="cancel_button">${jsI18n.cancel_button}</button>
@@ -123,28 +124,41 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(overlay);
         document.getElementById('passwordSubmit').addEventListener('click', checkPassword);
         document.getElementById('passwordCancel').addEventListener('click', closeOverlay);
+        document.getElementById('passwordInput').addEventListener('keyup', e => {
+            if (e.key === 'Enter') checkPassword();
+        });
         document.getElementById('passwordInput').focus();
     }
 
     function checkPassword() {
-        const input = document.getElementById('passwordInput').value;
-        fetch('/validate-password', {
+        const input = document.getElementById('passwordInput').value.trim();
+        fetch('/api/auth', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ password: input })
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.valid) {
+        .then(response => {
+            if (response.ok) {
                 sessionStorage.setItem('labResourcesAccess', 'true');
                 window.location.href = 'lab_resources.html';
             } else {
-                alert(jsI18n.wrong_password_alert);
+                const err = document.getElementById('passwordError');
+                if (err) {
+                    err.textContent = jsI18n.wrong_password_alert;
+                    err.style.display = 'block';
+                }
+                document.getElementById('passwordInput').focus();
             }
         })
-        .catch(() => alert(jsI18n.wrong_password_alert));
+        .catch(() => {
+            const err = document.getElementById('passwordError');
+            if (err) {
+                err.textContent = jsI18n.wrong_password_alert;
+                err.style.display = 'block';
+            }
+        });
     }
 
     function closeOverlay() {
