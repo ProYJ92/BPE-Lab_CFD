@@ -41,16 +41,11 @@ nav_order: 2
   <button id="clearNotes" class="text-sm text-red-600 underline" aria-label="전체 삭제">전체 삭제</button>
 </div>
 <div id="notes" class="space-y-1"></div>
-<table class="summary-table mt-4">
-  <tr>
-    <th>Index</th>
-    <th>Timestamp</th>
-    <th>ID</th>
-    <th>Sheet No.</th>
-    <th>Column No.</th>
-    <th>Details</th>
-  </tr>
-</table>
+<div id="notesHeader" class="log-row font-semibold bg-gray-100 mt-4 py-1">
+  <span class="seq">Index</span>
+  <span class="meta">Timestamp / ID / Sheet No.</span>
+  <span class="data flex-1">Details</span>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.19.3/dist/xlsx.full.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
