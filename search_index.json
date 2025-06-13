@@ -2295,14 +2295,14 @@
         "title": "비밀번호 입력",
         "breadcrumb": [
             "홈",
-            "비밀번호 입력"
+            "자료실"
         ],
         "keywords": [
             "비밀번호",
             "입력"
         ],
-        "content_snippet": "",
-        "full_text": "document.addEventListener('DOMContentLoaded', showPasswordModal);"
+        "content_snippet": "비밀번호를 입력하세요 (대소문자 구분)",
+        "full_text": "비밀번호를 입력하세요 (대소문자 구분) 확인 취소 document.addEventListener('DOMContentLoaded', () => { const encodedPassword = 'YmlvcHJvY2VzczIwMjU='; const correctPassword = atob(encodedPassword); const input = document.getElementById('passwordInput'); const error = document.getElementById('passwordError'); function handleSubmit() { const pw = input.value.trim(); if (pw === correctPassword) { localStorage.setItem('authed', 'ok'); const next = localStorage.getItem('next') || 'lab_resources.html'; window.location.href = next; } else { error.textContent = '비밀번호가 틀렸습니다. 대소문자를 정확히 입력해주세요.'; error.style.display = 'block'; input.focus(); } } document.getElementById('passwordSubmit').addEventListener('click', handleSubmit); input.addEventListener('keyup', e => { if (e.key === 'Enter') handleSubmit(); }); document.getElementById('passwordCancel').addEventListener('click', () => { if (window.history.length > 1) { window.history.back(); } else { window.location.href = 'index.html'; } }); input.focus(); });"
     },
     {
         "url": "photo_gallery.html",
