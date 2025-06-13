@@ -1118,7 +1118,7 @@
         "keywords": [
             "cfd_statisticshtml"
         ],
-        "content_snippet": "첨부 가능한 파일 형식: .txt, .csv, .xlsx",
+        "content_snippet": "첨부 가능한 파일은 하나의 시트만 포함된 Excel(xlsx)·CSV·TXT 파일이어야 합니다.",
         "full_text": ""
     },
     {
