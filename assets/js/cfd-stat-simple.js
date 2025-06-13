@@ -213,7 +213,10 @@ function downloadCSV(){
     row.push(...n.values);
     lines.push(row.join('\t'));
   });
-  const blob=new Blob([lines.join('\n')],{type:'text/csv'});
+  const blob=new Blob(
+    [lines.join('\n')],
+    {type:'text/tab-separated-values;charset=utf-8'}
+  );
   const a=document.createElement('a');
   a.href=URL.createObjectURL(blob);
   a.download='notes.csv';
