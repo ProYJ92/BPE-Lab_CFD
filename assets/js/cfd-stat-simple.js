@@ -81,22 +81,36 @@ function parseFile(f){
   }
 }
 
+function isMonotonic(arr){
+  for(let i=1;i<arr.length;i++) if(arr[i]<arr[i-1]) return false;
+  return true;
+}
+
 function processData(rows){
   if(rows.length<2) return;
   const rpm = parseFloat(rpmInput.value);
   const cycles = parseFloat(cycleInput.value);
   if(rpm<=0||cycles<=0) return;
   const precision = Math.max(parseInt(precInput.value||'3',10),0);
-  const cycleTime = 60 / rpm;
-  const tEnd = rows[rows.length-1][0];
-  const tThreshold = tEnd - cycles*cycleTime;
-  const dataRows = rows.slice(1).filter(r=>r[0]>=tThreshold);
+
+  const timeValues = rows.slice(1).map(r=>r[0]);
+  const numericTime = timeValues.every(v=>typeof v==='number' && !isNaN(v)) && isMonotonic(timeValues);
+
+  let dataRows = rows.slice(1).map(r=>r.slice());
+  if(numericTime){
+    dataRows.forEach(r=>{ r[0] = Math.round(r[0]*100)/100; });
+    const tEnd = dataRows[dataRows.length-1][0];
+    const cycleTime = 60 / rpm;
+    const cutoffTime = tEnd - cycles*cycleTime;
+    dataRows = dataRows.filter(r=>r[0] >= cutoffTime);
+  }
+
   const cols = rows[0].length;
   const means=[];
   for(let c=1;c<cols;c++){
-    const vals = dataRows.map(r=>Number(r[c])).filter(v=>!isNaN(v));
+    let vals = dataRows.map(r=>Number(r[c])).filter(v=>!isNaN(v));
     if(outlierChk.checked) removeOutliers(vals);
-    const avg = vals.length?vals.reduce((a,b)=>a+b,0)/vals.length:NaN;
+    const avg = vals.length ? vals.reduce((a,b)=>a+b,0)/vals.length : NaN;
     means.push(avg);
   }
   const formatted = means.map(v=>isNaN(v)?'NaN':v.toFixed(precision));
@@ -165,9 +179,8 @@ function deleteNote(idx){
   renderNotes();
 }
 
-function copyNote(n,idx){
-  const text=`${idx+1}\t${n.ts}\t${n.id}\t${n.sheet}\t\t${n.values.join(', ')}`;
-  navigator.clipboard.writeText(text);
+function copyNote(n){
+  navigator.clipboard.writeText(n.values.join('\t'));
 }
 
 function clearNotes(){
@@ -179,11 +192,16 @@ function clearNotes(){
 function downloadCSV(){
   const notes=JSON.parse(localStorage.getItem('cfdStatsNotes')||'[]');
   if(!notes.length) return;
-  let csv='Index,Timestamp,ID,Sheet No.,Column No.,Details\n';
+  const maxCols=Math.max(...notes.map(n=>n.values.length));
+  const header=['Index','Timestamp','ID','Sheet No.','Column No.'];
+  for(let i=1;i<=maxCols;i++) header.push(`Value${i}`);
+  const lines=[header.join('\t')];
   notes.forEach((n,i)=>{
-    csv+=`${i+1},${n.ts},${n.id},${n.sheet},,"${n.values.join(', ')}"\n`;
+    const row=[i+1,n.ts,n.id,n.sheet,''];
+    row.push(...n.values);
+    lines.push(row.join('\t'));
   });
-  const blob=new Blob([csv],{type:'text/csv'});
+  const blob=new Blob([lines.join('\n')],{type:'text/tab-separated-values'});
   const a=document.createElement('a');
   a.href=URL.createObjectURL(blob);
   a.download='notes.csv';

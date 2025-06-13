@@ -1118,7 +1118,7 @@
         "keywords": [
             "cfd_statisticshtml"
         ],
-        "content_snippet": "파일 형식: 첫 행은 헤더, 첫 열은 시간 데이터여야 합니다.",
+        "content_snippet": "첨부 가능한 파일 형식: .txt, .csv, .xlsx",
         "full_text": ""
     },
     {
