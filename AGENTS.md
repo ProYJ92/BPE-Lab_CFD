@@ -7,6 +7,7 @@ This project hosts offline-accessible static content for the BPE-Lab CFD website
 
 ## 3. Coding Style
   - Prefer Tailwind utilities; custom CSS in style.css
+  - 기본은 모바일(≤ 768 px) 기준; 'md:'(≥ 768 px) 이상에서 PC 확장.
 
 ## 4. Pull Request Rules
   - Tags: [Feat] [Fix] [Docs] [Infra] [Chore]
@@ -26,6 +27,7 @@ This project hosts offline-accessible static content for the BPE-Lab CFD website
     - 기본: `body{font-family:sans-serif}`  
     - 필요 시 `assets/fonts/Pretendard-Variable.otf` 1 파일을 두고 @font-face 선언.  
   ▸ 새 CDN 라이브러리 도입 시 동일 “CDN + Fallback(onerror)” 패턴 적용.
+  ▸ 모바일(≤ 768 px)·PC(≥ 1024 px) 모두에서 overflow 없이 표시되도록 Tailwind breakpoints를 최소 적용.
 
 ## 6. Manual Testing
 ```bash
@@ -35,6 +37,9 @@ curl -I  http://localhost:8000/index.html | grep -q '200 OK' && \
 test -f assets/videos/placeholder.mp4 && \
 echo "PASS"
 kill $!                                     # stop server
+# OPTIONAL mobile viewport check (requires chromium & imagemagick)
+# chromium --headless --window-size=375,800 http://localhost:8000 -s /tmp/mobile.png && \
+#   identify -format "%h" /tmp/mobile.png | grep -q '[1-9]'
 ```
 
 ## 7. History
@@ -47,3 +52,4 @@ kill $!                                     # stop server
 * [ ] tailwind.offline.css ≤ 30 KB
 * [ ] placeholder.mp4 ≤ 200 KB
 * [ ] Manual Testing 스크립트 통과
+* [ ] 375 px 모바일 뷰포트에서 화면 깨짐 없음 확인

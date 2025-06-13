@@ -11,6 +11,7 @@ This repository hosts materials for the BPE-Lab CFD website.
 |                        | **link onerror** trigger                            |
 
 <!-- *오프라인 컨테이너는 JS 차단 상태일 수도 있으나, CDN 404 상황까지 아우르기 위해 onerror 방식을 기본값으로 채택합니다.* -->
+<!-- Mobile viewport (≤ 768 px)는 Tailwind mobile-first 기본값으로 자동 대응됩니다. -->
 
 ## Local Development
 
