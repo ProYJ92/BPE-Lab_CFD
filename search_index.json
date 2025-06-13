@@ -2291,6 +2291,20 @@
         "full_text": "생물공학연구실 검색 🐹 뭐든 물어봐! &laquo; OpenFOAM 메인으로 돌아가기 6. Verification & Validation (검증 및 타당성 평가) OpenFOAM은 오픈 소스 소프트웨어로서 그 신뢰성과 정확성을 확보하기 위해 커뮤니티와 개발팀에 의해 지속적으로 검증(Verification) 및 타당성 평가(Validation, V&V) 작업이 이루어집니다. 소프트웨어 품질 관리의 일환으로, OpenFOAM의 각 버전(예: OpenFOAM 12, v2412 등)은 다양한 산업 표준 테스트 케이스 및 학술적 벤치마크 문제에 대해 정기적으로 테스트됩니다. 특히 최신 버전에서는 다상 유동, 난류, 열 전달, 입자 추적 모델 등이 개선됨에 따라, 이들 모델에 대한 V&V 사례가 공식 문서 및 커뮤니티를 통해 지속적으로 업데이트되고 있습니다. V&V 절차 및 접근법 Verification (검증) : 수학적 모델(지배 방정식 및 이산화된 방정식)이 코드 내에서 정확하게 구현되고 풀렸는지, 수치 해법 자체의 프로그래밍 오류가 없는지 확인하는 과정입니다. 주요 검증 활동은 다음과 같습니다: 격자 수렴성 테스트 (Grid Convergence Study) : 동일 문제에 대해 격자 크기/밀도를 체계적으로 변경하며 해의 변화를 관찰하고, 격자 크기에 따른 해의 수렴성을 평가하여 이산화 오류를 정량화합니다 (예: Richardson Extrapolation). 시간 간격 수렴성 테스트 (Time-step Convergence Study) : 비정상 상태 문제에서 시간 간격 크기를 변경하며 해의 수렴성을 평가합니다. 코드 간 비교 (Code-to-code Comparison) : 잘 알려진 다른 CFD 코드나 해석해/정확해와 비교하여 코드의 기본적인 정확성을 검증합니다. OpenFOAM 내 다양한 솔버 또는 이산화 스킴 간의 비교도 포함될 수 있습니다. 단위 테스트 (Unit Testing) 및 회귀 테스트 (Regression Testing) : 코드의 개별 모"
     },
     {
+        "url": "password.html",
+        "title": "비밀번호 입력",
+        "breadcrumb": [
+            "홈",
+            "비밀번호 입력"
+        ],
+        "keywords": [
+            "비밀번호",
+            "입력"
+        ],
+        "content_snippet": "",
+        "full_text": "document.addEventListener('DOMContentLoaded', showPasswordModal);"
+    },
+    {
         "url": "photo_gallery.html",
         "title": "사진 갤러리 - 연구실 소개 - 생물공학연구실",
         "breadcrumb": [
