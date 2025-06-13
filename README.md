@@ -20,3 +20,11 @@ The site will be available at `http://localhost:3000` by default.
 This project is licensed under the [MIT License](LICENSE).
 
 
+
+## Contributing & CI
+
+Run a basic server for local review with:
+
+```bash
+python3 -m http.server
+```
