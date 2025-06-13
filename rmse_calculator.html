@@ -11,6 +11,7 @@
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/cfd-stat.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/js/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
 <body class="font-pretendard bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
@@ -51,7 +52,14 @@
                 <h1>RMSE 계산기</h1>
                 <p>예측값과 실측값의 오차를 평가하기 위한 RMSE 계산 도구입니다.</p>
                 <div class="mb-4 text-sm text-gray-600 space-y-1">
-                    <p><strong>RMSE 수식:</strong> RMSE = sqrt(1/n Σ (y_i - ŷ_i)^2)</p>
+                    <p><strong>RMSE 수식:</strong></p>
+                    <p>\[ \text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2} \]</p>
+                    <p>
+                        <strong>기호 설명:</strong><br>
+                        \( \hat{y}_i \): 예측값 (predicted value) <br>
+                        \( y_i \): 실제값 (observed value) <br>
+                        \( n \): 데이터 포인트 개수 (number of data points)
+                    </p>
                     <p><strong>단일 시트로 구성된 파일만 첨부해 주세요.</strong></p>
                     <p><strong>첨부 가능한 파일 형식:</strong> .txt, .csv, .xlsx</p>
                     <p><strong>데이터 형식:</strong> 첫 행은 헤더, 세 번째 열에 데이터 값이 위치해야 합니다.</p>
@@ -90,6 +98,7 @@
                 <h2 class="text-xl font-semibold mt-8">노트</h2>
                 <div class="flex gap-2 mt-2 mb-1">
                     <button id="downloadTSV" class="text-sm text-blue-600 underline" aria-label="TXT 다운로드">TXT 다운로드</button>
+                    <button id="downloadXLSX" class="text-sm text-blue-600 underline" aria-label="엑셀 다운로드">엑셀 다운로드</button>
                     <button id="clearNotes" class="text-sm text-red-600 underline" aria-label="전체 삭제">전체 삭제</button>
                 </div>
                 <div id="notesHeader" class="log-row font-semibold bg-gray-100 mb-4 py-1">
@@ -121,7 +130,7 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.19.3/dist/xlsx.full.min.js"></script>
+    <script src="assets/js/libs/xlsx.full.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="assets/js/rmse-calculator.js"></script>
