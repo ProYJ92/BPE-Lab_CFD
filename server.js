@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const PASSWORD = process.env.ACCESS_PASSWORD;
+const PASSWORD = process.env.ACCESS_PASSWORD || 'bioprocess2025';
 
 app.use(express.json());
 app.use(express.static(__dirname));
