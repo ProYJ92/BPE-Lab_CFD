@@ -106,51 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function showPasswordModal(event) {
-        if (event) event.preventDefault();
-        const overlay = document.createElement('div');
-        overlay.id = 'passwordOverlay';
-        overlay.innerHTML = `
-            <div id="overlayContent">
-                <div id="loadingSpinner" class="spinner"></div>
-                <p data-i18n="enter_password" style="color:#fff; font-size:16px;">${jsI18n.enter_password}</p>
-                <input type="password" id="passwordInput" class="password-input" placeholder="${jsI18n.password_placeholder}" data-i18n="password_placeholder" />
-                <p id="passwordError" class="text-red-500 mt-2" style="display:none;"></p>
-                <div class="password-buttons mt-2">
-                    <button id="passwordSubmit" class="mr-2 bg-blue-600 text-white px-3 py-1 rounded" data-i18n="confirm_button">${jsI18n.confirm_button}</button>
-                    <button id="passwordCancel" class="bg-gray-300 text-gray-800 px-3 py-1 rounded" data-i18n="cancel_button">${jsI18n.cancel_button}</button>
-                </div>
-            </div>`;
-        document.body.appendChild(overlay);
-        document.getElementById('passwordSubmit').addEventListener('click', checkPassword);
-        document.getElementById('passwordCancel').addEventListener('click', closeOverlay);
-        document.getElementById('passwordInput').addEventListener('keyup', e => {
-            if (e.key === 'Enter') checkPassword();
-        });
-        document.getElementById('passwordInput').focus();
-    }
-
-    function checkPassword() {
-        const pw = document.getElementById('passwordInput').value.trim();
-        if (pw === 'bioprocess2025') {
-            localStorage.setItem('authed', 'ok');
-            const next = localStorage.getItem('next') || '/library/';
-            location.href = next;
-        } else {
-            const err = document.getElementById('passwordError');
-            if (err) err.style.display = 'block';
-        }
-    }
-
-    function closeOverlay() {
-        const overlay = document.getElementById('passwordOverlay');
-        if (overlay) overlay.remove();
-        if (window.history.length > 1) {
-            window.history.back();
-        } else {
-            window.location.href = 'index.html';
-        }
-    }
+    
 
     const defaultTexts = { ...jsI18n };
 
@@ -692,15 +648,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(sentinel);
     }
 
-    const resourcesMenuLink = document.querySelector('li[data-menu="resources"] > a');
-    if (resourcesMenuLink) {
-        resourcesMenuLink.addEventListener('click', e => {
-            if (localStorage.getItem('authed') === 'ok') return;
-            e.preventDefault();
-            localStorage.setItem('next', resourcesMenuLink.getAttribute('href'));
-            showPasswordModal(e);
-        });
-    }
+
 
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
