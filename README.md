@@ -14,13 +14,14 @@ This repository hosts materials for the BPE-Lab CFD website.
 <!-- Mobile viewport (≤ 768 px)는 Tailwind mobile-first 기본값으로 자동 대응됩니다. -->
 
 ## Local Development
-1. `.env` 파일에 비밀값을 정의합니다.
-   ACCESS_PASSWORD=<YOUR_SECRET>
-2. 서버 실행  
-   node server.js            # macOS/Linux  
-   set ACCESS_PASSWORD=<YOUR_SECRET> && node server.js   # Windows
+정적 파일만으로 동작하므로 별도 서버가 필요하지 않습니다. 로컬에서 확인할 때는
+간단한 웹 서버를 실행하면 됩니다.
 
-The site will be available at `http://localhost:3000` by default.
+```
+python3 -m http.server
+```
+
+브라우저에서 [http://localhost:8000](http://localhost:8000) 으로 접속하세요.
 
 ## Folder Structure
 ```
@@ -36,6 +37,12 @@ assets/
 
 ## Contributing
 로컬 확인 : python3 -m http.server → http://localhost:8000
+
+## Password Protection
+일부 페이지는 비밀번호 `bioprocess2025`로 보호됩니다. 비밀번호는 코드에
+Base64 문자열(`YmlvcHJvY2VzczIwMjU=`) 형태로 저장되어 있으며, 올바른 값을 입력
+하면 브라우저 `localStorage`에 인증 상태가 기록되어 재방문 시 다시 입력할 필요가
+없습니다.
 
 ## License
 
