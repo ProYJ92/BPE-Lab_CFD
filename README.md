@@ -20,3 +20,13 @@ The site will be available at `http://localhost:3000` by default.
 This project is licensed under the [MIT License](LICENSE).
 
 
+
+## Contributing & CI
+
+To preview the site locally, run:
+
+```bash
+python3 -m http.server
+```
+
+GitHub Actions run `node verify_agent_doc.js` and `tidy -q -errors *.html` to validate documentation and HTML.
