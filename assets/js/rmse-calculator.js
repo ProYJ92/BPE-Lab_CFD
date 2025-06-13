@@ -76,24 +76,26 @@ function parseFileData(f, warnEl){
   return new Promise(resolve=>{
     const ext=f.name.split('.').pop().toLowerCase();
     if(ext==='csv'||ext==='txt'){
-      warnEl.classList.add('hidden');
-      Papa.parse(f,{header:false,dynamicTyping:true,skipEmptyLines:true,complete:res=>{
-        const arr=res.data.slice(1).map(r=>Number(r[2]||0));
-        resolve(arr.map(v=>isNaN(v)?0:v));
+      Papa.parse(f,{header:false,dynamicTyping:true,skipEmptyLines:true,delimiter:ext==='txt'? '\t':undefined,complete:res=>{
+        const rows=res.data.slice(1);
+        const msgs=[];
+        if(!rows.some(r=>r.length>2&&r[2]!==''&&r[2]!==undefined)) msgs.push('⚠ 3열에 데이터가 없습니다.');
+        if(msgs.length){warnEl.textContent=msgs.join(' ');warnEl.classList.remove('hidden');}else warnEl.classList.add('hidden');
+        const arr=rows.map(r=>{const v=Number(r[2]||0);return isNaN(v)?0:v;});
+        resolve(arr);
       }});
     }else{
       f.arrayBuffer().then(buf=>{
         const wb=XLSX.read(buf,{type:'array'});
-        if(wb.SheetNames.length>1){
-          warnEl.textContent='⚠ 여러 시트가 포함된 파일입니다. 첫 번째 시트만 사용됩니다.';
-          warnEl.classList.remove('hidden');
-        } else {
-          warnEl.classList.add('hidden');
-        }
+        const msgs=[];
+        if(wb.SheetNames.length>1) msgs.push('⚠ 여러 시트가 포함된 파일입니다. 첫 번째 시트만 사용됩니다.');
         const ws=wb.Sheets[wb.SheetNames[0]];
         const rows=XLSX.utils.sheet_to_json(ws,{header:1});
-        const arr=rows.slice(1).map(r=>Number(r[2]||0));
-        resolve(arr.map(v=>isNaN(v)?0:v));
+        const dataRows=rows.slice(1);
+        if(!dataRows.some(r=>r.length>2&&r[2]!==''&&r[2]!==undefined)) msgs.push('⚠ 3열에 데이터가 없습니다.');
+        if(msgs.length){warnEl.textContent=msgs.join(' ');warnEl.classList.remove('hidden');}else warnEl.classList.add('hidden');
+        const arr=dataRows.map(r=>{const v=Number(r[2]||0);return isNaN(v)?0:v;});
+        resolve(arr);
       });
     }
   });
