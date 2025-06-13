@@ -9,6 +9,8 @@ const analyzeBtn = document.getElementById('analyze');
 const resultsBox = document.getElementById('results');
 const notesBox = document.getElementById('notes');
 const removeBtn = document.getElementById('removeFile');
+const clearBtn = document.getElementById('clearNotes');
+const csvBtn = document.getElementById('downloadCSV');
 let currentFile;
 
 ['dragenter','dragover','dragleave','drop'].forEach(ev=>{
@@ -25,6 +27,8 @@ drop.addEventListener('drop',e=>{
 drop.addEventListener('click',()=>fileInput.click());
 fileInput.addEventListener('change',e=>handleFile(e.target.files[0]));
 removeBtn.addEventListener('click',clearFile);
+clearBtn.addEventListener('click',clearNotes);
+csvBtn.addEventListener('click',downloadCSV);
 
 function handleFile(f){
   if(!f) return;
@@ -53,7 +57,9 @@ function clearFile(){
 });
 
 function checkReady(){
-  analyzeBtn.disabled = !(currentFile && rpmInput.value && cycleInput.value);
+  const rpm=parseFloat(rpmInput.value);
+  const cyc=parseFloat(cycleInput.value);
+  analyzeBtn.disabled = !(currentFile && rpm>0 && cyc>0);
 }
 
 analyzeBtn.addEventListener('click',()=>{
@@ -79,7 +85,8 @@ function processData(rows){
   if(rows.length<2) return;
   const rpm = parseFloat(rpmInput.value);
   const cycles = parseFloat(cycleInput.value);
-  const precision = parseInt(precInput.value||'3',10);
+  if(rpm<=0||cycles<=0) return;
+  const precision = Math.max(parseInt(precInput.value||'3',10),0);
   const cycleTime = 60 / rpm;
   const tEnd = rows[rows.length-1][0];
   const tThreshold = tEnd - cycles*cycleTime;
@@ -131,15 +138,22 @@ function renderNotes(){
   const notes=JSON.parse(localStorage.getItem('cfdStatsNotes')||'[]');
   notesBox.innerHTML='';
   notes.forEach((n,i)=>{
-    const div=document.createElement('div');
-    div.className='note-item flex justify-between items-center border-b py-1';
-    div.innerHTML=`<span>${i+1} / ${n.ts} / ${n.id} / ${n.sheet} / ${n.values.join(', ')}</span>`;
-    const btn=document.createElement('button');
-    btn.innerHTML='<i data-lucide="x" class="w-4 h-4"></i>';
-    btn.setAttribute('aria-label','기록 삭제');
-    btn.addEventListener('click',()=>deleteNote(i));
-    div.appendChild(btn);
-    notesBox.appendChild(div);
+    const row=document.createElement('div');
+    row.className='log-row border-b py-1';
+    row.innerHTML=`<span class="seq">${i+1}</span><span class="meta">${n.ts} / ${n.id} / ${n.sheet}</span><span class="data">${n.values.join(', ')}</span>`;
+    const copy=document.createElement('button');
+    copy.className='copy-btn';
+    copy.setAttribute('aria-label','복사');
+    copy.innerHTML='<i data-lucide="copy"></i>';
+    copy.addEventListener('click',()=>copyNote(n,i));
+    const del=document.createElement('button');
+    del.className='del-btn';
+    del.setAttribute('aria-label','삭제');
+    del.innerHTML='<i data-lucide="x"></i>';
+    del.addEventListener('click',()=>deleteNote(i));
+    row.appendChild(copy);
+    row.appendChild(del);
+    notesBox.appendChild(row);
   });
   lucide.createIcons();
 }
@@ -149,6 +163,32 @@ function deleteNote(idx){
   notes.splice(idx,1);
   localStorage.setItem('cfdStatsNotes',JSON.stringify(notes));
   renderNotes();
+}
+
+function copyNote(n,idx){
+  const text=`${idx+1}\t${n.ts}\t${n.id}\t${n.sheet}\t\t${n.values.join(', ')}`;
+  navigator.clipboard.writeText(text);
+}
+
+function clearNotes(){
+  if(!confirm('모든 노트를 삭제하시겠습니까?')) return;
+  localStorage.removeItem('cfdStatsNotes');
+  renderNotes();
+}
+
+function downloadCSV(){
+  const notes=JSON.parse(localStorage.getItem('cfdStatsNotes')||'[]');
+  if(!notes.length) return;
+  let csv='Index,Timestamp,ID,Sheet No.,Column No.,Details\n';
+  notes.forEach((n,i)=>{
+    csv+=`${i+1},${n.ts},${n.id},${n.sheet},,"${n.values.join(', ')}"\n`;
+  });
+  const blob=new Blob([csv],{type:'text/csv'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='notes.csv';
+  a.click();
+  URL.revokeObjectURL(a.href);
 }
 
 (function init(){renderNotes();})();

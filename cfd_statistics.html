@@ -7,7 +7,14 @@ nav_order: 2
 
 <link rel="stylesheet" href="{{ '/assets/css/cfd-stat.css' | relative_url }}">
 
-<h1 class="text-2xl font-bold mb-4">데이터 평균 계산기</h1>
+<h1 class="text-2xl font-bold mb-2">CFD Data Summary Analyzer</h1>
+<div class="mb-4 text-sm text-gray-600 space-y-1">
+  <p><strong>파일 형식:</strong> 첫 행은 헤더, 첫 열은 시간 데이터여야 합니다.</p>
+  <p><strong>사이클 정의:</strong> 1 cycle = 60 / RPM (초)로 계산합니다.</p>
+  <p><strong>데이터 범위:</strong> 입력한 마지막 N개 사이클만 평균 계산에 사용됩니다.</p>
+  <p><strong>아웃라이어 제거:</strong> IQR 방식으로 이상치를 제거합니다.</p>
+  <p><strong>ID 생성:</strong> 파일 이름의 앞 두 글자와 마지막 두 글자를 결합합니다.</p>
+</div>
 <div id="drop" tabindex="0" role="button" aria-label="파일 업로드 영역" class="mb-4">여기로 파일을 끌어오거나 클릭하여 첨부</div>
 <input id="file" type="file" accept=".xlsx,.xls,.csv,.txt" hidden>
 <div id="fileInfo" class="mb-4 hidden flex items-center gap-2">
@@ -28,9 +35,23 @@ nav_order: 2
 <div id="results" class="mt-4"></div>
 
 <h2 class="text-xl font-semibold mt-8">노트</h2>
-<div id="notes" class="mt-2 space-y-1"></div>
+<div class="flex gap-2 mt-2 mb-1">
+  <button id="downloadCSV" class="text-sm text-blue-600 underline" aria-label="CSV 다운로드">CSV 다운로드</button>
+  <button id="clearNotes" class="text-sm text-red-600 underline" aria-label="전체 삭제">전체 삭제</button>
+</div>
+<div id="notes" class="space-y-1"></div>
+<table class="summary-table mt-4">
+  <tr>
+    <th>Index</th>
+    <th>Timestamp</th>
+    <th>ID</th>
+    <th>Sheet No.</th>
+    <th>Column No.</th>
+    <th>Details</th>
+  </tr>
+</table>
 
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.19.3/dist/xlsx.full.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-<script src="{{ '/assets/js/cfd-stat-simple.js' | relative_url }}?v=1"></script>
+<script src="{{ '/assets/js/cfd-stat-simple.js' | relative_url }}?v=2"></script>
