@@ -1,28 +1,25 @@
 # Project Guidelines
 
-## Purpose
-This project provides offline-accessible static educational content for the BPE-Lab CFD website.
+## 1. Purpose
+Offline-accessible static educational content for the BPE-Lab CFD website.
 
-## Folder Structure
+## 2. Folder Structure
 - `index.html` entry point
 - `css/tailwind.min.css` Tailwind CSS (local copy)
-- `css/style.css` custom styles
-- `js/script.js` main JavaScript
-- `js/vendor/` third party scripts
+- `style.css` custom styles
+- `script.js` main JavaScript
 - `assets/` images and fonts
 
-## Coding Style
+## 3. Coding Style
 - Use descriptive class names where custom CSS is required.
 - Reuse Tailwind utility classes when possible to keep CSS minimal.
 
-## Pull Request Rules
-- Title must start with `[Feat]`, `[Fix]`, or `[Docs]` as appropriate.
+## 4. Pull Request Rules
+- Title must start with `[Feat]`, `[Fix]`, or `[Docs]`.
 - Provide a short summary and include a "Testing Done" section describing manual and CI test results.
 
-## Manual Testing
-`python3 -m http.server → 브라우저 확인 (index.html 200 OK)`
-
-## 5. 테스트 & 품질
+## 5. Manual Testing
+`python3 -m http.server → HTTP 200 확인`
 
 ## 6. 수정 히스토리
 - v0.2 — YYYY-MM-DD : static tool bootstrap
