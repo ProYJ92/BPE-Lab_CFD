@@ -37,7 +37,6 @@ This project provides offline-accessible static educational content for the BPE-
 
 ## 6. 수정 히스토리
 - v0.2 — YYYY-MM-DD : static tool bootstrap
-- v0.3 — 2025-06-13 : add product page and offline updates
 
 ## 7. 체크리스트
 - [ ] offline_cache 재생성 시 tools/tailwindcss로 CSS 리빌드
