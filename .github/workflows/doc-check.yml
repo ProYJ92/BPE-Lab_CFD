@@ -17,18 +17,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: bash scripts/restore-modules.sh
-      - name: Validate HTML structure
-        run: tools/html-validate "**/*.html"
-      - name: Check tidy errors
-        run: |
-          tools/tidy -q -errors $(find . -name '*.html') 2> tidy-report.txt || true
-          if grep -E 'Error:' tidy-report.txt; then
-            cat tidy-report.txt
-            exit 1
-          fi
-      - name: Check broken links
-        run: |
-          tools/lychee --offline ./ | tee lychee.txt
-          if grep -E '\[ERROR\]' lychee.txt; then
-            exit 1
-          fi
+      - run: node verify_agent_doc.js
+      - run: tools/html-validate "**/*.html"

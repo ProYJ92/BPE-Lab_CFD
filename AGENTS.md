@@ -1,39 +1,29 @@
-# Project Guidelines
+# Offline Codex Guide
 
-## Purpose
-This project provides offline-accessible static educational content for the BPE-Lab CFD website.
+## 1. Purpose
+Offline-ready educational materials for the BPE-Lab CFD website.
 
-## Folder Structure
+## 2. Folder Structure
 - `index.html` entry point
 - `css/tailwind.min.css` Tailwind CSS (local copy)
-- `css/style.css` custom styles
-- `js/script.js` main JavaScript
-- `js/vendor/` third party scripts
+- `style.css` custom styles
+- `js/` scripts
 - `assets/` images and fonts
 
-## Coding Style
-- Use descriptive class names where custom CSS is required.
-- Reuse Tailwind utility classes when possible to keep CSS minimal.
+## 3. Coding Style
+- Prefer Tailwind utility classes over custom CSS.
+- Use clear semantic HTML.
 
-## Pull Request Rules
-- Title must start with `[Feat]`, `[Fix]`, or `[Docs]` as appropriate.
-- Provide a short summary and include a "Testing Done" section describing manual and CI test results.
+## 4. Pull Request Rules
+- Title starts with `[Feat]`, `[Fix]`, or `[Docs]`.
+- Summary must include a "Testing Done" section.
 
-## Manual Testing
-1. Serve files locally:
-   ```bash
-   python3 -m http.server
-   ```
-2. Open `http://localhost:8000` in a browser and verify pages load without external resources.
-
-## 5. 테스트 & 품질
-| 항목 | 명령 |
-|------|-----|
-| tidy | `tools/tidy` |
-| html-validate | `tools/html-validate "**/*.html"` |
-| lychee | `tools/lychee --offline ./` |
-| tailwindcss build | `tools/tailwindcss build` |
-| node_modules cache | `scripts/restore-modules.sh` |
+## 5. 오프라인 Codex 절차
+```bash
+tools/html-validate "**/*.html"
+python3 -m http.server &
+curl -sf http://localhost:8000/index.html > /dev/null
+```
 
 ## 6. 수정 히스토리
 - v0.2 — YYYY-MM-DD : static tool bootstrap
