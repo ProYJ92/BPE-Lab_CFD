@@ -16,7 +16,14 @@ The site will be available at `http://localhost:3000` by default.
  
 
 ## Contributing
-로컬 확인 : python3 -m http.server → http://localhost:8000
+
+For offline development, run:
+
+```bash
+python3 -m http.server
+```
+
+
 
 ## License
 
