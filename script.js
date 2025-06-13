@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "back_to_top_label": "맨 위로 가기",
         "back_to_top_text": "↑ Top"
     };
-    const encodedPassword = "YmlvcHJvY2VzczIwMjU=";
     const fixedNavContainer = document.getElementById('fixed-top-nav-container');
     const mainNav = document.getElementById('mainNav');
     const breadcrumbNav = document.getElementById('breadcrumbNav');
@@ -71,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const currentPage = window.location.pathname.split('/').pop();
     if (currentPage === 'lab_resources.html' || currentPage === 'resources.html') {
-        const accessGranted = localStorage.getItem('labResourcesAccess') === 'true';
-        if (!accessGranted) {
-            showPasswordModal();
+        if (localStorage.getItem('authed') !== 'ok') {
+            localStorage.setItem('next', location.pathname);
+            window.location.href = '/password.html';
             return;
         }
     }
@@ -132,18 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function checkPassword() {
-        const input = document.getElementById('passwordInput').value.trim();
-        const decoded = atob(encodedPassword);
-        if (input === decoded) {
-            localStorage.setItem('labResourcesAccess', 'true');
-            window.location.href = 'lab_resources.html';
+        const pw = document.getElementById('passwordInput').value.trim();
+        if (pw === 'bioprocess2025') {
+            localStorage.setItem('authed', 'ok');
+            const next = localStorage.getItem('next') || '/library/';
+            location.href = next;
         } else {
             const err = document.getElementById('passwordError');
-            if (err) {
-                err.textContent = jsI18n.wrong_password_alert;
-                err.style.display = 'block';
-            }
-            document.getElementById('passwordInput').focus();
+            if (err) err.style.display = 'block';
         }
     }
 
@@ -699,7 +694,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const resourcesMenuLink = document.querySelector('li[data-menu="resources"] > a');
     if (resourcesMenuLink) {
-        resourcesMenuLink.addEventListener('click', showPasswordModal);
+        resourcesMenuLink.addEventListener('click', e => {
+            if (localStorage.getItem('authed') === 'ok') return;
+            e.preventDefault();
+            localStorage.setItem('next', resourcesMenuLink.getAttribute('href'));
+            showPasswordModal(e);
+        });
     }
 
     const searchInput = document.getElementById('searchInput');
