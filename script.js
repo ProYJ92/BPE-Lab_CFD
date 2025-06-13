@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "helper_link_meta_eng": "🧬 시스템 대사공학과 배지 최적화의 중요성, 알고 싶으세요?",
         "helper_link_cfd": "💻 CFD(전산유체역학)를 쉽게 이해하고 싶으신가요?",
         "helper_link_digital_twin": "🌐 디지털 트윈을 이용한 바이오공정, 어떻게 구현할 수 있을까요?",
+        "helper_link_useful_tools": "🔧 유용한 연구 도구가 필요하세요? 여기서 바로 사용해보세요!",
         "helper_link_lab_resources": "📚 유용한 자료가 필요하세요? 여기서 바로 찾아보세요!",
         "back_to_top_label": "맨 위로 가기",
         "back_to_top_text": "↑ Top"
@@ -910,6 +911,7 @@ if (!helperBtn) {
         <li><a href="meta_eng_main.html" aria-label="시스템 대사공학" data-i18n="helper_link_meta_eng">${jsI18n.helper_link_meta_eng}</a></li>
         <li><a href="cfd_main.html" aria-label="CFD 소개" data-i18n="helper_link_cfd">${jsI18n.helper_link_cfd}</a></li>
         <li><a href="digital_twin_main.html" aria-label="디지털 트윈" data-i18n="helper_link_digital_twin">${jsI18n.helper_link_digital_twin}</a></li>
+        <li><a href="useful_tools.html" aria-label="유용한 도구" data-i18n="helper_link_useful_tools">${jsI18n.helper_link_useful_tools}</a></li>
         <li><a href="lab_resources.html" aria-label="연구실 자료" data-i18n="helper_link_lab_resources">${jsI18n.helper_link_lab_resources}</a></li>
     </ul>`;
 
