@@ -219,7 +219,7 @@ function downloadTSV(){
   );
   const a=document.createElement('a');
   a.href=URL.createObjectURL(blob);
-  a.download='notes.tsv';
+  a.download='notes.txt';
   a.click();
   URL.revokeObjectURL(a.href);
 }
