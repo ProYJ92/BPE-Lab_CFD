@@ -10,7 +10,7 @@ const resultsBox = document.getElementById('results');
 const notesBox = document.getElementById('notes');
 const removeBtn = document.getElementById('removeFile');
 const clearBtn = document.getElementById('clearNotes');
-const csvBtn = document.getElementById('downloadCSV');
+const tsvBtn = document.getElementById('downloadTSV');
 const sheetWarn = document.getElementById('sheetWarning');
 let currentFile;
 
@@ -29,7 +29,7 @@ drop.addEventListener('click',()=>fileInput.click());
 fileInput.addEventListener('change',e=>handleFile(e.target.files[0]));
 removeBtn.addEventListener('click',clearFile);
 clearBtn.addEventListener('click',clearNotes);
-csvBtn.addEventListener('click',downloadCSV);
+tsvBtn.addEventListener('click',downloadTSV);
 
 function handleFile(f){
   if(!f) return;
@@ -201,7 +201,7 @@ function clearNotes(){
   renderNotes();
 }
 
-function downloadCSV(){
+function downloadTSV(){
   const notes=JSON.parse(localStorage.getItem('cfdStatsNotes')||'[]');
   if(!notes.length) return;
   const maxCols=Math.max(...notes.map(n=>n.values.length));
@@ -219,7 +219,7 @@ function downloadCSV(){
   );
   const a=document.createElement('a');
   a.href=URL.createObjectURL(blob);
-  a.download='notes.csv';
+  a.download='notes.tsv';
   a.click();
   URL.revokeObjectURL(a.href);
 }
