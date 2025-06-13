@@ -1,5 +1,5 @@
-#drop{border:2px dashed #888;border-radius:8px;padding:60px 20px;text-align:center;cursor:pointer;}
-#drop.drag{border-color:#2196f3;background:#f1f9ff;}
+#drop,#dropLeft,#dropRight{border:2px dashed #888;border-radius:8px;padding:60px 20px;text-align:center;cursor:pointer;}
+#drop.drag,#dropLeft.drag,#dropRight.drag{border-color:#2196f3;background:#f1f9ff;}
 #inputSection label{display:flex;align-items:center;gap:4px;}
 #results table{margin-top:1rem;border-collapse:collapse;width:100%;}
 #results th,#results td{border:1px solid #ccc;padding:4px 8px;text-align:center;}
