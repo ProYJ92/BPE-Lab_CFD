@@ -11,6 +11,7 @@ const notesBox = document.getElementById('notes');
 const removeBtn = document.getElementById('removeFile');
 const clearBtn = document.getElementById('clearNotes');
 const csvBtn = document.getElementById('downloadCSV');
+const sheetWarn = document.getElementById('sheetWarning');
 let currentFile;
 
 ['dragenter','dragover','dragleave','drop'].forEach(ev=>{
@@ -38,6 +39,7 @@ function handleFile(f){
   document.getElementById('fileName').textContent = f.name;
   document.getElementById('fileInfo').classList.remove('hidden');
   document.getElementById('inputSection').classList.remove('hidden');
+  sheetWarn.classList.add('hidden');
   checkReady();
 }
 
@@ -49,6 +51,7 @@ function clearFile(){
   document.getElementById('inputSection').classList.add('hidden');
   resultsBox.innerHTML = '';
   fileInput.value = '';
+  sheetWarn.classList.add('hidden');
   checkReady();
 }
 
@@ -70,10 +73,17 @@ analyzeBtn.addEventListener('click',()=>{
 function parseFile(f){
   const ext = f.name.split('.').pop().toLowerCase();
   if(ext==='csv'||ext==='txt'){
+    sheetWarn.classList.add('hidden');
     Papa.parse(f,{header:false,dynamicTyping:true,skipEmptyLines:true,complete:res=>processData(res.data)});
   }else{
     f.arrayBuffer().then(buf=>{
       const wb = XLSX.read(buf,{type:'array'});
+      if(wb.SheetNames.length>1){
+        sheetWarn.textContent='⚠ 여러 시트가 포함된 파일입니다. 첫 번째 시트만 분석됩니다.';
+        sheetWarn.classList.remove('hidden');
+      } else {
+        sheetWarn.classList.add('hidden');
+      }
       const ws = wb.Sheets[wb.SheetNames[0]];
       const arr = XLSX.utils.sheet_to_json(ws,{header:1});
       processData(arr);
@@ -141,8 +151,9 @@ function showResult(vals,headers){
 function saveNote(values){
   const ts = dayjs().format('YYMMDD-HH:mm');
   const name = currentFile.name.replace(/\.[^.]+$/,'');
-  const id = name.slice(0,2)+name.slice(-2);
-  const note={ts,id,sheet:1,values};
+  const cleaned = name.replace(/[^A-Za-z0-9가-힣]/g,'');
+  const id = cleaned.length<=12 ? cleaned : cleaned.slice(0,6)+cleaned.slice(-6);
+  const note={ts,id,values};
   const notes=JSON.parse(localStorage.getItem('cfdStatsNotes')||'[]');
   notes.push(note);
   localStorage.setItem('cfdStatsNotes',JSON.stringify(notes));
@@ -155,7 +166,7 @@ function renderNotes(){
   notes.forEach((n,i)=>{
     const row=document.createElement('div');
     row.className='log-row border-b py-1';
-    row.innerHTML=`<span class="seq">${i+1}</span><span class="meta">${n.ts} / ${n.id} / ${n.sheet}</span><span class="data">${n.values.join(', ')}</span>`;
+    row.innerHTML=`<span class="seq">${i+1}</span><span class="meta">${n.ts} / ${n.id}</span><span class="data">${n.values.join(', ')}</span>`;
     const copy=document.createElement('button');
     copy.className='copy-btn';
     copy.setAttribute('aria-label','복사');
@@ -194,11 +205,11 @@ function downloadCSV(){
   const notes=JSON.parse(localStorage.getItem('cfdStatsNotes')||'[]');
   if(!notes.length) return;
   const maxCols=Math.max(...notes.map(n=>n.values.length));
-  const header=['Index','Timestamp','ID','Sheet No.','Column No.'];
+  const header=['Index','Timestamp','ID'];
   for(let i=1;i<=maxCols;i++) header.push(`Value${i}`);
   const lines=[header.join('\t')];
   notes.forEach((n,i)=>{
-    const row=[i+1,n.ts,n.id,n.sheet,''];
+    const row=[i+1,n.ts,n.id];
     row.push(...n.values);
     lines.push(row.join('\t'));
   });
