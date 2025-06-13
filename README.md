@@ -17,10 +17,13 @@ This repository hosts materials for the BPE-Lab CFD website.
 
 The site can be served using the provided `server.js`. The server reads the
 protected resource password from the `ACCESS_PASSWORD` environment variable and
-exposes an endpoint used by the frontend for validation.
+exposes an endpoint used by the frontend for validation. If no environment
+variable is specified, the password defaults to `bioprocess2025`.
 
 ```bash
-ACCESS_PASSWORD=bioprocess2025 node server.js
+node server.js                # uses default password
+# or override
+ACCESS_PASSWORD=secret node server.js
 ```
 
 The site will be available at `http://localhost:3000` by default.
