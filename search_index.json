@@ -2713,7 +2713,7 @@
             "생물공학연구실"
         ],
         "content_snippet": "예측값과 실측값의 오차를 평가하기 위한 RMSE 계산 도구입니다.",
-        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 🐹 뭐든 물어봐! RMSE 계산기 예측값과 실측값의 오차를 평가하기 위한 RMSE 계산 도구입니다. RMSE 수식: \\[ \\text{RMSE} = \\sqrt{\\frac{1}{n} \\sum_{i=1}^n (y_i - \\hat{y}_i)^2} \\] 기호 설명: \\( \\hat{y}_i \\): 예측값 (predicted value) \\( y_i \\): 실제값 (observed value) \\( n \\): 데이터 포인트 개수 (number of data points) 단일 시트로 구성된 파일만 첨부해 주세요. 첨부 가능한 파일 형식: .txt, .csv, .xlsx 데이터 형식: 첫 행은 헤더, 세 번째 열에 데이터 값이 위치해야 합니다. 여기로 파일을 끌어오거나 클릭하여 첨부 여기로 파일을 끌어오거나 클릭하여 첨부 ID 소수 자리 분석 노트 TXT 다운로드 엑셀 다운로드 전체 삭제 Index Timestamp ID RMSE Result 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
+        "full_text": "생물공학연구실 Bioprocess Engineering Laboratory 검색 🐹 뭐든 물어봐! RMSE 계산기 예측값과 실측값의 오차를 평가하기 위한 RMSE 계산 도구입니다. RMSE 수식: RMSE = sqrt(1/n Σ (y_i - ŷ_i)^2) 단일 시트로 구성된 파일만 첨부해 주세요. 첨부 가능한 파일 형식: .txt, .csv, .xlsx 데이터 형식: 첫 행은 헤더, 세 번째 열에 데이터 값이 위치해야 합니다. 여기로 파일을 끌어오거나 클릭하여 첨부 여기로 파일을 끌어오거나 클릭하여 첨부 ID 소수 자리 분석 노트 TXT 다운로드 전체 삭제 Index Timestamp ID RMSE Result 검색 결과 © 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스. 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr 연세대학교 미래캠퍼스 생명과학기술학부 본 웹사이트는 교육 및 연구 목적으로 제작되었습니다."
     },
     {
         "url": "software_index.html",
