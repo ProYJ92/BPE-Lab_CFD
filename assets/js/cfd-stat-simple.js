@@ -70,7 +70,7 @@ analyzeBtn.addEventListener('click',()=>{
 function parseFile(f){
   const ext = f.name.split('.').pop().toLowerCase();
   if(ext==='csv'||ext==='txt'){
-    Papa.parse(f,{header:false,dynamicTyping:true,complete:res=>processData(res.data)});
+    Papa.parse(f,{header:false,dynamicTyping:true,skipEmptyLines:true,complete:res=>processData(res.data)});
   }else{
     f.arrayBuffer().then(buf=>{
       const wb = XLSX.read(buf,{type:'array'});
@@ -102,7 +102,8 @@ function processData(rows){
     const tEnd = dataRows[dataRows.length-1][0];
     const cycleTime = 60 / rpm;
     const cutoffTime = tEnd - cycles*cycleTime;
-    dataRows = dataRows.filter(r=>r[0] >= cutoffTime);
+    const eps = 1e-9;
+    dataRows = dataRows.filter(r=>r[0] >= cutoffTime - eps);
   }
 
   const cols = rows[0].length;

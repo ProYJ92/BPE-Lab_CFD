@@ -9,5 +9,4 @@
 .copy-btn i,.del-btn i{width:1rem;height:1rem;}
 .copy-btn{margin-left:auto;color:#1d4ed8;}
 .del-btn{color:#b91c1c;margin-left:4px;}
-.summary-table{width:100%;border-collapse:collapse;}
-.summary-table th{padding:4px 8px;background:#f9f9f9;text-align:left;}
+#notesHeader span{padding:0 8px;}
