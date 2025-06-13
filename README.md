@@ -15,13 +15,11 @@ ACCESS_PASSWORD=bioprocess2025 node server.js
 The site will be available at `http://localhost:3000` by default.
  
 
-## Contributing & CI
+## Contributing
 
-The `tools/` directory contains static binaries for validation, so no additional installation is required.
-For offline development:
+For offline development, run:
 
 ```bash
-bash scripts/restore-modules.sh
 python3 -m http.server
 ```
 
