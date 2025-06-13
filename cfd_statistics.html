@@ -7,11 +7,30 @@ nav_order: 2
 
 <link rel="stylesheet" href="{{ '/assets/css/cfd-stat.css' | relative_url }}">
 
-<h1>데이터 평균 계산기</h1>
-<div id="drop">여기로 파일을 끌어오거나 클릭하여 첨부</div>
+<h1 class="text-2xl font-bold mb-4">데이터 평균 계산기</h1>
+<div id="drop" tabindex="0" role="button" aria-label="파일 업로드 영역" class="mb-4">여기로 파일을 끌어오거나 클릭하여 첨부</div>
 <input id="file" type="file" accept=".xlsx,.xls,.csv,.txt" hidden>
-<div id="out"></div>
+<div id="fileInfo" class="mb-4 hidden flex items-center gap-2">
+  <span id="fileName"></span>
+  <button id="removeFile" aria-label="첨부 파일 제거" class="hidden"><i data-lucide="x"></i></button>
+</div>
+
+<div id="inputSection" class="hidden mb-4">
+  <div class="flex flex-col sm:flex-row gap-2 items-center">
+    <label>RPM <input id="rpm" type="number" class="border rounded px-2 py-1 w-24"></label>
+    <label>사이클 <input id="cycle" type="number" class="border rounded px-2 py-1 w-24"></label>
+    <label>소수 자리 <input id="precision" type="number" value="3" class="border rounded px-2 py-1 w-20"></label>
+    <label class="flex items-center"><input id="outlier" type="checkbox" class="mr-1">아웃라이어 제거</label>
+    <button id="analyze" class="bg-blue-500 text-white px-4 py-2 rounded disabled:opacity-50" disabled aria-label="분석 실행">분석</button>
+  </div>
+</div>
+
+<div id="results" class="mt-4"></div>
+
+<h2 class="text-xl font-semibold mt-8">노트</h2>
+<div id="notes" class="mt-2 space-y-1"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.19.3/dist/xlsx.full.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 <script src="{{ '/assets/js/cfd-stat-simple.js' | relative_url }}?v=1"></script>

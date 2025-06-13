@@ -1,8 +1,6 @@
-.uploader{border:2px dashed #888;border-radius:8px;padding:40px;text-align:center;cursor:pointer;}
-.uploader.dragover{border-color:#2196f3;background:#f1f9ff;}
-.filename{margin-top:8px;font-weight:600;}
-#result-box{margin-top:20px;font-family:monospace;}
 #drop{border:2px dashed #888;border-radius:8px;padding:60px 20px;text-align:center;cursor:pointer;}
 #drop.drag{border-color:#2196f3;background:#f1f9ff;}
-table{margin:24px auto;border-collapse:collapse;}
-th,td{border:1px solid #ccc;padding:6px 12px;}
+#inputSection label{display:flex;align-items:center;gap:4px;}
+#results table{margin-top:1rem;border-collapse:collapse;width:100%;}
+#results th,#results td{border:1px solid #ccc;padding:4px 8px;text-align:center;}
+.note-item button{margin-left:8px;color:#b91c1c;}
