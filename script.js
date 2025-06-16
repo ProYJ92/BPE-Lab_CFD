@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentPage === 'lab_resources.html' || currentPage === 'resources.html') {
         if (localStorage.getItem('authed') !== 'ok') {
             localStorage.setItem('next', location.pathname);
-            window.location.href = '/password.html';
+            window.location.href = 'password.html';
             return;
         }
     }
