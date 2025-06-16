@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const currentPage = window.location.pathname.split('/').pop();
     if (currentPage === 'lab_resources.html' || currentPage === 'resources.html') {
-        if (localStorage.getItem('authed') !== 'ok') {
-            localStorage.setItem('next', location.pathname);
+        if (sessionStorage.getItem('authed') !== 'ok') {
+            sessionStorage.setItem('next', location.pathname);
             window.location.href = 'password.html';
             return;
         }

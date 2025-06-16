@@ -9,8 +9,8 @@
     <link href="style.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-      if (localStorage.getItem('authed') !== 'ok') {
-        localStorage.setItem('next', location.pathname);
+      if (sessionStorage.getItem('authed') !== 'ok') {
+        sessionStorage.setItem('next', location.pathname);
         location.href = 'password.html';
       }
     </script>
