@@ -5,6 +5,8 @@ const rpmInput = document.getElementById('rpm');
 const cycleInput = document.getElementById('cycle');
 const precInput = document.getElementById('precision');
 const outlierChk = document.getElementById('outlier');
+const manualChk = document.getElementById('manualIdChk');
+const manualIdInput = document.getElementById('manualIdInput');
 const analyzeBtn = document.getElementById('analyze');
 const resultsBox = document.getElementById('results');
 const notesBox = document.getElementById('notes');
@@ -30,6 +32,13 @@ fileInput.addEventListener('change',e=>handleFile(e.target.files[0]));
 removeBtn.addEventListener('click',clearFile);
 clearBtn.addEventListener('click',clearNotes);
 tsvBtn.addEventListener('click',downloadTSV);
+manualChk.addEventListener('change',()=>{
+  if(manualChk.checked){
+    manualIdInput.classList.remove('hidden');
+  }else{
+    manualIdInput.classList.add('hidden');
+  }
+});
 
 function handleFile(f){
   if(!f) return;
@@ -152,7 +161,14 @@ function saveNote(values){
   const ts = dayjs().format('YYMMDD-HH:mm');
   const name = currentFile.name.replace(/\.[^.]+$/,'');
   const cleaned = name.replace(/[^A-Za-z0-9가-힣]/g,'');
-  const id = cleaned.length<=12 ? cleaned : cleaned.slice(0,6)+cleaned.slice(-6);
+  let id;
+  if(manualChk.checked && manualIdInput.value.trim()){
+    const manualVal = manualIdInput.value.trim();
+    const cleanedManual = manualVal.replace(/[^A-Za-z0-9가-힣]/g,'');
+    id = cleanedManual.length ? cleanedManual : manualVal;
+  }else{
+    id = cleaned.length<=12 ? cleaned : cleaned.slice(0,6)+cleaned.slice(-6);
+  }
   const note={ts,id,values};
   const notes=JSON.parse(localStorage.getItem('cfdStatsNotes')||'[]');
   notes.push(note);
