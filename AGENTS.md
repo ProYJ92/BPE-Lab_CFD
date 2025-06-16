@@ -8,6 +8,8 @@ This project hosts offline-accessible static content for the BPE-Lab CFD website
 ## 3. Coding Style
   - Prefer Tailwind utilities; custom CSS in style.css
   - 기본은 모바일(≤ 768 px) 기준; 'md:'(≥ 768 px) 이상에서 PC 확장.
+  - GitHub Pages 환경을 고려해 내부 링크는 `/example.html`처럼 절대경로를
+    사용하지 말고 `example.html` 같은 상대경로로 작성할 것.
 
 ## 4. Pull Request Rules
   - Tags: [Feat] [Fix] [Docs] [Infra] [Chore]
