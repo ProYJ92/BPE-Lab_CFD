@@ -81,10 +81,10 @@ analyzeBtn.addEventListener('click',()=>{
 
 function parseFile(f){
   const ext = f.name.split('.').pop().toLowerCase();
-  if(ext==='csv'||ext==='txt'){
+  if(ext==='csv' || ext==='txt'){
     sheetWarn.classList.add('hidden');
     Papa.parse(f,{header:false,dynamicTyping:true,skipEmptyLines:true,complete:res=>processData(res.data)});
-  }else{
+  }else if(ext==='xlsx' || ext==='xls'){
     f.arrayBuffer().then(buf=>{
       const wb = XLSX.read(buf,{type:'array'});
       if(wb.SheetNames.length>1){
@@ -96,7 +96,13 @@ function parseFile(f){
       const ws = wb.Sheets[wb.SheetNames[0]];
       const arr = XLSX.utils.sheet_to_json(ws,{header:1});
       processData(arr);
+    }).catch(()=>{
+      sheetWarn.textContent='⚠ 파일을 읽는 중 오류가 발생했습니다. 파일 형식을 확인해주세요.';
+      sheetWarn.classList.remove('hidden');
     });
+  }else{
+    sheetWarn.textContent='⚠ 지원되지 않는 파일 형식입니다. .txt, .csv, .xls, .xlsx 파일만 업로드 가능합니다.';
+    sheetWarn.classList.remove('hidden');
   }
 }
 
