@@ -80,37 +80,53 @@ function parseFileData(f, warnEl){
         resolve(arr.map(v=>isNaN(v)?0:v));
       }});
     }else if(ext==='xlsx' || ext==='xls'){
-      f.arrayBuffer().then(buf=>{
-        let wb;
-        try{
-          const data=new Uint8Array(buf);
-          wb=XLSX.read(data,{type:'array'});
-        }catch(e){
+      if(window.XLSX && XLSX.read){
+        f.arrayBuffer().then(buf=>{
+          let wb;
           try{
-            let binary='';
-            const bytes=new Uint8Array(buf);
-            for(let i=0;i<bytes.length;i++) binary+=String.fromCharCode(bytes[i]);
-            wb=XLSX.read(binary,{type:'binary'});
-          }catch(e2){
-            console.error('XLSX read error',e2);
-            throw e2;
+            const data=new Uint8Array(buf);
+            wb=XLSX.read(data,{type:'array'});
+          }catch(e){
+            try{
+              let binary='';
+              const bytes=new Uint8Array(buf);
+              for(let i=0;i<bytes.length;i++) binary+=String.fromCharCode(bytes[i]);
+              wb=XLSX.read(binary,{type:'binary'});
+            }catch(e2){
+              console.error('XLSX read error',e2);
+              throw e2;
+            }
           }
-        }
-        if(wb.SheetNames.length>1){
-          warnEl.textContent='⚠ 여러 시트가 포함된 파일입니다. 첫 번째 시트만 사용됩니다.';
+          if(wb.SheetNames.length>1){
+            warnEl.textContent='⚠ 여러 시트가 포함된 파일입니다. 첫 번째 시트만 사용됩니다.';
+            warnEl.classList.remove('hidden');
+          } else {
+            warnEl.classList.add('hidden');
+          }
+          const ws=wb.Sheets[wb.SheetNames[0]];
+          const rows=XLSX.utils.sheet_to_json(ws,{header:1,blankRows:false});
+          const arr=rows.slice(1).map(r=>Number(r[2]||0));
+          resolve(arr.map(v=>isNaN(v)?0:v));
+        }).catch(()=>{
+          warnEl.textContent='⚠ 파일을 불러오는 중 문제가 발생했습니다. 파일을 다시 저장하거나 CSV 형식으로 변환해 보세요.';
           warnEl.classList.remove('hidden');
-        } else {
+          resolve([]);
+        });
+      }else if(window.SimpleXLSX){
+        SimpleXLSX.parse(f).then(rows=>{
           warnEl.classList.add('hidden');
-        }
-        const ws=wb.Sheets[wb.SheetNames[0]];
-        const rows=XLSX.utils.sheet_to_json(ws,{header:1,blankRows:false});
-        const arr=rows.slice(1).map(r=>Number(r[2]||0));
-        resolve(arr.map(v=>isNaN(v)?0:v));
-      }).catch(()=>{
-        warnEl.textContent='⚠ 파일을 불러오는 중 문제가 발생했습니다. 파일을 다시 저장하거나 CSV 형식으로 변환해 보세요.';
+          const arr=rows.slice(1).map(r=>Number(r[2]||0));
+          resolve(arr.map(v=>isNaN(v)?0:v));
+        }).catch(()=>{
+          warnEl.textContent='⚠ 파일을 불러오는 중 문제가 발생했습니다. 파일을 다시 저장하거나 CSV 형식으로 변환해 보세요.';
+          warnEl.classList.remove('hidden');
+          resolve([]);
+        });
+      }else{
+        warnEl.textContent='⚠ XLSX 파일을 처리할 수 없습니다.';
         warnEl.classList.remove('hidden');
         resolve([]);
-      });
+      }
     }else{
       warnEl.textContent='⚠ 지원되지 않는 파일 형식입니다. .txt, .csv, .xls, .xlsx 파일만 업로드 가능합니다.';
       warnEl.classList.remove('hidden');
