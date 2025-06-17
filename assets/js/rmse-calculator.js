@@ -81,7 +81,21 @@ function parseFileData(f, warnEl){
       }});
     }else if(ext==='xlsx' || ext==='xls'){
       f.arrayBuffer().then(buf=>{
-        const wb=XLSX.read(buf,{type:'array'});
+        let wb;
+        try{
+          const data=new Uint8Array(buf);
+          wb=XLSX.read(data,{type:'array'});
+        }catch(e){
+          try{
+            let binary='';
+            const bytes=new Uint8Array(buf);
+            for(let i=0;i<bytes.length;i++) binary+=String.fromCharCode(bytes[i]);
+            wb=XLSX.read(binary,{type:'binary'});
+          }catch(e2){
+            console.error('XLSX read error',e2);
+            throw e2;
+          }
+        }
         if(wb.SheetNames.length>1){
           warnEl.textContent='⚠ 여러 시트가 포함된 파일입니다. 첫 번째 시트만 사용됩니다.';
           warnEl.classList.remove('hidden');
@@ -89,11 +103,11 @@ function parseFileData(f, warnEl){
           warnEl.classList.add('hidden');
         }
         const ws=wb.Sheets[wb.SheetNames[0]];
-        const rows=XLSX.utils.sheet_to_json(ws,{header:1});
+        const rows=XLSX.utils.sheet_to_json(ws,{header:1,blankRows:false});
         const arr=rows.slice(1).map(r=>Number(r[2]||0));
         resolve(arr.map(v=>isNaN(v)?0:v));
       }).catch(()=>{
-        warnEl.textContent='⚠ 파일을 읽는 중 오류가 발생했습니다. 파일 형식을 확인해주세요.';
+        warnEl.textContent='⚠ 파일을 불러오는 중 문제가 발생했습니다. 파일을 다시 저장하거나 CSV 형식으로 변환해 보세요.';
         warnEl.classList.remove('hidden');
         resolve([]);
       });
