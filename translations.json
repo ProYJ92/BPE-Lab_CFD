@@ -236,8 +236,7 @@
     "de": "Laborübersicht",
     "ja": "研究室概要",
     "zh-CN": "实验室概览"
-  }
-,
+  },
   "lab_overview_intro_section_title": {
     "ko": "연구실 소개",
     "en": "Lab Introduction",
@@ -1784,5 +1783,334 @@
     "de": "Die detaillierten Inhalte dieser Seite werden derzeit vorbereitet und in Kürze aktualisiert.",
     "ja": "このページの詳細な内容は現在準備中です。まもなく更新される予定です。",
     "zh-CN": "本页面的详细内容目前正在准备中，很快将更新。"
+  },
+  "common.lab_name": {
+    "ko": "생물공학연구실",
+    "en": "Bioprocess Engineering Laboratory",
+    "de": "Labor für Bioverfahrenstechnik",
+    "ja": "生物プロセス工学研究室",
+    "zh-CN": "生物工艺工程实验室"
+  },
+  "common.search_placeholder": {
+    "ko": "검색...",
+    "en": "Search...",
+    "de": "Suche...",
+    "ja": "検索...",
+    "zh-CN": "搜索..."
+  },
+  "common.search_button": {
+    "ko": "검색",
+    "en": "Search",
+    "de": "Suchen",
+    "ja": "検索",
+    "zh-CN": "搜索"
+  },
+  "common.helper_open_label": {
+    "ko": "도우미 열기",
+    "en": "Open helper",
+    "de": "Hilfe öffnen",
+    "ja": "ヘルパーを開く",
+    "zh-CN": "打开助手"
+  },
+  "common.helper_text": {
+    "ko": "뭐든 물어봐!",
+    "en": "Ask me anything!",
+    "de": "Frag mich alles!",
+    "ja": "何でも聞いてね！",
+    "zh-CN": "问我任何问题吧！"
+  },
+  "common.search_results_title": {
+    "ko": "검색 결과",
+    "en": "Search Results",
+    "de": "Suchergebnisse",
+    "ja": "検索結果",
+    "zh-CN": "搜索结果"
+  },
+  "common.content_preparing_title": {
+    "ko": "콘텐츠 준비 중",
+    "en": "Content Under Preparation",
+    "de": "Inhalt wird vorbereitet",
+    "ja": "コンテンツ準備中",
+    "zh-CN": "内容正在准备中"
+  },
+  "common.content_preparing_desc_generic": {
+    "ko": "이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다.",
+    "en": "The detailed content of this page is currently in preparation and will be updated soon.",
+    "de": "Die detaillierten Inhalte dieser Seite werden derzeit vorbereitet und in Kürze aktualisiert.",
+    "ja": "このページの詳細な内容は現在準備中であり、まもなく更新される予定です。",
+    "zh-CN": "本页面的详细内容目前正在准备中，很快将更新。"
+  },
+  "common.footer_copyright": {
+    "ko": "© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.",
+    "en": "© 2025 Bioprocess Engineering Laboratory, Yonsei University Mirae Campus.",
+    "de": "© 2025 Bioprocess Engineering Laboratory, Yonsei Universität Mirae Campus.",
+    "ja": "© 2025 生物プロセス工学研究室、延世大学ミラキャンパス。",
+    "zh-CN": "© 2025 生物工艺工程实验室，延世大学未来校区。"
+  },
+  "common.footer_address": {
+    "ko": "강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "en": "1 Yonsei-daegil, Heungup-myeon, Wonju, Gangwon Special Self-Governing Province, Mirae Hall 306 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "de": "Yonsei-daegil 1, Heungup-myeon, Wonju, Sonderverwaltungsprovinz Gangwon, Mirae-Gebäude 306 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "ja": "江原特別自治道 原州市 興業面 延世大路1 ミレ館306号 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "zh-CN": "韩国江原特别自治道原州市兴业面延世大路1号未来馆306室 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr"
+  },
+  "common.yonsei_university": {
+    "ko": "연세대학교",
+    "en": "Yonsei University",
+    "de": "Yonsei-Universität",
+    "ja": "延世大学",
+    "zh-CN": "延世大学"
+  },
+  "common.mirae_campus": {
+    "ko": "미래캠퍼스",
+    "en": "Mirae Campus",
+    "de": "Mirae Campus",
+    "ja": "ミレキャンパス",
+    "zh-CN": "未来校区"
+  },
+  "common.life_science_department": {
+    "ko": "생명과학기술학부",
+    "en": "School of Life Science and Technology",
+    "de": "Fakultät für Lebenswissenschaft und Technologie",
+    "ja": "生命科学技術学部",
+    "zh-CN": "生命科学技术学部"
+  },
+  "common.footer_note": {
+    "ko": "본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.",
+    "en": "This website was created for educational and research purposes.",
+    "de": "Diese Website wurde für Bildungs- und Forschungszwecke erstellt.",
+    "ja": "本ウェブサイトは教育および研究目的で作成されました。",
+    "zh-CN": "本网站为教育和研究目的而制作。"
+  },
+  "bp_eng_animal_cell_main.section.title": {
+    "ko": "동물 세포 배양 개요",
+    "en": "Overview of Animal Cell Culture",
+    "de": "Überblick über die Kultivierung tierischer Zellen",
+    "ja": "動物細胞培養の概要",
+    "zh-CN": "动物细胞培养概述"
+  },
+  "bp_eng_animal_cell_main.section.description": {
+    "ko": "항체 및 재조합 단백질 생산에 널리 사용되는 동물 세포 배양 기술을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+    "en": "Animal cell culture techniques widely used for the production of antibodies and recombinant proteins are introduced. Further details can be found in the sub-menu below.",
+    "de": "Es werden Zellkulturtechniken vorgestellt, die breit für die Herstellung von Antikörpern und rekombinanten Proteinen verwendet werden. Weitere Details finden Sie im untenstehenden Untermenü.",
+    "ja": "抗体および組換えタンパク質の生産に広く利用されている動物細胞培養技術を紹介します。詳細は下위メニューからご覧いただけます。",
+    "zh-CN": "介绍广泛用于抗体和重组蛋白生产的动物细胞培养技术。更多详细信息可在下方的子菜单中查看。"
+  },
+  "bp_eng_animal_cell_main.section.list_1": {
+    "ko": "CHO 세포 배양 (CHO Cell Culture)",
+    "en": "CHO Cell Culture",
+    "de": "CHO-Zellkultur",
+    "ja": "CHO細胞培養",
+    "zh-CN": "CHO细胞培养"
+  },
+  "bp_eng_animal_cell_main.section.list_2": {
+    "ko": "HEK293 세포 배양 (HEK293 Cell Culture)",
+    "en": "HEK293 Cell Culture",
+    "de": "HEK293-Zellkultur",
+    "ja": "HEK293細胞培養",
+    "zh-CN": "HEK293细胞培养"
+  },
+  "bp_eng_animal_cell_main.section.list_3": {
+    "ko": "기타 세포주 배양 (Other Animal Cell Lines)",
+    "en": "Other Animal Cell Lines",
+    "de": "Andere tierische Zelllinien",
+    "ja": "その他の動物細胞株",
+    "zh-CN": "其他动物细胞系"
+  },
+  "bp_eng_animal_cell_main.section.preparing_details": {
+    "ko": "동물 세포 배양에 대한 상세 내용이 곧 업데이트될 예정입니다.",
+    "en": "Detailed content about animal cell culture will be updated soon.",
+    "de": "Ausführliche Inhalte über die Kultivierung tierischer Zellen werden in Kürze aktualisiert.",
+    "ja": "動物細胞培養に関する詳細な内容は近日中に更新される予定です.",
+    "zh-CN": "有关动物细胞培养的详细内容将很快更新."
+  },
+  "bp_eng_animal_cell_cho.section.title": {
+    "ko": "CHO 세포 배양 (CHO Cell Culture)",
+    "en": "CHO Cell Culture",
+    "de": "CHO-Zellkultur",
+    "ja": "CHO細胞培養",
+    "zh-CN": "CHO细胞培养"
+  },
+  "bp_eng_animal_cell_cho.section.description": {
+    "ko": "바이오의약품 생산의 핵심 세포주인 CHO (Chinese Hamster Ovary) 세포 배양 기술 및 최적화 연구를 다룹니다.",
+    "en": "This section covers the CHO (Chinese Hamster Ovary) cell culture techniques and optimization studies, as CHO is a key cell line for biopharmaceutical production.",
+    "de": "Dieser Abschnitt behandelt die Kulturtechniken und Optimierungsstudien für CHO-Zellen (Chinese Hamster Ovary), da die CHO-Zelllinie für die biopharmazeutische Produktion essenziell ist.",
+    "ja": "バイオ医薬品生産の主要な細胞株であるCHO（Chinese Hamster Ovary）細胞の培養技術および最適化研究について扱います.",
+    "zh-CN": "介绍用于生物药品生产的关键细胞株CHO（中国仓鼠卵巢细胞）的培养技术及优化研究."
+  },
+  "bp_eng_animal_cell_hek293.section.title": {
+    "ko": "HEK293 세포 배양 (HEK293 Cell Culture)",
+    "en": "HEK293 Cell Culture",
+    "de": "HEK293-Zellkultur",
+    "ja": "HEK293細胞培養",
+    "zh-CN": "HEK293细胞培养"
+  },
+  "bp_eng_animal_cell_hek293.section.description": {
+    "ko": "단백질 발현 및 바이러스 벡터 생산 등에 사용되는 HEK293 세포 배양 기술을 소개합니다.",
+    "en": "This introduces the HEK293 cell culture techniques used for protein expression and viral vector production, among other applications.",
+    "de": "Es werden die HEK293-Zellkulturtechniken vorgestellt, die unter anderem für die Proteinexpression und die Produktion viraler Vektoren verwendet werden.",
+    "ja": "タンパク質発現やウイルスベクターの生産などに使用されるHEK293細胞の培養技術について紹介します.",
+    "zh-CN": "介绍用于蛋白质表达和病毒载体生产等用途的HEK293细胞培养技术."
+  },
+  "bp_eng_animal_cell_other.section.title": {
+    "ko": "기타 세포주 배양 (Other Animal Cell Lines)",
+    "en": "Other Animal Cell Lines",
+    "de": "Andere tierische Zelllinien",
+    "ja": "その他の動物細胞株",
+    "zh-CN": "其他动物细胞系"
+  },
+  "bp_eng_animal_cell_other.section.description": {
+    "ko": "CHO, HEK293 외 다양한 특수 목적의 동물 세포주 배양 기술 및 응용 사례를 다룹니다.",
+    "en": "This covers the culture techniques and application cases of various special-purpose animal cell lines beyond CHO and HEK293.",
+    "de": "Hier werden die Kultivierungstechniken und Anwendungsfälle verschiedener spezieller tierischer Zelllinien neben CHO und HEK293 behandelt.",
+    "ja": "CHOやHEK293以外の様々な特定目的の動物細胞株の培養技術と応用例を扱います.",
+    "zh-CN": "介绍除CHO和HEK293之外的各种特定用途动物细胞系的培养技术及应用案例."
+  },
+  "bp_eng_downstream_main.section.title": {
+    "ko": "정제 공정 개요",
+    "en": "Overview of Downstream Process",
+    "de": "Überblick über den Downstream-Prozess",
+    "ja": "下流工程の概要",
+    "zh-CN": "下游工艺概述"
+  },
+  "bp_eng_downstream_main.section.description": {
+    "ko": "배양액으로부터 목표 바이오의약품을 분리하고 정제하는 다운스트림 공정의 주요 단계 및 기술을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+    "en": "Introduces the key stages and techniques of the downstream process for separating and purifying target biopharmaceuticals from culture broth. Further details can be found in the sub-menu below.",
+    "de": "Stellt die Hauptschritte und Techniken des Downstream-Prozesses vor, um aus dem Kulturmedium das Ziel-Biopharmazeutikum abzutrennen und zu reinigen. Weitere Details finden Sie im untenstehenden Untermenü.",
+    "ja": "培養液から目的のバイオ医薬品を分離・精製する下流工程の主要な段階および技術を紹介します. 詳細は下位メニューでご確認いただけます.",
+    "zh-CN": "介绍从培养液中分离和纯化目标生物药物的下游工艺主要阶段和技术. 更多详细信息可在下方子菜单中查看."
+  },
+  "bp_eng_downstream_main.section.list_1": {
+    "ko": "수확 및 정화 (Harvest & Clarification)",
+    "en": "Harvest & Clarification",
+    "de": "Ernte und Klärung",
+    "ja": "収穫および清澄化",
+    "zh-CN": "收获和澄清"
+  },
+  "bp_eng_downstream_main.section.list_2": {
+    "ko": "캡처 정제 (Primary Capture)",
+    "en": "Primary Capture",
+    "de": "Primärreinigung (Capture)",
+    "ja": "初回精製（キャプチャ）",
+    "zh-CN": "初步纯化（捕获）"
+  },
+  "bp_eng_downstream_main.section.list_3": {
+    "ko": "중간 정제 (Intermediate Purification)",
+    "en": "Intermediate Purification",
+    "de": "Zwischenreinigung",
+    "ja": "中間精製",
+    "zh-CN": "中间纯化"
+  },
+  "bp_eng_downstream_main.section.list_4": {
+    "ko": "고도 정제 (폴리싱) (Polishing Purification)",
+    "en": "Polishing Purification",
+    "de": "Endreinigung (Polishing)",
+    "ja": "最終精製（ポリッシング）",
+    "zh-CN": "最终纯化（抛光）"
+  },
+  "bp_eng_downstream_main.section.list_5": {
+    "ko": "바이러스 제거 및 불활화 (Viral Clearance)",
+    "en": "Viral Clearance",
+    "de": "Virusentfernung und -inaktivierung",
+    "ja": "ウイルス除去および不活化",
+    "zh-CN": "病毒去除及灭活"
+  },
+  "bp_eng_downstream_main.section.list_6": {
+    "ko": "최종 제형 및 충전 (Formulation & Fill‑Finish)",
+    "en": "Formulation & Fill-Finish",
+    "de": "Formulierung und Abfüllung",
+    "ja": "最終製剤化および充填",
+    "zh-CN": "最终制剂及灌装"
+  },
+  "bp_eng_downstream_main.section.preparing_details": {
+    "ko": "다운스트림 공정에 대한 상세 내용이 곧 업데이트될 예정입니다.",
+    "en": "Detailed content about downstream processing will be updated soon.",
+    "de": "Ausführliche Inhalte zum Downstream-Prozess werden in Kürze aktualisiert.",
+    "ja": "下流工程に関する詳細な内容は近日中に更新される予定です.",
+    "zh-CN": "有关下游工艺的详细内容将很快更新."
+  },
+  "bp_eng_downstream_harvest_clarification.section.title": {
+    "ko": "수확 및 정화 (Harvest & Clarification)",
+    "en": "Harvest & Clarification",
+    "de": "Ernte und Klärung",
+    "ja": "収穫および清澄化",
+    "zh-CN": "收获和澄清"
+  },
+  "bp_eng_downstream_harvest_clarification.section.description": {
+    "ko": "배양액으로부터 세포 및 세포 파편을 제거하여 초기 정제물을 얻는 수확 및 정화 단계를 설명합니다.",
+    "en": "Describes the harvest and clarification step, where cells and cell debris are removed from the culture broth to obtain an initial clarified product.",
+    "de": "Beschreibt die Ernte- und Klärungsstufe, in der Zellen und Zelltrümmer aus dem Kulturmedium entfernt werden, um ein erstes geklärtes Produkt zu erhalten.",
+    "ja": "培養液から細胞および細胞片を除去して初期の精製物を得る収穫および清澄工程について説明します.",
+    "zh-CN": "说明从培养液中去除细胞及细胞碎片以获得初步澄清产物的收获和澄清步骤."
+  },
+  "bp_eng_downstream_primary_capture.section.title": {
+    "ko": "캡처 정제 (Primary Capture)",
+    "en": "Primary Capture",
+    "de": "Primärreinigung (Capture)",
+    "ja": "初回精製（キャプチャ）",
+    "zh-CN": "初步纯化（捕获）"
+  },
+  "bp_eng_downstream_primary_capture.section.description": {
+    "ko": "목표 단백질을 선택적으로 포획하여 농축하고 주요 불순물을 제거하는 1차 정제 단계입니다.",
+    "en": "This is the primary purification step in which the target protein is selectively captured and concentrated while major impurities are removed.",
+    "de": "Dies ist der ersten Reinigungsstufe, in der das Zielprotein selektiv eingefangen und angereichert wird, während die Hauptverunreinigungen entfernt werden.",
+    "ja": "標的タンパク質を選択的に捕捉して濃縮し、主要な不純物を除去する一次精製段階です.",
+    "zh-CN": "这是通过选择性捕获并浓缩目标蛋白质，同时去除主要杂质的初级纯化步骤."
+  },
+  "bp_eng_downstream_intermediate_purification.section.title": {
+    "ko": "중간 정제 (Intermediate Purification)",
+    "en": "Intermediate Purification",
+    "de": "Zwischenreinigung",
+    "ja": "中間精製",
+    "zh-CN": "中间纯化"
+  },
+  "bp_eng_downstream_intermediate_purification.section.description": {
+    "ko": "캡처 정제 후 남아있는 불순물을 추가적으로 제거하여 단백질 순도를 높이는 단계입니다.",
+    "en": "This step further removes remaining impurities after the capture purification to increase the protein purity.",
+    "de": "In diesem Schritt werden nach der Capture-Reinigung verbliebene Verunreinigungen weiter entfernt, um die Proteinreinheit zu erhöhen.",
+    "ja": "キャプチャ精製後に残存する不純物をさらに除去してタンパク質の純度を高める段階です.",
+    "zh-CN": "在捕获纯化后进一步去除残留杂质，以提高蛋白质的纯度."
+  },
+  "bp_eng_downstream_polishing_purification.section.title": {
+    "ko": "고도 정제 (폴리싱) (Polishing Purification)",
+    "en": "Polishing Purification",
+    "de": "Endreinigung (Polishing)",
+    "ja": "最終精製（ポリッシング）",
+    "zh-CN": "最终纯化（抛光）"
+  },
+  "bp_eng_downstream_polishing_purification.section.description": {
+    "ko": "최종 제품의 순도 및 안전성 기준을 만족시키기 위한 마지막 정제 단계입니다.",
+    "en": "This is the final purification step aimed at meeting the purity and safety standards of the final product.",
+    "de": "Dies ist der letzte Reinigungsschritt, der darauf abzielt, die Reinheits- und Sicherheitsstandards des Endprodukts zu erfüllen.",
+    "ja": "最終製品の純度および安全性基準を満たすための最後の精製段階です.",
+    "zh-CN": "这是为了满足最终产品纯度和安全性标准的最后纯化步骤."
+  },
+  "bp_eng_downstream_viral_clearance.section.title": {
+    "ko": "바이러스 제거 및 불활화 (Viral Clearance)",
+    "en": "Viral Clearance",
+    "de": "Virusentfernung und -inaktivierung",
+    "ja": "ウイルス除去および不活化",
+    "zh-CN": "病毒去除及灭活"
+  },
+  "bp_eng_downstream_viral_clearance.section.description": {
+    "ko": "바이오의약품의 안전성을 확보하기 위한 바이러스 제거 및 불활화 공정을 설명합니다.",
+    "en": "Describes the processes of virus removal and inactivation to ensure the safety of biopharmaceuticals.",
+    "de": "Beschreibt die Prozesse zur Entfernung und Inaktivierung von Viren, um die Sicherheit von Biopharmazeutika zu gewährleisten.",
+    "ja": "バイオ医薬品の安全性を確保するためのウイルス除去および不活化プロセスについて説明します.",
+    "zh-CN": "说明为确保生物药品安全性而进行的病毒去除及灭活工艺."
+  },
+  "bp_eng_downstream_formulation_fill_finish.section.title": {
+    "ko": "최종 제형 및 충전 (Formulation & Fill‑Finish)",
+    "en": "Formulation & Fill-Finish",
+    "de": "Formulierung und Abfüllung",
+    "ja": "最終製剤化および充填",
+    "zh-CN": "最终制剂及灌装"
+  },
+  "bp_eng_downstream_formulation_fill_finish.section.description": {
+    "ko": "정제된 바이오의약품을 안정적인 형태로 만들고 최종 용기에 충전하는 완제의약품 제조 단계를 다룹니다.",
+    "en": "Covers the final drug product manufacturing steps of formulating the purified biopharmaceutical into a stable form and filling it into final containers.",
+    "de": "Behandelt die letzten Herstellungsstufen, in denen das gereinigte Biopharmazeutikum in eine stabile Form gebracht und in Endbehälter abgefüllt wird.",
+    "ja": "精製されたバイオ医薬品を安定な形態にし、最終容器に充填する完製品製造段階を扱います.",
+    "zh-CN": "涉及将纯化后的生物药品制成稳定形式并灌装到最终容器中的制剂和灌装步骤."
   }
 }
