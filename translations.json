@@ -2112,5 +2112,383 @@
     "de": "Behandelt die letzten Herstellungsstufen, in denen das gereinigte Biopharmazeutikum in eine stabile Form gebracht und in Endbehälter abgefüllt wird.",
     "ja": "精製されたバイオ医薬品を安定な形態にし、最終容器に充填する完製品製造段階を扱います.",
     "zh-CN": "涉及将纯化后的生物药品制成稳定形式并灌装到最终容器中的制剂和灌装步骤."
+  },
+  "common.header.site_name": {
+    "ko": "생물공학연구실",
+    "en": "Bioprocess Engineering Laboratory",
+    "de": "Bioprozesstechnik-Labor",
+    "ja": "生物工学研究室",
+    "zh-CN": "生物工程实验室"
+  },
+  "common.search.placeholder": {
+    "ko": "검색...",
+    "en": "Search...",
+    "de": "Suche...",
+    "ja": "検索...",
+    "zh-CN": "搜索..."
+  },
+  "common.search.button": {
+    "ko": "검색",
+    "en": "Search",
+    "de": "Suche",
+    "ja": "検索",
+    "zh-CN": "搜索"
+  },
+  "common.helper.open_label": {
+    "ko": "도우미 열기",
+    "en": "Open helper",
+    "de": "Hilfe öffnen",
+    "ja": "ヘルパーを開く",
+    "zh-CN": "打开助手"
+  },
+  "common.helper.prompt": {
+    "ko": "뭐든 물어봐!",
+    "en": "Ask me anything!",
+    "de": "Frag mich irgendwas!",
+    "ja": "何でも聞いてね！",
+    "zh-CN": "问我任何问题！"
+  },
+  "common.search.results": {
+    "ko": "검색 결과",
+    "en": "Search Results",
+    "de": "Suchergebnisse",
+    "ja": "検索結果",
+    "zh-CN": "搜索结果"
+  },
+  "common.footer.copy": {
+    "ko": "© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.",
+    "en": "© 2025 Bioprocess Engineering Laboratory, Yonsei University Mirae Campus.",
+    "de": "© 2025 Bioprozesstechnik-Labor, Mirae Campus der Yonsei-Universität.",
+    "ja": "© 2025 生物工学研究室（Bioprocess Engineering Laboratory）、延世大学ミレキャンパス。",
+    "zh-CN": "© 2025 生物工程实验室 (Bioprocess Engineering Laboratory)，延世大学未来校区。"
+  },
+  "common.footer.address": {
+    "ko": "강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "en": "1 Yonsei-daegil, Heungup-myeon, Wonju, Gangwon Special Self-Governing Province, Mirae Hall 306 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "de": "Gangwon Sonderverwaltungsprovinz, Wonju, Heungup-myeon, Yonsei-daegil 1, Mirae-Gebäude Raum 306 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "ja": "江原特別自治道 原州市 興業面 延世大キル 1、ミレ館 306号室 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "zh-CN": "江原特别自治道原州市兴业面延世大路1号，未来馆306室 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr"
+  },
+  "common.footer.yonsei": {
+    "ko": "연세대학교",
+    "en": "Yonsei University",
+    "de": "Yonsei-Universität",
+    "ja": "延世大学",
+    "zh-CN": "延世大学"
+  },
+  "common.footer.mirae_campus": {
+    "ko": "미래캠퍼스",
+    "en": "Mirae Campus",
+    "de": "Mirae-Campus",
+    "ja": "ミレキャンパス",
+    "zh-CN": "未来校区"
+  },
+  "common.footer.department": {
+    "ko": "생명과학기술학부",
+    "en": "College of Life Science and Technology",
+    "de": "Fachbereich Lebenswissenschaften und Technologie",
+    "ja": "生命科学技術学部",
+    "zh-CN": "生命科学技术学部"
+  },
+  "common.footer.disclaimer": {
+    "ko": "본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.",
+    "en": "This website has been created for educational and research purposes.",
+    "de": "Diese Website wurde zu Bildungs- und Forschungszwecken erstellt.",
+    "ja": "本ウェブサイトは教育および研究目的で作成されています。",
+    "zh-CN": "本网站为教育和研究目的而制作。"
+  },
+  "common.notice.title": {
+    "ko": "콘텐츠 준비 중",
+    "en": "Content Under Preparation",
+    "de": "Inhalt wird vorbereitet",
+    "ja": "コンテンツ準備中",
+    "zh-CN": "内容正在准备中"
+  },
+  "common.notice.message_generic": {
+    "ko": "이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다.",
+    "en": "The detailed content of this page is currently under preparation and will be updated soon.",
+    "de": "Die detaillierten Inhalte dieser Seite werden derzeit vorbereitet und in Kürze aktualisiert.",
+    "ja": "このページの詳細内容は現在準備中です。まもなく更新される予定です。",
+    "zh-CN": "本页面的详细内容当前正在准备中，很快将更新。"
+  },
+  "common.notice.message_alt": {
+    "ko": "현재 페이지의 콘텐츠는 준비 중입니다. 곧 업데이트될 예정입니다.",
+    "en": "The content on this page is currently being prepared and will be updated soon.",
+    "de": "Die Inhalte dieser Seite werden derzeit vorbereitet und in Kürze aktualisiert.",
+    "ja": "現在、このページのコンテンツは準備中です。まもなく更新される予定です。",
+    "zh-CN": "当前页面内容正在准备中，很快将会更新。"
+  },
+  "common.notice.view_details": {
+    "ko": "하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+    "en": "More detailed information can be found in the submenu.",
+    "de": "Weitere detaillierte Informationen finden Sie im Untermenü.",
+    "ja": "詳細な情報はサブメニューで確認できます。",
+    "zh-CN": "可在下级菜单中查看更详细的信息。"
+  },
+  "proc_opt_main.header.title": {
+    "ko": "공정 최적화",
+    "en": "Process Optimization",
+    "de": "Prozessoptimierung",
+    "ja": "プロセス最適化",
+    "zh-CN": "工艺优化"
+  },
+  "proc_opt_main.intro.text": {
+    "ko": "공정 최적화는 생산성 향상과 품질 확보를 위해 필수적인 연구 분야입니다. 아래 하위 항목에서 구체적인 접근 전략과 최신 동향을 확인할 수 있습니다.",
+    "en": "Process optimization is an essential research field for enhancing productivity and ensuring quality. In the sub-sections below, you can find specific approaches and the latest trends.",
+    "de": "Die Prozessoptimierung ist ein unverzichtbares Forschungsgebiet zur Steigerung der Produktivität und Sicherstellung der Qualität. In den unten stehenden Unterabschnitten finden Sie spezifische Ansätze und die neuesten Trends.",
+    "ja": "プロセス最適化は、生産性向上と品質確保のために不可欠な研究分野です。以下のセクションでは、具体的なアプローチと最新の動向をご覧いただけます。",
+    "zh-CN": "工艺优化是提高生产效率和确保质量的关键研究领域。在下面的子部分中，您可以了解具体的方法和最新趋势。"
+  },
+  "proc_opt_main.overview.title": {
+    "ko": "연구 개요",
+    "en": "Research Overview",
+    "de": "Forschungsübersicht",
+    "ja": "研究概要",
+    "zh-CN": "研究概述"
+  },
+  "proc_opt_main.overview.description": {
+    "ko": "공정 최적화의 필요성과 접근 전략을 소개합니다.",
+    "en": "Introduces the necessity of process optimization and the approach strategies.",
+    "de": "Stellt die Notwendigkeit der Prozessoptimierung und die entsprechenden Vorgehensstrategien vor.",
+    "ja": "プロセス最適化の必要性とアプローチ戦略を紹介します。",
+    "zh-CN": "介绍工艺优化的必要性以及采用的策略。"
+  },
+  "proc_opt_main.dev_analytics.title": {
+    "ko": "배양 공정 설계 및 분석",
+    "en": "Cultivation Process Design and Analysis",
+    "de": "Entwurf und Analyse von Kultivierungsprozessen",
+    "ja": "培養プロセスの設計と分析",
+    "zh-CN": "培养工艺的设计与分析"
+  },
+  "proc_opt_main.dev_analytics.description": {
+    "ko": "공정 조건 최적화와 데이터 기반 분석 방법을 다룹니다.",
+    "en": "Covers process condition optimization and data-driven analysis methods.",
+    "de": "Behandelt die Optimierung von Prozessbedingungen und datengesteuerte Analysemethoden.",
+    "ja": "プロセス条件の最適化とデータ駆動型の分析手法を扱います。",
+    "zh-CN": "涉及工艺条件优化和数据驱动的分析方法。"
+  },
+  "proc_opt_main.trends.title": {
+    "ko": "최신 연구 동향",
+    "en": "Latest Research Trends",
+    "de": "Neueste Forschungstrends",
+    "ja": "最新の研究動向",
+    "zh-CN": "最新研究动向"
+  },
+  "proc_opt_main.trends.description": {
+    "ko": "관련 분야의 연구 성과와 산업 동향을 살펴봅니다.",
+    "en": "Examines research outcomes and industry trends in related fields.",
+    "de": "Betrachtet die Forschungsergebnisse und Industrietrends in den relevanten Bereichen.",
+    "ja": "関連分野の研究成果と産業動向を紹介します。",
+    "zh-CN": "介绍相关领域的研究成果和行业趋势。"
+  },
+  "proc_opt_overview_main.header.title": {
+    "ko": "연구 개요",
+    "en": "Research Overview",
+    "de": "Forschungsübersicht",
+    "ja": "研究概要",
+    "zh-CN": "研究概述"
+  },
+  "proc_opt_overview_main.intro.text": {
+    "ko": "공정 최적화 연구의 목적, 필요성 및 주요 접근 전략을 소개합니다.",
+    "en": "Introduces the objectives, necessity, and main approaches of process optimization research.",
+    "de": "Stellt die Ziele, die Notwendigkeit und die wichtigsten Ansätze der Prozessoptimierungsforschung vor.",
+    "ja": "プロセス最適化研究の目的、必要性、および主要なアプローチを紹介します。",
+    "zh-CN": "介绍工艺优化研究的目的、必要性和主要方法。"
+  },
+  "proc_opt_overview_main.purpose_necessity.title": {
+    "ko": "연구 목적 및 필요성",
+    "en": "Research Objectives and Necessity",
+    "de": "Forschungszweck und Notwendigkeit",
+    "ja": "研究の目的と必要性",
+    "zh-CN": "研究目的及必要性"
+  },
+  "proc_opt_overview_main.approach_strategy.title": {
+    "ko": "접근 전략",
+    "en": "Approach & Strategy",
+    "de": "Ansatz & Strategie",
+    "ja": "アプローチと戦略",
+    "zh-CN": "研究途径与策略"
+  },
+  "proc_opt_overview_main.notice.message": {
+    "ko": "공정 최적화 연구 개요에 대한 상세 내용이 곧 업데이트될 예정입니다.",
+    "en": "Detailed content on the process optimization overview will be updated soon.",
+    "de": "Ausführliche Inhalte zur Übersicht der Prozessoptimierung werden in Kürze aktualisiert.",
+    "ja": "プロセス最適化研究の概要に関する詳細な内容はまもなく更新される予定です。",
+    "zh-CN": "有关工艺优化研究概览的详细内容将很快更新。"
+  },
+  "proc_opt_overview_purpose_necessity.header.title": {
+    "ko": "연구 목적 및 필요성",
+    "en": "Research Objectives and Necessity",
+    "de": "Forschungszweck und Notwendigkeit",
+    "ja": "研究の目的と必要性",
+    "zh-CN": "研究目的及必要性"
+  },
+  "proc_opt_overview_purpose_necessity.intro.text": {
+    "ko": "공정 최적화 연구가 왜 중요하며, 이를 통해 달성하고자 하는 목표는 무엇인지 설명합니다.",
+    "en": "Explains why process optimization research is important and what objectives it aims to achieve.",
+    "de": "Erläutert, warum die Prozessoptimierungsforschung wichtig ist und welche Ziele damit erreicht werden sollen.",
+    "ja": "プロセス最適化研究がなぜ重要であり、それによって達成しようとする目標は何かを説明します。",
+    "zh-CN": "阐明了工艺优化研究的重要性，以及希望通过该研究实现的目标。"
+  },
+  "proc_opt_overview_approach_strategy.header.title": {
+    "ko": "접근 전략",
+    "en": "Approach & Strategy",
+    "de": "Ansatz & Strategie",
+    "ja": "アプローチと戦略",
+    "zh-CN": "研究途径与策略"
+  },
+  "proc_opt_overview_approach_strategy.intro.text": {
+    "ko": "공정 최적화를 위해 본 연구실에서 사용하는 주요 접근 방법 및 연구 전략을 소개합니다.",
+    "en": "Introduces the main approaches and research strategies used in this laboratory for process optimization.",
+    "de": "Stellt die wichtigsten Ansätze und Forschungsstrategien vor, die in diesem Labor für die Prozessoptimierung eingesetzt werden.",
+    "ja": "プロセス最適化のために本研究室で使用している主なアプローチ方法と研究戦略を紹介します。",
+    "zh-CN": "介绍本实验室为实现工艺优化所采用的主要方法和研究策略。"
+  },
+  "proc_opt_dev_analytics_main.header.title": {
+    "ko": "배양 공정 설계 및 분석",
+    "en": "Cultivation Process Design and Analysis",
+    "de": "Entwurf und Analyse von Kultivierungsprozessen",
+    "ja": "培養プロセスの設計と分析",
+    "zh-CN": "培养工艺的设计与分析"
+  },
+  "proc_opt_dev_analytics_main.intro.text": {
+    "ko": "효율적인 세포 배양 공정 개발을 위한 설계 방법론과 데이터 기반 공정 분석 기술을 다룹니다.",
+    "en": "Covers design methodologies for efficient cell cultivation process development and data-driven process analysis techniques.",
+    "de": "Behandelt Entwurfsmethodiken für die effiziente Entwicklung von Zellkulturprozessen und datengesteuerte Prozessanalysetechniken.",
+    "ja": "効率的な細胞培養プロセス開発のための設計手法とデータ駆動型のプロセス分析技術を扱います。",
+    "zh-CN": "涉及有效的细胞培养工艺开发设计方法论以及数据驱动的工艺分析技术。"
+  },
+  "proc_opt_dev_analytics_main.param_opt.title": {
+    "ko": "공정 조건 최적화",
+    "en": "Process Parameter Optimization",
+    "de": "Prozessparameter-Optimierung",
+    "ja": "プロセス条件の最適化",
+    "zh-CN": "工艺参数优化"
+  },
+  "proc_opt_dev_analytics_main.data_driven.title": {
+    "ko": "데이터 기반 공정 분석",
+    "en": "Data-driven Process Analysis",
+    "de": "Datengetriebene Prozessanalyse",
+    "ja": "データ駆動型のプロセス分析",
+    "zh-CN": "数据驱动的工艺分析"
+  },
+  "proc_opt_dev_analytics_main.notice.message": {
+    "ko": "배양 공정 설계 및 분석에 대한 상세 내용이 곧 업데이트될 예정입니다.",
+    "en": "Detailed content on Cultivation Process Design and Analysis will be updated soon.",
+    "de": "Ausführliche Inhalte zum Thema Entwurf und Analyse von Kultivierungsprozessen werden in Kürze aktualisiert.",
+    "ja": "培養プロセスの設計と分析に関する詳細な内容はまもなく更新される予定です。",
+    "zh-CN": "有关培养工艺设计与分析的详细内容将很快更新。"
+  },
+  "proc_opt_dev_analytics_param_opt.header.title": {
+    "ko": "공정 조건 최적화",
+    "en": "Process Parameter Optimization",
+    "de": "Prozessparameter-Optimierung",
+    "ja": "プロセス条件の最適化",
+    "zh-CN": "工艺参数优化"
+  },
+  "proc_opt_dev_analytics_param_opt.intro.text": {
+    "ko": "실험계획법(DoE) 등 통계적 방법을 활용한 공정 변수 최적화 전략을 소개합니다.",
+    "en": "Introduces process parameter optimization strategies utilizing statistical methods such as Design of Experiments (DoE).",
+    "de": "Stellt Optimierungsstrategien für Prozessparameter vor, die statistische Methoden wie die Versuchsplanung (DoE) nutzen.",
+    "ja": "実験計画法（DoE）などの統計的手法を活用したプロセス変数の最適化戦略を紹介します。",
+    "zh-CN": "介绍利用统计方法（如试验设计 DoE）进行工艺参数优化的策略。"
+  },
+  "proc_opt_dev_analytics_data_driven.header.title": {
+    "ko": "데이터 기반 공정 분석",
+    "en": "Data-driven Process Analysis",
+    "de": "Datengetriebene Prozessanalyse",
+    "ja": "データ駆動型のプロセス分析",
+    "zh-CN": "数据驱动的工艺分析"
+  },
+  "proc_opt_dev_analytics_data_driven.intro.text": {
+    "ko": "공정분석기술(PAT), 품질기반설계(QbD) 등 데이터 중심의 공정 이해 및 개선 방법을 다룹니다.",
+    "en": "Covers data-centric approaches for process understanding and improvement, including Process Analytical Technology (PAT) and Quality by Design (QbD).",
+    "de": "Behandelt datenorientierte Ansätze zum Prozessverständnis und zur Prozessverbesserung, einschließlich Process Analytical Technology (PAT) und Quality by Design (QbD).",
+    "ja": "プロセス分析技術（PAT）や品質重視設計（QbD）など、データ中心のプロセス理解と改善手法を扱います。",
+    "zh-CN": "涉及以数据为中心的工艺理解和改进方法，包括过程分析技术（PAT）和质量源于设计（QbD）。"
+  },
+  "proc_opt_trends_main.header.title": {
+    "ko": "최신 연구 동향",
+    "en": "Latest Research Trends",
+    "de": "Neueste Forschungstrends",
+    "ja": "最新の研究動向",
+    "zh-CN": "最新研究动向"
+  },
+  "proc_opt_trends_main.intro.text": {
+    "ko": "공정 최적화 분야의 최신 연구 성과, 산업 및 학술 동향을 소개합니다.",
+    "en": "Introduces the latest research achievements and industrial and academic trends in the field of process optimization.",
+    "de": "Stellt die neuesten Forschungsergebnisse sowie die industriellen und akademischen Trends im Bereich der Prozessoptimierung vor.",
+    "ja": "プロセス最適化分野の最新の研究成果や、産業界および学術界の動向を紹介します。",
+    "zh-CN": "介绍工艺优化领域的最新研究成果，以及产业界和学术界的最新趋势。"
+  },
+  "proc_opt_trends_main.publications_patents.title": {
+    "ko": "주요 연구 성과",
+    "en": "Major Research Achievements",
+    "de": "Wichtigste Forschungsergebnisse",
+    "ja": "主要な研究成果",
+    "zh-CN": "主要研究成果"
+  },
+  "proc_opt_trends_main.industry_academic.title": {
+    "ko": "최근 산업 및 학술 동향",
+    "en": "Recent Industrial & Academic Trends",
+    "de": "Aktuelle industrielle & akademische Trends",
+    "ja": "最近の産業および学術動向",
+    "zh-CN": "近期产业及学术趋势"
+  },
+  "proc_opt_trends_main.notice.message": {
+    "ko": "최신 연구 동향에 대한 상세 내용이 곧 업데이트될 예정입니다.",
+    "en": "Detailed content on the latest research trends will be updated soon.",
+    "de": "Ausführliche Inhalte zu den neuesten Forschungstrends werden in Kürze aktualisiert.",
+    "ja": "最新研究動向に関する詳細な内容はまもなく更新される予定です。",
+    "zh-CN": "有关最新研究动向的详细内容将很快更新。"
+  },
+  "proc_opt_trends_publications_patents.header.title": {
+    "ko": "주요 연구 성과",
+    "en": "Major Research Achievements",
+    "de": "Wichtigste Forschungsergebnisse",
+    "ja": "主要な研究成果",
+    "zh-CN": "主要研究成果"
+  },
+  "proc_opt_trends_publications_patents.intro.text": {
+    "ko": "본 연구실 및 관련 분야의 주요 논문, 특허 등 연구 성과를 공유합니다.",
+    "en": "Shares major research outputs such as key papers and patents from this lab and related fields.",
+    "de": "Teilt die wichtigsten Forschungsleistungen dieses Labors und verwandter Bereiche, einschließlich zentraler Publikationen und Patente.",
+    "ja": "当研究室および関連分野の主要な論文、特許などの研究成果を共有します。",
+    "zh-CN": "分享本实验室及相关领域的重要论文、专利等主要研究成果。"
+  },
+  "proc_opt_trends_industry_academic.header.title": {
+    "ko": "최근 산업 및 학술 동향",
+    "en": "Recent Industrial & Academic Trends",
+    "de": "Aktuelle industrielle & akademische Trends",
+    "ja": "最近の産業および学術動向",
+    "zh-CN": "近期产业及学术趋势"
+  },
+  "proc_opt_trends_industry_academic.intro.text": {
+    "ko": "공정 최적화 기술의 산업계 적용 현황과 학계의 최신 연구 방향을 조망합니다.",
+    "en": "Overviews the current state of industrial applications of process optimization technology and the latest directions of academic research.",
+    "de": "Gibt einen Überblick über den aktuellen Stand industrieller Anwendungen der Prozessoptimierungstechnik und die neuesten Ausrichtungen der akademischen Forschung.",
+    "ja": "プロセス最適化技術の産業界での適用現況と、学界における最新の研究動向を展望します。",
+    "zh-CN": "概述工艺优化技术在工业界的应用现状以及学术界的最新研究方向。"
+  },
+  "proc_opt_automation.header.title": {
+    "ko": "자동화 시스템",
+    "en": "Automation System",
+    "de": "Automatisierungssystem",
+    "ja": "自動化システム",
+    "zh-CN": "自动化系统"
+  },
+  "proc_opt_automation.intro.text": {
+    "ko": "이 페이지는 바이오프로세스 자동화 시스템 구축 및 운영에 관한 연구 내용을 다룹니다.",
+    "en": "This page covers research content related to the development and operation of bioprocess automation systems.",
+    "de": "Diese Seite behandelt Forschungsinhalte zur Entwicklung und zum Betrieb von Bioprozess-Automatisierungssystemen.",
+    "ja": "このページでは、バイオプロセス自動化システムの構築および運用に関する研究内容を扱います。",
+    "zh-CN": "本页面涉及与生物工艺自动化系统的构建和运行相关的研究内容。"
+  },
+  "proc_opt_automation.notice.message": {
+    "ko": "현재 페이지의 콘텐츠는 준비 중입니다. 곧 업데이트될 예정입니다.",
+    "en": "The content of this page is currently being prepared and will be updated soon.",
+    "de": "Die Inhalte dieser Seite werden derzeit vorbereitet und in Kürze aktualisiert.",
+    "ja": "現在、このページのコンテンツは準備中です。まもなく更新される予定です。",
+    "zh-CN": "当前页面的内容正在准备中，很快将会更新。"
   }
 }
