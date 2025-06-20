@@ -3128,4 +3128,145 @@
     "ja": "CFDの核心理論",
     "zh-CN": "CFD 核心理论"
   }
+,
+  "cfd_core_theory.intro": {
+    "ko": "CFD 해석은 유체 유동을 지배하는 기본 물리 법칙, 특히 보존 방정식을 기반으로 합니다. 난류 유동의 처리를 위한 난류 모델링 또한 핵심적인 부분이며, 최근에는 전통적인 Navier-Stokes 방정식 기반 모델 외에도 격자 볼츠만 방법(LBM)과 같은 다양한 접근법이 활용되고 있습니다. 해석 수행(Solving) 단계에서 사용되는 다양한 수치 해석 기법, 난류 모델, 다상 유동 모델 등에 대한 상세한 비교 및 설명은 CFD Solving 페이지에서 확인할 수 있습니다.",
+    "en": "CFD analysis is based on the fundamental physical laws governing fluid flow, particularly the conservation equations. Turbulence modeling for handling turbulent flows is also a key component, and recently, in addition to traditional Navier-Stokes equation-based models, diverse approaches such as the Lattice Boltzmann Method (LBM) have been employed. Detailed comparisons and explanations of various numerical methods, turbulence models, and multiphase flow models used in the solving stage can be found on the CFD Solving page.",
+    "de": "Die CFD-Analyse basiert auf den grundlegenden physikalischen Gesetzen, die Fluidströmungen beherrschen, insbesondere den Erhaltungsgleichungen. Auch die Turbulenzmodellierung zur Behandlung turbulenter Strömungen ist ein Kernbestandteil, und in jüngerer Zeit werden neben den herkömmlichen, auf den Navier-Stokes-Gleichungen basierenden Modellen auch unterschiedliche Ansätze wie die Gitter-Boltzmann-Methode (LBM) eingesetzt. Ausführliche Vergleiche und Erläuterungen zu den verschiedenen im Lösungsprozess verwendeten numerischen Verfahren, Turbulenzmodellen und Mehrphasenströmungsmodellen finden sich auf der CFD-Solving-Seite.",
+    "ja": "CFD解析は、流体流動を支配する基本的な物理法則、特に保存方程式に基づいています。乱流流動を扱うための乱流モデルも核心的な要素であり、近年では従来のNavier-Stokes方程式ベースのモデルに加えて、格子ボルツマン法（LBM）など多様なアプローチが活用されています。解法段階で使用される様々な数値解析手法、乱流モデル、多相流モデルに関する詳細な比較と解説は CFD Solvingページで確認できます.",
+    "zh-CN": "CFD分析基于支配流体流动的基本物理定律，特别是守恒方程。处理湍流流动的湍流建模也是核心部分，近来除了传统的基于Navier-Stokes方程的模型之外，还采用了如格子玻尔兹曼方法（LBM）等多种不同方法。关于求解阶段所使用的各种数值计算方法、湍流模型和多相流模型的详细比较和说明，请参见CFD求解页面."
+  },
+  "cfd_core_theory.governing_eq.title": {
+    "ko": "지배 방정식 (Governing Equations)",
+    "en": "Governing Equations",
+    "de": "Grundgleichungen",
+    "ja": "支配方程式",
+    "zh-CN": "控制方程"
+  },
+  "cfd_core_theory.governing_eq.desc": {
+    "ko": "유체 유동은 연속체 역학에 의해 지배되며, 다음과 같은 보존 법칙을 따릅니다.",
+    "en": "Fluid flow is governed by continuum mechanics and follows the following conservation laws.",
+    "de": "Fluidströmungen werden durch die Kontinuumsmechanik beherrscht und folgen den folgenden Erhaltungsgesetzen.",
+    "ja": "流体の流れは連続体力学によって支配され、次のような保存則に従います。",
+    "zh-CN": "流体流动受连续介质力学支配，遵循以下守恒定律。"
+  },
+  "cfd_core_theory.continuity_eq.title": {
+    "ko": "연속 방정식 (Continuity Equation) - 질량 보존",
+    "en": "Continuity Equation – Mass Conservation",
+    "de": "Kontinuitätsgleichung – Massenerhaltung",
+    "ja": "連続方程式（Continuity Equation）- 質量保存",
+    "zh-CN": "连续方程（Continuity Equation）– 质量守恒"
+  },
+  "cfd_core_theory.continuity_eq.desc": {
+    "ko": "특정 체적 요소 내에서 질량의 변화율은 그 체적 경계를 통과하는 질량 유량의 순 흐름과 같다는 원리입니다.",
+    "en": "The principle that the rate of change of mass within a given volume element equals the net flow of mass across its boundaries.",
+    "de": "Das Prinzip, dass die Änderung der Masse in einem gegebenen Volumenelement gleich dem Nettomassenstrom durch dessen Begrenzung ist.",
+    "ja": "特定の体積要素内の質量変化率は、その体積の境界を通過する質量流量の正味流れに等しいという原理です。",
+    "zh-CN": "在特定体积元内的质量变化率等于通过其边界的质量流量净值的原理."
+  },
+  "cfd_core_theory.continuity_eq.variables": {
+    "ko": "(ρ: 밀도, u: 속도 벡터, t: 시간, ∇: 나블라 연산자)",
+    "en": "(ρ: density, u: velocity vector, t: time, ∇: nabla operator)",
+    "de": "(ρ: Dichte, u: Geschwindigkeitsvektor, t: Zeit, ∇: Nabla-Operator)",
+    "ja": "(ρ: 密度, u: 速度ベクトル, t: 時間, ∇: ナブラ演算子)",
+    "zh-CN": "(ρ: 密度, u: 速度ベクトル, t: 时间, ∇: Nabla算子)"
+  },
+  "cfd_core_theory.incompressible.desc": {
+    "ko": "비압축성 유동(ρ = const.)의 경우 ∇ ⋅ u = 0으로 단순화됩니다.",
+    "en": "For incompressible flow (ρ = const.), the equation simplifies to ∇ ⋅ u = 0.",
+    "de": "Für inkompressible Strömung (ρ = const.) vereinfacht sich die Gleichung zu ∇ ⋅ u = 0.",
+    "ja": "非圧縮性流れ（ρ = const.）の場合、∇ ⋅ u = 0に単純化されます。",
+    "zh-CN": "对于不可压缩流（ρ = 恒定），方程简化为 ∇ ⋅ u = 0."
+  },
+  "cfd_core_theory.momentum_eq.title": {
+    "ko": "운동량 방정식 (Momentum Equation) - Navier-Stokes 방정식",
+    "en": "Momentum Equation – Navier-Stokes Equation",
+    "de": "Impulsgleichung – Navier-Stokes-Gleichung",
+    "ja": "運動量方程式（Momentum Equation）- Navier-Stokes方程式",
+    "zh-CN": "动量方程（Momentum Equation）– Navier-Stokes方程"
+  },
+  "cfd_core_theory.momentum_eq.desc": {
+    "ko": "뉴턴의 제2법칙(F=ma)을 유체 요소에 적용한 것으로, 유체 요소에 작용하는 힘(압력 구배력, 점성력, 체적력 등)과 그로 인한 운동량 변화율의 균형을 나타냅니다.",
+    "en": "By applying Newton's second law (F = ma) to a fluid element, it represents the balance between the forces acting on the fluid element (pressure gradient, viscous forces, body forces, etc.) and the resulting rate of change of momentum.",
+    "de": "Angewandt auf ein Fluidelement (Newtons 2. Gesetz, F = ma) stellt sie das Gleichgewicht zwischen den auf das Fluidelement wirkenden Kräften (Druckgradient, Viskositätskräfte, Volumenkraft etc.) und der daraus resultierenden Änderung des Impulses dar.",
+    "ja": "ニュートンの第二法則（F=ma）を流体要素に適用したもので、流体要素に作用する力（圧力勾配力、粘性力, 체적力 등）とそれによる運動량変化율의 균형을 나타냅니다.",
+    "zh-CN": "将牛顿第二定律(F=ma)应用于流体微团得到的方程，表示作用在流体单元上的力（压力梯度力、粘性力、体积力等）与由此产生的动量变化率之间的平衡。"
+  },
+  "cfd_core_theory.momentum_eq.variables": {
+    "ko": "(p: 압력, μ: 동점성 계수, ∇²: 라플라시안 연산자, f: 체적력 벡터)",
+    "en": "(p: pressure, μ: dynamic viscosity, ∇²: Laplacian operator, f: body force vector)",
+    "de": "(p: Druck, μ: dynamische Viskosität, ∇²: Laplace-Operator, f: Volumenkraftvektor)",
+    "ja": "(p: 圧力, μ: 粘性係数, ∇²: ラプラシアン演算子, f: 体積力ベクトル)",
+    "zh-CN": "(p: 压力, μ: 动力粘度系数, ∇²: 拉普拉斯算子, f: 体积力ベクトル)"
+  },
+  "cfd_core_theory.momentum_eq.note": {
+    "ko": "여기서 Du/Dt = ∂u/∂t + (u ⋅ ∇)u 는 물질 도함수(Material derivative)로, 시간 변화율과 이류(Convection) 항을 포함합니다. Navier-Stokes 방정식은 비선형적이며, 해석적 해는 매우 제한적인 경우에만 존재합니다. 3차원 Navier-Stokes 방정식의 매끄러운 해의 존재성과 유일성은 아직 수학적으로 증명되지 않은 난제입니다.",
+    "en": "Here, Du/Dt = ∂u/∂t + (u ⋅ ∇)u is the material derivative, which includes the time rate of change and the convection term. The Navier-Stokes equation is nonlinear, and analytical solutions exist only in very limited cases. The existence and uniqueness of a smooth solution to the 3D Navier-Stokes equations is a famous unsolved problem in mathematics.",
+    "de": "Dabei ist Du/Dt = ∂u/∂t + (u ⋅ ∇)u die materielle Ableitung, die sowohl die zeitliche Änderungsrate als auch das Konvektionsglied umfasst. Die Navier-Stokes-Gleichung ist nichtlinear, und geschlossene (analytische) Lösungen existieren nur in sehr wenigen Fällen. Die Existenz und Eindeutigkeit einer glatten Lösung der dreidimensionalen Navier-Stokes-Gleichungen ist bis heute ein ungelöstes mathematisches Problem.",
+    "ja": "ここで、Du/Dt = ∂u/∂t + (u ⋅ ∇)u は物質微分（Material derivative）であり、時間変化率と移流項を含みます。Navier-Stokes方程式は非線形であり、解析解が存在するのはごく限られた場合のみです。3次元Navier-Stokes方程式の滑らかな解の存在性と一意性は、依然として数学上未解決の難問です。",
+    "zh-CN": "这里，Du/Dt = ∂u/∂t + (u ⋅ ∇)u 是物质导数，包含时间变化率和对流项。Navier-Stokes方程是非线性的，仅在非常有限的情况下存在解析解。三维Navier-Stokes方程光滑解的存在性和唯一性仍然是尚未解决的数学难题."
+  },
+  "cfd_core_theory.energy_eq.title": {
+    "ko": "에너지 방정식 (Energy Equation) - 에너지 보존",
+    "en": "Energy Equation – Energy Conservation",
+    "de": "Energiegleichung – Energieerhaltung",
+    "ja": "エネルギー方程式（Energy Equation）- エネルギー保存",
+    "zh-CN": "能量方程（Energy Equation）– 能量守恒"
+  },
+  "cfd_core_theory.energy_eq.desc": {
+    "ko": "유체 요소의 총 에너지(내부 에너지, 운동 에너지) 변화율은 그 요소에 가해지는 열전달율과 일률(압력 일, 점성 일 등)의 합과 같다는 원리입니다. 온도 변화, 열 전달, 압축/팽창에 의한 에너지 변화 등을 기술합니다.",
+    "en": "The principle that the rate of change of a fluid element's total energy (internal energy + kinetic energy) equals the sum of the heat transfer rate and work rate (pressure work, viscous work, etc.) applied to it. It describes temperature changes, heat transfer, and energy changes due to compression/expansion.",
+    "de": "Das Prinzip, dass die Änderungsrate der Gesamtenergie (innere Energie + kinetische Energie) eines Fluidelements gleich der Summe aus zugeführter Wärmestromrate und geleisteter Arbeit (Druckarbeit, viskose Arbeit etc.) ist. Es beschreibt Temperaturänderungen, Wärmetransport sowie Energieänderungen durch Kompression/Expansion.",
+    "ja": "流体要素の総エネルギー（内部エネルギーと運動エネルギー）の変化率が、その要素に加えられる熱伝達率と仕事率（圧力仕事、粘性仕事など）の合計に等しいという原理です。温度変化、熱伝達、および圧縮・膨張によるエネルギー変化を記述します。",
+    "zh-CN": "流体单元总能量（内部能+动能）的变化率等于施加于该单元的热传递率和功率（压力功、粘性功等）的总和这一原理。它描述了温度变化、热传递以及由于压缩/膨胀引起的能量变化。"
+  },
+  "cfd_core_theory.energy_eq.note": {
+    "ko": "이 방정식들은 압축성 유동의 경우 속도 3성분, 압력, 밀도, 온도 등 여러 미지 변수를 포함하는 연립 편미분 방정식 시스템을 형성합니다. 이를 풀기 위해 상태 방정식(예: 이상 기체 법칙 p = ρRT) 등이 추가로 필요합니다.",
+    "en": "These equations form a system of coupled partial differential equations that, in the case of compressible flow, include multiple unknown variables (three velocity components, pressure, density, temperature, etc.). Additional relations, such as an equation of state (e.g., the ideal gas law p = ρRT), are required to solve them.",
+    "de": "Diese Gleichungen bilden bei kompressibler Strömung ein System gekoppelter partieller Differentialgleichungen mit mehreren unbekannten Variablen (drei Geschwindigkeitskomponenten, Druck, Dichte, Temperatur usw.). Zu ihrer Lösung sind zusätzliche Gleichungen, wie z.B. eine Zustandsgleichung (etwa das ideale Gasgesetz p = ρRT), erforderlich.",
+    "ja": "これらの方程式は、圧縮性流れの場合、速度3成分、圧力、密度、温度など複数の未知変数を含む連立偏微分方程式系を形成します。それらを解くために、状態方程式（例: 理想気体の法則 p = ρRT）などの追加の関係式が必要です。",
+    "zh-CN": "对于可压缩流动，这些方程构成了一个包含多个未知变量（速度的三个分量、压力、密度、温度等）的偏微分方程组。需要引入附加方程，如状态方程（例如理想气体定律 p = ρRT），才能求解。"
+  },
+  "cfd_core_theory.turbulence.title": {
+    "ko": "난류 모델링 (Turbulence Modeling)",
+    "en": "Turbulence Modeling",
+    "de": "Turbulenzmodellierung",
+    "ja": "乱流モデルリング",
+    "zh-CN": "湍流建模"
+  },
+  "cfd_core_theory.turbulence.desc": {
+    "ko": "대부분의 실제 공학 유동은 복잡하고 불규칙한 난류 특성을 가집니다. 난류를 직접 계산(DNS)하기에는 엄청난 계산 자원이 필요하므로, 실제 CFD에서는 난류 효과를 모델링합니다.",
+    "en": "Most real engineering flows have complex, irregular turbulent characteristics. Because directly computing turbulence (DNS) requires enormous computational resources, practical CFD relies on modeling turbulence effects.",
+    "de": "Die meisten realen technischen Strömungen weisen komplexe, unregelmäßige turbulente Eigenschaften auf. Da eine direkte Berechnung der Turbulenz (DNS) enorme Rechenressourcen erfordert, werden die Turbulenzeffekte in der praktischen CFD durch Modelle erfasst.",
+    "ja": "ほとんどの実際の工学的流れは複雑で不規則な乱流特性を持ちます。乱流を直接計算する（DNS）のには膨大な計算資源が必要なため、実際のCFDでは乱流効果をモデル化します。",
+    "zh-CN": "大多数实际工程中的流动具有复杂且不规则的湍流特性。由于直接计算湍流（DNS）需要庞大的计算资源，在实际的CFD中通过模型来处理湍流效应."
+  },
+  "cfd_core_theory.turbulence.dns": {
+    "ko": "DNS (Direct Numerical Simulation): 난류의 모든 스케일을 직접 계산합니다. 가장 정확하지만, 매우 낮은 Reynolds 수의 간단한 유동에만 적용 가능하며 계산 비용이 엄청나 학술 연구에 주로 사용됩니다.",
+    "en": "DNS (Direct Numerical Simulation): Computes all scales of turbulence directly. It is the most accurate but is only feasible for very low-Reynolds-number, simple flows due to extremely high computational cost, so it is mainly used in academic research.",
+    "de": "DNS (Direct Numerical Simulation): Berechnet alle turbulenten Skalen direkt. Dies ist am genauesten, aber aufgrund des enorm hohen Rechenaufwands nur für sehr niedrige Reynolds-Zahlen bei einfachen Strömungen anwendbar, und wird daher hauptsächlich in der Forschung eingesetzt.",
+    "ja": "DNS（直接数値シミュレーション）: 乱流のすべてのスケールを直接計算します。最も精度が高い手法ですが、計算コストが非常に大きいため極めて低いレイノル즈数の単純な流れにしか適用できず、主に学術研究で使用されます.",
+    "zh-CN": "DNS（直接数值模拟）：直接计算湍流的所有尺度。虽然最为准确，但仅适用于非常低雷诺数的简单流动，并且计算代价极其高昂，因此主要用于学术研究。"
+  },
+  "cfd_core_theory.turbulence.rans": {
+    "ko": "RANS (Reynolds-Averaged Navier-Stokes): 순간적인 유동 변수를 시간 평균값과 변동 성분으로 분리하여 평균된 Navier-Stokes 방정식을 풉니다. 난류 변동에 의한 효과(Reynolds 응력)는 난류 모델을 사용하여 근사합니다. 계산 비용이 가장 저렴하여 산업적으로 가장 널리 사용됩니다. k-epsilon, k-omega, Spalart-Allmaras 등 다양한 모델이 있습니다. 정상 상태 유동에 적합하지만, 시간 의존적 평균 유동을 해석하기 위해 비정상 RANS(Unsteady RANS, URANS) 방법도 활발히 사용됩니다. URANS는 RANS 방정식의 시간 항을 유지하여 시간에 따라 변화하는 대규모 난류 구조나 주기적 현상을 포착할 수 있으며, 이는 기존 정상 RANS 모델보다 더 많은 정보를 제공합니다 (자세한 내용은 URANS 모델 페이지 참조).",
+    "en": "RANS (Reynolds-Averaged Navier-Stokes): Splits instantaneous flow variables into time-mean and fluctuating components, and solves the time-averaged Navier-Stokes equations. The effects of turbulent fluctuations (Reynolds stresses) are approximated using turbulence models. It has the lowest computational cost and is therefore the most widely used in industry. There are various models (k-ε, k-ω, Spalart-Allmaras, etc.). It is suitable for steady-state flows, but in order to analyze time-dependent mean flows, Unsteady RANS (URANS) is also widely used. URANS retains the time-dependent terms in the RANS equations to capture large-scale unsteady structures or periodic phenomena over time, providing more information than conventional steady RANS models (for more details, see the URANS model page).",
+    "de": "RANS (Reynolds-averaged Navier-Stokes): Zerlegt die momentanen Strömungsgrößen in zeitlichen Mittelwert und Schwankungsanteil und löst die gemittelten Navier-Stokes-Gleichungen. Die Effekte der turbulenten Schwankungen (Reynolds-Spannungen) werden mittels Turbulenzmodellen angenähert. Dieses Verfahren erfordert den geringsten Rechenaufwand und wird daher industriell am häufigsten eingesetzt. Es existieren verschiedene Modelle (k-ε, k-ω, Spalart-Allmaras etc.). Es eignet sich für stationäre Strömungen, aber um zeitabhängige mittlere Strömungen zu erfassen, wird auch Unsteady RANS (URANS) häufig verwendet. URANS behält die zeitabhängigen Terme der RANS-Gleichungen bei, um zeitlich veränderliche großskalige Turbulenzstrukturen oder periodische Phänomene zu erfassen, und liefert dadurch mehr Informationen als herkömmliche stationäre RANS-Modelle (Einzelheiten siehe URANS-Modellseite).",
+    "ja": "RANS（Reynolds平均Navier-Stokes）: 瞬時の流れの変数を時間平均成分と変動成分に分離し、平均化されたNavier-Stokes方程式を解きます。乱流変動による効果（レイノルズ応力）は乱流モデルを使用하여 근사합니다.計算 비용이 가장 저렴하여 산업적으로 가장 널리 사용됩니다. k-ε 모델, k-ω 모델, Spalart-Allmaras 등 다양한 모델이 있습니다. 정상 상태 유동에 적합하지만, 시간 의존적 평균 유동을 해석하기 위해 비정상 RANS(URANS) 방법도 활발히 사용됩니다. URANS는 시간에 따라 변화하는 대규모 난류 구조나 주기적 현상을 포착할 수 있으며, 이는 기존 정상 RANS 모델보다 더 많은 정보를 제공합니다 (자세한 내용은 URANS 모델 페이지 참조).",
+    "zh-CN": "RANS（雷诺时均Navier-Stokes）: 将瞬时流动变量分解为时间平均值和脉动分量，并求解平均的Navier-Stokes方程。湍流脉动引起的效应（雷诺应力）通过湍流模型加以近似。其计算成本最低，因此在工业上应用最为广泛。有多种模型（k-ε、k-ω、Spalart-Allmaras等）。适用于定常流动，但为了解析随时间变化的平均流动，非定常RANS（URANS）也被积极采用。URANS保留了RANS方程中的非定常项，从而能够捕捉随时间演化的大尺度湍流结构或瞬态现象，提供比传统定常RANS模型更多的信息（详细内容参见URANS模型页面）。"
+  },
+  "cfd_core_theory.turbulence.les": {
+    "ko": "LES (Large Eddy Simulation): 크기가 큰 난류 와류는 직접 계산하고, 격자 크기보다 작은 와류의 영향만 아격자(Sub-grid scale) 모델을 사용하여 모델링합니다. RANS보다 정확하며 비정상 유동의 거동을 더 잘 예측하나, RANS보다 계산 비용이 훨씬 많이 듭니다. 벽 근처에서는 높은 격자 해상도가 요구됩니다.",
+    "en": "LES (Large Eddy Simulation): Directly computes large turbulent eddies and models the influence of eddies smaller than the grid scale using sub-grid scale models. It is more accurate than RANS and predicts unsteady flows better, but it requires much higher computational cost than RANS. Very fine grids are required near walls.",
+    "de": "LES (Large Eddy Simulation): Berechnet große turbulente Wirbel direkt und modelliert die Einflüsse der Wirbel unterhalb der Gitterauflösung mittels Subgrid-Skalen-Modellen. Es ist genauer als RANS und sagt instationäres Strömungsverhalten besser voraus, erfordert jedoch deutlich mehr Rechenaufwand als RANS. In Wandnähe wird eine sehr feine Gitterauflösung benötigt.",
+    "ja": "LES（ラージエディシミュレーション、大規模渦シミュレーション）: 大規模な乱流渦を直接計算し、格子サイズより小さい渦の影響のみをサブグ리ッドスケールモデルでモデル링합니다. RANSよりも高精度で非定常流れの挙동をよりよく予測できますが, RANS보다 계산 비용이 훨씬 많이 듭니다. 벽面近く에서는 매우 높은 격자 해상도가 요구됩니다.",
+    "zh-CN": "LES（大涡模拟）: 直接计算大的湍流涡旋，仅使用亚格网尺度模型来模拟小于网格尺度的涡旋影响。比RANS更精确，对非定常流动的预测更好，但计算成本远高于RANS。在靠近壁面的区域需要非常高的网格分辨率."
+  },
+  "cfd_core_theory.turbulence.hybrid": {
+    "ko": "하이브리드 RANS-LES 모델 (예: DES - Detached Eddy Simulation): 벽 근처 경계층에서는 RANS 모델을 사용하고, 벽에서 멀리 떨어진 영역에서는 LES 모델을 사용하여 계산 효율과 정확성을 절충합니다.",
+    "en": "Hybrid RANS-LES Models (e.g., DES – Detached Eddy Simulation): Use RANS models in near-wall boundary layers and LES models in regions away from walls to balance computational efficiency and accuracy.",
+    "de": "Hybride RANS-LES-Modelle (z.B. DES – Detached Eddy Simulation): Verwenden in wandnahen Grenzschichten RANS-Modelle und in wandfernen Bereichen LES-Modelle, um einen Kompromiss zwischen Recheneffizienz und Genauigkeit zu erreichen.",
+    "ja": "ハイブリッドRANS-LESモデル（例: DES - Detached Eddy Simulation）: 壁面近くの境界層ではRANSモデルを用い、壁から離れた領域ではLESモデルを用いることで、計算効率と精度を両立します.",
+    "zh-CN": "混合RANS-LES模型（例如DES - 分离涡模拟）: 在靠近壁面的边界层采用RANS模型，在远离壁面的区域采用LES模型，以折衷计算效率和精度."
+  }
 }
