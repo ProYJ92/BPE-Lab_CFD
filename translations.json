@@ -1,0 +1,340 @@
+{
+  "site_name": {
+    "ko": "생물공학연구실",
+    "en": "Bioprocess Engineering Laboratory",
+    "de": "Bioprocess Engineering Laboratory",
+    "ja": "生物工学研究室",
+    "zh-CN": "生物工艺工程实验室"
+  },
+  "site_tagline": {
+    "ko": "Bioprocess Engineering Laboratory",
+    "en": "생물공학연구실",
+    "de": "생물공학연구실",
+    "ja": "生物工学研究室",
+    "zh-CN": "生物工艺工程实验室"
+  },
+  "search_placeholder": {
+    "ko": "검색...",
+    "en": "Search...",
+    "de": "Suche...",
+    "ja": "検索...",
+    "zh-CN": "搜索..."
+  },
+  "search_button": {
+    "ko": "검색",
+    "en": "Search",
+    "de": "Suchen",
+    "ja": "検索",
+    "zh-CN": "搜索"
+  },
+  "search_results_title": {
+    "ko": "검색 결과",
+    "en": "Search Results",
+    "de": "Suchergebnisse",
+    "ja": "検索結果",
+    "zh-CN": "搜索结果"
+  },
+  "helper_open": {
+    "ko": "도우미 열기",
+    "en": "Open Assistant",
+    "de": "Assistent öffnen",
+    "ja": "ヘルパーを開く",
+    "zh-CN": "打开助手"
+  },
+  "helper_close": {
+    "ko": "도우미 종료",
+    "en": "Close Assistant",
+    "de": "Assistent schließen",
+    "ja": "ヘルパーを閉じる",
+    "zh-CN": "关闭助手"
+  },
+  "helper_text": {
+    "ko": "뭐든 물어봐!",
+    "en": "Ask me anything!",
+    "de": "Frag mich alles!",
+    "ja": "何でも聞いてね！",
+    "zh-CN": "尽管问我！"
+  },
+  "about_lab_main_title": {
+    "ko": "연구실 소개",
+    "en": "About the Lab",
+    "de": "Über das Labor",
+    "ja": "研究室紹介",
+    "zh-CN": "实验室介绍"
+  },
+  "about_lab_welcome": {
+    "ko": "생물공학연구실(Bioprocess Engineering Laboratory)에 오신 것을 환영합니다. 저희 연구실은 데이터 과학, 공학적 모델링, 시스템 생물학의 융합을 통해 바이오공정 분야의 혁신을 선도하고 있습니다. 아래 각 항목을 클릭하여 연구실의 다양한 측면에 대해 자세히 알아보실 수 있습니다.",
+    "en": "Welcome to the Bioprocess Engineering Laboratory. Our lab leads innovation in the bioprocess field by integrating data science, engineering modeling, and systems biology. Click on each item below to explore various aspects of our laboratory in detail.",
+    "de": "Willkommen im Bioprocess Engineering Laboratory. Unser Labor führt durch die Integration von Data Science, ingenieurwissenschaftlicher Modellierung und Systembiologie Innovationen im Bereich der Bioprozesse an. Klicken Sie auf die untenstehenden Punkte, um verschiedene Aspekte unseres Labors im Detail zu erkunden.",
+    "ja": "バイオプロセス工学研究室（Bioprocess Engineering Laboratory）へようこそ。当研究室はデータサイエンス、工学的モデリング、システム生物学を融合することによりバイオプロセス分野の革新を主導しています。下の各項目をクリックして、当研究室の様々な側面について詳しくお知りください。",
+    "zh-CN": "欢迎来到生物工艺工程实验室。本实验室通过融合数据科学、工程建模和系统生物学，引领生物工艺领域的创新。请点击下面的各个项目，以详细了解我们实验室的各个方面。"
+  },
+  "about_lab_overview_title": {
+    "ko": "연구실 개요",
+    "en": "Lab Overview",
+    "de": "Laborübersicht",
+    "ja": "研究室概要",
+    "zh-CN": "实验室概览"
+  },
+  "about_lab_overview_desc": {
+    "ko": "연구실의 전반적인 소개, 미션, 그리고 핵심 가치를 안내합니다.",
+    "en": "Provides a general introduction to the lab, its mission, and core values.",
+    "de": "Bietet eine allgemeine Einführung in das Labor, seine Mission und seine Kernwerte.",
+    "ja": "研究室の全般的な紹介、ミッション、および核心価値をご案内します。",
+    "zh-CN": "介绍实验室的总体概况、使命和核心价值观。"
+  },
+  "about_lab_areas_title": {
+    "ko": "연구 분야",
+    "en": "Research Areas",
+    "de": "Forschungsbereiche",
+    "ja": "研究分野",
+    "zh-CN": "研究领域"
+  },
+  "about_lab_areas_desc": {
+    "ko": "디지털 트윈, CHO 세포 배양, 시스템 대사공학, CFD 시뮬레이션 등 주요 연구 영역을 소개합니다.",
+    "en": "Introduces key research areas such as digital twin, CHO cell culture, systems metabolic engineering, and CFD simulations.",
+    "de": "Stellt wichtige Forschungsbereiche wie Digital Twin, CHO-Zellkultur, systemische Metabolic Engineering und CFD-Simulationen vor.",
+    "ja": "デジタルツイン、CHO細胞培養、システム代謝工学、CFDシミュレーションなど主要な研究領域を紹介します。",
+    "zh-CN": "介绍数字孪生、CHO细胞培养、系统代谢工程、CFD模拟等主要研究领域。"
+  },
+  "about_lab_goals_title": {
+    "ko": "연구 목표 및 비전",
+    "en": "Goals & Vision",
+    "de": "Forschungsziele & Vision",
+    "ja": "研究目標およびビジョン",
+    "zh-CN": "研究目标与愿景"
+  },
+  "about_lab_goals_desc": {
+    "ko": "연구실의 단기 및 장기적인 목표와 미래 지향적인 비전을 공유합니다.",
+    "en": "Shares the lab’s short- and long-term goals and forward-looking vision.",
+    "de": "Vermittelt die kurz- und langfristigen Ziele des Labors sowie seine zukunftsorientierte Vision.",
+    "ja": "研究室の短期・長期の目標と未来志向のビジョンを共有します。",
+    "zh-CN": "分享实验室的短期和长期目标以及面向未来的愿景。"
+  },
+  "about_lab_prof_title": {
+    "ko": "교수 소개",
+    "en": "Professor Introduction",
+    "de": "Professorenvorstellung",
+    "ja": "教授紹介",
+    "zh-CN": "教授介绍"
+  },
+  "about_lab_prof_desc": {
+    "ko": "연구실을 이끄는 지도교수님의 전문 분야, 학력, 경력 등을 안내합니다.",
+    "en": "Provides information on the principal investigator’s expertise, education, career, etc.",
+    "de": "Informiert über die Fachgebiete, Ausbildung und Karriere des betreuenden Professors.",
+    "ja": "研究室を率いる指導教授の専門分野、学歴、経歴などをご案内します.",
+    "zh-CN": "介绍带领本实验室的指导教授的专业领域、学历、经历等信息."
+  },
+  "about_lab_researchers_title": {
+    "ko": "연구원 소개",
+    "en": "Members Introduction",
+    "de": "Mitarbeitervorstellung",
+    "ja": "研究員紹介",
+    "zh-CN": "研究员介绍"
+  },
+  "about_lab_researchers_desc": {
+    "ko": "연구에 참여하는 박사후연구원, 석·박사 과정 학생 및 연구팀 구성을 소개합니다.",
+    "en": "Introduces the postdoctoral researchers, graduate students (MS/PhD) and the team composition involved in our research.",
+    "de": "Stellt die Postdoktoranden, Doktoranden/Master-Studierenden und die Teamstruktur vor, die an unserer Forschung beteiligt sind.",
+    "ja": "研究に参加するポスドク研究員、博士・修士課程の学生、および研究チーム構成を紹介します.",
+    "zh-CN": "介绍参与研究的博士后研究员、硕士/博士研究生，以及研究团队的构成."
+  },
+  "about_lab_projects_title": {
+    "ko": "주요 연구 프로젝트",
+    "en": "Major Research Projects",
+    "de": "Wichtige Forschungsprojekte",
+    "ja": "主要研究プロジェクト",
+    "zh-CN": "主要研究项目"
+  },
+  "about_lab_projects_desc": {
+    "ko": "현재 진행 중이거나 대표적인 국책 과제 및 산학 협력 프로젝트들을 소개합니다.",
+    "en": "Highlights current and notable national projects and academia-industry collaboration projects in progress.",
+    "de": "Stellt laufende bzw. repräsentative staatliche Forschungsprojekte und Industrie-Kooperationsprojekte vor.",
+    "ja": "現在進行中または代表的な国策課題および産学連携プロジェクトを紹介します.",
+    "zh-CN": "介绍当前正在进行的或具有代表性的国家课题和产学合作项目."
+  },
+  "about_lab_news_title": {
+    "ko": "연구실 소식 및 공지사항",
+    "en": "News & Announcements",
+    "de": "Neuigkeiten & Ankündigungen",
+    "ja": "研究室ニュースおよびお知らせ",
+    "zh-CN": "实验室新闻和公告"
+  },
+  "about_lab_news_desc": {
+    "ko": "연구실의 최신 소식, 학술 활동, 모집 공고 등 주요 공지사항을 안내합니다.",
+    "en": "Presents the lab’s latest news, academic activities, recruitment notices, and other key announcements.",
+    "de": "Informiert über die neuesten Nachrichten des Labors, akademische Aktivitäten, Ausschreibungen und weitere wichtige Mitteilungen.",
+    "ja": "研究室の最新ニュース、学術活動、募集告知等の主要なお知らせを案内します.",
+    "zh-CN": "提供本实验室的最新动态、学术活动、招募公告等主要通知."
+  },
+  "about_lab_facilities_title": {
+    "ko": "실험실 시설 및 장비",
+    "en": "Facilities & Equipment",
+    "de": "Laboreinrichtungen & Geräte",
+    "ja": "実験室の設備と装置",
+    "zh-CN": "实验室设施与设备"
+  },
+  "about_lab_facilities_desc": {
+    "ko": "연구 수행에 활용되는 주요 실험 시설과 첨단 장비들을 안내합니다.",
+    "en": "Introduces the main laboratory facilities and advanced equipment used in our research.",
+    "de": "Stellt die wichtigsten Forschungseinrichtungen und hochmodernen Geräte des Labors vor.",
+    "ja": "研究遂行に活用される主要な実験施設と先端機器をご案内します.",
+    "zh-CN": "介绍本实验室开展研究所使用的主要实验设施和尖端设备."
+  },
+  "about_lab_achievements_title": {
+    "ko": "연구 성과",
+    "en": "Achievements",
+    "de": "Forschungsergebnisse",
+    "ja": "研究成果",
+    "zh-CN": "研究成果"
+  },
+  "about_lab_achievements_desc": {
+    "ko": "주요 논문, 특허, 학회 발표 등 연구실의 대표적인 학문적 성과를 소개합니다.",
+    "en": "Showcases the lab’s major academic achievements, including key publications, patents, and conference presentations.",
+    "de": "Präsentiert die wichtigsten akademischen Erfolge des Labors, darunter bedeutende Publikationen, Patente und Konferenzbeiträge.",
+    "ja": "主要な論文、特許、学会発表など、研究室の代表的な学術成果を紹介します.",
+    "zh-CN": "介绍本实验室的主要学术成果，包括重要论文、专利和会议报告等."
+  },
+  "about_lab_partners_title": {
+    "ko": "협력기관 및 파트너",
+    "en": "Partners",
+    "de": "Partner",
+    "ja": "協力機関およびパートナー",
+    "zh-CN": "合作机构与合作伙伴"
+  },
+  "about_lab_partners_desc": {
+    "ko": "공동 연구 및 기술 개발을 함께하는 국내외 대학, 연구기관, 산업체 파트너를 안내합니다.",
+    "en": "Introduces our domestic and international partners—universities, research institutes, and industry collaborators engaged in joint research and technology development.",
+    "de": "Stellt unsere Partner im In- und Ausland vor – Universitäten, Forschungsinstitute und Industriepartner, die an gemeinsamer Forschung und Technologieentwicklung beteiligt sind.",
+    "ja": "共同研究および技術開発を共にする国内外の大学、研究機関、産業界のパートナーをご案内します.",
+    "zh-CN": "介绍与我们开展联合研究和技术开发的国内外高校、研究机构和产业合作伙伴."
+  },
+  "about_lab_gallery_title": {
+    "ko": "사진 갤러리",
+    "en": "Photo Gallery",
+    "de": "Fotogalerie",
+    "ja": "写真ギャラリー",
+    "zh-CN": "照片库"
+  },
+  "about_lab_gallery_desc": {
+    "ko": "연구실 활동, 행사, 멤버들의 다양한 모습을 담은 사진들을 제공합니다.",
+    "en": "Provides photos showcasing various aspects of lab life, activities, events, and members.",
+    "de": "Bietet Fotos, die verschiedene Aspekte des Labors – Aktivitäten, Veranstaltungen und das Team – zeigen.",
+    "ja": "研究室の活動、イベント、メンバーの様々な様子を収めた写真を提供します.",
+    "zh-CN": "提供展示实验室活动、活动和成员多彩风貌的照片."
+  },
+  "back_to_about_lab": {
+    "ko": "연구실 소개 메인으로 돌아가기",
+    "en": "Back to About Lab main page",
+    "de": "Zurück zur Laborvorstellungs-Startseite",
+    "ja": "研究室紹介メインページに戻る",
+    "zh-CN": "返回实验室介绍主页"
+  },
+  "lab_overview_title": {
+    "ko": "연구실 개요",
+    "en": "Lab Overview",
+    "de": "Laborübersicht",
+    "ja": "研究室概要",
+    "zh-CN": "实验室概览"
+  },
+  "lab_overview_intro_section_title": {
+    "ko": "연구실 소개",
+    "en": "Lab Introduction",
+    "de": "Laboreinführung",
+    "ja": "研究室紹介",
+    "zh-CN": "实验室介绍"
+  },
+  "lab_overview_intro_p1": {
+    "ko": "생물공학연구실 (Bioprocess Engineering Laboratory)은 연세대학교 미래캠퍼스 생명과학기술학부에 소속되어 있으며, 강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호에 위치하고 있습니다. 본 연구실은 최첨단 전산유체역학(CFD) 기술과 시스템 생물학적 접근법을 융합하여 바이오공정을 심층적으로 이해하고 효율성을 극대화하는 연구를 수행합니다. 특히, 디지털 트윈 기술을 활용하여 실제 공정을 가상 환경에서 모사하고 예측하며, 이를 통해 공정 개발 및 최적화를 목표로 합니다.",
+    "en": "The Bioprocess Engineering Laboratory is part of the Division of Biological Science & Technology at Yonsei University Mirae Campus, located at 1 Yonseidae-gil, Heungup-myeon, Wonju, Gangwon Special Self-Governing Province (Mirae Hall 306). Our lab conducts research that deeply understands bioprocesses and maximizes efficiency by integrating cutting-edge Computational Fluid Dynamics (CFD) technology with systems biological approaches. In particular, we utilize digital twin technology to simulate and predict actual processes in a virtual environment, with the aim of advancing process development and optimization.",
+    "de": "Das Bioprocess Engineering Laboratory gehört zum Fachbereich Biowissenschaft und Technologie des Mirae Campus der Yonsei-Universität und befindet sich in Gangwon Special Self-Governing Province, Wonju, Heungup-myeon, Yonsei-daegil 1 (Mirae-Gebäude Raum 306). Unser Labor betreibt Forschung, die Bioprozesse durch die Integration modernster Computational-Fluid-Dynamics(CFD)-Technologie mit systembiologischen Ansätzen eingehend versteht und deren Effizienz maximiert. Insbesondere nutzen wir Digital-Twin-Technologie, um reale Prozesse in virtuellen Umgebungen zu simulieren und vorherzusagen, mit dem Ziel, die Prozessentwicklung und -optimierung voranzutreiben.",
+    "ja": "生物工学研究室（Bioprocess Engineering Laboratory）は延世大学ミレキャンパス生命科学技術学部に所属し、江原特別自治道原州市興業面延世大学キル1、ミレ館306号に位置しています。本研究室では、最先端の計算流体力学（CFD）技術とシステム生物学的アプローチを融合し、バイオプロセスを深く理解して効率を最大化する研究を行っています。特に、デジタルツイン技術を活用して実際のプロセスを仮想環境で模擬・予測し、それによってプロセス開発と最適化を目指しています.",
+    "zh-CN": "生物工艺工程实验室隶属于延世大学未来校区生命科学技术学部，位于江原特别自治道原州市兴业面延世大路1号未来馆306室。本实验室融合了尖端的计算流体力学（CFD）技术和系统生物学方法，对生物工艺进行深入研究以最大程度提高效率。特别是，我们利用数字孪生技术在虚拟环境中模拟和预测实际工艺，从而实现工艺开发与优化的目标."
+  },
+  "lab_overview_intro_p2": {
+    "ko": "저희 연구실은 K-NIBRT(Global NIBRT Korea) 겸임교수 연구실로서 바이오공정 인력양성 프로그램에도 적극 참여하며, 산업계와의 긴밀한 연계를 통해 실질적인 문제 해결에 기여하고자 합니다.",
+    "en": "Our lab also serves as an adjunct professor lab for K-NIBRT (Global NIBRT Korea) and actively participates in the bioprocess workforce training program. Through close ties with industry, we strive to contribute to practical problem-solving.",
+    "de": "Unser Labor fungiert zudem als angeschlossenes Professorenlabor im Rahmen von K-NIBRT (Global NIBRT Korea) und beteiligt sich aktiv am Ausbildungsprogramm für Fachkräfte im Bioprozessbereich. Durch enge Verknüpfung mit der Industrie bemühen wir uns, einen Beitrag zur praktischen Problemlösung zu leisten.",
+    "ja": "当研究室は、K-NIBRT（Global NIBRT Korea）の兼任教授研究室としてバイオプロセス人材育成プログラムにも積極的に参加し、産業界との緊密な連携を通じて実質的な問題解決に寄与することを目指しています.",
+    "zh-CN": "我们实验室还作为K-NIBRT（韩国国家生物工艺研究培训中心）的兼任教授实验室，积极参与生物工艺人才培养项目，并通过与产业界的紧密联系致力于实际问题的解决."
+  },
+  "lab_overview_mission_section_title": {
+    "ko": "연구 목표 및 핵심 가치",
+    "en": "Research Goals and Core Values",
+    "de": "Forschungsziele und Kernwerte",
+    "ja": "研究目標および核心価値",
+    "zh-CN": "研究目标及核心价值"
+  },
+  "lab_overview_goal_label": {
+    "ko": "연구 목표 (Research Goal):",
+    "en": "Research Goal:",
+    "de": "Forschungsziel:",
+    "ja": "研究目標：",
+    "zh-CN": "研究目标："
+  },
+  "lab_overview_goal_desc": {
+    "ko": "디지털 트윈과 데이터 기반의 첨단 바이오공학 기술로 바이오의약품 생산 및 바이오프로세스 최적화 분야를 선도하며, 실질적이고 혁신적인 연구 성과를 통해 인류 건강 증진에 기여한다.",
+    "en": "Lead the fields of biopharmaceutical production and bioprocess optimization through digital twin technology and data-driven advanced bioengineering, and contribute to human health improvement with tangible, innovative research outcomes.",
+    "de": "Durch Einsatz von Digital-Twin-Technologie und datengetriebener modernster Bioverfahrenstechnik die Bereiche biopharmazeutische Produktion und Bioprozessoptimierung anführen und durch konkrete, innovative Forschungsergebnisse zur Verbesserung der Gesundheit der Menschheit beitragen.",
+    "ja": "デジタルツインおよびデータ駆動型の先端バイオ工学技術によってバイオ医薬品生産およびバイ오プロセス最適化分野をリードし、実質的かつ革新的な研究成果を通じて人類の健康増進に貢献する.",
+    "zh-CN": "通过数字孪生和数据驱动的先进生物工程技术引领生物药品生产及生物工艺优化领域，并以实质性且创新性的研究成果促进人类健康."
+  },
+cat > translations.json <<'EOF'
+{
+  "site_name": {
+    "ko": "생물공학연구실",
+    "en": "Bioprocess Engineering Laboratory",
+    "de": "Bioprocess Engineering Laboratory",
+    "ja": "生物工学研究室",
+    "zh-CN": "生物工艺工程实验室"
+  },
+  "site_tagline": {
+    "ko": "Bioprocess Engineering Laboratory",
+    "en": "생물공학연구실",
+    "de": "생물공학연구실",
+    "ja": "生物工学研究室",
+    "zh-CN": "生物工艺工程实验室"
+  },
+  "search_placeholder": {
+    "ko": "검색...",
+    "en": "Search...",
+    "de": "Suche...",
+    "ja": "検索...",
+    "zh-CN": "搜索..."
+  },
+  "search_button": {
+    "ko": "검색",
+    "en": "Search",
+    "de": "Suchen",
+    "ja": "検索",
+    "zh-CN": "搜索"
+  },
+  "search_results_title": {
+    "ko": "검색 결과",
+    "en": "Search Results",
+    "de": "Suchergebnisse",
+    "ja": "検索結果",
+    "zh-CN": "搜索结果"
+  },
+  "helper_open": {
+    "ko": "도우미 열기",
+    "en": "Open Assistant",
+    "de": "Assistent öffnen",
+    "ja": "ヘルパーを開く",
+    "zh-CN": "打开助手"
+  },
+  "helper_close": {
+    "ko": "도우미 종료",
+    "en": "Close Assistant",
+    "de": "Assistent schließen",
+    "ja": "ヘルパーを閉じる",
+    "zh-CN": "关闭助手"
+  },
+  "helper_text": {
+    "ko": "뭐든 물어봐!",
+    "en": "Ask me anything!",
+    "de": "Frag mich alles!",
+    "ja": "何でも聞いてね！",
+    "zh-CN": "尽管问我！"
+  }
+}
