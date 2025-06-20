@@ -2146,7 +2146,7 @@
     "en": "Ask me anything!",
     "de": "Frag mich alles!",
     "ja": "何でも聞いてね！",
-    "zh-CN": "尽管提问！"
+    "zh-CN": "尽管问我任何问题！"
   },
   "common.search.results": {
     "ko": "검색 결과",
@@ -2158,16 +2158,16 @@
   "common.footer.copy": {
     "ko": "© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.",
     "en": "© 2025 Bioprocess Engineering Laboratory, Yonsei University Mirae Campus.",
-    "de": "© 2025 Bioprozesstechnik-Labor, Mirae Campus der Yonsei-Universität.",
-    "ja": "© 2025 生物工学研究室（Bioprocess Engineering Laboratory）、延世大学ミレキャンパス。",
-    "zh-CN": "© 2025 生物工程实验室 (Bioprocess Engineering Laboratory)，延世大学未来校区。"
+    "de": "© 2025 Labor für Bioverfahrenstechnik (Bioprocess Engineering Laboratory), Yonsei Universität Mirae Campus.",
+    "ja": "© 2025 バイオプロセス工学研究室（Bioprocess Engineering Laboratory）、延世大学校ミレキャンパス。",
+    "zh-CN": "© 2025 生物工艺工程实验室（Bioprocess Engineering Laboratory），延世大学未来校区。"
   },
   "common.footer.address": {
     "ko": "강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
-    "en": "Gangwon Special Self-Governing Province, Wonju, Heungup-myeon, Yonseidae-gil 1, Mirae Hall 306 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
-    "de": "Gangwon Sonderautonome Provinz, Wonju, Heungup-myeon, Yonsei-daegil 1, Mirae-Gebäude 306 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
-    "ja": "江原特別自治道原州市興業面延世大路1、未来館306号 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
-    "zh-CN": "江原特别自治道原州市兴业面延世大学路1号，未来馆306室 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr"
+    "en": "Gangwon Special Self-Governing Province, Wonju, Heungup-myeon, 1 Yonseidae-gil, Mirae Hall 306 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "de": "Gangwon Sonderautonome Provinz, Wonju, Heungup-myeon, Yonsei-daero 1, Mirae-Halle 306 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "ja": "江原特別自治道 原州市 興業面 延世大路1、未来館306号 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "zh-CN": "江原特别自治道 原州市 兴业面 延世大路1号，未来馆306室 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr"
   },
   "common.footer.yonsei": {
     "ko": "연세대학교",
@@ -2495,7 +2495,7 @@
     "ko": "도우미 열기",
     "en": "Open assistant",
     "de": "Assistent öffnen",
-    "ja": "アシスタントを開く",
+    "ja": "ヘルプを開く",
     "zh-CN": "打开助手"
   },
   "common.content.preparing": {
@@ -2826,5 +2826,306 @@
     "de": "Zeigt anhand von Fallbeispielen, wie Technologien des systematischen Metabolic Engineering und der Medienoptimierung in der Praxis der Industrie eingesetzt werden.",
     "ja": "システム代謝工学および培地最適化技術が実際の産業現場でどのように活用されているかを事例を通じて示します.",
     "zh-CN": "通过案例展示系统代谢工程和培养基优化技术在实际产业中如何得到应用."
+  },
+  "common.header.lab_name": {
+    "ko": "생물공학연구실",
+    "en": "Bioprocess Engineering Laboratory",
+    "de": "Labor für Bioverfahrenstechnik",
+    "ja": "バイオプロセス工学研究室",
+    "zh-CN": "生物工艺工程实验室"
+  },
+  "common.header.lab_tagline": {
+    "ko": "Bioprocess Engineering Laboratory",
+    "en": "Bioprocess Engineering Laboratory",
+    "de": "Labor für Bioverfahrenstechnik",
+    "ja": "バイオプロセス工学研究室",
+    "zh-CN": "生物工艺工程实验室"
+  },
+  "common.footer.link.yonsei": {
+    "ko": "연세대학교",
+    "en": "Yonsei University",
+    "de": "Yonsei Universität",
+    "ja": "延世大学校",
+    "zh-CN": "延世大学"
+  },
+  "common.footer.link.mirae": {
+    "ko": "미래캠퍼스",
+    "en": "Mirae Campus",
+    "de": "Mirae Campus",
+    "ja": "ミレキャンパス",
+    "zh-CN": "未来校区"
+  },
+  "common.footer.link.department": {
+    "ko": "생명과학기술학부",
+    "en": "School of Life Science and Technology",
+    "de": "Fakultät für Lebenswissenschaften und Technologie",
+    "ja": "生命科学技術学部",
+    "zh-CN": "生命科学技术学院"
+  },
+  "common.footer.note": {
+    "ko": "본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.",
+    "en": "This website was created for educational and research purposes.",
+    "de": "Diese Website wurde für Bildungs- und Forschungszwecke erstellt.",
+    "ja": "本ウェブサイトは教育および研究目的で作成されました。",
+    "zh-CN": "本网站是为了教育和研究目的而制作的。"
+  },
+  "cfd_main.title": {
+    "ko": "전산유체역학 (Computational Fluid Dynamics)",
+    "en": "Computational Fluid Dynamics",
+    "de": "Numerische Strömungsmechanik (Computational Fluid Dynamics)",
+    "ja": "計算流体力学（Computational Fluid Dynamics）",
+    "zh-CN": "计算流体力学（Computational Fluid Dynamics）"
+  },
+  "cfd_main.subtitle": {
+    "ko": "Computational Fluid Dynamics",
+    "en": "Computational Fluid Dynamics",
+    "de": "Computational Fluid Dynamics",
+    "ja": "Computational Fluid Dynamics",
+    "zh-CN": "Computational Fluid Dynamics"
+  },
+  "cfd_main.intro": {
+    "ko": "전산유체역학(CFD)은 유체 거동을 정량적으로 예측하기 위한 강력한 도구입니다. 아래 항목에서 CFD 이론과 활용 사례를 살펴보세요.",
+    "en": "Computational Fluid Dynamics (CFD) is a powerful tool for quantitatively predicting fluid behavior. Explore CFD theory and practical cases in the sections below.",
+    "de": "Die numerische Strömungsmechanik (CFD) ist ein leistungsfähiges Werkzeug, um das Verhalten von Fluiden quantitativ vorherzusagen. In den folgenden Abschnitten werden die CFD-Theorie und Anwendungsbeispiele vorgestellt.",
+    "ja": "計算流体力学（CFD）は、流体の挙動を定量的に予測するための強力なツールです。下記の項目では、CFDの理論と応用事例について紹介します。",
+    "zh-CN": "计算流体力学（CFD）是用于定量预测流体行为的强大工具。请通过以下部分了解CFD理论和实际应用案例。"
+  },
+  "cfd_main.links.theory.title": {
+    "ko": "CFD 이론",
+    "en": "CFD Theory",
+    "de": "CFD-Theorie",
+    "ja": "CFD理論",
+    "zh-CN": "CFD 理论"
+  },
+  "cfd_main.links.theory.desc": {
+    "ko": "CFD의 기본 이론과 해석 절차를 소개합니다.",
+    "en": "Introduces the fundamental theories of CFD and its analysis procedure.",
+    "de": "Stellt die grundlegenden Theorien von CFD und den Analyseablauf vor.",
+    "ja": "CFDの基本理論と解析手順を紹介します。",
+    "zh-CN": "介绍CFD的基本理论和解析过程。"
+  },
+  "cfd_main.links.bioprocess.title": {
+    "ko": "Bioprocess CFD Simulation",
+    "en": "Bioprocess CFD Simulation",
+    "de": "Bioprozess-CFD-Simulation",
+    "ja": "バイオプロセス CFD シミュレーション",
+    "zh-CN": "生物工艺CFD模拟"
+  },
+  "cfd_main.links.bioprocess.desc": {
+    "ko": "바이오공정 분야에서의 CFD 적용 사례를 살펴봅니다.",
+    "en": "Examines CFD application cases in the bioprocess field.",
+    "de": "Betrachtet CFD-Anwendungsfälle im Bereich der Bioprozess-Technik.",
+    "ja": "バイオプロセス分野でのCFD適用事例を紹介します。",
+    "zh-CN": "介绍生物工艺领域中CFD的应用实例。"
+  },
+  "cfd_main.links.software.title": {
+    "ko": "소프트웨어",
+    "en": "Software",
+    "de": "Software",
+    "ja": "ソフトウェア",
+    "zh-CN": "软件"
+  },
+  "cfd_main.links.software.desc": {
+    "ko": "주요 CFD 소프트웨어와 사용 방법을 안내합니다.",
+    "en": "Provides guidance on major CFD software and how to use them.",
+    "de": "Bietet einen Leitfaden zu den wichtigsten CFD-Softwaretools und deren Verwendung.",
+    "ja": "主要なCFDソフトウェアとその使用方法を案内します。",
+    "zh-CN": "介绍主要的CFD软件及其使用方法。"
+  },
+  "cfd_theory.title": {
+    "ko": "CFD 이론",
+    "en": "CFD Theory",
+    "de": "CFD-Theorie",
+    "ja": "CFD理論",
+    "zh-CN": "CFD 理论"
+  },
+  "cfd_theory.intro": {
+    "ko": "전산 유체 역학(CFD)은 수치 해석 및 데이터 구조를 사용하여 유체 흐름과 관련된 문제를 분석하고 해결하는 유체 역학의 한 분야입니다. 이 섹션에서는 CFD의 주요 이론적 측면을 다루는 다양한 주제들을 탐구합니다. 아래 목록에서 관심 있는 주제를 선택하여 자세한 내용을 확인하십시오.",
+    "en": "Computational Fluid Dynamics (CFD) is a branch of fluid mechanics that uses numerical analysis and data structures to analyze and solve problems involving fluid flows. This section explores a variety of topics covering the main theoretical aspects of CFD. Select a topic of interest from the list below to learn more.",
+    "de": "Die numerische Strömungsmechanik (CFD) ist ein Teilgebiet der Strömungsmechanik, das numerische Analysen und Datenstrukturen einsetzt, um strömungsbezogene Probleme zu analysieren und zu lösen. In diesem Abschnitt werden verschiedene Themen behandelt, die die wichtigsten theoretischen Aspekte von CFD abdecken. Wählen Sie unten ein Thema aus, um weitere Details zu erfahren.",
+    "ja": "計算流体力学（CFD）は、数値解析とデータ構造を用いて流体の流れに関する問題を分析・解決する流体力学の一分野です。本セクションでは、CFDの主要な理論的側面を網羅する様々なトピックを探求します。下のリストから興味のあるトピックを選択し、詳細をご覧ください。",
+    "zh-CN": "计算流体力学（CFD）是流体力学的一个分支，利用数值分析和数据结构来分析和解决与流体流动相关的问题。本节将探讨涵盖CFD主要理论方面的各种主题。请从下面的列表中选择感兴趣的主题以查看详细内容。"
+  },
+  "cfd_theory.sections_title": {
+    "ko": "세부 주제",
+    "en": "Subtopics",
+    "de": "Detaillierte Themen",
+    "ja": "詳細トピック",
+    "zh-CN": "详细主题"
+  },
+  "cfd_theory.topics.introduction": {
+    "ko": "CFD 소개 (CFD Introduction)",
+    "en": "CFD Introduction",
+    "de": "CFD-Einführung",
+    "ja": "CFD紹介",
+    "zh-CN": "CFD 简介"
+  },
+  "cfd_theory.topics.core_principles": {
+    "ko": "핵심 이론 (Core Principles)",
+    "en": "Core Principles",
+    "de": "Kernprinzipien",
+    "ja": "核心理論",
+    "zh-CN": "核心理论"
+  },
+  "cfd_theory.topics.lbm": {
+    "ko": "격자 볼츠만 방법 (LBM)",
+    "en": "Lattice Boltzmann Method (LBM)",
+    "de": "Gitter-Boltzmann-Methode (LBM)",
+    "ja": "格子ボルツマン法 (LBM)",
+    "zh-CN": "格子玻尔兹曼方法 (LBM)"
+  },
+  "cfd_theory.topics.urans": {
+    "ko": "비정상 RANS (URANS) 모델",
+    "en": "Unsteady RANS (URANS) Model",
+    "de": "Instationäres RANS (URANS)-Modell",
+    "ja": "非定常 RANS（URANS）モデル",
+    "zh-CN": "非定常 RANS（URANS）模型"
+  },
+  "cfd_theory.topics.preprocessing": {
+    "ko": "전처리 과정 (Pre‑processing)",
+    "en": "Pre-processing",
+    "de": "Vorverarbeitung (Pre-Processing)",
+    "ja": "前処理過程 (Pre-processing)",
+    "zh-CN": "前处理过程 (Pre-processing)"
+  },
+  "cfd_theory.topics.solving": {
+    "ko": "해석 과정 (Simulation Process)",
+    "en": "Simulation Process",
+    "de": "Simulationsprozess (Simulation Process)",
+    "ja": "解析過程 (Simulation Process)",
+    "zh-CN": "仿真过程 (Simulation Process)"
+  },
+  "cfd_theory.topics.postprocessing": {
+    "ko": "후처리 과정 (Post‑processing)",
+    "en": "Post-processing",
+    "de": "Nachverarbeitung (Post-Processing)",
+    "ja": "後処理過程 (Post-processing)",
+    "zh-CN": "后处理过程 (Post-processing)"
+  },
+  "cfd_theory.topics.glossary": {
+    "ko": "용어집 (Glossary)",
+    "en": "Glossary",
+    "de": "Glossar",
+    "ja": "用語集",
+    "zh-CN": "术语表"
+  },
+  "cfd_theory.topics.references": {
+    "ko": "참고문헌 (References)",
+    "en": "References",
+    "de": "Referenzen",
+    "ja": "参考文献",
+    "zh-CN": "参考文献"
+  },
+  "cfd_introduction.title": {
+    "ko": "CFD 서론",
+    "en": "CFD Introduction",
+    "de": "CFD-Einführung",
+    "ja": "CFD序論",
+    "zh-CN": "CFD 绪论"
+  },
+  "cfd_introduction.definition.title": {
+    "ko": "CFD의 정의 및 기본 개념",
+    "en": "Definition and Basic Concepts of CFD",
+    "de": "Definition und Grundkonzepte von CFD",
+    "ja": "CFDの定義および基本概念",
+    "zh-CN": "CFD的定义和基本概念"
+  },
+  "cfd_introduction.definition.desc": {
+    "ko": "CFD는 유체 역학의 기본 법칙(주로 Navier-Stokes 방정식)을 나타내는 편미분 방정식을 컴퓨터를 사용하여 수치적으로 해를 구함으로써 유체 흐름의 물리적 현상을 시뮬레이션하는 공학 분야입니다. 복잡한 유동 문제를 해석하고 설계 단계에서 성능을 예측하는 데 사용됩니다.",
+    "en": "CFD is an engineering field that simulates the physical phenomena of fluid flows by numerically solving the partial differential equations representing the fundamental laws of fluid dynamics (primarily the Navier-Stokes equations) using computers. It is used to analyze complex flow problems and to predict performance in the design stage.",
+    "de": "CFD ist ein Ingenieurfachgebiet, das physikalische Phänomene von Fluidströmungen simuliert, indem mit Hilfe von Computern die die grundlegenden Gesetze der Fluidmechanik darstellenden partiellen Differenzialgleichungen (vor allem die Navier-Stokes-Gleichungen) numerisch gelöst werden. Es wird verwendet, um komplexe Strömungsprobleme zu analysieren und die Leistung in der Entwurfsphase vorherzusagen.",
+    "ja": "CFDは、流体力学の基本法則（主にNavier-Stokes方程式）を表す偏微分方程式をコンピュータで数値的に解くことによって、流体の流れの物理現象をシミュレーションする工学分野です。複雑な流動問題を解析し、設計段階で性能を予測するために用いられます。",
+    "zh-CN": "CFD是一门工程领域，通过使用计算机对表示流体力学基本定律（主要是Navier-Stokes方程）的偏微分方程进行数值求解，从而模拟流体流动的物理现象。它被用于分析复杂的流动问题并在设计阶段预测性能。"
+  },
+  "cfd_introduction.history.title": {
+    "ko": "역사적 배경",
+    "en": "Historical Background",
+    "de": "Geschichtlicher Hintergrund",
+    "ja": "歴史的背景",
+    "zh-CN": "历史背景"
+  },
+  "cfd_introduction.history.desc": {
+    "ko": "Lewis Fry Richardson의 1920년대 수치 예보 시도가 초기 개념의 시초가 되었으며, 디지털 컴퓨터가 등장한 1950-60년대부터 Navier-Stokes 방정식의 실제 공학 문제 적용 가능성이 열렸습니다. 1970년대에는 Boeing, NASA 등에서 실용적인 CFD 소프트웨어를 개발하며 산업 현장 적용이 본격화되었습니다. Navier와 Stokes가 각각 1822년과 1845년에 점성 효과를 포함한 운동 방정식을 독립적으로 도출하며 이론적 토대가 마련되었습니다.",
+    "en": "Lewis Fry Richardson's numerical weather prediction attempts in the 1920s marked the inception of the concept, and the advent of digital computers in the 1950s-60s opened the possibility of applying the Navier-Stokes equations to real engineering problems. In the 1970s, organizations like Boeing and NASA developed practical CFD software, which led to its full-fledged use in industry. Navier and Stokes independently derived the equations of motion including viscous effects in 1822 and 1845, providing the theoretical groundwork.",
+    "de": "Lewis Fry Richardsons Versuche zur numerischen Wettervorhersage in den 1920er Jahren bildeten den Anfang des Konzepts, und mit dem Aufkommen digitaler Computer in den 1950er und 60er Jahren ergab sich die Möglichkeit, die Navier-Stokes-Gleichungen auf reale ingenieurtechnische Probleme anzuwenden. In den 1970er Jahren entwickelten Unternehmen wie Boeing und die NASA praxisnahe CFD-Software, wodurch der industrielle Einsatz von CFD eingeleitet wurde. Navier und Stokes leiteten 1822 bzw. 1845 unabhängig voneinander die Bewegungsgleichungen unter Einbeziehung viskoser Effekte her und schufen damit das theoretische Fundament.",
+    "ja": "1920年代にLewis Fry Richardsonが試みた数値予報がこの概念の端緒となり、1950〜60年代にデジタルコンピュータが登場したことでNavier-Stokes方程式を実際の工学問題に適用する可能性が開かれました。1970年代にはボーイングやNASAなどで実用的なCFDソフトウェアが開発され、産業現場での適用が本格化しました。NavierとStokesはそれぞれ1822年と1845年に粘性効果を含む運動方程式を独立に導出し、理論的基盤が築かれました。",
+    "zh-CN": "刘易斯·弗莱·理查森在20世纪20年代进行的数值天气预报尝试成为这一概念的开端，而20世纪50-60年代数字计算机的出现开启了将Navier-Stokes方程应用于实际工程问题的可能性。20世纪70年代，波音、NASA等机构开发了实用的CFD软件，CFD在工业中的应用开始全面展开。Navier和Stokes分别于1822年和1845年独立推导出包含粘性效应的运动方程，为理论基础提供了支撑。"
+  },
+  "cfd_introduction.importance.title": {
+    "ko": "중요성 및 가치",
+    "en": "Importance and Value",
+    "de": "Bedeutung und Wert",
+    "ja": "重要性と価値",
+    "zh-CN": "重要性及价值"
+  },
+  "cfd_introduction.importance.desc": {
+    "ko": "CFD는 시간과 비용이 많이 소요되는 물리적 실험(예: 풍동 실험)을 대체하거나 보완하여 설계 주기 단축 및 비용 절감에 기여합니다. 또한, 실험으로 측정하기 어려운 영역의 상세한 유동 정보를 제공하여 현상 이해도를 높이고 설계 최적화 기회를 제공합니다.",
+    "en": "CFD contributes to shorter design cycles and cost reduction by replacing or supplementing time-consuming and expensive physical experiments (e.g., wind tunnel tests). It also provides detailed flow information in regions that are difficult to measure experimentally, enhancing understanding of phenomena and providing opportunities for optimized design.",
+    "de": "CFD trägt zur Verkürzung von Entwicklungszyklen und zur Kostensenkung bei, indem es zeit- und kostenintensive physikalische Experimente (z.B. Windkanaltests) ersetzt oder ergänzt. Außerdem liefert es detaillierte Strömungsinformationen in Bereichen, die experimentell nur schwer zu messen sind, was das Verständnis der Phänomene verbessert und Möglichkeiten zur Optimierung des Designs bietet.",
+    "ja": "CFDは、多大な時間と費用を要する物理実験（例：風洞実験）を代替または補完することで、設計サイクルの短縮およびコスト削減に貢献します。また、実験では測定が困難な領域の詳細な流動情報を提供し、現象の理解を深め、設計最適化の機会をもたらします。",
+    "zh-CN": "CFD通过替代或补充耗时且昂贵的物理实验（例如风洞实验）来缩短设计周期并降低成本。此外，它提供了在实验中难以测量区域的详细流动信息，提高了对现象的理解，并为设计优化提供了机会。"
+  },
+  "cfd_introduction.applications.title": {
+    "ko": "주요 적용 분야",
+    "en": "Major Application Areas",
+    "de": "Wichtige Anwendungsbereiche",
+    "ja": "主な適用分野",
+    "zh-CN": "主要应用领域"
+  },
+  "cfd_introduction.applications.desc": {
+    "ko": "CFD는 현대 엔지니어링의 필수 도구로서 다음과 같은 광범위한 분야에 적용됩니다:",
+    "en": "CFD is an essential tool in modern engineering and is applied in a wide range of fields, including:",
+    "de": "CFD ist ein unverzichtbares Werkzeug der modernen Technik und findet in einer Vielzahl von Bereichen Anwendung, darunter:",
+    "ja": "CFDは現代工学の不可欠なツールであり、次のように幅広い分野に適用されています：",
+    "zh-CN": "CFD是现代工程中不可或缺的工具，被广泛应用于以下领域："
+  },
+  "cfd_introduction.applications.aerospace": {
+    "ko": "항공우주: 항공기 및 로켓 외부 유동, 엔진 내부 유동 해석",
+    "en": "Aerospace: Analysis of external flows around aircraft and rockets, internal flows in engines",
+    "de": "Luft- und Raumfahrt: Analyse der externen Strömung um Flugzeuge und Raketen sowie der inneren Strömung in Triebwerken",
+    "ja": "航空宇宙：航空機およびロケット周囲の外部流れ、エンジン内部の流れの分析",
+    "zh-CN": "航空航天：飞机和火箭外部流动、发动机内部流动的分析"
+  },
+  "cfd_introduction.applications.automotive": {
+    "ko": "자동차: 공력 성능 개선, 열 관리, HVAC 시스템 분석",
+    "en": "Automotive: Aerodynamic performance improvement, thermal management, HVAC system analysis",
+    "de": "Automobil: Verbesserung der aerodynamischen Leistung, Thermomanagement, Analyse von HVAC-Systemen",
+    "ja": "自動車：空力性能の改善、熱管理、HVACシステムの分析",
+    "zh-CN": "汽车：提升空气动力性能、热管理、HVAC系统分析"
+  },
+  "cfd_introduction.applications.energy": {
+    "ko": "에너지: 풍력 터빈 공력, 수력 터빈 설계, 발전소 열 유동 해석",
+    "en": "Energy: Aerodynamics of wind turbines, hydraulic turbine design, thermal flow analysis in power plants",
+    "de": "Energie: Aerodynamik von Windkraftanlagen, Auslegung von Wasserturbinen, Analyse thermischer Strömungen in Kraftwerken",
+    "ja": "エネルギー：風力タービンの空力、水力タービンの設計、発電所の熱流動解析",
+    "zh-CN": "能源：风力涡轮机空气动力学、水力涡轮机设计、电站热流动分析"
+  },
+  "cfd_introduction.applications.architecture": {
+    "ko": "건축 및 도시 환경: 건물 주변 보행자 풍 환경 분석, 자연 환기 설계, 실내 공기질 예측",
+    "en": "Architecture & Urban Environment: Pedestrian wind environment analysis around buildings, natural ventilation design, indoor air quality prediction",
+    "de": "Bauwesen und städtische Umwelt: Analyse des Fußgänger-Windfeldes um Gebäude, Entwurf natürlicher Lüftung, Vorhersage der Innenraumluftqualität",
+    "ja": "建築および都市環境：建物周辺の歩行者風環境の分析、自然換気の設計、室内空気質の予測",
+    "zh-CN": "建筑与城市环境：建筑周围行人风环境分析、自然通风设计、室内空气质量预测"
+  },
+  "cfd_introduction.applications.chemical": {
+    "ko": "화학 및 공정 산업: 반응기 설계, 혼합 공정 분석",
+    "en": "Chemical & Process Industry: Reactor design, mixing process analysis",
+    "de": "Chemie- und Prozessindustrie: Reaktorauslegung, Analyse von Mischprozessen",
+    "ja": "化学・プロセス産業：反応器設計、混合プロセスの分析",
+    "zh-CN": "化工行业：反应器设计、混合过程分析"
+  },
+  "cfd_introduction.applications.biomedical": {
+    "ko": "의공학: 혈류 해석, 약물 전달 시뮬레이션",
+    "en": "Bioengineering: Blood flow analysis, drug delivery simulation",
+    "de": "Biomedizinische Technik: Analyse des Blutflusses, Simulation des Medikamententransports",
+    "ja": "医工学：血流解析、ドラッグデリバリーのシミュレーション",
+    "zh-CN": "生物医学工程：血流分析、药物输送模拟"
+  },
+  "cfd_core_theory.title": {
+    "ko": "CFD 핵심 이론",
+    "en": "CFD Core Principles",
+    "de": "CFD-Kernprinzipien",
+    "ja": "CFDの核心理論",
+    "zh-CN": "CFD 核心理论"
   }
 }
