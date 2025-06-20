@@ -3268,5 +3268,404 @@
     "de": "Hybride RANS-LES-Modelle (z.B. DES – Detached Eddy Simulation): Verwenden in wandnahen Grenzschichten RANS-Modelle und in wandfernen Bereichen LES-Modelle, um einen Kompromiss zwischen Recheneffizienz und Genauigkeit zu erreichen.",
     "ja": "ハイブリッドRANS-LESモデル（例: DES - Detached Eddy Simulation）: 壁面近くの境界層ではRANSモデルを用い、壁から離れた領域ではLESモデルを用いることで、計算効率と精度を両立します.",
     "zh-CN": "混合RANS-LES模型（例如DES - 分离涡模拟）: 在靠近壁面的边界层采用RANS模型，在远离壁面的区域采用LES模型，以折衷计算效率和精度."
-  }
+  },
+"cfd_core_theory.lbm.title": {
+  "ko": "격자 볼츠만 방법 (Lattice Boltzmann Method, LBM)",
+  "en": "Lattice Boltzmann Method (LBM)",
+  "de": "Gitter-Boltzmann-Methode (LBM)",
+  "ja": "格子ボルツマン法（Lattice Boltzmann Method, LBM）",
+  "zh-CN": "格子玻尔兹曼方法（Lattice Boltzmann Method，LBM）"
+},
+"cfd_core_theory.lbm.desc": {
+  "ko": "격자 볼츠만 방법(LBM)은 유체 유동을 시뮬레이션하는 메조스코픽(mesoscopic) 방법론으로, 전통적인 거시적 Navier-Stokes 방정식을 직접 이산화하는 대신, 격자 상에서 정의된 가상 입자들의 분포 함수가 시간에 따라 어떻게 충돌하고 이동하는지를 추적합니다. 이 접근 방식은 유체의 미시적 상호작용이 거시적 유동 현상으로 나타난다는 운동론적 원리에 기반하며, 복잡한 형상의 경계 조건 처리, 다상 유동, 미세 유체역학 문제, 그리고 대규모 병렬 계산 환경에서 특히 강점을 보입니다. LBM에 대한 더 자세한 이론, 수학적 배경, 장단점 및 응용 분야는 LBM 모델 상세 페이지에서 확인할 수 있습니다.",
+  "en": "The Lattice Boltzmann Method (LBM) is a mesoscopic approach for simulating fluid flows. Instead of directly discretizing the traditional macroscopic Navier-Stokes equations, it tracks how the distribution functions of virtual particles defined on a lattice collide and move over time. This approach is based on the kinetic principle that the microscopic interactions of fluid give rise to macroscopic flow phenomena, and it shows particular strengths in handling complex boundary geometries, multiphase flows, microfluidic problems, as well as in large-scale parallel computing environments. More detailed theory, mathematical background, advantages and limitations, and applications of LBM can be found on the LBM model detail page.",
+  "de": "Die Gitter-Boltzmann-Methode (LBM) ist ein mesoskopischer Ansatz zur Simulation von Fluidströmungen. Anstatt die traditionellen makroskopischen Navier-Stokes-Gleichungen direkt zu diskretisieren, verfolgt sie, wie die Verteilungsfunktionen hypothetischer Teilchen auf einem Gitter über die Zeit miteinander kollidieren und sich bewegen. Dieser Ansatz beruht auf dem kinetischen Prinzip, dass mikroskopische Wechselwirkungen des Fluids zu makroskopischen Strömungsphänomenen führen. Er zeigt besondere Stärken beim Umgang mit komplexen Randgeometrien, Mehrphasenströmungen, Problemen der Mikrofluidik und in massiv-parallelen Rechenumgebungen. Ausführlichere Theorie, mathematischer Hintergrund, Vor- und Nachteile sowie Anwendungsgebiete von LBM finden sich auf der LBM-Modell-Detailseite.",
+  "ja": "格子ボルツマン法（LBM）は流体流動をシミュレーションするためのメゾスコピックな手法です。従来の巨視的なNavier-Stokes方程式を直接離散化する代わりに、格子上で定義された仮想粒子の分布関数が時間とともにどのように衝突・移動するかを追跡します。このアプローチは、流体の微視的相互作用が巨視的な流動現象として現れるという運動론的原理に基づいており, 복잡한 형상 경계 조건 처리, 다상 유동, 미세 유체역학 문제 및 대규모 병렬 계산에 강점을 제공합니다. 자세한 이론, 수학적 배경, 장단점, 응용 분야는 LBM 모델 상세 페이지에서 확인 가능합니다.",
+  "zh-CN": "格子玻尔兹曼方法（LBM）是一种用于模拟流体流动的介观方法。它并非通过直接离散化传统的宏观Navier-Stokes方程, 而是跟踪定义在格子上的虚拟粒子的分布函数如何随着时间发生碰撞和迁移。该方法基于运动论原理, 流体的微观相互作用表现为宏观的流动现象, 在处理复杂几何边界条件、多相流、微流体力学问题以及大规模并行计算环境方面具有优势。有关LBM的更详细理论、数学背景、优缺点及应用领域, 可参见LBM模型详细页面。"
+},
+"cfd_core_theory.urans.title": {
+  "ko": "비정상 RANS (Unsteady RANS, URANS) 모델",
+  "en": "Unsteady RANS (URANS) Model",
+  "de": "Instationäres RANS (URANS)-Modell",
+  "ja": "非定常 RANS（URANS）モデル",
+  "zh-CN": "非定常 RANS（URANS）模型"
+},
+"cfd_core_theory.urans.desc": {
+  "ko": "비정상 Reynolds-Averaged Navier-Stokes (URANS) 모델은 전통적인 RANS 접근법을 확장하여 시간에 따라 변화하는 유동 현상을 해석하는 기법입니다. RANS 모델이 유동 변수를 시간 평균값과 변동 성분으로 나누어 정상 상태의 평균 유동만을 예측하는 반면, URANS는 Navier-Stokes 방정식의 비정상 항을 그대로 유지합니다. 이를 통해 대규모 난류 구조나 과도 현상의 평균적인 거동을 포착할 수 있습니다. URANS는 LES나 DNS보다 계산 비용이 낮으면서도 더 풍부한 시간 정보를 제공합니다.",
+  "en": "Unsteady RANS (URANS) extends the traditional RANS method to analyze flow phenomena that change over time. While RANS predicts only steady mean flow, URANS retains the unsteady term in the Navier-Stokes equations, capturing large-scale turbulent structures or transient phenomena. URANS is less costly than LES or DNS yet provides richer temporal information.",
+  "de": "Unsteady RANS (URANS) erweitert die traditionelle RANS-Methode, um zeitabhängige Strömungsphänomene zu analysieren. URANS behält die instationären Terme der Navier-Stokes-Gleichungen bei, um großskalige turbulente Strukturen oder transiente Phänomene zu erfassen, und ist weniger rechenintensiv als LES oder DNS.",
+  "ja": "非定常RANS（URANS）は、従来のRANS手法を拡張して時間に依存する流れの現象を解析します。URANSはNavier-Stokes方程式の非定常項を保持して大規模乱流構造や過渡現象を捉え、LESやDNSより計算コストが低く、より豊富な時間情報を提供します.",
+  "zh-CN": "非定常RANS（URANS）扩展了传统RANS方法，以分析随时间变化的流动现象。URANS保留Navier-Stokes方程中的非定常项，能够捕捉大尺度湍流结构或瞬态现象，其计算成本低于LES或DNS，同时提供更丰富的时间信息。"
+},
+"cfd_core_theory.references.title": {
+  "ko": "본문 추가 내용 관련 참고문헌",
+  "en": "References for Additional Content",
+  "de": "Weiterführende Literatur",
+  "ja": "本文追加内容に関する参考文献",
+  "zh-CN": "与正文附加内容相关的参考文献"
+},
+"cfd_core_theory.references.md1": {
+  "ko": "[MD1] A systematic literature review on Lattice Boltzmann Method applied to acoustics - Sciencedirect.",
+  "en": "[MD1] A systematic literature review on Lattice Boltzmann Method applied to acoustics - Sciencedirect.",
+  "de": "[MD1] A systematic literature review on Lattice Boltzmann Method applied to acoustics - Sciencedirect.",
+  "ja": "[MD1] A systematic literature review on Lattice Boltzmann Method applied to acoustics - Sciencedirect.",
+  "zh-CN": "[MD1] A systematic literature review on Lattice Boltzmann Method applied to acoustics - Sciencedirect."
+},
+"cfd_core_theory.references.md2": {
+  "ko": "[MD2] Lattice Boltzmann Methods for Industrial Applications - ResearchGate.",
+  "en": "[MD2] Lattice Boltzmann Methods for Industrial Applications - ResearchGate.",
+  "de": "[MD2] Lattice Boltzmann Methods for Industrial Applications - ResearchGate.",
+  "ja": "[MD2] Lattice Boltzmann Methods for Industrial Applications - ResearchGate.",
+  "zh-CN": "[MD2] Lattice Boltzmann Methods for Industrial Applications - ResearchGate."
+},
+"cfd_core_theory.references.md6": {
+  "ko": "[MD6] RANS and URANS. - CFD Online Forums.",
+  "en": "[MD6] RANS and URANS. - CFD Online Forums.",
+  "de": "[MD6] RANS and URANS. - CFD Online Forums.",
+  "ja": "[MD6] RANS and URANS. - CFD Online Forums.",
+  "zh-CN": "[MD6] RANS and URANS. - CFD Online Forums."
+},
+"cfd_core_theory.references.md7": {
+  "ko": "[MD7] Comparative Analysis for RANS, URANS, and DDES Turbulence Models - Dlubal Software FAQ.",
+  "en": "[MD7] Comparative Analysis for RANS, URANS, and DDES Turbulence Models - Dlubal Software FAQ.",
+  "de": "[MD7] Comparative Analysis for RANS, URANS, and DDES Turbulence Models - Dlubal Software FAQ.",
+  "ja": "[MD7] Comparative Analysis for RANS, URANS, and DDES Turbulence Models - Dlubal Software FAQ.",
+  "zh-CN": "[MD7] Comparative Analysis for RANS, URANS, and DDES Turbulence Models - Dlubal Software FAQ."
+},
+"cfd_lbm_model.title": {
+  "ko": "격자 볼츠만 방법 (Lattice Boltzmann Method, LBM)",
+  "en": "Lattice Boltzmann Method (LBM)",
+  "de": "Gitter-Boltzmann-Methode (LBM)",
+  "ja": "格子ボルツマン法（Lattice Boltzmann Method, LBM）",
+  "zh-CN": "格子玻尔兹曼方法（Lattice Boltzmann Method，LBM）"
+},
+"cfd_lbm_model.intro": {
+  "ko": "LBM은 유체 유동을 시뮬레이션하는 메조스코픽 방법으로, 거시적인 Navier-Stokes 방정식을 직접 푸는 대신, 격자 상에서 정의된 입자 분포 함수의 시간적 진화를 추적합니다.[1]",
+  "en": "LBM is a mesoscopic method for simulating fluid flows, wherein instead of solving the macroscopic Navier-Stokes equations directly, the time evolution of particle distribution functions defined on a lattice is tracked.[1]",
+  "de": "LBM ist eine mesoskopische Methode zur Simulation von Fluidströmungen, bei der anstelle der direkten Lösung der makroskopischen Navier-Stokes-Gleichungen die zeitliche Entwicklung von auf einem Gitter definierten Teilchen-Verteilungsfunktionen verfolgt wird.[1]",
+  "ja": "LBMは流体流動をシミュレーションするためのメゾスコピックな方法であり、従来の巨視的なNavier-Stokes方程式を直接解く代わりに、格子上で定義された粒子分布関数の時間発展を追跡します。[1]",
+  "zh-CN": "LBM是一种模拟流体流动的介观方法，其中并非直接求解宏观Navier-Stokes方程，而是跟踪定义在格子上的粒子分布函数的时间演化。[1]"
+},
+"cfd_lbm_model.theory.title": {
+  "ko": "상세 이론, 수학적 배경, 주요 가정",
+  "en": "Detailed Theory, Mathematical Background, Key Assumptions",
+  "de": "Detaillierte Theorie, mathematischer Hintergrund, Hauptannahmen",
+  "ja": "詳細な理論、数学的背景、主要な仮定",
+  "zh-CN": "详细理论、数学背景、主要假设"
+},
+"cfd_lbm_model.theory.desc": {
+  "ko": "LBM은 확률론적 볼츠만 방정식에서 유래하며, 입자들의 충돌 및 이동 과정을 이산화하여 모델링합니다.[1] 이 방법은 유체의 미시적인 입자 상호작용이 거시적인 유체 거동으로 나타난다는 운동론적 가설에 기반합니다.[2]",
+  "en": "LBM originates from the probabilistic Boltzmann equation and models the collision and propagation processes of particles in a discrete manner.[1] It is based on the kinetic hypothesis that the microscopic interactions of particles manifest as macroscopic fluid behavior.[2]",
+  "de": "LBM stammt von der probabilistischen Boltzmann-Gleichung ab und modelliert die Kollisions- und Transportvorgänge von Teilchen in diskreter Form.[1] Es basiert auf der kinetischen Annahme, dass sich mikroskopische Teilchenwechselwirkungen als makroskopisches Fluidverhalten manifestieren.[2]",
+  "ja": "LBMは確率論的ボルツマン方程式に由来し、粒子の衝突および移動過程を離散的にモデル化します。[1] この方法は、粒子の微視的相互作用が巨視的な流体の挙動として現れるという運動論的仮説に基づいています。[2]",
+  "zh-CN": "LBM源自概率论的Boltzmann方程，通过离散方式对粒子的碰撞和移动过程进行建模。[1] 其基于这样一种动力学假设：流体的微观粒子相互作用以宏观流动现象的形式表现出来。[2]"
+},
+"cfd_lbm_model.math.title": {
+  "ko": "수학적 배경",
+  "en": "Mathematical Background",
+  "de": "Mathematischer Hintergrund",
+  "ja": "数学的背景",
+  "zh-CN": "数学背景"
+},
+"cfd_lbm_model.math.desc": {
+  "ko": "핵심은 이산 볼츠만 방정식입니다. 가장 기본적인 형태는 BGK(Bhatnagar-Gross-Krook) 단일 이완 시간 모델을 사용하며 다음과 같습니다:[3]",
+  "en": "The core is the discrete Boltzmann equation. The simplest form uses the BGK (Bhatnagar-Gross-Krook) single-relaxation-time model and is given as follows:[3]",
+  "de": "Im Kern steht die diskrete Boltzmann-Gleichung. Die einfachste Form verwendet das BGK-Modell (Bhatnagar-Gross-Krook) mit einer einzigen Relaxationszeit und lautet wie folgt:[3]",
+  "ja": "核心となるのは離散ボルツマン方程式です。最も基本的な形式はBGK（Bhatnagar-Gross-Krook）単一緩和時間モデルを用いており、次のようになります:[3]",
+  "zh-CN": "其核心是离散的Boltzmann方程。最基本的形式采用BGK（Bhatnagar-Gross-Krook）单松弛时间模型，形式如下：[3]"
+},
+"cfd_lbm_model.math.where": {
+  "ko": "여기서:",
+  "en": "Where:",
+  "de": "Dabei gilt:",
+  "ja": "ここで：",
+  "zh-CN": "其中："
+},
+"cfd_lbm_model.math.list.f": {
+  "ko": "fᵢ(x, t) 는 위치 x 와 시간 t 에서 i 번째 격자 속도 방향 cᵢ 를 가진 입자의 분포 함수입니다.[1]",
+  "en": "fᵢ(x, t) is the distribution function of particles with lattice velocity direction cᵢ at position x and time t.[1]",
+  "de": "fᵢ(x, t) ist die Verteilungsfunktion für Teilchen mit Gitter-Geschwindigkeitsrichtung cᵢ am Ort x zum Zeitpunkt t.[1]",
+  "ja": "fᵢ(x, t) は、位置x、時刻tにおける格子速度方向cᵢを持つ粒子の分布関数です。[1]",
+  "zh-CN": "fᵢ(x, t) 是处于位置x、时间t且速度方向为cᵢ的粒子的分布函数。[1]"
+},
+"cfd_lbm_model.math.list.dt": {
+  "ko": "Δt 는 시간 단계 크기이며, 격자 간격 Δx 와 이산 속도 벡터 cᵢ 는 cᵢ = (Δx / Δt)eᵢ 관계를 갖습니다 ( eᵢ 는 단위 속도 벡터).[2]",
+  "en": "Δt is the time step, and the lattice spacing Δx and discrete velocity vector cᵢ are related by cᵢ = (Δx/Δt)eᵢ (where eᵢ is a unit velocity vector).[2]",
+  "de": "Δt ist die Zeitschrittgröße, und der Gitterabstand Δx und der diskrete Geschwindigkeitsvektor cᵢ stehen in der Beziehung cᵢ = (Δx/Δt)eᵢ (wobei eᵢ ein Einheitsgeschwindigkeitsvektor ist).[2]",
+  "ja": "Δt は時間刻みであり、格子間隔 Δx と離散速度ベクトル cᵢ には cᵢ = (Δx/Δt)eᵢ（eᵢは単位速度ベクトル）の関係があります。[2]",
+  "zh-CN": "Δt 是时间步长，格子间距 Δx 与离散速度向量 cᵢ 之间满足关系 cᵢ = (Δx/Δt)eᵢ（其中 eᵢ 为单位速度向量）。[2]"
+},
+"cfd_lbm_model.math.list.tau": {
+  "ko": "τ 는 충돌 이완 시간으로, 유체의 점성과 관련됩니다.[1]",
+  "en": "τ is the collision relaxation time and is related to the fluid's viscosity.[1]",
+  "de": "τ ist die Relaxationszeit der Kollision und hängt mit der Viskosität des Fluids zusammen.[1]",
+  "ja": "τ は衝突緩和時間であり、流体の粘性に関連します.[1]",
+  "zh-CN": "τ 是碰撞松弛时间，与流体的粘度有关。[1]"
+},
+"cfd_lbm_model.math.list.f_eq": {
+  "ko": "fᵢᵉ۹(x, t) 는 평형 상태에서의 입자 분포 함수로, 일반적으로 맥스웰-볼츠만 분포를 저마하수 조건에서 테일러 전개하여 얻습니다.[3]",
+  "en": "fᵢᵉ۹(x, t) is the equilibrium distribution function, typically obtained by expanding the Maxwell-Boltzmann distribution under low Mach number conditions.[3]",
+  "de": "fᵢᵉ۹(x, t) ist die Verteilungsfunktion im Gleichgewicht, die in der Regel durch eine Taylor-Entwicklung der Maxwell-Boltzmann-Verteilung für niedrige Mach-Zahlen gewonnen wird.[3]",
+  "ja": "fᵢᵉ۹(x, t) は平衡状態での分布関数で、通常、低マッハ数条件でのマックスウェル＝ボルツマン分布をテイラー展開して得られます.[3]",
+  "zh-CN": "fᵢᵉ۹(x, t) 是平衡态下的分布函数，通常通过在低马赫数条件下对麦克斯韦-玻尔兹曼分布进行泰勒展开获得。[3]"
+},
+"cfd_lbm_model.math.macro_desc": {
+  "ko": "거시적 변수(밀도 ρ, 속도 u)는 분포 함수의 모멘트로 산출됩니다:[1]",
+  "en": "Macroscopic variables (density ρ, velocity u) are obtained as moments of the distribution function:[1]",
+  "de": "Makroskopische Variablen (Dichte ρ, Geschwindigkeit u) werden als Momente der Verteilungsfunktion berechnet:[1]",
+  "ja": "密度ρ、速度uなどの巨視的変数は、分布関数のモーメントとして算出されます:[1]",
+  "zh-CN": "宏观变量（密度 ρ、速度 u）通过对分布函数取矩得到:[1]"
+},
+"cfd_lbm_model.assumptions.title": {
+  "ko": "주요 가정",
+  "en": "Key Assumptions",
+  "de": "Wesentliche Annahmen",
+  "ja": "主要な仮定",
+  "zh-CN": "主要假设"
+},
+"cfd_lbm_model.assumptions.grid": {
+  "ko": "격자화된 공간, 시간, 속도: 연속적인 공간, 시간, 속도 공간을 이산적인 격자점으로 근사합니다.[1]",
+  "en": "Discrete space, time, and velocity: Continuous space, time, and velocity domains are approximated by discrete lattice points.[1]",
+  "de": "Diskretisierung von Raum, Zeit und Geschwindigkeit: Kontinuierlicher Raum-, Zeit- und Geschwindigkeitsbereich wird durch diskrete Gitterpunkte angenähert.[1]",
+  "ja": "格子化された空間・時間・速度：連続的な空間、時間、速度の領域を離散的な格子点で近似します.[1]",
+  "zh-CN": "离散的空间、时间和速度：将连续的空间、时间、速度域近似为离散的格点。[1]"
+},
+"cfd_lbm_model.assumptions.mach": {
+  "ko": "저마하수 및 약한 압축성: 기본적인 LBM 모델은 저마하수 비압축성 또는 약압축성 유동에 대해 NS 방정식을 정확히 복구하도록 설계됩니다. 고마하수/초음속 유동에는 추가 모델링이나 변형이 필요합니다.[4]",
+  "en": "Low Mach number and weak compressibility: Basic LBM models are designed to exactly recover the Navier-Stokes equations for low Mach number incompressible or weakly compressible flows. Additional models or modifications are required for high Mach number/supersonic flows.[4]",
+  "de": "Niedrige Mach-Zahl und schwache Kompressibilität: Die grundlegenden LBM-Modelle sind so ausgelegt, dass sie für inkompressible oder schwach kompressible Strömungen bei niedrigen Mach-Zahlen die Navier-Stokes-Gleichungen exakt reproduzieren. Für hohe Mach-Zahlen bzw. Überschallströmungen sind zusätzliche Modelle oder Anpassungen erforderlich.[4]",
+  "ja": "低マッハ数および弱圧縮性：基本的なLBMモデルは、低マッハ数の非圧縮性または弱圧縮性の流れに対してNavier-Stokes方程式を正確に再現するよう設計されています。高マッハ数/超音速流れには追加のモデルや修正が必要です.[4]",
+  "zh-CN": "低马赫数和弱可压缩性：基本的LBM模型针对低马赫数的不可压缩或弱可压缩流动设计，能够精确恢复Navier-Stokes方程。对于高马赫数/超音速流动，需要额外的模型或改进.[4]"
+},
+"cfd_lbm_model.assumptions.collision": {
+  "ko": "충돌 및 이동 프로세스: 유체 입자는 각 시간 단계에서 로컬 충돌을 겪은 후 이산 속도 방향으로 인접 격자점으로 이동합니다.[1]",
+  "en": "Collision and propagation process: Fluid particles undergo local collisions at each time step and then move to neighboring lattice points along discrete velocity directions.[1]",
+  "de": "Kollisions- und Transportprozess: Fluide Teilchen erfahren in jedem Zeitschritt lokale Kollisionen und bewegen sich anschließend entlang diskreter Geschwindigkeitsrichtungen zu benachbarten Gitterpunkten.[1]",
+  "ja": "衝突と移動のプロセス：流体粒子は各時間ステップで局所的な衝突を受け、その後離散的な速度方向に沿って隣接する格子点へ移動します.[1]",
+  "zh-CN": "碰撞和迁移过程：在每个时间步长，流体粒子发生局部碰撞，然后沿着离散的速度方向移动到相邻的格点上。[1]"
+},
+"cfd_lbm_model.pros_cons.title": {
+  "ko": "장점 및 단점",
+  "en": "Advantages and Disadvantages",
+  "de": "Vorteile und Nachteile",
+  "ja": "長所と短所",
+  "zh-CN": "优点与缺点"
+},
+"cfd_lbm_model.pros_cons.pro_header": {
+  "ko": "장점",
+  "en": "Advantages",
+  "de": "Vorteile",
+  "ja": "長所",
+  "zh-CN": "优点"
+},
+"cfd_lbm_model.pros_cons.con_header": {
+  "ko": "단점",
+  "en": "Disadvantages",
+  "de": "Nachteile",
+  "ja": "短所",
+  "zh-CN": "缺点"
+},
+"cfd_lbm_model.pros_cons.pro1": {
+  "ko": "- 병렬 처리 효율성 우수: 로컬 연산 기반으로 대규모 병렬 계산에 적합[1,2]",
+  "en": "- Excellent parallelization: Well-suited for large-scale parallel computations due to local operations[1,2]",
+  "de": "- Hervorragende Parallelisierbarkeit: Aufgrund lokal begrenzter Operationen sehr gut für großangelegte Parallelrechnungen geeignet[1,2]",
+  "ja": "- 優れた並列処理効率：局所演算に基づくため大規模並列計算に適している[1,2]",
+  "zh-CN": "- 出色的并行处理效率：基于局部计算，非常适合大规模并行计算[1,2]"
+},
+"cfd_lbm_model.pros_cons.con1": {
+  "ko": "- 메모리 요구량 높음: 특히 3D 대규모 문제에서 분포 함수 저장에 많은 메모리 필요[1,2]",
+  "en": "- High memory demand: Requires a lot of memory to store distribution functions, especially for large 3D problems[1,2]",
+  "de": "- Hoher Speicherbedarf: Benötigt viel Speicher zur Speicherung der Verteilungsfunktionen, insbesondere bei großen 3D-Problemen[1,2]",
+  "ja": "- メモリ要求量が大きい：特に3Dの大規模問題では分布関数の保存に大量のメモリを必要とする[1,2]",
+  "zh-CN": "- 内存需求高：尤其对于大型三维问题，存储分布函数需要大量内存[1,2]"
+},
+"cfd_lbm_model.pros_cons.pro2": {
+  "ko": "- 복잡한 경계 조건 처리 용이: 바운스백(Bounce-back) 등 간단한 경계 모델[1,2]",
+  "en": "- Easy handling of complex boundaries: Uses simple boundary models (e.g., bounce-back)[1,2]",
+  "de": "- Einfache Behandlung komplexer Randbedingungen: Nutzt einfache Randmodelle (z.B. Bounce-Back)[1,2]",
+  "ja": "- 複雑な境界条件の処理が容易：バウンスバックなどの簡単な境界モデルを使用[1,2]",
+  "zh-CN": "- 易于处理复杂边界条件：采用回弹等简单边界模型[1,2]"
+},
+"cfd_lbm_model.pros_cons.con2": {
+  "ko": "- 고마하수 및 강압축성 유동 적용에 제약: 추가적인 모델 개발 필요[1,4]",
+  "en": "- Limitations for high Mach and strong compressibility: Additional model development needed[1,4]",
+  "de": "- Einschränkungen bei hohen Mach-Zahlen und starker Kompressibilität: Erfordert zusätzliche Modellentwicklung[1,4]",
+  "ja": "- 高マッハ数および強圧縮性流れへの適用に制約：さらなるモデル開発が必要[1,4]",
+  "zh-CN": "- 在高马赫数和强压缩性流动中的应用受限：需要开发附加模型[1,4]"
+},
+"cfd_lbm_model.pros_cons.pro3": {
+  "ko": "- 다상/복합 유동 모델링에 강점: 인터페이스 처리 및 상 변화 모델링이 비교적 자연스러움[1,2]",
+  "en": "- Strong in multiphase/complex flows: Naturally handles interface tracking and phase change[1,2]",
+  "de": "- Stärken bei Mehrphasen- und komplexen Strömungen: Natürliche Behandlung von Phasengrenzen und Phasenwechsel[1,2]",
+  "ja": "- 多相流・複雑流のモデリングに強み：界面の取り扱いや相変化のモデリングが比較的容易[1,2]",
+  "zh-CN": "- 在多相/复合流动建模方面有优势：相界面处理和相变建模相对自然[1,2]"
+},
+"cfd_lbm_model.pros_cons.con3": {
+  "ko": "- 수치 안정성 문제: 고주파수/고파장 유동 해석, 일부 경계 조건에서 불안정성 발생 가능[1]",
+  "en": "- Numerical stability issues: High-frequency/short-wavelength flows and certain boundary conditions can cause instabilities[1]",
+  "de": "- Numerische Stabilitätsprobleme: Hochfrequente/kurzwellige Strömungen und bestimmte Randbedingungen können zu Instabilitäten führen[1]",
+  "ja": "- 数値安定性の問題：高周波・短波長の流れや一部の境界条件で不安定性が生じる可能性[1]",
+  "zh-CN": "- 数值稳定性问题：高频/短波长流动以及某些边界条件可能导致不稳定[1]"
+},
+"cfd_lbm_model.pros_cons.pro4": {
+  "ko": "- 음향 해석에 적합한 낮은 수치 소산 특성[1]",
+  "en": "- Low numerical dissipation for acoustics[1]",
+  "de": "- Geringe numerische Dissipation für akustische Anwendungen[1]",
+  "ja": "- 音響解析に適した低数値拡散特性[1]",
+  "zh-CN": "- 对声学问题具有低数值耗散特性[1]"
+},
+"cfd_lbm_model.pros_cons.con4": {
+  "ko": "- 물리적 직관성 낮음: NS 방정식 기반 모델 대비 해석이 직관적이지 않음[1]",
+  "en": "- Low physical intuition: Results are less intuitive to interpret compared to NS equation-based models[1]",
+  "de": "- Geringe physikalische Anschaulichkeit: Ergebnisse sind im Vergleich zu NS-Gleichungs-basierten Modellen weniger anschaulich zu interpretieren[1]",
+  "ja": "- 物理的直観性の低さ：Navier-Stokes方程式ベースのモデルに比べて結果の解釈が直感的でない[1]",
+  "zh-CN": "- 物理直观性差：相比基于NS方程的模型，其结果不易直观理解[1]"
+},
+"cfd_lbm_model.applications.title": {
+  "ko": "주요 응용 분야 및 산업/학술적 사례",
+  "en": "Major Applications and Industrial/Academic Cases",
+  "de": "Wichtige Anwendungsbereiche und industrie-/akademische Beispiele",
+  "ja": "主要な応用分野および産業・学術上の事例",
+  "zh-CN": "主要应用领域及工业/学术案例"
+},
+"cfd_lbm_model.applications.porous": {
+  "ko": "다공성 매체 유동: 석유 회수, 연료 전지, 촉매 반응기 내부 유동 등[2]",
+  "en": "Porous media flow: e.g., oil recovery, fuel cells, reactor internal flows[2]",
+  "de": "Strömung in porösen Medien: z.B. Ölrückgewinnung, Brennstoffzellen, Strömung in Katalysatorreaktoren[2]",
+  "ja": "多孔質媒体内の流れ：石油回収、燃料電池、触媒反応器内部の流れなど[2]",
+  "zh-CN": "多孔介质流动：如石油开采、燃料电池、催化反应器内部流动等[2]"
+},
+"cfd_lbm_model.applications.multiphase": {
+  "ko": "다상 유동: 액적 형성, 기포 동역학, 에멀전 및 현탁액[2]",
+  "en": "Multiphase flows: droplet formation, bubble dynamics, emulsions and suspensions[2]",
+  "de": "Mehrphasenströmungen: Tropfenbildung, Blasendynamik, Emulsionen und Suspensionen[2]",
+  "ja": "多相流：液滴形成、気泡の動力学、エマルションや懸濁液[2]",
+  "zh-CN": "多相流：液滴形成、气泡动力学、乳液和悬浮液[2]"
+},
+"cfd_lbm_model.applications.microfluidic": {
+  "ko": "미세 유체 역학 및 바이오 유체: 마이크로 채널 유동, 혈류 시뮬레이션[2]",
+  "en": "Microfluidics & Biofluids: microchannel flows, blood flow simulations[2]",
+  "de": "Mikrofluidik und Biofluidik: Strömungen in Mikrokanälen, Blutströmungssimulationen[2]",
+  "ja": "マイクロ流体力学・バイオ流体：マイクロチャンネル内の流れ、血流シミュレーション[2]",
+  "zh-CN": "微流体和生物流体：微小通道流动、血流模拟[2]"
+},
+"cfd_lbm_model.applications.acoustics": {
+  "ko": "음향학: 공기역학적 소음 예측, 흡음재 내부 유동[1]",
+  "en": "Acoustics: aeroacoustic noise prediction, flow in sound-absorbing materials[1]",
+  "de": "Akustik: Vorhersage aerodynamischer Geräusche, Strömung in Schallabsorbern[1]",
+  "ja": "音響学：空力騒音の予測、吸音材内部の流れ[1]",
+  "zh-CN": "声学：气动噪声预测、吸声材料内部流动[1]"
+},
+"cfd_lbm_model.applications.complex_geometry": {
+  "ko": "복잡 기하 구조 유동: 자동차, 항공기 주변, 건물 주변 유동[1,2]",
+  "en": "Flows around complex geometries: flows around vehicles, aircraft, buildings[1,2]",
+  "de": "Strömung um komplexe Geometrien: z.B. Strömung um Fahrzeuge, Flugzeuge, Gebäude[1,2]",
+  "ja": "複雑形状周りの流れ：自動車・航空機周辺や建物周辺の流れ[1,2]",
+  "zh-CN": "复杂几何形状周围的流动：汽车、飞机周围以及建筑物周围的流动[1,2]"
+},
+"cfd_lbm_model.trends.title": {
+  "ko": "최신 연구 동향 (최근 3-5년)",
+  "en": "Latest Research Trends (last 3–5 years)",
+  "de": "Neueste Forschungstrends (letzte 3–5 Jahre)",
+  "ja": "最新の研究動向（過去3〜5年）",
+  "zh-CN": "最新研究动态（近3–5年）"
+},
+"cfd_lbm_model.trends.desc": {
+  "ko": "최근 LBM 연구는 다음과 같은 방향으로 진행되고 있습니다:",
+  "en": "Recent LBM research has been moving in the following directions:",
+  "de": "Die jüngste LBM-Forschung bewegt sich in folgenden Richtungen:",
+  "ja": "近年のLBM研究は次のような方向で進められています：",
+  "zh-CN": "最近的LBM研究朝以下方向发展："
+},
+"cfd_lbm_model.trends.collision": {
+  "ko": "고급 충돌 모델 및 안정성 개선: MRT(Multiple Relaxation Time), Cumulant, Entropic LBM 등 다양한 충돌 연산자를 개발하여 수치 안정성 및 정확도를 향상시키고, 높은 레이놀즈 수나 강한 압축성 유동으로의 적용을 시도하고 있습니다.[1,9]",
+  "en": "Advanced collision models & stability improvements: Developing various collision operators (MRT, Cumulant, Entropic LBM, etc.) to improve numerical stability and accuracy, and extending applicability to high Reynolds number or strongly compressible flows.[1,9]",
+  "de": "Fortgeschrittene Kollisionsmodelle & Stabilitätsverbesserungen: Entwicklung verschiedener Kollisionsoperatoren (MRT, Kumulant, Entropie-LBM etc.), um die numerische Stabilität und Genauigkeit zu erhöhen und die Anwendbarkeit auf hohe Reynolds-Zahlen oder stark kompressible Strömungen auszudehnen.[1,9]",
+  "ja": "高度な衝突モデルと安定性の改善：数値安定性と精度を向上させるため、MRT（Multiple Relaxation Time）、Cumulant、エントロピックLBMなど様々な衝突演算子が開発されており、高レイノルズ数や強圧縮性流れへの適用が試みられています。[1,9]",
+  "zh-CN": "高级碰撞模型与稳定性改进：开发MRT（多松弛时间）、累积量、熵LBM等各种碰撞算子以提高数值稳定性和准确性，并尝试将其应用于高雷诺数或强压缩性流动。[1,9]"
+},
+"cfd_lbm_model.trends.multiphysics": {
+  "ko": "다물리/다상/화학 반응 통합: 열 전달, 화학 반응, 상 변화, 전자기장 등 다양한 물리 현상을 LBM 프레임워크 내에 통합하는 연구가 활발합니다.[1,2,10]",
+  "en": "Multi-physics/multi-phase/chemical reaction integration: Active research in integrating various physical phenomena (heat transfer, chemical reactions, phase change, electromagnetic fields, etc.) into the LBM framework.[1,2,10]",
+  "de": "Integration von Multiphysik/Mehrphasen/Chemischen Reaktionen: Intensive Forschung zur Integration verschiedener physikalischer Phänomene (Wärmetransport, chemische Reaktionen, Phasenwechsel, elektromagnetische Felder etc.) in den LBM-Rahmen.[1,2,10]",
+  "ja": "多物理・多相・化学反応の統合：熱伝達、化学反応、相変化、電磁場など様々な物理現象をLBMフレームワークに統合する研究が活発に行われています。[1,2,10]",
+  "zh-CN": "多物理/多相/化学反应集成：积极研究将传热、化学反应、相变、电磁场等各种物理现象集成到LBM框架中。[1,2,10]"
+},
+"cfd_lbm_model.trends.parallel": {
+  "ko": "병렬 컴퓨팅 및 하드웨어 가속 최적화: GPU, FPGA, ASIC 등 고성능 하드웨어를 적극 활용하여 대규모 LBM 시뮬레이션의 효율성을 극대화하는 연구가 집중되고 있습니다.[1,2,9]",
+  "en": "Parallel computing & hardware acceleration: Intensive efforts to maximize efficiency of large-scale LBM simulations by leveraging high-performance hardware like GPUs, FPGAs, ASICs.[1,2,9]",
+  "de": "Paralleles Rechnen & Hardware-Beschleunigung: Fokussierte Anstrengungen, die Effizienz großskaliger LBM-Simulationen durch Nutzung von Hochleistungshardware (GPUs, FPGAs, ASICs etc.) maximal zu steigern.[1,2,9]",
+  "ja": "並列計算とハードウェアアクセラレーション：GPU、FPGA、ASICなどの高性能ハードウェアを活用して大規模LBMシミュレーションの効率を最大化する研究が集中的に行われています。[1,2,9]",
+  "zh-CN": "并行计算与硬件加速优化：集中研究利用GPU、FPGA、ASIC等高性能硬件来最大化大规模LBM模拟的效率。[1,2,9]"
+},
+"cfd_lbm_model.trends.hybrid": {
+  "ko": "난류 모델 및 하이브리드 기법: LBM 기반의 LES, RANS 모델 개발 및 LBM과 NS(URANS/LES) 기반 솔버를 결합하는 하이브리드 기법 연구가 진행 중입니다.[1,2,9]",
+  "en": "Turbulence models & hybrid approaches: Development of LES and RANS models based on LBM and hybrid methods combining LBM with NS (URANS/LES) solvers.[1,2,9]",
+  "de": "Turbulenzmodelle & Hybride Verfahren: Entwicklung von auf LBM basierenden LES- und RANS-Modellen sowie hybriden Verfahren, die LBM mit NS- basierten (URANS/LES) Lösern kombinieren.[1,2,9]",
+  "ja": "乱流モデルおよびハイブリッド手法：LBMベースのLESやRANSモデルの開発、およびLBMとNS（URANS/LES）ベースのソルバーを組み合わせるハイブリッド手法の研究が進行中です。[1,2,9]",
+  "zh-CN": "湍流模型与混合方法：开发基于LBM的LES和RANS湍流模型，以及将LBM与传统NS（URANS/LES）求解器结合的混合方法。[1,2,9]"
+},
+"cfd_lbm_model.references.title": {
+  "ko": "참고문헌",
+  "en": "References",
+  "de": "Referenzen",
+  "ja": "参考文献",
+  "zh-CN": "参考文献"
+},
+"cfd_lbm_model.references.1": {
+  "ko": "[1] A systematic literature review on Lattice Boltzmann Method applied to acoustics - Sciencedirect.",
+  "en": "[1] A systematic literature review on Lattice Boltzmann Method applied to acoustics - Sciencedirect.",
+  "de": "[1] A systematic literature review on Lattice Boltzmann Method applied to acoustics - Sciencedirect.",
+  "ja": "[1] A systematic literature review on Lattice Boltzmann Method applied to acoustics - Sciencedirect.",
+  "zh-CN": "[1] A systematic literature review on Lattice Boltzmann Method applied to acoustics - Sciencedirect."
+},
+"cfd_lbm_model.references.2": {
+  "ko": "[2] Lattice Boltzmann Methods for Industrial Applications - ResearchGate.",
+  "en": "[2] Lattice Boltzmann Methods for Industrial Applications - ResearchGate.",
+  "de": "[2] Lattice Boltzmann Methods for Industrial Applications - ResearchGate.",
+  "ja": "[2] Lattice Boltzmann Methods for Industrial Applications - ResearchGate.",
+  "zh-CN": "[2] Lattice Boltzmann Methods for Industrial Applications - ResearchGate."
+},
+"cfd_lbm_model.references.3": {
+  "ko": "[3] The lattice Boltzmann method: Fundamentals and acoustics (Viggen, 2014, PhD Thesis) - ResearchGate.",
+  "en": "[3] The lattice Boltzmann method: Fundamentals and acoustics (Viggen, 2014, PhD Thesis) - ResearchGate.",
+  "de": "[3] The lattice Boltzmann method: Fundamentals and acoustics (Viggen, 2014, PhD Thesis) - ResearchGate.",
+  "ja": "[3] The lattice Boltzmann method: Fundamentals and acoustics (Viggen, 2014, PhD Thesis) - ResearchGate.",
+  "zh-CN": "[3] The lattice Boltzmann method: Fundamentals and acoustics (Viggen, 2014, PhD Thesis) - ResearchGate."
+},
+"cfd_lbm_model.references.4": {
+  "ko": "[4] Adaptive Lattice Boltzmann Model for Compressible Flows. C Sun. 2000. (IEEE 출처에서 언급).",
+  "en": "Adaptive Lattice Boltzmann Model for Compressible Flows. C Sun. 2000. (mentioned in an IEEE source).",
+  "de": "Adaptive Lattice Boltzmann Model for Compressible Flows. C Sun. 2000. (in einer IEEE-Quelle erwähnt).",
+  "ja": "Adaptive Lattice Boltzmann Model for Compressible Flows. C Sun. 2000.（IEEEの資料で言及）。",
+  "zh-CN": "Adaptive Lattice Boltzmann Model for Compressible Flows. C Sun. 2000.（在 IEEE 来源中提及）。"
+},
+"cfd_lbm_model.references.8": {
+  "ko": "[8] Incompressible LBM (Lattice Boltzmann Method) Advanced Options - SimScale Docs.",
+  "en": "[8] Incompressible LBM (Lattice Boltzmann Method) Advanced Options - SimScale Docs.",
+  "de": "[8] Incompressible LBM (Lattice Boltzmann Method) Advanced Options - SimScale Docs.",
+  "ja": "[8] Incompressible LBM (Lattice Boltzmann Method) Advanced Options - SimScale Docs.",
+  "zh-CN": "[8] Incompressible LBM (Lattice Boltzmann Method) Advanced Options - SimScale Docs."
+},
+"cfd_lbm_model.references.9": {
+  "ko": "[9] Lattice Boltzmann k-ω SST based hybrid RANS/LES simulations of turbulent flows - Sciencedirect.",
+  "en": "[9] Lattice Boltzmann k-ω SST based hybrid RANS/LES simulations of turbulent flows - Sciencedirect.",
+  "de": "[9] Lattice Boltzmann k-ω SST based hybrid RANS/LES simulations of turbulent flows - Sciencedirect.",
+  "ja": "[9] Lattice Boltzmann k-ω SST based hybrid RANS/LES simulations of turbulent flows - Sciencedirect.",
+  "zh-CN": "[9] Lattice Boltzmann k-ω SST based hybrid RANS/LES simulations of turbulent flows - Sciencedirect."
+},
+"cfd_lbm_model.references.10": {
+  "ko": "[10] A novel frequency‐dependent lattice Boltzmann model with a single force term for electromagnetic wave propagation in dispersive media - Nature.",
+  "en": "[10] A novel frequency‐dependent lattice Boltzmann model with a single force term for electromagnetic wave propagation in dispersive media - Nature.",
+  "de": "[10] A novel frequency‐dependent lattice Boltzmann model with a single force term for electromagnetic wave propagation in dispersive media - Nature.",
+  "ja": "[10] A novel frequency‐dependent lattice Boltzmann model with a single force term for electromagnetic wave propagation in dispersive media - Nature.",
+  "zh-CN": "[10] A novel frequency‐dependent lattice Boltzmann model with a single force term for electromagnetic wave propagation in dispersive media - Nature."
+},
+"cfd_lbm_model.references.note": {
+  "ko": "(위 참고문헌 목록은 제공된 \"LBM 및 URANS 모델 상세 분석\" 문서에서 관련 내용을 발췌하여 이 페이지 작성에 활용된 주요 자료들입니다.)",
+  "en": "(The above list of references consists of key materials used in the preparation of this page, excerpted from the provided \"Detailed Analysis of LBM and URANS Models\" document.)",
+  "de": "(Die obige Literaturliste besteht aus den wichtigsten Quellen, die zur Erstellung dieser Seite herangezogen wurden, und wurde aus dem bereitgestellten Dokument \"Detaillierte Analyse der LBM- und URANS-Modelle\" entnommen.)",
+  "ja": "（上記の参考文献リストは、提供された\"LBMおよびURANSモデル詳細解析\"資料から抜粋した、このページの作成に利用された主な文献です。）",
+  "zh-CN": "（上述参考文献列表摘自所提供的\"LBM及URANS模型详细分析\"文档，构成撰写本页面所使用的主要资料。）"
+}
 }
