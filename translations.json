@@ -1788,7 +1788,7 @@
     "ko": "생물공학연구실",
     "en": "Bioprocess Engineering Laboratory",
     "de": "Labor für Bioverfahrenstechnik",
-    "ja": "生物プロセス工学研究室",
+    "ja": "バイオプロセス工学研究室",
     "zh-CN": "生物工艺工程实验室"
   },
   "common.search_placeholder": {
@@ -2130,7 +2130,7 @@
   "common.search.button": {
     "ko": "검색",
     "en": "Search",
-    "de": "Suche",
+    "de": "Suchen",
     "ja": "検索",
     "zh-CN": "搜索"
   },
@@ -2144,9 +2144,9 @@
   "common.helper.prompt": {
     "ko": "뭐든 물어봐!",
     "en": "Ask me anything!",
-    "de": "Frag mich irgendwas!",
+    "de": "Frag mich alles!",
     "ja": "何でも聞いてね！",
-    "zh-CN": "问我任何问题！"
+    "zh-CN": "尽管提问！"
   },
   "common.search.results": {
     "ko": "검색 결과",
@@ -2164,10 +2164,10 @@
   },
   "common.footer.address": {
     "ko": "강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
-    "en": "1 Yonsei-daegil, Heungup-myeon, Wonju, Gangwon Special Self-Governing Province, Mirae Hall 306 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
-    "de": "Gangwon Sonderverwaltungsprovinz, Wonju, Heungup-myeon, Yonsei-daegil 1, Mirae-Gebäude Raum 306 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
-    "ja": "江原特別自治道 原州市 興業面 延世大キル 1、ミレ館 306号室 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
-    "zh-CN": "江原特别自治道原州市兴业面延世大路1号，未来馆306室 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr"
+    "en": "Gangwon Special Self-Governing Province, Wonju, Heungup-myeon, Yonseidae-gil 1, Mirae Hall 306 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "de": "Gangwon Sonderautonome Provinz, Wonju, Heungup-myeon, Yonsei-daegil 1, Mirae-Gebäude 306 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "ja": "江原特別自治道原州市興業面延世大路1、未来館306号 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "zh-CN": "江原特别自治道原州市兴业面延世大学路1号，未来馆306室 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr"
   },
   "common.footer.yonsei": {
     "ko": "연세대학교",
@@ -2179,22 +2179,22 @@
   "common.footer.mirae_campus": {
     "ko": "미래캠퍼스",
     "en": "Mirae Campus",
-    "de": "Mirae-Campus",
-    "ja": "ミレキャンパス",
+    "de": "Mirae Campus",
+    "ja": "未来キャンパス",
     "zh-CN": "未来校区"
   },
   "common.footer.department": {
     "ko": "생명과학기술학부",
-    "en": "College of Life Science and Technology",
+    "en": "Faculty of Life Science and Technology",
     "de": "Fachbereich Lebenswissenschaften und Technologie",
     "ja": "生命科学技術学部",
-    "zh-CN": "生命科学技术学部"
+    "zh-CN": "生命科学与技术学院"
   },
   "common.footer.disclaimer": {
     "ko": "본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.",
-    "en": "This website has been created for educational and research purposes.",
+    "en": "This website was created for educational and research purposes.",
     "de": "Diese Website wurde zu Bildungs- und Forschungszwecken erstellt.",
-    "ja": "本ウェブサイトは教育および研究目的で作成されています。",
+    "ja": "本ウェブサイトは教育および研究目的で作成されました。",
     "zh-CN": "本网站为教育和研究目的而制作。"
   },
   "common.notice.title": {
@@ -2490,5 +2490,341 @@
     "de": "Die Inhalte dieser Seite werden derzeit vorbereitet und in Kürze aktualisiert.",
     "ja": "現在、このページのコンテンツは準備中です。まもなく更新される予定です。",
     "zh-CN": "当前页面的内容正在准备中，很快将会更新。"
+  },
+  "common.helper.open": {
+    "ko": "도우미 열기",
+    "en": "Open assistant",
+    "de": "Assistent öffnen",
+    "ja": "アシスタントを開く",
+    "zh-CN": "打开助手"
+  },
+  "common.content.preparing": {
+    "ko": "콘텐츠 준비 중",
+    "en": "Content coming soon",
+    "de": "Inhalt wird vorbereitet",
+    "ja": "コンテンツ準備中",
+    "zh-CN": "内容准备中"
+  },
+  "common.content.pending_details": {
+    "ko": "이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다.",
+    "en": "The detailed content of this page is currently being prepared. It will be updated soon.",
+    "de": "Die detaillierten Inhalte dieser Seite werden derzeit vorbereitet. Sie werden in Kürze aktualisiert.",
+    "ja": "このページの詳細な内容は現在準備中です。まもなく更新される予定です。",
+    "zh-CN": "本页面的详细内容目前正在准备中。很快将更新。"
+  },
+  "common.footer.copyright": {
+    "ko": "© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.",
+    "en": "© 2025 Bioprocess Engineering Laboratory, Yonsei University Mirae Campus.",
+    "de": "© 2025 Labor für Bioverfahrenstechnik, Yonsei University Mirae Campus.",
+    "ja": "© 2025 延世大学校未来キャンパス・バイオプロセス工学研究室.",
+    "zh-CN": "© 2025 生物工艺工程实验室，延世大学未来校区。"
+  },
+  "common.footer.yonsei_univ": {
+    "ko": "연세대학교",
+    "en": "Yonsei University",
+    "de": "Yonsei University",
+    "ja": "延世大学校",
+    "zh-CN": "延世大学"
+  },
+  "common.research_overview": {
+    "ko": "연구 개요",
+    "en": "Research Overview",
+    "de": "Forschungsübersicht",
+    "ja": "研究概要",
+    "zh-CN": "研究概述"
+  },
+  "common.research_background_objectives": {
+    "ko": "연구 배경 및 목적",
+    "en": "Research Background & Objectives",
+    "de": "Forschungshintergrund und -ziele",
+    "ja": "研究の背景と目的",
+    "zh-CN": "研究背景和目的"
+  },
+  "common.technical_approach": {
+    "ko": "기술적 접근 방법",
+    "en": "Technical Approach",
+    "de": "Technischer Ansatz",
+    "ja": "技術的アプローチ",
+    "zh-CN": "技术方法"
+  },
+  "common.model_media_design": {
+    "ko": "모델 기반 배지 설계",
+    "en": "Model-guided Media Design",
+    "de": "Modellgestützte Nährmedienentwicklung",
+    "ja": "モデルベースの培地設計",
+    "zh-CN": "基于模型的培养基设计"
+  },
+  "common.metabolic_model_opt": {
+    "ko": "대사 모델 기반 배지 최적화",
+    "en": "Metabolic Model-driven Media Optimization",
+    "de": "Stoffwechselmodell-gestützte Nährmedienoptimierung",
+    "ja": "代謝モデル駆動の培地最適化",
+    "zh-CN": "代谢模型驱动的培养基优化"
+  },
+  "common.media_dev_automation": {
+    "ko": "배지 개발 자동화 시스템",
+    "en": "Automated Media Development System",
+    "de": "Automatisiertes System zur Nährmedienentwicklung",
+    "ja": "培地開発自動化システム",
+    "zh-CN": "培养基开发自动化系统"
+  },
+  "common.latest_trends": {
+    "ko": "최신 연구 동향",
+    "en": "Latest Research Trends",
+    "de": "Aktuelle Forschungstrends",
+    "ja": "最新の研究動向",
+    "zh-CN": "最新研究动态"
+  },
+  "common.publications_patents": {
+    "ko": "주요 연구 성과",
+    "en": "Major Research Achievements",
+    "de": "Wichtige Forschungsergebnisse",
+    "ja": "主な研究成果",
+    "zh-CN": "主要研究成果"
+  },
+  "common.industrial_applications": {
+    "ko": "산업계 적용 사례",
+    "en": "Industrial Application Cases",
+    "de": "Industrielle Anwendungsfälle",
+    "ja": "産業界への応用事例",
+    "zh-CN": "产业应用案例"
+  },
+  "common.system_metabolic_media_optimization": {
+    "ko": "시스템 대사공학 및 배지 최적화",
+    "en": "Systems Metabolic Engineering & Media Optimization",
+    "de": "Systematisches Stoffwechselingenieurwesen und Nährmedienoptimierung",
+    "ja": "システム代謝工学および培地最適化",
+    "zh-CN": "系统代谢工程与培养基优化"
+  },
+  "meta_eng_main.section.intro": {
+    "ko": "대사공학과 배지 최적화 연구는 고효율 세포배양을 달성하기 위한 핵심 전략입니다. 아래 항목에서 세부 연구 내용을 확인해 보세요.",
+    "en": "Metabolic engineering and media optimization research are key strategies for achieving highly efficient cell cultivation. Check the detailed research contents in the items below.",
+    "de": "Die Forschung in Metabolic Engineering und Medienoptimierung ist eine Schlüsselstrategie, um eine hocheffiziente Zellkultur zu erreichen. Unten können Sie die einzelnen Forschungsinhalte im Detail einsehen.",
+    "ja": "代謝工学と培地最適化の研究は、高効率な細胞培養を達成するための重要な戦略です。以下の項目から、詳細な研究内容をご覧ください。",
+    "zh-CN": "代谢工程和培养基优化研究是实现高效细胞培养的关键策略。请查看下列各项以了解详细的研究内容。"
+  },
+  "meta_eng_main.section.item1.desc": {
+    "ko": "연구 배경과 기술적 접근 방법을 소개합니다.",
+    "en": "Introduces the research background and technical approach.",
+    "de": "Hier werden der Forschungshintergrund und die technische Herangehensweise vorgestellt.",
+    "ja": "研究の背景と技術的アプローチについて紹介します.",
+    "zh-CN": "介绍研究背景和技术方法."
+  },
+  "meta_eng_main.section.item2.desc": {
+    "ko": "대사 모델 기반의 배지 최적화와 자동화 시스템을 다룹니다.",
+    "en": "Covers metabolic model-based media optimization and automation systems.",
+    "de": "Behandelt die Nährmedienoptimierung auf Basis von Stoffwechselmodellen und zugehörige Automatisierungssysteme.",
+    "ja": "代謝モデルに基づく培地の最適化と自動化システムについて扱います.",
+    "zh-CN": "涉及基于代谢模型的培养基优化和自动化系统."
+  },
+  "meta_eng_main.section.item3.desc": {
+    "ko": "관련 기술의 연구 성과와 산업 적용 사례를 살펴봅니다.",
+    "en": "Examines the research outcomes of related technologies and cases of industrial application.",
+    "de": "Betrachtet die Forschungsergebnisse der relevanten Technologien und deren Anwendungsfälle in der Industrie.",
+    "ja": "関連技術の研究成果と産業界への応用事例を見ていきます.",
+    "zh-CN": "考察相关技术的研究成果及其产业应用案例."
+  },
+  "meta_eng_overview_main.section.intro": {
+    "ko": "시스템 대사공학 및 배지 최적화 연구의 배경, 목적, 기술적 접근 방법을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+    "en": "Introduces the background, objectives, and technical approach of the metabolic engineering and media optimization research. More details can be found in the sub-menu.",
+    "de": "Stellt den Hintergrund, die Ziele und die technische Herangehensweise der Forschung im Bereich systematisches Metabolic Engineering und Medienoptimierung vor. Weitere Details finden Sie im Untermenü.",
+    "ja": "システム代謝工学および培地最適化研究の背景、目的、技術的アプローチについて紹介します.サブメニューからさらに詳しい内容を確認できます.",
+    "zh-CN": "介绍系统代谢工程及培养基优化研究的背景、目的和技术方法.您可以在下级菜单中查看更详细的内容."
+  },
+  "meta_eng_overview_main.section.pending": {
+    "ko": "시스템 대사공학 및 배지 최적화 연구 개요에 대한 상세 내용이 곧 업데이트될 예정입니다.",
+    "en": "Detailed content regarding the overview of the systems metabolic engineering and media optimization research will be updated soon.",
+    "de": "Ausführliche Inhalte zur Übersicht der Forschung über systematisches Metabolic Engineering und Medienoptimierung werden in Kürze aktualisiert.",
+    "ja": "システム代謝工学および培地最適化研究の概要に関する詳細な内容はまもなく更新される予定です.",
+    "zh-CN": "有关系统代谢工程及培养基优化研究概述的详细内容将很快更新."
+  },
+  "meta_eng_overview_background_objectives.nav.back": {
+    "ko": "시스템 대사공학 연구 개요로 돌아가기",
+    "en": "Back to Systems Metabolic Engineering Research Overview",
+    "de": "Zurück zur Übersicht der systematischen Metabolic Engineering-Forschung",
+    "ja": "システム代謝工学研究の概要に戻る",
+    "zh-CN": "返回系统代谢工程研究概述"
+  },
+  "meta_eng_overview_background_objectives.section.intro": {
+    "ko": "본 연구실은 시스템 대사공학 및 배지 최적화 연구를 통해 바이오 의약품 및 유용물질 생산의 효율성과 경제성을 극대화하는 것을 목표로 합니다.",
+    "en": "Our laboratory aims to maximize the efficiency and cost-effectiveness of biopharmaceutical and useful compound production through research in systems metabolic engineering and media optimization.",
+    "de": "Unser Labor hat das Ziel, durch Forschung im Bereich des systematischen Metabolic Engineering und der Nährmedienoptimierung die Effizienz und Kosteneffektivität bei der Produktion von Biopharmazeutika und wertvollen Substanzen zu maximieren.",
+    "ja": "当研究室では、システム代謝工学および培地最適化の研究を通じて、バイオ医薬品および有用物質生産の効率と経済性を最大化することを目標としています.",
+    "zh-CN": "本实验室通过开展系统代谢工程和培养基优化研究，旨在最大限度提高生物制药和有用物质生产的效率和经济性."
+  },
+  "meta_eng_overview_background_objectives.section.background_heading": {
+    "ko": "연구 배경",
+    "en": "Research Background",
+    "de": "Forschungshintergrund",
+    "ja": "研究背景",
+    "zh-CN": "研究背景"
+  },
+  "meta_eng_overview_background_objectives.section.background_p1": {
+    "ko": "미생물 및 동물 세포는 다양한 바이오 의약품(항체, 백신, 세포치료제 등)과 화학물질, 바이오연료 등을 생산하는 핵심적인 역할을 합니다. 그러나 이러한 세포 공장의 생산성은 세포 내 복잡한 대사 네트워크와 외부 배양 환경 요인에 의해 크게 좌우됩니다. 기존의 시행착오적 방식의 공정 개발은 시간과 비용이 많이 소요되며, 최적의 생산 조건을 찾는 데 한계가 있습니다.",
+    "en": "Microbial and animal cells play a critical role in producing various biopharmaceuticals (antibodies, vaccines, cell therapies, etc.), as well as chemicals and biofuels. However, the productivity of these cell factories is heavily influenced by complex intracellular metabolic networks and external cultivation environmental factors. Traditional trial-and-error process development is time-consuming, costly, and limited in its ability to find optimal production conditions.",
+    "de": "Mikrobielle und tierische Zellen spielen eine entscheidende Rolle bei der Produktion verschiedener biopharmazeutischer Produkte (Antikörper, Impfstoffe, Zelltherapeutika usw.) sowie von Chemikalien und Biokraftstoffen. Allerdings wird die Produktivität dieser Zellfabriken stark durch die komplexen intrazellulären Stoffwechselnetzwerke und äußere Kultivierungsfaktoren beeinflusst. Die herkömmliche, auf Versuch und Irrtum basierende Prozessentwicklung ist zeit- und kostenintensiv und stößt an Grenzen bei der Ermittlung optimaler Produktionsbedingungen.",
+    "ja": "微生物および動物細胞は、各種のバイオ医薬品（抗体、ワクチン、細胞治療剤など）や化学物質、バイオ燃料の生産において重要な役割を果たしています。しかし、これら細胞工場の生産性は、細胞内の複雑な代謝ネットワークと外部の培養環境要因によって大きく左右されます。従来の試行錯誤に基づくプロセス開発は時間と費用がかかり、最適な生産条件を見出すにも限界があります.",
+    "zh-CN": "微生物和动物细胞在生产各种生物制药（抗体、疫苗、细胞疗法等）以及化学品和生物燃料方面发挥着关键作用。然而，这些细胞工厂的产能在很大程度上受细胞内部复杂的代谢网络和外部培养环境因素的影响。传统的试错式工艺开发耗时耗资，在寻找最佳生产条件方面存在局限."
+  },
+  "meta_eng_overview_background_objectives.section.background_p2": {
+    "ko": "시스템 생물학(Systems Biology)과 대사공학(Metabolic Engineering)의 발전은 이러한 문제를 해결할 수 있는 새로운 가능성을 제시합니다. 세포 내 대사 경로 전체를 시스템 수준에서 이해하고, 수학적 모델링과 유전체/단백체/대사체 등 오믹스(Omics) 데이터를 통합 분석함으로써, 목표 물질 생산에 핵심적인 대사 경로를 규명하고 최적화할 수 있습니다. 또한, 세포 배양 배지는 세포 성장과 생산물 합성에 필수적인 영양분과 성장인자를 제공하므로, 배지 성분 및 농도를 정밀하게 최적화하는 것은 생산성 향상에 매우 중요합니다.",
+    "en": "Advancements in systems biology and metabolic engineering provide new possibilities to solve these problems. By understanding the entire metabolic pathways within cells at the systems level and performing integrated analysis of mathematical modeling with omics data (genomic, proteomic, metabolomic, etc.), key metabolic pathways for the production of target substances can be identified and optimized. Furthermore, since the cell culture medium provides essential nutrients and growth factors for cell growth and product synthesis, finely optimizing the medium components and concentrations is crucial for improving productivity.",
+    "de": "Die Fortschritte in der Systembiologie und im Metabolic Engineering eröffnen neue Möglichkeiten zur Lösung dieser Probleme. Durch ein systemisches Verständnis aller zellulären Stoffwechselwege und die integrative Analyse mathematischer Modelle mit Omics-Daten (Genomik, Proteomik, Metabolomik etc.) lassen sich die für die Produktion des Zielprodukts entscheidenden Stoffwechselwege identifizieren und optimieren. Darüber hinaus ist es von entscheidender Bedeutung für die Steigerung der Produktivität, die Komponenten und Konzentrationen des Zellkulturmediums – welches essentielle Nährstoffe und Wachstumsfaktoren für Zellwachstum und Produktsynthese liefert – präzise zu optimieren.",
+    "ja": "システム生物学と代謝工学の発展は、これらの問題を解決する新たな可能性を示しています。細胞内の代謝経路全体をシステムレベルで理解し、数理モデリングとゲノム/プロテオーム/メタボロームなどのオミクスデータを統合解析することで、目標物質の生産に重要な代謝経路を解明し最適化することができます。また、細胞培養用培地は細胞の成長と産物合成に必要な栄養素や成長因子を提供するため、培地の成分および濃度を精密に 최적화하는 것은生産성 향상에 매우 중요합니다.",
+    "zh-CN": "系统生物学和代谢工程的发展为解决这些问题提供了新的可能性。通过在系统层面理解细胞内的整个代谢途径，并将数学建模与基因组、蛋白质组、代谢组等组学数据进行整合分析，可以识别并优化对目标产物生产至关重要的代谢途径。此外，细胞培养基为细胞生长和产物合成提供必需的养分和生长因子，因此精确优化培养基的组成和浓度对提高产量非常重要."
+  },
+  "meta_eng_overview_background_objectives.section.objectives_heading": {
+    "ko": "연구 목적",
+    "en": "Research Objectives",
+    "de": "Forschungsziele",
+    "ja": "研究目的",
+    "zh-CN": "研究目的"
+  },
+  "meta_eng_overview_background_objectives.section.objectives_intro": {
+    "ko": "본 연구실의 시스템 대사공학 및 배지 최적화 연구는 다음과 같은 구체적인 목적을 가집니다:",
+    "en": "Our laboratory's systems metabolic engineering and media optimization research has the following specific objectives:",
+    "de": "Die Forschung unseres Labors im Bereich des systematischen Metabolic Engineering und der Medienoptimierung verfolgt folgende konkrete Ziele:",
+    "ja": "当研究室のシステム代謝工学および培地最適化研究は、次のような具体的な目的を持っています.",
+    "zh-CN": "本实验室在系统代谢工程和培养基优化方面的研究具有以下具体目的："
+  },
+  "meta_eng_overview_background_objectives.section.objective1.title": {
+    "ko": "세포 대사 네트워크 이해 증진:",
+    "en": "Enhance understanding of cellular metabolic networks:",
+    "de": "Verbesserung des Verständnisses zellulärer Stoffwechselnetzwerke:",
+    "ja": "細胞代謝ネットワークの理解促進:",
+    "zh-CN": "加强对细胞代谢网络的理解："
+  },
+  "meta_eng_overview_background_objectives.section.objective1.desc": {
+    "ko": "다양한 세포주(CHO 세포, 미생물 등)의 대사 네트워크를 정량적으로 분석하고, 모델 기반 시뮬레이션을 통해 세포의 대사 상태 변화를 예측합니다.",
+    "en": "Quantitatively analyze the metabolic networks of various cell lines (e.g., CHO cells, microbes) and predict changes in cellular metabolic states through model-based simulations.",
+    "de": "Quantitative Analyse der Stoffwechselnetzwerke verschiedener Zelllinien (z.B. CHO-Zellen, Mikroorganismen) und Vorhersage von Veränderungen des Zellstoffwechselzustands mittels modellbasierter Simulationen.",
+    "ja": "さまざまな細胞株（CHO細胞、微生物など）の代謝ネットワークを定量的に分析し、モデルに基づくシミュレーションによって細胞の代謝状態の変化を予測します.",
+    "zh-CN": "对多种细胞系（如CHO细胞、微生物等）的代谢网络进行定量分析，并通过基于模型的模拟预测细胞代谢状态的变化."
+  },
+  "meta_eng_overview_background_objectives.section.objective2.title": {
+    "ko": "모델 기반 대사공학 전략 개발:",
+    "en": "Develop model-based metabolic engineering strategies:",
+    "de": "Entwicklung modellbasierter Metabolic-Engineering-Strategien:",
+    "ja": "モデルベースの代謝工学戦略の開発:",
+    "zh-CN": "开发基于模型的代谢工程策略:"
+  },
+  "meta_eng_overview_background_objectives.section.objective2.desc": {
+    "ko": "유전자 편집 기술과 시스템 모델링을 결합하여 목표 물질 생산성을 극대화하는 세포주 개량 전략을 개발하고 검증합니다.",
+    "en": "Combine gene editing techniques with systems modeling to develop and validate cell line improvement strategies that maximize target product productivity.",
+    "de": "Kombination von Geneditierungstechnologien mit systemischem Modellieren, um Zelllinienverbesserungsstrategien zu entwickeln und zu validieren, die die Produktionsleistung des Zielprodukts maximieren.",
+    "ja": "遺伝子編集技術とシステムモデリングを組み合わせて、目標物質の生産性を最大化する細胞株改良戦略を開発し、検証します.",
+    "zh-CN": "将基因编辑技术与系统建模相结合，开发并验证能够最大化目标物质产量的细胞株改良策略."
+  },
+  "meta_eng_overview_background_objectives.section.objective3.title": {
+    "ko": "고효율 맞춤형 배지 개발:",
+    "en": "Develop high-efficiency customized media:",
+    "de": "Entwicklung hocheffizienter, maßgeschneiderter Kulturmedien:",
+    "ja": "高効率なカスタム培地の開発:",
+    "zh-CN": "开发高效的定制培养基："
+  },
+  "meta_eng_overview_background_objectives.section.objective3.desc": {
+    "ko": "데이터 기반 접근법과 모델 가이드 프레임워크를 활용하여 특정 세포주 및 생산 공정에 최적화된 맞춤형 배지를 체계적으로 개발합니다.",
+    "en": "Utilize data-driven approaches and a model-guided framework to systematically develop customized media optimized for specific cell lines and production processes.",
+    "de": "Einsatz datenbasierter Ansätze und eines modellgestützten Rahmens zur systematischen Entwicklung maßgeschneiderter Kulturmedien, die für spezifische Zelllinien und Produktionsprozesse optimiert sind.",
+    "ja": "データ駆動型のアプローチとモデルガイドフレームワークを活用して、特定の細胞株および生産プロセスに最適化されたカスタム培地を体系的に 개발します.",
+    "zh-CN": "利用数据驱动的方法和模型指导框架，有体系地开发针对特定细胞系和生产工艺优化的定制培养基."
+  },
+  "meta_eng_overview_background_objectives.section.objective4.title": {
+    "ko": "배지 개발 공정 자동화:",
+    "en": "Automate the media development process:",
+    "de": "Automatisierung des Medienentwicklungsprozesses:",
+    "ja": "培地開発プロセスの自動化:",
+    "zh-CN": "培养基开发过程自动化："
+  },
+  "meta_eng_overview_background_objectives.section.objective4.desc": {
+    "ko": "실험 설계(DoE), 고처리량 스크리닝(HTS), 기계 학습(Machine Learning) 기술을 통합하여 배지 성분 탐색 및 최적화 과정을 자동화하고 효율화합니다.",
+    "en": "Integrate Design of Experiments (DoE), high-throughput screening (HTS), and machine learning techniques to automate and streamline the exploration and optimization of media components.",
+    "de": "Integration von Versuchsplanung (DoE), Hochdurchsatz-Screening (HTS) und maschinellen Lernverfahren, um die Suche und Optimierung von Medienkomponenten zu automatisieren und zu effizientieren.",
+    "ja": "実験計画法（DoE）、ハイスループットスクリーニング（HTS）、機械学습技術を統合し、培地成分の探索および最適化のプロセスを自動化・効율화します.",
+    "zh-CN": "结合试验设计（DoE）、高通量筛选（HTS）和机器学习技术，实现培养基成分的探索和优化过程的自动化和高效化."
+  },
+  "meta_eng_overview_background_objectives.section.objective5.title": {
+    "ko": "생산 공정 스케일업 지원:",
+    "en": "Support scale-up of the production process:",
+    "de": "Unterstützung der Hochskalierung des Produktionsprozesses:",
+    "ja": "生産プロセスのスケールアップ支援:",
+    "zh-CN": "支持生产工艺放大："
+  },
+  "meta_eng_overview_background_objectives.section.objective5.desc": {
+    "ko": "실험실 규모에서 개발된 최적 배지 및 배양 조건을 대규모 생산 공정에 성공적으로 적용하기 위한 스케일업 전략을 지원합니다.",
+    "en": "Support scale-up strategies to successfully apply the optimal media and culture conditions developed at lab scale to large-scale production processes.",
+    "de": "Unterstützung von Scale-up-Strategien, um die im Labormaßstab entwickelten optimalen Kulturmedien und Kulturbedingungen erfolgreich auf großtechnische Produktionsprozesse zu übertragen.",
+    "ja": "実験室規模で開発された最適な培地および培養条件を大規模な生産プロセスに適用するためのスケールアップ戦略を支援します.",
+    "zh-CN": "支持放大策略，将在实验室规模开发的最佳培养基和培养条件成功应用于大规模生产工艺."
+  },
+  "meta_eng_overview_background_objectives.section.conclusion": {
+    "ko": "이러한 연구 목적 달성을 통해 바이오산업의 생산성 향상, 비용 절감, 그리고 신규 바이오 제품 개발 가속화에 기여하고자 합니다.",
+    "en": "By achieving these research objectives, we intend to contribute to enhanced productivity in the bioindustry, cost reduction, and the accelerated development of new bio-products.",
+    "de": "Durch die Erreichung dieser Forschungsziele wollen wir zur Steigerung der Produktivität in der Bioindustrie, zur Kostensenkung und zur beschleunigten Entwicklung neuer Bioprodukte beitragen.",
+    "ja": "これらの研究目的を達成することで、バイオ産業における生産性の向上、コスト削減、そして新規バイオ製品の開発加速に貢献したいと考えています.",
+    "zh-CN": "通过实现这些研究目标，我们希望为提高生物产业的生产效率、降低成本以及加速新型生物产品的开发做出贡献."
+  },
+  "meta_eng_overview_technical_approach.section.intro": {
+    "ko": "시스템 대사공학 및 배지 최적화 연구 수행을 위한 핵심 기술 및 방법론을 소개합니다.",
+    "en": "Introduces the key technologies and methodologies for conducting systems metabolic engineering and media optimization research.",
+    "de": "Stellt die Schlüsseltechnologien und Methodologien für die Durchführung von Forschung im Bereich systematisches Metabolic Engineering und Medienoptimierung vor.",
+    "ja": "システム代謝工学および培地最適化の研究を遂行するための主要な技術と手法を紹介します.",
+    "zh-CN": "介绍开展系统代谢工程和培养基优化研究的关键技术和方法."
+  },
+  "meta_eng_model_media_design_main.section.intro": {
+    "ko": "컴퓨터 모델링과 자동화 시스템을 활용한 효율적인 세포 배양 배지 설계 및 개발 방법을 다룹니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+    "en": "Covers efficient approaches for designing and developing cell culture media using computer modeling and automation systems. More details can be found in the sub-menu.",
+    "de": "Behandelt effiziente Methoden zur Gestaltung und Entwicklung von Zellkulturmedien unter Einsatz von Computermodellierung und Automatisierungssystemen. Weitere Details finden Sie im Untermenü.",
+    "ja": "コンピューターモデリングと自動化システムを活用した効率的な細胞培養培地の設計および開発手法を扱います.サブメニューからさらに詳しい内容を確認できます.",
+    "zh-CN": "涉及利用计算机建模和自动化系统进行高效细胞培养基设计和开发的方法.您可以在下级菜单中查看更详细的内容."
+  },
+  "meta_eng_model_media_design_main.section.pending": {
+    "ko": "모델 기반 배지 설계에 대한 상세 내용이 곧 업데이트될 예정입니다.",
+    "en": "Detailed content regarding model-guided media design will be updated soon.",
+    "de": "Ausführliche Inhalte zur modellbasierten Mediengestaltung werden in Kürze aktualisiert.",
+    "ja": "モデルベースの培地設計に関する詳細な内容はまもなく更新される予定です.",
+    "zh-CN": "有关模型指导的培养基设计的详细内容将很快更新."
+  },
+  "meta_eng_model_media_design_metabolic_model_opt.section.intro": {
+    "ko": "세포의 대사 네트워크 모델을 이용하여 배지 조성을 최적화하는 전략을 소개합니다.",
+    "en": "Introduces strategies for optimizing media composition using metabolic network models of cells.",
+    "de": "Stellt Strategien zur Optimierung der Medienzusammensetzung mithilfe von Stoffwechselnetzwerkmodellen von Zellen vor.",
+    "ja": "細胞の代謝ネットワークモデルを活用して培地組成を最適化する戦略について紹介します.",
+    "zh-CN": "介绍利用细胞代谢网络模型优化培养基组成的策略."
+  },
+  "meta_eng_model_media_design_automated_dev.section.intro": {
+    "ko": "로봇 및 자동화 장비를 활용하여 배지 개발 과정을 가속화하고 효율성을 높이는 시스템을 설명합니다.",
+    "en": "Describes a system that accelerates the media development process and enhances efficiency by utilizing robotics and automation equipment.",
+    "de": "Beschreibt ein System, das den Prozess der Medienentwicklung durch den Einsatz von Robotik und Automatisierungsgeräten beschleunigt und effizienter gestaltet.",
+    "ja": "ロボットおよび自動化装置を活用して培地開発プロセスを加速し、効率を向上させるシステムについて説明します.",
+    "zh-CN": "说明如何利用机器人和自动化设备加速培养基开发过程并提高效率的系统."
+  },
+  "meta_eng_trends_main.section.intro": {
+    "ko": "시스템 대사공학 및 배지 최적화 분야의 최신 연구 성과와 산업 적용 현황을 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+    "en": "Introduces the latest research outcomes and industrial application cases in the field of systems metabolic engineering and media optimization. More details can be found in the sub-menu.",
+    "de": "Stellt die neuesten Forschungsergebnisse und aktuellen industriellen Anwendungsfälle im Bereich systematisches Metabolic Engineering und Medienoptimierung vor. Weitere Details finden Sie im Untermenü.",
+    "ja": "システム代謝工学および培地最適化分野における最新の研究成果と産業への応用現況を紹介します.サブメニューからさらに詳しい内容を確認できます.",
+    "zh-CN": "介绍系统代谢工程及培养基优化领域的最新研究成果和产业应用现状.您可以在下级菜单中查看更详细的内容."
+  },
+  "meta_eng_trends_main.section.pending": {
+    "ko": "최신 연구 동향에 대한 상세 내용이 곧 업데이트될 예정입니다.",
+    "en": "Detailed content regarding the latest research trends will be updated soon.",
+    "de": "Ausführliche Inhalte zu den neuesten Forschungstrends werden in Kürze aktualisiert.",
+    "ja": "最新の研究動向に関する詳細な内容はまもなく更新される予定です.",
+    "zh-CN": "有关最新研究动态的详细内容将很快更新."
+  },
+  "meta_eng_trends_publications_patents.section.intro": {
+    "ko": "시스템 대사공학 및 배지 최적화 관련 주요 논문, 특허 등 연구 업적을 공유합니다.",
+    "en": "Shares major research outputs such as key publications and patents related to systems metabolic engineering and media optimization.",
+    "de": "Teilt die wichtigsten Forschungsergebnisse, wie bedeutende Publikationen und Patente, im Zusammenhang mit systematischem Metabolic Engineering und Medienoptimierung.",
+    "ja": "システム代謝工学および培地最適化に関連する主要な論文、特許などの研究成果を共有します.",
+    "zh-CN": "分享与系统代谢工程及培养基优化相关的主要论文、专利等研究成果."
+  },
+  "meta_eng_trends_industrial_app.section.intro": {
+    "ko": "시스템 대사공학 및 배지 최적화 기술이 실제 산업 현장에서 어떻게 활용되고 있는지 사례를 통해 보여줍니다.",
+    "en": "Demonstrates through case studies how systems metabolic engineering and media optimization technologies are being utilized in real industrial settings.",
+    "de": "Zeigt anhand von Fallbeispielen, wie Technologien des systematischen Metabolic Engineering und der Medienoptimierung in der Praxis der Industrie eingesetzt werden.",
+    "ja": "システム代謝工学および培地最適化技術が実際の産業現場でどのように活用されているかを事例を通じて示します.",
+    "zh-CN": "通过案例展示系统代谢工程和培养基优化技术在实际产业中如何得到应用."
   }
 }
