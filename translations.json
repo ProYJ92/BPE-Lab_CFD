@@ -258,4 +258,1118 @@
     "de": "Unser Labor fungiert zudem als angeschlossenes Professorenlabor im Rahmen von K-NIBRT (Global NIBRT Korea) und beteiligt sich aktiv am Ausbildungsprogramm für Fachkräfte im Bioprozessbereich. Durch enge Verknüpfung mit der Industrie bemühen wir uns, einen Beitrag zur praktischen Problemlösung zu leisten.",
     "ja": "当研究室は、K-NIBRT（Global NIBRT Korea）の兼任教授研究室としてバイオプロセス人材育成プログラムにも積極的に参加し、産業界との緊密な連携を通じて実質的な問題解決に寄与することを目指しています。",
     "zh-CN": "我们实验室还作为K-NIBRT（韩国国家生物工艺研究培训中心）的兼任教授实验室，积极参与生物工艺人才培养项目，并通过与产业界的紧密联系致力于实际问题的解决。"
+  },
+  "lab_overview_mission_section_title": {
+    "ko": "연구 목표 및 핵심 가치",
+    "en": "Research Goals and Core Values",
+    "de": "Forschungsziele und Kernwerte",
+    "ja": "研究目標および核心価値",
+    "zh-CN": "研究目标及核心价值"
+  },
+  "lab_overview_goal_label": {
+    "ko": "연구 목표 (Research Goal):",
+    "en": "Research Goal:",
+    "de": "Forschungsziel:",
+    "ja": "研究目標：",
+    "zh-CN": "研究目标："
+  },
+  "lab_overview_goal_desc": {
+    "ko": "디지털 트윈과 데이터 기반의 첨단 바이오공학 기술로 바이오의약품 생산 및 바이오프로세스 최적화 분야를 선도하며, 실질적이고 혁신적인 연구 성과를 통해 인류 건강 증진에 기여한다.",
+    "en": "Lead the fields of biopharmaceutical production and bioprocess optimization through digital twin technology and data-driven advanced bioengineering, and contribute to human health improvement with tangible, innovative research outcomes.",
+    "de": "Durch Einsatz von Digital-Twin-Technologie und datengetriebener modernster Bioverfahrenstechnik die Bereiche biopharmazeutische Produktion und Bioprozessoptimierung anführen und durch konkrete, innovative Forschungsergebnisse zur Verbesserung der Gesundheit der Menschheit beitragen.",
+    "ja": "デジタルツインおよびデータ駆動型の先端バイオ工学技術によってバイオ医薬品生産およびバイオプロセス最適化分野をリードし、実質的かつ革新的な研究成果を通じて人類の健康増進に貢献する。",
+    "zh-CN": "通过数字孪生和数据驱动的先进生物工程技术引领生物药品生产及生物工艺优化领域，并以实质性且创新性的研究成果促进人类健康。"
+  },
+  "lab_overview_value_precision": {
+    "ko": "정밀성 (Precision): 정확하고 엄밀한 데이터를 기반으로 디지털 트윈 및 시스템 대사공학을 통해 연구의 신뢰성과 응용성을 극대화한다.",
+    "en": "Precision: Based on precise and rigorous data, we leverage digital twin technology and systems metabolic engineering to maximize the reliability and applicability of our research.",
+    "de": "Präzision: Basierend auf präzisen und rigorosen Daten nutzen wir Digital-Twin-Technologie und systemische Stoffwechseltechnik, um die Zuverlässigkeit und Anwendbarkeit unserer Forschung zu maximieren.",
+    "ja": "精密性: 正確かつ厳密なデータに基づき、デジタルツイン技術とシステム代謝工学によって研究の信頼性と応用性を最大化します。",
+    "zh-CN": "精确性：以准确严谨的数据为基础，通过数字孪生技术和系统代谢工程最大化我们研究的可靠性和应用性。"
+  },
+  "lab_overview_value_innovation": {
+    "ko": "융합적 혁신 (Integrative Innovation): CFD, AI, 시스템 생물학 등 다양한 첨단 기술을 적극적으로 결합하여 기존의 연구 한계를 뛰어넘는 새로운 통합 솔루션을 창출한다.",
+    "en": "Integrative Innovation: We actively combine diverse cutting-edge technologies—CFD, AI, systems biology, etc.—to create new integrated solutions that transcend existing research limits.",
+    "de": "Integrative Innovation: Wir kombinieren aktiv verschiedene Spitzentechnologien – CFD, KI, Systembiologie usw. – um neue integrierte Lösungen zu schaffen, die die bestehenden Forschungsgrenzen überschreiten.",
+    "ja": "融合的イノベーション: CFD、AI、システム生物学など多様な先端技術を積極的に組み合わせ、既存の研究の限界を超える新たな統合ソリューションを創出します。",
+    "zh-CN": "融合式创新：积极融合CFD、AI、系统生物学等多种尖端技术，创造超越现有研究边界的新型综合解决方案。"
+  },
+  "lab_overview_value_excellence": {
+    "ko": "과학적 탁월성 (Scientific Excellence): 국제적으로 인정받는 고품질의 연구 성과를 지속적으로 창출하고, 전문성과 윤리성을 바탕으로 연구 품질 관리에 철저를 기한다.",
+    "en": "Scientific Excellence: Continuously produce high-quality research outcomes recognized internationally, and maintain rigorous research quality management based on professionalism and ethics.",
+    "de": "Wissenschaftliche Exzellenz: Kontinuierliche Erzielung hochwertiger, international anerkannter Forschungsergebnisse und striktes Qualitätsmanagement der Forschung auf Grundlage von Professionalität und Ethik.",
+    "ja": "科学的卓越性: 国際的に認められる高品質な研究成果を継続的に創出し、専門性と倫理性に基づいて研究の品質管理を徹底します。",
+    "zh-CN": "科学卓越：持续产出国际公认的高质量研究成果，并在专业精神和伦理基础上严格进行研究质量管理。"
+  },
+  "lab_overview_value_collaboration": {
+    "ko": "실용적 협력 (Practical Collaboration): 산학 협력 및 글로벌 파트너십을 적극 활용하여 실무 중심의 연구 결과를 산업현장과 사회에 효과적으로 전달하고 적용한다.",
+    "en": "Practical Collaboration: Actively leverage industry-academic collaborations and global partnerships to effectively transfer and apply practical research outcomes to industry and society.",
+    "de": "Praktische Zusammenarbeit: Nutzt aktiv Industrie-Universitäts-Kooperationen und globale Partnerschaften, um praxisorientierte Forschungsergebnisse effektiv in die Industrie und Gesellschaft zu übertragen und anzuwenden.",
+    "ja": "実践的協力: 産学連携およびグローバルなパートナーシップを積極的に活用し、実務中心の研究成果を産業現場や社会に効果的に伝達・適用します。",
+    "zh-CN": "务实合作：积极利用产学合作和全球伙伴关系，将实践导向的研究成果高效地传递并应用于产业和社会。"
+  },
+  "lab_overview_value_talent": {
+    "ko": "미래 인재 양성 (Future Talent Cultivation): 차세대 연구자들이 바이오공정 분야의 전문가로 성장하도록 실질적이고 체계적인 교육과 멘토링을 제공한다.",
+    "en": "Future Talent Cultivation: Provide practical and systematic education and mentoring to nurture next-generation researchers into experts in the bioprocess field.",
+    "de": "Förderung zukünftiger Talente: Bietet praxisnahe und systematische Ausbildung und Mentoring, um Nachwuchsforscher zu Experten im Bioprozessbereich heranzubilden.",
+    "ja": "未来の人材育成: 次世代の研究者がバイオプロセス分野の専門家へと成長できるよう、実質的かつ体系的な教育とメンタリングを提供します。",
+    "zh-CN": "未来人才培养：提供切实且系统的教育和指导，培育下一代研究者成长为生物工艺领域的专家。"
+  },
+  "lab_overview_basic_info_section_title": {
+    "ko": "기본 정보",
+    "en": "Basic Information",
+    "de": "Grundlegende Informationen",
+    "ja": "基本情報",
+    "zh-CN": "基本信息"
+  },
+  "lab_overview_label_lab_name_ko": {
+    "ko": "연구실명 (Korean)",
+    "en": "Lab Name (Korean)",
+    "de": "Laborname (Koreanisch)",
+    "ja": "研究室名（韓国語）",
+    "zh-CN": "实验室名（韩文）"
+  },
+  "lab_overview_lab_name_ko_value": {
+    "ko": "생물공학연구실",
+    "en": "生物公学研究室",
+    "de": "생물공학연구실",
+    "ja": "生物工学研究室",
+    "zh-CN": "生物工学研究室"
+  },
+  "lab_overview_label_lab_name_en": {
+    "ko": "연구실명 (English)",
+    "en": "Lab Name (English)",
+    "de": "Laborname (Englisch)",
+    "ja": "研究室名（英語）",
+    "zh-CN": "实验室名（英文）"
+  },
+  "lab_overview_lab_name_en_value": {
+    "ko": "Bioprocess Engineering Laboratory",
+    "en": "Bioprocess Engineering Laboratory",
+    "de": "Bioprocess Engineering Laboratory",
+    "ja": "Bioprocess Engineering Laboratory",
+    "zh-CN": "Bioprocess Engineering Laboratory"
+  },
+  "lab_overview_label_professor": {
+    "ko": "지도교수",
+    "en": "Principal Investigator",
+    "de": "Leitender Professor",
+    "ja": "指導教授",
+    "zh-CN": "指导教授"
+  },
+  "lab_overview_professor_name_title": {
+    "ko": "홍종광 (Jong Kwang Hong), 조교수",
+    "en": "Jong Kwang Hong, Assistant Professor",
+    "de": "Jong Kwang Hong, Assistenzprofessor",
+    "ja": "洪鍾光（Jong Kwang Hong）、助教",
+    "zh-CN": "洪钟光（Jong Kwang Hong），助理教授"
+  },
+  "lab_overview_label_affiliation": {
+    "ko": "소속",
+    "en": "Affiliation",
+    "de": "Zugehörigkeit",
+    "ja": "所属",
+    "zh-CN": "所属"
+  },
+  "lab_overview_affiliation_value": {
+    "ko": "연세대학교 미래캠퍼스 생명과학기술학부",
+    "en": "Division of Biological Science & Technology, Yonsei University Mirae Campus",
+    "de": "Fachbereich Biowissenschaft & Technologie, Mirae Campus der Yonsei-Universität",
+    "ja": "延世大学ミラェキャンパス 生命科学技術学部",
+    "zh-CN": "延世大学未来校区 生物科学技术学部"
+  },
+  "lab_overview_label_location": {
+    "ko": "위치",
+    "en": "Location",
+    "de": "Standort",
+    "ja": "所在地",
+    "zh-CN": "位置"
+  },
+  "lab_overview_location_value": {
+    "ko": "강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호",
+    "en": "1 Yonseidae-gil, Heungup-myeon, Wonju, Gangwon Special Self-Governing Province (Mirae Hall 306)",
+    "de": "Yonseidae-gil 1, Heungup-myeon, Wonju, Sonderverwaltungsprovinz Gangwon (Mirae-Gebäude 306)",
+    "ja": "江原特別自治道 原州市 興業面 延世大キル1、未来館306号",
+    "zh-CN": "江原特别自治道原州市兴业面延世大路1号，未来馆306室"
+  },
+  "lab_overview_label_email": {
+    "ko": "이메일",
+    "en": "Email",
+    "de": "E-Mail",
+    "ja": "メール",
+    "zh-CN": "电子邮箱"
+  },
+  "lab_overview_email_value": {
+    "ko": "jongkwang.hong@yonsei.ac.kr",
+    "en": "jongkwang.hong@yonsei.ac.kr",
+    "de": "jongkwang.hong@yonsei.ac.kr",
+    "ja": "jongkwang.hong@yonsei.ac.kr",
+    "zh-CN": "jongkwang.hong@yonsei.ac.kr"
+  },
+  "lab_overview_label_phone": {
+    "ko": "전화",
+    "en": "Phone",
+    "de": "Telefon",
+    "ja": "電話",
+    "zh-CN": "电话"
+  },
+  "lab_overview_phone_value": {
+    "ko": "033-760-2279",
+    "en": "033-760-2279",
+    "de": "033-760-2279",
+    "ja": "033-760-2279",
+    "zh-CN": "033-760-2279"
+  },
+  "lab_overview_back_link": {
+    "ko": "연구실 소개 메인으로 돌아가기",
+    "en": "Back to About Lab main page",
+    "de": "Zurück zur Laborvorstellungs-Startseite",
+    "ja": "研究室紹介メインページに戻る",
+    "zh-CN": "返回实验室介绍主页"
+  },
+  "research_areas_title": {
+    "ko": "연구 분야",
+    "en": "Research Areas",
+    "de": "Forschungsbereiche",
+    "ja": "研究分野",
+    "zh-CN": "研究领域"
+  },
+  "research_areas_intro": {
+    "ko": "본 연구실은 다음과 같은 핵심 연구 분야에 집중하고 있습니다. 각 분야는 상호 연계되어 시너지를 창출하며, 바이오공정의 혁신을 목표로 합니다.",
+    "en": "Our laboratory focuses on the following key research areas. Each area is interlinked, creating synergy with the aim of innovating bioprocesses.",
+    "de": "Unser Labor konzentriert sich auf die folgenden zentralen Forschungsbereiche. Jeder Bereich ist miteinander verknüpft und erzeugt Synergien, um Innovationen in Bioprozessen voranzutreiben.",
+    "ja": "当研究室は以下のような主要な研究分野に注力しています。各分野は相互に連携しシナジーを生み出し、バイオプロセスの革新を目標としています。",
+    "zh-CN": "本实验室专注于如下核心研究领域。各领域相互关联，创造协同效应，致力于生物工艺的创新。"
+  },
+  "research_areas_topic1_title": {
+    "ko": "1. 디지털 트윈 기반 바이오공정",
+    "en": "1. Digital Twin-Based Bioprocess",
+    "de": "1. Digitaler Zwilling-basierter Bioprozess",
+    "ja": "1. デジタルツイン基盤のバイオプロセス",
+    "zh-CN": "1. 基于数字孪生的生物工艺"
+  },
+  "research_areas_topic1_desc": {
+    "ko": "전산유체역학(CFD)과 인공지능(AI) 기술을 융합하여, 바이오리액터 내에서 일어나는 세포 배양 과정 중 실시간으로 물리적 및 대사적 상태를 가상으로 복제(Digital Twin)합니다. 이를 통해 공정 상태를 정밀하게 예측하고, 최적화된 제어 전략을 제시하여 생산 효율성을 극대화합니다. 주요 연구 내용은 공정 데이터 통합 분석, 예측 모델 개발, AI 기반 최적 공정 제어 알고리즘 개발 등을 포함합니다.",
+    "en": "By integrating Computational Fluid Dynamics (CFD) and Artificial Intelligence (AI) technologies, we virtually replicate (Digital Twin) the physical and metabolic states occurring in real-time during cell cultivation in bioreactors. This enables precise process state prediction and the proposal of optimized control strategies to maximize production efficiency. Key research includes integrated process data analysis, predictive model development, and AI-based optimal process control algorithm development.",
+    "de": "Durch die Integration von Computational Fluid Dynamics (CFD) und künstlicher Intelligenz (KI) replizieren wir virtuell (Digital Twin) die physikalischen und metabolischen Zustände, die in Echtzeit während des Zellkultivierungsprozesses im Bioreaktor auftreten. Dadurch können wir den Prozesszustand präzise vorhersagen und optimierte Steuerungsstrategien vorschlagen, um die Produktionseffizienz zu maximieren. Die Kernforschungsinhalte umfassen die integrative Prozessdatenanalyse, die Entwicklung von Vorhersagemodellen und KI-basierter optimaler Prozesssteuerungsalgorithmen.",
+    "ja": "計算流体力学（CFD）と人工知能（AI）技術を融合し、バイオリアクター内での細胞培養過程における物理的および代謝的状態をリアルタイムで仮想的に複製（デジタルツイン）します。これにより、プロセス状態を精密に予測し、最適化された制御戦略を提示して生産効率を最大化します。主な研究内容には、プロセスデータの統合分析、予測モデルの開発、AIベースの最適プロセス制御アルゴリズムの 개발などが含まれます.",
+    "zh-CN": "融合计算流体力学（CFD）和人工智能（AI）技术，在生物反应器细胞培养过程中实时虚拟复制物理和代谢状态（数字孪生）。通过这一手段，我们能够精确预测工况，并提出优化的控制策略以最大化生产效率。主要研究内容包括工艺数据的集成分析、预测模型开发以及基于AI的最优工艺控制算法开发等."
+  },
+  "research_areas_topic2_title": {
+    "ko": "2. CHO 세포 배양 공정 최적화",
+    "en": "2. CHO Cell Culture Process Optimization",
+    "de": "2. Optimierung des CHO-Zellkulturprozesses",
+    "ja": "2. CHO細胞培養プロセスの最適化",
+    "zh-CN": "2. CHO细胞培养工艺优化"
+  },
+  "research_areas_topic2_desc": {
+    "ko": "중국 햄스터 난소(CHO) 세포는 항체 의약품 생산의 핵심 세포주입니다. 본 연구실에서는 대사 모델, 유전체 정보, 실험 데이터를 통합적으로 분석하여 CHO 세포의 생산성과 최종 의약품의 품질(예: 당쇄 구조)을 동시에 향상시키는 데이터 기반의 배지 조성 및 배양 공정 설계 전략을 개발합니다. 연구 범위는 세포주 개발부터 배양 조건 최적화, 스케일업 전략 수립까지 포괄합니다.",
+    "en": "Chinese hamster ovary (CHO) cells are a key cell line for therapeutic antibody production. Our lab integrates metabolic models, genomic information, and experimental data to develop data-driven media formulations and culture process design strategies that simultaneously improve CHO cell productivity and final product quality (e.g., glycosylation profiles). Our research scope spans from cell line development to optimization of culture conditions and establishment of scale-up strategies.",
+    "de": "Chinesische Hamster-Ovar-(CHO)-Zellen sind die Schlüsselkultur für die Produktion therapeutischer Antikörper. Unser Labor integriert metabolische Modelle, Genomdaten und experimentelle Daten, um datengesteuerte Kulturmedienformulierungen und Prozessdesign-Strategien zu entwickeln, die gleichzeitig die Produktivität der CHO-Zellen und die Qualität des Endprodukts (z.B. Glykosylierungsmuster) verbessern. Der Forschungsumfang reicht von der Zelllinienentwicklung über die Optimierung der Kultivierungsbedingungen bis hin zur Entwicklung von Scale-up-Strategien.",
+    "ja": "チャイニーズハムスター卵巣（CHO）細胞は抗体医薬品生産の重要な細胞株です。当研究室では、代謝モデル、ゲノム情報、実験データを統合分析し、CHO細胞の生産性と最終医薬品の品質（例: 糖鎖構造）を同時に向上させるデータ駆動型の培地組成および培養プロセス設計戦略を開発しています。研究範囲は、細胞株開発から培養条件の最適化、スケールアップ戦略の策定にまで及びます。",
+    "zh-CN": "中国仓鼠卵巢（CHO）细胞是抗体药物生产的关键细胞株。本实验室综合分析代谢模型、基因组信息和实验数据，开发数据驱动的培养基配方和培养工艺设计策略，以同时提升CHO细胞的产量和最终药物质量（如糖基化结构）。研究范围涵盖从细胞株开发、培养条件优化到规模放大策略的制定。"
+  },
+  "research_areas_topic3_title": {
+    "ko": "3. 시스템 대사공학 및 배지 개발",
+    "en": "3. Systems Metabolic Engineering and Media Development",
+    "de": "3. Systemische Metabolic Engineering und Mediumentwicklung",
+    "ja": "3. システム代謝工学および培地開発",
+    "zh-CN": "3. 系统代谢工程及培养基开发"
+  },
+  "research_areas_topic3_desc": {
+    "ko": "세포 내 복잡한 대사 네트워크를 시스템 수준에서 이해하고, 이를 바탕으로 목표 물질의 생산을 극대화하도록 세포를 공학적으로 개량합니다. 특히, 체계적인 모델 가이드 프레임워크(MGF)를 활용하여 배양 배지의 화학적, 영양학적 변수를 탐색하고 최적화하는 과정을 자동화하여 고효율 맞춤형 배지 개발을 목표로 합니다. 오믹스 데이터(유전체, 전사체, 단백체, 대사체) 분석과 대사흐름분석(MFA)이 핵심 기술로 활용됩니다.",
+    "en": "We aim to understand complex intracellular metabolic networks at a systems level and genetically engineer cells to maximize target molecule production. In particular, using a systematic Model-Guided Framework (MGF), we automate the exploration and optimization of chemical and nutritional variables in culture media to develop highly efficient, customized media. Omics data analysis (genomics, transcriptomics, proteomics, metabolomics) and metabolic flux analysis (MFA) are employed as core techniques.",
+    "de": "Wir streben an, komplexe intrazelluläre Stoffwechselnetzwerke auf Systemebene zu verstehen und Zellen genetisch so zu modifizieren, dass die Produktion von Zielmolekülen maximiert wird. Insbesondere nutzen wir ein systematisches Model-Guided Framework (MGF), um die Untersuchung und Optimierung chemischer und nährstoffbezogener Variablen im Kulturmedium zu automatisieren und hoch effiziente, maßgeschneiderte Medien zu entwickeln. Omics-Datenanalysen (Genomik, Transkriptomik, Proteomik, Metabolomik) und die Metabolische Flussanalyse (MFA) werden als Kerntechniken eingesetzt.",
+    "ja": "細胞内の複雑な代謝ネットワークをシステムレベルで理解し、これに基づいて目標物質の生産を最大化するよう細胞を工学的に改良します。特に、体系的なモデルガイドフレームワーク（MGF）を活用して培養培地の化学的・栄養学的パラメータの探索と最適化プロセスを自動化し、高効率でカスタマイズされた培地開発を目指しています。オミクスデータ（ゲノム、トランスクリプトーム、プロテオーム、メタボローム）の分析や代謝フラックス解析（MFA）がコア技術として活用されています.",
+    "zh-CN": "我们致力于从系统层面理解细胞内复杂的代谢网络，并在此基础上对细胞进行工程改造，以最大化目标产物的产量。尤其是，我们利用系统的模型指导框架（MGF）自动探索和优化培养基的化学和营养变量，以开发高效的定制培养基。组学数据分析（基因组学、转录组学、蛋白质组学、代谢组学）和代谢流分析（MFA）是我们采用的核心技术。"
+  },
+  "research_areas_topic4_title": {
+    "ko": "4. 바이오리액터 CFD 기반 설계 및 최적화",
+    "en": "4. Bioreactor Design and Optimization via CFD",
+    "de": "4. Bioreaktordesign und -optimierung auf CFD-Basis",
+    "ja": "4. バイオリアクターのCFDベース設計および最適化",
+    "zh-CN": "4. 基于CFD的生物反应器设计与优化"
+  },
+  "research_areas_topic4_desc": {
+    "ko": "전산유체역학(CFD) 모델링 기술을 활용하여 다양한 규모와 형태의 바이오리액터 내부에서 발생하는 복잡한 유체 흐름, 혼합 특성, 물질 전달 현상(산소, 영양분 등), 전단응력 분포 등을 정밀하게 분석합니다. 이 분석 결과를 바탕으로 바이오리액터의 설계를 개선하고, 배양 효율성과 최종 산물의 품質 관리 전략을 최적화하며, 스케일업/다운 과정의 신뢰성을 높입니다. 다상 유동 모델, 난류 모델, 세포 반응 동역학(CRK) 모델 통합 연구를 수행합니다.",
+    "en": "Using Computational Fluid Dynamics (CFD) modeling, we finely analyze the complex fluid flows, mixing characteristics, mass transfer phenomena (oxygen, nutrients, etc.), and shear stress distributions occurring inside bioreactors of various scales and configurations. Based on these analyses, we improve bioreactor design, optimize strategies for enhancing culture efficiency and final product quality control, and increase the reliability of scale-up/scale-down processes. Our work integrates multiphase flow models, turbulence models, and cell reaction kinetics (CRK) models.",
+    "de": "Wir nutzen die CFD-Modellierung (Computational Fluid Dynamics), um die komplexen Strömungsverhältnisse, Mischungscharakteristiken, Stofftransportphänomene (Sauerstoff, Nährstoffe usw.) und Scherstressverteilungen in Bioreaktoren unterschiedlicher Größen und Bauarten präzise zu analysieren. Auf Basis dieser Analysen verbessern wir das Bioreaktordesign, optimieren Strategien zur Steigerung der Kultivierungseffizienz und zur Qualitätskontrolle des Endprodukts und erhöhen die Zuverlässigkeit von Scale-up/Scale-down-Prozessen. Unsere Arbeit integriert Mehrphasenströmungsmodelle, Turbulenzmodelle und Modelle zur Zellreaktionskinetik (CRK).",
+    "ja": "計算流体力学（CFD）モデリング技術を活用し、様々な規模と形態のバイオリアクター内部で発生する複雑な流体流動、混合特性、物質移動現象（酸素、栄養分など）、せん断応力分布などを精密に分析します。これらの分析結果に基づき、バイオリアクターの設計を改善し、培養効率と最終産物の品質管理 전략을 최적化し、スケール업/ダウンプロセスの信頼性を高めます。多相流モデル、乱流モデル、細胞反応동역학(CRK)モデル의 통합 연구를 수행합니다.",
+    "zh-CN": "利用CFD建模技术，我们精确分析不同规模和形式的生物反应器内部发生的复杂流体流动、混合特性、传质现象（氧气、养分等）以及剪切力分布。基于这些分析结果，我们改进生物反应器设计，优化提高培养效率和最终产品质量控制的策略，并提高放大/缩小过程的可靠性。我们的工作综合运用多相流模型、湍流模型和细胞反应动力学（CRK）模型。"
+  },
+  "research_areas_back_link": {
+    "ko": "연구실 소개 메인으로 돌아가기",
+    "en": "Back to About Lab main page",
+    "de": "Zurück zur Laborvorstellungs-Startseite",
+    "ja": "研究室紹介メインページに戻る",
+    "zh-CN": "返回实验室介绍主页"
+  },
+  "research_goals_title": {
+    "ko": "연구 목표 및 비전",
+    "en": "Research Goals & Vision",
+    "de": "Forschungsziele & Vision",
+    "ja": "研究目標およびビジョン",
+    "zh-CN": "研究目标与愿景"
+  },
+  "research_goals_goal_section_title": {
+    "ko": "연구 목표",
+    "en": "Research Goals",
+    "de": "Forschungsziele",
+    "ja": "研究目標",
+    "zh-CN": "研究目标"
+  },
+  "research_goals_goal_intro": {
+    "ko": "본 생물공학연구실의 주요 목표는 다음과 같습니다:",
+    "en": "The main goals of our Bioprocess Engineering Laboratory are as follows:",
+    "de": "Die Hauptziele unseres Bioprocess Engineering Laboratory sind wie folgt:",
+    "ja": "本生物工学研究室の主な目標は以下の通りです:",
+    "zh-CN": "本生物工艺工程实验室的主要目标如下："
+  },
+  "research_goals_goal_item1": {
+    "ko": "디지털 트윈 기술 고도화: CFD와 AI를 융합하여 바이오공정의 실시간 가상 복제(Digital Twin) 기술을 개발하고, 이를 통해 공정 예측 정확도를 향상시키며 최적화된 공정 제어 전략을 제시합니다.",
+    "en": "Advancement of Digital Twin Technology: Integrate CFD and AI to develop real-time virtual replication (Digital Twin) of bioprocesses, thereby improving process prediction accuracy and proposing optimized process control strategies.",
+    "de": "Weiterentwicklung der Digital-Twin-Technologie: CFD und KI kombinieren, um eine Echtzeit-Virtualisierung (Digital Twin) von Bioprozessen zu entwickeln, wodurch die Prognosegenauigkeit verbessert und optimierte Prozesssteuerungsstrategien vorgeschlagen werden.",
+    "ja": "デジタルツイン技術の高度化: CFDとAIを融合し、バイオプロセスのリアルタイム仮想複製（デジタルツイン）技術を開発してプロセス予測の精度を向上させ、最適化されたプロセス制御戦略を提示します.",
+    "zh-CN": "数字孪生技术深化：融合CFD与AI，开发生物工艺的实时虚拟复制（数字孪生）技术，从而提高工艺预测精度并提出优化的工艺控制策略。"
+  },
+  "research_goals_goal_item2": {
+    "ko": "CHO 세포 배양 공정 혁신: 다중 오믹스 데이터(genomics, transcriptomics, proteomics, metabolomics)와 기계 학습을 통합하여 CHO 세포의 항체 의약품 생산성과 품질(예: 당쇄 구조 균일성)을 동시에 향상시키는 데이터 기반의 배지 조성 및 배양 공정 설계 기술을 확립합니다.",
+    "en": "Innovation in CHO Cell Culture Processes: Integrate multi-omics data (genomics, transcriptomics, proteomics, metabolomics) and machine learning to establish data-driven media formulation and culture process design techniques that simultaneously improve the production yield and quality (e.g., glycosylation uniformity) of therapeutic antibodies in CHO cells.",
+    "de": "Innovation des CHO-Zellkulturprozesses: Integration von Multi-Omics-Daten (Genomik, Transkriptomik, Proteomik, Metabolomik) und maschinellem Lernen, um datengestützte Verfahren für Medienzusammensetzung und Prozessdesign zu entwickeln, die zugleich die Produktion und Qualität (z.B. Gleichmäßigkeit der Glykosylierung) von therapeutischen Antikörpern in CHO-Zellen verbessern.",
+    "ja": "CHO細胞培養プロセスの革新: マルチオミクスデータ（ゲノミクス、トランスクリプトミクス、プロテオミクス、メタボロミクス）と機械学習を統合し、CHO細胞における抗体医薬品の生産性と品質（例: 糖鎖構造の均一性）を同時に向上させるデータ駆動型の培地組成および培養プロセス設計技術を確立します.",
+    "zh-CN": "CHO细胞培养工艺创新：融合多组学数据（基因组学、转录组学、蛋白质组学、代谢组学）与机器学习，建立数据驱动的培养基配方及培养工艺设计技术，同时提高CHO细胞治疗性抗体的产量和质量（如糖链结构均一性）。"
+  },
+  "research_goals_goal_item3": {
+    "ko": "시스템 대사공학 적용 확대: 세포 내 대사 네트워크에 대한 깊이 있는 이해를 바탕으로, 모델 가이드 프레임워크(MGF)를 통해 목표 물질 생산을 위한 세포주 개량 및 배양 조건의 화학적, 영양학적 변수 탐색 과정을 자동화하고, 고효율 바이오 생산 시스템을 구축합니다.",
+    "en": "Expansion of Systems Metabolic Engineering Application: Build on a deep understanding of intracellular metabolic networks to use a Model-Guided Framework (MGF) that automates the exploration of chemical and nutritional variables in cell line engineering and culture conditions for target product production, thereby establishing a high-efficiency bioproduction system.",
+    "de": "Ausweitung des Einsatzes systemischer Metabolic Engineering: Auf der Grundlage eines tiefgreifenden Verständnisses intrazellulärer Stoffwechselnetzwerke wird ein Model-Guided Framework (MGF) eingesetzt, um die Exploration chemischer und nährstoffbezogener Variablen bei der Zelllinienentwicklung und Kultivierungsbedingungen für die Produktion von Zielsubstanzen zu automatisieren und so ein hocheffizientes Bio-Produktionssystem aufzubauen.",
+    "ja": "システム代謝工学の適用拡大: 細胞内代謝ネットワークに対する深い理解に基づき、モデルガイドフレームワーク（MGF）を通じて目標物質生産のための細胞株改良および培養条件における化学的・栄養学的変数探索プロセスを自動化し、高効率なバイオ生産システムを構築します.",
+    "zh-CN": "系统代谢工程应用拓展：在深入理解细胞内代谢网络的基础上，通过模型指导框架（MGF）自动化目标产物生产所需的细胞株改良和培养条件中化学、营养变量的探索过程，从而构建高效的生物生产系统。"
+  },
+  "research_goals_goal_item4": {
+    "ko": "첨단 바이오리액터 설계 및 최적화: CFD 모델링을 통해 다양한 스케일의 바이오리액터 내부 유동, 혼합, 물질 전달, 전단 응력 분포 등을 정밀 분석하고, 이를 기반으로 배양 효율성 증대, 품질 관리 전략 수립, 그리고 신뢰성 있는 스케일업/다운 프로토콜을 개발합니다.",
+    "en": "Advanced Bioreactor Design and Optimization: Use CFD modeling to precisely analyze internal flow, mixing, mass transfer, and shear stress distributions in bioreactors of various scales, and on this basis enhance culture efficiency, establish quality control strategies, and develop reliable scale-up/scale-down protocols.",
+    "de": "Fortschrittliches Bioreaktordesign und -optimierung: Durch CFD-Modellierung die interne Strömung, Durchmischung, den Stofftransport und die Scherstressverteilung in Bioreaktoren unterschiedlicher Maßstäbe präzise analysieren und darauf basierend die Kultivierungseffizienz steigern, Qualitätskontrollstrategien entwickeln und zuverlässige Scale-up/Scale-down-Protokolle erstellen.",
+    "ja": "先端バイオリアクター設計および最適化: CFDモデリングを用いて様々なスケールのバイオリアクター内部の流れ、混合、物質移動、せん断応力分布などを精密に分析し、それに基づいて培養効率の向上、品質管理戦略の策定、および信頼性の高いスケールアップ/ダウンプロトコルを開発します.",
+    "zh-CN": "先进生物反应器设计及优化：利用CFD建模精确分析不同规模生物反应器内的流动、混合、传质和剪切应力分布，并以此为基础提高培养效率，制定质量控制策略以及开发可靠的放大/缩小方案。"
+  },
+  "research_goals_goal_conclusion": {
+    "ko": "궁극적으로, 이러한 연구 목표 달성을 통해 바이오 의약품 및 바이오 소재 개발의 혁신을 이끌고, 공정 개발 기간 단축, 생산성 향상, 운영 비용 절감을 실현하여 인류 보건 증진과 지속 가능한 사회 발전에 기여하고자 합니다.",
+    "en": "Ultimately, by achieving these research goals, we aim to drive innovation in biopharmaceutical and bio-material development, realizing shorter process development timelines, improved productivity, and reduced operating costs, thereby contributing to improved human health and sustainable societal development.",
+    "de": "Letztendlich wollen wir durch die Erreichung dieser Forschungsziele Innovationen in der Entwicklung von Biopharmazeutika und Biomaterialien vorantreiben, kürzere Prozessentwicklungszeiten, gesteigerte Produktivität und reduzierte Betriebskosten realisieren und somit zu besserer menschlicher Gesundheit und nachhaltiger gesellschaftlicher Entwicklung beitragen.",
+    "ja": "究極的には、これらの研究目標の達成によってバイオ医薬品およびバイオ素材開発の革新を牽引し、プロセス開発期間の短縮、生産性向上、運用コスト削減を実現して人類の健康増進と持続可能な社会発展に貢献することを目指しています.",
+    "zh-CN": "最终，通过实现这些研究目标，我们旨在引领生物药物和生物材料开发的创新，缩短工艺开发周期、提高生产力、降低运营成本，从而促进人类健康并助力可持续的社会发展。"
+  },
+  "research_goals_vision_section_title": {
+    "ko": "연구 비전",
+    "en": "Research Vision",
+    "de": "Forschungsvision",
+    "ja": "研究ビジョン",
+    "zh-CN": "研究愿景"
+  },
+  "research_goals_vision_intro1": {
+    "ko": "우리의 비전은 디지털 트윈, 시스템 생물학, 전산유체역학(CFD) 시뮬레이션 기술을 융합한 데이터 기반 정밀 바이오공학 분야를 선도하는 세계적 수준의 연구 허브로 발돋움하는 것입니다.",
+    "en": "Our vision is to become a world-class research hub leading the field of data-driven precision bioengineering, which fuses digital twin, systems biology, and CFD simulation technologies.",
+    "de": "Unsere Vision ist es, zu einem weltweit führenden Forschungszentrum zu werden, das im Bereich der datengetriebenen präzisen Bioverfahrenstechnik – der die Technologien Digitaler Zwilling, Systembiologie und CFD-Simulation vereint – Maßstäbe setzt.",
+    "ja": "我々のビジョンは、デジタルツイン、システム生物学、CFDシミュレーション技術を融合したデータ駆動型精密バイオ工学分野を牽引する世界水準の研究ハブへと発展することです.",
+    "zh-CN": "我们的愿景是发展成为融合数字孪生、系统生物学和CFD模拟技术的数据驱动精密生物工程领域的世界级研究枢纽。"
+  },
+  "research_goals_vision_intro2": {
+    "ko": "이를 위해 다음을 추구합니다:",
+    "en": "To this end, we pursue the following:",
+    "de": "Dafür streben wir Folgendes an:",
+    "ja": "そのために、次のことを追求します:",
+    "zh-CN": "为此，我们将努力做到以下几点："
+  },
+  "research_goals_vision_item1": {
+    "ko": "기술 혁신 주도: 창의적이고 도전적인 연구를 통해 바이오공정의 기존 패러다임을 전환하고, 새로운 기술 표준을 제시합니다.",
+    "en": "Driving Technological Innovation: Through creative and ambitious research, we aim to shift the existing paradigms of bioprocesses and establish new technological standards.",
+    "de": "Technologische Innovation vorantreiben: Durch kreative und herausfordernde Forschung wollen wir bestehende Paradigmen in Bioprozessen verändern und neue Technologiestandards setzen.",
+    "ja": "技術革新の主導: 創造的で挑戦的な研究を通じてバイオプロセスの既存パラダイムを転換し、新たな技術標準を提示します.",
+    "zh-CN": "引领技术创新：通过富有创造性和挑战性的研究，转变生物工艺的既有范式，提出新的技术标准。"
+  },
+  "research_goals_vision_item2": {
+    "ko": "차세대 인재 양성: 깊이 있는 이론과 실무 능력을 겸비한 미래 생명공학 분야의리더를 양성합니다.",
+    "en": "Cultivating Next-Generation Talent: Nurture future leaders in the bioengineering field who possess deep theoretical knowledge and practical skills.",
+    "de": "Ausbildung der nächsten Generation: Nachwuchsführungskräfte im Bereich Biotechnologie ausbilden, die tiefgehendes theoretisches Wissen und praktische Fähigkeiten vereinen.",
+    "ja": "次世代人材の育成: 深い理論と実践力を兼ね備えた未来の生命工学分野のリーダーを育成します.",
+    "zh-CN": "培养下一代人才：培养兼具深厚理论和实践能力的生物工程领域未来领军人物。"
+  },
+  "research_goals_vision_item3": {
+    "ko": "산학연 협력 강화: 산업界 및 국내외 연구기관과의 긴밀한 협력을 통해 개발된 기술이 실제 산업 현장에서 가치를창출하고 사회발전에 공헌하도록 합니다.",
+    "en": "Strengthening Industry-Academia Collaboration: Through close cooperation with industry and research institutions nationally and internationally, ensure that developed technologies create value in real-world industry settings and contribute to societal progress.",
+    "de": "Stärkung der Industrie-Akademie-Kooperation: Durch enge Zusammenarbeit mit der Industrie sowie nationalen und internationalen Forschungseinrichtungen sicherstellen, dass entwickelte Technologien in der Praxis Wert schaffen und zur gesellschaftlichen Entwicklung beitragen.",
+    "ja": "産学研連携の強化: 産業界および国内外の研究機関との密接な協力を通じ、開発された技術が実際の産業現場で価値を創出し、社会発展に貢献するようにします.",
+    "zh-CN": "加强产学研合作：通过与国内外产业界和研究机构的紧密合作，确保所开发的技术在实际产业领域创造价值，并为社会发展作出贡献。"
+  },
+  "research_goals_vision_conclusion": {
+    "ko": "지속적인 연구 개발과 혁신을 통해 바이오산업의 미래를 개척하고, 인류의 삶의 질 향상에 기여하는 것을 궁극적인 목표로 삼고 있습니다.",
+    "en": "Through continuous research and innovation, our ultimate goal is to pioneer the future of the bioindustry and contribute to improving the quality of human life.",
+    "de": "Durch kontinuierliche Forschung und Innovation ist es unser übergeordnetes Ziel, die Zukunft der Bioindustrie mitzugestalten und zur Verbesserung der Lebensqualität der Menschen beizutragen.",
+    "ja": "継続的な研究開発とイノベーションを通じて、バイオ産業の未来を切り開き、人類の生活の質向上に寄与することを究極の目標としています.",
+    "zh-CN": "通过持续的研究和创新，我们的终极目标是开拓生物产业的未来，并为提高人类生活质量作出贡献。"
+  },
+  "research_goals_back_link": {
+    "ko": "연구실 소개 메인으로 돌아가기",
+    "en": "Back to About Lab main page",
+    "de": "Zurück zur Laborvorstellungs-Startseite",
+    "ja": "研究室紹介メインページに戻る",
+    "zh-CN": "返回实验室介绍主页"
+  },
+  "prof_intro_title": {
+    "ko": "교수 소개",
+    "en": "Professor Introduction",
+    "de": "Professorenvorstellung",
+    "ja": "教授紹介",
+    "zh-CN": "教授介绍"
+  },
+  "prof_intro_name": {
+    "ko": "홍종광 (Jong Kwang Hong)",
+    "en": "홍종광 (Jong Kwang Hong)",
+    "de": "홍종광 (Jong Kwang Hong)",
+    "ja": "洪鍾光 (Jong Kwang Hong)",
+    "zh-CN": "洪钟光 (Jong Kwang Hong)"
+  },
+  "prof_intro_title_role": {
+    "ko": "조교수 (Assistant Professor)",
+    "en": "Assistant Professor",
+    "de": "Assistenzprofessor",
+    "ja": "助教",
+    "zh-CN": "助理教授"
+  },
+  "prof_intro_affiliation_label": {
+    "ko": "소속",
+    "en": "Affiliation",
+    "de": "Zugehörigkeit",
+    "ja": "所属",
+    "zh-CN": "所属"
+  },
+  "prof_intro_affiliation_value": {
+    "ko": "연세대학교 미래캠퍼스 생명과학기술학부<br>(Division of Biological Science & Technology, Yonsei University Mirae Campus)",
+    "en": "Division of Biological Science & Technology, Yonsei University Mirae Campus",
+    "de": "Fachbereich Biowissenschaft & Technologie, Mirae Campus der Yonsei-Universität",
+    "ja": "延世大学未来キャンパス 生命科学技術学部",
+    "zh-CN": "延世大学未来校区 生物科学技术学部"
+  },
+  "prof_intro_location_label": {
+    "ko": "연구실 위치",
+    "en": "Lab Location",
+    "de": "Laborstandort",
+    "ja": "研究室位置",
+    "zh-CN": "实验室位置"
+  },
+  "prof_intro_location_value": {
+    "ko": "강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호",
+    "en": "1 Yonseidae-gil, Heungup-myeon, Wonju, Gangwon Special Self-Governing Province (Mirae Hall 306)",
+    "de": "Yonseidae-gil 1, Heungup-myeon, Wonju, Sonderverwaltungsprovinz Gangwon (Mirae-Gebäude Raum 306)",
+    "ja": "江原特別自治道 原州市 興業面 延世大キル1, ミレ館306号",
+    "zh-CN": "江原特别自治道原州市兴业面延世大路1号, 未来馆306室"
+  },
+  "prof_intro_email_label": {
+    "ko": "이메일",
+    "en": "Email",
+    "de": "E-Mail",
+    "ja": "メール",
+    "zh-CN": "电子邮箱"
+  },
+  "prof_intro_email_value": {
+    "ko": "jongkwang.hong@yonsei.ac.kr",
+    "en": "jongkwang.hong@yonsei.ac.kr",
+    "de": "jongkwang.hong@yonsei.ac.kr",
+    "ja": "jongkwang.hong@yonsei.ac.kr",
+    "zh-CN": "jongkwang.hong@yonsei.ac.kr"
+  },
+  "prof_intro_phone_label": {
+    "ko": "전화",
+    "en": "Phone",
+    "de": "Telefon",
+    "ja": "電話",
+    "zh-CN": "电话"
+  },
+  "prof_intro_phone_value": {
+    "ko": "033-760-2279",
+    "en": "033-760-2279",
+    "de": "033-760-2279",
+    "ja": "033-760-2279",
+    "zh-CN": "033-760-2279"
+  },
+  "prof_intro_education_section_title": {
+    "ko": "학력",
+    "en": "Education",
+    "de": "Ausbildung",
+    "ja": "学歴",
+    "zh-CN": "学历"
+  },
+  "prof_intro_education_item1": {
+    "ko": "KAIST 생명화학공학과 공학박사",
+    "en": "Ph.D. in Biological & Chemical Engineering, KAIST",
+    "de": "Promotion in Bio- und Chemieingenieurwesen, KAIST",
+    "ja": "KAIST 生物化学工学科 工学博士",
+    "zh-CN": "KAIST 生物化学工学系 工学博士"
+  },
+  "prof_intro_education_item2": {
+    "ko": "연세대학교 학사",
+    "en": "B.S., Yonsei University",
+    "de": "B.Sc. an der Yonsei-Universität",
+    "ja": "延世大学 学士",
+    "zh-CN": "延世大学 学士"
+  },
+  "prof_intro_experience_section_title": {
+    "ko": "경력",
+    "en": "Experience",
+    "de": "Berufserfahrung",
+    "ja": "経歴",
+    "zh-CN": "经历"
+  },
+  "prof_intro_experience_item1": {
+    "ko": "2020년 3월 – 현재: 연세대학교 미래캠퍼스 생명과학기술학부 조교수",
+    "en": "March 2020 – Present: Assistant Professor, Division of Biological Science & Technology, Yonsei University Mirae Campus",
+    "de": "März 2020 – heute: Assistenzprofessor, Fachbereich Biowissenschaft & Technologie, Yonsei-Universität Mirae Campus",
+    "ja": "2020年3月 – 現在: 延世大学未来キャンパス 生命科学技術学部 助教",
+    "zh-CN": "2020年3月 – 至今：延世大学未来校区 生物科学技术学部 助理教授"
+  },
+  "prof_intro_experience_item2": {
+    "ko": "싱가포르 A*STAR (Agency for Science, Technology and Research), Bioprocessing Technology Institute (BTI), 박사후 연구원",
+    "en": "A*STAR (Agency for Science, Technology and Research), Bioprocessing Technology Institute (BTI), Singapore – Postdoctoral Researcher",
+    "de": "A*STAR (Agency for Science, Technology and Research), Bioprocessing Technology Institute (BTI), Singapur – Postdoktoraler Forscher",
+    "ja": "シンガポール A*STAR（科学技術庁） Bioprocessing Technology Institute（BTI） ポストドクトラル研究員",
+    "zh-CN": "新加坡 A*STAR（科学技术研究局） 生物工艺技术研究所（BTI）博士后研究员"
+  },
+  "prof_intro_experience_item3": {
+    "ko": "LG Life Sciences (현 LG화학 생명과학사업본부) 배양공정팀 연구원",
+    "en": "LG Life Sciences (now LG Chem Life Sciences Division) – Researcher, Cell Culture Process Team",
+    "de": "LG Life Sciences (heute LG Chem Life Sciences-Sparte) – Forscher im Zellkultur-Prozessteam",
+    "ja": "LG生命科学（現LG化学 生命科学本部）培養プロセスチーム 研究員",
+    "zh-CN": "LG生命科学（现LG化学生命科学部门）培养工艺团队 研究员"
+  },
+  "prof_intro_interests_section_title": {
+    "ko": "주요 연구 관심 분야",
+    "en": "Main Research Interests",
+    "de": "Hauptforschungsinteressen",
+    "ja": "主要研究関心分野",
+    "zh-CN": "主要研究兴趣领域"
+  },
+  "prof_intro_interest_item1": {
+    "ko": "디지털 트윈 기반 바이오공정 시뮬레이션 및 최적화",
+    "en": "Digital twin-based bioprocess simulation and optimization",
+    "de": "Digitaler Zwilling-basierte Bioprozesssimulation und -optimierung",
+    "ja": "デジタルツインに基づくバイオプロセスのシミュレーションと最適化",
+    "zh-CN": "基于数字孪生的生物工艺模拟与优化"
+  },
+  "prof_intro_interest_item2": {
+    "ko": "동물세포(CHO) 배양 공정 개발 및 생산성/품질 향상",
+    "en": "Animal cell (CHO) culture process development and productivity/quality improvement",
+    "de": "Entwicklung von Säugetierzell (CHO)-Kulturprozessen und Steigerung von Produktivität/Qualität",
+    "ja": "動物細胞（CHO）培養プロセスの 개발および生産性・品質向上",
+    "zh-CN": "动物细胞（CHO）培养工艺开发及生产率/质量提升"
+  },
+  "prof_intro_interest_item3": {
+    "ko": "시스템 대사공학 및 모델 기반 배지 개발",
+    "en": "Systems metabolic engineering and model-based media development",
+    "de": "Systemische Metabolic Engineering und modellbasierte Medienentwicklung",
+    "ja": "システム代謝工学およびモデルベースの培地開発",
+    "zh-CN": "系统代谢工程及基于模型的培养基开发"
+  },
+  "prof_intro_interest_item4": {
+    "ko": "전산유체역학(CFD)을 이용한 바이오리액터 설계 및 스케일업/다운 연구",
+    "en": "Bioreactor design and scale-up/scale-down studies using CFD",
+    "de": "Bioreaktordesign und Scale-up/Scale-down-Studien mit CFD",
+    "ja": "計算流体力学（CFD）を利用したバイオリアクターの設計およびスケールアップ/ダウン研究",
+    "zh-CN": "利用CFD的生物反应器设计及放大/缩小研究"
+  },
+  "prof_intro_activities_section_title": {
+    "ko": "주요 활동",
+    "en": "Main Activities",
+    "de": "Hauptaktivitäten",
+    "ja": "主要活動",
+    "zh-CN": "主要活动"
+  },
+  "prof_intro_activity_item1": {
+    "ko": "K-NIBRT (Global NIBRT Korea) 겸임교수 (바이오공정 인력양성 프로그램 참여)",
+    "en": "Adjunct Professor, K-NIBRT (Global NIBRT Korea) – Participating in bioprocess workforce training program",
+    "de": "Adjunct Professor bei K-NIBRT (Global NIBRT Korea) – Teilnahme am Bioprozess-Fachkräfteausbildungsprogramm",
+    "ja": "K-NIBRT（Global NIBRT Korea）兼任教授（バイ오プロセス人材育成プログラムに参加）",
+    "zh-CN": "K-NIBRT（韩国国家生物工艺研究培训中心）兼任教授（参与生物工艺人才培养项目）"
+  },
+  "prof_intro_activity_item2": {
+    "ko": "다수 국내외 학술지 심사위원",
+    "en": "Reviewer for numerous domestic and international academic journals",
+    "de": "Gutachter für zahlreiche nationale und internationale Fachzeitschriften",
+    "ja": "国内外の多数の学術誌の査読委員",
+    "zh-CN": "多家国内外学术期刊审稿人"
+  },
+  "prof_intro_activity_item3": {
+    "ko": "한국생물공학회 등 주요 학회 회원",
+    "en": "Member of major societies such as the Korean Society for Biotechnology and Bioengineering",
+    "de": "Mitglied wichtiger Fachgesellschaften wie der Koreanischen Gesellschaft für Biotechnologie",
+    "ja": "韓国生物工学会等主要学会の会員",
+    "zh-CN": "韩国生物工学会等主要学会会员"
+  },
+  "prof_intro_back_link": {
+    "ko": "연구실 소개 메인으로 돌아가기",
+    "en": "Back to About Lab main page",
+    "de": "Zurück zur Laborvorstellungs-Startseite",
+    "ja": "研究室紹介メインページに戻る",
+    "zh-CN": "返回实验室介绍主页"
+  },
+  "researchers_intro_title": {
+    "ko": "연구원 소개",
+    "en": "Lab Members Introduction",
+    "de": "Mitarbeitervorstellung",
+    "ja": "研究員紹介",
+    "zh-CN": "研究员介绍"
+  },
+  "researchers_intro_team_section_title": {
+    "ko": "연구팀 구성",
+    "en": "Team Composition",
+    "de": "Teamzusammensetzung",
+    "ja": "研究チーム構成",
+    "zh-CN": "研究团队构成"
+  },
+  "researchers_intro_team_note": {
+    "ko": "(세부 연구원 정보는 추후 업데이트될 예정입니다.)",
+    "en": "(Detailed researcher information will be updated later.)",
+    "de": "(Detaillierte Forscherinformationen werden zu einem späteren Zeitpunkt aktualisiert.)",
+    "ja": "（各研究員の詳細情報は後日更新予定です。）",
+    "zh-CN": "（研究人员的详细信息稍后将更新。）"
+  },
+  "researchers_intro_team_intro": {
+    "ko": "본 연구실은 다음과 같은 세부 연구팀으로 구성되어 운영되고 있으며, 각 팀은 지도교수의 지도 하에 긴밀하게 협력하여 연구 시너지를 창출하고 있습니다:",
+    "en": "Our lab is organized into the following specialized teams, each working closely under the guidance of the PI to create research synergy:",
+    "de": "Unser Labor ist in die folgenden spezialisierten Teams gegliedert, die jeweils unter Leitung des Professors eng zusammenarbeiten, um Forschungssynergien zu schaffen:",
+    "ja": "当研究室は以下の専門研究チームで構成・運営されており、各チームは指導教授の下で密接に協力して研究のシナジーを生み出しています:",
+    "zh-CN": "本实验室由以下专业研究团队组成并运作，每个团队在指导教授的指导下紧密合作，创造研究协同效应："
+  },
+  "researchers_intro_team1": {
+    "ko": "세포 배양 및 공정 개발팀: CHO 세포 및 기타 미생물 세포주 배양 기술, 배지 최적화, 바이오리액터 운전 및 스케일업/다운 등 업스트림 공정 개발 실험을 담당합니다.",
+    "en": "Cell Culture & Process Development Team: Responsible for upstream process development experiments such as CHO cell and other microbial cell line cultivation, media optimization, bioreactor operation, and scale-up/scale-down.",
+    "de": "Team Zellkultur & Prozessentwicklung: Zuständig für Experimente zur Entwicklung von Upstream-Prozessen, z.B. Kultivierung von CHO-Zellen und anderen Mikroorganismen-Zelllinien, Medienoptimierung, Bioreaktorbetrieb sowie Scale-up/Scale-down.",
+    "ja": "細胞培養・プロセス開発チーム: CHO細胞およびその他の微生物細胞株の培養技術、培地最適化、バイオリアクター運転およびスケールアップ/ダウンなど、アップストリームプロセス開発の実験を担当します.",
+    "zh-CN": "细胞培养与工艺开发团队：负责上游工艺开发实验，包括CHO细胞及其他微生物细胞株培养技术、培养基优化、生物反应器操作以及工艺放大/缩小等。"
+  },
+  "researchers_intro_team2": {
+    "ko": "분석 화학 및 품질 관리팀: 세포 대사체 분석(Metabolomics), 단백質 특성 및 품질 분석(Glycosylation, Aggregation 등), 분석법 개발 및 검증(Assay Development & Validation)을 담당합니다.",
+    "en": "Analytical Chemistry & Quality Control Team: Handles cell metabolomics analysis, protein characterization and quality analysis (glycosylation, aggregation, etc.), and assay development & validation.",
+    "de": "Team Analytische Chemie & Qualitätskontrolle: Verantwortlich für Zellmetabolomik-Analysen, Proteincharakterisierung und Qualitätsanalysen (Glykosylierung, Aggregation etc.) sowie Assay-Entwicklung und -Validierung.",
+    "ja": "分析化学・品質管理チーム: 細胞メタボロミクス分析、タンパク質の特性および品質分析（グリコシル化、凝集など）、アッセイ開発および検証を担当します.",
+    "zh-CN": "分析化学与质量控制团队：负责细胞代谢组学分析、蛋白质特性及质量分析（糖基化、聚集等），以及方法开发与验证。"
+  },
+  "researchers_intro_team3": {
+    "ko": "계산 모델링 및 데이터 과학팀: 전산유체역학(CFD) 시뮬레이션, 시스템 대사 모델링(MFA, FBA), 데이터 분석 및 인공지능(AI)/기계학습(ML) 모델 개발을 담당합니다.",
+    "en": "Computational Modeling & Data Science Team: Responsible for CFD simulations, systems metabolic modeling (MFA, FBA), data analysis, and AI/ML model development.",
+    "de": "Team Computermodellierung & Datenwissenschaft: Zuständig für CFD-Simulationen, systemische Metabolismusmodellierung (MFA, FBA), Datenanalyse und die Entwicklung von KI/ML-Modellen.",
+    "ja": "計算モデリング・データサイエンスチーム: CFDシミュレーション、システム代謝モデリング（MFA、FBA）、データ分析、およびAI/MLモデル開発を担当します.",
+    "zh-CN": "计算建模与数据科学团队：负责CFD模拟、系统代谢建模（MFA、FBA）、数据分析以及AI/ML模型开发。"
+  },
+  "researchers_intro_team_conclusion": {
+    "ko": "현재 다양한 배경과 전문성을 가진 박사후 연구원, 석·박사 통합과정 학생, 석사 과정 학생들이 각 팀에 소속되어 열정적으로 연구에 참여하고 있습니다. 저희 연구실은 창의적이고 도전적인 연구 분위기 속에서 차세대 바이오공정리더를 양성하는 것을 목표로 합니다.",
+    "en": "Currently, postdoctoral researchers and graduate students (integrated MS/PhD and MS programs) with diverse backgrounds and expertise are part of each team and actively engaged in research. Our lab aims to foster the next generation of bioprocess leaders in a creative and challenging research environment.",
+    "de": "Derzeit arbeiten Postdoktoranden sowie Doktoranden (inkl. kombinierter Master/Ph.D.-Programme) und Masterstudierende mit unterschiedlichen Hintergründen und Fachkenntnissen in den jeweiligen Teams und beteiligen sich mit großem Engagement an der Forschung. Unser Labor hat das Ziel, in einer kreativen und herausfordernden Forschungsatmosphäre die nächste Generation von Führungskräften im Bioprozessbereich auszubilden.",
+    "ja": "現在、多様なバックグラウンドと専門性を持つポストドクター研究員、博士課程（統合コース）および修士課程の学生が各チームに所属し、熱意を持って研究に参加しています。当研究室は、創造的で挑戦的な研究環境の中で次世代のバイオプロセス分野のリーダーを育成することを目標としています.",
+    "zh-CN": "目前，各团队都有具有多样背景和专业知识的博士后研究员和研究生（硕博连读生和硕士生）热情参与研究工作。我们实验室的目标是在富有创造性和挑战性的研究氛围中培养下一代生物工艺领域的领军人才。"
+  },
+  "researchers_intro_education_section_title": {
+    "ko": "주요 교육 활동 (지도교수 담당)",
+    "en": "Key Educational Activities (Led by PI)",
+    "de": "Wichtige Lehrtätigkeiten (vom PI betreut)",
+    "ja": "主要教育活動（指導教授担当）",
+    "zh-CN": "主要教学活动（由指导教授负责）"
+  },
+  "researchers_intro_education_intro": {
+    "ko": "본 연구실의 지도교수인 홍종광 교수는 학부 및 대학원에서 다음과 같은 바이오공학 핵심 및 심화 전공과목 강의를 담당하며 후학 양성에 힘쓰고 있습니다:",
+    "en": "Professor Jong Kwang Hong, the PI of our lab, teaches the following core and advanced bioengineering courses at the undergraduate and graduate levels, dedicating himself to educating the next generation of students:",
+    "de": "Professor Jong Kwang Hong, der leitende Professor unseres Labors, hält an Bachelor- und Master/Ph.D.-Studiengängen die folgenden Kern- und Vertiefungskurse der Bioverfahrenstechnik und engagiert sich in der Ausbildung des wissenschaftlichen Nachwuchses:",
+    "ja": "当研究室の指導教授である洪鍾光教授は、学部および大学院において以下のバイオ工学の基幹および高度専門科目の講義を担当し、後進の育成に尽力しています:",
+    "zh-CN": "本实验室的指导教授洪钟光教授在本科和研究生阶段讲授以下生物工程核心和高级课程，致力于培养下一代学生:"
+  },
+  "researchers_intro_course_undergrad": {
+    "ko": "<strong>학부 과정:</strong> 생물공학입문, 생물화학공학, 생물분리공학, 바이오공정캡스톤디자인 등",
+    "en": "<strong>Undergraduate:</strong> Introduction to Bioengineering, Biochemical Engineering, Bioseparation Engineering, Bioprocess Capstone Design, etc.",
+    "de": "<strong>Bachelor:</strong> Einführung in die Bioverfahrenstechnik, Biochemisches Ingenieurwesen, Bioseparationstechnik, Bioprozess-Kapstone-Design usw.",
+    "ja": "<strong>学部課程:</strong> 生物工学入門、生物化学工学、生物分離工学、バイオプロセスキャップストーンデザイン など",
+    "zh-CN": "<strong>本科课程:</strong> 生物工程概论、生物化学工程、生物分离工程、生物工艺综合设计等"
+  },
+  "researchers_intro_course_grad": {
+    "ko": "<strong>대학원 과정:</strong> 생물의약품공학 (Biopharmaceutical Engineering), 대사공학 (Metabolic Engineering), 디지털 바이오공정 분석 (Digital Bioprocess Analytics), 고급생물화학공학 등",
+    "en": "<strong>Graduate:</strong> Biopharmaceutical Engineering, Metabolic Engineering, Digital Bioprocess Analytics, Advanced Biochemical Engineering, etc.",
+    "de": "<strong>Master/Ph.D.:</strong> Biopharmazeutische Verfahrenstechnik, Metabolic Engineering, Digitale Bioprozessanalytik, Fortgeschrittene Biochemische Verfahrenstechnik usw.",
+    "ja": "<strong>大学院課程:</strong> 生物医薬品工学、代謝工学、デジタルバイオプロセス解析、 高度生物化学工学 など",
+    "zh-CN": "<strong>研究生课程:</strong> 生物制药工程、代谢工程、数字生物工艺分析、高级生物化学工程等"
+  },
+  "researchers_intro_education_outro": {
+    "ko": "이 외에도 다양한 연구실 세미나, 초청 강연, 워크샵 등을 통해 최신 연구 동향과 기술을 공유하고, 학생들의 연구 역량 강화를 지원하고 있습니다.",
+    "en": "Additionally, through various lab seminars, invited lectures, and workshops, we share the latest research trends and technologies and support the enhancement of our students’ research capabilities.",
+    "de": "Darüber hinaus teilen wir in verschiedenen Laborseminaren, Gastvorträgen und Workshops die neuesten Forschungstrends und -technologien und unterstützen die Stärkung der Forschungskompetenzen unserer Studierenden.",
+    "ja": "この他にも、様々な研究室セミナー、招待講演、ワークショップを通じて最新の研究動向と技術を共有し、学生の研究能力強化を支援しています.",
+    "zh-CN": "此外，我们还通过各种实验室研讨会、特邀讲座和工作坊分享最新的研究趋势和技术，并支持学生科研能力的提升。"
+  },
+  "researchers_intro_back_link": {
+    "ko": "연구실 소개 메인으로 돌아가기",
+    "en": "Back to About Lab main page",
+    "de": "Zurück zur Laborvorstellungs-Startseite",
+    "ja": "研究室紹介メインページに戻る",
+    "zh-CN": "返回实验室介绍主页"
+  },
+  "lab_news_title": {
+    "ko": "연구실 소식 및 공지사항",
+    "en": "Lab News & Announcements",
+    "de": "Labornachrichten & Ankündigungen",
+    "ja": "研究室ニュースおよびお知らせ",
+    "zh-CN": "实验室新闻和公告"
+  },
+  "lab_news_tagline": {
+    "ko": "연구실의 최신 뉴스와 주요 공지사항을 확인하세요.",
+    "en": "Stay updated with the latest lab news and key announcements.",
+    "de": "Bleiben Sie über die neuesten Labornachrichten und wichtigen Ankündigungen informiert.",
+    "ja": "研究室の最新ニュースと主要なお知らせをご確認ください.",
+    "zh-CN": "查看实验室的最新新闻和重要公告。"
+  },
+  "lab_news_announcements_section_title": {
+    "ko": "공지사항",
+    "en": "Announcements",
+    "de": "Ankündigungen",
+    "ja": "告知事項",
+    "zh-CN": "公告"
+  },
+  "lab_news_col_no": {
+    "ko": "번호",
+    "en": "No.",
+    "de": "Nr.",
+    "ja": "番号",
+    "zh-CN": "编号"
+  },
+  "lab_news_col_title": {
+    "ko": "제목",
+    "en": "Title",
+    "de": "Titel",
+    "ja": "タイトル",
+    "zh-CN": "标题"
+  },
+  "lab_news_col_date": {
+    "ko": "공지 날짜",
+    "en": "Date",
+    "de": "Datum",
+    "ja": "日付",
+    "zh-CN": "日期"
+  },
+  "announcement_title_generic": {
+    "ko": "연구실 서버 점검 안내 (2025/09/05)",
+    "en": "Lab Server Maintenance Notice (2025/09/05)",
+    "de": "Wartungsankündigung des Laborservers (05.09.2025)",
+    "ja": "研究室サーバー点検のお知らせ（2025/09/05）",
+    "zh-CN": "实验室服务器维护通知（2025/09/05）"
+  },
+  "announcement_title_2": {
+    "ko": "2025년도 하반기 연구실 안전 교육 안내",
+    "en": "2025 Second Half Lab Safety Training Notice",
+    "de": "Ankündigung: Laborsicherheitsunterweisung für 2025, zweite Jahreshälfte",
+    "ja": "2025年度下半期 研究室安全教育のお知らせ",
+    "zh-CN": "2025年下半年实验室安全培训通知"
+  },
+  "announcement_title_1": {
+    "ko": "학부 연구생 모집 (2025년 후기, 마감: ~8/15)",
+    "en": "Undergraduate Researcher Recruitment (Fall 2025, Deadline: ~8/15)",
+    "de": "Ausschreibung: Studienforschungspraktikum (Herbst 2025, Frist: bis 15.8.)",
+    "ja": "学部研究生募集（2025年後期、締切: ～8/15）",
+    "zh-CN": "本科研究生招募（2025年秋季，截止：～8/15）"
+  },
+  "announcements_view_more": {
+    "ko": "더 많은 공지사항 보기...",
+    "en": "View more announcements...",
+    "de": "Weitere Ankündigungen ansehen...",
+    "ja": "さらに多くのお知らせを見る...",
+    "zh-CN": "查看更多公告..."
+  },
+  "lab_news_news_section_title": {
+    "ko": "연구실 소식",
+    "en": "Lab News",
+    "de": "Labornachrichten",
+    "ja": "研究室ニュース",
+    "zh-CN": "实验室新闻"
+  },
+  "lab_news_col_date_posted": {
+    "ko": "작성 날짜",
+    "en": "Date",
+    "de": "Datum",
+    "ja": "日付",
+    "zh-CN": "日期"
+  },
+  "lab_news_title_3": {
+    "ko": "홍종광 교수님, XXX 학회 우수 연구자상 수상",
+    "en": "Prof. Jong Kwang Hong Receives Outstanding Researcher Award at XXX Conference",
+    "de": "Prof. Jong Kwang Hong erhält Auszeichnung als herausragender Forscher auf der XXX-Konferenz",
+    "ja": "洪鍾光教授がXXX学会で優秀研究者賞を受賞",
+    "zh-CN": "洪钟光教授荣获XXX学会优秀研究者奖"
+  },
+  "lab_news_title_2": {
+    "ko": "학부 연구생 이지혜, 국제 학회 (ISBioTech 2025) 발표",
+    "en": "Undergraduate Researcher Lee Ji-hye Presents at International Conference (ISBioTech 2025)",
+    "de": "Undergraduate-Forscherin Lee Ji-hye präsentiert auf internationaler Konferenz (ISBioTech 2025)",
+    "ja": "学部研究生イ・ジヘさん、国際学会（ISBioTech 2025）で発表",
+    "zh-CN": "本科研究生李智慧在国际学会（ISBioTech 2025）作报告"
+  },
+  "lab_news_title_1": {
+    "ko": "2025년도 한국생물공학회 춘계학술대회 우수논문발표상 수상 (김연구 학생)",
+    "en": "Yeon-gu Kim (Undergrad) Wins Best Paper Presentation Award at 2025 KSBB Spring Meeting",
+    "de": "Yeon-gu Kim (Student) erhält Preis für beste Posterpräsentation auf der Frühjahrstagung 2025 der Koreanischen Gesellschaft für Biotechnologie",
+    "ja": "2025年度韓国生物工学会春季学術大会にて優秀論文発表賞を受賞（キム・ヨングさん）",
+    "zh-CN": "金研求同学荣获2025年韩国生物工学会春季年会优秀论文发表奖"
+  },
+  "news_view_more": {
+    "ko": "더 많은 연구실 소식 보기...",
+    "en": "View more lab news...",
+    "de": "Weitere Labornachrichten ansehen...",
+    "ja": "さらに多くの研究室ニュースを見る...",
+    "zh-CN": "查看更多实验室新闻..."
+  },
+  "lab_news_back_link": {
+    "ko": "연구실 소개 메인으로 돌아가기",
+    "en": "Back to About Lab main page",
+    "de": "Zurück zur Laborvorstellungs-Startseite",
+    "ja": "研究室紹介メインページに戻る",
+    "zh-CN": "返回实验室介绍主页"
+  },
+  "facilities_title": {
+    "ko": "실험실 시설 및 장비",
+    "en": "Lab Facilities & Equipment",
+    "de": "Laboreinrichtungen & Geräte",
+    "ja": "実験室の設備および装置",
+    "zh-CN": "实验室设施及设备"
+  },
+  "facilities_intro": {
+    "ko": "저희 연구실은 최첨단 바이오공정 연구 수행을 위한 다양한 핵심 시설과 정밀 장비를 갖추고 있습니다. 이를 통해 세포 배양, 공정 개발, 데이터 분석, 모델링 등 광범위한 연구 활동을 지원합니다.",
+    "en": "Our lab is equipped with a variety of core facilities and precision instruments for cutting-edge bioprocess research. These resources support a wide range of research activities including cell culture, process development, data analysis, and modeling.",
+    "de": "Unser Labor verfügt über eine Vielzahl an zentralen Einrichtungen und Präzisionsgeräten für die Durchführung modernster Bioprozessforschung. Damit unterstützen wir ein breites Spektrum von Forschungsaktivitäten wie Zellkultur, Prozessentwicklung, Datenanalyse und Modellierung.",
+    "ja": "当研究室は、最先端のバイオプロセス研究を遂行するための多様な主要施設と精密機器を備えています。これにより、細胞培養、プロセス開発、データ分析、モデリングなど幅広い研究活動を支援しています.",
+    "zh-CN": "我们实验室配备了多种关键设施和精密设备，以开展尖端的生物工艺研究。这些资源支持细胞培养、工艺开发、数据分析和建模等广泛的研究活动。"
+  },
+  "facilities_category_cell_culture": {
+    "ko": "세포 배양 시설",
+    "en": "Cell Culture Facilities",
+    "de": "Zellkulturanlagen",
+    "ja": "細胞培養施設",
+    "zh-CN": "细胞培养设施"
+  },
+  "facilities_cell_item1": {
+    "ko": "다양한 규모의 바이오리액터 (교반 탱크형, 파동형, 일회용 등)",
+    "en": "Bioreactors of various scales (stirred-tank, wave, single-use, etc.)",
+    "de": "Bioreaktoren verschiedener Größen (Rührkessel, Wave, Single-Use etc.)",
+    "ja": "様々な規模のバイオリアクター（撹拌タンク型、Wave型、シングルユースなど）",
+    "zh-CN": "各种规模的生物反应器（搅拌罐型、波浪型、一次性等）"
+  },
+  "facilities_cell_item2": {
+    "ko": "CO2 인큐베이터, 쉐이킹 인큐베이터",
+    "en": "CO2 incubators, shaking incubators",
+    "de": "CO2-Inkubatoren, Schüttelinkubatoren",
+    "ja": "CO2インキュベーター、シェーキングインキュベーター",
+    "zh-CN": "CO2培养箱、摇床培养箱"
+  },
+  "facilities_cell_item3": {
+    "ko": "생물안전작업대 (BSC), 클린벤치",
+    "en": "Biological safety cabinets (BSC), clean benches",
+    "de": "Biologische Sicherheitswerkbänke (BSC), Reinraum-Werkbänke",
+    "ja": "バイオ安全キャビネット（BSC）、クリーンベンチ",
+    "zh-CN": "生物安全柜（BSC）、超净工作台"
+  },
+  "facilities_cell_item4": {
+    "ko": "세포 계수기 (Automated Cell Counter) 및 현미경 시스템",
+    "en": "Automated cell counters and microscope systems",
+    "de": "Automatische Zellzähler und Mikroskopsysteme",
+    "ja": "自動細胞カウンターおよび顕微鏡システム",
+    "zh-CN": "自动细胞计数仪及显微镜系统"
+  },
+  "facilities_category_analysis": {
+    "ko": "분석 장비",
+    "en": "Analytical Instruments",
+    "de": "Analytische Geräte",
+    "ja": "分析装置",
+    "zh-CN": "分析设备"
+  },
+  "facilities_analysis_item1": {
+    "ko": "고성능 액체 크로마토그래피 (HPLC) 시스템",
+    "en": "High-performance liquid chromatography (HPLC) system",
+    "de": "Hochleistungsflüssigkeitschromatographie (HPLC) System",
+    "ja": "高速液体クロマトグラフィー（HPLC）システム",
+    "zh-CN": "高效液相色谱（HPLC）系统"
+  },
+  "facilities_analysis_item2": {
+    "ko": "가스 크로마토그래피-질량 분석기 (GC-MS)",
+    "en": "Gas chromatography-mass spectrometer (GC-MS)",
+    "de": "Gaschromatographie-Massenspektrometer (GC-MS)",
+    "ja": "ガスクロマトグラフィー-質量分析計（GC-MS）",
+    "zh-CN": "气相色谱-质谱联用仪（GC-MS）"
+  },
+  "facilities_analysis_item3": {
+    "ko": "유세포 분석기 (Flow Cytometer)",
+    "en": "Flow cytometer",
+    "de": "Durchflusszytometer",
+    "ja": "フローサイトメーター",
+    "zh-CN": "流式细胞仪"
+  },
+  "facilities_analysis_item4": {
+    "ko": "다기능 마이크로플레이트 리더 (흡광, 형광, 발광 측정)",
+    "en": "Multimode microplate reader (absorbance, fluorescence, luminescence)",
+    "de": "Multifunktions-Mikroplattenleser (Absorption, Fluoreszenz, Lumineszenz)",
+    "ja": "多機能マイクロプレートリーダー（吸光、蛍光、発光測定）",
+    "zh-CN": "多功能微孔板读数仪（吸光、荧光、发光）"
+  },
+  "facilities_analysis_item5": {
+    "ko": "단백질 및 핵산 정량 분석 장비 (NanoDrop, Qubit)",
+    "en": "Protein and nucleic acid quantification instruments (NanoDrop, Qubit)",
+    "de": "Geräte zur Protein- und Nukleinsäure-Quantifizierung (NanoDrop, Qubit)",
+    "ja": "タンパク質および核酸定量分析装置（NanoDrop、Qubit）",
+    "zh-CN": "蛋白质及核酸定量分析设备（NanoDrop、Qubit）"
+  },
+  "facilities_analysis_item6": {
+    "ko": "실시간 PCR (RT-PCR) 시스템",
+    "en": "Real-time PCR (RT-PCR) system",
+    "de": "Echtzeit-PCR (RT-PCR) System",
+    "ja": "リアルタイムPCR（RT-PCR）システム",
+    "zh-CN": "实时PCR（RT-PCR）系统"
+  },
+  "facilities_category_computing": {
+    "ko": "계산 및 데이터 분석 인프라",
+    "en": "Computing & Data Analysis Infrastructure",
+    "de": "Rechen- & Datenanalyse-Infrastruktur",
+    "ja": "計算およびデータ解析基盤",
+    "zh-CN": "计算与数据分析基础设施"
+  },
+  "facilities_computing_item1": {
+    "ko": "고성능 워크스테이션 (CFD 시뮬레이션, AI 모델링용)",
+    "en": "High-performance workstations (for CFD simulations, AI modeling)",
+    "de": "Hochleistungs-Workstations (für CFD-Simulationen, KI-Modellierung)",
+    "ja": "高性能ワークステーション（CFDシミュレーション、AIモデリング用）",
+    "zh-CN": "高性能工作站（用于CFD模拟、AI建模）"
+  },
+  "facilities_computing_item2": {
+    "ko": "데이터 분석 및 시각화 소프트웨어 (MATLAB, Python, R 등)",
+    "en": "Data analysis & visualization software (MATLAB, Python, R, etc.)",
+    "de": "Datenanalyse- und Visualisierungssoftware (MATLAB, Python, R usw.)",
+    "ja": "データ解析・可視化ソフトウェア（MATLAB、Python、Rなど）",
+    "zh-CN": "数据分析与可视化软件（MATLAB、Python、R等）"
+  },
+  "facilities_computing_item3": {
+    "ko": "연구 데이터 관리 시스템 및 서버 접근",
+    "en": "Research data management systems and server access",
+    "de": "Forschungsdaten-Managementsysteme und Serverzugang",
+    "ja": "研究データ管理システムおよびサーバーアクセス",
+    "zh-CN": "研究数据管理系统及服务器访问"
+  },
+  "facilities_category_other": {
+    "ko": "기타 지원 장비",
+    "en": "Other Support Equipment",
+    "de": "Weitere unterstützende Geräte",
+    "ja": "その他支援機器",
+    "zh-CN": "其他辅助设备"
+  },
+  "facilities_other_item1": {
+    "ko": "초고속 원심분리기, 저온 냉장/냉동고",
+    "en": "Ultracentrifuges, low-temperature refrigerators/freezers",
+    "de": "Ultrazentrifugen, Kühl- und Gefrierschränke",
+    "ja": "超高速遠心機、低温冷蔵・冷凍庫",
+    "zh-CN": "超高速离心机、低温冰箱/冰柜"
+  },
+  "facilities_other_item2": {
+    "ko": "멸균기 (Autoclave), 초순수 제조 장치",
+    "en": "Autoclaves, ultrapure water systems",
+    "de": "Autoklaven, Reinstwassersysteme",
+    "ja": "オートクレーブ（高圧蒸気滅菌器）、超純水製造装置",
+    "zh-CN": "高压灭菌器、超纯水系统"
+  },
+  "facilities_other_item3": {
+    "ko": "정밀 저울, pH 미터, 교반기 등 기본 실험 장비",
+    "en": "Precision balances, pH meters, stirrers, and other basic lab equipment",
+    "de": "Präzisionswaagen, pH-Meter, Rührer und andere grundlegende Laborgeräte",
+    "ja": "精密天秤、pHメーター、撹拌器などの基本的な実験装置",
+    "zh-CN": "精密天平、pH计、搅拌器等基本实验设备"
+  },
+  "facilities_note_photos": {
+    "ko": "실제 장비 사진 및 상세 스펙은 준비 중이며, 곧 업데이트될 예정입니다.",
+    "en": "Actual equipment photos and detailed specifications are being prepared and will be updated soon.",
+    "de": "Fotos der Geräte und detaillierte Spezifikationen sind in Vorbereitung und werden in Kürze aktualisiert.",
+    "ja": "実際の設備写真および詳細スペックは現在準備中で、近日中に更新予定です.",
+    "zh-CN": "实际设备照片及详细规格正在准备中，近期将更新。"
+  },
+  "facilities_back_link": {
+    "ko": "연구실 소개 메인으로 돌아가기",
+    "en": "Back to About Lab main page",
+    "de": "Zurück zur Laborvorstellungs-Startseite",
+    "ja": "研究室紹介メインページに戻る",
+    "zh-CN": "返回实验室介绍主页"
+  },
+  "partners_title": {
+    "ko": "협력기관 및 파트너",
+    "en": "Collaborations & Partners",
+    "de": "Kooperationen & Partner",
+    "ja": "協力機関およびパートナー",
+    "zh-CN": "合作机构及合作伙伴"
+  },
+  "partners_intro": {
+    "ko": "본 연구실은 국내외 유수 대학, 연구기관, 산업체와 긴밀한 협력 관계를 구축하여 혁신적인 연구를 수행하고, 그 성과를 확산시키고자 노력하고 있습니다. 공동 연구, 기술 이전, 인력 교류 등 다양한 형태의 파트너십을 통해 시너지를 창출하고 있습니다. 주요 협력 프로그램 및 기관은 다음과 같습니다:",
+    "en": "Our lab has established close collaborative relationships with leading universities, research institutes, and industry both in Korea and abroad to conduct innovative research and disseminate its outcomes. Through various partnerships such as joint research, technology transfer, and talent exchange, we create synergy. The main collaborative programs and institutions include:",
+    "de": "Unser Labor hat enge Kooperationsbeziehungen zu führenden in- und ausländischen Universitäten, Forschungseinrichtungen und Industrieunternehmen aufgebaut, um innovative Forschung durchzuführen und deren Ergebnisse zu verbreiten. Durch verschiedene Partnerschaften wie gemeinsame Forschung, Technologietransfer und Personalaustausch schaffen wir Synergien. Die wichtigsten Kooperationsprogramme und -institutionen sind:",
+    "ja": "当研究室は、国内外の有数の大学、研究機関、企業と緊密な協力関係を構築し、革新的な研究を遂行するとともに、その成果の普及に努めています。共同研究、技術移転、人材交流など様々な形態のパートナーシップを通じてシナジーを創出しています。主要な協力プログラムおよび機関は以下の通りです:",
+    "zh-CN": "本实验室与国内外知名大学、研究机构和企业建立了紧密的合作关系，以开展创新研究并传播其成果。通过联合研究、技术转让、人才交流等多种形式的伙伴关系，我们创造协同效应。主要的合作项目和机构包括："
+  },
+  "partners_item1_title": {
+    "ko": "BK21 Four 바이오공정 혁신인력양성단 (연세대학교)",
+    "en": "BK21 Four Bioprocess Innovation Talent Development Group (Yonsei University)",
+    "de": "BK21 Four-Ausbildungsgruppe für Bioprozess-Innovation (Yonsei-Universität)",
+    "ja": "BK21 Four バイオプロセス革新人材養成団（延世大学）",
+    "zh-CN": "BK21四期生物工艺创新人才培养团（延世大学）"
+  },
+  "partners_item1_desc": {
+    "ko": "본 연구실은 4단계 BK21 사업의 '바이오공정 혁신인력양성단'에 참여하여, 데이터 기반 바이오의약품 대량생산 공정 연구 및 차세대 전문 인력 양성에 힘쓰고 있습니다. 교육연구단 내 타 연구실들과의 공동 연구 및 학술 교류를 통해 융합 연구를 촉진하고 있습니다.",
+    "en": "Our lab participates in the Phase 4 BK21 program 'Bioprocess Innovation Talent Development Group', dedicating efforts to data-driven biopharmaceutical mass production process research and training high-level professionals. Through joint research and academic exchange with other labs in this educational research group, we promote integrative research.",
+    "de": "Unser Labor nimmt an der Phase-4-BK21-Initiative \"Ausbildungsgruppe für Bioprozess-Innovation\" teil und widmet sich der datenbasierten Erforschung von großtechnischen biopharmazeutischen Produktionsprozessen sowie der Ausbildung hochqualifizierter Fachkräfte. Durch gemeinsame Forschung und wissenschaftlichen Austausch mit anderen Laboren in dieser Bildungs- und Forschungsgruppe fördern wir integrative Forschung.",
+    "ja": "当研究室は、第4段階BK21事業\"バイオプロセス革新人材養成団\"に参加し、データ駆動型のバイオ医薬品大量生産プロセス研究と次世代高度専門人材の育成に取り組んでいます。教育研究団内の他の研究室との共同研究や学術交流を通じて、融合研究を促進しています.",
+    "zh-CN": "本实验室参与了第四阶段BK21项目\"生物工艺创新人才培养团\"，致力于数据驱动的生物药大规模生产工艺研究和高层次专业人才培养。通过与该教育研究团内其他实验室的联合研究和学术交流，我们促进融合研究。"
+  },
+  "partners_item2_title": {
+    "ko": "K-NIBRT (Global NIBRT Korea)",
+    "en": "K-NIBRT (Global NIBRT Korea)",
+    "de": "K-NIBRT (Global NIBRT Korea)",
+    "ja": "K-NIBRT（Global NIBRT Korea）",
+    "zh-CN": "K-NIBRT（韩国国家生物工艺研究培训中心）"
+  },
+  "partners_item2_desc": {
+    "ko": "아일랜드 국립 바이오공정 연구 교육기관(NIBRT)의 교육 시스템을 국내에 도입한 K-NIBRT 프로그램에 겸임교수로서 참여하고 있습니다. 이를 통해 cGMP 수준의 바이오의약품 제조 실습 교육을 제공하고, 기업-학계 간 협력형 인력 양성 프로그램 운영에 기여하고 있습니다. K-NIBRT와의 협력을 통해 산업 현장의 요구를 반영한 실질적인 연구 및 교육을 진행합니다.",
+    "en": "Our PI serves as an adjunct professor in the K-NIBRT program, which brings Ireland’s NIBRT bioprocess training system to Korea. Through this, we provide hands-on cGMP-level biopharmaceutical manufacturing training and contribute to operating an industry-academia collaborative training program. In collaboration with K-NIBRT, we conduct practical research and education that reflect industry needs.",
+    "de": "Unser Professor ist als Adjunct Professor am K-NIBRT-Programm beteiligt, das das irische NIBRT-Bioprozess-Ausbildungssystem nach Korea bringt. Dadurch bieten wir praxisnahe Schulungen zur biopharmazeutischen Produktion auf cGMP-Niveau an und tragen zum Betrieb eines kooperativen Industrie-Hochschul-Ausbildungsprogramms bei. In Zusammenarbeit mit K-NIBRT führen wir praxisorientierte Forschung und Ausbildung durch, die die Anforderungen der Industrie berücksichtigen.",
+    "ja": "当研究室の教授は、アイルランド国立バイオプロセス研究教育機関（NIBRT）の教育システムを国内に導入したK-NIBRTプログラムに兼任教授として参加しています。これにより、cGMPレベルのバイオ医薬品製造実習教育を提供し、産学連携の人材育成プログラムの運営に貢献しています。K-NIBRTとの協力を通じ、産業現場のニーズを反映した実質的な研究および教育を進めています.",
+    "zh-CN": "我们的教授以兼任教授身份参与了K-NIBRT项目，该项目将爱尔兰国家生物工艺研究培训机构（NIBRT）的教育体系引入韩国。通过这一项目，我们提供符合cGMP标准的生物药生产实践培训，并帮助运营产学合作的人才培养项目。与K-NIBRT的合作使我们开展反映产业需求的实质性研究和教学。"
+  },
+  "partners_item3_title": {
+    "ko": "국내외 연구기관 및 산업체",
+    "en": "Domestic & International Research Institutes and Companies",
+    "de": "In- und ausländische Forschungseinrichtungen und Unternehmen",
+    "ja": "国内外の研究機関および企業",
+    "zh-CN": "国内外研究机构及企业"
+  },
+  "partners_item3_desc": {
+    "ko": "본 연구실은 다수의 국내 주요 제약회사, 바이오벤처 기업, 그리고 정부출연연구기관과 특정 기술 개발을 목표로 하는 공동 연구 과제를 수행하고 있습니다. 또한, 싱가포르 A*STAR BTI (Bioprocessing Technology Institute) 등 해외 유수 연구기관과도 지속적인 연구 교류 및 협력 관계를 유지하고 있습니다.",
+    "en": "Our lab is engaged in numerous joint research projects with major domestic pharmaceutical companies, biotech ventures, and government research institutes targeting specific technology development. We also maintain ongoing research exchange and collaborations with leading overseas research institutions such as A*STAR BTI in Singapore.",
+    "de": "Unser Labor führt zahlreiche gemeinsame Forschungsprojekte mit großen einheimischen Pharmaunternehmen, Biotech-Startups und staatlichen Forschungsinstituten durch, die auf die Entwicklung bestimmter Technologien abzielen. Außerdem pflegen wir fortlaufenden Forschungsaustausch und Kooperationen mit führenden ausländischen Forschungsinstituten wie dem A*STAR BTI in Singapur.",
+    "ja": "当研究室は、国内の主要製薬会社、バイオベンチャー企業、および政府系研究所と、特定の技術開発を目的とした多数の共同研究課題を遂行しています。また、シンガポールのA*STAR BTI（Bioprocessing Technology Institute）など海外の有数の研究機関とも継続的な研究交流と協力関係を維持しています.",
+    "zh-CN": "本实验室与国内多家主要制药企业、生物技术创业公司及政府所属研究机构开展了针对特定技术开发的多项联合研究项目。此外，我们还与新加坡A*STAR BTI（生物工艺技术研究所）等海外知名研究机构保持着持续的研究交流与合作。"
+  },
+  "partners_item3_note": {
+    "ko": "(개별 기업 및 기관명은 정보보호 협약에 따라 명시하지 않을 수 있습니다.)",
+    "en": "(Individual company and institution names may not be specified due to confidentiality agreements.)",
+    "de": "(Aufgrund von Geheimhaltungsvereinbarungen können einzelne Unternehmens- und Institutsnamen ungenannt bleiben.)",
+    "ja": "（個別の企業名および機関名は情報保護協定により明記しない場合があります。）",
+    "zh-CN": "（根据保密协议，个别企业和机构名称可能不会明示。）"
+  },
+  "partners_conclusion": {
+    "ko": "저희 연구실은 열린 마음으로 새로운 협력 기회를 모색하고 있으며, 공동 연구 및 기술 개발에 관심 있는 기관 및 기업의 연락을 언제나 환영합니다.",
+    "en": "Our lab remains open to new collaboration opportunities and always welcomes inquiries from institutions and companies interested in joint research and technology development.",
+    "de": "Unser Labor ist neuen Kooperationsmöglichkeiten gegenüber aufgeschlossen und heißt Anfragen von Institutionen und Unternehmen, die an gemeinsamer Forschung und Technologieentwicklung interessiert sind, jederzeit willkommen.",
+    "ja": "当研究室は常に新たな協力の機会に対して開かれており、共同研究や技術開発に関心のある機関や企業からのご連絡をいつでも歓迎します.",
+    "zh-CN": "我们实验室以开放的态度寻求新的合作机会，并随时欢迎对联合研究和技术开发感兴趣的机构和企业与我们联系。"
+  },
+  "partners_back_link": {
+    "ko": "연구실 소개 메인으로 돌아가기",
+    "en": "Back to About Lab main page",
+    "de": "Zurück zur Laborvorstellungs-Startseite",
+    "ja": "研究室紹介メインページに戻る",
+    "zh-CN": "返回实验室介绍主页"
+  },
+  "gallery_title": {
+    "ko": "사진 갤러리",
+    "en": "Photo Gallery",
+    "de": "Fotogalerie",
+    "ja": "写真ギャラリー",
+    "zh-CN": "照片库"
+  },
+  "gallery_note_preparation": {
+    "ko": "본 페이지는 현재 준비 중입니다. 곧 업데이트될 예정입니다.",
+    "en": "This page is currently under preparation and will be updated soon.",
+    "de": "Diese Seite befindet sich derzeit im Aufbau und wird in Kürze aktualisiert.",
+    "ja": "本ページは現在準備中です。近日中に更新予定です.",
+    "zh-CN": "本页面目前正在筹备中，即将更新。"
+  },
+  "gallery_intro": {
+    "ko": "연구실 활동, 학회 참석 및 발표, 워크샵, 실험실 생활, 멤버들의 다양한 모습을 담은 사진들이 곧 업데이트될 예정입니다. 저희 연구실의 생생한 모습을 기대해주세요!",
+    "en": "Photos capturing various aspects of our lab—research activities, conference attendance and presentations, workshops, daily lab life, and fun moments with members—will be updated soon. Please look forward to vivid glimpses of our lab!",
+    "de": "Fotos, die verschiedene Aspekte unseres Labors einfangen – Forschungsaktivitäten, Konferenzteilnahmen und -präsentationen, Workshops, das Laborleben und fröhliche Momente mit dem Team – werden in Kürze veröffentlicht. Freuen Sie sich auf lebendige Einblicke in unser Labor!",
+    "ja": "研究室の活動、学会出席・発表、ワークショップ、日々の研究室生活、メンバーたちの楽しい瞬間など、当研究室の多彩な様子を収めた写真がまもなく更新される予定です。私たちの研究室の生き生きとした姿にご期待ください!",
+    "zh-CN": "展示我们实验室各方面的照片——科研活动、会议出席与报告、研讨会、实验室日常，以及成员们的欢乐瞬间——将很快更新。敬请期待我们实验室生动的瞬间！"
+  },
+  "gallery_categories_intro": {
+    "ko": "갤러리에는 다음과 같은 카테고리의 사진들이 포함될 예정입니다:",
+    "en": "The gallery will include photos in categories such as:",
+    "de": "Die Galerie wird Fotos in folgenden Kategorien enthalten:",
+    "ja": "ギャラリーには次のようなカテゴリーの写真が含まれる予定です:",
+    "zh-CN": "图库将包括以下类别的照片："
+  },
+  "gallery_category_research": {
+    "ko": "연구 활동 (실험 모습, 장비 활용 등)",
+    "en": "Research Activities (lab work, use of equipment, etc.)",
+    "de": "Forschungsaktivitäten (Laborarbeit, Gerätegebrauch etc.)",
+    "ja": "研究活動（実験の様子、機器の使用状況など）",
+    "zh-CN": "研究活动（实验场景、设备使用等）"
+  },
+  "gallery_category_academic": {
+    "ko": "학술 활동 (국내외 학회 발표, 세미나, 포스터 세션 등)",
+    "en": "Academic Activities (conference presentations, seminars, poster sessions, etc.)",
+    "de": "Akademische Aktivitäten (Konferenzpräsentationen, Seminare, Postersessions etc.)",
+    "ja": "学術活動（国内外学会での発表、セミナー、ポスターセッションなど）",
+    "zh-CN": "学术活动（国内外会议报告、研讨会、海报展示等）"
+  },
+  "gallery_category_events": {
+    "ko": "연구실 행사 (워크샵, MT, 송년회 등)",
+    "en": "Lab Events (workshops, retreats, year-end parties, etc.)",
+    "de": "Laborveranstaltungen (Workshops, Exkursionen, Jahresabschlussfeiern etc.)",
+    "ja": "研究室行事（ワークショップ、MT、忘年会など）",
+    "zh-CN": "实验室活动（研讨会、集体出游、年会等）"
+  },
+  "gallery_category_members": {
+    "ko": "연구실 멤버들 (단체 사진, 개인 프로필 등)",
+    "en": "Lab Members (group photos, individual profiles, etc.)",
+    "de": "Labor Team (Gruppenfotos, Einzelprofile etc.)",
+    "ja": "研究室メンバー（集合写真、個人プロフィールなど）",
+    "zh-CN": "实验室成员（集体照、个人照片等）"
+  },
+  "gallery_category_equipment": {
+    "ko": "실험 장비 및 시설",
+    "en": "Lab Equipment and Facilities",
+    "de": "Laborgeräte und Einrichtungen",
+    "ja": "実験機器および施設",
+    "zh-CN": "实验设备和设施"
+  },
+  "gallery_back_link": {
+    "ko": "연구실 소개 메인으로 돌아가기",
+    "en": "Back to About Lab main page",
+    "de": "Zurück zur Laborvorstellungs-Startseite",
+    "ja": "研究室紹介メインページに戻る",
+    "zh-CN": "返回实验室介绍主页"
+  },
+  "footer_copyright": {
+    "ko": "© 2025 생물공학연구실 (Bioprocess Engineering Laboratory), 연세대학교 미래캠퍼스.",
+    "en": "© 2025 Bioprocess Engineering Laboratory (생물공학연구실), Yonsei University Mirae Campus.",
+    "de": "© 2025 Bioprocess Engineering Laboratory (생물공학연구실), Mirae Campus der Yonsei-Universität.",
+    "ja": "© 2025 生物工学研究室 (Bioprocess Engineering Laboratory), 延世大学ミレキャンパス.",
+    "zh-CN": "© 2025 生物工艺工程实验室 (Bioprocess Engineering Laboratory)，延世大学未来校区。"
+  },
+  "footer_address": {
+    "ko": "강원특별자치도 원주시 흥업면 연세대길 1, 미래관 306호 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "en": "Gangwon Special Self-Governing Province, Wonju, Heungup-myeon, 1 Yonseidae-gil, Mirae Hall 306 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "de": "Gangwon Sonderverwaltungsprovinz, Wonju, Heungup-myeon, Yonseidae-gil 1, Mirae-Gebäude Raum 306 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "ja": "江原特別自治道 原州市 興業面 延世大キル1、ミレ館306号 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr",
+    "zh-CN": "江原特别自治道原州市兴业面延世大路1号，未来馆306室 | ☎ 033-760-2279 | ✉ jongkwang.hong@yonsei.ac.kr"
+  },
+  "footer_links": {
+    "ko": "연세대학교 | 미래캠퍼스 | 생명과학기술학부",
+    "en": "Yonsei University | Mirae Campus | Dept. of Biological Science & Technology",
+    "de": "Yonsei-Universität | Mirae Campus | Fachbereich Biowissenschaft & Technologie",
+    "ja": "延世大学 | 未来キャンパス | 生命科学技術学部",
+    "zh-CN": "延世大学 | 未来校区 | 生物科学技术学部"
+  },
+  "footer_disclaimer": {
+    "ko": "본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.",
+    "en": "This website was created for educational and research purposes.",
+    "de": "Diese Website wurde zu Bildungs- und Forschungszwecken erstellt.",
+    "ja": "本ウェブサイトは教育および研究目的で作成されました.",
+    "zh-CN": "本网站为教育和研究目的而制作。"
   }
+}
