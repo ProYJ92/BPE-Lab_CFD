@@ -1371,5 +1371,418 @@
     "de": "Diese Website wurde zu Bildungs- und Forschungszwecken erstellt.",
     "ja": "本ウェブサイトは教育および研究目的で作成されました.",
     "zh-CN": "本网站为教育和研究目的而制作。"
+  },
+  "assistant_prompt": {
+    "ko": "뭐든 물어봐!",
+    "en": "Ask me anything!",
+    "de": "Frag mich alles!",
+    "ja": "何でも聞いてね！",
+    "zh-CN": "尽管提问！"
+  },
+  "assistant_open_label": {
+    "ko": "도우미 열기",
+    "en": "Open helper",
+    "de": "Hilfe öffnen",
+    "ja": "ヘルプを開く",
+    "zh-CN": "打开助手"
+  },
+  "search_results": {
+    "ko": "검색 결과",
+    "en": "Search Results",
+    "de": "Suchergebnisse",
+    "ja": "検索結果",
+    "zh-CN": "搜索结果"
+  },
+  "home": {
+    "ko": "홈",
+    "en": "Home",
+    "de": "Startseite",
+    "ja": "ホーム",
+    "zh-CN": "首页"
+  },
+  "website_purpose": {
+    "ko": "본 웹사이트는 교육 및 연구 목적으로 제작되었습니다.",
+    "en": "This website was created for educational and research purposes.",
+    "de": "Diese Website wurde zu Bildungs- und Forschungszwecken erstellt.",
+    "ja": "本ウェブサイトは教育および研究を目的として作成されました。",
+    "zh-CN": "本网站的建立旨在教育和研究目的。"
+  },
+  "bp_eng_main_title": {
+    "ko": "생물공정공학 (Bioprocess Engineering)",
+    "en": "Bioprocess Engineering",
+    "de": "Bioverfahrenstechnik",
+    "ja": "生物プロセス工学",
+    "zh-CN": "生物工艺工程"
+  },
+  "bp_eng_main_subtitle": {
+    "ko": "Bioprocess Engineering",
+    "en": "Bioprocess Engineering",
+    "de": "Bioverfahrenstechnik",
+    "ja": "生物プロセス工学",
+    "zh-CN": "生物工艺工程"
+  },
+  "bp_eng_main_desc": {
+    "ko": "생물공정공학은 바이오의약품 생산을 위한 핵심 기반 기술로, 업스트림부터 다운스트림까지 여러 단계의 공정을 포함합니다. 아래 항목을 통해 각 세부 분야의 내용을 살펴보세요.",
+    "en": "Bioprocess engineering is a core enabling technology for biopharmaceutical production, encompassing multiple stages of processing from upstream to downstream. Please explore each of the items below to learn more about each subfield.",
+    "de": "Die Bioverfahrenstechnik ist eine Schlüsseltechnologie für die Herstellung von Biopharmazeutika und umfasst mehrere Prozessstufen vom Upstream- bis zum Downstream-Bereich. Bitte nutzen Sie die folgenden Punkte, um die Inhalte der einzelnen Teilbereiche näher zu erkunden.",
+    "ja": "生物プロセス工学はバイオ医薬品生産のための重要な基盤技術であり、上流から下流に至る複数段階のプロセスを包含しています。下記の項目をご覧いただくと、各細分野の内容を詳しく知ることができます。",
+    "zh-CN": "生物工艺工程是生物制药生产的一项核心基础技术，涵盖了从上游到下游的多个工艺阶段。请通过下面的各项来了解各细分领域的内容。"
+  },
+  "bp_eng_main_intro_title": {
+    "ko": "소개",
+    "en": "Introduction",
+    "de": "Einführung",
+    "ja": "紹介",
+    "zh-CN": "介绍"
+  },
+  "bp_eng_main_intro_desc": {
+    "ko": "생물공정공학의 기본 개념과 역할을 소개합니다.",
+    "en": "Introduces the fundamental concept and role of bioprocess engineering.",
+    "de": "Stellt die grundlegenden Konzepte und die Rolle der Bioverfahrenstechnik vor.",
+    "ja": "生物プロセス工学の基本的な概念と役割を紹介します。",
+    "zh-CN": "介绍生物工艺工程的基本概念和作用。"
+  },
+  "bp_eng_main_upstream_title": {
+    "ko": "업스트림 공정",
+    "en": "Upstream Processing",
+    "de": "Upstream-Prozess",
+    "ja": "アップストリーム工程",
+    "zh-CN": "上游工艺"
+  },
+  "bp_eng_main_upstream_desc": {
+    "ko": "세포주 개발과 배양 조건 최적화 등 초기 공정을 다룹니다.",
+    "en": "Covers early-stage processes such as cell line development and optimization of culture conditions.",
+    "de": "Behandelt frühe Prozessschritte wie Zelllinienentwicklung und Optimierung von Kulturbedingungen.",
+    "ja": "細胞株の開発や培養条件の最適化など、初期段階のプロセスを扱います。",
+    "zh-CN": "涵盖细胞株开发和培养条件优化等早期工艺过程。"
+  },
+  "bp_eng_main_animal_title": {
+    "ko": "동물 세포 배양",
+    "en": "Animal Cell Culture",
+    "de": "Tierzellkultur",
+    "ja": "動物細胞培養",
+    "zh-CN": "动物细胞培养"
+  },
+  "bp_eng_main_animal_desc": {
+    "ko": "CHO, HEK293 등 주요 세포주의 배양 기술을 살펴봅니다.",
+    "en": "Examines the cultivation techniques of major cell lines such as CHO and HEK293.",
+    "de": "Beleuchtet die Kultivierungstechniken wichtiger Zelllinien wie CHO und HEK293.",
+    "ja": "CHO細胞やHEK293細胞など、主要な細胞株の培養技術を紹介します。",
+    "zh-CN": "介绍CHO、HEK293等主要细胞系的培养技术。"
+  },
+  "bp_eng_main_downstream_title": {
+    "ko": "다운스트림 공정",
+    "en": "Downstream Processing",
+    "de": "Downstream-Prozess",
+    "ja": "ダウンストリーム工程",
+    "zh-CN": "下游工艺"
+  },
+  "bp_eng_main_downstream_desc": {
+    "ko": "정제 및 회수 등 생산 후반 공정을 소개합니다.",
+    "en": "Introduces late-stage processes such as purification and recovery.",
+    "de": "Stellt späte Produktionsschritte wie Aufreinigung und Rückgewinnung vor.",
+    "ja": "精製や回収など、生産の後半工程を紹介します.",
+    "zh-CN": "介绍纯化、回收等生产后期工艺。"
+  },
+  "bp_eng_intro_main_title": {
+    "ko": "소개 (Introduction)",
+    "en": "Introduction",
+    "de": "Einführung",
+    "ja": "紹介",
+    "zh-CN": "介绍"
+  },
+  "bp_eng_intro_main_desc": {
+    "ko": "이 페이지는 생물공정공학의 기본적인 소개를 다룹니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+    "en": "This page provides a basic introduction to bioprocess engineering. You can find more detailed information in the sub-menu below.",
+    "de": "Diese Seite bietet eine grundlegende Einführung in die Bioverfahrenstechnik. Detailliertere Informationen finden Sie im untenstehenden Untermenü.",
+    "ja": "このページでは、生物プロセス工学の基本的な紹介を行っています。下位メニューからさらに詳しい内容をご覧いただけます。",
+    "zh-CN": "本页面涵盖了生物工艺工程的基础介绍。您可以在下方的子菜单中查看更详细的内容。"
+  },
+  "bp_eng_intro_main_concept_link": {
+    "ko": "개념 및 범위 (Concept & Scope)",
+    "en": "Concept & Scope",
+    "de": "Konzept und Umfang",
+    "ja": "概念と範囲",
+    "zh-CN": "概念与范围"
+  },
+  "bp_eng_intro_main_biopharma_link": {
+    "ko": "바이오의약품 제조 공정 개요 (Biopharmaceutical Manufacturing Overview)",
+    "en": "Biopharmaceutical Manufacturing Overview",
+    "de": "Überblick über den Prozess der biopharmazeutischen Herstellung",
+    "ja": "バイオ医薬品製造工程の概要",
+    "zh-CN": "生物制药生产工艺概览"
+  },
+  "bp_eng_intro_main_preparing": {
+    "ko": "콘텐츠 준비 중",
+    "en": "Content Under Preparation",
+    "de": "Inhalt in Vorbereitung",
+    "ja": "コンテンツ準備中",
+    "zh-CN": "内容准备中"
+  },
+  "bp_eng_intro_main_update_msg": {
+    "ko": "생물공정공학에 대한 소개 내용이 곧 업데이트될 예정입니다. 감사합니다.",
+    "en": "The introductory content on bioprocess engineering will be updated soon. Thank you.",
+    "de": "Die Einführung zur Bioverfahrenstechnik wird in Kürze aktualisiert. Vielen Dank.",
+    "ja": "生物プロセス工学の紹介内容はまもなく更新される予定です。ありがとうございます。",
+    "zh-CN": "关于生物工艺工程的介绍内容将很快更新。谢谢。"
+  },
+  "bp_eng_intro_concept_title": {
+    "ko": "개념 및 범위 (Concept & Scope)",
+    "en": "Concept & Scope",
+    "de": "Konzept und Umfang",
+    "ja": "概念と範囲",
+    "zh-CN": "概念与范围"
+  },
+  "bp_eng_intro_concept_desc": {
+    "ko": "생물공정공학의 핵심 개념과 그 연구 및 적용 범위를 상세히 설명합니다.",
+    "en": "Provides a detailed explanation of the core concepts of bioprocess engineering and the scope of its research and applications.",
+    "de": "Erläutert die Kernkonzepte der Bioverfahrenstechnik sowie den Umfang ihrer Forschung und Anwendungen im Detail.",
+    "ja": "生物プロセス工学の核心的な概念と、その研究および応用範囲について詳細に説明します。",
+    "zh-CN": "详细说明生物工艺工程的核心概念及其研究和应用范围。"
+  },
+  "bp_eng_intro_concept_preparing": {
+    "ko": "콘텐츠 준비 중",
+    "en": "Content Under Preparation",
+    "de": "Inhalt in Vorbereitung",
+    "ja": "コンテンツ準備中",
+    "zh-CN": "内容准备中"
+  },
+  "bp_eng_intro_concept_update_msg": {
+    "ko": "이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다.",
+    "en": "The detailed content of this page is currently being prepared and will be updated soon.",
+    "de": "Die detaillierten Inhalte dieser Seite werden derzeit vorbereitet und in Kürze aktualisiert.",
+    "ja": "このページの詳細な内容は現在準備中です。まもなく更新される予定です。",
+    "zh-CN": "本页面的详细内容目前正在准备中，很快将更新。"
+  },
+  "bp_eng_intro_biopharma_title": {
+    "ko": "바이오의약품 제조 공정 개요 (Biopharmaceutical Manufacturing Overview)",
+    "en": "Biopharmaceutical Manufacturing Overview",
+    "de": "Überblick über den Prozess der biopharmazeutischen Herstellung",
+    "ja": "バイオ医薬品製造工程の概要",
+    "zh-CN": "生物制药生产工艺概览"
+  },
+  "bp_eng_intro_biopharma_desc": {
+    "ko": "바이오의약품 제조의 전체적인 공정 흐름과 각 단계별 특징을 개괄적으로 설명합니다.",
+    "en": "Offers a broad overview of the overall process flow of biopharmaceutical manufacturing and outlines the characteristics of each stage.",
+    "de": "Bietet einen umfassenden Überblick über den gesamten Ablauf der biopharmazeutischen Herstellung und skizziert die Merkmale jeder Phase.",
+    "ja": "バイオ医薬品製造の全体的なプロセスの流れと、各段階の特徴を概観的に説明します。",
+    "zh-CN": "概括介绍生物制药生产的整体工艺流程以及各阶段的特点。"
+  },
+  "bp_eng_intro_biopharma_preparing": {
+    "ko": "콘텐츠 준비 중",
+    "en": "Content Under Preparation",
+    "de": "Inhalt in Vorbereitung",
+    "ja": "コンテンツ準備中",
+    "zh-CN": "内容准备中"
+  },
+  "bp_eng_intro_biopharma_update_msg": {
+    "ko": "이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다.",
+    "en": "The detailed content of this page is currently being prepared and will be updated soon.",
+    "de": "Die detaillierten Inhalte dieser Seite werden derzeit vorbereitet und in Kürze aktualisiert.",
+    "ja": "このページの詳細な内容は現在準備中です。まもなく更新される予定です。",
+    "zh-CN": "本页面的详细内容目前正在准备中，很快将更新。"
+  },
+  "bp_eng_upstream_main_title": {
+    "ko": "업스트림 공정 (Upstream Processing)",
+    "en": "Upstream Processing",
+    "de": "Upstream-Prozess",
+    "ja": "アップストリーム工程",
+    "zh-CN": "上游工艺"
+  },
+  "bp_eng_upstream_main_desc": {
+    "ko": "생물공정공학의 업스트림 단계와 관련된 주요 기술 및 연구 분야를 소개합니다. 하위 메뉴에서 더 자세한 내용을 확인하실 수 있습니다.",
+    "en": "Introduces the key technologies and research areas related to the upstream stage of bioprocess engineering. More detailed information can be found in the sub-menu below.",
+    "de": "Stellt die wichtigsten Technologien und Forschungsbereiche vor, die mit dem Upstream-Bereich der Bioverfahrenstechnik verbunden sind. Weitere Details finden Sie im untenstehenden Untermenü.",
+    "ja": "生物プロセス工学における上流段階に関連する主要な技術と研究分野を紹介します。下位メニューからさらに詳しい情報をご覧いただけます。",
+    "zh-CN": "介绍与生物工艺工程的上游阶段相关的关键技术和研究领域。更详细的信息可以在下方的子菜单中找到。"
+  },
+  "bp_eng_upstream_main_cell_line_link": {
+    "ko": "세포주 개발 (Cell Line Development)",
+    "en": "Cell Line Development",
+    "de": "Zelllinienentwicklung",
+    "ja": "細胞株開発",
+    "zh-CN": "细胞株开发"
+  },
+  "bp_eng_upstream_main_media_link": {
+    "ko": "세포배양 배지 최적화 (Cell Culture Media Optimization)",
+    "en": "Cell Culture Media Optimization",
+    "de": "Optimierung der Zellkulturmedien",
+    "ja": "細胞培養培地の最適化",
+    "zh-CN": "细胞培养基优化"
+  },
+  "bp_eng_upstream_main_culture_link": {
+    "ko": "배양 조건 설계 및 최적화 (Culture Condition Design & Optimization)",
+    "en": "Culture Condition Design & Optimization",
+    "de": "Gestaltung und Optimierung der Kulturbedingungen",
+    "ja": "培養条件の設計・最適化",
+    "zh-CN": "培养条件的设计与优化"
+  },
+  "bp_eng_upstream_main_bioreactor_link": {
+    "ko": "바이오리액터 운전 전략 (Bioreactor Operation Strategy)",
+    "en": "Bioreactor Operation Strategy",
+    "de": "Betriebsstrategien für Bioreaktoren",
+    "ja": "バイオリアクター運転戦略",
+    "zh-CN": "生物反应器运行策略"
+  },
+  "bp_eng_upstream_main_scale_link": {
+    "ko": "공정 스케일업·다운 (Process Scale‑up & Scale‑down)",
+    "en": "Process Scale-up & Scale-down",
+    "de": "Maßstabsvergrößerung und -verkleinerung",
+    "ja": "プロセスのスケールアップ/スケールダウン",
+    "zh-CN": "工艺放大与缩小"
+  },
+  "bp_eng_upstream_main_preparing": {
+    "ko": "콘텐츠 준비 중",
+    "en": "Content Under Preparation",
+    "de": "Inhalt in Vorbereitung",
+    "ja": "コンテンツ準備中",
+    "zh-CN": "内容准备中"
+  },
+  "bp_eng_upstream_main_update_msg": {
+    "ko": "업스트림 공정에 대한 상세 내용이 곧 업데이트될 예정입니다.",
+    "en": "Detailed content on Upstream Processing will be updated soon.",
+    "de": "Ausführliche Inhalte zum Upstream-Prozess werden in Kürze aktualisiert.",
+    "ja": "アップストリーム工程に関する詳細内容はまもなく更新される予定です。",
+    "zh-CN": "有关上游工艺的详细内容将很快更新。"
+  },
+  "bp_eng_upstream_cell_line_title": {
+    "ko": "세포주 개발 (Cell Line Development)",
+    "en": "Cell Line Development",
+    "de": "Zelllinienentwicklung",
+    "ja": "細胞株開発",
+    "zh-CN": "细胞株开发"
+  },
+  "bp_eng_upstream_cell_line_desc": {
+    "ko": "고생산성 및 고품질의 바이오의약품 생산을 위한 세포주 개발 전략 및 기술을 소개합니다.",
+    "en": "Introduces strategies and technologies for cell line development aimed at producing high-yield, high-quality biopharmaceuticals.",
+    "de": "Stellt Strategien und Techniken zur Zelllinienentwicklung vor, die auf die Herstellung biopharmazeutischer Produkte mit hoher Ausbeute und Qualität abzielen.",
+    "ja": "高生産性・高品質のバイオ医薬品の生産を目指した細胞株開発の戦略と技術を紹介します。",
+    "zh-CN": "介绍旨在生产高产、高质量生物制药产品的细胞株开发策略和技术。"
+  },
+  "bp_eng_upstream_cell_line_preparing": {
+    "ko": "콘텐츠 준비 중",
+    "en": "Content Under Preparation",
+    "de": "Inhalt in Vorbereitung",
+    "ja": "コンテンツ準備中",
+    "zh-CN": "内容准备中"
+  },
+  "bp_eng_upstream_cell_line_update_msg": {
+    "ko": "이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다.",
+    "en": "The detailed content of this page is currently being prepared and will be updated soon.",
+    "de": "Die detaillierten Inhalte dieser Seite werden derzeit vorbereitet und in Kürze aktualisiert.",
+    "ja": "このページの詳細な内容は現在準備中です。まもなく更新される予定です。",
+    "zh-CN": "本页面的详细内容目前正在准备中，很快将更新。"
+  },
+  "bp_eng_upstream_media_title": {
+    "ko": "세포배양 배지 최적화 (Cell Culture Media Optimization)",
+    "en": "Cell Culture Media Optimization",
+    "de": "Optimierung der Zellkulturmedien",
+    "ja": "細胞培養培地の最適化",
+    "zh-CN": "细胞培养基优化"
+  },
+  "bp_eng_upstream_media_desc": {
+    "ko": "세포 성장 및 단백질 생산성 향상을 위한 세포배양 배지 조성 최적화 연구를 다룹니다.",
+    "en": "Covers research on optimizing cell culture media composition to improve cell growth and protein productivity.",
+    "de": "Behandelt Forschungsarbeiten zur Optimierung der Zusammensetzung von Zellkulturmedien, um das Zellwachstum und die Proteinproduktivität zu verbessern.",
+    "ja": "細胞の成長およびタンパク質生産性の向上を目的とした細胞培養培地組成の最適化研究を扱います.",
+    "zh-CN": "讨论优化细胞培养基组成以提高细胞生长和蛋白质产量的研究。"
+  },
+  "bp_eng_upstream_media_preparing": {
+    "ko": "콘텐츠 준비 중",
+    "en": "Content Under Preparation",
+    "de": "Inhalt in Vorbereitung",
+    "ja": "コンテンツ準備中",
+    "zh-CN": "内容准备中"
+  },
+  "bp_eng_upstream_media_update_msg": {
+    "ko": "이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다.",
+    "en": "The detailed content of this page is currently being prepared and will be updated soon.",
+    "de": "Die detaillierten Inhalte dieser Seite werden derzeit vorbereitet und in Kürze aktualisiert.",
+    "ja": "このページの詳細な内容は現在準備中です。まもなく更新される予定です。",
+    "zh-CN": "本页面的详细内容目前正在准备中，很快将更新。"
+  },
+  "bp_eng_upstream_culture_title": {
+    "ko": "배양 조건 설계 및 최적화 (Culture Condition Design & Optimization)",
+    "en": "Culture Condition Design & Optimization",
+    "de": "Gestaltung und Optimierung der Kulturbedingungen",
+    "ja": "培養条件の設計・最適化",
+    "zh-CN": "培养条件的设计与优化"
+  },
+  "bp_eng_upstream_culture_desc": {
+    "ko": "최적의 세포 배양 환경 구축을 위한 온도, pH, 용존산소 등 주요 배양 조건 설계 및 최적화 방법을 설명합니다.",
+    "en": "Explains methods for designing and optimizing key culture conditions—such as temperature, pH, and dissolved oxygen—to establish an optimal cell culture environment.",
+    "de": "Erläutert Methoden zur Gestaltung und Optimierung zentraler Kulturbedingungen – wie Temperatur, pH-Wert und gelöster Sauerstoff – um ein optimales Zellkulturumfeld zu schaffen.",
+    "ja": "最適な細胞培養環境を構築するために、温度、pH、溶存酸素といった主要な培養条件の設計および最適化の方法について説明します。",
+    "zh-CN": "解释为建立最佳细胞培养环境而设计和优化温度、pH、溶解氧等关键培养条件的方法。"
+  },
+  "bp_eng_upstream_culture_preparing": {
+    "ko": "콘텐츠 준비 중",
+    "en": "Content Under Preparation",
+    "de": "Inhalt in Vorbereitung",
+    "ja": "コンテンツ準備中",
+    "zh-CN": "内容准备中"
+  },
+  "bp_eng_upstream_culture_update_msg": {
+    "ko": "이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다.",
+    "en": "The detailed content of this page is currently being prepared and will be updated soon.",
+    "de": "Die detaillierten Inhalte dieser Seite werden derzeit vorbereitet und in Kürze aktualisiert.",
+    "ja": "このページの詳細な内容は現在準備中です。まもなく更新される予定です。",
+    "zh-CN": "本页面的详细内容目前正在准备中，很快将更新。"
+  },
+  "bp_eng_upstream_bioreactor_title": {
+    "ko": "바이오리액터 운전 전략 (Bioreactor Operation Strategy)",
+    "en": "Bioreactor Operation Strategy",
+    "de": "Betriebsstrategien für Bioreaktoren",
+    "ja": "バイオリアクター運転戦略",
+    "zh-CN": "生物反应器运行策略"
+  },
+  "bp_eng_upstream_bioreactor_desc": {
+    "ko": "바이오리액터의 효율적인 운전을 위한 다양한 전략(예: 유가식 배양, 연속 배양)을 소개합니다.",
+    "en": "Introduces various strategies for the efficient operation of bioreactors (e.g., fed-batch culture, continuous culture).",
+    "de": "Stellt verschiedene Strategien für den effizienten Betrieb von Bioreaktoren vor (z. B. Fed-Batch-Kultur, kontinuierliche Kultur).",
+    "ja": "バイオリアクターを効率的に運転するためのさまざまな戦略（例：フィードバッチ培養、連続培養）を紹介します。",
+    "zh-CN": "介绍用于高效运行生物反应器的各种策略（例如补料分批培养、连续培养）。"
+  },
+  "bp_eng_upstream_bioreactor_preparing": {
+    "ko": "콘텐츠 준비 중",
+    "en": "Content Under Preparation",
+    "de": "Inhalt in Vorbereitung",
+    "ja": "コンテンツ準備中",
+    "zh-CN": "内容准备中"
+  },
+  "bp_eng_upstream_bioreactor_update_msg": {
+    "ko": "이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다.",
+    "en": "The detailed content of this page is currently being prepared and will be updated soon.",
+    "de": "Die detaillierten Inhalte dieser Seite werden derzeit vorbereitet und in Kürze aktualisiert.",
+    "ja": "このページの詳細な内容は現在準備中です。まもなく更新される予定です。",
+    "zh-CN": "本页面的详细内容目前正在准备中，很快将更新。"
+  },
+  "bp_eng_upstream_scale_title": {
+    "ko": "공정 스케일업·다운 (Process Scale‑up & Scale‑down)",
+    "en": "Process Scale-up & Scale-down",
+    "de": "Maßstabsvergrößerung und -verkleinerung",
+    "ja": "プロセスのスケールアップ/スケールダウン",
+    "zh-CN": "工艺放大与缩小"
+  },
+  "bp_eng_upstream_scale_desc": {
+    "ko": "실험실 규모에서 상업 생산 규모로, 또는 그 반대로 공정 규모를 변경하는 스케일업 및 스케일다운 전략과 고려사항을 다룹니다.",
+    "en": "Covers scale-up and scale-down strategies and considerations for transitioning process scale from laboratory scale to commercial production scale and vice versa.",
+    "de": "Behandelt Scale-up- und Scale-down-Strategien sowie wichtige Aspekte für den Übergang des Prozessmaßstabs vom Labormaßstab auf den industriellen Maßstab und umgekehrt.",
+    "ja": "実験室規模から商用生産規模へ、またその逆にプロセス規模を変更する際のスケールアップおよびスケールダウンの戦略と考慮事項を扱います。",
+    "zh-CN": "讨论将工艺规模从实验室规模扩大到商业生产规模或相反方向调整时的放大和缩小策略及注意事项。"
+  },
+  "bp_eng_upstream_scale_preparing": {
+    "ko": "콘텐츠 준비 중",
+    "en": "Content Under Preparation",
+    "de": "Inhalt in Vorbereitung",
+    "ja": "コンテンツ準備中",
+    "zh-CN": "内容准备中"
+  },
+  "bp_eng_upstream_scale_update_msg": {
+    "ko": "이 페이지의 상세 내용은 현재 준비 중에 있습니다. 곧 업데이트될 예정입니다.",
+    "en": "The detailed content of this page is currently being prepared and will be updated soon.",
+    "de": "Die detaillierten Inhalte dieser Seite werden derzeit vorbereitet und in Kürze aktualisiert.",
+    "ja": "このページの詳細な内容は現在準備中です。まもなく更新される予定です。",
+    "zh-CN": "本页面的详细内容目前正在准备中，很快将更新。"
   }
 }
